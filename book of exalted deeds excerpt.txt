@@ -1,0 +1,1885 @@
+# CHAPTER TWO: VARIANT RULES
+
+This chapter includes variant rules covering a variety of exalted topics, from channeling celestials to incorporating voluntary poverty and nonviolence into a game that often is all about killing monsters and taking their stuff. These rules may or may not be suitable for your campaign, and your DM should give final approval on whether you may use them.
+
+## CHANNELING
+
+Certain fiends are known for their ability to seize control of a creature or object, a phenomenon known as possession. Respect for the life and dignity of sentient creatures bars good creatures from usurping control of another in this manner. However, some celestials are content to exercise their power through a mortal form if the mortal host invites them to do so. Similar in many ways to fiendish possession, celestial channeling is an important means by which the forces of good work in the world.
+
+Celestial channeling works in a manner similar to the Possess Mortal divine salient ability that some deities have (as detailed in *Deities and Demigods*). In addition to deities, some celestials have the spell-like ability to invest mortals with their power in this fashion, and there are spells (*channel celestial* and *channel greater celestial*, both described in Chapter 6) that allow mortals to invite any celestial into their bodies in this way.
+
+Unlike fiendish possession, channeling works only if the mortal is willing. The celestial does not assume an ethereal form in preparation for possessing the mortal; it simply merges its own form with the mortal's as part of its spell-like ability. As with possession, spells such as *protection from good* block celestial channeling, even if the spell's target is willing to channel the celestial. Similarly, spells such as *dismissal* or *dispel good*, as well as special abilities that drive possessing spirits out of their victims, can work on the channeled celestial even if the mortal wants the celestial to remain.
+
+A mortal channeling a celestial becomes a mortal manifestation of the celestial's power. The celestial can draw on all of the mortal's memories, and the celestial senses what the mortal senses. The mortal and the celestial can communicate telepathically, but neither has complete access to the current thoughts of the other. While channeling a celestial, the mortal's Intelligence, Wisdom, and Charisma scores become 5 points lower than the celestial's (or remain the same as the mortal's scores if they are higher). An increase in Wisdom affects the mortal's Will saves, and all three increases might affect bonus spells and saving throw DCs for spells and special abilities.
+
+The mortal can use its own skills and the celestial's skills. If the mortal and the celestial have the same skill, use the skill of whichever has more ranks in the skill. Use the mortal's effective ability scores to determine skill modifiers.
+
+## EXORCISM
+
+When evil spirits and fiends use their powers to possess and corrupt mortals, the servants of good rely on exorcism to drive them out. The most basic methods of exorcism are spells such as *banishment*, *dismissal*, or *dispel evil* that can send a fiend back to the Lower Planes. Similarly, a cleric can attempt to turn a ghost or other undead creature that is possessing a living victim, causing the creature to abandon the body and flee in its ethereal form. Certain characters have the supernatural ability to force possessing spirits out of a body or to censure evil outsiders, which likewise causes them to abandon the body they are possessing.
+
+Aside from spells and abilities to expel possessing creatures, certain other abilities and items can help exorcists perform their grim tasks. A possessing fiend can hide its presence from even magical detection by making a special Hide check (as described in the *Book of Vile Darkness*). The Spell Focus (Good) feat applies to spells such as *detect evil* when a character uses them to discern the presence of a possessing fiend. *Incense of consecration* is helpful when dealing with undead possessors, and a *thurible of consecration* amplifies its effect. The most useful aids, however, are items and substances that fiends find abhorrent, which make a *banishment* spell more likely to succeed.
+
+Certain items, such as *angel radiance*, can also increase the saving throw DC and spell penetration ability of a lesser spell, such as *dismissal* or *dispel evil*. Items in this category are detailed in Chapter 3: Exalted Equipment.
+
+## HEROES OF THE HEAVENS
+
+For some players, having a character who struggles to live up to the highest celestial ideals is not sufficient: what they really want is to play a celestial. This is not a task for inexperienced players, since even the weakest celestial are equivalent to characters of moderate to high level (11th and up). For mature and experienced players in a compatible party, however, playing a celestial can be an entertaining and rewarding experience.
+
+There are four ways to make use of celestial player characters in a game. One way is to incorporate a celestial into a party of mortal characters of a level similar to the celestial's Effective Character Level. Integrating a celestial into an existing party of characters should happen in a dramatic manner. If the player's previous character died, the campaign could portray that death as a heroic sacrifice that made the celestial character's presence on the Material Plane possible, at least for a short time. If the player is new to the group, the celestial could be called through a *planar ally* or *gate* spell, and voluntarily decide to work with the party for a longer period of time than usual. In any event, the celestial character should always keep the mortal PCs focused on lofty goals and exalted quests, never devolving into a simple combat machine with some unusual powers.
+
+A second option is for all the players to take on celestial characters. In most cases, their adventures should take place on other planes of existence than the Material Plane—the powers of the heavens generally rely on mortal agents to do their work on the Material Plane, not adventuring parties of archons or eladrins. If they do adventure on the Material Plane, it should be for an incredibly significant purpose, such as preventing an entire Material-Plane world from being sucked through a vortex into the Abyss. A world-threatening cause such as that might also draw celestials of different kinds together in a united purpose, since most of the time archons, guardinals, and eladrins keep to their own.
+
+Third, it is possible to run a campaign where each player has one mortal character and one celestial character. The two characters are bonded in some way: perhaps the celestial is the mortal PC's "guardian angel." At any given time, a player runs only one of the two characters. Depending on the campaign, adventures may shift focus between the all-mortal party and the all-celestial party, or different adventures may require different characters in mixed groups. Ideally, the two groups of characters should be pursuing the same goals—some epic quest that requires action both on the Material Plane and on other planes as well. As the mortal heroes complete grand quests on the Material Plane, they make it possible for the celestial characters to achieve some of their goals on the Outer Planes as well, for example. It is possible to set up the campaign so that the mortal characters are unaware of the part they are playing in a grand celestial plan, while the players themselves have the satisfaction of knowing the importance of the work the mortal PCs are doing—because they get to play the celestials who benefit from it as well.
+
+## SAINTHOOD
+
+Sainthood is a state of extreme holiness, a level of virtue and piety so great that it manifests as a physical and supernatural transformation. The powers of good have always recognized the immense value of their saints, and they bless them with powers far beyond those granted to ordinary mortals. 
+
+### BECOMING A SAINT
+The path to sainthood is one of selflessness, sacrifice, and absolute devotion to the cause of good. A character must meet the following criteria to become a saint:
+*   **Alignment:** Any good alignment.
+*   **Character Level:** 6th or higher.
+*   **Feats:** The character must have at least one exalted feat.
+*   **Roleplaying:** The character must have performed acts of extraordinary self-sacrifice or heroism in the name of good, and must maintain a strict code of conduct fitting a saint.
+*   **Special:** The character must have a Wisdom score of at least 15 and must receive a direct blessing from a deity or celestial paragon.
+
+### CREATING A SAINT
+"Saint" is an acquired template that can be added to any living creature of good alignment that is not an outsider or an elemental (referred to hereafter as the "base creature").
+*   **Size and Type:** The creature's type changes to "outsider." The saint has the native subtype. Size is unchanged.
+*   **Armor Class:** A saint gains an insight bonus to AC equal to the character's Wisdom bonus.
+*   **Special Attacks:** A saint retains all the character's special attacks and gains those listed below.
+    *   **Holy Power (Su):** The save DCs of any and all of the saint's special attacks, including spells as well as spell-like, supernatural, and extraordinary abilities, increase by +2.
+    *   **Holy Touch (Su):** A saint's entire being is suffused with holy power, which likewise flows into any weapon the saint wields. A saint's melee attacks with any weapon (or unarmed) deal an additional 1d6 points of holy damage against evil creatures, and 1d8 points against evil undead and evil outsiders. Any evil creature that strikes a saint with a natural weapon takes holy damage as if hit by the saint's attack.
+*   **Spell-Like Abilities:** At will—*guidance, resistance, virtue*, and *bless*. A saint's caster level is equal to its Hit Die total. The save DCs are Charisma-based.
+*   **Special Qualities:** A saint retains all the character's special qualities and gains those listed below, as well as the outsider type.
+    *   **Damage Reduction (Ex):** Saints gain damage reduction according to their Hit Dice (including character level).
+        *   1-3 HD: —
+        *   4-7 HD: 5/magic
+        *   8-11 HD: 5/evil
+        *   12+ HD: 10/evil
+        If the base creature already has damage reduction, use the better value.
+    *   **Fast Healing (Ex):** Each round, a saint heals damage equal to half of its Hit Dice (including character levels, to a maximum of 10 points healed). If the base creature already has fast healing, use the better value.
+    *   **Immunities (Ex):** A saint is immune to acid, cold, electricity, and petrification attacks.
+    *   **Keen Vision (Ex):** Saints have low-light vision and 60-foot darkvision.
+    *   **Protective Aura (Su):** As a free action, a saint can surround herself with a nimbus of light having a radius of 20 feet. This acts as a double-strength *magic circle against evil* and as a *lesser globe of invulnerability*, both as cast by a cleric whose level equal to the saint's Hit Dice.
+    *   **Resistances (Ex):** Saints have resistance to fire 10 and receive a +4 racial bonus on Fortitude saves against poison.
+    *   **Tongues (Su):** A saint can speak with any creature that has a language, as though using a *tongues* spell cast by a 14th-level cleric. This ability is always active.
+*   **Abilities:** Modify the base creature as follows: Con +2, Wis +2, Cha +4.
+*   **Challenge Rating:** Same as the base creature +2.
+*   **Level Adjustment:** Same as the base creature +2.
+
+## SANCTIFIED CREATURE
+
+When an evil creature is subjected to a *sanctify the wicked* spell, it gives up special qualities, attacks, and abilities that are inherently evil in exchange for more benevolent powers. The sanctified creature's appearance does not change to suit its new outlook, nor does it immediately find acceptance among other good creatures. For this reason, many sanctified creatures choose to have their form magically altered so that their good intentions and eager pursuit of repentance are not obscured by their vile appearance.
+
+Many sanctified creatures feel a burning desire to purge their past evil deeds by performing selfless acts and heroic deeds. They pursue their newfound dedication to good with the zeal of an archon. Some strive to destroy evil where they find it, while others try to persuade other evil creatures to seek similar enlightenment. With their outlook having changed to good, many sanctified creatures feel compelled to take up arms to protect the good and the innocent. Sometimes they join with celestials and good-aligned adventurers to fight evil head-on.
+
+A sanctified creature that reverts to evil, deliberately or not, loses all benefits of this template. Essentially, it is restored to its state prior to becoming a sanctified creature.
+
+### CREATING A SANCTIFIED CREATURE
+"Sanctified creature" is an acquired template that can be added to any evil creature except for outsiders with the evil subtype (referred to hereafter as "base creature"). The sanctified creature retains its creature type. Outsiders gain the good subtype and lose any of the following subtypes: baatezu (devil), tanar'ri (demon), and yugoloth. If the base creature had the fiendish creature template, it loses the template and all special attacks and special qualities granted by the template. It uses all the base creature's statistics or special abilities except as noted here.
+
+*   **Attacks:** The sanctified creature retains all of its natural weapons and attack bonuses. A sanctified creature's natural weapons, and any weapons it wields, are considered good weapons for purpose of overcoming damage reduction.
+*   **Special Attacks:** The sanctified creature loses all of its preexisting supernatural and spell-like abilities, but retains its extraordinary abilities. It also gains the light ray special ability (described below).
+    *   **Light Ray (Su):** Once per round, as a standard action, the sanctified creature can fire a ray of light from its eyes or hand. The ray is treated as a ranged touch attack and has a maximum range of 60 feet. Against evil creatures, the ray deals 1d6 points of damage per 2 HD of the sanctified creature (maximum 10d6). The light has no harmful effect on nonevil creatures.
+*   **Special Qualities:** The sanctified creature loses all of its preexisting supernatural and spell-like abilities, but retains its extraordinary abilities. If the base creature has damage reduction that can be bypassed with good weapons, the sanctified creature's damage reduction changes so that evil weapons bypass it instead. A sanctified creature also gains the following special qualities:
+    *   **Aura of Menace (Su):** A righteous aura surrounds the sanctified creature. Any hostile creature within a 20-foot radius of the sanctified creature must make a Will save (DC 10 + 1/2 the sanctified creature's Hit Dice + the sanctified creature's Cha modifier) to resist its effects. Those who fail take a -2 penalty on attacks, AC, and saves for one day or until they successfully hit the sanctified creature that generated the aura. A creature that has resisted or broken the effect cannot be affected again by that sanctified creature's aura for one day.
+    *   **Magic Circle against Evil (Su):** A *magic circle against evil* effect always surrounds the sanctified creature, as the *magic circle against evil* spell (caster level equals the sanctified creature's Hit Dice, maximum 14th).
+    *   **Tongues (Su):** A sanctified creature can speak with any creature that has a language, as though using a *tongues* spell (caster level equals the sanctified creature's Hit Dice, maximum 14th). This ability is always active.
+*   **Feats:** The sanctified creature loses any vile feats the base creature possessed (see the *Book of Vile Darkness*). It does not get to replace these feats with new ones. However, if it has the good subtype, it gains access to exalted feats.
+*   **Environment:** Same as base creature, although the plane of residence usually changes to a good-aligned outer plane.
+*   **Challenge Rating:** Same as base creature +1.
+*   **Alignment:** Always good. The sanctified creature's chaos/law axis does not change.
+*   **Level Adjustment:** Same as base creature +2.
+
+## VOLUNTARY POVERTY
+
+If the *Vow of Poverty* feat stretches the basic assumptions of the D&D game, the *Vow of Nonviolence* and *Vow of Peace* feats shatter them. Characters who don't kill? It is almost unheard of, and doesn't just cause problems with what happens to characters as they advance (as poverty does) but raises the question of how they advance at all. The experience system in D&D relies almost entirely on defeating monsters in combat. If characters don't enter combat, they normally don't gain XP. At least, that's the assumption in most D&D campaigns.
+
+However, the experience system can stretch to accommodate even completely pacifist characters with the *Vow of Peace* feat. First, the XP system as presented in the *Dungeon Master's Guide* rewards characters not for killing monsters, but for overcoming challenges. Characters with the *Vow of Peace* feat have means at their disposal to overcome challenges without killing anything. Their calming aura can stop would-be attackers in their tracks, and nonlethal damage and charm and compulsion spells are excellent alternatives to damage-causing evocations.
+
+Second, the *Dungeon Master's Guide* presents options for granting XP to characters who overcome challenges that have nothing to do with slavering monsters or deadly traps. If the DM is willing to construct encounters or entire adventures where a pacifist character's skills at negotiation and other means of dealing with serious noncombat situations are tested, she can award XP for noncombat encounters, as described in the *Dungeon Master's Guide*. A free-form XP system is another way to handle games that deemphasize combat. Characters receive a number of XP per character level per encounter (75 XP per level works well), per game session (depending on the length of your sessions, 200-400 XP per level is a reasonable range), or per adventure (again depending on the length of the adventure, 500-1,000 XP per level, bearing in mind that 1,000 XP per level equates to gaining a level).
+
+Even characters who have sworn a vow of peace can and should receive XP for combat encounters that involve the destruction of constructs and undead. These unliving creatures are not covered by a vow of peace, and destroying them can be an appropriate goal for the most exalted character. Likewise, the DM should give full normal XP for combat encounters where pacifist characters subdue or otherwise incapacitate opponents. Other types of encounters the DM might consider granting XP awards for include the following:
+
+*   **Redeeming an evil character.** This is worth an additional award (assuming an initial award for subduing the character) equal to the award for defeating the character in combat.
+*   **Negotiating to avoid combat or avert a larger confrontation.** This is worth an award at least equal to the award that would have been gained for plunging into combat and defeating the opponents.
+*   **Destroying an irredeemably evil magic item or artifact.** Use the caster level of the item (20th level for an artifact) as a CR for the "encounter" to determine XP.
+*   **Sacrificing one's life to save others or suffering martyrdom.** If the character returns from the dead, he should receive an XP award equal to at least 100 XP per character level, which might help counterbalance a lost level.
+
+Using these guidelines as a starting point, the DM can construct adventures and encounters that allow all the characters in a party—pacifist or not—to shine and continue to advance levels.
+
+The DM should never set out to punish a character for taking the *Vow of Peace* feat. For the DM to pronounce one session, "A gnat got through the strainer in your drinking water this morning, you swallowed it, and now you need an *atonement*," is simply capricious and unnecessarily antagonistic to the player. The DM and the players should all work together to ensure that a character with *Vow of Peace* contributes something to the game so that everyone can enjoy it more. It is okay to put a pacifist character in a situation where refusing to fight is a difficult (but still viable) option, but not to take away the choice entirely.
+
+## WORDS OF CREATION
+
+The Words of Creation are fragments of a lost language thought to be the precursor of the Celestial tongue. Very few celestials remember some of these words, and even fewer mortals have access to one or two of them as well. So great is their power that no mortal mind can comprehend more than three or four words, and no evil tongue can speak them or bear their sound. A character must take the Words of Creation feat to be able to use these words in any way.
+
+It is possible, though difficult, to communicate entirely using the Words of Creation. It has no words for evil concepts such as misery, despair, hate, and betrayal, while the subtlety of its terminology for beauty, kindness, and mercy is astonishing. It has no written form, and if transliterated into writing it loses all power and meaning.
+
+Besides communication, there are four essential ways to use the Words of Creation.
+
+### CELESTIAL CHOIR
+The Words of Creation can be woven into song, forming music that surpasses any earthly melody and echoes the grandeur of the music of the heavens. A bard who has the Words of Creation feat can use these powerful words to enhance his bardic music ability as detailed below. When a bard uses the Words of Creation in this manner, it is extremely draining, and the bard takes 1d4 points of nonlethal damage for each rank in Perform required to produce the bardic music effect he is enhancing. For example, if Devis uses the Words of Creation to double an inspire courage effect (minimum 3 ranks in Perform), he takes 3d4 points of nonlethal damage. If he uses the words to enhance an inspire heroics effect (minimum 18 ranks in Perform), he takes 18d4 points of nonlethal damage.
+
+The Words of Creation doubles the effect of several bardic music abilities:
+*   **Inspire Courage:** Double the morale bonus on saving throws against charm and fear and the morale bonus on attack and weapon damage rolls (+2 at 1st level, +4 at 8th level, +6 at 14th level, +8 at 20th level).
+*   **Inspire Competence:** +4 competence bonus on skill checks.
+*   **Inspire Greatness:** Gain 4 bonus Hit Dice (d10s), the commensurate number of temporary hit points (apply the target's Constitution modifier to these bonus Hit Dice), +4 competence bonus on attacks, and +2 competence bonus on Fortitude saves.
+*   **Inspire Heroics:** +8 morale bonus on saving throws, +8 dodge bonus to AC.
+
+For bardic music abilities that require a Perform check (countersong, fascinate), the Words of Creation grant the bard a +4 sacred bonus on the check. The Words of Creation also increase the saving throw DC for the suggestion and dominate abilities by +2. The Words of Creation increase the bard's effective caster level for the song of freedom by +2.
+
+### CREATION
+In accordance with their original purpose, the Words of Creation can greatly enhance any process of creation. If they are spoken as part of the casting of a Conjuration (Creation) spell, the duration of the spell is doubled (as if the Extend Spell feat had been applied to it, but without increasing the spell's level). Spells with an instantaneous duration are not affected. If they are spoken while using any Craft skill, they grant the crafter a +4 sacred bonus on the Craft check. These uses of the Words of Creation do not deal nonlethal damage to the speaker.
+
+### EXALTED POWER
+The Words of Creation help energize good magic items and spells. If used in conjunction with a good spell that has a verbal component, the Words of Creation increase the spell's effective caster level by +1. If used when creating a good magic item, the Words of Creation increase the item's caster level by +1 without increasing the cost. Both caster level increases are considered sacred bonuses.
+
+Using the Words of Creation to enhance a good spell deals 1d4 points of nonlethal damage to the caster per 2 spell levels (none for a 0- or 1st-level spell, up to 4d4 for a 9th-level spell). Using them to enhance a magic item deals no nonlethal damage, since their use is measured out over a long period of time.
+
+### TRUE NAME
+Each creature has a unique true name among the Words of Creation. No mortal is familiar with the countless true names of every creature in the world, no matter how extensively she has studied the Words of Creation. Nevertheless, a character familiar with the Words of Creation can research a specific creature's true name if she has access to *legend lore* and either *contact other plane* or *commune*. Researching a true name is similar to researching a new spell. It requires one week per 2 HD of the creature and an expenditure of 1,000 gp per week. The character must cast (or have cast on her behalf) *legend lore* once each week, but the material component cost is included in the research cost. At the end of the research time, the character must cast *commune* or *contact other plane*, paying the XP cost for *commune* if applicable. Then she makes a Knowledge check, using the specialty appropriate to the target creature's type (arcana for a construct or dragon, religion for an undead, and so on). The DC for this check is 10 + the creature's Hit Dice. If the check succeeds, the character has discovered the creature's true name. If it fails, the character must go through the research process again if she wants to keep trying.
+
+Once a character has discovered a creature's true name, she can exercise her power over that creature in a number of different ways.
+*   She can impose a -4 penalty on the creature's saving throws to resist a specific compulsion spell or effect.
+*   She can reduce the creature's spell resistance by 4 or reduce the amount of its damage reduction by 5. This reduction lasts for 1 minute.
+*   She can cast *teleport* or *greater teleport* on the creature without including herself as a target of the spell.
+*   She can gain a +6 bonus on her opposed Charisma check to compel service from the creature after she summons it with a *planar binding* spell.
+
+Each of these actions requires a full-round action, which includes speaking the creature's true name and a binding incantation in the Words of Creation. Uttering the incantation deals 5d4 points of nonlethal damage to the speaker. The character and the creature do not have to be in the same area or even the same plane—it is possible, for example, to reduce a creature's spell resistance before using *planar binding* to summon it to the Material Plane. The one exception is the teleportation function, which requires the character to touch the creature after speaking its true name and the incantation.
+
+# CHAPTER THREE: EXALTED EQUIPMENT
+
+The equipment found in this chapter represents the tools of the exalted character. Some items—sanctified weapons and nonlethal weapons—are readily available to anyone who can pay the price. Others, such as relics and special ingredients, are much harder to come by, and in the case of those special ingredients that come from the bodies of good-aligned creatures, are often illegal to buy or sell. The DM must decide whether such items are ever available for sale in his campaign.
+
+## SANCTIFIED WEAPONS
+
+Certain weapons, whether through association with a holy person or site or some other infusion of holy power, are considered sanctified. When a character with the Sanctified Weapon feat casts *align weapon*, the affected weapon is sanctified. A weapon wielded by a character with the Sanctified Martial Strike feat is also considered sanctified.
+
+Sanctified weapons are not inherently magical, though they are inherently good and radiate a faint aura of good. A sanctified weapon deals 1 extra point of holy damage against evil creatures, or 1d4 points of damage against evil outsiders and evil undead. In addition, creatures with the corrupted template (described in the *Book of Vile Darkness*) cannot recover hit point damage dealt by a sanctified weapon by means of normal healing, including fast healing.
+
+**VARIANT RULE: BETTER SANCTIFIED WEAPONS**
+In a campaign devoted to combating the depraved depths of evil, it might be appropriate to increase the power of sanctified weapons. Several options for better sanctified weapons are presented below. Your Dungeon Master might choose one of these options to apply to all sanctified weapons, or allow a character with the Sanctified Weapon feat to choose one extra "rider" effect for the blessing when casting *align weapon*.
+*   Certain creatures might have particular vulnerabilities to sanctified weapons. For example, lycanthropes (all of them or just certain varieties) might be as vulnerable to sanctified weapons as they are to silver weapons. A variety of plantlike fiend might be vulnerable to a sanctified sickle or scythe, so that any hit dealt by such a weapon is automatically a critical hit.
+*   A sanctified weapon might, through supernatural holy power, allow the wielder to score critical hits against undead creatures. The weapon's threat range and critical multiplier are unchanged, and (even if the weapon is the subject of a *bless weapon* spell) the wielder must still roll to confirm a threat. This variant rule does not allow a character to sneak attack an undead creature or to score critical hits against other types of creatures that are normally immune to them.
+
+## NONLETHAL WEAPONS
+
+Part of the ethos of good is respect for life, a respect that often leads good characters to avoid killing other characters, even monsters, that might instead be redeemed. Some cultures and races have developed weapons designed to deal nonlethal damage or simply immobilize an opponent. Such weapons include the bolas, net, sap, and tanglefoot bag described in the *Player's Handbook*, as well as more exotic weapons such as the grasping pole (also called the mancatcher or sasumata, and similar to the pincer staff of the kuo-toa) and the entangling pole (also called the sodegarami or sleeve tangler).
+
+**Entangling Pole:** The entangling pole is a highly specialized weapon, used to catch and entangle an opponent without causing great harm. It is normally used to hook and catch the clothing of an opponent. When you use an entangling pole in this way, you make a grapple attack without provoking an attack of opportunity. You make a melee touch attack with the weapon to "grab" the target's clothing. This attack does not work against a character in heavy armor, or against most monsters that do not wear clothing (though it does work against a monster with shaggy fur). If the touch attack is successful, you make an opposed grapple check, using the size modifier for the entangling pole (+4 for a two-handed weapon) instead of your own size. If you win the opposed check, you have a hold on the target, but you do not deal any damage. If you lose, you fail to start the grapple.
+
+To maintain the grapple, you do not need to move into your opponent's space. The entangling pole holds your opponent 10 feet away from you. While you maintain the grapple, you do not have the option to damage or pin your opponent. Your opponent can try to escape or wiggle free, attack with a light weapon, or cast a spell with no somatic components and a casting time of 1 standard action.
+
+An entangling pole can also be used as a normal weapon, dealing the damage shown on Table 3-1 but not entangling the opponent.
+
+An entangling pole has reach. You can strike opponents 10 feet away with it, but you can't use it against an adjacent foe.
+
+**Grasping Pole:** The grasping pole is a pole arm designed to capture opponents with a minimum of harm. A wielder who hits a Small or Medium opponent with a grasping pole can immediately initiate a grapple (as a free action) without provoking an attack of opportunity. (See Grapple in Chapter 8: Combat of the *Player's Handbook* for more information.) In addition to the normal options available to a grappler, the wielder of a grasping pole can attempt to pull his target to the ground (the equivalent of a trip attack, though no attack roll is necessary).
+
+A grasping pole has reach. You can strike opponents 10 feet away with it, but you can't use it against an adjacent foe.
+
+**Lasso:** A lasso is an entangling weapon that deals no damage, but it entangles only parts of an opponent's body. When you use a lasso to entangle your opponent's arms, you make a ranged touch attack against your target. A lasso's maximum range is 30 feet. If you hit, the target is partially entangled, taking a -2 on attack rolls and a -4 penalty on effective Dexterity. The creature's speed is not reduced, and it can still charge or run, but if you control the trailing rope by succeeding at an opposed Strength check while holding it, the lassoed creature can only move within the limits that the rope allows. If the lassoed creature attempts to cast a spell, it must succeed on a DC 15 Concentration check or be unable to cast the spell.
+
+The lassoed creature can escape with a DC 20 Escape Artist check as a full-round action. The lasso has 2 hp and can be broken with a DC 23 Strength check—also a full-round action.
+
+Alternatively, you can use a lasso to make trip attacks. If you are tripped during your own trip attempt, you can drop the lasso to avoid being tripped.
+
+**Truncheon:** A truncheon is essentially a heavier version of the sap—a one-handed martial weapon that deals nonlethal damage. As with a sap, a rogue wielding a truncheon can deal extra nonlethal damage with a sneak attack, but only if she is proficient in its use.
+
+### TABLE 3-1: NONLETHAL WEAPONS
+| Martial Weapons | Cost | Dmg (S) | Dmg (M) | Dmg (L) | Critical | Range Increment | Weight¹ | Type |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **One-Handed Melee Weapon** | | | | | | | | |
+| Truncheon | 2 gp | 1d6² | 1d8² | 2d6² | ×2 | — | 12 lb. | Bludgeoning |
+| **Exotic Weapons** | **Cost** | **Dmg (S)** | **Dmg (M)** | **Dmg (L)** | **Critical** | **Range Increment** | **Weight¹** | **Type** |
+| **Two-Handed Melee Weapon** | | | | | | | | |
+| Entangling Pole¹ | 4 gp | 1d3 | 1d4 | 1d6 | ×2 | — | 5 lb. | Piercing |
+| Grasping Pole¹ | 8 gp | 1d3³ | 1d4³ | 1d6³ | ×2 | — | 8 lb. | Bludgeoning |
+| **Ranged Weapon** | | | | | | | | |
+| Lasso | 1 gp | — | — | — | — | 10 ft. | 3 lb. | — |
+1 Reach weapon.
+2 The weapon deals nonlethal damage rather than lethal damage.
+3 Weight figures are for Medium weapons. A Small weapon weighs half as much, and a Large weapon weighs twice as much.
+
+## RAVAGES AND AFFLICTIONS
+
+Poison and disease are generally the tools of evil monsters and characters, implements of corruption and destruction. If snakes and vermin are associated with evil, as they are in many cultures, it is usually because of their venom that they are viewed in such a negative light despite their neutral alignment. Using poison that deals ability damage is an evil act because it causes undue suffering in the process of incapacitating or killing an opponent. Of the poisons described in the *Dungeon Master's Guide*, only one is acceptable for good characters to use: oil of taggit, which deals no damage but causes unconsciousness. Ironically, the poison favored by the evil drow, which causes sleep, is also generally acceptable for good characters to use—but the drow rarely share it.
+
+### RAVAGES
+Ravages are substances that are like poisons, except that they harm only evil creatures. To a good or neutral creature, a ravage is completely harmless, no matter how it is administered or ingested. A ravage is a poison for the purpose of what effects can counteract it, but it is not an evil act to use a ravage against an evil creature.
+
+**Golden Ice:** This substance is a contact poison that freezes the flesh of evil creatures. 
+*   **Type:** Contact (ravage) DC 14
+*   **Initial Damage:** 1d6 Dex
+*   **Secondary Damage:** 2d6 Dex
+
+**Unicorn Blood:** The blood of a living unicorn is a powerful alchemical substance. It can be formed into a ravage (see Ravages and Afflictions, above) that saps the strength of evil creatures. Also, if a spell to which this component is applied requires a Fortitude save, there's a 40% chance that the saving throw DC is increased by +1. In either case, unicorn blood retains its potency only as long as the unicorn that gave it remains alive.
+
+### AFFLICTIONS
+Afflictions are the opposite of ravages: they are similar to diseases, but they affect only evil creatures. Good and neutral creatures are completely immune to an affliction. Afflictions are generally delivered by touch or by a spell such as *affliction* (see Chapter 6: Magic).
+
+**Eternal Torpor:** This affliction causes an evil creature to become sluggish and eventually comatose.
+*   **Type:** Contact (affliction) DC 14
+*   **Initial Damage:** 1d6 Str
+*   **Secondary Damage:** 2d6 Str
+
+## SPECIAL MATERIALS
+
+The following materials and substances are found on the Upper Planes and have proven useful in the eternal battle against the forces of evil.
+
+**Aurorum:** This luminous steel gleams with varying hues of pink and indigo. An aurorum weapon, shield, or suit of armor that has been sundered can be reformed by bringing together its fragments (a full-round action). The broken pieces bond quickly and seamlessly, restoring the item to its previous state. The market price modifier for an aurorum weapon, shield, or suit of armor is +4,000 gp.
+
+**Frystalline:** This mineral grows in the icy mountain caves of Eronia, the second layer of the Blessed Fields of Elysium. Its resilient, pale-gold crystals contain divine energy that emanates from a god that sleeps beneath the mountains. Any weapon made of frystalline is treated as good-aligned for the purpose of overcoming damage reduction. The market price modifier for such a weapon is +2,000 gp.
+Frystalline has 15 hp per inch of thickness and hardness 10.
+
+**Moonblood:** Celestials use this silvery substance as warpaint, painting their faces and other exposed areas of their bodies with elaborately entwined holy runes before entering battle. Proper application of moonblood warpaint takes 1 hour and requires a DC 22 Craft (painting) check; a failed check means no benefits are gained and the moonblood is wasted.
+
+When the moonblood runes are properly applied, the warpaint grants a +2 sacred bonus to Armor Class. The warpaint lasts for 1 day, then is absorbed harmlessly into the skin. An evil creature that touches moonblood takes 1d6 points of damage.
+One application of moonblood costs 1,500 gp.
+
+**Serren:** Serren trees grow on Arvandor, the uppermost of Arborea's three layers. The trees serve as vessels for nature spirits, and any branch that falls from a serren tree can be fashioned into a bow, arrow, or crossbow bolt imbued with a portion of the tree's spirit. Serren bows, arrows, and bolts have the ghost touch special quality, although this property is not magical. The market price modifier for a serren weapon (one bow or 50 arrows or bolts) is +4,000 gp.
+Serren has the same hit points per inch of thickness and hardness as regular wood.
+
+**Solarian Truesteel:** Mined on the fourth layer of the Seven Mounting Heavens of Celestia, this fine iron needs no alloy and shines with a silvery gleam. When forged into a weapon, it gives the wielder a +1 bonus on the confirmation roll for a critical hit. The market price modifier for such a weapon is +1,000 gp.
+Solarian truesteel has 25 hp per inch of thickness and hardness 11.
+
+**Storm Tears:** This milky rain falls on the Upper Planes and usually heralds the death of a powerful champion of good or the birth of a stillborn child. These milky tears can be collected. A single vial of storm tears duplicates the effects of a *heart's ease* spell (see Chapter 6: Magic for details). Storm tears are nonmagical in nature, and each vial has a market price of 750 gp.
+
+**Ysgardian Heartwire:** This incredibly fine, flexible metal is found only in the deep mines of Nidavellir in the Heroic Domains of Ysgard. It is not suitable for making an entire suit of armor, but small sections of heartwire mail can be incorporated into chain shirts, chainmail, or heavy armor to reinforce vital areas. This reinforcement has the effect of increasing the wearer's AC by +2 solely for purposes of the roll to confirm a critical hit. The heartwire is so fine and light that it does not increase the armor's weight. The market price modifier for such a suit of armor is +1,500 gp.
+
+## MAGIC ITEMS
+
+The following items are among many found in the arsenals of good-aligned creatures committed to the capture or destruction of all things evil.
+
+**Antimagic Shackles:** These adamantine manacles fit any Small to Large creature and create an *antimagic field* to a radius of 5 feet when they are fastened. The DC to slip out of the shackles is 28, but breaking them is nearly impossible, requiring a DC 40 Strength check.
+Moderate abjuration; CL 11th; Craft Wondrous Item, *antimagic field*; Price 132,000 gp; Weight 5 lb.
+
+**Incense of Consecration:** When burned in a censer or thurible, the smoke from this incense creates a *consecrate* effect in a 20-foot emanation. For the duration of the effect, the censer or thurible can be moved, moving the area of the *consecrate* as well. The incense burns for 6 hours, after which it loses all magical properties.
+Faint evocation; CL 3rd; Craft Wondrous Item, *consecrate*; Price 300 gp; Weight 1 lb.
+
+**Retributive Amulet:** This amulet provides a +2 sacred bonus to AC. In addition, when the wearer takes damage from a melee attack made with a natural or hand-held weapon, the damage is divided equally between the attacker and the target. If the damage is an odd number, the extra point of damage goes to the attacker.
+The *retributive amulet* deals the same types of wounds upon the attacker that the wearer receives, but only damage to hit points. For example, a rogue who uses a poisoned dagger to stab the amulet's wearer would receive an identical gash in the same spot as the wearer, but would not suffer ability loss from the weapon's poison.
+The amulet must be worn to function; it needs no command word for activation.
+Faint abjuration; CL 5th; Craft Wondrous Item, *shield other*; Price 56,000 gp.
+
+**Shackles of Silence:** These wrought-iron manacles fit any Small to Large creature. They exude a *silence* effect in a radius just large enough to contain the creature they hold—a 2 1/2-foot radius for a Small or Medium creature, a 5-foot radius for a Large creature. However, if the creature bound by them escapes without opening them—by slipping out of the shackles or breaking them—the *silence* effect ends and the shackles ring for 1 round, as the effect of an *alarm* spell's audible alarm. The DC to break or slip out of the shackles is 28.
+Faint abjuration and illusion; CL 3rd; Craft Wondrous Item, *alarm, silence*; Price 12,000 gp; Weight 2 lb.
+
+**Starmantle Cloak:** This draping black cloak turns into a sparkling mantle of tiny, cascading stars when worn. The cloak sheds light as a torch, renders the wearer impervious to nonmagical weapon attacks, and transforms any nonmagical weapon or missile that strikes the wearer into harmless light, destroying it. Contact with the starmantle does not destroy magic weapons or missiles, but the starmantle's wearer is entitled to a DC 15 Reflex save each time he is struck by such a weapon; success indicates that the wearer takes only half damage from the attack.
+Moderate abjuration; CL 11th; Craft Wondrous Item, *starmantle*; Price 132,000 gp; Weight 1 lb.
+
+**Thurible of Consecration:** Each of these golden censers is sacred to a particular deity whose symbol appears on it. When a cleric of that deity burns *incense of consecration* in the thurible and carries it, the effects of the incense are increased as though an altar or similar fixture were in the area of the *consecrate* spell, doubling its effects. If a cleric of a different deity uses the thurible, it has no special effect.
+Faint evocation; CL 5th; Craft Wondrous Item, *consecrate*, creator must be a cleric of the deity to whom the thurible is sacred; Price 5,000 gp; Weight 4 lb.
+
+**Trumpet of Doom:** This small brass trumpet is engraved with interwoven patterns of feathers and flames. The trumpet emits a haunting blare that fills evil enemies with a terrible sense of dread. All evil creatures within 100 feet that can hear the trumpet's blare are shaken for 1 minute (DC 14 Will save negates). The trumpet can be blown up to three times per day.
+Moderate necromancy; CL 6th; Craft Wondrous Item, *doom*; Price 7,185 gp; Weight 1 lb.
+
+**Trumpet of Healing:** This finely wrought trumpet plays beautifully in the hands of any talented trumpeter. Invoking any of its magic, however, requires playing the horn uninterrupted for a full round and making a DC 15 Perform (wind instruments) check. The trumpeter can employ the trumpet three times per day, selecting from the following powers for each use: *remove blindness/deafness, remove disease, cure serious wounds*, or *neutralize poison*. These powers affect all creatures within 360 feet of the horn. In addition, the trumpet can heal a single creature within hearing range of the uplifting song once per day. Evil creatures cannot benefit from these effects; in fact, they hear nothing at all when the horn plays. The trumpeter cannot personally benefit from the trumpet's healing powers.
+Strong conjuration; CL 13th; Craft Wondrous Item, *cure serious wounds, heal, neutralize poison, remove blindness/deafness, remove disease*, creator must be good; Price 115,440 gp; Weight 2 lb.
+
+**Vambraces of Evil's Warding:** These golden bracers are engraved with holy runes and fit snugly over the arms of any creature that dons them. Ranged attacks made by evil creatures against the wearer take a -4 penalty.
+An evil creature that dons the *vambraces of evil's warding* takes 2d6 points of damage per round.
+Faint abjuration; CL 5th; Craft Wondrous Item, *protection from arrows*, creator must be good; Price 18,000 gp; Weight 1 lb.
+
+## INTELLIGENT ITEMS
+The intelligent items presented below can fit easily into most campaigns and are appropriate treasures for exalted heroes to find and use. Feel free to change an item's name, history, alignment, personality, or abilities to suit the needs of your campaign.
+
+**Barsolidor, the Tyrant Bane:** *+3 longsword*; AL CG; Int 17, Wis 10, Cha 17; Speech, telepathy, 120 ft. darkvision, and hearing; Ego score 15.
+*Languages:* Celestial, Common, Draconic, Elven.
+*Lesser Powers:* *Cure moderate wounds* on wielder 3/day, *zone of truth* 3/day, 10 ranks in Knowledge (history) (total modifier +13).
+*Greater Powers:* *Detect lawful evil* at will.
+*Personality:* Originally called Razorleaf, this sword was renamed shortly after the death of its creator, an elf crusader who dedicated his life to fighting tyranny. A champion and...
+
+## REDEEMING EVIL MAGIC ITEMS
+
+Some magic items are forged in evil and carry its taint regardless of who wears them or to what purpose they are put. Demon armor, unholy weapons, a nine lives stealer, a rod of the viper, a darkskull—these items are evil, they work only for evil characters, and often they actively bring harm to good characters who try to use them. As such, they present a special challenge to a good character: she can't use them, and selling them would mean putting them into the hands of a potential enemy. What, then, is Alhandra to do with her foe's demon armor?
+
+Though it is extremely difficult to accomplish, a character who is devoted to good can sometimes redeem an evil magic item, turning its power to holiness. Like creating a magic item from scratch, redeeming an evil item requires the appropriate item creation feat, time, spells, and experience points, but it does not require gold.
+
+The first step toward redeeming an evil item is to temporarily suppress its magical properties with *dispel magic*. Redemption cannot proceed until the evil magic is suppressed. Thereafter, the process of redemption is very similar to the process of creating a magic item from scratch. The redeemer must spend 8 hours per day in prayer or meditation with the item, must cast any prerequisite spells for the redemption, and must spend 1 day per 1,000 gp of the redeemed item's base price. The only cost to the character, besides time, is XP equal to 1/25 of the redeemed item's base price.
+
+**Redeemed Demon Armor:** When it is redeemed, the very shape of *demon armor* shifts so that its visage, while still bestial, appears more like a snarling hound or warden archon, or perhaps a guardinal. It remains *+4 full plate*, and still allows the wearer to make claw attacks. These attacks deal 1d10 points of damage, strike as +1 weapons, and affect the target as if she had been struck by a *sword of conscience* spell (Will negates DC 16).
+The armor bestows one negative level on any nongood creature wearing it, rather than affecting nonevil creatures.
+Strong enchantment; CL 13th; Craft Magic Arms and Armor, *sword of conscience*, redeemer must be of good alignment; Price 88,590 gp; Cost to Redeem 3,478 XP
+
+**Redeemed Unholy Weapon:** A redeemed unholy weapon becomes a holy weapon.
+Moderate evocation; CL 7th; Craft Magic Arms and Armor, *holy smite*, redeemer must be good; Price +2 bonus; Cost to Redeem according to weapon's value without the unholy quality:
+*   +1 enhancement bonus: 640 XP
+*   +2 or equivalent enhancement bonus: 960 XP
+*   +3 or equivalent enhancement bonus: 1,280 XP
+*   +4 or equivalent enhancement bonus: 1,600 XP
+*   +5 or equivalent enhancement bonus: 1,920 XP
+*   +6 or equivalent enhancement bonus: 2,240 XP
+*   +7 or equivalent enhancement bonus: 2,560 XP
+*   +8 or equivalent enhancement bonus: 2,880 XP
+
+**Redeemed Nine Lives Stealer:** If the sword is redeemed while it still has the ability to steal life, it becomes a *+1 holy longsword*. Otherwise, it becomes a *+2 longsword* with no special qualities.
+Moderate evocation; CL 7th; Craft Magic Arms and Armor, *holy smite*; Price 18,315 gp (+1 holy longsword), 8,315 (+2 longsword); Cost to Redeem 720 XP (+1 holy longsword), 320 XP (+2 longsword).
+
+**Redeemed Rod of the Viper:** A redeemed *rod of the viper* becomes a *rod of the python*.
+Moderate transmutation; CL 10th; Craft Rod, Craft Magic Arms and Armor, *polymorph other*, redeemer must be good; Price 13,000 gp; Cost to Redeem 520 XP.
+
+**Redeemed Darkskull:** When a darkskull is redeemed, tracings of silver forming holy symbols and words appear in its surface. It emanates a *hallow* effect rather than *unhallow*, still with no additional spell effect tied to it.
+Moderate evocation; CL 9th; Craft Wondrous Item, *hallow*, redeemer must be good; Price 60,000 gp; Cost to Redeem 2,400 XP; Weight 5 lb.
+
+**Redeemed Robe of the Archmagi:** A black *robe of the archmagi* can be transformed into a white one.
+Strong various schools; CL 14th; Prerequisites: Craft Wondrous Item, redeemer must be good; Price 75,000 gp; Cost to Redeem 3,000 XP; Weight 1 lb.
+
+**Redeemed Mace of Blood:** When redeemed, this item becomes a simple *+3 heavy mace*.
+Moderate no school; CL 9th; Craft Magic Arms and Armor; Price 18,312 gp; Cost to Redeem 720 XP.
+
+## IRREDEEMABLE EVIL ITEMS
+
+Redeeming a suit of demon armor is one thing; dealing with the *Hand of Vecna* or the *Wand of Orcus* is another matter entirely. Even a talisman of ultimate evil is an item so suffused with evil power that the evil cannot be cast out from the item. Evil artifacts, like most evil outsiders, are beyond redemption. The best option for a good character who discovers an evil artifact is to seek its destruction.
+
+Minor evil artifacts, like a *talisman of ultimate evil* or a copy of the *book of vile darkness*, are no more difficult to destroy than any other magic item. Shattering a talisman with a hammer or throwing a book on a fire destroys it, whether it is a minor artifact or a mundane item.
+
+*Mordenkainen's disjunction* has a chance to destroy any major artifact, though at great risk to the caster. As a variant rule, the DM can decide that a good character in a consecrated or hallowed location gains a +4 sacred bonus on her Will save to avoid the devastating consequences of destroying an evil artifact by this means.
+
+Every artifact has its own specific means of destruction as well. The *Dungeon Master's Guide* suggests some possible means. Others might include:
+*   Enclose the artifact in a voidstone on the Negative Energy Plane.
+*   Impale it on an icicle in the Ice Wastes, the 23rd layer of the Abyss.
+*   Dissolve it in a pool of poison in Smargard, the 74th layer of the Abyss.
+*   Grind it to dust in the clockwork gears of Mechanus.
+*   Expose it to the radiance of the Illuminated Heaven, the pinnacle of Celestia.
+*   Crush it between the two layers of Bytopia.
+*   Cause a dead god to ingest it.
+*   Use it to wound a specific deity.
+*   Release the soul of every creature consumed by the artifact.
+*   Resurrect every creature ever slain by it.
+*   Suspend it in a fountain of flowing soulsblood.
+*   Allow a soulmarauder to consume it.
+*   Fill it with the grateful tears of 1,000 mothers whose dead children have returned to life.
+
+The powers of good smile upon those who rid the world of great evil by destroying an evil major artifact. A party of good characters who destroys an evil artifact can request a *miracle* at no cost.
+
+# CHAPTER FOUR: FEATS
+
+This chapter features new feats that enhance exalted characters or campaigns. They provide new capabilities and improve existing ones.
+
+## EXALTED FEATS
+
+This book introduces a new type of feat: the exalted feat. Only intelligent characters of good alignment and the highest moral standards can acquire exalted feats, and only as a gift from powerful agents of good—deities, celestials, or similar creatures. These feats are thus supernatural in nature (rather than being extraordinary abilities, as most feats are).
+
+A character must have the DM's permission to take an exalted feat. In many cases, a ritual must be performed; often, this simply amounts to a character swearing a sacred vow, for example, in the presence of a celestial being. A character who willingly and willfully commits an evil act loses all benefits from all his exalted feats. She regains these benefits if she atones for her violations (see Sin and Atonement in Chapter 1).
+
+**Aura of Good:** A character with at least one exalted feat radiates an aura of good with a power equal to her character level (see the *detect good* spell), as if she were a paladin or a cleric of a good deity.
+
+### TABLE 4-1: FEATS
+
+**General Feats**
+| Feat | Prerequisite | Benefit |
+| :--- | :--- | :--- |
+| Ancestral Relic | Any good alignment, character level 3rd | Create personal magic item |
+| Consecrate Spell-Like Ability | Any good alignment | Adds good descriptor to spell-like ability |
+| Purify Spell-Like Ability | Any good alignment | Adds good descriptor to spell-like ability; neutral creatures take half damage, good creatures take no damage |
+| Resounding Blow¹ | Str 13, Power Attack, Intimidate 7 ranks | Potential cowering effect on critical hit |
+| Spell Focus (Good) | Any good alignment | +2 bonus to save DCs of spells with good descriptor |
+| Subduing Strike¹ | — | No penalty when dealing nonlethal damage; rogue's sneak attack deals nonlethal damage |
+
+**Exalted Feats**
+| Feat | Prerequisite | Benefit |
+| :--- | :--- | :--- |
+| Animal Friend | Cha 15, wild empathy class feature | +4 exalted bonus on wild empathy checks |
+| Celestial Familiar | Ability to acquire a new familiar, minimum level requirement (see text) | Additional familiar choices |
+| Celestial Mount | Paladin level 4th | Mount gains celestial creature template |
+| Consecrate Spell Trigger | Craft Wand or Craft Staff, ability to turn undead | Use turning ability to add good descriptor to triggered spell |
+| Exalted Companion | Ability to acquire a new animal companion, minimum level requirement (see text) | Additional animal companion choices |
+| Exalted Smite | Smite evil class ability | Weapon good-aligned when smiting evil |
+| Exalted Spell Resistance | Cha 15, spell resistance | +4 to spell resistance against evil spells and spell-like abilities of evil outsiders |
+| Exalted Turning | Ability to turn undead | Extra 3d6 points of damage when turning |
+| Exalted Wild Shape | Wild shape class ability, wild shaping class level 8th | Additional wild shape options |
+| Favored of the Companions | — | +1 luck bonus on any one roll or check |
+| Fist of the Heavens¹ | Wis 15, Sanctify Ki Strike, Stunning Fist | +2 to Stunning Fist DC |
+| Gift of Faith | Wis 13 | +2 bonus on saving throws to resist fear and despair effects |
+| Gift of Grace | Divine grace class ability | Share Cha saving throw bonus |
+| Hands of a Healer | Cha 13, lay on hands class ability | +2 bonus to Cha for lay on hands ability |
+| Holy Subdual¹ | Subduing Strike | Transform bonus and smite damage to nonlethal |
+| Intuitive Attack¹ | Base attack bonus +1 | Use Wis modifier instead of Str modifier on attack rolls with simple and natural weapons |
+| Knight of Stars | — | +1 luck bonus on any one roll or check |
+| Nemesis² | Favored enemy class ability | Detect presence of favored enemies |
+| Nimbus of Light | — | +2 bonus on Diplomacy and Sense Motive checks with good creatures |
+| Holy Radiance | Cha 15, Nimbus of Light | Glow with light harmful to undead |
+| Stigmata | Nimbus of Light | Heal others' wounds by taking Con damage |
+| Nymph's Kiss | — | +2 bonus on Cha-related checks, +1 bonus on saving throws against spells, 1 extra skill point per level |
+| Purify Spell Trigger | Craft Wand or Craft Staff, ability to turn undead | Use turning ability to add good descriptor to spell; neutral creatures take half damage, good creatures take no damage |
+| Quell the Profane | Str 13, Power Attack, Resounding Blow, base attack bonus +8 | Potential Str damage to evil creature on critical hit |
+| Ranged Smite Evil | Smite evil class ability | Smite evil with ranged attack |
+| Righteous Wrath | Rage class ability | Potential shaken effect against evil creatures |
+| Sacred Strike | Sneak attack class ability | Sneak attacks deal d8s against evil creatures |
+| Sacred Vow | — | +2 perfection bonus on Diplomacy checks |
+| Vow of Abstinence | Sacred Vow | +4 perfection bonus on Fort saves against poisons and drugs |
+| Vow of Chastity | Sacred Vow | +4 perfection bonus on Will saves against charms and phantoms |
+| Vow of Nonviolence | Sacred Vow | +4 bonus on save DCs of nondamaging spells |
+| Vow of Peace | Sacred Vow, Vow of Nonviolence | Calming aura; +6 varied bonus to AC |
+| Vow of Obedience | Sacred Vow | +4 perfection bonus on Will saves against compulsions |
+| Vow of Poverty | Sacred Vow | Bonuses to AC, ability scores, and saves; bonus feats (see page 29) |
+| Vow of Purity | Sacred Vow | +4 perfection bonus on Fort saves against disease and death effects |
+¹ A fighter may select this feat as one of his fighter bonus feats.
+² You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new favored enemy.
+
+## ANCESTRAL RELIC [GENERAL]
+
+You own an ancestral heirloom and can invest it with increasing power.
+
+**Prerequisites:** Any good alignment, character level 3rd.
+**Benefit:** Choose an item you own. The item must be of masterwork quality, and it must be an item that once belonged to a member of your family. Alternatively, the item may have belonged to another person to whom you are somehow connected, such as another member of your religious order.
+
+At any time, you may retreat to a consecrated or hallowed location and spend time in prayer in order to awaken the spirits in your ancestral relic. This requires a sacrifice of valuable items worth the difference between the market price of the magic item your relic will become and the market price of your current relic. This sacrifice does not have to be gold—you can sacrifice magic items or other goods worth the required amount, rather than selling your goods (at half value) to pay for the sacrifice. You must spend 1 day per 1,000 gp value you sacrifice. During this time, you must spend at least 8 hours each day in prayer or meditation, not stopping to eat or rest.
+
+For example, a 4th-level paladin has a masterwork bastard sword she inherited from her grandfather. She makes sacrifices worth 2,000 gp and spends two days in prayer and fasting in the temple of Heironeous. When she emerges, her devotion has awakened the magic inherent in the blade, making it a *+1 bastard sword*. When she reaches 7th level, she once again retreats to the temple for 6 days, sacrificing items worth an additional 6,000 gp to make her weapon a *+2 bastard sword* (market price 8,000 gp). When she reaches 11th level, she can make it a *+2 holy bastard sword* by making sacrifices worth 24,000 gp (the difference between 32,000 and 8,000 gp) and spending 24 days in prayer.
+
+A character's level dictates the maximum value of his or her ancestral relic, as shown on Table 4-2.
+
+No character may have more than one ancestral relic.
+
+### TABLE 4-2: ANCESTRAL RELIC
+| Character Level | Maximum Relic Value | Character Level | Maximum Relic Value |
+| :--- | :--- | :--- | :--- |
+| 3rd | 1,350 gp | 12th | 44,000 gp |
+| 4th | 2,700 gp | 13th | 55,000 gp |
+| 5th | 4,500 gp | 14th | 75,000 gp |
+| 6th | 6,500 gp | 15th | 100,000 gp |
+| 7th | 9,500 gp | 16th | 130,000 gp |
+| 8th | 13,500 gp | 17th | 170,000 gp |
+| 9th | 18,000 gp | 18th | 220,000 gp |
+| 10th | 24,500 gp | 19th | 290,000 gp |
+| 11th | 33,000 gp | 20th | 380,000 gp |
+
+## ANIMAL FRIEND [EXALTED]
+
+Animals respond favorably to the aura of goodness that exudes from you.
+
+**Prerequisites:** Cha 15, wild empathy class feature.
+**Benefit:** You receive a +4 exalted bonus on wild empathy checks to sway the attitudes of animals and good-aligned magical beasts (including, but not limited to, blink dogs, unicorns, pegasi, and animals with the celestial template). In the case of good magical beasts, this bonus simply eliminates the penalty you normally take when trying to deal with magical beasts rather than animals.
+
+## CELESTIAL FAMILIAR [EXALTED]
+
+As long as you are able to acquire a new familiar, you may receive a celestial as a familiar.
+
+**Prerequisites:** Able to acquire a new familiar, minimum level requirement (see below).
+**Benefit:** When choosing a familiar, the following creatures are also available to you. You must choose a familiar whose alignment is the same as yours.
+
+| Familiar | Alignment | Allegiance | Spellcaster Level |
+| :--- | :--- | :--- | :--- |
+| Celestial animal¹ | Any good | Any good | 3rd |
+| Coure eladrin | Chaotic good | Chaotic good | 7th |
+| Lantern archon | Lawful good | Lawful good | 7th |
+| Musteval guardian | Neutral good | Neutral good | 7th |
+¹ Apply the celestial template to any animal from the standard familiar list. Unlike other celestial familiars, a celestial animal grants its master the standard benefit for having an animal familiar of that type.
+
+The celestial familiar is magically linked to its master like a normal familiar. The familiar uses the basic statistics for a creature of its kind, as given in the *Monster Manual* or this volume, except as noted below.
+*   **Hit Dice:** For effects related to Hit Dice, use the master's level or the familiar's normal total, whichever is higher.
+*   **Hit Points:** One-half the master's total or the familiar's normal total, whichever is higher.
+*   **Attack:** Use the master's base attack bonus or the familiar's, whichever is better.
+*   **Saving Throws:** Use the master's base save bonuses if they are better than the familiar's.
+*   **Familiar Special Abilities:** Use the information in the Familiars sidebar on pages 52-53 of the *Player's Handbook* to determine additional abilities as you would for a normal familiar. With the exception of celestial animals, celestial familiars do not grant their masters any of the benefits that appear in that sidebar.
+
+## VOW OF OBEDIENCE [EXALTED]
+
+You have taken a sacred vow to live according to the dictates of another, generally your superior in a religious order or similar organization.
+
+**Prerequisites:** Sacred Vow.
+**Benefit:** You gain a +4 perfection bonus on Will saving throws against compulsion spells and effects.
+**Special:** To fulfill your vow, you must unquestioningly obey your superior and live according to the rules of your organization. If you intentionally break your vow, you immediately and irrevocably lose the benefit of this feat. You may not take another feat to replace it. If you break your vow as a result of magical compulsion, you lose the benefit of this feat until you perform a suitable penance and receive an *atonement* spell.
+
+## VOW OF PEACE [EXALTED]
+
+You have taken a sacred vow to abstain from harming any living creature.
+
+**Prerequisites:** Sacred Vow, Vow of Nonviolence.
+**Benefit:** This sacred vow grants significant supernatural benefits, but its cost is high.
+First, you are constantly surrounded by a calming aura to a radius of 20 feet. Creatures within the aura must make a successful Will save (DC 10 + one-half your character level + your Cha modifier) or be affected as by the *calm emotions* spell. Creatures who leave the aura and reenter it receive new saving throws. A creature that makes a successful saving throw and remains in the aura is unaffected until it leaves the aura and reenters. The aura is a mind-affecting, supernatural compulsion.
+
+Second, you gain a +2 natural armor bonus to your AC, a +2 deflection bonus to your AC, and a +2 exalted bonus to your AC. This exalted bonus does not apply to touch attacks and does not hinder incorporeal touch attacks. Brilliant energy weapons, however, do not ignore it. It does not stack with an armor bonus. If you also have the Vow of Poverty feat, the natural armor, deflection, and exalted Armor Class bonuses granted by that feat all increase by +2. If a creature strikes you with a manufactured weapon, the weapon must immediately make a successful Fortitude save (DC 10 + one-half your character level + your Con modifier) or shatter against your skin, leaving you unharmed.
+
+Finally, you gain a +4 exalted bonus on all Diplomacy checks.
+
+**Special:** To fulfill your vow, you must not cause harm to any living creature (constructs and undead are not included in this prohibition). You may not deal real damage or ability damage to such creatures through spells or weapons, though you may deal nonlethal damage. You may not target them with death effects, disintegrate, or other spells that have the immediate potential to cause death or great harm. You also may not use nondamaging spells to incapacitate or weaken living foes so that your allies can kill them—if you incapacitate a foe, you must take him prisoner.
+
+If you intentionally break your vow, you immediately and irrevocably lose the benefit of this feat. You may not take another feat to replace it. If you break your vow as a result of magical compulsion or otherwise unwittingly, you lose the benefit of this feat until you perform a suitable penance and receive an *atonement* spell. (Characters who have taken a Vow of Peace are known to drink water through a strainer in order to avoid accidentally swallowing, and thereby causing harm to, a small insect.)
+
+## VOW OF POVERTY [EXALTED]
+
+You have taken a sacred vow to forswear material possessions.
+
+**Prerequisites:** Sacred Vow.
+**Benefit:** You gain bonuses to your Armor Class, ability scores, and saving throws, as well as bonus exalted feats, all depending on your character level. See Voluntary Poverty in Chapter 2 for details.
+**Special:** To fulfill your vow, you must not own or use any material possessions, with the following exceptions: You may carry and use ordinary (neither magic nor masterwork) simple weapons, usually just a quarterstaff that serves as a walking stick. You may wear simple clothes (usually just a homespun robe, possibly also including a hat and sandals) with no magical properties. You may carry enough food to sustain you for one day in a simple (nonmagic) sack or bag. You may carry and use a spell component pouch. You may not use any magic item of any sort, though you can benefit from magic items used on your behalf—you can drink a *potion of cure serious wounds* a friend gives you, receive a spell cast from a wand, scroll, or staff, or ride on your companions' ebony fly. You may not, however, "borrow" a cloak of resistance or any other magic item from a companion for even a single round, nor may you yourself cast a spell from a scroll, wand, or staff.
+If you break your vow, you immediately and irrevocably lose the benefit of this feat. You may not take another feat to replace it.
+
+## VOW OF PURITY [EXALTED]
+
+You have taken a sacred vow to avoid contact with dead flesh.
+
+**Prerequisites:** Sacred Vow.
+**Benefit:** You gain a +4 perfection bonus on Fortitude saving throws to resist disease and death effects.
+**Special:** To fulfill your vow, you must avoid all contact with dead creatures, including meat cooked for food. You may not touch fallen foes. You may fight undead foes, but must purify yourself as soon as possible afterward. You may touch dead characters in order to restore them to life (by way of a *raise dead* or similar spell that requires you to touch the corpse), but for no other purpose.
+If you fight undead creatures or accidentally touch dead flesh, you must purify yourself in a special ritual that requires 1 hour and a flask of holy water.
+If you intentionally break your vow, you immediately and irrevocably lose the benefit of this feat. You may not take another feat to replace it. If you break your vow as a result of magical compulsion, you lose the benefit of this feat until you perform a suitable penance and receive an *atonement* spell.
+
+## WORDS OF CREATION [EXALTED]
+
+You have learned a few of the words that were spoken to create the world.
+
+**Prerequisites:** Int 15, Cha 15, base Will save bonus +5.
+**Benefit:** You can use the Words of Creation to enhance bardic music, to help cast good spells and create good magic items, and to enhance the process of creation (see Words of Creation in Chapter 2).
+**Normal:** A mortal creature that tries to utter the Words of Creation without learning them properly is affected as by a *feeblemind* spell, while an evil character is struck dead. Fortunately, it is impossible to make someone speak the Words of Creation against his will, because their pronunciation is so exacting.
+
+# CHAPTER FIVE: PRESTIGE CLASSES
+
+There are prestige classes, and then there are prestige classes. Members of the prestige classes detailed in this chapter may well be among the most prestigious characters in any campaign world. Devotees of holy orders dedicated to and sponsored by the celestial paragons who rule the upper planes, they are heroes whose devotion to the cause of righteousness knows no bounds. They are exalted in every sense of the word: noble and virtuous, elevated and prestigious.
+
+The prestige classes in this chapter have steep entrance requirements. Only characters of good alignment who have earned one or more exalted feats may gain entry. All of the prestige classes share the high moral standards of the paladin (though not all require characters to be lawful good—neutral good and chaotic good characters are no less virtuous), and characters risk losing access to their class abilities if they fall short of their high calling. The costs carry benefits though. The stringent demands provide commensurately great rewards.
+
+The following text applies to every prestige class in this chapter:
+
+A character who ceases to be of good alignment or who willfully commits an evil act loses all special abilities and spells acquired in this prestige class, and may not gain new levels in that class. She may regain her abilities if she atones for her violations (see Sin and Atonement in Chapter 1).
+
+## ANOINTED KNIGHT
+
+The anointed knight is a holy soldier who has taken great pains to learn the intricacies of alchemy in order to become a more capable combatant. Armed with an ancestral weapon, she searches for obscure lore, consults with alchemists and sages, and communes with the powers of good. Her unquenchable thirst for knowledge is matched only by her extraordinary combat prowess.
+
+An anointed knight crafts and draws power from magically created oils. By anointing herself with these oils, she unlocks new supernatural powers within her being. She also coats her ancestral weapon with special oils that bestow additional qualities upon the weapon.
+
+Anointed knights are typically paladins or fighters with one or more wizard or cleric levels. Occasionally, an anointed knight emerges from the ranks of single-class wizards, sorcerers, clerics, or bards.
+
+Regardless of their backgrounds, anointed knights often form bonds of friendship with knowledgeable arcane spellcasters who might benefit from their combat puissance. Anointed knights also ally themselves with angels, eladrins, and other forces of good. They believe in crusades against evil and enjoy taking the fight to evildoers wherever they may reside. They oppose the warriors of darkness (as described in the *Book of Vile Darkness*), and the one trait they share with their evil counterparts is a lack of subtlety. An anointed knight would much rather go head-to-head with her enemies than work behind the scenes or try to organize any form of passive resistance.
+
+**Hit Die:** d10.
+
+### REQUIREMENTS
+To qualify to become an anointed knight, a character must fulfill all the following criteria.
+*   **Alignment:** Any good.
+*   **Base Attack Bonus:** +5.
+*   **Skills:** Craft (alchemy) 5 ranks, Knowledge (arcana) 3 ranks, Spellcraft 3 ranks.
+*   **Feats:** Ancestral Relic.
+
+### CLASS SKILLS
+The anointed knight's class skills (and the key ability for each skill) are Climb (Str), Concentration (Con), Craft (alchemy) (Int), Heal (Wis), Jump (Str), Knowledge (arcana) (Int), Knowledge (religion) (Int), Knowledge (the planes) (Int), Ride (Dex), and Spellcraft (Int). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 2 + Int modifier.
+
+### CLASS FEATURES
+All of the following are class features of the anointed knight prestige class.
+**Weapon and Armor Proficiency:** An anointed knight is proficient with all simple and martial weapons, all types of armor, and shields.
+
+**Anoint Self (Su):** An anointed knight concocts a magic oil with which to anoint herself, at a cost of 100 gp (for alchemical components). She can make only one dose of the oil each time this class feature is gained (at 1st, 4th, 7th, and 10th level). Creating the oil takes 1 hour.
+Applying the oil is a ceremony that takes 8 hours. Once the oil is applied, the anointed knight permanently gains a new supernatural ability chosen from the accompanying list. Her level plus Charisma modifier determines the choices available to her (the highest-numbered choice possible, or any lower one). An anointed knight cannot choose an ability more than once, nor can she replace one ability with another once the choice is made.
+
+| Level + Cha Modifier | Ability/Effect |
+| :--- | :--- |
+| 2 or lower | **Holy Sight:** The knight gains the Alertness feat. |
+| 3–4 | **Celestial Strategy:** The knight gains the Combat Reflexes feat. |
+| 5–6 | **Unbroken Flesh:** The knight gains damage reduction 3/–. |
+| 7–8 | **Divine Clarity:** The knight's Intelligence, Wisdom, or Charisma score improves by 1. |
+| 9 | **Call to Battle:** Three times per day, the knight gains an extra +3 bonus on her attack roll when charging. |
+| 10 | **Deep Strike:** Three times per day, on a successful attack, the knight deals an extra 2d6 points of damage. |
+| 11+ | **Inspired Strike:** Three times per day, the knight can take a single extra attack at her highest attack bonus as a free action. |
+
+**Anoint Ancestral Weapon (Su):** An anointed knight concocts a magic oil with which to coat her ancestral weapon, at a cost of 100 gp (for alchemical components). She can make only one dose of the oil each time this class feature is gained (at 2nd, 5th, and 8th level). If the oil is applied to a weapon other than the anointed knight's ancestral weapon, nothing happens and the oil is wasted. Creating the oil takes 1 hour.
+Applying the oil is a ceremony that takes 8 hours. Once the oil is applied, the ancestral weapon permanently gains a new supernatural ability chosen from the accompanying list. The knight's level plus Charisma modifier determines the choices available to her (the highest-numbered choice possible, or any lower one). An anointed knight cannot choose an ability more than once, nor can she replace one ability with another once the choice is made.
+
+| Level + Cha Modifier | Ability/Effect |
+| :--- | :--- |
+| 3 or lower | **Good Weapon:** The ancestral weapon deals 1d6 points of damage per round to any evil creature that holds or wields it. The weapon also becomes a good-aligned weapon. |
+| 4–6 | **Sunder Resistance:** The ancestral weapon gains 10 points of hardness. |
+| 7–8 | **Unicorn's Blood:** Any evil creature wounded by the weapon must make a DC 17 Fortitude save or suffer the weakening effects of unicorn blood.¹ |
+| 9 | **Impervious:** The ancestral weapon gains an extra 50 hp. |
+| 10+ | **Sentience:** The ancestral weapon becomes an intelligent item, with the same alignment as the knight.² |
+¹ See Ravages and Afflictions in Chapter 3: Exalted Equipment.
+² The weapon gains the following mental ability scores (assigned as the knight sees fit): 14, 14, 10. The weapon also gains the power of speech, 120-ft. vision and hearing, and two lesser powers (rolled randomly). See Intelligent Items in the *Dungeon Master's Guide*.
+
+**Bonus Feat:** At 3rd level, and again at 6th and 9th level, the anointed knight gains a bonus feat. This feat must be drawn from the following feats, and the knight must meet all the prerequisites for it: Blind-Fight, Cleave, Combat Expertise, Combat Reflexes, Diehard, Dodge, Endurance, Exalted Smite, Great Cleave, Holy Subdual, Improved Bull Rush, Improved Disarm, Improved Feint, Improved Overrun, Improved Sunder, Improved Trip, Mobility, Power Attack, Sanctify Martial Strike, Sanctify Weapon, Spring Attack, Subduing Strike, Whirlwind Attack.
+
+### TABLE 5-1: THE ANOINTED KNIGHT
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +1 | +2 | +0 | +2 | Anoint self |
+| 2nd | +2 | +3 | +0 | +3 | Anoint ancestral weapon |
+| 3rd | +3 | +3 | +1 | +3 | Bonus feat |
+| 4th | +4 | +4 | +1 | +4 | Anoint self |
+| 5th | +5 | +4 | +1 | +4 | Anoint ancestral weapon |
+| 6th | +6 | +5 | +2 | +5 | Bonus feat |
+| 7th | +7 | +5 | +2 | +5 | Anoint self |
+| 8th | +8 | +6 | +2 | +6 | Anoint ancestral weapon |
+| 9th | +9 | +6 | +3 | +6 | Bonus feat |
+| 10th | +10 | +7 | +3 | +7 | Anoint self |
+
+## APOSTLE OF PEACE
+
+In a world where conflict usually means violence, where good and evil meet regularly on the field of battle, where might too often makes right and power is measured in gold pieces, the apostle of peace is a lone voice crying in the wilderness, calling for a change of heart. Having completely forsworn violence in any form, the apostle of peace is an advocate for nonviolent resolution of conflict. He is a powerful font of divine magic, but his spells are all aimed toward healing, calming hostility, and aiding his allies.
+
+Members of all classes can qualify to become apostles of peace, though barbarians, fighters, and rogues have difficulty meeting the skill prerequisites and are usually too oriented toward martial exploits to be interested. Clerics, bards, and druids often develop pacifistic philosophies and gravitate toward this class, but any character can experience a conversion of sorts and become an apostle of peace.
+
+Apostles of peace are usually solitary wanderers or even hermits. Many nonplayer character (NPC) apostles are far removed from the violent struggles of the adventuring life, but may serve as resources of knowledge, spells, or spiritual guidance for adventuring PCs. Apostle of peace PCs are unusual but not impossible; see Waging Peace in Chapter 2 for advice about using such characters in the game.
+
+**Hit Die:** d4.
+
+### REQUIREMENTS
+To qualify to become an apostle of peace, a character must fulfill all the following criteria.
+*   **Alignment:** Any good.
+*   **Base Save Bonuses:** Will +5.
+*   **Skills:** Concentration 10 ranks, Diplomacy 6 ranks.
+*   **Feats:** Sacred Vow, Vow of Nonviolence, Vow of Peace, Vow of Poverty.
+
+### CLASS SKILLS
+The apostle of peace's class skills (and the key ability for each skill) are Bluff (Cha), Concentration (Con), Craft (Int), Diplomacy (Cha), Escape Artist (Dex), Gather Information (Cha), Handle Animal (Wis), Heal (Wis), Knowledge (all skills, taken individually) (Int), Listen (Wis), Perform (Cha), Profession (Wis), Search (Int), Sense Motive (Wis), Speak Language (none), Spellcraft (Int), and Spot (Wis). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 4 + Int modifier.
+
+### TABLE 5-2: THE APOSTLE OF PEACE
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | 0 | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th | 8th | 9th |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +2 | +2 | +2 | Turn undead | 4 | 2 | — | — | — | — | — | — | — | — |
+| 2nd | +1 | +3 | +3 | +3 | Pacifying touch | 5 | 3 | 0 | — | — | — | — | — | — | — |
+| 3rd | +1 | +3 | +3 | +3 | Censure fiends | 6 | 3 | 1 | 0 | — | — | — | — | — | — |
+| 4th | +2 | +4 | +4 | +4 | Censure fiends | 6 | 3 | 2 | 1 | 0 | — | — | — | — | — |
+| 5th | +2 | +4 | +4 | +4 | Censure fiends | 6 | 3 | 3 | 2 | 1 | 0 | — | — | — | — |
+| 6th | +3 | +5 | +5 | +5 | Censure fiends | 6 | 3 | 3 | 3 | 2 | 1 | 0 | — | — | — |
+| 7th | +3 | +5 | +5 | +5 | Censure fiends | 6 | 4 | 3 | 3 | 3 | 2 | 1 | 0 | — | — |
+| 8th | +4 | +6 | +6 | +6 | Censure fiends | 6 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 0 | — |
+| 9th | +4 | +6 | +6 | +6 | Censure fiends | 6 | 5 | 4 | 4 | 4 | 4 | 3 | 2 | 1 | 0 |
+| 10th | +5 | +7 | +7 | +7 | Censure fiends | 6 | 5 | 5 | 4 | 4 | 4 | 4 | 3 | 2 | 1 |
+
+### CLASS FEATURES
+All of the following are class features of the apostle of peace prestige class.
+**Weapon and Armor Proficiency:** Apostles of peace gain no proficiency with any weapon or armor.
+As part of their sacred vows, apostles of peace foreswear the use of armor, though they may wear magic items that protect them (such as a ring of protection or bracers of armor). An apostle of peace who wears any armor is unable to cast apostle of peace spells or use any of his supernatural class abilities while doing so and for 24 hours thereafter.
+
+**Spells:** An apostle of peace has the ability to cast a number of divine spells. To cast an apostle of peace spell, the apostle must have a Wisdom score of at least 10 + the spell's level, so an apostle with a Wisdom of 10 or lower cannot cast these spells. Apostle of peace bonus spells are based on Wisdom, and saving throws against these spells have a DC of 10 + spell level + the apostle of peace's Wisdom modifier. When the apostle of peace gets 0 spells per day of a given spell level (for instance, 2nd-level spells for a 2nd-level apostle), he gains only the bonus spells he would be entitled to based on his Wisdom score for that spell level. The apostle of peace's spell list appears below. An apostle of peace prepares and casts spells just as a cleric does.
+
+To determine the caster level of an apostle of peace, add the character's apostle levels to one-half of his caster levels in other spellcasting classes.
+
+**Spontaneous Casting:** An apostle of peace can channel stored spell energy into healing spells that the apostle did not prepare ahead of time. An apostle can "lose" any prepared apostle spell in order to cast any *cure* spell of the same spell level or lower (a *cure* spell is any spell with "cure" in its name).
+
+**Turn Undead (Su):** An apostle of peace can turn undead as a good cleric of his apostle of peace level would. If he is also a cleric (or paladin), he adds his apostle levels to his effective cleric levels to determine his turning capability.
+
+**Pacifying Touch (Su):** At 2nd level, an apostle of peace gains the ability to pacify hostile or angry creatures by touch. The effect is similar to the *calm emotions* spell. The apostle can affect only a single target with each use of the ability, and must touch the target. A touched creature receives no saving throw and spell resistance does not apply. The pacifying touch does not suppress positive emotions, just anger, rage, and hostility. The apostle of peace can make a level check as if casting *dispel magic*, using his character level as his caster level, to dispel certain mind-affecting spells affecting the target. The pacifying touch can only dispel spells that incite violent emotions in the target, such as *fear* or *rage*.
+
+**Censure Fiends (Su):** A 3rd-level apostle of peace can censure fiends, much as good clerics turn undead. Channeling holy power from the celestial planes, he can make demons, devils, and other outsiders with the evil subtype recoil. Make a Charisma check for the apostle and consult Table 8-9 in the *Player's Handbook*, using the apostle's character level to determine the most powerful fiend he can censure. Roll 2d6 + the apostle of peace's level + his Charisma modifier for censuring damage. Using both the apostle's character level and his class level in this manner means that he is more likely to affect a single powerful fiend, but unlikely to censure more than one of them.
+A censured fiend is stunned by the apostle's holy power for 1d4+1 rounds. If an apostle of peace attacks a censured fiend, the stunning ends immediately and the fiend can act normally on its next turn.
+If the apostle of peace's character level is at least twice the fiend's Hit Dice, he banishes the affected fiend back to its home plane. An apostle of peace can make a number of censuring attempts per day equal to 3 + his Charisma modifier. These attempts are separate from any attempts to turn undead.
+
+**Apostle of Peace Spell List**
+Apostles of peace choose their spells from the following list:
+**0 Level:** *create water, cure minor wounds, detect magic, detect poison, guidance, light, mending, purify food and drink, read magic, resistance, virtue*.
+**1st Level:** *bless, bless water, command, comprehend languages, cure light wounds, detect evil, detect undead, endure elements, entropic shield, eyes of the avoral, ray of hope, remove fear, sanctuary, shield of faith, vision of heaven*.
+**2nd Level:** *aid, augury, bear's endurance, calm emotions, consecrate, cure moderate wounds, delay poison, eagle's splendor, ease pain, enthrall, glorious apparel, lesser restoration, make whole, owl's wisdom, remove paralysis, resist energy, shield other, silence, status, yoke of mercy, zone of truth*.
+**3rd Level:** *blessed sight, create food and water, cure serious wounds, dispel magic, helping hand, invisibility purge, magic circle against evil, magic vestment, meld into stone, prayer, protection from energy, refreshment, remove blindness/deafness, remove curse, remove disease, remove nausea, water breathing, water walk, wind wall*.
+**4th Level:** *air walk, blood of the martyr, control water, cure critical wounds, death ward, discern lies, dismissal, divination, freedom of movement, good hope, greater status, imbue with spell ability, lesser aspect of the deity, lesser planar ally, neutralize poison, remove fatigue, repel vermin, restoration, sending, spell immunity, sustain, tongues*.
+**5th Level:** *atonement, break enchantment, commune, mass cure light wounds, dispel evil, energetic healing, greater command, hallow, mark of justice, plane shift, raise dead, sacred guardian, scrying, spell resistance, symbol of sleep, true seeing, wall of stone*.
+**6th Level:** *antilife shell, aspect of the deity, banishment, mass bear's endurance, celestial blood, mass cure moderate wounds, mass eagle's splendor, forbidden, geas/quest, greater dispel magic, heal, heroes' feast, mass owl's wisdom, planar ally, symbol of persuasion, wind walk, word of recall*.
+**7th Level:** *bastion of good, control weather, ethereal jaunt, greater restoration, greater scrying, mass cure serious wounds, refuge, regenerate, repulsion, resurrection, shield of the archons*.
+**8th Level:** *antimagic field, discern location, greater planar ally, holy aura, mass cure critical wounds*.
+**9th Level:** *astral projection, end to strife, etherealness, gate, greater aspect of the deity, mass heal, miracle, true resurrection*.
+
+## BELOVED OF VALARIAN
+
+The beloved of Valarian (also called Valarian's beloved) are women who have foresworn the love of mortals to dedicate themselves entirely to the unicorn deity Valarian, thus fostering a close bond with unicorns. They normally come from the ranks of exalted rangers or druids, although there have been paladins and even fighters who have chosen this path. Most of Valarian's beloved are humans, elves, and half-elves, but halflings, gnomes, and dwarves are not prohibited.
+
+A beloved of Valarian is a solitary being, shunning civilization. She retreats to the woods where she maintains few contacts with the outside world. Because she champions the cause of good, she calls upon their animal allies to help repel invaders should evil invade her forest refuge. Her relationship with the unicorn is nothing less than a partnership forged in light. She has a closer emotional bond to her mount than she does with her own family members. Just as she relies on the unicorn, the unicorn relies on her to help keep its mysteries safe.
+
+All of Valarian's beloved must be chaste and must dedicate herself wholly both to good and her unicorn companion. Should a beloved of Valarian ever willingly couple with a mortal, the unicorn leaves her company without hard feelings or regret. Because of the solitary existence these women must endure, it is rare (but not unheard of) for Valarian's beloved to join ranks with others. They prefer the companionship of paladins but associate with any good characters during times of trouble. Under no circumstances will one of Valarian's beloved agree to join with an evil character, and she barely tolerates neutral characters. The beloved of Valarian and their unicorn companions may leave their forest sanctuaries should they be needed to fight evil.
+
+**Hit Die:** d10.
+
+### REQUIREMENTS
+To qualify to become a beloved of Valarian, a character must fulfill all the following criteria.
+*   **Gender:** Female.
+*   **Alignment:** Any good.
+*   **Base Attack Bonus:** +7.
+*   **Skills:** Knowledge (nature) 5 ranks, Ride 10 ranks.
+*   **Feats:** Mounted Combat, Sacred Vow, Vow of Chastity.
+*   **Special:** Before she can become a beloved of Valarian, the character must meditate at a druid's grove and fast until she saves the life of an animal in danger. Should she fail to survive or aid an animal, she does not meet her unicorn companion and cannot advance in this class.
+
+### CLASS SKILLS
+The beloved of Valarian's class skills (and the key ability for each skill) are Concentration (Con), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Knowledge (nature) (Int), Ride (Dex), Sense Motive (Wis), and Survival (Wis). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 2 + Int modifier.
+
+### TABLE 5-3: THE BELOVED OF VALARIAN
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | 1st | 2nd | 3rd | 4th |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +1 | +2 | +0 | +0 | Call unicorn, telepathic bond, timelessness | 0 | — | — | — |
+| 2nd | +2 | +3 | +0 | +0 | Ethereal jaunt | 1 | — | — | — |
+| 3rd | +3 | +3 | +1 | +1 | Forest dweller | 1 | 0 | — | — |
+| 4th | +4 | +4 | +1 | +1 | Uncanny dodge | 1 | 1 | — | — |
+| 5th | +5 | +4 | +1 | +1 | | 1 | 1 | 0 | — |
+| 6th | +6 | +5 | +2 | +2 | Call celestial charger | 1 | 1 | 1 | — |
+| 7th | +7 | +5 | +2 | +2 | Nature's understanding | 2 | 1 | 1 | 0 |
+| 8th | +8 | +6 | +2 | +2 | Holy smite | 2 | 1 | 1 | 1 |
+| 9th | +9 | +6 | +3 | +3 | Wood repulsion | 2 | 2 | 1 | 1 |
+| 10th | +10 | +7 | +3 | +3 | Mass baleful polymorph | 2 | 2 | 2 | 1 |
+
+### CLASS FEATURES
+All of the following are class features of the beloved of Valarian prestige class.
+**Weapon and Armor Proficiency:** A beloved of Valarian is proficient with all simple and martial weapons, light armor, and small shields.
+
+**Spells:** A beloved of Valarian has the ability to cast a small number of divine spells. To cast a beloved of Valarian spell, the beloved must have a Wisdom score of at least 10 + the spell's level, so a beloved of Valarian with a Wisdom of 10 or lower cannot cast these spells. Beloved of Valarian bonus spells are based on Wisdom, and saving throws against these spells have a DC of 10 + spell level + the beloved's Wisdom modifier. When the beloved of Valarian gets 0 spells of a given spell level (for instance, 1st-level spells for a 1st-level beloved of Valarian), she gets only the bonus spells she would be entitled to based on her Wisdom score for that spell level.
+The beloved of Valarian's spell list appears below. A beloved of Valarian prepares and casts spells just as a cleric does (though a beloved cannot spontaneously cast *cure* spells).
+
+**Call Unicorn (Su):** A beloved of Valarian can call a unicorn to her side. See the *Monster Manual* for the unicorn's statistics.
+The unicorn appears instantly and serves the character for life, provided she remains chaste and of good alignment. The unicorn may be dismissed at any time, although a character cannot call another until she gains a level in the beloved of Valarian class. If the unicorn should die before its rider, the character may call another unicorn companion when she gains a new level in this class.
+A beloved of Valarian can have no more than one unicorn companion at any given time.
+A beloved of Valarian can assign her unicorn companion to undertake different types of tasks. Particularly useful as a mount, the unicorn typically will not undergo a quest or otherwise take on complex burdens without the supervision of the beloved of Valarian.
+
+**Telepathic Bond (Su):** A beloved of Valarian can communicate telepathically with her unicorn companion. This bond remains in effect unless the character is separated from her unicorn by a number of miles equal to 100 + the beloved's character level.
+At 6th level, a Valarian's beloved can communicate telepathically with any animal native to her unicorn companion's home forest.
+
+**Timelessness (Su):** Unicorns age very slowly, living for thousands of years. As long as she remains faithful to Valarian and has a unicorn companion serving her, a beloved of Valarian ages just as slowly, the aging process essentially halted.
+
+**Ethereal Jaunt (Sp):** At 2nd level, once per day, a beloved of Valarian and her equipment may become ethereal, as the *ethereal jaunt* spell cast by a sorcerer of the beloved's character level. If the beloved of Valarian is astride her unicorn companion, it is also affected by this ability. However, if the beloved of Valarian dismounts or the two otherwise become separated before the *ethereal jaunt* expires, the unicorn companion instantly returns to the Material Plane.
+
+**Forest Dweller (Ex):** Time spent in the forest alters a beloved of Valarian's physiology at 3rd level. She gains a +2 racial bonus on Listen, Move Silently, Spot, and Survival checks.
+
+**Uncanny Dodge (Ex):** Starting at 4th level, a beloved of Valarian can react to danger before her senses would normally allow her to do so. She retains her Dexterity bonus to AC even when caught flat-footed.
+If the beloved of Valarian already has uncanny dodge from a different class (rogue, for example), she gains improved uncanny dodge instead; she cannot be flanked except by a rogue who has at least four more rogue levels than she has in this prestige class.
+As long as the beloved of Valarian is riding her unicorn companion, it gains the benefit of this ability as well.
+
+**Call Celestial Charger (Su):** At 6th level, a beloved of Valarian can call a celestial unicorn—also known as a celestial charger—to her side. See the Unicorn entry in the *Monster Manual* for the celestial charger's statistics. If the beloved of Valarian already has a unicorn companion, Valarian transforms it into a celestial charger instead of sending his beloved a new companion.
+
+**Nature's Understanding (Ex):** At 7th level, a beloved of Valarian gains a +2 insight bonus on Handle Animal, Knowledge (nature), and Survival checks.
+
+**Holy Smite (Sp):** Starting at 8th level, once per day, a beloved of Valarian can cast *holy smite* as a cleric of her class level. She may choose to deal nonlethal damage instead of lethal damage with the *holy smite*.
+
+**Wood Repulsion (Su):** Weapons partially or wholly fashioned from wood have a harder time striking a beloved of Valarian, as though deflected by some invisible barrier. Attacks made with such weapons take a -2 penalty. As long as the beloved of Valarian is riding her unicorn companion, it gains the benefit of this ability as well.
+
+**Mass Baleful Polymorph (Sp):** At 10th level, once per day, a beloved of Valarian can cast a special version of the *baleful polymorph* spell that affects all evil creatures within 30 feet of her (as a 10th-level druid). Affected creatures are transformed into harmless Diminutive mammals (rabbits, squirrels, or the like) or Fine vermin (nonthreatening spiders, centipedes, or the like). All affected creatures are transformed into the same type of creature. See the *baleful polymorph* spell description in the *Player's Handbook* for details.
+
+**BELOVED OF VALARIAN SPELL LIST**
+Valarian's beloved choose their spells from the following list:
+**1st level:** *calm animals, charm animal, cure light wounds, delay poison, detect poison, detect snares and pits, entangle, eyes of the avoral*.
+**2nd level:** *barkskin, cure moderate wounds, eagle's splendor, ease pain, hold animal, lesser restoration, owl's wisdom, remove addiction, shield other, summon nature's ally II, zone of truth*.
+**3rd level:** *cure serious wounds, darkvision, discern lies, heart's ease, neutralize poison, remove disease, summon nature's ally III, water walk*.
+**4th level:** *blinding beauty, commune with nature, cure critical wounds, dispel evil, freedom of movement, nondetection, restoration, spear of Valarian, summon nature's ally IV*.
+
+## DEFENDER OF SEALTIEL
+
+Sealtiel is the celestial paragon who serves as patron of defenders—those who protect the weak from the depredations of the strong, fight off the forces of evil when they assault the good, and defend the ideals of goodness and truth from evil deception and lies. His mortal champions are the defenders of Sealtiel, a knightly order sworn to uphold those ideals. While the fists of Raziel take the fight against evil onto evil's home ground, the defenders of Sealtiel remain at home, guarding against evil's counterassault.
+
+Most defenders of Sealtiel are paladins, fighters, and rangers. Occasionally clerics or monks (often multiclass cleric/fighters or the like) adopt the class as well, and even more rarely, fighter/rogues take up Sealtiel's cause. Arcane spellcasters rarely find the class appealing.
+
+The wandering life of an adventurer does not easily suit most defenders of Sealtiel, who prefer to stay in civilized regions to protect people. Sometimes, however, a defender of Sealtiel takes on the role of a bodyguard for an important or holy person, and travels with that person wherever necessity leads. Player character defenders could easily fall into that category, or feature prominently in a campaign that revolved around the defense of a city or citadel. NPC defenders are usually found in sedentary roles such as these.
+
+**Hit Die:** d12.
+
+### REQUIREMENTS
+To qualify to become a defender of Sealtiel, a character must fulfill all the following criteria.
+*   **Alignment:** Lawful good.
+*   **Base Attack Bonus:** +7.
+*   **Skills:** Listen 5 ranks.
+*   **Feats:** Diehard, Endurance, Servant of the Heavens.
+
+### CLASS SKILLS
+The defender of Sealtiel's class skills (and the key ability for each skill) are Craft (Int), Listen (Wis), Sense Motive (Wis), and Spot (Wis). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 2 + Int modifier.
+
+### TABLE 5-6: THE DEFENDER OF SEALTIEL
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +1 | +2 | +0 | +2 | Defensive stance 1/day, shield of faith |
+| 2nd | +2 | +3 | +0 | +3 | Magic circle, shield other |
+| 3rd | +3 | +3 | +1 | +3 | Defensive stance 2/day |
+| 4th | +4 | +4 | +1 | +4 | Blood of the martyr |
+| 5th | +5 | +4 | +1 | +4 | Defensive stance 3/day |
+| 6th | +6 | +5 | +2 | +5 | Protective aura 1/day |
+| 7th | +7 | +5 | +2 | +5 | Defensive stance 4/day |
+| 8th | +8 | +6 | +2 | +6 | Glory of the martyr |
+| 9th | +9 | +6 | +3 | +6 | Defensive stance 5/day |
+| 10th | +10 | +7 | +3 | +7 | Protective aura 3/day |
+
+### CLASS FEATURES
+All of the following are class features of the defender of Sealtiel prestige class.
+**Weapon and Armor Proficiency:** Defenders of Sealtiel are proficient with all simple and martial weapons, all types of armor, and shields.
+
+**Defensive Stance (Ex):** A defender of Sealtiel can adopt a defensive stance as a free action. While in this stance, he gains a +2 dodge bonus to AC and a +2 bonus on all saving throws, but takes a -2 penalty on attack rolls. He can maintain this stance for a number of rounds per day equal to 5 + his Constitution modifier (minimum 1 round). This ability can be used once per day at 1st level, and one additional time per day at 3rd, 5th, 7th, and 9th level.
+
+**Shield of Faith (Sp):** A defender of Sealtiel can use *shield of faith* as a spell-like ability once per day, with a caster level equal to his class level.
+
+**Magic Circle (Su):** At 2nd level, a defender of Sealtiel is constantly surrounded by a *magic circle against evil*, as the spell cast by a cleric of his class level. This ability can be dispelled, but the defender can reactivate it as a free action on his next turn.
+
+**Shield Other (Sp):** At 2nd level, a defender of Sealtiel can use *shield other* as a spell-like ability once per day, with a caster level equal to his class level.
+
+**Blood of the Martyr (Sp):** At 4th level, a defender of Sealtiel can use *blood of the martyr* as a spell-like ability once per day, with a caster level equal to his class level.
+
+**Protective Aura (Su):** At 6th level, a defender of Sealtiel can generate a protective aura as a free action. This aura acts as a double-strength *magic circle against evil* and a *lesser globe of invulnerability*, both as cast by a cleric of his class level. The aura lasts for 1 round per class level. He can use this ability once per day at 6th level, and three times per day at 10th level.
+
+**Glory of the Martyr (Sp):** At 8th level, a defender of Sealtiel can use *glory of the martyr* as a spell-like ability once per day, with a caster level equal to his class level.
+
+## EMISSARY OF BARACHIEL
+
+Barachiel is the celestial paragon who serves as the herald of the heavens, the messenger of the deities and the voice of the celestial paragons. His mortal champions are the emissaries of Barachiel, men and women dedicated to spreading the word of good throughout the world. They are diplomats, negotiators, and missionaries, using their powers of persuasion to turn enemies into friends and evil creatures into forces for good.
+
+Most emissaries of Barachiel are bards, clerics, or paladins, though sorcerers and rogues also find the class appealing. They are often found in the courts of good-aligned rulers, serving as advisors and ambassadors, or wandering the land as itinerant preachers.
+
+**Hit Die:** d6.
+
+### REQUIREMENTS
+To qualify to become an emissary of Barachiel, a character must fulfill all the following criteria.
+*   **Alignment:** Any good.
+*   **Skills:** Diplomacy 8 ranks, Knowledge (religion) 4 ranks.
+*   **Feats:** Sacred Vow, Servant of the Heavens.
+*   **Spells:** Able to cast 2nd-level divine spells.
+
+### CLASS SKILLS
+The emissary of Barachiel's class skills (and the key ability for each skill) are Bluff (Cha), Concentration (Con), Craft (Int), Diplomacy (Cha), Gather Information (Cha), Knowledge (nobility and royalty) (Int), Knowledge (religion) (Int), Knowledge (the planes) (Int), Listen (Wis), Perform (Cha), Profession (Wis), Sense Motive (Wis), and Spot (Wis). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 4 + Int modifier.
+
+### TABLE 5-7: THE EMISSARY OF BARACHIEL
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | 1st | 2nd | 3rd | 4th |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +0 | +0 | +2 | Calling | 0 | — | — | — |
+| 2nd | +1 | +0 | +0 | +3 | | 1 | — | — | — |
+| 3rd | +2 | +1 | +1 | +3 | Conversion | 2 | 0 | — | — |
+| 4th | +3 | +1 | +1 | +4 | | 3 | 1 | — | — |
+| 5th | +3 | +1 | +1 | +4 | Sustenance | 3 | 2 | 0 | — |
+| 6th | +4 | +2 | +2 | +5 | | 3 | 3 | 1 | — |
+| 7th | +5 | +2 | +2 | +5 | | 3 | 3 | 2 | 0 |
+| 8th | +6 | +2 | +2 | +6 | | 3 | 3 | 3 | 1 |
+| 9th | +6 | +3 | +3 | +6 | | 3 | 3 | 3 | 2 |
+| 10th | +7 | +3 | +3 | +7 | | 3 | 3 | 3 | 3 |
+
+### TABLE 5-8: EMISSARY OF BARACHIEL SPELLS KNOWN
+| Level | 1 | 2 | 3 | 4 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1st | 2¹ | — | — | — |
+| 2nd | 3 | — | — | — |
+| 3rd | 3 | 2¹ | — | — |
+| 4th | 4 | 3 | — | — |
+| 5th | 4 | 3 | 2¹ | — |
+| 6th | 4 | 4 | 3 | — |
+| 7th | 4 | 4 | 3 | 2¹ |
+| 8th | 4 | 4 | 4 | 3 |
+| 9th | 4 | 4 | 4 | 3 |
+| 10th | 4 | 4 | 4 | 4 |
+¹ Provided the emissary has sufficient Charisma to have a bonus spell of this level.
+
+### CLASS FEATURES
+All of the following are class features of the emissary of Barachiel prestige class.
+**Weapon and Armor Proficiency:** Emissaries of Barachiel gain no proficiency with any weapon or armor.
+
+**Spells:** An emissary of Barachiel has the ability to cast a small number of divine spells. To cast an emissary of Barachiel spell, the emissary must have a Charisma score of at least 10 + the spell's level, so an emissary with a Charisma of 10 or lower cannot cast these spells. Emissary of Barachiel bonus spells are based on Charisma, and saving throws against these spells have a DC of 10 + spell level + the emissary's Charisma modifier. When the emissary gets 0 spells of a given level (for instance, 1st-level spells for a 1st-level emissary of Barachiel), he gets only the bonus spells he would be entitled to based on his Charisma score for that spell level. The emissary's spell list appears below. An emissary of Barachiel casts spells just as a bard does, except that his spells are divine and not arcane.
+
+**Calling (Su):** An emissary of Barachiel's most fundamental ability is the power to issue a celestial call, stirring the conscience of those who hear it. An emissary can use this ability once per day per class level, spending a full-round action to issue the call. Humanoid creatures within 30 feet of the emissary are potentially affected. The emissary makes a Diplomacy check, and the result is the DC for affected creatures' Will saving throws. Creatures that fail their saves suffer effects that depend on their alignment, as follows:
+
+| Alignment | Effect |
+| :--- | :--- |
+| Lawful good | Inspired |
+| Neutral good or chaotic good | Blessed |
+| Lawful neutral | Enthralled |
+| Neutral or chaotic neutral | Enthralled, disheartened |
+| Any evil | Stunned, demonized |
+
+*Inspired:* Affected creatures receive a +2 morale bonus on attack rolls, saving throws, skill and ability checks, and weapon damage rolls for 10 minutes.
+*Blessed:* Affected creatures receive a +1 morale bonus on attack rolls and on saving throws against fear effects for 10 minutes.
+*Enthralled:* Affected creatures act as if subject to an *enthrall* spell for as long as you continue to speak and for 1d3 rounds thereafter. For the duration of the effect and for 1 day afterward, affected creatures take a -1 penalty on Will saves related to redemption (see Chapter 2).
+*Disheartened:* Affected creatures take a -1 penalty on attack rolls, saving throws, skill checks, and ability checks for 10 minutes.
+*Stunned:* Affected creatures are stunned for 1 round.
+*Demonized:* Affected creatures take a -2 penalty on attack rolls, saving throws, skill checks, ability checks, and weapon damage rolls for 10 minutes (including the 1 round during which they are stunned).
+
+Using any manifestation of the calling class ability requires the use of the Words of Creation and deals 3d4 points of nonlethal damage to the emissary. Calling is an Enchantment (Compulsion) [Language-Dependent, Mind-Affecting] effect.
+
+**Conversion (Su):** A 3rd-level emissary of Barachiel can use his calling ability to facilitate actual conversion of nongood humanoids. Doing so counts as a use of the calling class ability (see above) for the day, and the initial effects of the calling are the same—except that the emissary takes 5d4 points of nonlethal damage instead of 3d4. When the initial effects are over, however, all creatures that were subject to any effect of the calling (except lawful good creatures) must make another saving throw. Creatures who fail begin acting as though their alignment were one step closer to lawful good. Lawful evil creatures act lawful neutral, neutral evil creatures act neutral, and chaotic evil creatures act chaotic neutral. Lawful neutral and neutral good creatures act lawful good. True neutral and chaotic good creatures act neutral good, and chaotic neutral creatures act chaotic good.
+
+Creatures affected by this temporary alignment shift can make new saving throws each day for a total of seven days. If the emissary is not present at the time a creature makes its save, it receives a +1 circumstance bonus on the saving throw, and this bonus increases by 1 for each additional saving throw for which the emissary is not present.
+
+During these seven days, an affected creature is immune to any other conversion effect, from the same emissary or a different one. During this time, the alignment shift can be reversed with a *break enchantment* spell, but the caster must succeed on a caster level check against a DC equal to the emissary's original Diplomacy check result. Also during this time, an *atonement* spell can make the alignment shift permanent, preventing the creature from making any additional saving throws.
+
+If a creature fails seven saving throws after the initial saving throw against the calling, the alignment change is permanent. At this point, the creature can change alignment again, either through another conversion effect, or voluntarily (in a gradual manner, as alignment change normally works—the creature cannot simply decide to be evil again).
+
+**Sustenance (Su):** At 5th level, an emissary of Barachiel can help to keep good creatures good. As a use of his calling ability, he can produce one of the following effects:
+*   Duplicate the effects of an *atonement* spell.
+*   Reverse any magical alignment change (such as that produced by a *helm of opposite alignment* or a *morality undone* spell).
+*   Dispel a charm or compulsion effect cast by an evil creature upon a good target, by making a dispel check (1d20 + character level against a DC of 11 + evil caster's level).
+
+These effects require the emissary of Barachiel to touch the target creature.
+
+**EMISSARY OF BARACHIEL SPELL LIST**
+Emissaries of Barachiel choose their spells from the following list:
+**1st Level:** *charm person, comprehend languages, cure light wounds, hypnotism, magic mouth, message, protection from chaos/evil, ray of hope, sanctuary, sleep, ventriloquism*.
+**2nd Level:** *animal messenger, blindness/deafness, blur, calm emotions, cat's grace, cure moderate wounds, detect thoughts, elation, enthrall, eagle's splendor, fox's cunning, glitterdust, hold person, hypnotic pattern, silence, suggestion, tongues, whispering wind*.
+**3rd Level:** *charm monster, clairaudience/clairvoyance, cure serious wounds, daylight, deep slumber, dispel magic, good hope, haste, lesser geas, refreshment, remove curse, scrying, see invisibility*.
+**4th Level:** *atonement, break enchantment, cure critical wounds, dream, heaven's trumpet, heroic valor, hold monster, sending*.
+
+## EXALTED ARCANIST
+
+Tales say that sorcerers gain their innate magical ability from draconic blood, and many sorcerers (especially kobold sorcerers) loudly champion this legend. Aasimar sorcerers, meanwhile, smile to themselves, knowing that dragons are not the only source of spontaneous arcane power. Among both sorcerers and bards, some trace the source of their power back to celestial influence, either bloodline or simply favor. These are the exalted arcanists, spontaneous spellcasters who gain access to spells that channel celestial energy.
+
+Only characters who spontaneously cast arcane spells can become exalted arcanists, which means that in most campaigns the class is limited to sorcerers and bards.
+
+Exalted arcanists are very often adventurers, using the power they consider a gift to the purpose for which it was intended: to help combat evil. They gravitate to places where their ability to cover a battlefield with holy smite spells is useful, so they are rarely found in cities or placid villages. They frequently join forces with other exalted adventurers, much less frequently with other exalted arcanists.
+
+**Hit Die:** d4.
+
+### REQUIREMENTS
+To qualify to become an exalted arcanist, a character must fulfill all the following criteria.
+*   **Alignment:** Any good.
+*   **Base Save Bonuses:** Will +5.
+*   **Skills:** Knowledge (arcana) 9 ranks, Knowledge (religion) 4 ranks.
+*   **Feats:** Consecrate Spell, Purify Spell.
+*   **Spells:** Able to spontaneously cast 3rd-level arcane spells.
+
+### CLASS SKILLS
+The exalted arcanist's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Decipher Script (Int), Diplomacy (Cha), Knowledge (arcana) (Int), Knowledge (religion) (Int), Perform (Cha), Profession (Wis), Sense Motive (Wis), Spellcraft (Int), and Use Magic Device (Cha). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 4 + Int modifier.
+
+### TABLE 5-9: THE EXALTED ARCANIST
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | Spells per Day |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +0 | +0 | +2 | Exalted spell list (3rd), spell knowledge | — |
+| 2nd | +1 | +0 | +0 | +3 | Exalted spell list (5th), faster consecrate | +1 level of existing class |
+| 3rd | +1 | +1 | +1 | +3 | Bonus exalted feat, exalted spell list (7th) | +1 level of existing class |
+| 4th | +2 | +1 | +1 | +4 | Exalted spell list (9th), faster purify | +1 level of existing class |
+| 5th | +2 | +1 | +1 | +4 | Bonus exalted feat, sanctified spells | +1 level of existing class |
+
+### CLASS FEATURES
+All of the following are class features of the exalted arcanist prestige class.
+**Weapon and Armor Proficiency:** Exalted arcanists gain no proficiency with any weapon or armor.
+
+**Exalted Spell List:** An exalted arcanist gains access to spells that do not normally appear on arcane spellcasters' spell lists. The exalted arcanist's spell list additions appear below. At 1st level, an exalted arcanist adds the spells of up to 3rd level to her spell list, and each additional exalted arcanist level grants her access to two more spell levels on the spell list. She does not automatically know these spells, but can choose them as spells known.
+
+**Spell Knowledge (Ex):** At 1st level, an exalted arcanist learns two new arcane spells of any level up to the maximum spell level she can cast. These can be spells from her normal spell list or from the exalted spell list that appears below. She does not gain any extra spell slots at this level.
+
+**Faster Consecrate (Ex):** At 2nd level, an exalted arcanist can spontaneously cast spells with the Consecrate Spell feat without extending the spell's casting time.
+
+**Spells per Day/Spells Known:** At each exalted arcanist level after the first, the character gains new spells per day and spells known as if she had also gained a level in an arcane spellcasting class to which she belonged before adding the prestige class level. She does not, however, gain any other benefit a character of that class would have gained (bardic music abilities, improved familiar abilities, and so on), though she does retain the ability to exchange spells known with every even-numbered equivalent sorcerer or bard level. If the character had more than one arcane spellcasting class before becoming an exalted arcanist, she must decide to which class she adds each exalted arcanist level for the purpose of determining spells per day and spells known.
+
+**Bonus Exalted Feat:** At 3rd level, and again at 5th level, an exalted arcanist gains a bonus feat. This feat must be chosen from the exalted feats that appear in Chapter 4.
+
+**Faster Purify (Ex):** At 4th level, an exalted arcanist can spontaneously cast spells with the Purify Spell feat without extending the spell's casting time.
+
+**Sanctified Spells:** A 5th-level exalted arcanist can use sanctified spells as though they were among her spells known.
+
+**EXALTED ARCANIST SPELL LIST**
+Exalted arcanists choose their spells from the following list or from their normal spell list:
+**1st Level:** *bless, vision of heaven³*
+**2nd Level:** *consecrate, zone of truth*
+**3rd Level:** *helping hand, searing light*
+**4th Level:** *holy smite, lesser aspect of the deity³, lesser planar ally, sword of conscience³*
+**5th Level:** *crown of flame³, hallow, heavenly lightning³, mark of justice*
+**6th Level:** *aspect of the deity³, bolt of glory³, planar ally*
+**7th Level:** *heavenly lightning storm³, holy word, righteous smite³*
+**8th Level:** *greater planar ally, holy aura*
+**9th Level:** *greater aspect of the deity³*
+³New spell described in Chapter 6 of this book.
+
+## FIST OF RAZIEL
+
+The fists of Raziel represent a knightly order dedicated to the celestial patron of holy warfare against evil. Its members include large numbers of paladins, as well as lawful good clerics, fighters, rangers, and occasionally warriors. While Sealtiel champions those who defend good communities from evil assault, Raziel's crusaders lead the charge against evil wherever it is found. Smiting evil is their mission and their specialty.
+
+To become a fist of Raziel, a character must already possess some degree of divine spellcasting ability, so members of the class generally begin as paladins or clerics, less often as fighter/clerics or ranger/clerics. Perhaps strangely, the order includes a number of ex-barbarians who first multiclassed as clerics and then adopted the fist of Raziel prestige class. These ferocious warriors seem to be drawn to Raziel's crusading creed.
+
+The fists of Raziel are an elite, ordered, and disciplined fighting force. To make best use of their power, however, they typically serve as leaders or advisors to adventuring parties, military strike teams, or the armies of good kingdoms, working with members of other classes instead of with each other.
+
+**Hit Die:** d10.
+
+### REQUIREMENTS
+To qualify to become a Fist of Raziel, a character must fulfill all the following criteria.
+*   **Alignment:** Lawful good.
+*   **Base Attack Bonus:** +6.
+*   **Skills:** Diplomacy 5 ranks, Knowledge (religion) 5 ranks.
+*   **Feats:** Power Attack, Servant of the Heavens.
+*   **Spells:** Able to cast *divine favor*.
+
+### CLASS SKILLS
+The fist of Raziel's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge (the planes) (Int), Knowledge (religion) (Int), Profession (Wis), and Sense Motive (Wis). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 2 + Int modifier.
+
+### TABLE 5-10: THE FIST OF RAZIEL
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | Spells per Day |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +1 | +2 | +0 | +0 | Magic circle, smite evil 1/day (good-aligned) | — |
+| 2nd | +2 | +3 | +0 | +0 | | +1 level of existing class |
+| 3rd | +3 | +3 | +1 | +1 | Smite evil 2/day (confirming) | +1 level of existing class |
+| 4th | +4 | +4 | +1 | +1 | Sanctify Martial Strike | +1 level of existing class |
+| 5th | +5 | +4 | +1 | +1 | Smite evil 3/day (holy) | +1 level of existing class |
+| 6th | +6 | +5 | +2 | +2 | Sunder evil item | +1 level of existing class |
+| 7th | +7 | +5 | +2 | +2 | Smite evil 4/day (fiendsmite) | +1 level of existing class |
+| 8th | +8 | +6 | +2 | +2 | | +1 level of existing class |
+| 9th | +9 | +6 | +3 | +3 | Smite evil 5/day (chain) | +1 level of existing class |
+| 10th | +10 | +7 | +3 | +3 | Holy martial strike | +1 level of existing class |
+
+### CLASS FEATURES
+All of the following are class features of the fist of Raziel prestige class.
+**Weapon and Armor Proficiency:** A fist of Raziel is proficient with all simple and martial weapons, all types of armor, and shields (except tower shields).
+
+**Magic Circle (Su):** A 1st-level fist of Raziel is constantly surrounded by a *magic circle against evil* effect, as the spell cast by a cleric of the fist's character level.
+
+**Smite Evil (Su):** Once per day, a fist of Raziel may attempt to smite evil with one normal melee attack. She adds her Charisma bonus to her attack roll and deals 1 extra point of damage per class level. If she accidentally smites a creature that is not evil, the smite has no effect but it is still used up for that day. She can use this ability more times per day as she advances in level, as shown on Table 5-10.
+*   At 1st level, her weapon is treated as good-aligned for the purpose of overcoming damage reduction when she uses this ability.
+*   At 3rd level, any critical roll she makes when smiting evil is automatically successful (so every threat is a critical hit).
+*   At 5th level, her weapon is treated as a holy weapon when smiting evil.
+*   At 7th level, she deals an extra 2d6 points of damage when smiting an evil outsider.
+*   At 9th level, she can make a smite attack against one target and, if it hits, expend another daily use of her smite evil ability to make an additional smite attack against a different target within reach.
+
+**Sanctify Martial Strike:** At 4th level, a fist of Raziel gains the Sanctify Martial Strike feat as a bonus feat.
+
+**Sunder Evil Item (Su):** At 6th level, a fist of Raziel can attempt to sunder an evil magic item. She must make a sunder attack as normal (see Chapter 8 of the *Player's Handbook*), and if she succeeds, the item must make a Will save (DC 10 + fist of Raziel class level + her Charisma modifier) or be destroyed.
+
+**Holy Martial Strike (Su):** At 10th level, a fist of Raziel's attacks deal an extra 1d6 points of holy damage to evil creatures, even when she is not smiting evil. This additional damage does not stack with the benefit of the Sanctify Martial Strike feat or with the extra damage dealt by a weapon with the holy weapon property.
+
+## INITIATE OF PISTIS SOPHIA
+
+Pistis Sophia is the monk of the Celestial Hebdomad, a contemplative, mystic, and ascetic patron for those who follow similar spiritual paths. The path of her initiates requires great sacrifices (in the form of at least three sacred vows), but brings great rewards of spiritual power.
+
+All initiates of Pistis Sophia have at least several monk levels before joining the order of initiates. Most often, they are single-classed monks. Occasionally, characters of other classes undergo a sort of conversion, forswearing their reliance on weapons and armor, multiclassing as monks, and later adopting the initiate prestige class. Of the tiny number of characters who take this course, most were paladins before taking on their monastic vows.
+
+Initiates of Pistis Sophia are members of spiritual communities sharing a common life. They are not restricted to their monasteries by any means, and many do adventure to put their spiritual devotions into concrete practice. However, when not actively fighting the forces of evil, they are more often found in their monasteries than in cities or towns.
+
+**Hit Die:** d8.
+
+### REQUIREMENTS
+To qualify to become an initiate of Pistis Sophia, a character must fulfill all the following criteria.
+*   **Alignment:** Lawful good.
+*   **Base Save Bonuses:** Fort +5, Ref +5, Will +5.
+*   **Skills:** Concentration 9 ranks.
+*   **Feats:** Sacred Vow, Sanctify Ki Strike, Servant of the Heavens.
+
+### CLASS SKILLS
+The initiate of Pistis Sophia's class skills (and the key ability for each skill) are Balance (Dex), Climb (Str), Concentration (Con), Craft (Int), Diplomacy (Cha), Escape Artist (Dex), Hide (Dex), Jump (Str), Knowledge (the planes) (Int), Knowledge (religion) (Int), Listen (Wis), Move Silently (Dex), Perform (Cha), Profession (Wis), Sense Motive (Wis), Spot (Wis), Swim (Str), and Tumble (Dex). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 4 + Int modifier.
+
+### TABLE 5-11: THE INITIATE OF PISTIS SOPHIA
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +2 | +2 | +2 | Fist of the Heavens, monk abilities |
+| 2nd | +1 | +3 | +3 | +3 | Detect evil, smite evil 1/day |
+| 3rd | +2 | +3 | +3 | +3 | Uncanny dodge |
+| 4th | +3 | +4 | +4 | +4 | Electricity resistance 5, sacred vow |
+| 5th | +3 | +4 | +4 | +4 | Smite evil 2/day |
+| 6th | +4 | +5 | +5 | +5 | Improved uncanny dodge |
+| 7th | +5 | +5 | +5 | +5 | Electricity resistance 10, sacred vow |
+| 8th | +6 | +6 | +6 | +6 | Smite evil 3/day |
+| 9th | +6 | +6 | +6 | +6 | Improved evasion |
+| 10th | +7 | +7 | +7 | +7 | Celestial transformation, sacred vow |
+
+### CLASS FEATURES
+All of the following are class features of the Initiate of Pistis Sophia prestige class.
+**Weapon and Armor Proficiency:** Initiates of Pistis Sophia gain no proficiency with any weapon or armor. They suffer the same penalties for wearing armor that monks do.
+
+**Fist of the Heavens:** A 1st-level initiate of Pistis Sophia gains the Fist of the Heavens feat as a bonus feat, even if she does not have the prerequisite Wisdom score.
+
+**Monk Abilities:** An initiate of Pistis Sophia adds her initiate levels to her monk levels to determine her AC bonus, her unarmed strike damage, the penalty she takes when using a flurry of blows, her speed, and her ki strike. She does not gain any other benefits of advancing monk levels, however.
+
+**Detect Evil (Sp):** At will, an initiate of Pistis Sophia of 2nd level or higher can use *detect evil*, as the spell.
+
+**Smite Evil (Su):** Once per day, an initiate of Pistis Sophia may attempt to smite evil with one normal unarmed strike. She adds a +4 bonus to her attack roll and deals 1 extra point of damage per class level. If she accidentally smites a creature that is not evil, the smite has no effect but it is still used up for that day.
+
+## LION OF TALISID
+
+Talisid is the Celestial Lion, the leader of the Five Companions who rule the guardinals of Elysium. His followers are the lions of Talisid, druids and rangers who have dedicated themselves to the protection of nature and the destruction of evil. They are the champions of the wild, fighting any who would defile the natural world with evil. They are particularly concerned with areas where some evil presence corrupts nature itself, manifesting evil weather and vile corrupted creatures.
+
+**Hit Die:** d8.
+
+### REQUIREMENTS
+To qualify to become a lion of Talisid, a character must fulfill all the following criteria.
+*   **Alignment:** Neutral good.
+*   **Base Attack Bonus:** +4.
+*   **Skills:** Knowledge (nature) 9 ranks, Survival 9 ranks.
+*   **Feats:** Favored of the Companions.
+*   **Spells:** Able to cast *summon nature's ally II*.
+*   **Special:** The character must have an animal companion as a class feature.
+
+### CLASS SKILLS
+The lion of Talisid's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Listen (Wis), Knowledge (nature) (Int), Ride (Dex), Spellcraft (Int), Spot (Wis), Survival (Wis), and Swim (Str). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 4 + Int modifier.
+
+### CLASS FEATURES
+All of the following are class features of the lion of Talisid prestige class.
+**Weapon and Armor Proficiency:** Lions of Talisid gain no proficiency with any weapon or armor.
+
+**Animal Companion (Ex):** A lion of Talisid can add his lion of Talisid levels to his effective druid level (his actual druid level or one-half his ranger level) to determine the capabilities of his animal companion.
+
+**Lion's Courage (Ex):** A lion of Talisid is immune to fear (magical or otherwise) and gains a +4 sacred bonus on Will saves against other mind-affecting spells and effects.
+
+**Spells per Day:** At each level, a lion of Talisid gains new spells per day as if he had also gained a level in a divine spellcasting class to which he belonged before adding the prestige class level. He does not, however, gain any other benefit a character of that class would have gained. If the character had more than one divine spellcasting class before becoming a lion of Talisid, the player must decide to which class to add each lion of Talisid level for the purpose of determining spells per day.
+
+**Scent (Ex):** At 2nd level, a lion of Talisid gains the scent special quality. He can detect approaching enemies, sniff out hidden foes, and track by sense of smell.
+
+**Wild Shape (Su):** At 3rd level, a lion of Talisid gains the ability to turn himself into any Small or Medium animal and back again once per day. This works exactly as the druid's wild shape ability. Lions of Talisid prefer the shape of great cats (cheetahs or leopards at lower levels), but are not limited to such forms.
+The lion of Talisid can use this ability more times per day at 4th, 5th, and 8th level, as noted on Table 5-12. In addition, he gains the ability to take the shape of a Large animal at 6th level, and a Tiny animal at 9th level.
+A lion of Talisid who is also a druid can add his lion of Talisid level -2 to his druid levels to determine his wild shape ability. For example, an 8th-level druid/6th-level lion of Talisid can wild shape as a 12th-level druid, and can thus assume plant forms as well as Large and Tiny animal forms, and can use this ability 4 times per day.
+
+**Exalted Companion:** At 4th level, a lion of Talisid gains the Exalted Companion feat as a bonus feat.
+
+**Lion's Pounce (Ex):** At 5th level, a lion of Talisid can make a full attack at the end of a charge.
+
+**Lion's Swiftness (Ex):** When he reaches 7th level, a lion of Talisid can act as if under the effects of a *haste* spell for a total of 1 round per class level per day. These rounds need not be consecutive.
+
+**Leonal's Roar (Su):** Three times a day, a 10th-level lion of Talisid can issue a roar that duplicates the effects of the *leonal's roar* spell (new spell described in Chapter 6 of this book). The saving throw DC is 20 + the lion of Talisid's Charisma modifier.
+
+### TABLE 5-12: THE LION OF TALISID
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | Spells per Day |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +2 | +0 | +2 | Animal companion, lion's courage | +1 level of existing class |
+| 2nd | +1 | +3 | +0 | +3 | Scent | +1 level of existing class |
+| 3rd | +2 | +3 | +1 | +3 | Wild shape 1/day | +1 level of existing class |
+| 4th | +3 | +4 | +1 | +4 | Exalted Companion, wild shape 2/day | +1 level of existing class |
+| 5th | +3 | +4 | +1 | +4 | Lion's pounce, wild shape 3/day | +1 level of existing class |
+| 6th | +4 | +5 | +2 | +5 | Large animal wild shape | +1 level of existing class |
+| 7th | +5 | +5 | +2 | +5 | Lion's swiftness | +1 level of existing class |
+| 8th | +6 | +6 | +2 | +6 | Wild shape 4/day | +1 level of existing class |
+| 9th | +6 | +6 | +3 | +6 | Tiny animal wild shape | +1 level of existing class |
+| 10th | +7 | +7 | +3 | +7 | Leonal's roar | +1 level of existing class |
+
+## PROPHET OF ERATHAOIL
+
+The prophet of Erathaoil is a seer and visionary, a medium of the heavenly will, pronouncing judgment on corruption and evil in the world, speaking words of comfort to the oppressed and downtrodden, and announcing the work of the archons in the world. She channels celestial spirits and allows them to use her body for their purposes on the Material Plane. Insofar as these celestials have knowledge of future events, the prophet may speak authoritatively about events to come, but her primary focus is on changing the present world into a better world for the future, a place where law and good might reign supreme.
+
+Most prophets of Erathaoil are clerics, either servants of a lawful good deity such as Heironeous or Moradin or proponents of lawful good ideals without particular attention to a specific deity. However, the gift of prophecy is notoriously indiscriminate, and members of all spellcasting classes occasionally find themselves speaking on behalf of the heavens.
+
+Prophets of Erathaoil are not the oracles that people consult when they want to know whether to launch a business enterprise, start a war, or win someone's favor—too often prophets give answers that people don't really want to hear. Lawful good kings do sometimes take on prophets as advisors, but even the most well-intentioned ruler has a hard time following a true prophet's advice all the time. Most prophets, with no one seeking out their words, make themselves a nuisance in palaces, in marketplaces, or on city streets, proclaiming celestial judgment to whoever listens.
+
+**Hit Die:** d6.
+
+### REQUIREMENTS
+To qualify to become a prophet of Erathaoil, a character must fulfill all the following criteria.
+*   **Alignment:** Lawful good.
+*   **Skills:** Knowledge (arcana) 5 ranks, Spellcraft 10 ranks.
+*   **Feats:** Sacred Vow, Servant of the Heavens, Spell Focus (Divination), Vow of Chastity.
+*   **Spells:** Able to cast 4th-level arcane or divine spells.
+
+### CLASS SKILLS
+The prophet of Erathaoil's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Decipher Script (Int), Diplomacy (Cha), Knowledge (arcana) (Int), Knowledge (history) (Int), Knowledge (religion) (Int), Knowledge (the planes) (Int), Profession (Wis), Sense Motive (Wis), and Spellcraft (Int). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+**Skill Points at Each Level:** 2 + Int modifier.
+
+### CLASS FEATURES
+All of the following are class features of the prophet of Erathaoil prestige class.
+**Weapon and Armor Proficiency:** Prophets of Erathaoil gain no proficiency with any weapon or armor.
+
+**Spells per Day:** At each level, a prophet of Erathaoil gains new spells per day as if she had also gained a level in a divine spellcasting class to which she belonged before adding the prestige class level. She does not, however, gain any other benefit a character of that class would have gained. If the character had more than one divine spellcasting class before becoming a prophet of Erathaoil, the player must decide to which class to add each prophet of Erathaoil level for the purpose of determining spells per day.
+
+**Celestial Channel (Su):** A prophet of Erathaoil can allow a celestial spirit to occupy her body, as described in the section on Celestial Channeling in Chapter 2. Channeling a celestial requires a full-round action and a Charisma check (DC 15 + the celestial's Hit Dice). If the check succeeds, the celestial takes control of the prophet's body for a number of rounds equal to the prophet's class level. The prophet can end the channeling early as a free action. While channeling a celestial, the prophet gains the celestial's physical ability scores, natural armor bonus, and special attacks (if any).
+
+**Prophecy (Su):** At 2nd level, a prophet of Erathaoil can enter a trance and receive visions of the future. This ability functions as the *divination* spell, with a caster level equal to her class level. She can use this ability once per day at 2nd level, and one additional time per day at 4th, 6th, 8th, and 10th level.
+
+**Foresight (Su):** At 5th level, a prophet of Erathaoil gains a +2 insight bonus to AC and Reflex saves, as she is constantly aware of impending danger.
+
+**Divine Intervention (Su):** At 10th level, a prophet of Erathaoil can call upon the direct intervention of the heavens. This ability functions as the *miracle* spell, with a caster level equal to her class level. She can use this ability once per week.
+
+## SENTINEL OF BHARRAI
+
+Bharrai is the Great Bear, the matriarch of the ursinals and the guardian of the wild places of Elysium. Her followers are the sentinels of Bharrai, druids and rangers who have dedicated themselves to the protection of nature and the destruction of evil. They are the champions of the wild, fighting any who would defile the natural world with evil.
+
+**Hit Die:** d8.
+
+### REQUIREMENTS
+To qualify to become a sentinel of Bharrai, a character must fulfill all the following criteria.
+*   **Alignment:** Neutral good.
+*   **Base Attack Bonus:** +4.
+*   **Skills:** Knowledge (nature) 9 ranks, Survival 9 ranks.
+*   **Feats:** Favored of the Companions.
+*   **Spells:** Able to cast *summon nature's ally II*.
+*   **Special:** The character must have an animal companion as a class feature.
+
+# CHAPTER SIX: MAGIC
+
+*(Note: Due to severe OCR corruption in the original PDF, much of Chapter 6 is missing. Below are the spells and sections that were successfully extracted.)*
+
+Among spellcasters of all kinds, some are so devoted to the cause of good that they sacrifice some of their spellcasting ability in order to grow closer to the ideal of goodness they revere. These are wonderworkers, practitioners of arcane or divine magic (or even psionics) whose righteousness and purity sets them apart from others—even from other good clerics.
+
+Like the sword of righteousness prestige class, the wonderworker class allows a spellcasting or psionic character to gain more exalted feats at the cost of a slightly slower spell progression. Bards, clerics, druids, sorcerers, wizards, psions, and psychic warriors can all adopt this class, while more materially oriented characters generally choose the sword of righteousness class to accomplish the same goal.
+
+No organization unites wonderworkers, though they are often found operating in the churches of good deities, good-aligned guilds or colleges, and other existing organizations devoted to virtuous causes.
+
+**Hit Die:** d6.
+
+### REQUIREMENTS
+To qualify to become a wonderworker, a character must fulfill all the following criteria.
+*   **Alignment:** Any good.
+*   **Base Save Bonus:** Will +5.
+*   **Feats:** One exalted feat, plus either Favored of the Companions, Knight of Stars, or Servant of the Heavens.
+*   **Spells:** Able to cast 3rd-level arcane or divine spells, or to manifest 3rd-level psionic powers.
+
+### CLASS SKILLS
+The wonderworker's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge (arcana) (Int), Knowledge (nature) (Int), Knowledge (religion) (Int), Profession (Wis), Sense Motive (Wis), and Spellcraft (Int). See Chapter 4 of the *Player's Handbook* for skill descriptions.
+
+**Skill Points at Each Level:** 4 + Int modifier.
+
+**Weapon and Armor Proficiency:** Wonderworkers gain no proficiency with any weapon or armor.
+
+**Bonus Exalted Feat:** At every level, a wonderworker gets a bonus exalted feat. These bonus feats must be drawn from among those identified as exalted feats in Chapter 4: Feats.
+
+**Bonus Spells per Day:** For each level of wonderworker that a spellcasting character attains, he gains bonus spells to the number of spells per day he normally casts. These bonus spells can be added to whatever levels of spells the wonderworker can currently cast, but no more than one can be added to the character's highest current spell level. Arcane spellcasters (bards, sorcerers, and wizards) receive fewer bonus spells than divine spellcasters (clerics and druids), as shown on the table above.
+
+For example, a 9th-level cleric who takes a single level in wonderworker can give himself one bonus 5th-level spell (his highest as a 9th-level cleric), and one bonus spell in one other level, 0 through 4th. A 9th-level wizard who takes a level in wonderworker gains only one bonus spell, which she can give herself in any level, 0 through 5th.
+
+A psion who adopts the wonderworker class receives bonus power points/day equal to one-half of the sum of his psion level and his wonderworker level. A psychic warrior/wonderworker receives bonus power points/day equal to one-third of the sum of her psychic warrior level and her wonderworker level. If a wonderworker has two spellcasting or psionic classes already, he must give the bonus spell or power points to a class in which he can cast at least 3rd-level spells or manifest at least 3rd-level powers. If more than one class meets that requirement, he must choose which previous class gains the bonus. He cannot split bonus spells or power points between two different spellcasting or psionic classes. For example, a 5th-level cleric/5th-level wizard takes one level of wonderworker. He can either take 2 bonus cleric spells or 1 bonus wizard spell, but he cannot take 1 of each.
+
+Once a wonderworker has chosen how to apply his bonus spells or power points, they cannot be shifted.
+
+### TABLE 5-23: THE WONDERWORKER
+| Level | Base Attack Bonus | Fort Save | Ref Save | Will Save | Special | Bonus Spells per Day |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1st | +0 | +0 | +0 | +2 | Bonus exalted feat | 1 |
+| 2nd | +1 | +0 | +0 | +3 | Bonus exalted feat | 2 |
+| 3rd | +1 | +1 | +1 | +3 | Bonus exalted feat | 1 |
+
+## 2nd-Level Bard Spells
+
+**Elation:** Allies gain +2 to Strength and Dexterity, +5 ft. of speed.
+**Faerinaal's Hymn:** Up to one creature/level cannot take attacks of opportunity.
+
+## 3rd-Level Bard Spells
+
+**Refreshment:** Cures all nonlethal damage on one creature.
+**Warcry:** Creatures within a 30-foot cone cower for 1d4 rounds.
+
+## 4th-Level Bard Spells
+
+**Blinding Beauty:** You become as beautiful as a nymph, and can blind humanoids who look at you.
+**Dolorous Motes:** Creates clouds of flickering light (1 10-ft. cube/level) that dazes creatures.
+**Inspired Aim:** Allies within 40 ft. gain +2 insight bonus on ranged attack rolls.
+
+## 5th-Level Bard Spells
+
+**Telepathy Block:** Blocks all telepathic communication within 80-ft. radius.
+
+## 6th-Level Bard Spells
+
+**Empyreal Ecstasy:** Targets immune to pain and mind-influencing effects, and take half damage from melee and ranged attacks; -4 to skill checks.
+**Heaven's Trumpet:** Blast of music paralyzes foes.
+
+## CLERIC SPELLS
+
+### 1st-Level Cleric Spells
+
+**Eyes of the Avoral:** Subject gets +8 on Spot checks.
+**Lantern Light:** Ranged touch attacks deal 1d6 points of damage.
+**Ray of Hope:** Subject gains +2 bonus on attacks, saves, and checks.
+**Vision of Heaven:** Evil creature is dazed for 1 round.
+
+### 2nd-Level Cleric Spells
+
+**Ease Pain:** Remove lingering effects of pain.
+**Elation:** Allies gain +2 to Strength and Dexterity, +5 ft. of speed.
+**Estanna's Stew:** Conjures stew that heals 1d6+1 per serving.
+**Lastai's Caress:** Intense feelings of good leave evil subject cowering, frightened, nauseated, or shaken.
+**Remove Addiction:** Cures target of drug addictions.
+
+### 3rd-Level Cleric Spells
+
+**Affliction:** Infects evil subject with chosen affliction.
+**Blessed Sight:** Evil auras become visible to you.
+**Energize Potion:** Transforms potion into a grenade that deals energy damage in a 10-ft. radius burst.
+**Heart's Ease:** Removes fear, despair, confusion, insanity and some mind-influencing effects; restores 2d4 points of temporary Wisdom damage.
+**Inspired Aim:** Allies within 40 ft. gain +2 insight bonus on ranged attack rolls.
+**Refreshment:** Cures creatures of all nonlethal damage.
+**Remove Nausea:** Cure a nauseated or sickened character.
+
+### 4th-Level Cleric Spells
+
+**Blood of the Martyr:** You heal a target at range and take a like amount of damage.
+**Celestial Brilliance:** Object sheds brilliant light to 120 feet, hurts undead and evil outsiders.
+**Greater Status:** As status, but cast some spells through bond.
+**Remove Fatigue:** Removes effects of fatigue as 8 hours of rest.
+**Sustain:** Recipients need no food or drink for 6 hours/level.
+**Stars of Arvandor:** Tiny starbursts each deal 1d8 damage (half nonlethal), or 1d8 damage (all lethal) to evil creatures.
+**Sword of Conscience:** Evil creature confesses crimes, takes Wisdom damage.
+
+### 5th-Level Cleric Spells
+
+**Chaav's Laugh:** Good creatures gain +2 on attack rolls and saves against fear, plus 1d8 temporary hp +1/level (max. +20). Evil creatures take -2 on attack rolls and saves against fear.
+**Convert Wand:** Transforms a magic wand into a healing wand (lasts 1 minute/level).
+**Crown of Flame:** Aura burns evil outsiders, undead, and fey for 2d6 points of damage/round.
+**Dancing Web:** Energy strands deal 1d6 nonlethal damage per level plus entangles evil creatures for 1d6 rounds.
+**Energetic Healing:** Target is immune to one energy type and gains 10% of the energy damage as healing.
+**Sacred Guardian:** You know status of subject and can teleport or scry without error.
+**Telepathy Block:** Blocks all telepathic communication within 80-ft. radius.
+**Warding Gems:** Creates gems that store healing energy, encircle the target, and release their healing power on command.
+
+### 6th-Level Cleric Spells
+
+**Call Faithful Servants:** Summons 1d4 lantern archons, coure eladrins, or musteval guardinals.
+**Celestial Blood:** Grant energy resistance, +4 on saves against poison, and damage reduction 10/evil.
+**Crown of Brilliance:** Holy light blinds or dazzles foes, repels light-sensitive creatures, and damages undead.
+**Quickshift:** Caster can use teleport or greater teleport spell-like ability as a free action for 1 round/level.
+**Secure Corpse:** Traps corpse inside holy symbol.
+**Touch of Adamantine:** Weapon gains the properties of an adamantine weapon.
+**Vengeance Halo:** Any creature that slays the spell's recipient takes 1d6/level damage.
+
+### 7th-Level Cleric Spells
+
+**Bastion of Good:** Acts as minor globe of invulnerability and double-strength magic circle against evil.
+**Heaven's Trumpet:** Blast of music paralyzes foes.
+**Righteous Glare:** Your gaze attack kills evil creatures with less than 5 HD, causes fear in others.
+**Righteous Smite:** Deals 1d6 damage/level (1d8 damage/level to evil outsiders) in 20-ft. radius and blinds evil foes for 1d4 rounds.
+
+### 8th-Level Cleric Spells
+
+**Axiomatic Creature:** Transforms creature into an axiomatic creature.
+**Last Judgment:** Evil creatures are struck dead and sent to Lower Planes.
+**Spread of Contentment:** Calms hostile creatures within 10-ft./level radius.
+
+### 9th-Level Cleric Spells
+
+**End to Strife:** Any attack made within 80 feet of caster causes attacker to take 1d6 points of lethal or nonlethal damage/caster level (max. 20d6).
+**Sublime Revelry:** Targets immune to pain and mind-influencing effects, and take half damage from melee and ranged attacks.
+
+## CLERIC DOMAINS
+
+The new domains here use some of the spells in this book as well as many of the spells in the Player's Handbook. The deities mentioned include several celestial paragons. Ordinary, these celestials do not grant spells, but one may act as a patron for a cleric with the given domain, whether or not that cleric worships a specific deity.
+
+The Community and Glory domains originally appeared as prestige domains in Defenders of the Faith. They are presented here as standard domains, in some cases altered in the interests of better play balance.
+
+### CELESTIAL DOMAIN
+
+**Deities:** Domiel, Pistis Sophia.
+**Granted Power:** You gain the supernatural ability to smite evil once per day. Add a +4 bonus to your melee attack roll and your cleric level to your damage. You must declare the smite before making the attack, and the attempt is wasted if the target is not evil.
+
+**Celestial Domain Spells**
+1 *Vision of Heaven:* Evil creature is dazed for 1 round.
+2 *Consecrate:* Fills area with positive energy, making undead weaker.
+3 *Blessed Sight:* Evil auras become visible to you.
+4 *Lesser Planar Ally:* Exchange services with a 6 HD extra-planar creature.
+5 *Heavenly Lightning:* Arcs of radiant lightning deal 3d6 damage to one target per two caster levels.
+6 *Call Faithful Servants:* Summons 1d4 lantern archons, coure eladrins, or musteval guardinals.
+7 *Heavenly Lightning Storm:* Arcs of radiant lightning deal 5d6 damage to one target per level.
+8 *Holy Aura:* +4 AC, +4 resistance, and SR 25 against evil spells.
+9 *Gate:* Connects two planes for travel or summoning.
+
+### COMMUNITY DOMAIN
+
+**Deities:** Estanna.
+**Granted Power:** Use calm emotions as a spell-like ability once per day. Gain a +2 competence bonus on Diplomacy checks.
+
+**Community Domain Spells**
+1 *Bless:* Allies gain +1 attack and +1 on saves against fear.
+2 *Status:* Monitors condition, position of allies.
+3 *Prayer:* Allies gain +1 on most rolls, and enemies take -1.
+4 *Greater Status:* As status, but cast some spells through bond.
+5 *Rary's Telepathic Bond:* Link lets allies communicate.
+6 *Heroes' Feast:* Food for one creature/level cures and blesses.
+7 *Refuge:* Alters item to transport its possessor to you.
+8 *Sympathy:* Object or location attracts certain creatures.
+9 *Mass Heal:* As heal, but with several subjects.
+
+### ENDURANCE DOMAIN
+
+**Deities:** Phieran.
+**Granted Power:** You can perform a feat of endurance, which is the supernatural ability to gain an enhancement bonus to Constitution equal to one-half your level. Activating the power is a free action, the power lasts 1 minute, and it is usable once per day.
+
+**Endurance Domain Spells**
+1 *Endure Elements:* Exist comfortably in hot or cold environments.
+2 *Bear's Endurance:* Subject gains +4 Con for 1 minute/level.
+3 *Refreshment:* Cures creatures of all nonlethal damage.
+4 *Sustain:* Recipients need no food or drink for 6 hours/level.
+5 *Stoneskin:* Stops blows, cuts, stabs, and slashes.
+6 *Mass Bear's Endurance:* As bear's endurance, affects one subject/level.
+7 *Globe of Invulnerability:* As minor globe, plus 4th level.
+8 *Spell Turning:* Reflect 1d4+6 spell levels back at caster.
+9 *Iron Body:* Your body becomes living iron.
+
+### FEY DOMAIN
+
+**Deities:** Valarian.
+**Granted Power:** Gain a +4 bonus on saving throws against the spell-like abilities of feys (such as dryads, nymphs, and sprites).
+
+**Fey Domain Spells**
+1 *Faerie Fire:* Outlines subject with light, canceling blur, concealment, etc.
+2 *Charm Person:* Makes one person your friend.
+3 *Inspired Aim:* Allies within 40 ft. gain +2 insight bonus on ranged attack rolls.
+4 *Blinding Beauty:* You become as beautiful as a nymph, and can blind humanoids who look at you.
+5 *Tree Stride:* Step from one tree to another far away.
+6 *Heroes' Feast:* Food for one creature/level cures and blesses.
+7 *Liveoak:* Oak becomes great guardian.
+8 *Unearthly Beauty:* As blinding beauty, but creatures must save or die.
+9 *Summon Nature's Ally IX:* Calls creature to fight.
+
+### GLORY DOMAIN
+
+**Deities:** Ayalla.
+**Granted Power:** Turn undead with a +2 bonus on the turning check and +1d6 to the turning damage roll.
+
+**Glory Domain Spells**
+1 *Disrupt Undead:* Deals 1d6 damage to one undead.
+2 *Glorious Raiment:* Wearer gains +1 sacred bonus to AC per five caster levels and damage reduction 5/evil.
+3 *Searing Light:* Ray deals 1d8/two levels, more against undead.
+4 *Celestial Brilliance:* Object sheds brilliant light to 120 feet, hurts undead and evil outsiders.
+5 *Crown of Flame:* Aura burns evil outsiders, undead, and fey for 2d6 points of damage/round.
+6 *Bolt of Glory:* Ray deals 5d8 damage (varies against other creature types).
+7 *Sunbeam:* Beam blinds and deals 4d6 damage.
+8 *Crown of Glory:* Aura inspires awe.
+9 *Blinding Glory:* 100-ft./level radius of light that blinds evil creatures.
+
+### HERALD DOMAIN
+
+**Deities:** Barachiel.
+**Granted Power:** Intimidate is a class skill. You gain a +4 sacred bonus on Diplomacy and Intimidate checks.
+
+**Herald Domain Spells**
+1 *Comprehend Languages:* Understand all spoken and written languages.
+2 *Enthrall:* Captivates all within 100 ft. +10 ft./level.
+3 *Tongues:* Speak any language.
+4 *Sending:* Delivers short message anywhere, instantly.
+5 *Greater Command:* As command, but affects one subject/level.
+6 *Dream:* Sends message to anyone sleeping.
+7 *Aspect of the Deity:* As lesser aspect, but you get celestial qualities.
+8 *Crown of Glory:* Aura inspires awe.
+9 *Greater Aspect of the Deity:* As lesser aspect, but gain wings, enhanced ability scores, and various resistances and immunities.
+
+### JOY DOMAIN
+
+**Deities:** Chaav.
+**Granted Power:** You gain a +4 sacred bonus on Diplomacy checks.
+
+**Joy Domain Spells**
+1 *Vision of Heaven:* Evil creature is helpless for 1 round.
+2 *Elation:* Allies gain +2 to Strength and Dexterity, +5 ft. of speed.
+3 *Distilled Joy:* Create ambrosia.
+4 *Good Hope:* Subjects gain +2 on attacks, damage, saves, and checks.
+5 *Chaav's Laugh:* Good creatures gain +2 on attack rolls and saves against fear, plus 1d8 temporary hp +1/level (max. +20). Evil creatures take -2 on attack rolls and saves against fear.
+
+### PLEASURE DOMAIN
+
+**Deities:** Lastai.
+**Granted Power:** You are immune to any effect that damages or drains your Charisma.
+
+**Pleasure Domain Spells**
+1 *Remove Fear:* Suppresses fear or gives +4 on saves against fear for one subject + one per four levels.
+2 *Lastai's Caress:* Intense feelings of good leave evil subject cowering, frightened, nauseated, or shaken.
+3 *Heart's Ease:* Removes fear, despair, confusion, insanity and some mind-influencing effects; restores 2d4 points of temporary Wisdom damage.
+4 *Remove Fatigue:* Removes effects of fatigue as 8 hours of rest.
+5 *Eagle's Splendor, Mass:* One subject/level gains +4 bonus to Charisma for 1 minute/level.
+6 *Celestial Blood:* Grant energy resistance, +4 on saves against poison, and damage reduction 10/evil.
+7 *Empyreal Ecstasy:* Targets immune to pain and mind-influencing effects, and take half damage from melee and ranged attacks; -4 to skill checks.
+8 *Spread of Contentment:* Calms hostile creatures within 10-ft./level radius.
+9 *Sublime Revelry:* Targets are immune to pain and mind-influencing effects, and take half damage from melee and ranged attacks.
+
+### WRATH DOMAIN
+
+**Deities:** Kharash.
+**Granted Power:** Once per day, you may make a free attack of opportunity against any opponent that damages you with a melee attack. This ability does not allow you to make more than one attack of opportunity in a round.
+
+**Wrath Domain Spells**
+1 *Doom:* One subject takes -2 on attack rolls, damage rolls, saves, and checks.
+2 *Energize Potion:* Transforms potion into a grenade that deals energy damage in a 10-ft.-radius burst.
+3 *Affliction:* Infects evil subject with chosen affliction.
+4 *Radiant Shield:* Creatures attacking you take electricity damage; you're protected from electricity.
+5 *Righteous Might:* Your size increases, and you gain combat bonuses.
+6 *Vengeance Halo:* Any creature that slays the spell's recipient takes 1d6/level damage.
+7 *Righteous Smite:* Deals 1d6 damage/level (1d8 damage/level to evil outsiders) in 20-ft. radius and blinds evil foes for 1d4 rounds.
+8 *Last Judgment:* Evil creatures are struck dead and sent to Lower Planes.
+9 *Storm of Vengeance:* Storm rains acid, lightning, and hail.
+
+## DRUID SPELLS
+
+### 1st-Level Druid Spells
+**Eyes of the Avoral:** Subject gets +8 on Spot checks.
+**Silvered Claws:** One creature's natural attacks are treated as silvered weapons.
+
+### 2nd-Level Druid Spells
+**Estanna's Stew:** Conjures stew that heals 1d6+1 per serving (one serving/two caster levels).
+**Remove Addiction:** Cures target of drug addictions.
+
+### 3rd-Level Druid Spells
+**Affliction:** Infects evil subject with chosen affliction.
+**Energize Potion:** Transforms potion into a grenade that deals energy damage in a 10-ft. radius burst.
+
+### 4th-Level Druid Spells
+**Blinding Beauty:** You become as beautiful as a nymph, and can blind humanoids who look at you.
+**Stars of Arvandor:** Tiny starbursts each deal 1d8 damage (half nonlethal), or 1d8 damage (all lethal) to evil creatures.
+
+### 5th-Level Druid Spells
+**Dancing Web:** Energy strands deal 1d6 nonlethal damage per level plus entangles evil creatures for 1d6 rounds.
+**Energetic Healing:** Target is immune to one energy type and gains 10% of the energy damage as healing.
+**Spear of Valarian:** Transforms a nonmagical weapon into a +1 silvered spear (+3 against magical beasts, which take +2d6 points of damage).
+
+### 6th-Level Druid Spells
+**Touch of Adamantine:** Weapon gains the properties of an adamantine weapon.
+
+### 7th-Level Druid Spells
+**Rain of Roses:** Roses fall from the sky; evil creatures take 1d4 Wis damage per round and are sickened.
+
+### 8th-Level Druid Spells
+**Leonal's Roar:** Kills, paralyzes, weakens, or dazes nongood subjects, and deals 2d6 points of sonic damage.
+**Unearthly Beauty:** As blinding beauty, but creatures must save or die.
+
+### 9th-Level Druid Spells
+**Rain of Black Tulips:** Black tulips fall from the sky; evil creatures take 5d6 damage per round and are nauseated.
+
+## PALADIN SPELLS
+
+### 1st-Level Paladin Spells
+**Divine Sacrifice:** Sacrifice hit points for a damage bonus.
+**Lantern Light:** Ranged touch attacks deal 1d6 points of damage.
+**Second Wind:** Target gains the equivalent of the Endurance feat for 1 hour/level.
+**Silvered Weapon:** Transforms one weapon into a silvered weapon.
+
+### 2nd-Level Paladin Spells
+**Call Mount:** Call your special mount, even if you have already called it today.
+**Estanna's Stew:** Conjures stew that heals 1d6+1 per serving.
+**Moment of Clarity:** Target immediately makes a new saving throw to resist a mind-affecting spell or effect.
+
+### 3rd-Level Paladin Spells
+**Blessed Sight:** Evil auras become visible to you.
+**Mind Bond:** You and your mount gain +4 flanking bonus when flanking the same opponent; mount gains bonus on attack rolls.
+**Smite Heretic:** You gain a +2 sacred bonus on attack roll and deal extra damage with your smite evil ability when used against an evil creature that can cast divine spells.
+
+### 4th-Level Paladin Spells
+**Blood of the Martyr:** You heal a target at range and take a like amount of damage.
+**Glory of the Martyr:** As shield other, but with multiple targets.
+**Lesser Aspect of the Deity:** Your form becomes more like your deity's.
+**Sacred Haven:** Target gains +2 sacred bonus to AC and retains Dex bonus to AC when flat-footed; you can heal target using lay on hands at range.
+**Sword of Conscience:** Evil creature confesses crimes, takes Wisdom damage.
+**Winged Mount:** Your mount sprouts wings and gains a fly speed of 60 ft. (good).
+
+## RANGER SPELLS
+
+### 1st-Level Ranger Spells
+**Eyes of the Avoral:** Subject gets +8 bonus on Spot checks.
+**Silvered Claws:** One creature's natural attacks are treated as silvered weapons.
+
+### 2nd-Level Ranger Spells
+**Silvered Weapon:** Transforms one weapon into a silvered weapon.
+
+### 3rd-Level Ranger Spells
+**Inspired Aim:** Allies within 40 ft. gain +2 insight bonus on ranged attack rolls.
+
+### 4th-Level Ranger Spells
+**Blinding Beauty:** You become as beautiful as a nymph, and can blind humanoids who look at you.
+**Spear of Valarian:** Transforms normal weapon into a +1 silvered spear (+3 against magical beasts, which take +2d6 points of damage).
+**Stars of Arvandor:** Tiny starbursts (one/level) deal 1d4 points of damage (2d4 against evil creatures).
+
+## SORCERER/WIZARD SPELLS
+
+### 1st-Level Sorcerer/Wizard Spells
+**Evocation:** Lantern Light: Ranged touch attacks deal 1d6 points of damage.
+**Transmutation:** Eyes of the Avoral: Subject gets +8 on Spot checks.
+
+### 2nd-Level Sorcerer/Wizard Spells
+**Enchantment:** Yoke of Mercy: Target deals nonlethal damage.
+**Transmutation:** Energize Potion: Transforms potion into a grenade that deals energy damage in a 10-ft. radius burst.
+
+### 3rd-Level Sorcerer/Wizard Spells
+**Enchantment:** Dolorous Motes: Creates clouds of flickering light (1 10-ft. cube/level) that dazes creatures.
+**Enchantment:** Elation: Allies gain +2 to Strength and Dexterity, +5 ft. of speed.
+**Enchantment:** Warcry: Creatures within 30-foot cone cower for 1d4 rounds.
+**Evocation:** Stars of Arvandor: Tiny starbursts each deal 1d8 damage (half nonlethal), or 1d8 lethal damage to evil creatures.
+**Necromancy:** Healing Touch: You take up to 1d6 points of damage/2 levels and heal target that amount.
+**Transmutation:** Distilled Joy: Creates ambrosia.
+
+### 4th-Level Sorcerer/Wizard Spells
+**Conjuration:** Radiant Fog: As solid fog, but dazzles or blinds creatures within.
+**Evocation:** Celestial Brilliance: Object sheds brilliant light to 120 feet, hurts undead and evil outsiders.
+**Evocation:** Dancing Web: Energy strands deal 1d6/level nonlethal damage plus entangles evil creatures for 1d6 rounds.
+**Evocation:** Radiant Shield: Creatures attacking you take electricity damage; you're protected from electricity.
+**Necromancy:** Affliction: Infects evil subject with chosen affliction.
+**Transmutation:** Perfect Summons: Creates area where only good creatures can be summoned.
+
+### 5th-Level Sorcerer/Wizard Spells
+**Abjuration:** Telepathy Block: Blocks all telepathic communication within 80-ft. radius.
+**Abjuration:** Vanishing Weapon: Weapons touch dispels summoned or quasi-real creatures.
+**Conjuration:** Call Faithful Servants: Summons 1d4 lantern archons, coure eladrins, or musteval guardinals.
+**Evocation:** Emerald Burst: 20-ft. radius burst dazes neutral creatures for 1 round, stuns evil creatures for 1d4 rounds.
+**Transmutation:** Touch of Adamantine: Weapon gains the properties of an adamantine weapon.
+
+### 6th-Level Sorcerer/Wizard Spells
+**Abjuration:** Starmantle: Cloak of stars destroys nonmagical weapons on contact and allows wearer a DC 15 Reflex save to reduce damage from magic weapons by half.
+**Enchantment:** Wages of Sin: Evil creatures attack other evil creatures.
+**Transmutation:** Quickshift: Caster can use teleport or greater teleport spell-like ability as a free action for 1 round/level.
+
+### 7th-Level Sorcerer/Wizard Spells
+**Evocation:** Amber Sarcophagus: Target is trapped in stasis inside amber.
+**Necromancy:** Righteous Glare: Your gaze attack kills evil creatures with less than 5 HD, causes fear in others.
+**Transmutation:** Eladrin Form: You become an incorporeal globe.
+**Transmutation:** Tomb of Light: Entraps and harms evil extraplanar creatures.
+
+### 8th-Level Sorcerer/Wizard Spells
+**Necromancy:** Last Judgment: Evil creatures are struck dead and sent to Lower Planes.
+**Transmutation:** Axiomatic Creature: Transforms creature into an axiomatic creature.
+
+### 9th-Level Sorcerer/Wizard Spells
+**Conjuration:** Blinding Glory: 100-ft./level radius of light that blinds evil creatures.
+
+## SPELL DESCRIPTIONS
+
+The new spells described in this book are good spells, sanctified spells, or spells that deal directly with other topics in this book (such as exorcism). The spells are presented in alphabetical order by name.
+
+**Components:** In addition to the standard components defined in the Player's Handbook, some of the spells here have the following special components.
+
+**Abstinence:** The caster must have remained free from the specified indulgence (including food, alcohol, sex, spellcasting, or receiving certain spells) for the specified amount of time prior to casting the spell.
+**Archon:** The caster must have the archon subtype to cast this spell.
+**Celestial:** The caster must be an outsider with the good subtype to cast this spell.
+**Eladrin:** The caster must have the eladrin subtype to cast this spell.
+**Guardinal:** The caster must have the guardinal subtype to cast this spell.
+**Location:** The caster must be standing in a particular place—usually a site dedicated to good—to cast this spell.
+**Sacrifice:** The caster must sacrifice physical or mental energy noted for casting a sanctified spell.
+
+### Affliction
+**Necromancy [Good]**
+**Level:** Cleric 3, druid 3, sorcerer/wizard 4, Wrath 3
+**Components:** V, S
+**Casting Time:** 1 standard action
+**Range:** Touch
+**Target:** Evil creature touched
+**Duration:** Instantaneous
+**Saving Throw:** Fortitude negates
+**Spell Resistance:** Yes
+
+The subject contracts an affliction selected from the list below, which strikes immediately (no incubation period). Afflictions deal damage only to evil creatures. Any evil creature takes...
+
+### Bastion of Good
+**Abjuration [Good]**
+**Level:** Apostle of peace 7, cleric 7
+**Components:** V, S, Abstinence
+**Casting Time:** 1 standard action
+**Range:** 20 ft.
+**Area:** 20-ft. radius spherical emanation centered on you
+**Duration:** 1 round/level
+**Saving Throw:** None
+**Spell Resistance:** No
+
+A nimbus of light surrounds you, protecting you and those around you from spell effects and the attacks of evil creatures. The aura excludes all spell effects of up to 3rd level, exactly as a minor globe of invulnerability does. In addition, the nimbus protects creatures within it as a magic circle against evil at double strength. Warded creatures gain a +4 deflection bonus to AC and a +4 resistance bonus on saves against attacks from evil creatures, and they are protected from possession, mental control, and bodily contact by summoned or conjured creatures.
+**Abstinence Component:** You must fast for 24 hours before casting this spell.
+
+### Blessed Sight
+**Divination**
+**Level:** Apostle of peace 3, champion of Gwynharwyf 3, cleric 3, paladin 3, Celestial 3, slayer of Domiel 3
+**Components:** V, S
+**Casting Time:** 1 standard action
+**Range:** Personal
+**Target:** You
+**Duration:** 1 minute/level (D)
+
+This spell makes your eyes glow with white light and allows you to see evil auras within 120 feet of you. The effect is similar to a detect evil spell, but does not require concentration and discerns aura location and strength more quickly.
+You know the location and strength of all evil auras within your sight. An aura's strength depends on the type and Hit Dice of any evil creature, as noted in the description of the detect evil spell in the Player's Handbook.
+
+### Blinding Beauty
+**Transmutation [Good]**
+**Level:** Beloved of Valarian 4, bard 4, druid 4, Fey 4, ranger 4
+**Components:** V, S, Abstinence
+**Casting Time:** 1 standard action
+**Range:** Personal
+**Target:** You
+**Duration:** 1 round/level
+
+You gain the physical beauty of a nymph, with some of the supernatural accompaniment. All humanoids within 60 feet of you who look directly at you must succeed on a Fortitude save or be blinded permanently as though by the blindness spell. During the duration of the spell, you can suppress or resume this effect as a free action, while remaining stunningly attractive.
+**Abstinence Component:** You must abstain from sexual intercourse for one week before casting this spell.
+
+### Blinding Glory
+**Conjuration (Creation) [Good]**
+**Level:** Glory 9, sorcerer/wizard 9
+**Components:** V, S, M/DF
+**Casting Time:** 1 hour
+**Range:** Close (25 ft. + 5 ft./2 levels)
+**Area:** 100-ft./level radius spread, centered on you
+**Duration:** 1 hour/level
+**Saving Throw:** None
+**Spell Resistance:** No
+
+A brilliant radiance spreads from you, brightly illuminating the area. The light is similar to that created by the daylight spell, but no magical darkness counters or dispels it. Furthermore, evil-aligned creatures are blinded within this light.
+Blinding glory brought into an area of magical darkness (or vice versa), including an utterdark spell, is temporarily negated, so that the otherwise prevailing light conditions exist in the overlapping areas of effect.
+**Arcane Material Component:** A polished rod of pure silver.
+
+### Blood of the Martyr
+**Necromancy (Healing) [Good]**
+**Level:** Apostle of peace 4, champion of Gwynharwyf 4, cleric 4, paladin 4
+**Components:** V, S
+**Casting Time:** 1 standard action
+**Range:** Medium (100 ft. + 10 ft./level)
+**Target:** Willing creature
+**Duration:** Instantaneous
+**Saving Throw:** None
+**Spell Resistance:** Yes
+
+You may transfer your own hit points directly to a target creature within range. You must transfer at least 20 points. Transferred hit points are damage to you. The creature takes your transferred hit points as if receiving a cure wounds spell and cannot gain more hit points than its maximum allows; any excess points are lost. This spell transfers only actual hit points, not temporary hit points. An unconscious target is considered a "willing creature" for purposes of this spell.
+
+### Bolt of Glory
+**Evocation [Good]**
+**Level:** Exalted arcanist 6, Glory 6
+**Components:** V, S, DF
+**Casting Time:** 1 standard action
+**Range:** Close (25 ft. + 5 ft./level)
+**Effect:** Ray
+**Duration:** Instantaneous
+**Saving Throw:** None
+**Spell Resistance:** Yes
+
+By casting this spell, you project a bolt of energy from the Positive Energy Plane against one creature. You must succeed on a ranged touch attack to strike your target. A creature struck takes varying damage, depending on its nature and home plane of existence:
+| Creature's Origin | Damage |
+| :--- | :--- |
+| Material Plane | 5d8 |
+| Elemental, neutral outsider | 5d6 |
+| Positive Energy Plane, good outsider | none |
+| Evil outsider, undead creature | 10d8 |
+| Negative Energy Plane | 15d8 |
+
+### Brilliant Emanation
+**Evocation [Good]**
+**Level:** Sanctified 3
+**Components:** Sacrifice
+**Casting Time:** 1 standard action
+**Range:** 100 ft. + 10 ft./level
+**Area:** 100-ft. radius emanation + 10-ft. radius per level
+**Duration:** 1d4 rounds
+**Saving Throw:** Fortitude partial
+**Spell Resistance:** Yes
+
+This spell causes a divine glow to radiate from any reflective objects worn or carried by the caster, including metal armor. Evil creatures within the spell's area are blinded unless they succeed on a Fortitude saving throw. Nonevil characters perceive the brilliant light emanating from the caster, but are not blinded by it and do not suffer any negative effects...
+
+### Celestial Blood
+**Abjuration [Good]**
+**Level:** Apostle of peace 6, cleric 6, Pleasure 6
+**Components:** V, S, M
+**Casting Time:** 1 round
+**Range:** Touch
+**Target:** Nonevil creature touched
+**Duration:** 1 minute/level
+**Saving Throw:** None
+**Spell Resistance:** Yes (harmless)
+
+You channel holy power to grant the subject some of the protection enjoyed by celestial creatures. The subject gains resistance 10 to acid, cold, and electricity, a +4 bonus on saving throws against poison, and damage reduction 10/evil.
+**Material Component:** A vial of holy water, with which you anoint the subject's head.
+
+### Celestial Brilliance
+**Evocation [Good, Light]**
+**Level:** Cleric 4, Glory 4, sorcerer/wizard 4
+**Components:** V, S
+**Casting Time:** 1 standard action
+**Range:** Touch
+**Target:** Object touched
+**Duration:** 1 day/level (D)
+**Saving Throw:** None
+**Spell Resistance:** No
+
+The object touched sheds light brighter than bright sunlight, channeled directly from the celestial realms. The light extends to a 120-foot radius: bright light to 60 feet and dim light in another 60 feet.
+Creatures with light sensitivity take twice the usual penalty when they are within 60 feet of the object. Undead creatures take 1d6 points of damage each round they are within the bright light. Evil outsiders, as well as undead creatures that are specifically harmed by sunlight, take 2d6 points of damage each round in the bright light.
+Celestial brilliance brought into an area of magical darkness (or vice versa) is temporarily negated, so that the otherwise prevailing light conditions exist in the overlapping areas of effect.
+Celestial brilliance counters or dispels any darkness spell of equal or lower level, such as deeper darkness.
+
+### Chaav's Laugh
+**Enchantment (Compulsion) [Good, Mind-Affecting]**
+**Level:** Cleric 5, Joy 5
+**Components:** V
+**Casting Time:** 1 standard action
+**Range:** 40 ft.
+**Area:** 40-ft.-radius spread centered on you
+**Duration:** 1 minute/level
+**Saving Throw:** Will negates (see text)
+**Spell Resistance:** Yes
+
+You release a joyous, boisterous laugh that strengthens the resolve of good creatures and weakens the resolve of evil creatures.
+Good creatures within the spell's area gain the following benefits for the duration of the spell: a +2 morale bonus on attack rolls and saves against fear effects and temporary hit points equal to 1d8 + caster level (to a maximum of 1d8+20 at caster level 20th).
+Evil creatures within the spell's area that fail a Will save take a -2 morale penalty on attack rolls and saves against fear effects for the duration of the spell.
+Creatures must be able to hear the laugh to be affected by the spell. Creatures that are neither good nor evil are unaffected by Chaav's laugh.
+
+### Channel Celestial
+**Transmutation [Good]**
+**Level:** Sanctified 7
+**Components:** V, DF, Abstinence, Sacrifice
+**Casting Time:** 1 standard action
+**Range:** Touch
+**Target:** You and 1 willing celestial
+**Duration:** 10 minutes/level (D)
+**Saving Throw:** None
+**Spell Resistance:** No
+
+You invite a celestial creature to occupy your body, as described in the section on Celestial Channeling in Chapter 2. The celestial must be present when you cast the spell, it must be willing, and it cannot have more than 12 HD. It need not have the innate spell-like ability to channel its power through mortals; this spell bestows that ability upon the celestial.
+If you channel a celestial that was summoned to the Material Plane by means of a summon monster or similar spell, the channeling ends when the duration of the summoning spell ends, regardless of any remaining duration on the channel celestial spell.
+**Abstinence Component:** You must abstain from intoxicants and stimulants for 24 hours before casting this spell. You must not be the subject of any other spell at the time you cast this spell. You must not be suffering from any ability damage, ability drain, or energy drain at the time you cast this spell, including the effects of any previously cast sanctified spell.
+**Sacrifice:** 1d3 points of Strength and Dexterity damage.
+
+### Channel Greater Celestial
+**Transmutation [Good]**
+**Level:** Sanctified 9
+As channel celestial, but the celestial you channel may have up to 24 HD.
+**Abstinence Component:** You must abstain from intoxicants and stimulants for one week before casting this spell. You must not be the subject of any other spell at the time you cast this spell. You must not be suffering from any ability damage, ability drain, or energy drain at the time you cast this spell, including the effects of any previously cast sanctified spell.
+**Sacrifice:** 1d6 points of Strength and Dexterity damage.
+
+### Constricting Chains
+**Evocation [Good]**
+**Level:** Sanctified 7
+**Components:** V, S, F, Sacrifice
+**Casting Time:** 1 standard action
+**Range:** Medium (100 ft. + 10 ft./level)
+**Target:** One creature
+**Duration:** 1 round/level
+**Saving Throw:** None
+**Spell Resistance:** No
+
+You call upon the heavenly powers to bind a creature in writhing chains of scintillating light. The creature is entangled, taking a -2 penalty on attack rolls and a -4 penalty to effective Dexterity. Moreover, the chains are anchored to the nearest immobile object (usually the floor), preventing the bound creature from moving. An entangled creature attempting to cast a spell must succeed on a Concentration check (DC 15 + spell level) or lose the spell.
+The chains automatically constrict the bound creature for 3d6 points of nonlethal damage per round unless the caster (as a free action) commands the chains not to deal damage during any given round.
+The constricting chains have AC 20, 5 hp per caster level (maximum 100 hp), and damage reduction 10/magic. They are immune to energy-based attacks, nonlethal damage, and all spells except dispel magic and similar effects. They are not subject to critical hits. Half of all damage dealt to the chains (rounded down) is transferred to the target.
+A successful DC 32 Strength check breaks the chains and ends the spell. An entangled creature can also attempt to escape (requiring 1 minute) with a DC 40 Escape Artist check.
+**Focus:** A small silver chain (10 gp).
+**Sacrifice:** 1d2 points of Strength drain.
+
+### Convert Wand
+**Transmutation**
+**Level:** Cleric 5
+**Components:** V, S
+**Casting Time:** 1 standard action
+**Range:** Touch
+**Target:** Wand touched
+**Duration:** 1 minute/level
+**Saving Throw:** None
+**Spell Resistance:** No
+
+This spell temporarily transforms a magic wand of any type into a healing wand with the same number of charges remaining. At the end of the spell's duration, the wand's original effect is restored, and any charges that were depleted remain so. The spell level of the wand determines how powerful a healing instrument the wand becomes:
+| Spell Level | New Wand Type |
+| :--- | :--- |
+| 1st | Wand of cure light wounds |
+| 2nd | Wand of cure moderate wounds |
+| 3rd | Wand of cure serious wounds |
+| 4th | Wand of cure critical wounds |
+For example, a 10th-level cleric can transform a wand of lightning bolt (3rd-level spell) into a wand of cure serious wounds for 10 minutes.
+
+### Crown of Brilliance
+**Evocation [Good, Light]**
+**Level:** Cleric 6
+**Components:** V, S, M, Archon
+**Casting Time:** 1 round
+**Range:** 20 ft.
+**Area:** 20-ft.-radius emanation, centered on you
+**Duration:** 1 round/level
+**Saving Throw:** Fortitude partial
+**Spell Resistance:** Yes
+
+A blazing crown of golden light surrounds your head. Creatures you engage in melee combat must make successful Fortitude saving throws or be blinded for 1d4 rounds. Creatures that successfully save, and creatures that have recovered from blindness, are still dazzled for as long as they remain in melee with you.
+Creatures with light sensitivity and creatures that are harmed by sunlight (such as vampires) must make a Will save if they are within the area of the spell. Creatures that fail their saving throws must move outside the area. Undead within the area take 1d6 points of damage each round they remain in the area.
+**Material Component:** An opal worth at least 100 gp, carried on your person through the duration of the spell. The opal shatters upon completion of the spell, and the spell ends prematurely if the opal is shattered by other means.
+
+### Crown of Flame
+**Evocation [Good]**
+**Level:** Cleric 5, exalted arcanist 5, Glory 5
+**Components:** V, Archon
+**Casting Time:** 1 standard action
+**Range:** 10 ft.
+**Area:** 10-ft.-radius emanation, centered on you
+**Duration:** 1 minute/level
+**Saving Throw:** None
+**Spell Resistance:** Yes
+
+You become a blazingly hot beacon of the powers of good, searing all evil outsiders, evil undead, and evil fey within 10 feet of you. Affected creatures take 2d6 points of damage per round.
+
+### Crown of Glory
+**Evocation [Good]**
+**Level:** Glory 8, Herald 8
+**Components:** V, S, M/DF
+**Casting Time:** 1 round
+**Range:** 10 ft./level
+**Area:** 10-ft.-radius/level emanation centered on you
+**Duration:** 1 minute/level
+**Saving Throw:** Will negates
+**Spell Resistance:** Yes
+
+This spell temporarily bestows the aura of celestial authority on you, inspiring awe in all lesser creatures who behold your terrible perfection and righteousness. Creatures with fewer than 8 levels or Hit Dice cease whatever they are doing and turn to face you. When you speak, your words are treated as a suggestion spell, and the listeners telepathically understand you, even if they do not understand your language.
+Creatures who make successful saving throws are not awed by you and can continue their actions normally. Creatures with more than 8 HD are immune to the effect of the spell.
+**Material Component:** An opal worth at least 200 gp, carried on your person. The opal shatters upon the completion of the spell. (If it is shattered prematurely, the spell ends.)
+This spell first appeared in Defenders of the Faith.
+
+### Cry of Ysgard
+**Conjuration (Calling) [Good]**
+**Level:** Sanctified 7
+**Components:** V, Sacrifice
+**Casting Time:** 1 round
+**Range:** Close (25 ft. + 5 ft./2 levels)
+**Effect:** Calls 2d4 bariaur defenders of Ysgard
+**Duration:** Instantaneous; see text
+**Saving Throw:** None
+**Spell Resistance:** No
+
+You call 2d4 bariaur defenders of Ysgard (see Chapter 8: Monsters) from the plains of Ysgard to your location. They serve you for up to a year, and you may dismiss them at any time. They are intelligent, so you can assign them different tasks. They can refuse to complete a quest or otherwise take on complex burdens without your supervision.
+No matter how many times you cast this spell, you can control no more than...
