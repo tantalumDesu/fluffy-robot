@@ -1,0 +1,383 @@
+{
+  "list_source": "https://new.dndtools.org/feats?category=Flaw",
+  "text_source": "Individual dndtools feat pages (url on each entry).",
+  "text_source_note": "dndtools labels each flaw's penalty as 'Benefit'. It is mapped to drawback here, and benefit is null because flaws have none. Text was cross-checked against the d20 SRD 3.5 Flaws page (https://cayzle.com/3Esrd/unearthedFlaws.html) and matches. Two dndtools text glitches were repaired: Feeble's markup-damaged '-2 penalty on Strength-' and Pathetic's broken ligature 'fl aw'. srd_name is the SRD spelling. The SRD gives no roleplaying text for flaws, so roleplaying_ideas is null.",
+  "category_rules": "A player may select up to two flaws when creating a character. After 1st level a character cannot take additional flaws unless the game master allows it. Each flaw selected entitles the character to a bonus feat. Flaws are entirely negative in their impact on capabilities. (SRD, Unearthed Arcana Character Flaws.)",
+  "result_count": 13,
+  "effects_schema": {
+    "target": "What is modified. Prefixes: skill:, skill_group:, skill_family:, save:, check:, ability_check:, ability_score:, ac, ac:dodge, attack:, damage:, initiative, miss_chance_roll:, speed:land_ft, hp_per_level, caster_level, darkvision_range_ft, literacy, condition_substitution:. 'chosen' means the player picks the target.",
+    "op": "add (default), multiply, or set",
+    "modifier": "Signed number. Negative for penalties. null for set operations with no number.",
+    "condition": "When the effect applies, or null if always.",
+    "note": "Extra rule text, or null."
+  },
+  "feats": [
+    {
+      "name": "Feeble",
+      "srd_name": "Feeble",
+      "url": "https://new.dndtools.org/feats/feeble-1099",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are unathletic and uncoordinated.",
+      "benefit": null,
+      "drawback": "You take a -2 penalty on Strength-, Dexterity-, and Constitution-based ability checks and skill checks.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "ability_check:Strength",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "ability_check:Dexterity",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "ability_check:Constitution",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill_group:Strength-based",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill_group:Dexterity-based",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill_group:Constitution-based",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Frail",
+      "srd_name": "Frail",
+      "url": "https://new.dndtools.org/feats/frail-1190",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are thin and weak of frame.",
+      "benefit": null,
+      "drawback": "Subtract 1 from the number of hit points you gain at each level. This flaw can reduce the number of hit points you gain to 0 (but not below).",
+      "special": "You must have a Constitution of 4 or higher to take this flaw.",
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "hp_per_level",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": "Can reduce hit points gained to 0 but not below."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Inattentive",
+      "srd_name": "Inattentive",
+      "url": "https://new.dndtools.org/feats/inattentive-1601",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are particularly unaware of your surroundings.",
+      "benefit": null,
+      "drawback": "You take a -4 penalty on Listen checks and Spot checks.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "skill:Listen",
+            "op": "add",
+            "modifier": -4,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": -4,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Meagre Fortitude",
+      "srd_name": "Meager Fortitude",
+      "url": "https://new.dndtools.org/feats/meagre-fortitude-1915",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are sickly and weak of stomach.",
+      "benefit": null,
+      "drawback": "You take a -3 penalty on Fortitude saves.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "save:Fortitude",
+            "op": "add",
+            "modifier": -3,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Murky Eyed",
+      "srd_name": "Murky-Eyed",
+      "url": "https://new.dndtools.org/feats/murky-eyed-2018",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "Your vision is obscured.",
+      "benefit": null,
+      "drawback": "In combat, every time you attack an opponent that has concealment, roll your miss chance twice. If either or both results indicate that you miss, your attack fails.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "miss_chance_roll:concealment",
+            "op": "set",
+            "modifier": null,
+            "condition": "Attacking an opponent that has concealment",
+            "note": "Roll the miss chance twice. If either or both results indicate a miss, the attack fails."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Noncombatant",
+      "srd_name": "Noncombatant",
+      "url": "https://new.dndtools.org/feats/noncombatant-2069",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are relatively inept at melee combat.",
+      "benefit": null,
+      "drawback": "You take a -2 penalty on all melee attack rolls.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "attack:melee",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pathetic",
+      "srd_name": "Pathetic",
+      "url": "https://new.dndtools.org/feats/pathetic-2124",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are weaker in an attribute than you should be.",
+      "benefit": null,
+      "drawback": "Reduce one of your ability scores by 2.",
+      "special": "You cannot take this flaw if the total of your ability modifiers is 8 or higher.",
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "ability_score:chosen",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": "Choose one ability score."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Poor Reflexes",
+      "srd_name": "Poor Reflexes",
+      "url": "https://new.dndtools.org/feats/poor-reflexes-3656",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You often zig when you should have zagged.",
+      "benefit": null,
+      "drawback": "You take a -3 penalty on Reflex saves.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "save:Reflex",
+            "op": "add",
+            "modifier": -3,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shaky",
+      "srd_name": "Shaky",
+      "url": "https://new.dndtools.org/feats/shaky-2572",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are relatively poor at ranged combat.",
+      "benefit": null,
+      "drawback": "You take a -2 penalty on all ranged attack rolls.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "attack:ranged",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Slow (flaw)",
+      "srd_name": "Slow",
+      "url": "https://new.dndtools.org/feats/slow-flaw-2648",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You move exceptionally slowly.",
+      "benefit": null,
+      "drawback": "Your base land speed is halved (round down to the nearest 5-foot interval).",
+      "special": "You must have a base land speed of at least 20 feet to take this flaw.",
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "speed:land_ft",
+            "op": "multiply",
+            "modifier": 0.5,
+            "condition": null,
+            "note": "Round down to the nearest 5-foot interval."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Unreactive",
+      "srd_name": "Unreactive",
+      "url": "https://new.dndtools.org/feats/unreactive-3030",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are slow to react to danger.",
+      "benefit": null,
+      "drawback": "You take a -6 penalty on initiative checks.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "initiative",
+            "op": "add",
+            "modifier": -6,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vulnerable",
+      "srd_name": "Vulnerable",
+      "url": "https://new.dndtools.org/feats/vulnerable-3084",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are not good at defending yourself.",
+      "benefit": null,
+      "drawback": "You take a -1 penalty to Armor Class.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "ac",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Weak Will",
+      "srd_name": "Weak Will",
+      "url": "https://new.dndtools.org/feats/weak-will-3099",
+      "type": "Flaw",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are highly suggestible and easily duped.",
+      "benefit": null,
+      "drawback": "You take a -3 penalty on Will saves.",
+      "special": null,
+      "roleplaying_ideas": null,
+      "effects": {
+        "benefit": [],
+        "drawback": [
+          {
+            "target": "save:Will",
+            "op": "add",
+            "modifier": -3,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ]
+}

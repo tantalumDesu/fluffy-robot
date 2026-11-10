@@ -1,0 +1,1261 @@
+{
+  "list_source": "https://new.dndtools.org/feats?category=Trait",
+  "text_source": "https://cayzle.com/3Esrd/unearthedTraits.html",
+  "text_source_note": "Benefit, drawback, special and roleplaying text comes from the d20 SRD 3.5 Unearthed Arcana Traits page (individual dndtools pages could not be fetched). Matched by name; srd_name is the SRD spelling.",
+  "result_count": 35,
+  "feats": [
+    {
+      "name": "Abrasive",
+      "srd_name": "Abrasive",
+      "url": "https://new.dndtools.org/feats/abrasive-18",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are difficult and demanding in conversation, which tends to oppress those around you.",
+      "benefit": "You gain a +1 bonus on Intimidate checks.",
+      "drawback": "You take a -1 penalty on Diplomacy checks and Bluff checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be loud and abrupt or quiet and sinister, but either way, most find them disconcerting or irritating.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Intimidate",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Bluff",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Absent-minded",
+      "srd_name": "Absent Minded",
+      "url": "https://new.dndtools.org/feats/absent-minded-19",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are fascinated by knowledge and learning and are capable of pursuing complex trains of thought quite quickly. However, your preoccupation with such thoughts makes you a little less aware of your surroundings.",
+      "benefit": "You gain a +1 bonus on Knowledge checks (although this does not let you use a Knowledge skill untrained).",
+      "drawback": "You take a -1 penalty on Spot checks and Listen checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might flit from idea to idea, trailing off in mid-sentence or mumbling their way through complex ideas. Conversely, characters with this trait might be extremely articulate but still allow their thoughts to move faster than the pace of a conversation.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill_group:Knowledge",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": "Does not allow untrained use of a Knowledge skill."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Listen",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Aggressive",
+      "srd_name": "Aggressive",
+      "url": "https://new.dndtools.org/feats/aggressive-47",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are quick to initiate combat, and you tend to press the attack once battle is joined. Your enthusiasm makes you a dangerous foe, but you sometimes leave yourself open to blows that a more cautious warrior would avoid.",
+      "benefit": "You gain a +2 bonus on initiative checks.",
+      "drawback": "You take a -1 penalty to Armor Class.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait are often hotheaded and quick to anger, or simply think that the best defense is a quick offense.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "initiative",
+            "op": "add",
+            "modifier": 2,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "ac",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Brawler",
+      "srd_name": "Brawler",
+      "url": "https://new.dndtools.org/feats/brawler-266",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You naturally move close to your opponents when fighting, instinctively grabbing and punching rather than striking with weapons.",
+      "benefit": "You gain a +1 bonus on unarmed attack rolls and grapple checks.",
+      "drawback": "You take a -1 penalty on all other attack rolls.",
+      "special": "The bonus from this trait doesn't apply to natural weapons. A character with the Improved Unarmed Strike feat can't select this trait (if a character with this trait later gains that feat, he loses the trait).",
+      "roleplaying_ideas": "Characters with this trait often disdain the use of weapons entirely, and some eventually learn more refined martial arts based on their instinctive fighting techniques. Many brawlers might not even be consciously aware that they fight differently from other characters; they simply know that the best way to take someone out of a fight is to grab him or punch him in the face.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "attack:unarmed",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": "Does not apply to natural weapons."
+          },
+          {
+            "target": "check:grapple",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "attack:other",
+            "op": "add",
+            "modifier": -1,
+            "condition": "All attack rolls other than unarmed",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cautious",
+      "srd_name": "Cautious",
+      "url": "https://new.dndtools.org/feats/cautious-295",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are cautious in combat, even a bit cowardly, and you take more care to defend yourself than others. However, this caution renders you susceptible to fear effects.",
+      "benefit": "You gain an additional +1 dodge bonus to Armor Class whenever you fight defensively or take the total defense action.",
+      "drawback": "You take a -1 penalty on saving throws made to resist fear effects.",
+      "special": "You cannot select this trait if you have immunity to fear or fear effects. If you later gain immunity to fear, you lose the benefit of this trait.",
+      "roleplaying_ideas": "Characters with this trait might consistently urge talking rather than fighting, or they might do little to encourage that their companions avoid combat and simply remain as far away from foes as possible, using ranged weapons or spells.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "ac:dodge",
+            "op": "add",
+            "modifier": 1,
+            "condition": "Fighting defensively or taking the total defense action",
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "save:fear_effects",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Detached",
+      "srd_name": "Detached",
+      "url": "https://new.dndtools.org/feats/detached-595",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You maintain a distance from events that keeps you grounded but limits your reaction speed.",
+      "benefit": "You gain a +1 bonus on will saves.",
+      "drawback": "You take a -1 penalty on Reflex saves.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait are likely to be quiet and restrained, but they might be vocal when others falter in their beliefs.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "save:Will",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "save:Reflex",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dishonest",
+      "srd_name": "Dishonest",
+      "url": "https://new.dndtools.org/feats/dishonest-636",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are naturally deceitful and insincere with others. You have a talent for lying, but have difficulty convincing others when you do speak truthfully.",
+      "benefit": "You gain a +1 bonus on Bluff checks.",
+      "drawback": "You take a -2 penalty on Diplomacy checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be portrayed as crafty liars, or lying might simply be second nature to them, making actually telling the truth a difficult chore.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Bluff",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Distinctive",
+      "srd_name": "Distinctive",
+      "url": "https://new.dndtools.org/feats/distinctive-642",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have some distinctive physical feature such as a scar, a prominent nose, a limp, or some similar characteristic that is hard to disguise or conceal.",
+      "benefit": "You gain a +1 bonus on Reputation checks (see Reputation).",
+      "drawback": "You take a -1 penalty on Disguise checks.",
+      "special": "This trait is available only if your campaign includes the Reputation variant.",
+      "roleplaying_ideas": "Characters with this trait might be sensitive about it, or they might play up its presence to gather attention, sympathy, or notoriety.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "check:Reputation",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Disguise",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Easygoing",
+      "srd_name": "Easygoing",
+      "url": "https://new.dndtools.org/feats/easygoing-803",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are naturally friendly. Others feel comfortable around you, but this trait also makes it more difficult for you to be pushy or suspicious.",
+      "benefit": "You gain a +1 bonus on Gather Information checks.",
+      "drawback": "You take a -1 penalty on Intimidate checks and Sense Motive checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be more easily manipulated in interactions with NPCs, or they might simply prefer not to argue and instead use their natural talent to learn more about the world around them.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Gather Information",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Intimidate",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Sense Motive",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Farsighted",
+      "srd_name": "Farsighted",
+      "url": "https://new.dndtools.org/feats/farsighted-1080",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have difficulty focusing on nearby objects, but your distance vision is more keen than normal.",
+      "benefit": "You gain a +1 bonus on Spot checks.",
+      "drawback": "You have a -2 penalty on Search checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be sensitive about it, or they might simply be oblivious to its presence, having never known any different way of experiencing the world.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Search",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Focused",
+      "srd_name": "Focused",
+      "url": "https://new.dndtools.org/feats/focused-1160",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You can keep your attention on a task despite many distractions; however, events in the background pass you by.",
+      "benefit": "You gain a +1 bonus on Concentration checks.",
+      "drawback": "You take a -1 penalty on Spot checks and Listen checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait often seem single-minded or even obsessive in their focus on a specific task.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Concentration",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Listen",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hard of Hearing",
+      "srd_name": "Hard of Hearing",
+      "url": "https://new.dndtools.org/feats/hard-of-hearing-1340",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have a slight hearing impairment, and to compensate, you have become more in tune with your other senses.",
+      "benefit": "You gain a +1 bonus on Spot checks.",
+      "drawback": "You take a -2 penalty on Listen checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be sensitive about it, or they might simply be oblivious to its presence, having never known any different way of experiencing the world.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Listen",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hardy",
+      "srd_name": "Hardy",
+      "url": "https://new.dndtools.org/feats/hardy-1342",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are made of tougher stuff than the average person, but you're not quite as quick to react to dangerous effects.",
+      "benefit": "You gain a +1 bonus on Fortitude saves.",
+      "drawback": "You take a -1 penalty on Reflex saves.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might see their physical prowess as normal and look down on less hardy individuals, or they might see it as their duty to play the role of protector and help those less able to endure physical hardship.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "save:Fortitude",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "save:Reflex",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Honest",
+      "srd_name": "Honest",
+      "url": "https://new.dndtools.org/feats/honest-1406",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are naturally straightforward and sincere. This quality helps you persuade people to your viewpoint, but you have difficulty telling lies and seeing deception in others.",
+      "benefit": "You gain a +1 bonus on Diplomacy checks.",
+      "drawback": "You take a -1 penalty on Bluff checks and Sense Motive checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be naive and too unsophisticated to lie, or they might be aware of worldly matters and simply choose to take a higher ground.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Bluff",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Sense Motive",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Illiterate",
+      "srd_name": "Illiterate",
+      "url": "https://new.dndtools.org/feats/illiterate-1426",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You cannot read, but you have devoted yourself to learning other skills.",
+      "benefit": "Choose any one skill except Decipher Script or Forgery. You gain a +1 bonus on checks using that skill.",
+      "drawback": "You are illiterate.",
+      "special": "You can eliminate the negative effect of this trait by spending 2 skill points to become literate. Unlike with the barbarian, you cannot become literate by taking a level in any class other than barbarian. You can't select this trait if your character is already illiterate because of race, class, or any other reason.",
+      "roleplaying_ideas": "Characters with this trait might be sensitive about not being able to read, or they might not value \"book learnin'.\"",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:chosen",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": "Choose any one skill except Decipher Script or Forgery."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "literacy",
+            "op": "set",
+            "modifier": null,
+            "condition": null,
+            "note": "You are illiterate."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Inatenttive",
+      "srd_name": "Inattentive",
+      "url": "https://new.dndtools.org/feats/inatentive-1600",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are skilled at finishing simple tasks quickly, but you have a difficult time dealing with longer, more complex tasks.",
+      "benefit": "Choose a skill that allows complex skill checks. You gain a +1 bonus on simple skill checks made using the chosen skill.",
+      "drawback": "You take a -4 penalty on any complex skill checks made with the chosen skill.",
+      "special": "You can take this trait more than once. Its effects do not stack. Instead, choose a new eligible skill each time you select this trait. This trait is available only if your campaign includes the complex skill checks variant.",
+      "roleplaying_ideas": "Characters with this trait might flit from subject to subject in conversation, or they might seem typical in most situations but leave most of their long-term projects perpetually unfinished.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:chosen",
+            "op": "add",
+            "modifier": 1,
+            "condition": "Simple skill checks only",
+            "note": "Chosen skill must allow complex skill checks."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:chosen",
+            "op": "add",
+            "modifier": -4,
+            "condition": "Complex skill checks only",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Musclebound",
+      "srd_name": "Musclebound",
+      "url": "https://new.dndtools.org/feats/musclebound-2019",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are good at almost everything that requires strength, but less adept than most at tasks that require coordination.",
+      "benefit": "You gain a +1 bonus on Strength-based skill checks and ability checks.",
+      "drawback": "You take a -2 penalty on Dexterity-based skill checks and ability checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait are likely to solve problems with physical strength rather than through trickery or finesse.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill_group:Strength-based",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "ability_check:Strength",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill_group:Dexterity-based",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "ability_check:Dexterity",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nearsighted",
+      "srd_name": "Nearsighted",
+      "url": "https://new.dndtools.org/feats/nearsighted-2039",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have difficulty focusing on distant objects, but your eye for detail is more keen than normal.",
+      "benefit": "You gain a +1 bonus on Search checks.",
+      "drawback": "You take a -1 penalty on Spot checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be sensitive about it, or they might simply be oblivious to its presence, having never known any different way of experiencing the world.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Search",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Night Sighted",
+      "srd_name": "Nightsighted",
+      "url": "https://new.dndtools.org/feats/night-sighted-2055",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "Your eyes are particularly well suited to using darkvision, but they are less well adapted to what others consider normal light.",
+      "benefit": "Add 10 feet to the range of your darkvision.",
+      "drawback": "You take a -1 penalty on Spot checks when in areas of bright light.",
+      "special": "You must have darkvision as a racial ability to have this trait.",
+      "roleplaying_ideas": "This trait might not affect a character's personality at all, but it might make the character prefer going on underground or nighttime adventures.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "darkvision_range_ft",
+            "op": "add",
+            "modifier": 10,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Spot",
+            "op": "add",
+            "modifier": -1,
+            "condition": "In areas of bright light",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Passionate",
+      "srd_name": "Passionate",
+      "url": "https://new.dndtools.org/feats/passionate-2121",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are made of tougher stuff than the average person, but you are highly suggestible.",
+      "benefit": "You gain a +1 bonus on Fortitude saves.",
+      "drawback": "You take a -1 penalty on Will saves.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be gruff and place extreme value on overcoming physical obstacles, or conversely, their weakness against magical enchantments might leave them fascinated and fearful of such things.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "save:Fortitude",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "save:Will",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Plucky",
+      "srd_name": "Plucky",
+      "url": "https://new.dndtools.org/feats/plucky-2182",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have a strength of will not reflected in your limited physical gifts.",
+      "benefit": "You gain a +1 bonus on Will saves.",
+      "drawback": "You take a -1 penalty on Fortitude saves.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be annoyingly positive-minded, or they might only show their mental resilience in times of dire need.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "save:Will",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "save:Fortitude",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Polite",
+      "srd_name": "Polite",
+      "url": "https://new.dndtools.org/feats/polite-2197",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are courteous and well spoken.",
+      "benefit": "You gain a +1 bonus on Diplomacy checks.",
+      "drawback": "You take a -2 penalty on Intimidate checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be honestly polite and kind, or they might simply be adept at mimicking social conventions to get what they want.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Intimidate",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Quick",
+      "srd_name": "Quick",
+      "url": "https://new.dndtools.org/feats/quick-2313",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are fast, but less sturdy than average members of your race.",
+      "benefit": "Your base land speed increases by 10 feet (if you don't have a land speed, apply the benefit to whichever of your speeds is highest).",
+      "drawback": "Subtract 1 from your hit points gained at each level, including 1st (a result of 0 is possible).",
+      "special": "You must have a Constitution of 4 or higher to select this trait.",
+      "roleplaying_ideas": "Characters with this trait typically try to stay away from physical combat, but a rare few might relish it, striving to see if their superior speed is enough to best hardier warriors.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "speed:land_ft",
+            "op": "add",
+            "modifier": 10,
+            "condition": null,
+            "note": "If no land speed, apply to your highest speed."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "hp_per_level",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": "Applies at each level including 1st; a result of 0 is possible."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Reckless",
+      "srd_name": "Reckless",
+      "url": "https://new.dndtools.org/feats/reckless-2407",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You naturally sacrifice accuracy to put more power behind your blows.",
+      "benefit": "You gain a +1 bonus on damage rolls after successful melee attacks.",
+      "drawback": "You take a -1 penalty on melee attack rolls.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be loudly passionate about entering combat and overcoming foes through strength of arms, or they might be quiet and so desperate to avoid confrontation that they put extra effort into every blow in an attempt to end the encounter more quickly.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "damage:melee",
+            "op": "add",
+            "modifier": 1,
+            "condition": "After successful melee attacks",
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "attack:melee",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Relentless",
+      "srd_name": "Relentless",
+      "url": "https://new.dndtools.org/feats/relentless-2418",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You don't know the meaning of the word \"tired.\" You go all out until you simply can't continue.",
+      "benefit": "You gain a +2 bonus on Constitution checks and similar checks made to continue tiring activities (see the Endurance feat for all the checks and saves to which this benefit applies).",
+      "drawback": "Any effect or condition that would normally cause you to become fatigued instead causes you to become exhausted.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait may see others as soft or weak, especially anyone who complains about being tired or fatigued. They might openly scoff at others' weaknesses or might quietly encourage them to \"tough it out.\"",
+      "effects": {
+        "benefit": [
+          {
+            "target": "check:Constitution_endurance",
+            "op": "add",
+            "modifier": 2,
+            "condition": null,
+            "note": "Constitution checks and similar checks to continue tiring activities (see Endurance feat)."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "condition_substitution:fatigued",
+            "op": "set",
+            "modifier": null,
+            "condition": null,
+            "note": "Any effect that would cause fatigued causes exhausted instead."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Saddleborn",
+      "srd_name": "Saddleborn",
+      "url": "https://new.dndtools.org/feats/saddleborn-2497",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are a natural in the saddle, but you have little patience for handling animals when not riding them.",
+      "benefit": "You gain a +1 bonus on Ride checks.",
+      "drawback": "You take a -1 penalty on Handle Animal checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait rarely bother to consider animals as good for anything other than mounts, but they are extremely confident about their riding abilities.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Ride",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Handle Animal",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Skinny",
+      "srd_name": "Skinny",
+      "url": "https://new.dndtools.org/feats/skinny-2642",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are very slender for your race.",
+      "benefit": "You gain a +1 bonus on Escape Artist checks.",
+      "drawback": "You take a -2 penalty on Strength checks to avoid being bull rushed or overrun.",
+      "special": null,
+      "roleplaying_ideas": "Skinny characters tend to be pushed around by tougher types, so those with this trait might be shy, or they might be very defensive when faced with such situations.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Escape Artist",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "check:Strength",
+            "op": "add",
+            "modifier": -2,
+            "condition": "To avoid being bull rushed or overrun",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Slippery",
+      "srd_name": "Slippery",
+      "url": "https://new.dndtools.org/feats/slippery-2646",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are less adept at grappling and wrestling than others of your size and strength, but you are adept at slipping out of another's hold.",
+      "benefit": "You gain a +1 bonus on Escape Artist checks to escape a grapple and on grapple checks to escape a grapple or avoid being grappled.",
+      "drawback": "You take a -1 penalty on all other grapple checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might fear close combat, knowing they are less adept grapplers than most opponents. On the other hand, good escape artists with this trait might enjoy baiting larger foes into grappling them, knowing they can easily slip out of the grasp of most foes.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Escape Artist",
+            "op": "add",
+            "modifier": 1,
+            "condition": "To escape a grapple",
+            "note": null
+          },
+          {
+            "target": "check:grapple",
+            "op": "add",
+            "modifier": 1,
+            "condition": "To escape a grapple or avoid being grappled",
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "check:grapple",
+            "op": "add",
+            "modifier": -1,
+            "condition": "All other grapple checks",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Slow (trait)",
+      "srd_name": "Slow",
+      "url": "https://new.dndtools.org/feats/slow-trait-2649",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are slow, but sturdier than average members of your race.",
+      "benefit": "Add +1 to your hit points gained at each level.",
+      "drawback": "Your base land speed is halved (round down to the nearest 5-foot interval).",
+      "special": "You must have a base land speed of at least 20 feet to select this trait.",
+      "roleplaying_ideas": "Characters with this trait tend to be relatively immobile in combat. They typically prefer to wear strong armor (or other protective devices), since it's hard for them to flee a fight.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "hp_per_level",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "speed:land_ft",
+            "op": "multiply",
+            "modifier": 0.5,
+            "condition": null,
+            "note": "Round down to the nearest 5-foot interval."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Specialized",
+      "srd_name": "Specialized",
+      "url": "https://new.dndtools.org/feats/specialized-2686",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have a knack for one kind of work or study, but other tasks are harder for you to accomplish.",
+      "benefit": "Choose one specific Craft, Knowledge, or Profession skill. You gain a +1 bonus on checks using the specified skill.",
+      "drawback": "You take a -2 penalty on all other checks using the same skill (Craft, Knowledge, or Profession, based on the skill chosen).",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait often see themselves as elite artists or experts rather than mere professionals, and they might regard their chosen vocation or study as more useful or interesting than other tasks.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:chosen",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": "Choose one specific Craft, Knowledge, or Profession skill."
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill_family:chosen_family",
+            "op": "add",
+            "modifier": -2,
+            "condition": "All other checks using the same skill (Craft, Knowledge, or Profession)",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Spellgifted",
+      "srd_name": "Spellgifted",
+      "url": "https://new.dndtools.org/feats/spellgifted-2720",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You have a gift for casting spells from a certain school. Although your spells from this school are more potent than those of other casters, you are not as effective at casting spells from other schools.",
+      "benefit": "Choose a school of magic. Add 1 to your caster level when casting spells from that school.",
+      "drawback": "Reduce your caster level by 1 whenever you cast a spell that is not from your chosen school.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait might be loudly vocal about the merits of the school of magic that they understand most readily, or they might feel awkward and out of place around \"normal\" spellcasters as a result of their unusual aptitude.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "caster_level",
+            "op": "add",
+            "modifier": 1,
+            "condition": "Spells from the chosen school of magic",
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "caster_level",
+            "op": "add",
+            "modifier": -1,
+            "condition": "Spells not from the chosen school",
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stout",
+      "srd_name": "Stout",
+      "url": "https://new.dndtools.org/feats/stout-2790",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are heavy for your race.",
+      "benefit": "You gain a +2 bonus on Strength checks to avoid being bull rushed or overrun.",
+      "drawback": "You take a -1 penalty on Escape Artist checks.",
+      "special": null,
+      "roleplaying_ideas": "Overweight characters are often bullied, so those with this trait might be shy, or they might be very defensive when faced with such situations. Some turn to humor to defuse such situations, while others become bitter.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "check:Strength",
+            "op": "add",
+            "modifier": 2,
+            "condition": "To avoid being bull rushed or overrun",
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Escape Artist",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Suspicious",
+      "srd_name": "Suspicious",
+      "url": "https://new.dndtools.org/feats/suspicious-2857",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are naturally suspicious of everyone and everything. While this trait makes you hard to fool, it makes others slightly less likely to agree with you or find you threatening.",
+      "benefit": "You gain a +1 bonus on Sense Motive checks.",
+      "drawback": "You take a -1 penalty on Diplomacy checks and Intimidate checks.",
+      "special": null,
+      "roleplaying_ideas": "This trait might express itself as comic levels of paranoia, or it might make the character quietly cautious about others.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Sense Motive",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Intimidate",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Torpoid",
+      "srd_name": "Torpid",
+      "url": "https://new.dndtools.org/feats/torpoid-2933",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You are sluggish and slow to react to danger, but also resistant to others' commands.",
+      "benefit": "You gain a +1 bonus on saves against enchantment (compulsion) effects.",
+      "drawback": "You take a -2 penalty on initiative checks.",
+      "special": null,
+      "roleplaying_ideas": "Torpid characters may be seen as lazy, or as methodical and measured in their actions.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "save:enchantment_compulsion",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "initiative",
+            "op": "add",
+            "modifier": -2,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Uncivilized",
+      "srd_name": "Uncivilized",
+      "url": "https://new.dndtools.org/feats/uncivilized-3011",
+      "type": "Trait",
+      "source": "UA",
+      "edition": "Supplementals (3.5)",
+      "description": "You relate better to animals than you do to people.",
+      "benefit": "You gain a +1 bonus on Handle Animal checks and wild empathy checks.",
+      "drawback": "You take a -1 penalty on Bluff checks, Diplomacy checks, and Gather information checks.",
+      "special": null,
+      "roleplaying_ideas": "Characters with this trait are likely to feel awkward in many social situations; that might be expressed as shyness and quiet behavior, or it might be expressed through an overly exuberant need to participate in conversations.",
+      "effects": {
+        "benefit": [
+          {
+            "target": "skill:Handle Animal",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "check:wild_empathy",
+            "op": "add",
+            "modifier": 1,
+            "condition": null,
+            "note": null
+          }
+        ],
+        "drawback": [
+          {
+            "target": "skill:Bluff",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Diplomacy",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          },
+          {
+            "target": "skill:Gather Information",
+            "op": "add",
+            "modifier": -1,
+            "condition": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "effects_schema": {
+    "target": "What is modified. Prefixes: skill:, skill_group:, skill_family:, save:, check:, ability_check:, ac, ac:dodge, attack:, damage:, initiative, speed:land_ft, hp_per_level, caster_level, darkvision_range_ft, literacy, condition_substitution:. 'chosen' means the player picks the skill.",
+    "op": "add (default), multiply, or set",
+    "modifier": "Signed number. Positive for benefits, negative for penalties. null for set operations with no number.",
+    "condition": "When the effect applies, or null if always.",
+    "note": "Extra rule text, or null."
+  }
+}
