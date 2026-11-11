@@ -1,0 +1,91 @@
+BARBARIAN
+
+From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. Civilized people call them barbarians or berserkers and suspect them of mayhem, impiety, and atrocities. These "barbarians," however, have proven their mettle and their value to those who would be their allies. To enemies who underestimated them, they have proved their cunning, resourcefulness, persistence, and mercilessness.
+
+Adventuring is the best chance barbarians have of finding a place in a civilized society. They're not well suited to the monotony of guard duty or other mundane tasks. Barbarians also have no trouble with the dangers, the uncertainties, and the wandering that adventuring involves. They may adventure to defeat hated enemies. They have a noted distaste for that which they consider unnatural, including undead, demons, and devils.
+
+The barbarian is an excellent warrior. Where the fighter's skill in combat comes from training and discipline, however, the barbarian has a powerful rage. While in this berserk fury, he becomes stronger and tougher, better able to defeat his foes and withstand their attacks. These rages leave him winded, and he has the energy for only a few such spectacular displays per day, but those few rages are usually sufficient. He is at home in the wild, and he runs at great speed.
+
+Barbarians are never lawful. They may be honorable, but at heart they are wild. This wildness is their strength, and it could not live in a lawful soul. At best, barbarians of chaotic alignment are free and expressive. At worst, they are thoughtlessly destructive.
+
+Some barbarians distrust established religions and prefer an intuitive, natural relationship to the cosmos over formal worship. Others devote themselves to powerful deities, such as Kord (god of strength), Obad-Hai (god of nature), or Erythnul (god of slaughter). A barbarian is capable of fierce devotion to his god.
+
+Barbarians come from uncivilized lands or from barbaric tribes on the outskirts of civilization. A barbarian adventurer may have been lured to the settled lands by the promise of riches, may have escaped after being captured in his homeland and sold into "civilized" slavery, may have been recruited as a soldier, or may have been driven out of his homeland by invaders. Barbarians share no bond with each other unless they come from the same tribe or land. In fact, they think of themselves not as barbarians but as warriors.
+
+Human barbarians come from the distant wild lands on the edge of civilization. Most half-orc barbarians lived among orcs before abandoning them for human lands. Dwarf barbarians are rare, usually hailing from dwarven kingdoms that have fallen into barbarism as a result of recurrent war with goblinoids, orcs, and giants. Barbarians of other races are very rare.
+
+Among the brutal humanoids, barbarians are more common than fighters. Orcs and ogres are especially likely to be barbarians.
+
+As people of the wild, barbarians are most comfortable in the company of rangers, druids, and clerics of nature deities, such as Obad-Hai or Ehlonna. Many barbarians admire the talents and spontaneity of bards, and some are enthusiastic lovers of music. Barbarians don't trust that which they don't understand, and that includes wizardry, which they call "book magic." They find sorcerers more understandable than wizards, but maybe that's just because sorcerers tend to be more charismatic. Monks, with their studied, practiced, deliberate approach to combat, sometimes have a hard time seeing eye to eye with barbarians, but members of these classes aren't necessarily hostile to each other. Barbarians have no special attitudes toward fighters, paladins, clerics, or rogues.
+
+A barbarian's typical primary role in a group of adventurers is as a front-line combat specialist. No other character can match his sheer toughness. He can also serve as a good scout, thanks to his speed, skill selection, and trap sense.
+
+Alignment: Any nonlawful.
+
+Hit Die: d12.
+Class Skills
+
+The barbarian's class skills (and the key ability for each skill) are Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Jump (Str), Listen (Wis), Ride (Dex), Survival (Wis), and Swim (Str).
+
+Skill Points at 1st Level: (4 + Int modifier) x 4.
+
+Skill Points at Each Additional Level: 4 + Int modifier.
+
+Table: The Barbarian
+Level 	Base
+Attack Bonus 	Fort
+Save 	Ref
+Save 	Will
+Save 	Special
+1st 	+1 	+2 	+0 	+0 	Fast movement, illiteracy, rage 1/day
+2nd 	+2 	+3 	+0 	+0 	Uncanny dodge
+3rd 	+3 	+3 	+1 	+1 	Trap sense +1
+4th 	+4 	+4 	+1 	+1 	Rage 2/day
+5th 	+5 	+4 	+1 	+1 	Improved uncanny dodge
+6th 	+6/+1 	+5 	+2 	+2 	Trap sense +2
+7th 	+7/+2 	+5 	+2 	+2 	Damage reduction 1/-
+8th 	+8/+3 	+6 	+2 	+2 	Rage 3/day
+9th 	+9/+4 	+6 	+3 	+3 	Trap sense +3
+10th 	+10/+5 	+7 	+3 	+3 	Damage reduction 2/-
+11th 	+11/+6/+1 	+7 	+3 	+3 	Greater rage
+12th 	+12/+7/+2 	+8 	+4 	+4 	Rage 4/day, trap sense +4
+13th 	+13/+8/+3 	+8 	+4 	+4 	Damage reduction 3/-
+14th 	+14/+9/+4 	+9 	+4 	+4 	Indomitable will
+15th 	+15/+10/+5 	+9 	+5 	+5 	Trap sense +5
+16th 	+16/+11/+6/+1 	+10 	+5 	+5 	Damage reduction 4/-, rage 5/day
+17th 	+17/+12/+7/+2 	+10 	+5 	+5 	Tireless rage
+18th 	+18/+13/+8/+3 	+11 	+6 	+6 	Trap sense +6
+19th 	+19/+14/+9/+4 	+11 	+6 	+6 	Damage reduction 5/-
+20th 	+20/+15/+10/+5 	+12 	+6 	+6 	Mighty rage, rage 6/day
+
+Class Features
+
+All of the following are class features of the barbarian.
+
+Weapon and Armor Proficiency: A barbarian is proficient with all simple and martial weapons, light armor, medium armor, and shields (except tower shields).
+
+Fast Movement (Ex): A barbarian's land speed is faster than the norm for his race by +10 feet. This benefit applies only when he is wearing no armor, light armor, or medium armor and not carrying a heavy load. Apply this bonus before modifying the barbarian's speed because of any load carried or armor worn.
+
+Illiteracy: Barbarians are the only characters who do not automatically know how to read and write. A barbarian may spend 2 skill points to gain the ability to read and write all languages he is able to speak. A barbarian who gains a level in any other class automatically gains literacy. Any other character who gains a barbarian level does not lose the literacy he or she already had.
+
+Rage (Ex): A barbarian can fly into a rage a certain number of times per day. In a rage, a barbarian temporarily gains a +4 bonus to Strength, a +4 bonus to Constitution, and a +2 morale bonus on Will saves, but he takes a –2 penalty to Armor Class. The increase in Constitution increases the barbarian's hit points by 2 points per level, but these hit points go away at the end of the rage when his Constitution score drops back to normal. (These extra hit points are not lost first the way temporary hit points are.) While raging, a barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except for Balance, Escape Artist, Intimidate, and Ride), the Concentration skill, or any abilities that require patience or concentration, nor can he cast spells or activate magic items that require a command word, a spell trigger (such as a wand), or spell completion (such as a scroll) to function. He can use any feat he has except Combat Expertise, item creation feats, and metamagic feats. A fit of rage lasts for a number of rounds equal to 3 + the character's (newly improved) Constitution modifier. A barbarian may prematurely end his rage. At the end of the rage, the barbarian loses the rage modifiers and restrictions and becomes fatigued (–2 penalty to Strength, –2 penalty to Dexterity, can't charge or run) for the duration of the current encounter (unless he is a 17th-level barbarian, at which point this limitation no longer applies; see below).
+A barbarian can fly into a rage only once per encounter. At 1st level he can use his rage ability once per day. At 4th level and every four levels thereafter, he can use it one additional time per day (to a maximum of six times per day at 20th level). Entering a rage takes no time itself, but a barbarian can do it only during his action, not in response to someone else's action.
+
+Uncanny Dodge (Ex): At 2nd level, a barbarian retains his Dexterity bonus to AC (if any) even if he is caught flat-footed or struck by an invisible attacker. However, he still loses his Dexterity bonus to AC if immobilized. If a barbarian already has uncanny dodge from a different class, he automatically gains improved uncanny dodge (see below) instead.
+
+Trap Sense (Ex): Starting at 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack.
+
+Improved Uncanny Dodge (Ex): At 5th level and higher, a barbarian can no longer be flanked. This defense denies a rogue the ability to sneak attack the barbarian by flanking him, unless the attacker has at least four more rogue levels than the target has barbarian levels. If a character already has uncanny dodge (see above) from a second class, the character automatically gains improved uncanny dodge instead, and the levels from the classes that grant uncanny dodge stack to determine the minimum level a rogue must be to flank the character.
+
+Damage Reduction (Ex): At 7th level, a barbarian gains Damage Reduction. Subtract 1 from the damage the barbarian takes each time he is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0.
+
+Greater Rage (Ex): At 11th level, a barbarian's bonuses to Strength and Constitution during his rage each increase to +6, and his morale bonus on Will saves increases to +3. The penalty to AC remains at –2.
+
+Indomitable Will (Ex): While in a rage, a barbarian of 14th level or higher gains a +4 bonus on Will saves to resist enchantment spells. This bonus stacks with all other modifiers, including the morale bonus on Will saves he also receives during his rage.
+
+Tireless Rage (Ex): At 17th level and higher, a barbarian no longer becomes fatigued at the end of his rage.
+
+Mighty Rage (Ex): At 20th level, a barbarian's bonuses to Strength and Constitution during his rage each increase to +8, and his morale bonus on Will saves increases to +4. The penalty to AC remains at –2.
+Ex-Barbarians
+
+A barbarian who becomes lawful loses the ability to rage and cannot gain more levels as a barbarian. He retains all the other benefits of the class (damage reduction, fast movement, trap sense, and uncanny dodge).
