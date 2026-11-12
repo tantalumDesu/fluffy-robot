@@ -13,8 +13,7 @@ Bonus Feats: The epic sorcerer gains a bonus feat (selected from the list of epi
 Epic Sorcerer Bonus Feat List: Augmented Alchemy, Automatic Quicken Spell, Automatic Silent Spell, Automatic Still Spell, Energy Resistance, Enhance Spell, Epic Spell Focus, Epic Spell Penetration, Epic Spellcasting, Familiar Spell, Ignore Material Components, Improved Combat Casting, Improved Heighten Spell, Improved Metamagic, Improved Spell Capacity, Intensify Spell, Master Staff, Master Wand, Multispell, Permanent Emanation, Spell Knowledge, Spell Stowaway, Spell Opportunity.
 
 Table: THE EPIC SORCERER
-Sorcerer
-Level 	Special
+Sorcerer Level 	Special
 21st 	-
 22nd 	-
 23rd 	Bonus feat
@@ -25,3 +24,17 @@ Level 	Special
 28th 	-
 29th 	Bonus feat
 30th 	-
+
+Table: Epic Familiar Special Abilities
+Master Class Level 	Natural Armor	Int	Special
+21st-22nd 	+11	16	Familiar spell
+23rd-24th 	+12	17	-
+25th-26th 	+13	18	-
+27th-28th 	+14	19	-
+29th-30th 	+15	20	-
+31st-32nd	+16	21	Familiar spell
+33rd-34th	+17	22	-
+35th-36th	+18	23	-
+37th-38th	+19	24	-
+39th-40th	+20	25	-
+41st-42nd	+21	26	Familiar spell

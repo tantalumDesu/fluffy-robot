@@ -10,7 +10,7 @@ Unarmed Strike: The damage for a monk’s unarmed strike does not increase after
 
 Stunning Attack: If the monk has the Stunning Fist feat use the monk’s class level when determining the DC to resist this attack, as normal.
 
-Unarmored Speed Bonus: The epic monk’s by 10 feet at 21st level and every three levels thereafter (24th, 27th, 30th, and so on). The unarmored speed of Small and dwarven monks increases by 5 feet instead of 10 feet.
+Fast Movement: The epic monk’s speed when wearing no armor increases by 10 feet at 21st level and every three levels thereafter (24th, 27th, 30th, and so on). The unarmored speed of Small and dwarven monks increases by 5 feet instead of 10 feet.
 
 Ki Strike: The monk’s ki strike ability does not automatically increase with class level after 16th level.
 
@@ -28,37 +28,14 @@ Bonus Feats: The epic monk gains a bonus feat (selected from the list of epic mo
 
 Epic Monk Bonus Feat List: Armor Skin, Blinding Speed, Damage Reduction, Energy Resistance, Epic Prowess, Epic Speed, Epic Toughness, Exceptional Deflection, Fast Healing, Improved Combat Reflexes, Improved Ki Strike, Improved Spell Resistance, Improved Stunning Fist, Infinite Deflection, Keen Strike, Legendary Climber, Legendary Wrestler, Reflect Arrows, Righteous Strike, Self-Concealment, Shattering Strike, Vorpal Strike.
 Table: THE EPIC MONK
-Monk
-Level 	AC Bonus
-	Unarmored Speed Bonus
-	Special
-21st 	+4
-	+70 ft.
-	-
-22nd 	+4
-	+70ft.
-	-
-23rd 	+4
-	+70 ft.
-	-
-24th 	+4
-	+80 ft.
-	-
-25th 	+5
-	+80 ft.
-	Bonus feat
-26th 	+5
-	+80 ft.
-	-
-27th 	+5
-	+90 ft.
-	-
-28th 	+5
-	+90 ft.
-	-
-29th 	+5
-	+90 ft.
-	-
-30th 	+6
-	+100 ft.
-	Bonus feat
+Monk Level 	AC Bonus	Unarmored Speed Bonus	Special
+21st	+4	+70 ft.	-
+22nd	+4	+70ft.	-
+23rd	+4	+70 ft.	-
+24th	+4	+80 ft.	-
+25th	+5	+80 ft.	Bonus feat
+26th	+5	+80 ft.	-
+27th	+5	+90 ft.	-
+28th	+5	+90 ft.	-
+29th	+5	+90 ft.	-
+30th	+6	+100 ft.	Bonus feat

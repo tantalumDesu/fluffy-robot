@@ -15,8 +15,7 @@ Bonus Feats: The epic barbarian gains a bonus feat (selected from the list of ep
 Epic Barbarian Bonus Feat List: Armor Skin, Chaotic Rage, Damage Reduction, Devastating Critical, Dire Charge, Epic Endurance, Epic Prowess, Epic Speed, Epic Toughness, Epic Weapon Focus, Fast Healing, Incite Rage, Legendary Climber, Legendary Leaper, Legendary Rider, Legendary Tracker, Legendary Wrestler, Mighty Rage, Overwhelming Critical, Ruinous Rage, Terrifying Rage, Thundering Rage.
 
 Table: THE EPIC BARBARIAN
-Barbarian
-Level 	Special
+Barbarian Level 	Special
 21st 	Trap sense +7
 22nd 	Damage reduction 6/-
 23rd 	-

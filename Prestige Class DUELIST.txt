@@ -23,11 +23,7 @@ The duelist’s class skills (and the key ability for each skill) are Balance (D
 Skill Points at Each Level: 4 + Int modifier.
 
 Table: The Duelist
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special
 1st 	+1 	+0 	+2 	+0 	Canny defense
 2nd 	+2 	+0 	+3 	+0 	Improved reaction +2
 3rd 	+3 	+1 	+3 	+1 	Enhanced mobility
@@ -62,3 +58,4 @@ Elaborate Parry (Ex): At 7th level and higher, if a duelist chooses to fight def
 
 Deflect Arrows: At 9th level, a duelist gains the benefit of the Deflect Arrows feat when using a light or one-handed piercing weapon.
 
+#

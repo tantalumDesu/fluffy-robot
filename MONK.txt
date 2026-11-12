@@ -40,15 +40,7 @@ Skill Points at 1st Level: (4 + Int modifier) x 4.
 Skill Points at Each Additional Level: 4 + Int modifier.
 
 Table: The Monk
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Flurry of Blows
-Attack Bonus 	Unarmed
-Damage1 	AC
-Bonus 	Unarmored
-Speed Bonus
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Flurry of Blows Attack Bonus 	Unarmed Damage1 	AC Bonus 	Unarmored Speed Bonus
 1st 	+0 	+2 	+2 	+2 	Bonus feat, flurry of blows, unarmed strike 	-2/-2 	1d6 	+0 	+0 ft.
 2nd 	+1 	+3 	+3 	+3 	Bonus feat, evasion 	-1/-1 	1d6 	+0 	+0 ft.
 3rd 	+2 	+3 	+3 	+3 	Still mind 	+0/+0 	1d6 	+0 	+10 ft.

@@ -15,8 +15,7 @@ Bonus Feats: The epic rogue gains a bonus feat (selected from the list of epic r
 Epic Rogue Bonus Feat List: Blinding Speed, Combat Archery, Dexterous Fortitude, Dexterous Will, Epic Dodge, Epic Reputation, Epic Skill Focus, Epic Speed, Improved Combat Reflexes, Improved Sneak Attack, Legendary Climber, Lingering Damage, Self-Concealment, Sneak Attack of Opportunity, Spellcasting Harrier, Superior Initiative, Trap Sense, Uncanny Accuracy. The rogue may choose a special rogue ability instead of a bonus feat.
 
 Table: THE EPIC ROGUE
-Rogue
-Level 	Special
+Rogue Level 	Special
 21st 	Sneak attack +11d6, Trap sense +7
 22nd 	-
 23rd 	Sneak attack +12d6

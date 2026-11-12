@@ -27,11 +27,7 @@ The arcane archer’s class skills (and the key ability for each skill) are Craf
 Skill Points at Each Level: 4 + Int modifier.
 
 Table: The Arcane Archer
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special
 1st 	+1 	+2 	+2 	+0 	Enhance arrow +1
 2nd 	+2 	+3 	+3 	+0 	Imbue arrow
 3rd 	+3 	+3 	+3 	+1 	Enhance arrow +2

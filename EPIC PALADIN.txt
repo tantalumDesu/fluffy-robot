@@ -4,7 +4,7 @@ Hit Die: d10
 
 Skill Points at Each Additional Level: 2 + Int modifier
 
-Lay on Hands (Su): Each day a paladin can cure a total number of hit points equal to his or her Charisma bonus (if any) times his or her class level, as normal
+Lay on Hands (Su): Each day a paladin can cure a total number of hit points equal to his or her Charisma bonus (if any) times his or her class level, as normal.
 
 Smite Evil (Su): The epic paladin adds his or her class level to damage with any smite evil attack, as normal. He or she can smite one additional time per day for every five levels higher than 20th.
 
@@ -20,8 +20,7 @@ Bonus Feats: The epic paladin gains a bonus feat (selected from the list of epic
 
 Epic Paladin Bonus Feat List: Armor Skin, Devastating Critical, Epic Leadership, Epic Prowess, Epic Reputation, Epic Toughness, Epic Weapon Focus, Great Smiting, Holy Strike, Improved Aura of Courage, Improved Combat Casting, Improved Spell Capacity, Legendary Commander, Legendary Rider, Overwhelming Critical, Perfect Health, Permanent Emanation, Planar Turning, Positive Energy Aura, Spectral Strike, Spontaneous Spell, Widen Aura of Courage.
 Table: THE EPIC PALADIN
-Paladin
-Level 	Special
+Paladin Level 	Special
 21st 	Remove disease 6/week
 22nd 	-
 23rd 	Bonus feat

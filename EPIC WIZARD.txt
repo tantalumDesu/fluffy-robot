@@ -13,8 +13,7 @@ Bonus Feats: The epic wizard gains a bonus feat (selected from the list of epic 
 Epic Wizard Bonus Feat List: Augmented Alchemy, Automatic Quicken Spell, Automatic Silent Spell, Automatic Still Spell, Combat Casting, Craft Epic Magic Arms and Armor, Craft Epic Rod, Craft Epic Staff, Craft Epic Wondrous Item, Efficient Item Creation, Enhance Spell, Epic Spell Focus, Epic Spell Penetration, Epic Spellcasting, Familiar Spell, Forge Epic Ring, Ignore Material Components, Improved Combat Casting, Improved Heighten Spell, Improved Metamagic, Improved Spell Capacity, Intensify Spell, Multispell, Permanent Emanation, Scribe Epic Scroll, Spell Focus, Spell Knowledge, Spell Mastery, Spell Penetration Spell Stowaway, Spell Opportunity, Spontaneous Spell, Tenacious Magic. In addition to the feats on this list, the wizard may select any item creation feat or metamagic feat not listed here.
 
 Table: THE EPIC WIZARD
-Wizard
-Level 	Special
+Wizard Level 	Special
 21st 	-
 22nd 	-
 23rd 	Bonus feat
@@ -27,51 +26,18 @@ Level 	Special
 30th 	-
 FAMILIARS AT EPIC LEVEL
 
-Special abilities granted to a familiar continue to grow as the level of its master increases beyond 20th, as shown on Table: Epic Familiar Special Abilities. Even though the table shows advancement only to 42nd level, that is not the limit. The patterns in the table continue infinitely. Familiar special abilities gained at less than 20th level also continue to improve.
-
-Familiar Spell: The familiar gains the benefit of the Familiar Spell epic feat for the spell its master chooses.
+Special abilities granted to a familiar continue to grow as the level of its master increases beyond 20th, as shown on Table: Epic Familiar Special Abilities.
 
 Table: Epic Familiar Special Abilities
-Master Class
-Level 	Natural Armor
-	Int
-	Special
-21st-22nd 	+11
-	16
-	Familiar spell
-23rd-24th 	+12
-	17
-	
-25th-26th 	+13
-	18
-	
-27th-28th 	+14
-	19
-	
-29th-30th 	+15
-	20
-	
-31st-32nd
-	+16
-	21
-	Familiar spell
-33rd-34th
-	+17
-	22
-	
-35th-36th
-	+18
-	23
-	
-37th-38th
-	+19
-	24
-	
-39th-40th
-	+20
-	25
-	
-41st-42nd
-	+21
-	26
-	Familiar spell
+Master Class Level 	Natural Armor	Int	Special
+21st-22nd 	+11	16	Familiar spell
+23rd-24th 	+12	17	-
+25th-26th 	+13	18	-
+27th-28th 	+14	19	-
+29th-30th 	+15	20	-
+31st-32nd	+16	21	Familiar spell
+33rd-34th	+17	22	-
+35th-36th	+18	23	-
+37th-38th	+19	24	-
+39th-40th	+20	25	-
+41st-42nd	+21	26	Familiar spell

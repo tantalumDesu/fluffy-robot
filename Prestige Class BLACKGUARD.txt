@@ -27,12 +27,7 @@ The blackguard's class skills (and the key ability for each skill) are Concentra
 Skill Points at Each Level: 2 + Int modifier.
 
 Table: The Blackguard
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
-1st 	2nd 	3rd 	4th
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
 1st 	+1 	+2 	0 	0 	Aura of evil, detect good, poison use 	0 	— 	— 	—
 2nd 	+2 	+3 	0 	0 	Dark blessing, smite good 1/day 	1 	— 	— 	—
 3rd 	+3 	+3 	+1 	+1 	Command undead, aura of despair 	1 	0 	— 	—
@@ -117,6 +112,8 @@ Upon or after reaching 5th level, a blackguard can call a fiendish bat, cat, dir
 A blackguard may have only one fiendish servant at a time.
 
 Should the blackguard's servant die, he may call for another one after a year and a day. The new fiendish servant has all the accumulated abilities due a servant of the blackguard's current level.
+
+Table: The Blackguard's Fiendish Servant
 Character Level 	Bonus HD 	Natural Armor Adj. 	Str Adj. 	Int 	Special
 12th or lower 	+2 	+1 	+1 	6 	Empathic link, improved evasion, share saving throws, share spells
 13th–15th 	+4 	+3 	+2 	7 	Speak with blackguard

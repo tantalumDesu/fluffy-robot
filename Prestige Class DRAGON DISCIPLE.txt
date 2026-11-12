@@ -25,11 +25,7 @@ The dragon disciple’s class skills (and the key ability for each skill) are Co
 Skill Points at Each Level: 2 + Int modifier.
 
 Table: The Dragon Disciple
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Bonus Spells
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Bonus Spells
 1st 	+0 	+2 	+0 	+2 	Natural armor increase (+1) 	1
 2nd 	+1 	+3 	+0 	+3 	Ability boost (Str +2), claws and bite 	1
 3rd 	+2 	+3 	+1 	+3 	Breath weapon (2d8) 	0
@@ -71,6 +67,8 @@ At 7th level, the damage increases to 4d8, and when a disciple attains dragon ap
 The DC of the breath weapon is 10 + class level + Con modifier.
 
 A line-shaped breath weapon is 5 feet high, 5 feet wide, and 60 feet long. A cone-shaped breath weapon is 30 feet long.
+
+Table: Dragon Disciple Breath Weapons
 Dragon Variety* 	Breath Weapon
 Black 	Line of acid
 Blue 	Line of lightning

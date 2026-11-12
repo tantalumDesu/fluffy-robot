@@ -40,12 +40,8 @@ Skill Points at 1st Level: (4 + Int modifier) x 4.
 Skill Points at Each Additional Level: 4 + Int modifier.
 
 Table: The Druid
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
-0 	1st 	2nd 	3rd 	4th 	5th 	6th 	7th 	8th 	9th
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
+						0	1st	2nd	3rd	4th	5th	6th	7th	8th	9th
 1st 	+0 	+2 	+0 	+2 	Animal companion, nature sense, wild empathy 	3 	1 	— 	— 	— 	— 	— 	— 	— 	—
 2nd 	+1 	+3 	+0 	+3 	Woodland stride 	4 	2 	— 	— 	— 	— 	— 	— 	— 	—
 3rd 	+2 	+3 	+1 	+3 	Trackless step 	4 	2 	1 	— 	— 	— 	— 	— 	— 	—
@@ -140,6 +136,8 @@ A druid who ceases to revere nature, changes to a prohibited alignment, or teach
 THE DRUID'S ANIMAL COMPANION
 
 A druid's animal companion is superior to a normal animal of its kind and has special powers, as described below.
+
+Table: The Druid's Animal Companion
 Class Level 	Bonus HD 	Natural Armor Adj. 	Str/Dex Adj. 	Bonus Tricks 	Special
 1st-2nd 	+0 	+0 	+0 	1 	Link, share spells
 3rd-5th 	+2 	+2 	+1 	2 	Evasion
@@ -175,32 +173,8 @@ Improved Evasion (Ex): When subjected to an attack that normally allows a Reflex
 ALTERNATIVE ANIMAL COMPANIONS
 
 A druid of sufficiently high level can select her animal companion from one of the following lists, applying the indicated adjustment to the druid's level (in parentheses) for purposes of determining the companion's characteristics and special abilities.
-4th Level or Higher (Level -3)
-Ape (animal) 	Dire weasel
-Bear, black (animal) 	Leopard (animal)
-Bison (animal) 	Lizard, monitor (animal)
-Boar (animal) 	Shark, Large1 (animal)
-Cheetah (animal) 	Snake, constrictor (animal)
-Crocodile (animal)1 	Snake, Large viper (animal)
-Dire badger 	Wolverine (animal)
-Dire bat 	 
-7th Level or Higher (Level -6)
-Bear, brown (animal) 	Dire wolf
-Dire wolverine 	Elasmosaurus1 (dinosaur)
-Crocodile, giant (animal) 	Lion (animal)
-Deinonychus (dinosaur) 	Rhinoceros (animal)
-Dire ape 	Snake, Huge viper (animal)
-Dire boar 	Tiger (animal)
-10th Level or Higher (Level -9)
-Bear, polar (animal) 	Shark, Huge1 (animal)
-Dire lion 	Snake, giant constrictor (animal)
-Megaraptor (dinosaur) 	Whale, orca1 (animal)
-13th Level or Higher (Level -12)
-Dire bear 	Octopus, giant1 (animal)
-Elephant (animal) 	 
-16th Level or Higher (Level -15)
-Dire shark1 	Triceratops (dinosaur)
-Dire tiger 	Tyrannosaurus (dinosaur)
-Squid, giant1 (animal) 	 
-
-1 Available only in an aquatic environment.
+4th Level or Higher (Level -3): Ape (animal); Dire weasel; Bear, black (animal); Leopard (animal); Bison (animal); Lizard, monitor (animal); Boar (animal); Shark, Large (animal); Cheetah (animal); Snake, constrictor (animal); Crocodile (animal); Snake, Large viper (animal); Dire badger; Wolverine (animal); Dire bat. 	 
+7th Level or Higher (Level -6): Bear, brown (animal); Dire wolf; Dire wolverine; Elasmosaurus (dinosaur); Crocodile, giant (animal); Lion (animal); Deinonychus (dinosaur); Rhinoceros (animal); Dire ape; Snake, Huge viper (animal); Dire boar; Tiger (animal).
+10th Level or Higher (Level -9): Bear, polar (animal); Shark, Huge (animal); Dire lion; Snake, giant constrictor (animal); Megaraptor (dinosaur); Whale, orca (animal).
+13th Level or Higher (Level -12): Dire bear; Octopus, giant (animal); Elephant (animal). 
+16th Level or Higher (Level -15): Dire shark; Triceratops (dinosaur); Dire tiger; Tyrannosaurus (dinosaur); Squid, giant (animal).

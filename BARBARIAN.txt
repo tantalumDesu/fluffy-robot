@@ -32,11 +32,7 @@ Skill Points at 1st Level: (4 + Int modifier) x 4.
 Skill Points at Each Additional Level: 4 + Int modifier.
 
 Table: The Barbarian
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special
 1st 	+1 	+2 	+0 	+0 	Fast movement, illiteracy, rage 1/day
 2nd 	+2 	+3 	+0 	+0 	Uncanny dodge
 3rd 	+3 	+3 	+1 	+1 	Trap sense +1

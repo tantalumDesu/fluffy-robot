@@ -21,11 +21,7 @@ The shadowdancer’s class skills (and the key ability for each skill) are Balan
 Skill Points at Each Level: 6 + Int modifier.
 
 Table: The Shadowdancer
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special
 1st 	+0 	+0 	+2 	+0 	Hide in plain sight
 2nd 	+1 	+0 	+3 	+0 	Evasion, darkvision, uncanny dodge
 3rd 	+2 	+1 	+3 	+1 	Shadow illusion, summon shadow

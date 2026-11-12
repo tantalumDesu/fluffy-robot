@@ -14,8 +14,7 @@ Bonus Feats: The epic druid gains a bonus feat (selected from the list of epic d
 
 Epic Druid Bonus Feat List: Automatic Quicken Spell, Automatic Silent Spell, Automatic Still Spell, Colossal Wild Shape, Diminutive Wild Shape, Dragon Wild Shape, Energy Resistance, Enhance Spell, Epic Spell Focus, Epic Spell Penetration, Epic Spellcasting, Fast Healing, Fine Wild Shape, Gargantuan Wild Shape, Ignore Material Components, Improved Combat Casting, Improved Elemental Wild Shape, Improved Heighten Spell, Improved Metamagic, Improved Spell Capacity, Intensify Spell, Magical Beast Companion, Magical Beast WildShape, Multi-spell, Perfect Health, Permanent Emanation, Plant Wild Shape, Spell Stowaway, Spell Opportunity, Spontaneous Spell, Tenacious Magic, Vermin Wild Shape.
 Table: THE EPIC DRUID
-Druid
-Level 	Special
+Druid Level 	Special
 21st 	-
 22nd 	Wild shape 7/day
 23rd 	-

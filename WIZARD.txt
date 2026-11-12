@@ -30,12 +30,7 @@ Skill Points at 1st Level: (2 + Int modifier) x 4.
 Skill Points at Each Additional Level: 2 + Int modifier.
 
 Table: Wizard
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
-0 	1st 	2nd 	3rd 	4th 	5th 	6th 	7th 	8th 	9th
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
 1st 	+0 	+0 	+0 	+2 	Summon familiar, Scribe Scroll 	3 	1 	— 	— 	— 	— 	— 	— 	— 	—
 2nd 	+1 	+0 	+0 	+3 	  	4 	2 	— 	— 	— 	— 	— 	— 	— 	—
 3rd 	+1 	+1 	+1 	+3 	  	4 	2 	1 	— 	— 	— 	— 	— 	— 	—
@@ -124,6 +119,8 @@ A familiar is a normal animal that gains new powers and becomes a magical beast 
 A familiar also grants special abilities to its master (a sorcerer or wizard), as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.
 
 Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master's level.
+
+Table: Familiar Special Abilities
 Familiar 	Special
 Bat 	Master gains a +3 bonus on Listen checks
 Cat 	Master gains a +3 bonus on Move Silently checks
@@ -175,9 +172,9 @@ Speak with Animals of Its Kind (Ex): If the master is 7th level or higher, a fam
 Spell Resistance (Ex): If the master is 11th level or higher, a familiar gains spell resistance equal to the master's level + 5. To affect the familiar with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the familiar's spell resistance.
 
 Scry on Familiar (Sp): If the master is 13th level or higher, he may scry on his familiar (as if casting the scrying spell) once per day.
-Master
-Class Level 	Natural
-Armor Adj. 	Int 	Special
+
+Table: Familiar Advancement
+Master Class Level 	Natural Armor Adj. 	Int 	Special
 1st-2nd 	+1 	6 	Alertness, improved evasion, share spells, empathic link
 3rd-4th 	+2 	7 	Deliver touch spells
 5th-6th 	+3 	8 	Speak with master

@@ -30,12 +30,7 @@ Skill Points at 1st Level: (6 + Int modifier) x 4.
 Skill Points at Each Additional Level: 6 + Int modifier.
 
 Table: The Ranger
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
-1st 	2nd 	3rd 	4th
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
 1st 	+1 	+2 	+2 	+0 	1st favored enemy, Track, wild empathy 	— 	— 	— 	—
 2nd 	+2 	+3 	+3 	+0 	Combat style 	— 	— 	— 	—
 3rd 	+3 	+3 	+3 	+1 	Endurance 	— 	— 	— 	—

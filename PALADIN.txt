@@ -32,12 +32,7 @@ Skill Points at 1st Level: (2 + Int modifier) x 4.
 Skill Points at Each Additional Level: 2 + Int modifier.
 
 Table: The Paladin
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
-1st 	2nd 	3rd 	4th
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
 1st 	+1 	+2 	+0 	+0 	Aura of good, detect evil, smite evil 1/day 	— 	— 	— 	—
 2nd 	+2 	+3 	+0 	+0 	Divine grace, lay on hands 	— 	— 	— 	—
 3rd 	+3 	+3 	+1 	+1 	Aura of courage, divine health 	— 	— 	— 	—
@@ -118,6 +113,8 @@ Like a member of any other class, a paladin may be a multiclass character, but m
 THE PALADIN'S MOUNT
 
 The paladin's mount is superior to a normal mount of its kind and has special powers, as described below. The standard mount for a Medium paladin is a heavy warhorse, and the standard mount for a Small paladin is a warpony. Another kind of mount, such as a riding dog (for a halfling paladin) or a Large shark (for a paladin in an aquatic campaign) may be allowed as well. A paladin's mount is treated as a magical beast, not an animal, for the purpose of all effects that depend on its type (though it retains an animal's HD, base attack bonus, saves, skill points, and feats).
+
+Table: The Paladin's Mount
 Paladin Level 	Bonus HD 	Natural Armor Adj. 	Str Adj. 	Int 	Special
 5th-7th 	+2 	+4 	+1 	6 	Empathic link, improved evasion, share spells, share saving throws
 8th-10th 	+4 	+6 	+2 	7 	Improved speed

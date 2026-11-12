@@ -23,11 +23,7 @@ The thaumaturgist's class skills (and the key ability for each skill) are Concen
 Skill Points at Each Level: 2 + Int modifier.
 
 Table: The Thaumaturgist
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special 	Spells per Day
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
 1st 	+0 	+0 	+0 	+2 	Improved ally 	+1 level of existing spellcasting class
 2nd 	+1 	+0 	+0 	+3 	Augment Summoning 	+1 level of existing spellcasting class
 3rd 	+1 	+1 	+1 	+3 	Extended summoning 	+1 level of existing spellcasting class

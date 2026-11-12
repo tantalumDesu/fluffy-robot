@@ -23,11 +23,7 @@ The eldritch knight’s class skills (and the key ability for each skill) are Co
 Skill Points at Each Level: 2 + Int modifier.
 
 Table: The Eldritch Knight
-Level 	Base
-Attack Bonus 	Fort
-Save 	Ref
-Save 	Will
-Save 	Special
+Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special
 1st 	+1 	+2 	+0 	+0 	Bonus feat
 2nd 	+2 	+3 	+0 	+0 	+1 level of existing arcane spellcasting class
 3rd 	+3 	+3 	+1 	+1 	+1 level of existing arcane spellcasting class

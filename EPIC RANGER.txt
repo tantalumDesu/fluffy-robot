@@ -6,7 +6,7 @@ Skill Points at Each Additional Level: 6 + Int modifier
 
 Spells: The ranger’s caster level is equal to one-half his or her class level, as normal. The ranger’s number of spells per day does not increase after 20th level.
 
-Favored Enemy (Ex): The epic (and his bonuses against all existing favored enemies go up by +1) every five levels after 20th (25th, 30th, and so on).
+Favored Enemy (Ex): The epic ranger gains one additional favored enemy (and his bonuses against all existing favored enemies go up by +1) every five levels after 20th (25th, 30th, and so on).
 
 Animal companion:  The epic ranger’s animal companion continues to increase in power.  The ranger’s effective druid level is half his or her ranger level.
 
@@ -14,8 +14,7 @@ Bonus Feats: The epic ranger gains a bonus feat (selected from the list of epic 
 
 Epic Ranger Bonus Feat List: Bane of Enemies, Blinding Speed, Combat Archery, Death of Enemies, Distant Shot, Epic Endurance, Epic Prowess, Epic Speed, Epic Toughness, Epic Weapon Focus, Fast Healing, Improved Combat Casting, Improved Favored Enemy, Improved Manyshot, Improved Spell Capacity, Legendary Climber, Legendary Rider, Legendary Tracker, Perfect Health, Perfect Two-Weapon Fighting, Permanent Emanation, Spontaneous Spell, Storm of Throws, Swarm of Arrows, Two-Weapon Rend, Uncanny Accuracy.
 Table: THE EPIC RANGER
-Paladin
-Level 	Special
+Ranger Level 	Special
 21st 	-
 22nd 	-
 23rd 	Bonus feat
