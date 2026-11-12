@@ -4,11 +4,11 @@ Hit Die: d6.
 
 Skill Points at Each Additional Level: 8 + Int modifier.
 
-Sneak Attack: The epic rogue’s sneak attack damage increases by +1d6 at every odd-numbered level.
+Sneak Attack: The epic rogue's sneak attack damage increases by +1d6 at every odd-numbered level.
 
 Special Abilities: The rogue does not gain additional rogue special abilities after 19th level, but can choose one of the rogue class special abilities (crippling strike, defensive roll, improved evasion, opportunist, skill mastery, or slippery mind) instead of a bonus feat.
 
-Trap Sense (Ex): The epic rogue’s bonus increases by +1 every three levels higher than 18th.
+Trap Sense (Ex): The epic rogue's bonus increases by +1 every three levels higher than 18th.
 
 Bonus Feats: The epic rogue gains a bonus feat (selected from the list of epic rogue feats) every four levels after 20th.
 

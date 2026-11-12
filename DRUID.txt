@@ -41,6 +41,7 @@ Skill Points at Each Additional Level: 4 + Int modifier.
 
 Table: The Druid
 Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
+ 	 	 	 	 	 	0 	1st 	2nd 	3rd 	4th 	5th 	6th 	7th 	8th 	9th
 						0	1st	2nd	3rd	4th	5th	6th	7th	8th	9th
 1st 	+0 	+2 	+0 	+2 	Animal companion, nature sense, wild empathy 	3 	1 	— 	— 	— 	— 	— 	— 	— 	—
 2nd 	+1 	+3 	+0 	+3 	Woodland stride 	4 	2 	— 	— 	— 	— 	— 	— 	— 	—
@@ -130,9 +131,11 @@ Venom Immunity (Ex): At 9th level, a druid gains immunity to all poisons.
 A Thousand Faces (Su): At 13th level, a druid gains the ability to change her appearance at will, as if using the disguise self spell, but only while in her normal form. This affects the druid's body but not her possessions. It is not an illusory effect, but a minor physical alteration of the druid's appearance, within the limits described for the spell.
 
 Timeless Body (Ex): After attaining 15th level, a druid no longer takes ability score penalties for aging and cannot be magically aged. Any penalties she may have already incurred, however, remain in place. Bonuses still accrue, and the druid still dies of old age when her time is up.
+
 Ex-Druids
 
 A druid who ceases to revere nature, changes to a prohibited alignment, or teaches the Druidic language to a nondruid loses all spells and druid abilities (including her animal companion, but not including weapon, armor, and shield proficiencies). She cannot thereafter gain levels as a druid until she atones (see the atonement spell description).
+
 THE DRUID'S ANIMAL COMPANION
 
 A druid's animal companion is superior to a normal animal of its kind and has special powers, as described below.
@@ -170,6 +173,7 @@ Devotion (Ex): An animal companion gains a +4 morale bonus on Will saves against
 Multiattack: An animal companion gains Multiattack as a bonus feat if it has three or more natural attacks and does not already have that feat. If it does not have the requisite three or more natural attacks, the animal companion instead gains a second attack with its primary natural weapon, albeit at a -5 penalty.
 
 Improved Evasion (Ex): When subjected to an attack that normally allows a Reflex saving throw for half damage, an animal companion takes no damage if it makes a successful saving throw and only half damage if the saving throw fails.
+
 ALTERNATIVE ANIMAL COMPANIONS
 
 A druid of sufficiently high level can select her animal companion from one of the following lists, applying the indicated adjustment to the druid's level (in parentheses) for purposes of determining the companion's characteristics and special abilities.

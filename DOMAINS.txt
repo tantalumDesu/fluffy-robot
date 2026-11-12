@@ -1,3 +1,5 @@
+DOMAINS
+
 AIR DOMAIN
 
 Granted Powers: Turn or destroy earth creatures as a good cleric turns undead. Rebuke, command, or bolster air creatures as an evil cleric rebukes undead. Use these abilities a total number of times per day equal to 3 + your Charisma modifier. This granted power is a supernatural ability.
@@ -24,57 +26,13 @@ Spell Name 	Brief Description
 1 Calm Animals	Calms (2d4 + level) HD of animals.
 2 Hold Animal	Paralyzes one animal for 1 round/level.
 3 Dominate Animal	Subject animal obeys silent mental commands.
-4 Summon Nature’s Ally IV*	Calls creature to fight.
+4 Summon Nature's Ally IV*	Calls creature to fight.
 5 Commune with Nature	Learn about terrain for 1 mile/level.
 6 Antilife Shell	10-ft. field hedges out living creatures.
 7 Animal Shapes	One ally/level polymorphs into chosen animal.
-8 Summon Nature’s Ally VIII*	Calls creature to fight.
+8 Summon Nature's Ally VIII*	Calls creature to fight.
 9 Shapechange	Transforms you into any creature, and change forms once per round.
 * Can only summon animals.
-
-ARTIFICE DOMAIN
-Granted Power: Gain +4 bonus on Craft checks. The character casts conjuration (creation) spells at +1 caster level. (Those with access to both the Artifice and Creation domains cast conjuration [creation] spells at +3 caster level.).
-Artifice Domain Spells
-Spell Name 	Brief Description
-1 Animate Rope 	Makes a rope move at your command.
-2 Wood Shape 	Rearranges wooden objects to suit you.
-3 Stone Shape 	Sculpts stone into any shape.
-4 Minor Creation 	Creates one cloth or wood object.
-5 Fabricate 	Transforms raw materials into finished items.
-6 Major Creation 	As minor creation, plus stone and metal.
-7 Hardening 	Increases hardness of target by 1 per 2 levels.
-8 True Creation 	Creates permanent non-magical object.
-9 Prismatic sphere 	As prismatic wall, but surrounds on all sides.
-
-CELERITY DOMAIN
-
-Granted Powers: Your land speed is faster than the normal for your race by +10 feet. This benefit is lost if you are wearing medium or heavy armor or carrying a medium or heavy load.
-Domain Spells
-Spell Name 	Brief Description
-1 Expeditious Retreat	Your speed increases by 30 ft.
-2 Cat’s Grace	Subject gains +4 to Dex for 1 min./level.
-3 Blur	Attacks miss subject 20% of the time.
-4 Haste	One creature/level moves faster, +1 on attack rolls, AC, and Reflex saves.
-5 Tree Stride	Step from one tree to another far away.
-6 Wind Walk	You and your allies turn vaporous and travel fast.
-7 Cat’s Grace, Mass	As cat’s grace, affects one subject/level.
-8 Blink, Improved	As blink, but safer and with more control.
-9 Time Stop	You act freely for 1d4+1 rounds.
-
-CELESTIAL DOMAIN
-
-Granted Power: You gain the supernatural ability to smite evil once per day. Add a +4 bonus to your melee attack roll and your cleric level to your damage. You must declare the smite before making the attack, and the attempt is wasted if the target is not evil.
-Celestial Domain Spells
-Spell Name 	Brief Description
-1 Vision of Heaven	Evil creature is dazed for 1 round.
-2 Consecrate	Fills area with positive energy, making undead weaker.
-3 Blessed Sight	Evil auras become visible to you.
-4 Lesser Planar Ally	Exchange services with a 6 HD extraplanar creature.
-5 Heavenly Lightning	Arcs of radiant lightning deal 3d6 damage to one target per two caster levels.
-6 Call Faithful Servants	Summons 1d4 lantern archons, coure eladrins, or musteval guardinals.
-7 Heavenly Lightning Storm	Arcs of radiant lightning deal 5d6 damage to one target per level.
-8 Holy Aura	+4 AC, +4 resistance, and SR 25 against evil spells.
-9 Gate	Connects two planes for travel or summoning.
 
 CHAOS DOMAIN
 
@@ -88,7 +46,7 @@ Spell Name 	Brief Description
 5 Dispel Law	+4 bonus against attacks by lawful creatures.
 6 Animate Objects	Objects attack your foes.
 7 Word of Chaos	Kills, confuses, stuns, or deafens nonchaotic subjects.
-8 Cloak of Chaos F	+4 to AC, +4 resistance, SR 25 against lawful spells.
+8 Cloak of Chaos	+4 to AC, +4 resistance, SR 25 against lawful spells.
 9 Summon Monster IX*	Calls extraplanar creature to fight for you.
 * Cast as a chaos spell only.
 
@@ -131,9 +89,9 @@ Spell Name 	Brief Description
 3 Prayer 	Allies +1 bonus on most rolls, enemies –1 penalty.
 4 Tongues 	Speak any language.
 5 Telepathic Bond 	Link lets allies communicate.
-6 Heroes’ Feast 	Food for one creature/level cures and grants combat bonuses.
+6 Heroes' Feast 	Food for one creature/level cures and grants combat bonuses.
 7 Refuge 	Alters item to transport its possessor to you.
-8 Mordenkainen’s Magnificent Mansion 	Door leads to extradimensional mansion.
+8 Mordenkainen's Magnificent Mansion 	Door leads to extradimensional mansion.
 9 Mass Heal 	As heal, but with several subjects.
 
 COMPETITION DOMAIN
@@ -147,7 +105,7 @@ Spell Name 	Brief Description
 4 Divine Power	You gain attack bonus, +6 to Str, and 1 hp/level.
 5 Righteous Might	Your size increases, and you gain combat bonuses.
 6 Zealot Pact	You automatically gain combat bonuses when you attack someone of opposite alignment.
-7 Regenerate	Subject’s severed limbs grow back, cures 4d8 damage +1/level (max +35).
+7 Regenerate	Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35).
 8 Moment of Prescience	You gain insight bonus on single attack roll, check, or save.
 9 Visage of the Deity, Greater	As lesser visage of the deity, but you become half-celestial or half-fiendish.
 
@@ -160,7 +118,7 @@ Spell Name 	Brief Description
 2 Blindness/Deafness	Makes subject blinded or deafened.
 3 Contagion	Infects subject with chosen disease.
 4 Morality Undone	Subject becomes evil.
-5 Feeblemind	Subject’s Int and Cha drop to 1.
+5 Feeblemind	Subject's Int and Cha drop to 1.
 6 Pox	Deals 1d4 Con drain to one creature/level.
 7 Insanity	Subject affected by continuous confusion.
 8 Befoul	Turns large amount of water poisonous.
@@ -176,9 +134,9 @@ Spell Name 	Brief Description
 3 Cloak of Bravery	You and your allies gain a bonus on saves against fear.
 4 Heroism	Gives +2 bonus on attack rolls, saves, skill checks.
 5 Valiant Fury	+4 Str, Con; +2 Will saves; extra attack; cures 1d8 hp +1/level (max. +20).
-6 Heroes’ Feast	Food for one creature/level cures and grants combat bonuses.
+6 Heroes' Feast	Food for one creature/level cures and grants combat bonuses.
 7 Heroism, Greater	Gives +4 bonus on attack rolls, saves, skill checks; immunity to fear; temporary hp.
-8 Lion’s Roar	Deals 1d8 points of damage per two levels to enemies; allies get +1 on attacks and saves against fear, plus temporary hp.
+8 Lion's Roar	Deals 1d8 points of damage per two levels to enemies; allies get +1 on attacks and saves against fear, plus temporary hp.
 9 Cloak of Bravery, Greater	You and your allies become immune to fear and get +2 bonus on attacks.
 
 CREATION DOMAIN
@@ -190,7 +148,7 @@ Spell Name 	Brief Description
 3 Create Food and Water 	Feeds three humans (or one horse)/level.
 4 Minor Creation 	Creates one cloth or wood object.
 5 Major Creation 	As minor creation, plus stone and metal.
-6 Heroes’ Feast 	Food for one creature/level cures and grants combat bonuses.
+6 Heroes' Feast 	Food for one creature/level cures and grants combat bonuses.
 7 Permanent Image 	Includes sight, sound, and smell.
 8 True Creation 	Creates permanent nonmagical object.
 9 Genesis 	Creates a small demiplane.
@@ -203,16 +161,16 @@ Spell Name 	Brief Description
 2 Blindness 	Makes subject blinded.
 3 Blacklight 	Creats magical darkness that the caster can see through.
 4 Armor of Darkness 	Shroud obscures caster and grants darkvison and deflection bonus to AC.
-5 Summon monster V* 	Calls extraplanar creature to fight for you.
+5 Summon Monster V* 	Calls extraplanar creature to fight for you.
 6 Prying Eyes 	1d4 +1/level floating eyes scout for you.
 7 Nightmare 	Sends vision dealing 1d10 damage, fatigue.
-8 Power Word, Blind 	Blinds creature with 200 hp or less.
-9 Power Word, Kill 	Kills one creature with 100 hp or less.
+8 Power Word Blind 	Blinds creature with 200 hp or less.
+9 Power Word Kill 	Kills one creature with 100 hp or less.
 *only summons 1d3 shadows
 
 DEATH DOMAIN
 
-Granted Power: You may use a death touch once per day. Your death touch is a supernatural ability that produces a death effect. You must succeed on a melee touch attack against a living creature (using the rules for touch spells). When you touch, roll 1d6 per cleric level you possess. If the total at least equals the creature’s current hit points, it dies (no save).
+Granted Power: You may use a death touch once per day. Your death touch is a supernatural ability that produces a death effect. You must succeed on a melee touch attack against a living creature (using the rules for touch spells). When you touch, roll 1d6 per cleric level you possess. If the total at least equals the creature's current hit points, it dies (no save).
 Death Domain Spells
 Spell Name 	Brief Description
 1 Cause Fear	One creature of 5 HD or less flees for 1d4 rounds.
@@ -247,7 +205,7 @@ Domain Spells
 Spell Name 	Brief Description
 1 Omen of Peril	You know how dangerous the future will be.
 2 Augury	Learns whether an action will be good or bad.
-3 Delay Death	Losing hit points doesn’t kill subject.
+3 Delay Death	Losing hit points doesn't kill subject.
 4 Bestow Curse	–6 to an ability score; –4 to attack rolls, saves, and checks; or 50% chance of losing each action.
 5 Stalwart Pact	Target gains combat bonuses automatically when reduced to half hit points or lower.
 6 Warp Destiny	Reverse failed save or hit in combat.
@@ -276,8 +234,8 @@ Granted Powers: Once per day, as an immediate action, add your class level as a 
 Domain Spells
 Spell Name 	Brief Description
 1 Protection from Good	+2 to AC and saves, counter mind control, hedge out good elementals and outsiders.
-2 Devil’s Eye	See through magical darkness up to 30 ft.
-3 Devil’s Ego	Gain +4 to Cha and change type to outsider for 1 min./level.
+2 Devil's Eye	See through magical darkness up to 30 ft.
+3 Devil's Ego	Gain +4 to Cha and change type to outsider for 1 min./level.
 4 Hellfire	Explosion of infernal fire deals 1d8 damage/2 levels in 10-ft. radius.
 5 Planar Binding, Lesser	Traps extraplanar creature of 6HD or less until it performs a task.
 6 Planar Binding	As lesser planar binding, but up to 12 HD.
@@ -340,7 +298,7 @@ Spell Name 	Brief Description
 3 Stone Shape	Sculpts stone into any shape.
 4 Spike Stones	Creatures in area take 1d8 damage, may be lowed.
 5 Wall of Stone	Creates a stone wall that can be shaped.
-6 Stoneskin M	Ignore 10 points of damage per attack.
+6 Stoneskin	Ignore 10 points of damage per attack.
 7 Earthquake	Intense tremor shakes 5-ft./level radius.
 8 Iron Body	Your body becomes living iron.
 9 Elemental Swarm*	Summons multiple elementals.
@@ -382,19 +340,19 @@ Granted Power: You cast evil spells at +1 caster level.
 Evil Domain Spells
 Spell Name 	Brief Description
 1 Protection from Good	+2 to AC and saves, counter mind control, hedge out elementals and outsiders.
-2 Desecrate M	Fills area with negative energy, making undead stronger.
+2 Desecrate	Fills area with negative energy, making undead stronger.
 3 Magic Circle against Good	As protection spells, but 10-ft. radius and 10 min./level.
 4 Unholy Blight	Damages and sickens good creatures.
 5 Dispel Good	+4 bonus against attacks by good creatures.
-6 Create Undead M	Create ghouls, ghasts, mummies, or mohrgs.
+6 Create Undead	Create ghouls, ghasts, mummies, or mohrgs.
 7 Blasphemy	Kills, paralyzes, weakens, or dazes nonevil subjects.
-8 Unholy Aura F	+4 to AC, +4 resistance, SR 25 against good spells.
+8 Unholy Aura	+4 to AC, +4 resistance, SR 25 against good spells.
 9 Summon Monster IX*	Calls extraplanar creature to fight for you.
 * Cast as an evil spell only.
 
 FATE DOMAIN
 
-Granted Powers: You gain the uncanny dodge ability, allowing you to retain your Dexterity bonus to AC (if any) even if caught flat-footed or struck by an invisible attacker. However, you still lose your Dexterity bonus to AC if immobilized. If you have another class that gives you uncanny dodge, your cleric levels add to that class’s level for determining when you gain the improved uncanny dodge class feature.
+Granted Powers: You gain the uncanny dodge ability, allowing you to retain your Dexterity bonus to AC (if any) even if caught flat-footed or struck by an invisible attacker. However, you still lose your Dexterity bonus to AC if immobilized. If you have another class that gives you uncanny dodge, your cleric levels add to that class's level for determining when you gain the improved uncanny dodge class feature.
 Domain Spells
 1 True Strike	+20 on your next attack roll.
 2 Augury	Learns whether an action will be good or bad.
@@ -404,7 +362,7 @@ Domain Spells
 6 Geas/Quest	As lesser geas, plus it affects any creature.
 7 Vision	As legend lore, but quicker and strenuous.
 8 Mind Blank	Subject is immune to mental/emotional magic and scrying.
-9 Foresight	“Sixth sense”warns of impending danger.
+9 Foresight	"Sixth sense"warns of impending danger.
 
 FEY DOMAIN
 
@@ -430,7 +388,7 @@ Spell Name 	Brief Description
 2 Produce Flame	1d6 damage +1/ level, touch or thrown.
 3 Resist Energy*	Ignores 10 (or more) points of damage/attack from specified energy type.
 4 Wall of Fire	Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.
-5 Fire Shield	Creatures attacking you take fire damage; you’re protected from heat or cold.
+5 Fire Shield	Creatures attacking you take fire damage; you're protected from heat or cold.
 6 Fire Seeds	Acorns and berries become grenades and bombs.
 7 Fire Storm	Deals 1d6/level fire damage.
 8 Incendiary Cloud	Cloud deals 4d6 fire damage/round.
@@ -446,12 +404,12 @@ Spell Name 	Brief Description
 1 Mage Armor	Gives subject +4 armor bonus.
 2 Magic Missile	1d4+1 damage; +1 missile per two levels above 1st (max 5).
 3 Blast of Force	Ray deals 1d6 damage/two caster levels (max 5d6).
-4 Otiluke’s Resilient Sphere	Force globe protects but traps one subject.
+4 Otiluke's Resilient Sphere	Force globe protects but traps one subject.
 5 Wall of Force	Wall is immune to damage.
-6 Repulsion	Creatures can’t approach you.
+6 Repulsion	Creatures can't approach you.
 7 Forcecage	Cube or cage of force imprisons all inside.
-8 Otiluke’s Telekinetic Sphere	As Otiluke’s resilient sphere, but you move sphere telekinetically.
-9 Bigby’s Crushing Hand	Large hand provides cover, pushes, or crushes your foes.
+8 Otiluke's Telekinetic Sphere	As Otiluke's resilient sphere, but you move sphere telekinetically.
+9 Bigby's Crushing Hand	Large hand provides cover, pushes, or crushes your foes.
 
 FURY DOMAIN
 
@@ -459,7 +417,7 @@ Granted Powers: Once per day as a free action, you can designate a single creatu
 Domain Spells
 Spell Name 	Brief Description
 1 True Strike	Grants you a +20 bonus on your next attack roll.
-2 Bull’s Strength	Subject gains +4 to Str for 1 min./level.
+2 Bull's Strength	Subject gains +4 to Str for 1 min./level.
 3 Rage	Grants +2 to Str and Con, +1 on Will saves, –2 to AC.
 4 Divine Power	You gain attack bonus, +6 to Str, and 1 hp/level.
 5 Shout	Deafens all within cone and deals 5d6 sonic damage.
@@ -494,7 +452,7 @@ Spell Name 	Brief Description
 4 Holy Smite	Damages and blinds evil creatures.
 5 Dispel Evil	+4 bonus against attacks by evil creatures.
 6 Blade Barrier	Wall of blades deals 1d6/level damage.
-7 Holy Word F	Kills, paralyzes, slows, or deafens nongood subjects.
+7 Holy Word	Kills, paralyzes, slows, or deafens nongood subjects.
 8 Holy Aura	+4 to AC, +4 resistance, and SR 25 against evil spells.
 9 Summon Monster IX*	Calls extraplanar creature to fight for you.
 * Cast as a good spell only.
@@ -505,7 +463,7 @@ Granted Powers: You gain a +2 competence bonus on Appraise, Open Lock, and Sligh
 Domain Spells
 Spell Name 	Brief Description
 1 Cheat	Caster rerolls when determining the success of a game of chance.
-2 Entice Gift	Subject gives caster what it’s holding.
+2 Entice Gift	Subject gives caster what it's holding.
 3 Knock	Opens locked or magically sealed door.
 4 Fire Trap	Opened object deals 1d4 damage +1/level.
 5 Fabricate	Transforms raw materials into finished items.
@@ -540,7 +498,7 @@ Spell Name 	Brief Description
 4 Cure Critical Wounds	Cures 4d8 damage +1/level (max +20).
 5 Cure Light Wounds, Mass	Cures 1d8 damage +1/level (max +25) for many creatures.
 6 Heal	Cures 10 points/level of damage, all diseases and mental conditions.
-7 Regenerate	Subject’s severed limbs grow back, cures 4d8 damage +1/level (max +35).
+7 Regenerate	Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35).
 8 Cure Critical Wounds, Mass	Cures 4d8 damage +1/level (max +40) for many creatures.
 9 Heal, Mass	As heal, but with several subjects.
 
@@ -580,8 +538,8 @@ Granted Powers: Gain a +4 bonus on all dispel checks.
 Domain Spells
 Spell Name 	Brief Description
 1 Detect Chaos	Reveals chaotic creatures, spells, or objects.
-2 Zone of Truth	Subjects within range can’t lie.
-3 Detect Thoughts	Allows “listening” to surface thoughts.
+2 Zone of Truth	Subjects within range can't lie.
+3 Detect Thoughts	Allows "listening" to surface thoughts.
 4 Discern Lies	Reveals deliberate falsehoods.
 5 True Seeing	See all things as they really are.
 6 Geas/Quest	As lesser geas, plus it affects any creature.
@@ -612,14 +570,14 @@ You cast divination spells at +1 caster level.
 Knowledge Domain Spells
 Spell Name 	Brief Description
 1 Detect Secret Doors	Reveals hidden doors within 60 ft.
-2 Detect Thoughts	Allows “listening” to surface thoughts.
+2 Detect Thoughts	Allows "listening" to surface thoughts.
 3 Clairaudience/Clairvoyance	Hear or see at a distance for 1 min./level.
-4 Divination M	Provides useful advice for specific proposed actions.
-5 True Seeing M	Lets you see all things as they really are.
+4 Divination	Provides useful advice for specific proposed actions.
+5 True Seeing	Lets you see all things as they really are.
 6 Find the Path	Shows most direct way to a location.
-7 Legend Lore M F	Lets you learn tales about a person, place, or thing.
+7 Legend Lore	Lets you learn tales about a person, place, or thing.
 8 Discern Location	Reveals exact location of creature or object.
-9 Foresight	“Sixth sense” warns of impending danger.
+9 Foresight	"Sixth sense" warns of impending danger.
 
 LAW DOMAIN
 
@@ -629,11 +587,11 @@ Spell Name 	Brief Description
 1 Protection from Chaos	+2 to AC and saves, counter mind control, hedge out elementals and outsiders.
 2 Calm Emotions	Calms creatures, negating emotion effects.
 3 Magic Circle against Chaos	As protection spells, but 10-ft. radius and 10 min./level.
-4 Order’s Wrath	Damages and dazes chaotic creatures.
+4 Order's Wrath	Damages and dazes chaotic creatures.
 5 Dispel Chaos	+4 bonus against attacks by chaotic creatures.
 6 Hold Monster	As hold person, but any creature.
 7 Dictum	Kills, paralyzes, slows, or deafens nonlawful subjects.
-8 Shield of Law F	+4 to AC, +4 resistance, and SR 25 against chaotic spells.
+8 Shield of Law	+4 to AC, +4 resistance, and SR 25 against chaotic spells.
 9 Summon Monster IX*	Calls extraplanar creature to fight for you.
 * Cast as a law spell only.
 
@@ -652,7 +610,7 @@ Spell Name 	Brief Description
 9 Freedom 	Releases creature from imprisonment.
 LUCK DOMAIN
 
-Granted Power: You gain the power of good fortune, which is usable once per day. This extraordinary ability allows you to reroll one roll that you have just made before the DM declares whether the roll results in success or failure. You must take the result of the reroll, even if it’s worse than the original roll.
+Granted Power: You gain the power of good fortune, which is usable once per day. This extraordinary ability allows you to reroll one roll that you have just made before the DM declares whether the roll results in success or failure. You must take the result of the reroll, even if it's worse than the original roll.
 
 Luck Domain Spells
 Spell Name 	Brief Description
@@ -664,7 +622,7 @@ Spell Name 	Brief Description
 6 Mislead	Turns you invisible and creates illusory double.
 7 Spell Turning	Reflect 1d4+6 spell levels back at caster.
 8 Moment of Prescience	You gain insight bonus on single attack roll, check, or save.
-9 Miracle X	Requests a deity’s intercession.
+9 Miracle	Requests a deity's intercession.
 
 MADNESS DOMAIN
 
@@ -686,15 +644,15 @@ MAGIC DOMAIN
 Granted Power: Use scrolls, wands, and other devices with spell completion or spell trigger activation as a wizard of one-half your cleric level (at least 1st level). For the purpose of using a scroll or other magic device, if you are also a wizard, actual wizard levels and these effective wizard levels stack.
 Magic Domain Spells
 Spell Name 	Brief Description
-1 Magic Aura	Alters object’s magic aura.
+1 Magic Aura	Alters object's magic aura.
 2 Identify	Determines properties of magic item.
 3 Dispel Magic	Cancels magical spells and effects.
 4 Imbue with Spell Ability	Transfer spells to subject.
 5 Spell Resistance	Subject gains SR 12 + level.
 6 Antimagic Field	Negates magic within 10 ft.
 7 Spell Turning	Reflect 1d4+6 spell levels back at caster.
-8 Protection from Spells M F	Confers +8 resistance bonus.
-9 Mage’s Disjunction	Dispels magic, disenchants magic items.
+8 Protection from Spells	Confers +8 resistance bonus.
+9 Mage's Disjunction	Dispels magic, disenchants magic items.
 
 MIND DOMAIN
 
@@ -702,11 +660,11 @@ Granted Powers: Gain a +2 bonus on Bluff, Diplomacy, and Sense Motive checks.
 Domain Spells
 Spell Name 	Brief Description
 1 Comprehend Languages	Understands all spoken and written languages.
-2 Detect Thoughts	Allows “listening” to surface thoughts.
+2 Detect Thoughts	Allows "listening" to surface thoughts.
 3 Lesser Telepathic Bond	Link with subject within 30 ft. for 10 min./level.
 4 Discern Lies	Reveals deliberate falsehoods.
-5 Rary’s Telepathic Bond	Link lets allies communicate.
-6 Probe Thoughts	Read subject’s memories, one question/round.
+5 Rary's Telepathic Bond	Link lets allies communicate.
+6 Probe Thoughts	Read subject's memories, one question/round.
 7 Brain Spider	Eavesdrop on thoughts of up to eight other creatures.
 8 Mind Blank	Subject is immune to mental/emotional magic and scrying.
 9 Weird	As phantasmal killer, but affects all within 30 ft.
@@ -715,13 +673,13 @@ MYSTICISM DOMAIN
 
 Neutral, Lawful Neutral, and Chaotic Neutral deities would never have this domain.
 
-Granted Powers: Once per day, you may use a free action to channel your deity’s power to grant yourself a luck bonus on your saving throws equal to your Charisma modifier (minimum +1). This is a supernatural ability and its effects last for 1 round.
+Granted Powers: Once per day, you may use a free action to channel your deity's power to grant yourself a luck bonus on your saving throws equal to your Charisma modifier (minimum +1). This is a supernatural ability and its effects last for 1 round.
 Domain Spells
 * Choose one spell of those given, based on your alignment, that is always your domain spell for this level.
 Spell Name 	Brief Description
 1 Divine Favor	You gain attack, damage bonus, +1/3 levels.
 2 Spiritual Weapon	Magical weapon attacks on its own.
-3 Visage of the Deity, Lesser	Your form becomes more like your deity’s.
+3 Visage of the Deity, Lesser	Your form becomes more like your deity's.
 4 Weapon of the Deity	Your weapon gains enhancement bonus and special ability..
 5 Righteous Might	Your size increases, and you gain +4 Strength.
 6 Visage of the Deity	As lesser visage of the deity, but you get celestial or fiendish qualities.
@@ -739,7 +697,7 @@ Spell Name 	Brief Description
 4 Discern Lies 	Reveals deliberate falsehoods.
 5 Greater Command 	As command, but affects one subject/level.
 6 Geas/Quest 	As lesser geas, plus it affects any creature.
-7 Repulsion 	Creatures can’t approach you.
+7 Repulsion 	Creatures can't approach you.
 8 Demand 	As sending, plus you can send suggestion.
 9 Storm of Vengeance 	Storm rains acid, lightning, and hail.
 
@@ -752,7 +710,7 @@ Domain Spells
 3 Water Breathing	Subjects can breathe underwater.
 4 Freedom of Movement	Subject moves normally despite impediments.
 5 Wall of Ice	Creates wall with 15 hp +1/level, or hemisphere can trap creatures inside.
-6 Otiluke’s Freezing Sphere	Freezes water or deals cold damage.
+6 Otiluke's Freezing Sphere	Freezes water or deals cold damage.
 7 Waterspout	Water rises up into a whirling vortex that deals 3d8 damage and sucks creatures in.
 8 Maelstrom	Conjures a deadly whirlpool to suck in and batter foes.
 9 Elemental Swarm*	Summons multiple water elementals.
@@ -785,7 +743,7 @@ Domain Spells
 6 Legend Lore	Learn tales about a person, place, or thing.
 7 Scrying, Greater	As scrying, but faster and longer.
 8 Discern Location	Exact location of creature or object.
-9 Foresight	“Sixth sense” warns of impending danger.
+9 Foresight	"Sixth sense" warns of impending danger.
 
 PACT DOMAIN
 
@@ -793,8 +751,8 @@ Granted Powers: Add Appraise, Intimidate, and Sense Motive to your list of cleri
 Domain Spells
 Spell Name 	Brief Description
 1 Command	One subject obeys selected command for 1 round.
-2 Shield Other	You take half of subject’s damage.
-3 Speak With Dead	Corpse answers one question/two levels.
+2 Shield Other	You take half of subject's damage.
+3 Speak with Dead	Corpse answers one question/two levels.
 4 Divination	Provides useful advice for specific proposed actions.
 5 Stalwart Pact	You gain combat bonuses automatically when reduced to half hit points or lower.
 6 Zealot Pact	You automatically gain combat bonuses when you attack someone of opposite alignment.
@@ -812,7 +770,7 @@ Spell Name 	Brief Description
 3 Clairaudience/Clairvoyance	Hear or see at a distance for 1 min./level.
 4 Status	Monitors condition, position of allies.
 5 Detect Scrying	Alerts you to magical eavesdropping.
-6 Heroes’ Feast	Food for one creature/level cures and grants combat bonuses.
+6 Heroes' Feast	Food for one creature/level cures and grants combat bonuses.
 7 Scrying, Greater	As scrying, but faster and longer.
 8 Discern Location	Reveals exact location of creature or object.
 9 Time Stop	You act freely for 1d4+1 rounds.
@@ -870,13 +828,13 @@ PROTECTION DOMAIN
 Granted Power: You can generate a protective ward as a supernatural ability. Grant someone you touch a resistance bonus equal to your cleric level on his or her next saving throw. Activating this power is a standard action. The protective ward is an abjuration effect with a duration of 1 hour that is usable once per day.
 Protection Domain Spells
 Spell Name 	Brief Description
-1 Sanctuary	Opponents can’t attack you, and you can’t attack.
-2 Shield Other F	You take half of subject’s damage.
+1 Sanctuary	Opponents can't attack you, and you can't attack.
+2 Shield Other	You take half of subject's damage.
 3 Protection from Energy	Absorb 12 points/level of damage from one kind of energy.
 4 Spell Immunity	Subject is immune to one spell per four levels.
 5 Spell Resistance	Subject gains SR 12 + level.
 6 Antimagic Field	Negates magic within 10 ft.
-7 Repulsion	Creatures can’t approach you.
+7 Repulsion	Creatures can't approach you.
 8 Mind Blank	Subject is immune to mental/emotional magic and scrying.
 9 Prismatic Sphere	As prismatic wall, but surrounds on all sides.
 
@@ -886,7 +844,7 @@ Granted Powers: You cast abjuration spells at +1 caster level.
 Domain Spells
 Spell Name 	Brief Description
 1 Nimbus of Light	Sunlight illuminates you until released as an attack for 1d8 +1/level damage.
-2 Deific Vengeance	Deity’s punishment deals 1d6 damage/two caster levels (max 5d6).
+2 Deific Vengeance	Deity's punishment deals 1d6 damage/two caster levels (max 5d6).
 3 Recitation	Your allies get bonus on attacks and saves, and your foes get penalties.
 4 Castigate	Verbal rebuke deafens all who hear and damages those whose alignment differs from yours.
 5 Dance of the Unicorn	Purifying mist washes the air clean of smoke, dust, and poisons.
@@ -898,7 +856,7 @@ Spell Name 	Brief Description
 REPOSE DOMAIN
 The Repose domain is similar to the Death domain, but is granted by good-aligned deities whose clerics are barred from casting evil spells.
 
-Granted Power: The character may use a death touch once per day. The death touch is a spell-like ability that is a death effect. The character must succeed at a melee touch attack against a living creature (using the rules for touch spells). When the character touches, roll 1d6 per his or her cleric level. If the total at least equals the creature’s current hit points, it dies.
+Granted Power: The character may use a death touch once per day. The death touch is a spell-like ability that is a death effect. The character must succeed at a melee touch attack against a living creature (using the rules for touch spells). When the character touches, roll 1d6 per his or her cleric level. If the total at least equals the creature's current hit points, it dies.
 Repose Domain Spells
 Spell Name 	Brief Description
 1 Deathwatch	Reveals how near death subjects within 30 ft. are.
@@ -959,7 +917,7 @@ Spell Name 	Brief Description
 1 Quickswim	Your swim speed increases by 10 ft.
 2 Fins to Feet	Transforms tails, tentacles, or finned extremities into humanoid legs and feet.
 3 Scales of the Sealord	Add 10 ft. to swim speed or gain swim speed of 15 ft.; add natural armor bonus +1/3 levels.
-4 Siren’s Call	Compel one creature/2 levels to submerse itself.
+4 Siren's Call	Compel one creature/2 levels to submerse itself.
 5 Commune with Nature	Learn about terrain for 1 mile/level.
 6 Airy Water	Turn normal water into a breathable substance; negate underwater movement and melee attack penalties.
 7 Megalodon Empowerment	Gain scent, water breathing, swim speed for 1 hour/level.
@@ -988,7 +946,7 @@ SKY DOMAIN
 Granted Powers: Your fly speed (or glide speed) improves by 5 feet. Add Spot to your list of cleric class skills.
 Domain Spells
 Spell Name 	Brief Description
-1 Raptor’s Sight	Gain +5 on Spot checks; range increment penalty halved.
+1 Raptor's Sight	Gain +5 on Spot checks; range increment penalty halved.
 2 Summon Dire Hawk	Summons dire hawk to serve you.
 3 Enduring Flight	Carry medium loads at full fly speed; flight duration is doubled.
 4 Aerial Alacrity	+30 ft. fly speed, +1 AC and Reflex saves while flying, maneuverability improves by one category.
@@ -1006,7 +964,7 @@ Spell Name 	Brief Description
 1 Bestow Wound	Transfer 1 hp/level of wounds to another.
 2 Rage	Gain +2 to Str and Con, +1 on Will saves, –2 to AC.
 3 Vampiric Touch	Touch deals 1d6/two levels in damage; you gain damage as hp.
-4 Pronouncement of Fate	Impose a –4 penalty on an offender’s attacks, damage, saves, and checks; target loses actions.
+4 Pronouncement of Fate	Impose a –4 penalty on an offender's attacks, damage, saves, and checks; target loses actions.
 5 Fire in the Blood	Your blood becomes a potent corrosive that burns attackers.
 6 Cloak of Hate	Target provokes hostile reactions, takes –10 penalty to Diplomacy checks.
 7 Pact of Return	If you die as you predict, you are resurrected instantly.
@@ -1033,11 +991,11 @@ Granted Power: You can perform a feat of strength as a supernatural ability. You
 Strength Domain Spells
 Spell Name 	Brief Description
 1 Enlarge Person	Humanoid creature doubles in size.
-2 Bull’s Strength	Subject gains +4 to Str for 1 min./level.
+2 Bull's Strength	Subject gains +4 to Str for 1 min./level.
 3 Magic Vestment	Armor or shield gains +1 enhancement per four levels.
 4 Spell Immunity	Subject is immune to one spell per four levels.
 5 Righteous Might	Your size increases, and you gain combat bonuses.
-6 Stoneskin M	Ignore 10 points of damage per attack.
+6 Stoneskin	Ignore 10 points of damage per attack.
 7 Grasping Hand	Large hand provides cover, pushes, or grapples.
 8 Clenched Fist	Large hand provides cover, pushes, or attacks your foes.
 9 Crushing Hand	Large hand provides cover, pushes, or crushes your foes.
@@ -1047,7 +1005,7 @@ SUMMER DOMAIN
 Granted Powers: You are considered a native of the waste for purposes of heat resistance (you have 1 level of protection). During the summer season, you gain a +2 bonus on all Wisdom-based skill checks.
 Domain Spells
 Spell Name 	Brief Description
-1 Impede Sun’s Brilliance	Diminishes the heat and light of the sun in an area.
+1 Impede Sun's Brilliance	Diminishes the heat and light of the sun in an area.
 2 Sunstroke	Target takes 2d6 nonlethal damage and is fatigued.
 3 Protection from Dessication	Absorb 10 points/level of dessication damage.
 4 Skin of the Cactus	Grants natural armor, thorns, and resistance to dehydration.
@@ -1081,7 +1039,7 @@ Spell Name 	Brief Description
 1 Endure Elements	Exist comfortably in hot or cold environments.
 2 Heat Metal	Make metal so hot it damages those who touch it.
 3 Searing Light	Ray deals 1d8/two levels, more against undead.
-4 Fire Shield	Creatures attacking you take fire damage; you’re protected from heat or cold.
+4 Fire Shield	Creatures attacking you take fire damage; you're protected from heat or cold.
 5 Flame Strike	Smite foes with divine fire (1d6/level damage).
 6 Fire Seeds	Acorns and berries become grenades and bombs.
 7 Sunbeam	Beam blinds and deals 4d6 damage.
@@ -1135,7 +1093,7 @@ Spell Name 	Brief Description
 6 Find the Path	Shows most direct way to a location.
 7 Teleport, Greater	As teleport, but no range limit and no off-target arrival.
 8 Phase Door	Creates an invisible passage through wood or stone.
-9 Astral Projection M	Projects you and companions onto Astral Plane.
+9 Astral Projection	Projects you and companions onto Astral Plane.
 
 TRICKERY DOMAIN
 
@@ -1144,9 +1102,9 @@ Trickery Domain Spells
 Spell Name 	Brief Description
 1 Disguise Self	Disguise own appearance.
 2 Invisibility	Subject invisible 1 min./level or until it attacks.
-3 Nondetection M	Hides subject from divination, scrying.
+3 Nondetection	Hides subject from divination, scrying.
 4 Confusion	Subjects behave oddly for 1 round/level.
-5 False Vision M	Fools scrying with an illusion.
+5 False Vision	Fools scrying with an illusion.
 6 Mislead	Turns you invisible and creates illusory double.
 7 Screen	Illusion hides area from vision, scrying.
 8 Polymorph Any Object	Changes any subject into anything else.
@@ -1163,7 +1121,7 @@ Spell Name 	Brief Description
 4 Fear	Subjects within cone flee for 1 round/level.
 5 Command, Greater	As command, but affects one subject/level.
 6 Geas/Quest	As lesser geas, plus it affects any creature.
-7 Bigby’s Grasping Hand	Hand provides cover, pushes, or grapples.
+7 Bigby's Grasping Hand	Hand provides cover, pushes, or grapples.
 8 Charm Monster, Mass	As charm monster, but all within 30 ft.
 9 Dominate Monster	As dominate person, but any creature.
 
@@ -1178,7 +1136,7 @@ Spell Name 	Brief Description
 4 Death Ward	Grants immunity to death spells and negative energy effects.
 5 Circle of Death	Kills 1d4/level HD of creatures.
 6 Create Undead	Creates ghouls, ghasts, mummies, or mohrgs.
-7 Control Undead	Undead don’t attack you while under your command.
+7 Control Undead	Undead don't attack you while under your command.
 8 Create Greater Undead	Create shadows, wraiths, specters, or devourers.
 9 Energy Drain	Subject gains 2d4 negative levels.
 
@@ -1191,7 +1149,7 @@ Spell Name 	Brief Description
 2 Darkbolt	Deals 1d8 damage/2 levels and stuns 1 round.
 3 Deeper Darkness	Object sheds absolute darkness in a 60-ft. radius.
 4 Damning Darkness	Darkness deals either 2d6 or 1d6 damage per round.
-5 Evard’s Black Tentacles	1d4+1/level tentacles grapple randomly within 15 ft.
+5 Evard's Black Tentacles	1d4+1/level tentacles grapple randomly within 15 ft.
 6 Wall of Force	Wall manifests as an opaque black wall, is immune to damage.
 7 Shadow Walk	Step into shadow to travel rapidly.
 8 Utterdark	100-ft./level radius of darkness that evil creatures can see through.
@@ -1199,7 +1157,7 @@ Spell Name 	Brief Description
 
 WAR DOMAIN
 
-Granted Power: Free Martial Weapon Proficiency with deity’s favored weapon (if necessary) and Weapon Focus with the deity’s favored weapon.
+Granted Power: Free Martial Weapon Proficiency with deity's favored weapon (if necessary) and Weapon Focus with the deity's favored weapon.
 War Domain Spells
 Spell Name 	Brief Description
 1 Magic Weapon	Weapon gains +1 bonus.
@@ -1237,7 +1195,7 @@ Spell Name 	Brief Description
 2 Obscure Object	Masks object against scrying.
 3 Glyph of Warding	Inscription harms those who pass it.
 4 Detect Scrying	Alerts you of magical eavesdropping.
-5 Leomund’s Secret Chest	Hides expensive chest on Ethereal Plane; you retrieve it at will.
+5 Leomund's Secret Chest	Hides expensive chest on Ethereal Plane; you retrieve it at will.
 6 Forbiddance	Blocks planar travel, damages creatures of different alignment.
 7 Sequester	Subject is invisible to sight and scrying; renders creature comatose.
 8 Discern Location	Reveals exact location of creature or object.
@@ -1245,7 +1203,7 @@ Spell Name 	Brief Description
 
 WEATHER DOMAIN
 
-Granted Power: Inclement weather has less of an effect on you. Rain and snow don’t penalize your Spot and Search checks. You can move through snow-covered and icy terrain at your normal movement. Wind effects, whether natural or magical, affect you as if you were one size category larger.
+Granted Power: Inclement weather has less of an effect on you. Rain and snow don't penalize your Spot and Search checks. You can move through snow-covered and icy terrain at your normal movement. Wind effects, whether natural or magical, affect you as if you were one size category larger.
 Weather Domain Spells
 Spell Name 	Brief Description
 1 Obscuring Mist	Fog surrounds you.
@@ -1265,7 +1223,7 @@ Domain Spells
 Spell Name 	Brief Description
 1 Snowsight	Normal vision in winter weather conditions.
 2 Snow Walk	Increase your speed and walk effortlessly on top of snow without leaving tracks or scent.
-3 Winter’s Embrace	Subject takes 1d8 damage/round; can cause fatigue.
+3 Winter's Embrace	Subject takes 1d8 damage/round; can cause fatigue.
 4 Ice Storm	Hail deals 5d6 damage in cylinder 40 ft. across.
 5 Blizzard	Temperature drops and powerful blizzard reduces visibility to zero.
 6 Death Hail	Summons a storm of death hail.

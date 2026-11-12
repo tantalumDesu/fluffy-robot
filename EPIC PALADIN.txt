@@ -10,9 +10,9 @@ Smite Evil (Su): The epic paladin adds his or her class level to damage with any
 
 Turn Undead: The paladin turns undead as a cleric of two levels lower, as normal.
 
-Spells: The paladin’s caster level is equal to one-half his or her class level, as normal.  The paladin’s number of spells per day does not increase after 20th level.
+Spells: The paladin's caster level is equal to one-half his or her class level, as normal.  The paladin's number of spells per day does not increase after 20th level.
 
-Special Mount: The epic paladin’s special mount continues to increase in power. Every five levels after 20th the special mount gains +2 bonus Hit Dice, its natural armor increases by +2, its Strength adjustment increases by +1, and its Intelligence increases by +1. The mount’s spell resistance equals the paladin’s class level + 5.
+Special Mount: The epic paladin's special mount continues to increase in power. Every five levels after 20th the special mount gains +2 bonus Hit Dice, its natural armor increases by +2, its Strength adjustment increases by +1, and its Intelligence increases by +1. The mount's spell resistance equals the paladin's class level + 5.
 
 Remove Disease (Sp): The epic paladin can use remove disease one additional time per week for every three levels higher than 18th.
 

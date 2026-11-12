@@ -4,9 +4,9 @@ Hit Die: d8
 
 Skill Points at Each Additional Level: 2 + Int modifier
 
-Spells: The cleric’s caster level is equal to his or her class level. The cleric’s number of spells per day does not increase after 20th level.
+Spells: The cleric's caster level is equal to his or her class level. The cleric's number of spells per day does not increase after 20th level.
 
-Turn or Rebuke Undead: Use the cleric’s class level to determine the most powerful undead affected by a turn or rebuke check and the turning damage, just as normal.
+Turn or Rebuke Undead: Use the cleric's class level to determine the most powerful undead affected by a turn or rebuke check and the turning damage, just as normal.
 
 Bonus Feats: The epic cleric gains a bonus feat (selected from the list of epic cleric bonus feats) every three levels after 20th.
 

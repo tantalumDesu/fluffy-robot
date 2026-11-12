@@ -7,7 +7,7 @@ The aristocrat might work as a PC class, since it has an impressive selection of
 Hit Die: d8.
 Class Skills
 
-The aristocrat's class skills (and the key ability for each skill) are Appraise (Int), Bluff (Cha), Diplomacy (Cha), Disguise (Cha), Forgery (Int), Gather Information (Cha), Handle Animal (Cha), Intimidate (Cha), Knowledge (all skills taken individually) (Int), Listen (Wis), Perform (Cha), Ride (Dex), Sense Motive (Wis), Speak Language, Spot (Wis), Swim (Str), and Survival (Wis).
+The aristocrat's class skills (and the key ability for each skill) are Appraise (Int), Bluff (Cha), Diplomacy (Cha), Disguise (Cha), Forgery (Int), Gather Information (Cha), Handle Animal (Cha), Intimidate (Cha), Knowledge (all skills taken individually) (Int), Listen (Wis), Perform (Cha), Ride (Dex), Sense Motive (Wis), Speak Language (None), Spot (Wis), Swim (Str), and Survival (Wis).
 
 Skill Points at 1st Level: (4 + Int modifier) x 4.
 

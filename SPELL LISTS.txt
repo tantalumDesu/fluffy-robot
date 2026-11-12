@@ -1,3 +1,5 @@
+SPELL LISTS
+
 BARD SPELLS
 
 0-LEVEL BARD SPELLS (CANTRIPS)
@@ -32,7 +34,7 @@ Read Magic: Read scrolls and spellbooks.
 
 Resistance: Subject gains +1 on saving throws.
 
-Summon Instrument: Summons one instrument of the caster’s choice.
+Summon Instrument: Summons one instrument of the caster's choice.
 
 1ST-LEVEL BARD SPELLS
 
@@ -70,7 +72,7 @@ Lesser Confusion: One creature is confused for 1 round.
 
 Magic Mouth: Speaks once when triggered.
 
-Magic Aura: Alters object’s magic aura.
+Magic Aura: Alters object's magic aura.
 
 Obscure Object: Masks object against scrying.
 
@@ -102,7 +104,7 @@ Blur: Attacks miss subject 20% of the time.
 
 Calm Emotions: Calms creatures, negating emotion effects.
 
-Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
 
 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).
 
@@ -112,13 +114,13 @@ Daze Monster: Living creature of 6 HD or less loses next action.
 
 Delay Poison: Stops poison from harming subject for 1 hour/ level.
 
-Detect Thoughts: Allows “listening” to surface thoughts.
+Detect Thoughts: Allows "listening" to surface thoughts.
 
-Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Eagle's Splendor: Subject gains +4 to Cha for 1 min./level.
 
 Enthrall: Captivates all within 100 ft. + 10 ft./level.
 
-Fox’s Cunning: Subject gains +4 to Int for 1 min./level.
+Fox's Cunning: Subject gains +4 to Int for 1 min./level.
 
 Glitterdust: Blinds creatures, outlines invisible creatures.
 
@@ -246,7 +248,7 @@ Legend Lore: Lets you learn tales about a person, place, or thing.
 
 Locate Creature: Indicates direction to familiar creature.
 
-Modify Memory: Changes 5 minutes of subject’s memories.
+Modify Memory: Changes 5 minutes of subject's memories.
 
 Neutralize Poison: Immunizes subject against poison, detoxifies venom in or on subject.
 
@@ -306,23 +308,23 @@ Analyze Dweomer: Reveals magical aspects of subject.
 
 Animate Objects: Objects attack your foes.
 
-Cat’s Grace, Mass: As cat’s grace, affects one subject/level.
+Cat's Grace, Mass: As cat's grace, affects one subject/level.
 
 Charm Monster, Mass: As charm monster, but all within 30 ft.
 
 Cure Moderate Wounds, Mass: Cures 2d8 damage +1/level for many creatures.
 
-Eagle’s Splendor, Mass: As eagle’s splendor, affects one subject/level.
+Eagle's Splendor, Mass: As eagle's splendor, affects one subject/level.
 
 Eyebite: Target becomes panicked, sickened, and comatose.
 
 Find the Path: Shows most direct way to a location.
 
-Fox’s Cunning, Mass: As fox’s cunning, affects one subject/level.
+Fox's Cunning, Mass: As fox's cunning, affects one subject/level.
 
 Geas/Quest: As lesser geas, plus it affects any creature.
 
-Heroes’ Feast: Food for one creature/level cures and grants combat bonuses.
+Heroes' Feast: Food for one creature/level cures and grants combat bonuses.
 
 Irresistible Dance: Forces subject to dance.
 
@@ -402,7 +404,7 @@ Endure Elements: Exist comfortably in hot or cold environments.
 
 Entropic Shield: Ranged attacks against you have 20% miss chance.
 
-Hide from Undead: Undead can’t perceive one subject/level.
+Hide from Undead: Undead can't perceive one subject/level.
 
 Inflict Light Wounds: Touch deals 1d8 damage +1/level (max +5).
 
@@ -416,7 +418,7 @@ Protection from Chaos/Evil/Good/Law: +2 to AC and saves, counter mind control, h
 
 Remove Fear: Suppresses fear or gives +4 on saves against fear for one subject + one per four levels.
 
-Sanctuary: Opponents can’t attack you, and you can’t attack.
+Sanctuary: Opponents can't attack you, and you can't attack.
 
 Shield of Faith: Aura grants +2 or higher deflection bonus.
 
@@ -430,9 +432,9 @@ Align Weapon: Weapon becomes good, evil, lawful, or chaotic.
 
 Augury: Learns whether an action will be good or bad.
 
-Bear’s Endurance: Subject gains +4 to Con for 1 min./level.
+Bear's Endurance: Subject gains +4 to Con for 1 min./level.
 
-Bull’s Strength: Subject gains +4 to Str for 1 min./level.
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
 
 Calm Emotions: Calms creatures, negating emotion effects.
 
@@ -448,7 +450,7 @@ Delay Poison: Stops poison from harming subject for 1 hour/level.
 
 Desecrate: Fills area with negative energy, making undead stronger.
 
-Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Eagle's Splendor: Subject gains +4 to Cha for 1 min./level.
 
 Enthrall: Captivates all within 100 ft. + 10 ft./level.
 
@@ -462,7 +464,7 @@ Inflict Moderate Wounds: Touch attack, 2d8 damage +1/level (max +10).
 
 Make Whole: Repairs an object.
 
-Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+Owl's Wisdom: Subject gains +4 to Wis for 1 min./level.
 
 Remove Paralysis: Frees one or more creatures from paralysis or slow effect.
 
@@ -472,7 +474,7 @@ Restoration, Lesser: Dispels magical ability penalty or repairs 1d4 ability dama
 
 Shatter: Sonic vibration damages objects or crystalline creatures.
 
-Shield Other: You take half of subject’s damage.
+Shield Other: You take half of subject's damage.
 
 Silence: Negates sound in 15-ft. radius.
 
@@ -658,11 +660,11 @@ Antilife Shell: 10-ft. field hedges out living creatures.
 
 Banishment: Banishes 2 HD/level of extraplanar creatures.
 
-Bear’s Endurance, Mass: As bear’s endurance, affects one subject/ level.
+Bear's Endurance, Mass: As bear's endurance, affects one subject/ level.
 
 Blade Barrier: Wall of blades deals 1d6/level damage.
 
-Bull’s Strength, Mass: As bull’s strength, affects one subject/level.
+Bull's Strength, Mass: As bull's strength, affects one subject/level.
 
 Create Undead: Create ghouls, ghasts, mummies, or mohrgs.
 
@@ -670,7 +672,7 @@ Cure Moderate Wounds, Mass: Cures 2d8 damage +1/level for many creatures.
 
 Dispel Magic, Greater: As dispel magic, but up to +20 on check.
 
-Eagle’s Splendor, Mass: As eagle’s splendor, affects one subject/level.
+Eagle's Splendor, Mass: As eagle's splendor, affects one subject/level.
 
 Find the Path: Shows most direct way to a location.
 
@@ -684,11 +686,11 @@ Harm: Deals 10 points/level damage to target.
 
 Heal: Cures 10 points/level of damage, all diseases and mental conditions.
 
-Heroes’ Feast: Food for one creature/level cures and grants combat bonuses.
+Heroes' Feast: Food for one creature/level cures and grants combat bonuses.
 
 Inflict Moderate Wounds, Mass: Deals 2d8 damage +1/level to many creatures.
 
-Owl’s Wisdom, Mass: As owl’s wisdom, affects one subject/level.
+Owl's Wisdom, Mass: As owl's wisdom, affects one subject/level.
 
 Planar Ally: As lesser planar ally, but up to 12 HD.
 
@@ -724,9 +726,9 @@ Inflict Serious Wounds, Mass: Deals 3d8 damage +1/level to many creatures.
 
 Refuge: Alters item to transport its possessor to you.
 
-Regenerate: Subject’s severed limbs grow back, cures 4d8 damage +1/level (max +35).
+Regenerate: Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35).
 
-Repulsion: Creatures can’t approach you.
+Repulsion: Creatures can't approach you.
 
 Restoration, Greater: As restoration, plus restores all levels and ability scores.
 
@@ -792,7 +794,7 @@ Heal, Mass: As heal, but with several subjects.
 
 Implosion: Kills one creature/round.
 
-Miracle: Requests a deity’s intercession.
+Miracle: Requests a deity's intercession.
 
 Soul Bind: Traps newly dead soul to prevent resurrection.
 
@@ -800,7 +802,7 @@ Storm of Vengeance: Storm rains acid, lightning, and hail.
 
 Summon Monster IX: Calls extraplanar creature to fight for you.
 
-True Resurrection: As resurrection, plus remains aren’t needed.
+True Resurrection: As resurrection, plus remains aren't needed.
 
 DRUID SPELLS
 
@@ -852,7 +854,7 @@ Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the 
 
 Goodberry: 2d4 berries each cure 1 hp (max 8 hp/24 hours).
 
-Hide from Animals: Animals can’t perceive one subject/level.
+Hide from Animals: Animals can't perceive one subject/level.
 
 Jump: Subject gets bonus on Jump checks.
 
@@ -872,7 +874,7 @@ Shillelagh: Cudgel or quarterstaff becomes +1 weapon (1d10 damage) for 1 min./le
 
 Speak with Animals: You can communicate with animals.
 
-Summon Nature’s Ally I: Calls creature to fight.
+Summon Nature's Ally I: Calls creature to fight.
 
 2ND-LEVEL DRUID SPELLS
 
@@ -882,11 +884,11 @@ Animal Trance: Fascinates 2d6 HD of animals.
 
 Barkskin: Grants +2 (or higher) enhancement to natural armor.
 
-Bear’s Endurance: Subject gains +4 to Con for 1 min./level.
+Bear's Endurance: Subject gains +4 to Con for 1 min./level.
 
-Bull’s Strength: Subject gains +4 to Str for 1 min./level.
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
 
-Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
 
 Chill Metal: Cold metal damages those who touch it.
 
@@ -906,7 +908,7 @@ Heat Metal: Make metal so hot it damages those who touch it.
 
 Hold Animal: Paralyzes one animal for 1 round/level.
 
-Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+Owl's Wisdom: Subject gains +4 to Wis for 1 min./level.
 
 Reduce Animal: Shrinks one willing animal.
 
@@ -918,7 +920,7 @@ Soften Earth and Stone: Turns stone to clay or dirt to sand or mud.
 
 Spider Climb: Grants ability to walk on walls and ceilings.
 
-Summon Nature’s Ally II: Calls creature to fight.
+Summon Nature's Ally II: Calls creature to fight.
 
 Summon Swarm: Summons swarm of bats, rats, or spiders.
 
@@ -968,7 +970,7 @@ Spike Growth: Creatures in area take 1d4 damage, may be slowed.
 
 Stone Shape: Sculpts stone into any shape.
 
-Summon Nature’s Ally III: Calls creature to fight.
+Summon Nature's Ally III: Calls creature to fight.
 
 Water Breathing: Subjects can breathe underwater.
 
@@ -1008,7 +1010,7 @@ Scrying: Spies on subject from a distance.
 
 Spike Stones: Creatures in area take 1d8 damage, may be slowed.
 
-Summon Nature’s Ally IV: Calls creature to fight.
+Summon Nature's Ally IV: Calls creature to fight.
 
 5TH-LEVEL DRUID SPELLS
 
@@ -1016,7 +1018,7 @@ Animal Growth: One animal/two levels doubles in size.
 
 Atonement: Removes burden of misdeeds from subject.
 
-Awaken X: Animal or tree gains human intellect.
+Awaken: Animal or tree gains human intellect.
 
 Baleful Polymorph: Transforms subject into harmless animal.
 
@@ -1036,7 +1038,7 @@ Insect Plague: Locust swarms attack creatures.
 
 Stoneskin: Ignore 10 points of damage per attack.
 
-Summon Nature’s Ally V: Calls creature to fight.
+Summon Nature's Ally V: Calls creature to fight.
 
 Transmute Mud to Rock: Transforms two 10-ft. cubes per level.
 
@@ -1054,11 +1056,11 @@ Wall of Thorns: Thorns damage anyone who tries to pass.
 
 Antilife Shell: 10-ft.-radius field hedges out living creatures.
 
-Bear’s Endurance, Mass: As bear’s endurance, affects one subject/ level.
+Bear's Endurance, Mass: As bear's endurance, affects one subject/ level.
 
-Bull’s Strength, Mass: As bull’s strength, affects one subject/level.
+Bull's Strength, Mass: As bull's strength, affects one subject/level.
 
-Cat’s Grace, Mass: As cat’s grace, affects one subject/level.
+Cat's Grace, Mass: As cat's grace, affects one subject/level.
 
 Cure Light Wounds, Mass: Cures 1d8 damage +1/level for many creatures.
 
@@ -1074,7 +1076,7 @@ Liveoak: Oak becomes treant guardian.
 
 Move Earth: Digs trenches and builds hills.
 
-Owl’s Wisdom, Mass: As owl’s wisdom, affects one subject/level.
+Owl's Wisdom, Mass: As owl's wisdom, affects one subject/level.
 
 Repel Wood: Pushes away wooden objects.
 
@@ -1082,7 +1084,7 @@ Spellstaff: Stores one spell in wooden quarterstaff.
 
 Stone Tell: Talk to natural or worked stone.
 
-Summon Nature’s Ally VI: Calls creature to fight.
+Summon Nature's Ally VI: Calls creature to fight.
 
 Transport via Plants: Move instantly from one plant to another of the same kind.
 
@@ -1106,7 +1108,7 @@ Heal: Cures 10 points/level of damage, all diseases and mental conditions.
 
 Scrying, Greater: As scrying, but faster and longer.
 
-Summon Nature’s Ally VII: Calls creature to fight.
+Summon Nature's Ally VII: Calls creature to fight.
 
 Sunbeam: Beam blinds and deals 4d6 damage.
 
@@ -1132,7 +1134,7 @@ Repel Metal or Stone: Pushes away metal and stone.
 
 Reverse Gravity: Objects and creatures fall upward.
 
-Summon Nature’s Ally VIII: Calls creature to fight.
+Summon Nature's Ally VIII: Calls creature to fight.
 
 Sunburst: Blinds all within 10 ft., deals 6d6 damage.
 
@@ -1148,9 +1150,9 @@ Cure Critical Wounds, Mass: Cures 4d8 damage +1/level for many creatures.
 
 Elemental Swarm: Summons multiple elementals.
 
-Foresight: “Sixth sense” warns of impending danger.
+Foresight: "Sixth sense" warns of impending danger.
 
-Regenerate: Subject’s severed limbs grow back, cures 4d8 damage +1/level (max +35).
+Regenerate: Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35).
 
 Shambler: Summons 1d4+2 shambling mounds to fight for you.
 
@@ -1158,7 +1160,7 @@ Shapechange: Transforms you into any creature, and change forms once per round.
 
 Storm of Vengeance: Storm rains acid, lightning, and hail.
 
-Summon Nature’s Ally IX: Calls creature to fight.
+Summon Nature's Ally IX: Calls creature to fight.
 
 Sympathy: Object or location attracts certain creatures.
 
@@ -1198,19 +1200,19 @@ Virtue: Subject gains 1 temporary hp.
 
 2ND-LEVEL PALADIN SPELLS
 
-Bull’s Strength: Subject gains +4 to Str for 1 min./level.
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
 
 Delay Poison: Stops poison from harming subject for 1 hour/level.
 
-Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Eagle's Splendor: Subject gains +4 to Cha for 1 min./level.
 
-Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+Owl's Wisdom: Subject gains +4 to Wis for 1 min./level.
 
 Remove Paralysis: Frees one or more creatures from paralysis or slow effect.
 
 Resist Energy: Ignores 10 (or more) points of damage/attack from specified energy type.
 
-Shield Other: You take half of subject’s damage.
+Shield Other: You take half of subject's damage.
 
 Undetectable Alignment: Conceals alignment for 24 hours.
 
@@ -1284,7 +1286,7 @@ Endure Elements: Exist comfortably in hot or cold environments.
 
 Entangle: Plants entangle everyone in 40-ft.-radius circle.
 
-Hide from Animals: Animals can’t perceive one subject/level.
+Hide from Animals: Animals can't perceive one subject/level.
 
 Jump: Subject gets bonus on Jump checks.
 
@@ -1300,21 +1302,21 @@ Resist Energy: Ignores 10 (or more) points of damage/attack from specified energ
 
 Speak with Animals: You can communicate with animals.
 
-Summon Nature’s Ally I: Calls animal to fight for you.
+Summon Nature's Ally I: Calls animal to fight for you.
 
 2ND-LEVEL RANGER SPELLS
 
 Barkskin: Grants +2 (or higher) enhancement to natural armor.
 
-Bear’s Endurance: Subject gains +4 to Con for 1 min./level.
+Bear's Endurance: Subject gains +4 to Con for 1 min./level.
 
-Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
 
 Cure Light Wounds: Cures 1d8 damage +1/level (max +5).
 
 Hold Animal: Paralyzes one animal for 1 round/level.
 
-Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+Owl's Wisdom: Subject gains +4 to Wis for 1 min./level.
 
 Protection from Energy: Absorb 12 points/level of damage from one kind of energy.
 
@@ -1324,7 +1326,7 @@ Speak with Plants: You can talk to normal plants and plant creatures.
 
 Spike Growth: Creatures in area take 1d4 damage, may be slowed.
 
-Summon Nature’s Ally II: Calls animal to fight for you.
+Summon Nature's Ally II: Calls animal to fight for you.
 
 Wind Wall: Deflects arrows, smaller creatures, and gases.
 
@@ -1350,7 +1352,7 @@ Remove Disease: Cures all diseases affecting subject.
 
 Repel Vermin: Insects, spiders, and other vermin stay 10 ft. away.
 
-Summon Nature’s Ally III: Calls animal to fight for you.
+Summon Nature's Ally III: Calls animal to fight for you.
 
 Tree Shape: You look exactly like a tree for 1 hour/level.
 
@@ -1368,7 +1370,7 @@ Freedom of Movement: Subject moves normally despite impediments.
 
 Nondetection: Hides subject from divination, scrying.
 
-Summon Nature’s Ally IV: Calls animal to fight for you.
+Summon Nature's Ally IV: Calls animal to fight for you.
 
 Tree Stride: Step from one tree to another far away.
 
@@ -1409,12 +1411,12 @@ Ray of Frost: Ray deals 1d3 cold damage.
 //Illusion
 
 Ghost Sound: Figment sounds.
-Necromancy
+//Necromancy
 
 Disrupt Undead: Deals 1d6 damage to one undead.
 
 Touch of Fatigue: Touch attack fatigues target.
-Transmutation
+//Transmutation
 
 Mage Hand: 5-pound telekinesis.
 
@@ -1494,7 +1496,7 @@ Color Spray: Knocks unconscious, blinds, and/or stuns 1d6 weak creatures.
 
 Disguise Self: Changes your appearance.
 
-Magic Aura: Alters object’s magic aura.
+Magic Aura: Alters object's magic aura.
 
 Silent Image: Creates minor illusion of your design.
 
@@ -1554,7 +1556,7 @@ Web: Fills 20-ft.-radius spread with sticky spiderwebs.
 
 //Divination
 
-Detect Thoughts: Allows “listening” to surface thoughts.
+Detect Thoughts: Allows "listening" to surface thoughts.
 
 Locate Object: Senses direction toward object (specific or type).
 
@@ -1598,7 +1600,7 @@ Mirror Image: Creates decoy duplicates of you (1d4 +1 per three levels, max 8).
 
 Misdirection: Misleads divinations for one creature or object.
 
-Phantom Trap: Makes item seem trapped.
+Leomund's Trap: Makes item seem trapped.
 
 //Necromancy
 
@@ -1618,23 +1620,23 @@ Spectral Hand: Creates disembodied glowing hand to deliver touch attacks.
 
 Alter Self: Assume form of a similar creature.
 
-Bear’s Endurance: Subject gains +4 to Con for 1 min./level.
+Bear's Endurance: Subject gains +4 to Con for 1 min./level.
 
-Bull’s Strength: Subject gains +4 to Str for 1 min./level.
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
 
-Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
 
 Darkvision: See 60 ft. in total darkness.
 
-Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Eagle's Splendor: Subject gains +4 to Cha for 1 min./level.
 
-Fox’s Cunning: Subject gains +4 Int for 1 min./level.
+Fox's Cunning: Subject gains +4 Int for 1 min./level.
 
 Knock: Opens locked or magically sealed door.
 
 Levitate: Subject moves up and down at your direction.
 
-Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+Owl's Wisdom: Subject gains +4 to Wis for 1 min./level.
 
 Pyrotechnics: Turns fire into blinding light or choking smoke.
 
@@ -1734,7 +1736,7 @@ Gaseous Form: Subject becomes insubstantial and can fly slowly.
 
 Haste: One creature/level moves faster, +1 on attack rolls, AC, and Reflex saves.
 
-Keen Edge: Doubles normal weapon’s threat range.
+Keen Edge: Doubles normal weapon's threat range.
 
 Magic Weapon, Greater: +1/four levels (max +5).
 
@@ -1796,7 +1798,7 @@ Geas, Lesser: Commands subject of 7 HD or less.
 
 //Evocation
 
-Fire Shield: Creatures attacking you take fire damage; you’re protected from heat or cold.
+Fire Shield: Creatures attacking you take fire damage; you're protected from heat or cold.
 
 Ice Storm: Hail deals 5d6 damage in cylinder 40 ft. across.
 
@@ -1854,13 +1856,13 @@ Break Enchantment: Frees subjects from enchantments, alterations, curses, and pe
 
 Dismissal: Forces a creature to return to native plane.
 
-Mage’s Private Sanctum: Prevents anyone from viewing or scrying an area for 24 hours.
+Mage's Private Sanctum: Prevents anyone from viewing or scrying an area for 24 hours.
 
 //Conjuration
 
 Cloudkill: Kills 3 HD or less; 4–6 HD save or die, 6+ HD take Con damage.
 
-Mage’s Faithful Hound: Phantom dog can guard, attack.
+Mage's Faithful Hound: Phantom dog can guard, attack.
 
 Major Creation: As minor creation, plus stone and metal.
 
@@ -1886,7 +1888,7 @@ Telepathic Bond: Link lets allies communicate.
 
 Dominate Person: Controls humanoid telepathically.
 
-Feeblemind: Subject’s Int and Cha drop to 1.
+Feeblemind: Subject's Int and Cha drop to 1.
 
 Hold Monster: As hold person, but any creature.
 
@@ -1964,7 +1966,7 @@ Globe of Invulnerability: As lesser globe of invulnerability, plus 4th-level spe
 
 Guards and Wards: Array of magic effects protect area.
 
-Repulsion: Creatures can’t approach you.
+Repulsion: Creatures can't approach you.
 
 //Conjuration
 
@@ -2030,27 +2032,27 @@ Undeath to Death: Destroys 1d4/level HD of undead (max 20d4).
 
 //Transmutation
 
-Bear’s Endurance, Mass: As bear’s endurance, affects one subject/level.
+Bear's Endurance, Mass: As bear's endurance, affects one subject/level.
 
-Bull’s Strength, Mass: As bull’s strength, affects one subject/ level.
+Bull's Strength, Mass: As bull's strength, affects one subject/ level.
 
-Cat’s Grace, Mass: As cat’s grace, affects one subject/level.
+Cat's Grace, Mass: As cat's grace, affects one subject/level.
 
 Control Water: Raises or lowers bodies of water.
 
 Disintegrate: Makes one creature or object vanish.
 
-Eagle’s Splendor, Mass: As eagle’s splendor, affects one subject/level.
+Eagle's Splendor, Mass: As eagle's splendor, affects one subject/level.
 
 Flesh to Stone: Turns subject creature into statue.
 
-Fox’s Cunning, Mass: As fox’s cunning, affects one subject/ level.
+Fox's Cunning, Mass: As fox's cunning, affects one subject/ level.
 
-Mage’s Lucubration: Wizard only. Recalls spell of 5th level or lower.
+Mage's Lucubration: Wizard only. Recalls spell of 5th level or lower.
 
 Move Earth: Digs trenches and build hills.
 
-Owl’s Wisdom, Mass: As owl’s wisdom, affects one subject/ level.
+Owl's Wisdom, Mass: As owl's wisdom, affects one subject/ level.
 
 Stone to Flesh: Restores petrified creature.
 
@@ -2070,7 +2072,7 @@ Spell Turning: Reflect 1d4+6 spell levels back at caster.
 
 Instant Summons: Prepared object appears in your hand.
 
-Mage’s Magnificent Mansion: Door leads to extradimensional mansion.
+Mage's Magnificent Mansion: Door leads to extradimensional mansion.
 
 Phase Door: Creates an invisible passage through wood or stone.
 
@@ -2108,7 +2110,7 @@ Forcecage: Cube or cage of force imprisons all inside.
 
 Grasping Hand: Hand provides cover, pushes, or grapples.
 
-Mage’s Sword: Floating magic blade strikes opponents.
+Mage's Sword: Floating magic blade strikes opponents.
 
 Prismatic Spray: Rays hit subjects with variety of effects.
 
@@ -2124,7 +2126,7 @@ Simulacrum: Creates partially real double of a creature.
 
 //Necromancy
 
-Control Undead: Undead don’t attack you while under your command.
+Control Undead: Undead don't attack you while under your command.
 
 Finger of Death: Kills one subject.
 
@@ -2154,7 +2156,7 @@ Dimensional Lock: Teleportation and interplanar travel blocked for one day/level
 
 Mind Blank: Subject is immune to mental/emotional magic and scrying.
 
-Prismatic Wall: Wall’s colors have array of effects.
+Prismatic Wall: Wall's colors have array of effects.
 
 Protection from Spells: Confers +8 resistance bonus.
 
@@ -2242,7 +2244,7 @@ Freedom: Releases creature from imprisonment.
 
 Imprisonment: Entombs subject beneath the earth.
 
-Mage’s Disjunction: Dispels magic, disenchants magic items.
+Mage's Disjunction: Dispels magic, disenchants magic items.
 
 Prismatic Sphere: As prismatic wall, but surrounds on all sides.
 
@@ -2258,7 +2260,7 @@ Teleportation Circle: Circle teleports any creature inside to designated spot.
 
 //Divination
 
-Foresight: “Sixth sense” warns of impending danger.
+Foresight: "Sixth sense" warns of impending danger.
 
 //Enchantment
 
@@ -2273,7 +2275,7 @@ Power Word Kill: Kills one creature with 100 hp or less.
 Crushing Hand: Large hand provides cover, pushes, or crushes your foes.
 
 Meteor Swarm: Four exploding spheres each deal 6d6 fire damage.
-Illusion
+//Illusion
 
 Shades: As shadow conjuration, but up to 8th level and 80% real.
 
@@ -2321,7 +2323,7 @@ Summon Monster I: Calls extraplanar creature to fight for you. (Only evil monste
 
 2ND-LEVEL BLACKGUARD SPELLS
 
-Bull’s Strength: Subject gains +4 to Str for 1 min./level.
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
 
 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).
 
@@ -2329,7 +2331,7 @@ Darkness: 20-ft. radius of supernatural shadow.
 
 Death Knell: Kills dying creature; you gain 1d8 temporary hp, +2 to Str, and +1 level.
 
-Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Eagle's Splendor: Subject gains +4 to Cha for 1 min./level.
 
 Inflict Moderate Wounds: Touch attack, 2d8 damage +1/level (max +10).
 
@@ -2387,11 +2389,11 @@ True Strike: +20 on your next attack roll.
 
 Alter Self: Assume form of a similar creature.
 
-Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
 
 Darkness: 20-ft. radius of supernatural shadow.
 
-Fox’s Cunning: Subject gains +4 to Int for 1 min./level.
+Fox's Cunning: Subject gains +4 to Int for 1 min./level.
 
 Illusory Script: Only intended reader can decipher.
 
@@ -2431,9 +2433,284 @@ Invisibility, Greater: As invisibility, but subject can attack and stay invisibl
 
 Locate Creature: Indicates direction to familiar creature.
 
-Modify Memory: Changes 5 minutes of subject’s memories.
+Modify Memory: Changes 5 minutes of subject's memories.
 
 Poison: Touch deals 1d10 Con damage, repeats in 1 min.
 
+MAGEWRIGHT SPELLS
 
+0-LEVEL MAGEWRIGHT SPELLS
 
+Arcane Mark: Inscribes a personal rune (visible or invisible).
+
+Detect Magic: Detects spells and magic items within 60 ft.
+
+Light: Object shines like a torch.
+
+Mage Hand: 5-pound telekinesis.
+
+Mending: Makes minor repairs on an object.
+
+Message: Whispered conversation at distance.
+
+Open/Close: Opens or closes small or light things.
+
+Prestidigitation: Performs minor tricks.
+
+Read Magic: Read scrolls and spellbooks.
+
+1ST-LEVEL MAGEWRIGHT SPELLS
+
+Alarm: Wards an area for 2 hours/level.
+
+Animate Rope: Makes a rope move at your command.
+
+Comprehend Languages: You understand all spoken and written languages.
+
+Erase: Mundane or magical writing vanishes.
+
+Grease: Makes 10-ft. square or one object slippery.
+
+Hold Portal: Holds door shut.
+
+Identify: Determines properties of magic item.
+
+Mount: Summons riding horse for 2 hours/level.
+
+Magic Aura: Alters object's magic aura.
+
+Floating Disk: Creates 3-ft.-diameter horizontal disk that holds 100 lb./level.
+
+Unseen Servant: Invisible force obeys your commands.
+
+2ND-LEVEL MAGEWRIGHT SPELLS
+
+Arcane Lock: Magically locks a portal or chest.
+
+Augury: Learns whether an action will be good or bad.
+
+Leomund's Trap: Makes item seem trapped.
+
+Locate Object: Senses direction toward object (specific or type).
+
+Magic Mouth: Speaks once when triggered.
+
+Make Whole: Repairs an object.
+
+Misdirection: Misleads divinations for one creature or object.
+
+Obscure Object: Masks object against scrying.
+
+Whispering Wind: Sends a short message 1 mile/level.
+
+3RD-LEVEL MAGEWRIGHT SPELLS
+
+Arcane Sight: Magical auras become visible to you.
+
+Clairaudience/Clairvoyance: Hear or see at a distance for 1 min./level.
+
+Daylight: 60-ft. radius of bright light.
+
+Dispel Magic: Cancels spells and magical effects.
+
+Explosive Runes: Deals 6d6 damage when read.
+
+Gentle Repose: Preserves one corpse.
+
+Glyph of Warding: Inscription harms those who pass it.
+
+Illusory Script: Only intended reader can decipher.
+
+Nondetection: Hides subject from divination, scrying.
+
+Phantom Steed: Magic horse appears for 1 hour/level.
+
+Secret Page: Changes one page to hide its real content.
+
+Sepia Snake Sigil: Creates text symbol that immobilizes reader.
+
+Tongues: Speak any language.
+
+4TH-LEVEL MAGEWRIGHT SPELLS
+
+Animate Dead: Creates undead skeletons and zombies.
+
+Detect Scrying: Alerts you of magical eavesdropping.
+
+Divination: Provides useful advice for specific proposed actions.
+
+Fire Trap: Opened object deals 1d4 +1/level damage.
+
+Hardening: Increases hardness of target by 1 per 2 levels.
+
+Illusory Wall: Wall, floor, or ceiling looks real, but anything can pass through.
+
+Imbue with Spell Ability: Transfer spells to subject.
+
+Locate Creature: Indicates direction to familiar creature.
+
+Minor Creation: Creates one cloth or wood object.
+
+Remove Curse: Frees object or person from curse.
+
+Scrying: Spies on subject from a distance.
+
+Stone Shape: Sculpts stone into any shape.
+
+5TH-LEVEL MAGEWRIGHT SPELLS
+
+Contact Other Plane: Lets you ask question of extraplanar entity.
+
+Fabricate: Transforms raw materials into finished items.
+
+False Vision: Fools scrying with an illusion.
+
+Secret Chest: Hides expensive chest on Ethereal Plane; you retrieve it at will.
+
+Major Creation: As minor creation, plus stone and metal.
+
+Permanency: Makes certain spells permanent.
+
+Sending: Delivers short message anywhere, instantly.
+
+Symbol of Pain: Triggered rune wracks nearby creatures with pain.
+
+Symbol of Sleep: Triggered rune puts nearby creatures into catatonic slumber.
+
+Wall of Stone: Creates a stone wall that can be shaped.
+
+ADEPT SPELLS
+
+0-LEVEL ADEPT SPELLS
+
+Create Water: Creates 2 gallons/level of pure water.
+
+Cure Minor Wounds: Cures 1 point of damage.
+
+Detect Magic: Detects spells and magic items within 60 ft.
+
+Ghost Sound: Figment sounds.
+
+Guidance: +1 on one attack roll, saving throw, or skill check.
+
+Light: Object shines like a torch.
+
+Mending: Makes minor repairs on an object.
+
+Purify Food and Drink: Purifies 1 cu. ft./level of food or water.
+
+Read Magic: Read scrolls and spellbooks.
+
+Touch of Fatigue: Touch attack fatigues target.
+
+1ST-LEVEL ADEPT SPELLS
+
+Bless: Allies gain +1 on attack rolls and saves against fear.
+
+Burning Hands: 1d4/level fire damage (max 5d4).
+
+Cause Fear: One creature of 5 HD or less flees for 1d4 rounds.
+
+Command: One subject obeys selected command for 1 round.
+
+Comprehend Languages: You understand all spoken and written languages.
+
+Cure Light Wounds: Cures 1d8 damage +1/level (max +5).
+
+Detect Chaos/Evil/Good/Law: Reveals creatures, spells, or objects of selected alignment.
+
+Endure Elements: Exist comfortably in hot or cold environments.
+
+Obscuring Mist: Fog surrounds you.
+
+Protection from Chaos/Evil/Good/Law: +2 to AC and saves, counter mind control, hedge out elementals and outsiders.
+
+Sleep: Puts 4 HD of creatures into magical slumber.
+
+2ND-LEVEL ADEPT SPELLS
+
+Aid: +1 on attack rolls and saves against fear, 1d8 temporary hp +1/level (max +10).
+
+Animal Trance: Fascinates 2d6 HD of animals.
+
+Bear's Endurance: Subject gains +4 to Con for 1 min./level.
+
+Bull's Strength: Subject gains +4 to Str for 1 min./level.
+
+Cat's Grace: Subject gains +4 to Dex for 1 min./level.
+
+Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).
+
+Darkness: 20-ft. radius of supernatural shadow.
+
+Delay Poison: Stops poison from harming subject for 1 hour/level.
+
+Invisibility: Subject is invisible for 1 min./level or until it attacks.
+
+Mirror Image: Creates decoy duplicates of you (1d4 +1 per three levels, max 8).
+
+Resist Energy: Ignores 10 (or more) points of damage/attack from specified energy type.
+
+Scorching Ray: Ranged touch attack deals 4d6 fire damage, +1 ray/four levels (max 3).
+
+See Invisibility: Reveals invisible creatures or objects.
+
+Web: Fills 20-ft.-radius spread with sticky spiderwebs.
+
+3RD-LEVEL ADEPT SPELLS
+
+Animate Dead: Creates undead skeletons and zombies.
+
+Bestow Curse: –6 to an ability score; –4 on attack rolls, saves, and checks; or 50% chance of losing each action.
+
+Contagion: Infects subject with chosen disease.
+
+Continual Flame: Makes a permanent, heatless torch.
+
+Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).
+
+Daylight: 60-ft. radius of bright light.
+
+Deeper Darkness: Object sheds supernatural shadow in 60-ft. radius.
+
+Lightning Bolt: Electricity deals 1d6/level damage.
+
+Neutralize Poison: Immunizes subject against poison, detoxifies venom in or on subject.
+
+Remove Curse: Frees object or person from curse.
+
+Remove Disease: Cures all diseases affecting subject.
+
+Tongues: Speak any language.
+
+4TH-LEVEL ADEPT SPELLS
+
+Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).
+
+Minor Creation: Creates one cloth or wood object.
+
+Polymorph: Gives one willing subject a new form.
+
+Restoration: Restores level and ability score drains.
+
+Stoneskin: Ignore 10 points of damage per attack.
+
+Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.
+
+5TH-LEVEL ADEPT SPELLS
+
+Baleful Polymorph: Transforms subject into harmless animal.
+
+Break Enchantment: Frees subjects from enchantments, alterations, curses, and petrification.
+
+Commune: Deity answers one yes-or-no question/level.
+
+Heal: Cures 10 points/level of damage, all diseases and mental conditions.
+
+Major Creation: As minor creation, plus stone and metal.
+
+Raise Dead: Restores life to subject who died as long as one day/level ago.
+
+True Seeing: Lets you see all things as they really are.
+
+Wall of Stone: Creates a stone wall that can be shaped.

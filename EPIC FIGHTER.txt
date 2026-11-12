@@ -11,7 +11,7 @@ Table: THE EPIC FIGHTER
 Fighter Level 	Special
 21st 	-
 22nd 	Bonus feat
-23rd 	.
+23rd 	-
 24th 	Bonus feat
 25th 	-
 26th 	Bonus feat

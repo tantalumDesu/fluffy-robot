@@ -1,10 +1,10 @@
 Prestige Class DWARVEN DEFENDER
 
-The defender is a sponsored champion of a dwarven cause, a dwarf aristocrat, a dwarven deity, or the dwarven way of life. As the name might imply, this character is a skilled combatant trained in the arts of defense. A line of dwarven defenders is a far better defense than a 10foot-thick wall of stone, and much more dangerous.
+The defender is a sponsored champion of a dwarven cause, a dwarf aristocrat, a dwarven deity, or the dwarven way of life. As the name might imply, this character is a skilled combatant trained in the arts of defense. A line of dwarven defenders is a far better defense than a 10-foot-thick wall of stone, and much more dangerous.
 
 Most dwarven defenders are fighters, paladins, rangers, or clerics, although ex-barbarians, sorcerers, wizards, and druids can certainly all benefit from the defensive capabilities of this prestige class. Rogues, bards, and monks usually depend too heavily on mobility to use the abilities of the dwarven defender class to their fullest.
 
-NPC dwarven defenders are usually soldiers in a dwarven citadel, segregated into their own units separate from regular warriors or fighters. Occasionally a lone, wandering dwarven defender can be encountered on some mission, although he usually guards his words so closely that it’s difficult to learn what his quest actually entails.
+NPC dwarven defenders are usually soldiers in a dwarven citadel, segregated into their own units separate from regular warriors or fighters. Occasionally a lone, wandering dwarven defender can be encountered on some mission, although he usually guards his words so closely that it's difficult to learn what his quest actually entails.
 
 Hit Die: d12.
 Requirements
@@ -20,7 +20,7 @@ Base Attack Bonus: +7.
 Feats: Dodge, Endurance, Toughness.
 Class Skills
 
-The defender’s class skills (and the key ability for each skill) are Craft (Int), Listen (Wis), Sense Motive (Wis), and Spot (Wis).
+The defender's class skills (and the key ability for each skill) are Craft (Int), Listen (Wis), Sense Motive (Wis), and Spot (Wis).
 
 Skill Points at Each Level: 2 + Int modifier.
 
@@ -44,7 +44,7 @@ AC Bonus (Ex): The dwarven defender receives a dodge bonus to Armor Class that s
 
 Weapon and Armor Proficiency: A dwarven defender is proficient with all simple and martial weapons, all types of armor, and shields.
 
-Defensive Stance: When he adopts a defensive stance, a defender gains phenomenal strength and durability, but he cannot move from the spot he is defending. He gains +2 to Strength, +4 to Constitution, a +2 resistance bonus on all saves, and a +4 dodge bonus to AC. The increase in Constitution increases the defender’s hit points by 2 points per level, but these hit points go away at the end of the defensive stance when the Constitution score drops back 4 points. These extra hit points are not lost first the way temporary hit points are. While in a defensive stance, a defender cannot use skills or abilities that would require him to shift his position. A defensive stance lasts for a number of rounds equal to 3 + the character’s (newly improved) Constitution modifier. A defender may end his defensive stance voluntarily prior to this limit. At the end of the defensive stance, the defender is winded and takes a –2 penalty to Strength for the duration of that encounter. A defender can only use his defensive stance a certain number of times per day as determined by his level (see Table: The Dwarven Defender). Using the defensive stance takes no time itself, but a defender can only do so during his action.
+Defensive Stance: When he adopts a defensive stance, a defender gains phenomenal strength and durability, but he cannot move from the spot he is defending. He gains +2 to Strength, +4 to Constitution, a +2 resistance bonus on all saves, and a +4 dodge bonus to AC. The increase in Constitution increases the defender's hit points by 2 points per level, but these hit points go away at the end of the defensive stance when the Constitution score drops back 4 points. These extra hit points are not lost first the way temporary hit points are. While in a defensive stance, a defender cannot use skills or abilities that would require him to shift his position. A defensive stance lasts for a number of rounds equal to 3 + the character's (newly improved) Constitution modifier. A defender may end his defensive stance voluntarily prior to this limit. At the end of the defensive stance, the defender is winded and takes a –2 penalty to Strength for the duration of that encounter. A defender can only use his defensive stance a certain number of times per day as determined by his level (see Table: The Dwarven Defender). Using the defensive stance takes no time itself, but a defender can only do so during his action.
 
 Uncanny Dodge (Ex): Starting at 2nd level, a dwarven defender retains his Dexterity bonus to AC (if any) regardless of being caught flat-footed or struck by an invisible attacker. (He still loses any Dexterity bonus to AC if immobilized.)
 

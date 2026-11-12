@@ -29,7 +29,7 @@ Alignment: A cleric's alignment must be within one step of his deity's (that is,
 Hit Die: d8.
 Class Skills
 
-The cleric's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge(arcana) (Int), Knowledge(history) (Int), Knowledge(religion) (Int), Knowledge(the planes) (Int), Profession (Wis), and Spellcraft (Int).
+The cleric's class skills (and the key ability for each skill) are Concentration (Con), Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge (arcana) (Int), Knowledge (history) (Int), Knowledge (religion) (Int), Knowledge (the planes) (Int), Profession (Wis), and Spellcraft (Int).
 
 Skill Points at 1st Level: (2 + Int modifier) x 4.
 
@@ -37,27 +37,27 @@ Skill Points at Each Additional Level: 2 + Int modifier.
 
 Table: The Cleric
 Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day1
+ 	 	 	 	 	 	0 	1st 	2nd 	3rd 	4th 	5th 	6th 	7th 	8th 	9th
 1st 	+0 	+2 	+0 	+2 	Turn or rebuke undead 	3 	1+1 	— 	— 	— 	— 	— 	— 	— 	—
-2nd 	+1 	+3 	+0 	+3 	  	4 	2+1 	— 	— 	— 	— 	— 	— 	— 	—
-3rd 	+2 	+3 	+1 	+3 	  	4 	2+1 	1+1 	— 	— 	— 	— 	— 	— 	—
-4th 	+3 	+4 	+1 	+4 	  	5 	3+1 	2+1 	— 	— 	— 	— 	— 	— 	—
-5th 	+3 	+4 	+1 	+4 	  	5 	3+1 	2+1 	1+1 	— 	— 	— 	— 	— 	—
-6th 	+4 	+5 	+2 	+5 	  	5 	3+1 	3+1 	2+1 	— 	— 	— 	— 	— 	—
-7th 	+5 	+5 	+2 	+5 	  	6 	4+1 	3+1 	2+1 	1+1 	— 	— 	— 	— 	—
-8th 	+6/+1 	+6 	+2 	+6 	  	6 	4+1 	3+1 	3+1 	2+1 	— 	— 	— 	— 	—
-9th 	+6/+1 	+6 	+3 	+6 	  	6 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	— 	— 	—
-10th 	+7/+2 	+7 	+3 	+7 	  	6 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	— 	— 	—
-11th 	+8/+3 	+7 	+3 	+7 	  	6 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	— 	—
-12th 	+9/+4 	+8 	+4 	+8 	  	6 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	— 	—
-13th 	+9/+4 	+8 	+4 	+8 	  	6 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	—
-14th 	+10/+5 	+9 	+4 	+9 	  	6 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	—
-15th 	+11/+6/+1 	+9 	+5 	+9 	  	6 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	—
-16th 	+12/+7/+2 	+10 	+5 	+10 	  	6 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	—
-17th 	+12/+7/+2 	+10 	+5 	+10 	  	6 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1
-18th 	+13/+8/+3 	+11 	+6 	+11 	  	6 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1
-19th 	+14/+9/+4 	+11 	+6 	+11 	  	6 	5+1 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1
-20th 	+15/+10/+5 	+12 	+6 	+12 	
-	6 	5+1 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	4+1 	4+1
+2nd 	+1 	+3 	+0 	+3 	- 	4 	2+1 	— 	— 	— 	— 	— 	— 	— 	—
+3rd 	+2 	+3 	+1 	+3 	- 	4 	2+1 	1+1 	— 	— 	— 	— 	— 	— 	—
+4th 	+3 	+4 	+1 	+4 	- 	5 	3+1 	2+1 	— 	— 	— 	— 	— 	— 	—
+5th 	+3 	+4 	+1 	+4 	- 	5 	3+1 	2+1 	1+1 	— 	— 	— 	— 	— 	—
+6th 	+4 	+5 	+2 	+5 	- 	5 	3+1 	3+1 	2+1 	— 	— 	— 	— 	— 	—
+7th 	+5 	+5 	+2 	+5 	- 	6 	4+1 	3+1 	2+1 	1+1 	— 	— 	— 	— 	—
+8th 	+6/+1 	+6 	+2 	+6 	- 	6 	4+1 	3+1 	3+1 	2+1 	— 	— 	— 	— 	—
+9th 	+6/+1 	+6 	+3 	+6 	- 	6 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	— 	— 	—
+10th 	+7/+2 	+7 	+3 	+7 	- 	6 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	— 	— 	—
+11th 	+8/+3 	+7 	+3 	+7 	- 	6 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	— 	—
+12th 	+9/+4 	+8 	+4 	+8 	- 	6 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	— 	—
+13th 	+9/+4 	+8 	+4 	+8 	- 	6 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	— 	—
+14th 	+10/+5 	+9 	+4 	+9 	- 	6 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	— 	—
+15th 	+11/+6/+1 	+9 	+5 	+9 	- 	6 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1 	—
+16th 	+12/+7/+2 	+10 	+5 	+10 	- 	6 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1 	—
+17th 	+12/+7/+2 	+10 	+5 	+10 	- 	6 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	2+1 	1+1
+18th 	+13/+8/+3 	+11 	+6 	+11 	- 	6 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1 	2+1
+19th 	+14/+9/+4 	+11 	+6 	+11 	- 	6 	5+1 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	3+1 	3+1
+20th 	+15/+10/+5 	+12 	+6 	+12 	- 	6 	5+1 	5+1 	5+1 	5+1 	5+1 	4+1 	4+1 	4+1 	4+1
 1 In addition to the stated number of spells per day for 1st- through 9th-level spells, a cleric gets a domain spell for each spell level, starting at 1st. The "+1" in the entries on this table represents that spell. Domain spells are in addition to any bonus spells the cleric may receive for having a high Wisdom score.
 
 Class Features
@@ -99,6 +99,7 @@ A good cleric (or a neutral cleric who worships a good deity) can turn or destro
 A cleric may attempt to turn undead a number of times per day equal to 3 + his Charisma modifier. A cleric with 5 or more ranks in Knowledge (religion) gets a +2 bonus on turning checks against undead.
 
 Bonus Languages: A cleric's bonus language options include Celestial, Abyssal, and Infernal (the languages of good, chaotic evil, and lawful evil outsiders, respectively). These choices are in addition to the bonus languages available to the character because of his race.
+
 Ex-Clerics
 
-A cleric who grossly violates the code of conduct required by his god loses all spells and class features, except for armor and shield proficiencies and proficiency with simple weapons. He cannot thereafter gain levels as a cleric of that god until he atones (see the atonement spell description).
+A cleric who grossly violates the code of conduct required by his god loses all spells and class features, except for armor and shield proficiencies and proficiency with simple weapons. He cannot thereafter gain levels as a cleric of that god until he atones (see the atonement spell description).#

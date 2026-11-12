@@ -18,7 +18,7 @@ Skills: Perform 3 ranks, Tumble 5 ranks.
 Feats: Dodge, Mobility, Weapon Finesse.
 Class Skills
 
-The duelist’s class skills (and the key ability for each skill) are Balance (Dex), Bluff (Cha), Escape Artist (Dex), Jump (Str), Listen (Wis), Perform (Cha), Sense Motive (Wis), Spot (Wis), and Tumble (Dex).
+The duelist's class skills (and the key ability for each skill) are Balance (Dex), Bluff (Cha), Escape Artist (Dex), Jump (Str), Listen (Wis), Perform (Cha), Sense Motive (Wis), Spot (Wis), and Tumble (Dex).
 
 Skill Points at Each Level: 4 + Int modifier.
 
@@ -50,7 +50,7 @@ Grace (Ex): At 4th level, a duelist gains an additional +2 competence bonus on a
 
 Precise Strike (Ex): At 5th level, a duelist gains the ability to strike precisely with a light or one-handed piercing weapon, gaining an extra 1d6 damage added to her normal damage roll.
 
-When making a precise strike, a duelist cannot attack with a weapon in her other hand or use a shield. A duelist’s precise strike only works against living creatures with discernible anatomies. Any creature that is immune to critical hits is not vulnerable to a precise strike, and any item or ability that protects a creature from critical hits also protects a creature from a precise strike. At 10th level, the extra damage on a precise strike increases to +2d6.
+When making a precise strike, a duelist cannot attack with a weapon in her other hand or use a shield. A duelist's precise strike only works against living creatures with discernible anatomies. Any creature that is immune to critical hits is not vulnerable to a precise strike, and any item or ability that protects a creature from critical hits also protects a creature from a precise strike. At 10th level, the extra damage on a precise strike increases to +2d6.
 
 Acrobatic Charge (Ex): At 6th level, a duelist gains the ability to charge in situations where others cannot. She may charge over difficult terrain that normally slows movement. Depending on the circumstance, she may still need to make appropriate checks to successfully move over the terrain.
 
@@ -58,4 +58,3 @@ Elaborate Parry (Ex): At 7th level and higher, if a duelist chooses to fight def
 
 Deflect Arrows: At 9th level, a duelist gains the benefit of the Deflect Arrows feat when using a light or one-handed piercing weapon.
 
-#

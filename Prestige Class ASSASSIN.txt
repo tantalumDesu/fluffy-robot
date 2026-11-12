@@ -24,6 +24,7 @@ Skill Points at Each Level: 4 + Int modifier.
 
 Table: The Assassin
 Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
+ 	 	 	 	 	 	1st 	2nd 	3rd 	4th
 1st 	+0 	+0 	+2 	+0 	Sneak attack +1d6, death attack, poison use, spells 	0 	— 	— 	—
 2nd 	+1 	+0 	+3 	+0 	+1 save against poison, uncanny dodge 	1 	— 	— 	—
 3rd 	+2 	+1 	+3 	+1 	Sneak attack +2d6 	2 	0 	— 	—
@@ -35,6 +36,22 @@ Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Da
 9th 	+6 	+3 	+6 	+3 	Sneak attack +5d6 	3 	3 	3 	2
 10th 	+7 	+3 	+7 	+3 	+5 save against poison 	3 	3 	3 	3
 
+Table: Assassin Spells Known
+
+	Spells Known
+Level 	1st 	2nd 	3rd 	4th
+1st 	2 	— 	— 	—
+2nd 	3 	— 	— 	—
+3rd 	3 	2 	— 	—
+4th 	4 	3 	— 	—
+5th 	4 	3 	2 	—
+6th 	4 	4 	3 	—
+7th 	4 	4 	3 	2
+8th 	4 	4 	4 	3
+9th 	4 	4 	4 	3
+10th 	4 	4 	4 	4
+1 Provided the assassin has sufficient Intelligence to have a bonus spell of this level. This applies to the 2 spells known when a spell level first appears: 1st-level spells at 1st level, 2nd-level spells at 3rd level, 3rd-level spells at 5th level, 4th-level spells at 7th level.
+
 Class Features
 
 All of the following are Class Features of the assassin prestige class.
@@ -43,38 +60,22 @@ Weapon and Armor Proficiency: Assassins are proficient with the crossbow (hand, 
 
 Sneak Attack: This is exactly like the rogue ability of the same name. The extra damage dealt increases by +1d6 every other level (2nd, 4th, 6th, 8th, and 10th). If an assassin gets a sneak attack bonus from another source the bonuses on damage stack.
 
-Death Attack: If an assassin studies his victim for 3 rounds and then makes a sneak attack with a melee weapon that successfully deals damage, the sneak attack has the additional effect of possibly either paralyzing or killing the target (assassin's choice). While studying the victim, the assassin can undertake other actions so long as his attention stays focused on the target and the target does not detect the assassin or recognize the assassin as an enemy. If the victim of such an attack fails a Fortitude save (DC 10 + the assassin's class level + the assassin's Int modifier) against the kill effect, she dies. If the saving throw fails against the paralysis effect, the victim is rendered helpless and unable to act for 1d6 rounds plus 1 round per level of the assassin. If the victim’s saving throw succeeds, the attack is just a normal sneak attack. Once the assassin has completed the 3 rounds of study, he must make the death attack within the next 3 rounds.
+Death Attack: If an assassin studies his victim for 3 rounds and then makes a sneak attack with a melee weapon that successfully deals damage, the sneak attack has the additional effect of possibly either paralyzing or killing the target (assassin's choice). While studying the victim, the assassin can undertake other actions so long as his attention stays focused on the target and the target does not detect the assassin or recognize the assassin as an enemy. If the victim of such an attack fails a Fortitude save (DC 10 + the assassin's class level + the assassin's Int modifier) against the kill effect, she dies. If the saving throw fails against the paralysis effect, the victim is rendered helpless and unable to act for 1d6 rounds plus 1 round per level of the assassin. If the victim's saving throw succeeds, the attack is just a normal sneak attack. Once the assassin has completed the 3 rounds of study, he must make the death attack within the next 3 rounds.
 
 If a death attack is attempted and fails (the victim makes her save) or if the assassin does not launch the attack within 3 rounds of completing the study, 3 new rounds of study are required before he can attempt another death attack.
 
 Poison Use: Assassins are trained in the use of poison and never risk accidentally poisoning themselves when applying poison to a blade.
 
-Spells: Beginning at 1st level, an assassin gains the ability to cast a number of arcane spells. To cast a spell, an assassin must have an Intelligence score of at least 10 + the spell’s level, so an assassin with an Intelligence of 10 or lower cannot cast these spells. Assassin bonus spells are based on Intelligence, and saving throws against these spells have a DC of 10 + spell level + the assassin's Intelligence bonus. When the assassin gets 0 spells per day of a given spell level he gains only the bonus spells he would be entitled to based on his Intelligence score for that spell level.
+Spells: Beginning at 1st level, an assassin gains the ability to cast a number of arcane spells. To cast a spell, an assassin must have an Intelligence score of at least 10 + the spell's level, so an assassin with an Intelligence of 10 or lower cannot cast these spells. Assassin bonus spells are based on Intelligence, and saving throws against these spells have a DC of 10 + spell level + the assassin's Intelligence bonus. When the assassin gets 0 spells per day of a given spell level he gains only the bonus spells he would be entitled to based on his Intelligence score for that spell level.
 
 Upon reaching 6th level, at every even-numbered level after that (8th and 10th), an assassin can choose to learn a new spell in place of one he already knows. The new spell's level must be the same as that of the spell being exchanged, and it must be at least two levels lower than the highest-level assassin spell the assassin can cast. An assassin may swap only a single spell at any given level, and must choose whether or not to swap the spell at the same time that he gains new spells known for that level.
-
-Table: Assassin Spells Known
-
-	Spells Known
-Level 	1st 	2nd 	3rd 	4th
-1st 	21 	— 	— 	—
-2nd 	3 	— 	— 	—
-3rd 	3 	21 	— 	—
-4th 	4 	3 	— 	—
-5th 	4 	3 	21 	—
-6th 	4 	4 	3 	—
-7th 	4 	4 	3 	21
-8th 	4 	4 	4 	3
-9th 	4 	4 	4 	3
-10th 	4 	4 	4 	4
-1 Provided the assassin has sufficient Intelligence to have a bonus spell of this level.
 
 Save Bonus against Poison: The assassin gains a natural saving throw bonus to all poisons gained at 2nd level that increases by +1 for every two additional levels the assassin gains. This is a bonus to the Fortitude saving throw to resist poison.
 
 Table: Poisons
 Poison	Type and DC to Resist	Initial Damage/Drain	Secondary Damage	Price	DC to Create
 Nitharit	Contact DC 13	0	3d6 Con	650 gp	20
-Gorgon’s hair	Contact DC 16	2d6 Str	1d4 Str	300 gp	18
+Gorgon's hair	Contact DC 16	2d6 Str	1d4 Str	300 gp	18
 Sassone leaf residue	Contact DC 16	2d12 hp	1d6 Con	300 gp	20
 Malyss root paste	Contact DC 16	1 Dex	2d4 Dex	500 gp	20
 Terinav root	Contact DC 16	1d6 Dex	2d6 Dex	750 gp	25
@@ -90,7 +91,7 @@ Dark reaver powder	Ingested DC 18	2d6 Con	1d6 Con + 1d6 Str	300 gp	25
 Ungol dust	Inhaled DC 15	1 Cha	1d6 Cha + 1 Cha Drain	1,000 gp	20
 Insanity mist	Inhaled DC 15	1d4 Wis	2d6 Wis	1,500 gp	20
 Burnt othur fumes	Inhaled DC 18	1 Con Drain	3d6 Con	2,100 gp	25
-Siren’s breath	Inhaled DC 18	Special	Special	300 gp	16
+Siren's breath	Inhaled DC 18	Special	Special	300 gp	16
 Small centipede poison	Injury DC 10	1d2 Dex	1d2 Dex	90 gp	15
 Black adder venom	Injury DC 12	1d6 Con	1d6 Con	120 gp	15
 Bloodroot	Injury DC 12	0	1d4 Con + 1d3 Wis	100 gp	15
@@ -101,7 +102,7 @@ Blue whinnis	Injury DC 14	1 Con	Unconsciousness	120 gp	15
 Large scorpion venom	Injury DC 14	1d6 Str	1d6 Str	200 gp	20
 Giant wasp poison	Injury DC 14	1d6 Dex	1d6 Dex	210 gp	20
 Slow death	Injury DC 14	1d6 hp/round	0	250 gp	19
-Zealot’s blade	Injury DC 14	1d4 Con	1d4 Con	350 gp	19
+Zealot's blade	Injury DC 14	1d4 Con	1d4 Con	350 gp	19
 Salvo	Injury DC 15	1d4 random ability	1d4 random ability	100 gp	12
 Elemental rime	Injury DC 16	1d4 Dex plus vulnerability to fire	1d4 Dex	200 gp	18
 Shadow essence	Injury DC 17	1 Str Drain	2d6 Str	250 gp	20

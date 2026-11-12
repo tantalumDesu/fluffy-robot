@@ -17,6 +17,7 @@ Skill Points at Each Additional Level: 2 + Int modifier.
 
 Table: The Magewright
 NPC Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
+ 	 	 	 	 	 	0 	1st 	2nd 	3rd 	4th 	5th
 1st 	+0 	+0 	+0 	+2 	Spell mastery 	3 	1 	— 	— 	— 	—
 2nd 	+1 	+0 	+0 	+3 	 	3 	1 	— 	— 	— 	—
 3rd 	+1 	+1 	+1 	+3 	 	3 	2 	— 	— 	— 	—
@@ -36,7 +37,7 @@ NPC Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells pe
 17th 	+8/+3 	+5 	+5 	+10 	 	3 	3 	3 	3 	2 	1
 18th 	+9/+4 	+6 	+6 	+11 	 	3 	3 	3 	3 	2 	1
 19th 	+9/+4 	+6 	+6 	+11 	 	3 	3 	3 	3 	3 	2
-20th 	+10/+5 	+6 	+6 	+12 	Spell mastery 	3 	3 	3 	3 	2 	2
+20th 	+10/+5 	+6 	+6 	+12 	Spell mastery 	3 	3 	3 	3 	3 	2
 
 Class Features
 
@@ -51,13 +52,13 @@ The DC for a saving throw against a magewright's spell is 10 + spell level + the
 Spell Mastery: A magewright prepares spells as a wizard does, but does not need a spellbook to do so. Rather, a magewright's training emphasizes a small number of spells to such a great extent that he learns to prepare them without referring to a spellbook. A magewright begins play familiar with a number of spells (of any level he can cast) equal to his Intelligence modifier, exactly as though he had taken the Spell Mastery feat. Every time he gains access to a new spell level, and again at 20th level, he learns a number of new spells equal to his current Intelligence modifier, plus one 0-level spell.
 
 For example, a 1st-level magewright with an Intelligence of 15 knows two spells, and might choose mending and magecraft. When he reaches 4th level, he increases his Intelligence to 16 and learns three more spells: detect magic, unseen servant, and make whole. At 8th level, he increases his Intelligence to 17 (which does not improve his Intelligence modifier) and learns three more spells: arcane lock, explosive runes, and glyph of warding.
-Magewright Spell List
+Magewright Spells
 
 Magewright choose their spells from the following list.
 
 0 Level: Arcane mark, detect magic, light, mage hand, mending, message, open/close, prestidigitation, read magic.
 
-1st Level: Alarm, animate rope, comprehend languages, erase, grease, hold portal, identify, magecraft, mount, Nystul's magic aura, Tenser's floating disk, unseen servant.
+1st Level: Alarm, animate rope, comprehend languages, erase, grease, hold portal, identify, mount, Nystul's magic aura, Tenser's floating disk, unseen servant.
 
 2nd Level: Arcane lock, augury, Leomund's trap, locate object, magic mouth, make whole, misdirection, obscure object, whispering wind.
 

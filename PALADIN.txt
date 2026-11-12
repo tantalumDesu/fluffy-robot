@@ -33,6 +33,7 @@ Skill Points at Each Additional Level: 2 + Int modifier.
 
 Table: The Paladin
 Level 	Base Attack Bonus 	Fort Save 	Ref Save 	Will Save 	Special 	Spells per Day
+ 	 	 	 	 	 	1st 	2nd 	3rd 	4th
 1st 	+1 	+2 	+0 	+0 	Aura of good, detect evil, smite evil 1/day 	— 	— 	— 	—
 2nd 	+2 	+3 	+0 	+0 	Divine grace, lay on hands 	— 	— 	— 	—
 3rd 	+3 	+3 	+1 	+1 	Aura of courage, divine health 	— 	— 	— 	—
@@ -99,17 +100,21 @@ Each time the mount is called, it appears in full health, regardless of any dama
 Should the paladin's mount die, it immediately disappears, leaving behind any equipment it was carrying. The paladin may not summon another mount for thirty days or until she gains a paladin level, whichever comes first, even if the mount is somehow returned from the dead. During this thirty-day period, the paladin takes a -1 penalty on attack and weapon damage rolls.
 
 Remove Disease (Sp): At 6th level, a paladin can produce a remove disease effect, as the spell, once per week. She can use this ability one additional time per week for every three levels after 6th (twice per week at 9th, three times at 12th, and so forth).
+
 Code of Conduct
 
 A paladin must be of lawful good alignment and loses all class abilities if she ever willingly commits an evil act. Additionally, a paladin's code requires that she respect legitimate authority, act with honor (not lying, not cheating, not using poison, and so forth), help those in need (provided they do not use the help for evil or chaotic ends), and punish those who harm or threaten innocents.
+
 Associates
 
 While she may adventure with characters of any good or neutral alignment, a paladin will never knowingly associate with evil characters, nor will she continue an association with someone who consistently offends her moral code. A paladin may accept only henchmen, followers, or cohorts who are lawful good.
+
 Ex-Paladins
 
 A paladin who ceases to be lawful good, who willfully commits an evil act, or who grossly violates the code of conduct loses all paladin spells and abilities (including the service of the paladin's mount, but not weapon, armor, and shield proficiencies). She may not progress any farther in levels as a paladin. She regains her abilities and advancement potential if she atones for her violations (see the atonement spell description), as appropriate.
 
 Like a member of any other class, a paladin may be a multiclass character, but multiclass paladins face a special restriction. A paladin who gains a level in any class other than paladin may never again raise her paladin level, though she retains all her paladin abilities.
+
 THE PALADIN'S MOUNT
 
 The paladin's mount is superior to a normal mount of its kind and has special powers, as described below. The standard mount for a Medium paladin is a heavy warhorse, and the standard mount for a Small paladin is a warpony. Another kind of mount, such as a riding dog (for a halfling paladin) or a Large shark (for a paladin in an aquatic campaign) may be allowed as well. A paladin's mount is treated as a magical beast, not an animal, for the purpose of all effects that depend on its type (though it retains an animal's HD, base attack bonus, saves, skill points, and feats).
@@ -137,7 +142,7 @@ Because of this empathic link, the paladin has the same connection to an item or
 
 Improved Evasion (Ex): When subjected to an attack that normally allows a Reflex saving throw for half damage, a mount takes no damage if it makes a successful saving throw and half damage if the saving throw fails.
 
-Share Spells: At the paladin's option, she may have any spell (but not any spell-like ability) she casts on herself also affect her mount. The mount must be within 5 feet at the time of casting to receive the benefit. If the spell or effect has a duration other than instantaneous, it stops affecting the mount if it moves farther than 5 feet away and will not affect the mount again even if it returns to the paladin before the duration expires. Additionally, the paladin may cast a spell with a target of “You” on her mount (as a touch range spell) instead of on herself. A paladin and her mount can share spells even if the spells normally do not affect creatures of the mount's type (magical beast).
+Share Spells: At the paladin's option, she may have any spell (but not any spell-like ability) she casts on herself also affect her mount. The mount must be within 5 feet at the time of casting to receive the benefit. If the spell or effect has a duration other than instantaneous, it stops affecting the mount if it moves farther than 5 feet away and will not affect the mount again even if it returns to the paladin before the duration expires. Additionally, the paladin may cast a spell with a target of "You" on her mount (as a touch range spell) instead of on herself. A paladin and her mount can share spells even if the spells normally do not affect creatures of the mount's type (magical beast).
 
 Share Saving Throws: For each of its saving throws, the mount uses its own base save bonus or the paladin's, whichever is higher. The mount applies its own ability modifiers to saves, and it doesn't share any other bonuses on saves that the master might have.
 

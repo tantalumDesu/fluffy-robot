@@ -221,7 +221,7 @@ Instill Suggestion in Target: If you beat the target's Sense Motive check by 50 
 
 Display False Alignment: With a DC 70 Bluff check, you can fool alignment-sensing effects by displaying a false alignment of your choice. Once set, a false alignment remains as long as you remain conscious and awake. Setting or changing a false alignment requires a full-round action.
 
-Disguise Surface Thoughts: With a DC 100 Bluff check, you can fool spells such as detect thoughts (or similar effects) by displaying false surface thoughts. While you can't completely mask the presence of your thoughts, you can change your apparent Intelligence score (and thus your apparent mental strength) by as much as 10 points and can place any thought in your “surface thoughts” to be read by such spells or effects. If someone attempts to use Sense Motive to detect your surface thoughts (see the Sense Motive skill description), this becomes an opposed check (though any result lower than 100 automatically fails).
+Disguise Surface Thoughts: With a DC 100 Bluff check, you can fool spells such as detect thoughts (or similar effects) by displaying false surface thoughts. While you can't completely mask the presence of your thoughts, you can change your apparent Intelligence score (and thus your apparent mental strength) by as much as 10 points and can place any thought in your "surface thoughts" to be read by such spells or effects. If someone attempts to use Sense Motive to detect your surface thoughts (see the Sense Motive skill description), this becomes an opposed check (though any result lower than 100 automatically fails).
 
 Action: Varies. A Bluff check made as part of general interaction always takes at least 1 round (and is at least a full-round action), but it can take much longer if you try something elaborate. A Bluff check made to feint in combat or create a diversion to hide is a standard action. A Bluff check made to deliver a secret message doesn't take an action; it is part of normal communication. An attempt to heckle takes 1 minute.
 
@@ -321,11 +321,11 @@ CONCENTRATION (CON)
 
 You are particularly good at focusing your mind.
 
-Check: You must make a Concentration check whenever you might potentially be distracted (by taking damage, by harsh weather, and so on) while engaged in some action that requires your full attention. Such actions include casting a spell, concentrating on an active spell, directing a spell, using a spell-like ability, using a skill that would provoke an attack of opportunity, manifesting a power, concentrating on an active power, directing a power, using a psi-like ability, shaping a soulmeld, or binding a soulmeld or magic item to a chakra (but not investing or reallocating essentia or activating a soulmeld's effect). In general, if an action wouldn't normally provoke an attack of opportunity, you need not make a Concentration check to avoid being distracted.
+Check: You must make a Concentration check whenever you might potentially be distracted (by taking damage, by harsh weather, and so on) while engaged in some action that requires your full attention. In general, if an action wouldn't normally provoke an attack of opportunity, you need not make a Concentration check to avoid being distracted.
 
-If the Concentration check succeeds, you may continue with the action as normal. If the check fails, the action automatically fails and is wasted. If you were in the process of casting a spell, the spell is lost. If you were concentrating on an active spell, the spell ends as if you had ceased concentrating on it. If you were directing a spell, the direction fails but the spell remains active. If you were using a spell-like ability, that use of the ability is lost. If you were in the process of manifesting a power, the power points are lost. If you were concentrating on an active power, the power ends as if you had ceased concentrating on it. If you were directing a power, the direction fails but the power remains active. If you were using a psi-like ability, that use of the ability is lost. If you were shaping a soulmeld or binding a chakra, the action automatically fails and is wasted (leaving you with soulmelds shaped and chakras bound as before the action was attempted). A skill use also fails, and in some cases a failed skill check may have other ramifications as well.
+If the Concentration check succeeds, you may continue with the action as normal. If the check fails, the action automatically fails and is wasted. If you were in the process of casting a spell, the spell is lost. If you were concentrating on an active spell, the spell ends as if you had ceased concentrating on it. If you were directing a spell, the direction fails but the spell remains active. If you were using a spell-like ability, that use of the ability is lost. If you were concentrating on an active power, the power ends as if you had ceased concentrating on it. If you were directing a power, the direction fails but the power remains active. If you were shaping a soulmeld or binding a chakra, the action automatically fails and is wasted (leaving you with soulmelds shaped and chakras bound as before the action was attempted). A skill use also fails, and in some cases a failed skill check may have other ramifications as well.
 
-The table below summarizes various types of distractions that cause you to make a Concentration check. If the distraction occurs while you are trying to cast a spell, you must add the level of the spell you are trying to cast to the appropriate Concentration DC. If the distraction occurs while you are trying to manifest a power, you must add the level of the power you are trying to manifest to the appropriate Concentration DC. If more than one type of distraction is present, make a check for each one; any failed Concentration check indicates that the task is not completed.
+The table below summarizes various types of distractions that cause you to make a Concentration check. If the distraction occurs while you are trying to cast a spell, you must add the level of the spell you are trying to cast to the appropriate Concentration DC. If more than one type of distraction is present, make a check for each one; any failed Concentration check indicates that the task is not completed.
 
 Table: Concentration
 Concentration DC 	Distraction
@@ -342,23 +342,19 @@ Distracting spell's save DC 	Distracted by nondamaging spell.4
 50 + spell level 	Cast spell with somatic component while grappled.
 
 If you are trying to cast, concentrate on, or direct a spell when the distraction occurs, add the level of the spell to the indicated DC.
-4 If the spell/power allows no save, use the save DC it would have if it did allow a save.
+4 If the spell allows no save, use the save DC it would have if it did allow a save.
 
 Resist Heckling: To resist heckling, you make a Concentration check opposed by the heckler's Bluff check. If you succeed, you can ignore the heckler and proceed with your performance, generally garnering respect from your audience in the process because you kept your composure in the face of resistance. If you fail, you must make another immediate Perform check with a -2 penalty. The result of this check replaces your previous check result. For every 5 points by which the heckler's Bluff check exceeds your Concentration check, the penalty on your new Perform check increases by 2.
 
 If your Concentration check is successful, you gain the respect of the crowd and gain a +2 bonus on Perform checks you make for this group for the remainder of your performance. All further heckling attempts during performances in front of this crowd are made with a -5 penalty.
 
-Action: Usually none. In most cases, making a Concentration check doesn't require an action; it is either a free action (when attempted reactively) or part of another action (when attempted actively). Meditating to gain psionic focus is a full-round action.
+Action: Usually none. In most cases, making a Concentration check doesn't require an action; it is either a free action (when attempted reactively) or part of another action (when attempted actively).
 
 Try Again: Yes, though a success doesn't cancel the effect of a previous failure, such as the loss of a spell you were casting or the disruption of a spell you were concentrating on.
 
-Special: You can use Concentration to cast a spell, use a spell-like ability, manifest a power, or use a skill defensively, so as to avoid attacks of opportunity altogether. This doesn't apply to other actions that might provoke attacks of opportunity. The DC of the check is 15 (plus the spell/power's level, if casting a spell, using a spell-like ability defensively, or manifesting a power). If the Concentration check succeeds, you may attempt the action normally without provoking any attacks of opportunity. A successful Concentration check still doesn't allow you to take 10 on another check if you are in a stressful situation; you must make the check normally. If the Concentration check fails, the related action also automatically fails (with any appropriate ramifications), and the action is wasted, just as if your concentration had been disrupted by a distraction.
+Special: This doesn't apply to other actions that might provoke attacks of opportunity. If the Concentration check succeeds, you may attempt the action normally without provoking any attacks of opportunity. A successful Concentration check still doesn't allow you to take 10 on another check if you are in a stressful situation; you must make the check normally. If the Concentration check fails, the related action also automatically fails (with any appropriate ramifications), and the action is wasted, just as if your concentration had been disrupted by a distraction.
 
 A character with the Combat Casting feat gets a +4 bonus on Concentration checks made to cast a spell or use a spell-like ability while on the defensive or while grappling or pinned.
-
-A character with the Combat Manifestation feat gets a +4 bonus on Concentration checks made to manifest a power or use a psi-like ability while on the defensive or while grappling or pinned.
-
-Synergy: If you have 5 or more ranks in Concentration, you get a +2 bonus on Autohypnosis checks.
 
 If you have 5 or more ranks in any Perform skill, you get a +2 bonus on Concentration checks to resist heckling while using that skill.
 
@@ -679,11 +675,8 @@ Disguised as different age category1 	-22
 Change height and/or weight 11% to 25% 	-253
 Change height and/or weight 26% to 50% 	-503
 1 These modifiers are cumulative; use any that apply.
-2 Per step of difference between your actual age category
-and your disguised age category. The steps are: young (younger
-than adulthood), adulthood, middle age, old, and venerable.
-3 Can be negated by any effect that can duplicate a height
-and/or weight change of this degree, such as the alter self spell.
+2 Per step of difference between your actual age category and your disguised age category. The steps are: young (younger than adulthood), adulthood, middle age, old, and venerable.
+3 Can be negated by any effect that can duplicate a height and/or weight change of this degree, such as the alter self spell.
 
 If you are impersonating a particular individual, those who know what that person looks like get a bonus on their Spot checks according to the table below. Furthermore, they are automatically considered to be suspicious of you, so opposed checks are always called for.
 
@@ -745,8 +738,7 @@ Pass through Wall of Force: This allows you to find a gap of weakness in a wall 
 Table: Escape Artist
 Restraint 	Escape Artist DC
 Ropes 	Binder's Use Rope check + 10
-Net, animate rope spell, command plants spell,
-control plants spell, or entangle spell 	20
+Net, animate rope spell, command plants spell, control plants spell, or entangle spell 	20
 Snare spell 	23
 Manacles 	30
 Tight space 	30
@@ -784,9 +776,7 @@ Handwriting not known to reader 	-2
 Handwriting somewhat known to reader 	+0
 Handwriting intimately known to reader 	+2
 Reader only casually reviews the document 	-2
-Document was forged without having seen
-a similar document or having a sample of the
-handwriting to be copied 	+50
+Document was forged without having seen a similar document or having a sample of the handwriting to be copied 	+50
 
 A document that contradicts procedure, orders, or previous knowledge, or one that requires sacrifice on the part of the person checking the document can increase that character's suspicion (and thus create favorable circumstances for the checker's opposing Forgery check).
 
@@ -1250,7 +1240,6 @@ Below are listed typical fields of study.
     Local (legends, personalities, inhabitants, laws, customs, traditions, humanoids)
     Nature (animals, fey, giants, monstrous humanoids, plants, seasons and cycles, weather, vermin)
     Nobility and royalty (lineages, heraldry, family trees, mottoes, personalities)
-    Psionics (ancient mysteries, psionic traditions, psionic monsters, psychic symbols, cryptic phrases, astral constructs, psionic races)
     Religion (gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, undead)
     The planes (the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, elementals, magic related to the planes, Incarnum)
 
@@ -1416,10 +1405,6 @@ If you have 5 or more ranks in Knowledge (the planes), you get a +2 bonus on Sur
 If you have 5 or more ranks in Knowledge (dungeoneering), you get a +2 bonus on Survival checks made while underground.
 
 If you have 5 or more ranks in Survival, you get a +2 bonus on Knowledge (nature) checks.
-
-If you have 5 or more ranks in Knowledge (psionics), you get a +2 bonus on Psicraft checks.
-
-If you have 5 or more ranks in Autohypnosis, you get a +2 bonus on Knowledge (psionics) checks.
 
 Untrained: An untrained Knowledge check is simply an Intelligence check. Without actual training, you know only common knowledge (DC 10 or lower).
 
@@ -1621,7 +1606,7 @@ Botched attempts deal the damage noted for the device, so the condemned may be k
 Some execution devices, such as headsman's axes, make adequate melee weapons. In melee, such an item deals normal damage for an item of its kind (such as a greataxe) and cannot kill instantly. Most other devices of execution cannot be used in melee. Hundreds, if not thousands, of execution methods are possible beyond those described here. The table below identifies common techniques from which more exotic forms of execution can be extrapolated.
 
 Table: Executions
-Device	Execution DC 	Escape DC 	Botched	Damage 	Cost 	Weight
+Device	Execution DC 	Escape DC 	Botched Damage 	Cost 	Weight
 Crucifixion cross 	15 	28 	10% of HP/hour 	1 gp 	50 lb.
 Draw and quarter 	18 	25 	5d6 	3 sp 	1 lb.
 Hanging rope 	18 	The Use Rope check of the executioner	1d3/round 	3 sp 	1 lb.
@@ -1890,7 +1875,7 @@ Sleight of Hand DC 	Task
 10 	Palm a coin-sized object, make a coin disappear.
 20 	Lift a small object from a person.
 50 	Lift a sheathed weapon from another creature and hide it on your person, if the weapon is no more than one size category larger than your own size.
-80 	Make an adjacent, willing creature or object of your size or smaller “disappear” while in plain view. In fact, the willing creature or object is displaced up to 10 feet away (make a separate Hide check to determine how well the “disappeared” creature or object is hidden).
+80 	Make an adjacent, willing creature or object of your size or smaller "disappear" while in plain view. In fact, the willing creature or object is displaced up to 10 feet away (make a separate Hide check to determine how well the "disappeared" creature or object is hidden).
 
 Surprise Off-Hand Attack: If you palm a dagger in combat, you can surprise your opponent when it suddenly appears in your hand. For this technique to work, you must be armed with a dagger, must have the Quick Draw feat, and must be holding nothing in your off hand. You must fight the same foe for at least 2 consecutive rounds to get your opponent used to the idea that you have nothing in your off hand. At the beginning of your turn in the third round, make a Sleight of Hand check opposed by your opponent's Spot check. If you succeed, your foe is considered flat-footed for the next single attack you make with the dagger.
 
@@ -2123,7 +2108,7 @@ Table: Finding Trails
 Survival Condition 	DC Modifier
 Every 24 hours since the signs were made 	+1
 Every hour of rain since the signs were made 	+1
-Fresh snow cover since the signs were made 	+10	
+Fresh snow cover since the signs were made 	+10
 Overcast or moonless night 	+6
 Moonlight 	+3
 Fog or precipitation 	+3
@@ -2142,7 +2127,7 @@ Seen casually 	80
 Viewed once 	100
 Description only 	120
 
-With a successful check, you know the direction to the desired location. This merely points you in the direction of the location; it doesn't provide you with information on how to get there, nor does it take into account any obstacles in the path. “Very familiar” represents a place where you have been very often and where you feel at home. “Studied carefully” represents a place you know well, either because you have been there often or have used other means to study the place. “Seen casually” is a place that you have viewed more than once, but which you have not studied. “Viewed once” is a place that you have seen once, possibly using magic. “Description only” is a place whose location and appearance you know through someone else's description.
+With a successful check, you know the direction to the desired location. This merely points you in the direction of the location; it doesn't provide you with information on how to get there, nor does it take into account any obstacles in the path. "Very familiar" represents a place where you have been very often and where you feel at home. "Studied carefully" represents a place you know well, either because you have been there often or have used other means to study the place. "Seen casually" is a place that you have viewed more than once, but which you have not studied. "Viewed once" is a place that you have seen once, possibly using magic. "Description only" is a place whose location and appearance you know through someone else's description.
 
 Action: Varies. A single Survival check may represent activity over the course of hours or a full day. A Survival check made to find tracks is at least a full-round action, and it may take even longer.
 
