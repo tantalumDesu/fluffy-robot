@@ -58,12 +58,12 @@ Magewright choose their spells from the following list.
 
 0 Level: Arcane mark, detect magic, light, mage hand, mending, message, open/close, prestidigitation, read magic.
 
-1st Level: Alarm, animate rope, comprehend languages, erase, grease, hold portal, identify, mount, Nystul's magic aura, Tenser's floating disk, unseen servant.
+1st Level: Alarm, animate rope, comprehend languages, erase, grease, hold portal, identify, mount, Nystul’s magic aura, Tenser’s floating disk, unseen servant.
 
 2nd Level: Arcane lock, augury, Leomund's trap, locate object, magic mouth, make whole, misdirection, obscure object, whispering wind.
 
 3rd Level: Arcane sight, clairaudience/clairvoyance, daylight, dispel magic, explosive runes, gentle repose, glyph of warding, illusory script, nondetection, phantom steed, secret page, sepia snake sigil, tongues.
 
-4th Level: Animate dead, detect scrying, divination, fire trap, hardening, illusory wall, imbue with spell ability, locate creature, minor creation, remove curse, scrying, stone shape.
+4th Level: Animate dead, detect scrying, divination, fire trap, illusory wall, imbue with spell ability, locate creature, minor creation, remove curse, scrying, stone shape.
 
-5th Level: Contact other plane, fabricate, false vision, Leomund's secret chest, major creation, permanency, sending, symbol of pain, symbol of sleep, wall of stone.
+5th Level: Contact other plane, fabricate, false vision, Leomund’s secret chest, major creation, permanency, sending, symbol of pain, symbol of sleep, wall of stone.

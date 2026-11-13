@@ -62,7 +62,7 @@ Adepts choose their spells from the following list.
 
 0 Level: Create water, cure minor wounds, detect magic, ghost sound, guidance, light, mending, purify food and drink, read magic, touch of fatigue.
 
-1st Level: Bless, burning hands, cause fear, command, comprehend languages, cure light wounds, Detect Chaos/Evil/Good/Law, endure elements, obscuring mist, Protection from Chaos/Evil/Good/Law, sleep.
+1st Level: Bless, burning hands, cause fear, command, comprehend languages, cure light wounds, Detect Chaos/Evil/Good/Law, endure elements, obscuring mist, Protection from Chaos, Protection from Evil, Protection from Good, Protection from Law, sleep.
 
 2nd Level: Aid, animal trance, bear's endurance, bull's strength, cat's grace, cure moderate wounds, darkness, delay poison, invisibility, mirror image, resist energy, scorching ray, see invisibility, web.
 

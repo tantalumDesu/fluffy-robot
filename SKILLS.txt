@@ -444,7 +444,6 @@ Dark reaver powder 	Ingested DC 18 	2d6 Con 	1d6 Con + 1d6 Str 	300 gp 	25
 Ungol dust 	Inhaled DC 15 	1 Cha 	1d6 Cha + 1 Cha drain 	1,000 gp 	20
 Insanity mist 	Inhaled DC 15 	1d4 Wis 	2d6 Wis 	1,500 gp 	20
 Burnt othur fumes 	Inhaled DC 18 	1 Con drain 	3d6 Con 	2,100 gp 	25
-Siren's breath 	Inhaled DC 18 	Special 	Special 	300 gp 	16
 Small centipede poison 	Injury DC 10 	1d2 Dex 	1d2 Dex 	90 gp 	15
 Black adder venom 	Injury DC 12 	1d6 Con 	1d6 Con 	120 gp 	15
 Bloodroot 	Injury DC 12 	0 	1d4 Con + 1d3 Wis 	100 gp 	15
@@ -461,7 +460,6 @@ Elemental rime 	Injury DC 16 	1d4 Dex plus vulnerability to fire 	1d4 Dex 	200 g
 Shadow essence 	Injury DC 17 	1 Str drain 	2d6 Str 	250 gp 	20
 Wyvern poison 	Injury DC 17 	2d6 Con 	2d6 Con 	3,000 gp 	25
 Deathblade 	Injury DC 20 	1d6 Con 	2d6 Con 	1,800 gp 	25
-Blasphemix 	Injury DC 22 	Special 	-1 CL (divine spells) 	750 gp 	22
 Purple worm poison 	Injury DC 25 	1d6 Str 	2d6 Str 	700 gp 	20
 
 

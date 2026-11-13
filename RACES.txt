@@ -1,44 +1,6 @@
 RACES
 
-Bugbear
-
-Medium — LA 1
-
-Monster Manual v.3.5 (MM), p. 29
-
-Also appears in: Rac
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +1
-
-Languages
-
-Common, Goblin
-Racial Traits
-
-Bugbear characters possess the following racial traits.
-
-    +4 Strength, +2 Dexterity, +2 Constitution, -2 Charisma.
-    Medium size.
-    A bugbear’s base land speed is 30 feet.
-    Racial Hit Dice: A bugbear begins with three levels of humanoid, which provide 3d8 Hit Dice, a base attack bonus of +2, and base saving throw bonuses of Fort +1, Ref +3, and Will +1.
-    Racial Skills: A bugbear’s humanoid levels give it skill points equal to 6 × (2 + Int modifier). Its class skills are Climb, Hide, Listen, Move Silently, Search, and Spot.
-    Racial Feats: A bugbear’s humanoid levels give it two feats.
-    +3 natural armor bonus.
-    +4 racial bonus on Move Silently checks.
-    Darkvision up to 60 feet.
-    Scent (Ex): This ability allows the bugbear to detect approaching enemies, sniff out hidden foes, and track by sense of smell.
-    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Elven, Giant, Gnoll, Orc.
-    Favored Class: Rogue.
-    Level adjustment +1.
-
-Description
+BUGBEAR
 
 The biggest and strongest of the goblinoids, bugbears are more aggressive than their smaller relatives. They live by hunting any creature weaker than themselves.
 
@@ -52,164 +14,89 @@ Bugbears have only two genuine goals in life: food and treasure. Prey and intrud
 
 Bugbears survive primarily by hunting, and they eat whatever they can bring down. Any creature is a legitimate source of food, including monsters and even their own smaller kin. When game is scarce, bugbears turn to raiding and ambush to fill their stewpots.
 
-Most bugbears revere a deity named Hruggek, who delights in ambushes followed by furious combat. Bugbear clerics worship Hruggek and can choose any two of the following domains: Chaos, Evil, Trickery, and War.
+Bugbear clerics can choose any two of the following domains: Chaos, Evil, Trickery, and War.
 
+BUGBEAR RACIAL TRAITS
 
-Drow
+    +4 Strength, +2 Dexterity, +2 Constitution, -2 Charisma.
+    Medium size.
+    Base land speed is 30 feet.
+    Darkvision out to 60 feet.
+    Racial Hit Dice: A bugbear begins with three levels of humanoid, which provide 3d8 Hit Dice, a base attack bonus of +2, and base saving throw bonuses of Fort +1, Ref +3, and Will +1.
+    Racial Skills: A bugbear's humanoid levels give it skill points equal to 6 x (2 + Int modifier). Its class skills are Climb, Hide, Listen, Move Silently, Search, and Spot.
+    Racial Feats: A bugbear's humanoid levels give it two feats.
+    +3 natural armor bonus.
+    +4 racial bonus on Move Silently checks.
+    Scent.
+    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Elven, Giant, Gnoll, Orc.
+    Favored Class: Rogue.
+    Level Adjustment: +1.
 
-Medium — LA 2
-
-Monster Manual v.3.5 (MM), p. 103
-
-Also appears in: FRCS, Rac
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +2
-
-Languages
-
-Common, Elven, Undercommon
-Racial Traits
-
-    Darkvision out to 120 feet.
-
-    Immunity to sleep spells, +2 racial bonus on Will saves against spells, spell-like abilities, and enchantment effects of other sorts.
-
-    Spell resistance equal to 11 + class level.
-
-    Spell-Like Abilities: Drow can use the following spelllike abilities once per day: dancing lights, darkness and faerie fire. Caster level equals the drow’s class level.
-
-    Weapon Proficiency: A drow is automatically proficient with the hand crossbow, the rapier, and the short sword.
-
-    +2 racial bonus on Listen, Search, and Spot checks. A drow who merely passes within 5 feet of a secret or concealed door is entitled to a Search check to notice it as if she were actively looking for it.
-
-    Light Blindness: Abrupt exposure to bright light (such as sunlight or a daylight spell) blinds drow for 1 round. In addition, they take a -1 circumstance penalty on attack rolls, saves, and checks when in bright light.
-
-Description
+DROW
 
 Also known as dark elves, drow are a depraved and evil subterranean offshoot.
 
-White is the most common hair color among drow, but almost any pale shade is possible. Drow tend to be smaller and thinner than other sorts of elves, and their eyes are often a vivid red.
+White is the most common hair color among drow, but almost any pale shade is possible. Drow tend to be smaller and thinner than other sorts of elves, and their eyes are often a vivid red. Their society is matriarchal and rigidly controlled by the priesthood.
+
+Female drow favor the cleric class rather than wizard and have access to two of the following domains: Chaos, Destruction, Evil, or Trickery.
 
 Drow usually coat their arrows with a potent venom.
 
+DROW RACIAL TRAITS
 
-Dwarf
+    Drow Traits (Ex): These traits are in addition to the elf traits, except where noted.
+    +2 Intelligence, +2 Charisma.
+    Darkvision out to 120 feet. This trait replaces the elf's low-light vision.
+    Spell resistance equal to 11 + class levels.
+    +2 racial bonus on Will saves against spells and spell-like abilities.
+    Spell-Like Abilities: Drow can use the following spell-like abilities once per day: dancing lights, darkness, faerie fire. Caster level equals the drow's class levels.
+    Weapon Proficiency: A drow is automatically proficient with the hand crossbow, the rapier, and the short sword. This trait replaces the elf's weapon proficiency.
+    Automatic Languages: Common, Elven, Undercommon. Bonus Languages: Abyssal, Aquan, Draconic, Drow Sign Language, Gnome, Goblin. This trait replaces the elf's automatic and bonus languages.
+    Light Blindness: Abrupt exposure to bright light (such as sunlight or a daylight spell) blinds drow for 1 round. On subsequent rounds, they are dazzled as long as they remain in the affected area.
+    Favored Class: Wizard (male) or cleric (female). This trait replaces the elf's favored class.
+    Level Adjustment: +2.
 
-Medium — LA 0
-
-Player's Handbook v.3.5 (PH), p. 14
-
-Speed
-    Land 20 ft.
-Size
-    Medium
-Type
-    Humanoid (good fort)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Dwarven
-Racial Traits
-
-    +2 Constitution, —2 Charisma: Dwarves are stout and tough but tend to be gruff and reserved.
-    Medium: As Medium creatures, dwarves have no special bonuses or penalties due to their size.
-    Dwarf base land speed is 20 feet. However, dwarves can move at this speed even when wearing medium or heavy armor or whose speed is reduced in such conditions).
-    Darkvision: Dwarves can see in the dark up to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and dwarves can function just fine with no light at all.
-    Stonecunning: This ability grants a dwarf a +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, stonework traps, new construction (even when built to match the old), unsafe stone surfaces, shaky stone ceilings, and the like. Something that isn’t stone but that is disguised as stone also counts as unusual stonework. A dwarf who merely comes within 10 feet of unusual stonework can make a Search check as if he were actively searching, and a dwarf can use the Search skill to find stonework traps as a rogue can. A dwarf can also intuit depth, sensing his approximate depth underground as naturally as a human can sense which way is up. Dwarves have a sixth sense about stonework, an innate ability that they get plenty of opportunity to practice and hone in their underground homes.
-    Weapon Familiarity: Dwarves may treat dwarven waraxes and dwarven urgroshes (see Chapter 7:Equipment) as martial weapons, rather than exotic weapons.
-    Stability: Dwarves are exceptionally stable on their feet. A dwarf gains a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not when climbing, flying, riding, or otherwise not standing firmly on the ground).
-    +2 racial bonus on saving throws against poison: Dwarves are hardy and resistant to toxins.
-    +2 racial bonus on saving throws against spells and spell-like effects: dwarves have an innate resistance to magic spells.
-    +1 racial bonus to attack rolls against orcs (including half-orcs) and goblinoids (including goblins, hobgoblins, and bugbears): Dwarves are trained in the special combat techniques that allow them to fight their common enemies more effectively.
-    +4 dodge bonus to Armor Class against monsters of the giant type (such as ogres, trolls, and hill giants): This bonus represents special training that dwarves undergo, during which they learn tricks that previous generations developed in their battles with giants. Any time a creature loses its Dexterity bonus (if any) to Armor Class, such as when it’s caught flat-footed, it loses its dodge bonus, too. The Monster Manual has information on which creatures are of the giant type.
-    +2 racial bonus on Appraise checks that are related to stone or metal items: Dwarves are familiar with valuable items of all kinds, especially those made of stone or metal.
-    +2 racial bonus on Craft checks that are related to stone or metal: Dwarves are especially capable with stonework and metalwork.
-    Automatic Languages: Common and Dwarven. Bonus Languages: Giant, Gnome, Goblin, Orc, Terran, and Undercommon. Dwarves are familiar with the languages of their enemies and of their subterranean allies.
-    Favored Class: Fighter. A multiclass dwarf’s fighter class does not count when determining whether he takes an experience point penalty for multiclassing. (see XP for Multiclass Characters, page 60). Dwarven culture extols the virtues of battle, and the vocation comes easily to dwarves.
-
-Description
+DWARF
 
 Dwarves stand only 4 to 4-1/2 feet tall, but they are so broad and compact that they are, on average, almost as heavy as humans. Dwarf men are slightly taller and noticeably heavier than dwarf women. Dwarves’ skin is typically deep tan or light brown, and their eyes are dark. Their hair is usually black, gray, or brown, and worn long. Dwarf men value their beards highly and groom them very carefully. Dwarves favor simple styles for their hair, beards, and clothes. Dwarves are considered adults at about age 40, and they can live to be more than 400 years old.
 
+DWARF RACIAL TRAITS
 
-Elf
+    +2 Constitution, -2 Charisma: Dwarves are stout and tough but tend to be gruff and reserved.
+    Medium size: As Medium creatures, dwarves have no special bonuses or penalties due to their size.
+    Base land speed is 20 feet. However, dwarves can move at this speed even when wearing medium or heavy armor or when carrying a medium or heavy load (unlike other creatures, whose speed is reduced in such situations).
+    Darkvision: Dwarves can see in the dark up to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and dwarves can function just fine with no light at all.
+    Stonecunning: This ability grants a dwarf a +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, stonework traps, new construction (even when built to match the old), unsafe stone surfaces, shaky stone ceilings, and the like. Something that isn't stone but that is disguised as stone also counts as unusual stonework. A dwarf who merely comes within 10 feet of unusual stonework can make a Search check as if he were actively searching, and a dwarf can use the Search skill to find stonework traps as a rogue can. A dwarf can also intuit depth, sensing his approximate depth underground as naturally as a human can sense which way is up. Dwarves have a sixth sense about stonework, an innate ability that they get plenty of opportunity to practice and hone in their underground homes.
+    Weapon Familiarity: Dwarves may treat dwarven waraxes and dwarven urgroshes as martial weapons, rather than exotic weapons.
+    Stability: A dwarf gains a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not when climbing, flying, riding, or otherwise not standing firmly on the ground).
+    +2 racial bonus on saving throws against poison: Dwarves are hardy and resistant to toxins.
+    +2 racial bonus on saving throws against spells and spell-like effects: Dwarves have an innate resistance to magic spells.
+    +1 racial bonus on attack rolls against orcs (including half-orcs) and goblinoids (including goblins, hobgoblins, and bugbears): Dwarves are trained in the special combat techniques that allow them to fight their common enemies more effectively.
+    +4 dodge bonus to Armor Class against monsters of the giant type (such as ogres, trolls, and hill giants): This bonus represents special training that dwarves undergo, during which they learn tricks that previous generations developed in their battles with giants. Any time a creature loses its Dexterity bonus (if any) to Armor Class, such as when it's caught flat-footed, it loses its dodge bonus, too.
+    +2 racial bonus on Appraise checks that are related to stone or metal items: Dwarves are familiar with valuable items of all kinds, especially those made of stone or metal.
+    +2 racial bonus on Craft checks that are related to stone or metal: Dwarves are especially capable with stonework and metalwork.
+    Automatic Languages: Common and Dwarven. Bonus Languages: Giant, Gnome, Goblin, Orc, Terran, and Undercommon. Dwarves are familiar with the languages of their enemies and of their subterranean allies.
+    Favored Class: Fighter. A multiclass dwarf's fighter class does not count when determining whether he takes an experience point penalty for multiclassing. Dwarven culture extols the virtues of battle, and the vocation comes easily to dwarves.
 
-Medium — LA 0
-
-Player's Handbook v.3.5 (PH), p. 15
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Elven
-Racial Traits
-
-    +2 Dexterity, —2 Constitution: Elves are graceful but frail. An elf’s grace makes her naturally better at stealth and archery.
-    Immunity to magic sleep effects, and a +2 racial saving throw bonus against enchantment spells or effects.
-    Low-light Vision: An elf can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. She retains the ability to distinguish color and detail under these conditions.
-    Weapon Proficiency: Elves receive the Martial Weapon Proficiency feats for the longsword, rapier, longbow (including composite longbow), and shortbow (including composite shortbow) as bonus feats. Elves esteem the arts of swordplay and archery, so all elves are familiar with these weapons.
-    +2 racial bonus on Listen, Search, and Spot checks. An elf who merely passes within 5 feet of a secret or concealed door is entitled to a Search check to notice it as if she were actively looking for it. An elf’s senses are so keen that she practically has a sixth sense about hidden portals.
-
-Description
+ELF
 
 Elves are short and slim, standing about 4- 1/2 to 5-1/2 feet tall and typically weighing 95 to 135 pounds, with elf men the same height as and only marginally heavier than elf women. They are graceful but frail. They tend to be pale-skinned and dark-haired, with deep green eyes. Elves have no facial or body hair. They prefer simple, comfortable clothes, especially in pastel blues and greens, and they enjoy simple yet elegant jewelry. Elves possess unearthly grace and fine features. Many humans and members of other races find them hauntingly beautiful. An elf reaches adulthood at about 110 years of age and can live to be more than 700 years old.
 
 Elves do not sleep, as members of the other common races do. Instead, an elf meditates in a deep trance for 4 hours a day. An elf resting in this fashion gains the same benefit that a human does from 8 hours of sleep. While meditating, an elf dreams, though these dreams are actually mental exercises that have become reflexive through years of practice. The Common word for an elf’s meditation is “trance,” as in “four hours of trance.”
 
+ELF RACIAL TRAITS
 
-Gnome
+    +2 Dexterity, -2 Constitution: Elves are graceful but frail. An elf's grace makes her naturally better at stealth and archery.
+    Medium size: As Medium creatures, elves have no special bonuses or penalties due to their size.
+    Base land speed is 30 feet.
+    Immunity to magic sleep effects, and a +2 racial saving throw bonus against enchantment spells or effects.
+    Low-Light Vision: An elf can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. She retains the ability to distinguish color and detail under these conditions.
+    Weapon Proficiency: Elves receive the Martial Weapon Proficiency feats for the longsword, rapier, longbow (including composite longbow), and shortbow (including composite shortbow) as bonus feats. Elves esteem the arts of swordplay and archery, so all elves are familiar with these weapons.
+    +2 racial bonus on Listen, Search, and Spot checks. An elf who merely passes within 5 feet of a secret or concealed door is entitled to a Search check to notice it as if she were actively looking for it. An elf's senses are so keen that she practically has a sixth sense about hidden portals.
+    Automatic Languages: Common and Elven. Bonus Languages: Draconic, Gnoll, Gnome, Goblin, Orc, and Sylvan. Elves commonly know the languages of their enemies and of their friends, as well as Draconic, the language commonly found in ancient tomes of secret knowledge.
+    Favored Class: Wizard. A multiclass elf's wizard class does not count when determining whether she takes an experience point penalty for multiclassing. Wizardry comes naturally to elves - indeed, they sometimes claim to have invented it, and fighter/wizards are especially common among them.
 
-Small — LA 0
-
-Player's Handbook v.3.5 (PH), p. 16
-
-Speed
-    Land 20 ft.
-Size
-    Small
-Type
-    Humanoid (good fort)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Gnome
-Racial Traits
-
-    +2 Constitution, —2 Strength: Like dwarves, gnomes are tough, but they are small and therefore not as strong as larger humanoids.
-    Small: As a Small creature, a gnome gains a +1 size bonus to Armor Class, a +1 size bonus on attack rolls, and a +4 size bonus on Hide checks, but he uses smaller weapons than humans use, and his lifting and carrying limits are three-quarters of those of a Medium character.
-    Gnome base land speed is 20 feet.
-    Low-light Vision: A gnome can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. He retains the ability to distinguish color and detail under these conditions.
-    Weapon Familiarity: Gnomes may treat gnome hooked hammers (see page 118) as martial weapons rather than exotic weapons.  +2 racial bonus on saving throws against illusions: Gnomes are innately familiar with illusions of all kinds.
-    Add +1 to the Difficulty Class for all saving throws against illusion spells cast by gnomes. Their innate familiarity with these effects make their illusions more difficult to see through. This adjustment stacks with those from similar effects, such as the Spell Focus feat.
-    +1 racial bonus on attack rolls against kobolds and goblinoids (including goblins, hobgoblins, and bugbears): Gnomes battle these creatures frequently and practice special techniques for fighting them.
-    +4 dodge bonus to Armor Class against monsters of the giant type (such as ogres, trolls, and hill giants): This bonus represents special training that gnomes undergo, during which they learn tricks that previous generations developed in their battles with giants. Any time a creature loses its Dexterity bonus (if any) to Armor Class, such as when it’s caught flat-footed, it loses its dodge bonus, too. The Monster Manual has information on which creatures are of the giant type.
-    +2 racial bonus on Listen checks: Gnomes have keen ears.
-    +2 racial bonus on Craft (alchemy) checks: A gnome’s sensitive nose allows him to monitor alchemical processes by smell.
-    Automatic Languages: Common and Gnome.
-    Bonus Languages: Draconic, Dwarven, Elven, Giant, Goblin, and Orc. Gnomes deal more with elves and dwarves than elves and dwarves deal with one another, and they learn the languages of their enemies (kobolds, giants, goblins, and orcs) as well. In addition, a gnome can use speak with a burrowing mammal (a badger, fox, rabbit, or the like, see below). This ability is innate to gnomes. See the speak with animals spell description, page 281.
-    Spell-Like Abilities: 1/day—speak with animals (burrowing mammal only, duration 1 minute). A gnome with a Charisma score of at least 10 also has the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation. Caster level 1st; save DC 10 + stonehunter gnome’s Cha modifier + spell level.
-    Favored Class: Bard. A multiclass gnome’s bard class does not count when determining whether he takes an experience point penalty (see XP for Multiclass Characters, page 60).
-
-Description
+GNOME
 
 Gnomes are welcome everywhere as technicians, alchemists, and inventors. Despite the demand for their skills, most gnomes prefer to remain among their own kind, living in comfortable burrows beneath rolling, wooded hills where animals abound.
 
@@ -239,156 +126,40 @@ Clan Names: Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Sc
 
 Nicknames: Aleslosh, Ashhearth, Badger, Cloak, Doublelock, Filchbatter, Fnipper, Oneshoe, Sparklegem, Stumbleduck.
 
-Adventurers: Gnomes are curious and impulsive. They may take up adventuring as a way to see the world or for the love of exploring. Lawful gnomes may adventure to set things right and to protect the innocent, demonstrating the same sense of duty toward society as a whole that gnomes generally exhibit toward their own enclaves. As lovers of gems and other fine items, some gnomes take to adventuring as a quick, if dangerous, path to wealth. Depending on his relations to his home clan, an adventuring gnome may be seen as a vagabond or even something of a traitor (for abandoning clan responsibilities).
+Adventurers: Gnomes are curious and impulsive. Lawful gnomes may adventure to set things right and to protect the innocent, demonstrating the same sense of duty toward society as a whole that gnomes generally exhibit toward their own enclaves. As lovers of gems and other fine items, some gnomes take to adventuring as a quick, if dangerous, path to wealth. Depending on his relations to his home clan, an adventuring gnome may be seen as a vagabond or even something of a traitor (for abandoning clan responsibilities).
 
+GNOME RACIAL TRAITS
 
-Goblin
+    +2 Constitution, -2 Strength: Like dwarves, gnomes are tough, but they are small and therefore not as strong as larger humanoids.
+    Small size: As a Small creature, a gnome gains a +1 size bonus to Armor Class, a +1 size bonus on attack rolls, and a +4 size bonus on Hide checks, but he uses smaller weapons than humans use, and his lifting and carrying limits are three-quarters of those of a Medium character.
+    Base land speed is 20 feet.
+    Low-Light Vision: A gnome can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. He retains the ability to distinguish color and detail under these conditions.
+    Weapon Familiarity: Gnomes may treat gnome hooked hammers as martial weapons rather than exotic weapons.
+    +2 racial bonus on saving throws against illusions: Gnomes are innately familiar with illusions of all kinds.
+    Add +1 to the Difficulty Class for all saving throws against illusion spells cast by gnomes. Their innate familiarity with these effects make their illusions more difficult to see through. This adjustment stacks with those from similar effects, such as the Spell Focus feat.
+    +1 racial bonus on attack rolls against kobolds and goblinoids (including goblins, hobgoblins, and bugbears): Gnomes battle these creatures frequently and practice special techniques for fighting them.
+    +4 dodge bonus to Armor Class against monsters of the giant type (such as ogres, trolls, and hill giants): This bonus represents special training that gnomes undergo, during which they learn tricks that previous generations developed in their battles with giants. Any time a creature loses its Dexterity bonus (if any) to Armor Class, such as when it's caught flat-footed, it loses its dodge bonus, too.
+    +2 racial bonus on Listen checks: Gnomes have keen ears.
+    +2 racial bonus on Craft (alchemy) checks: A gnome's sensitive nose allows him to monitor alchemical processes by smell.
+    Automatic Languages: Common and Gnome. Bonus Languages: Draconic, Dwarven, Elven, Giant, Goblin, and Orc. Gnomes deal more with elves and dwarves than elves and dwarves deal with one another, and they learn the languages of their enemies (kobolds, giants, goblins, and orcs) as well. In addition, a gnome can speak with a burrowing mammal (a badger, fox, rabbit, or the like). This ability is innate to gnomes.
+    Spell-Like Abilities: 1/day: speak with animals (burrowing mammal only, duration 1 minute). A gnome with a Charisma score of at least 10 also has the following spell-like abilities: 1/day: dancing lights, ghost sound, prestidigitation. Caster level 1st; save DC 10 + gnome's Cha modifier + spell level.
+    Favored Class: Bard. A multiclass gnome's bard class does not count when determining whether he takes an experience point penalty.
 
-Small — LA 0
-
-Monster Manual v.3.5 (MM), p. 133
-
-Also appears in: Rac
-
-Speed
-    Land 30 ft.
-Size
-    Small
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Goblin
-Racial Traits
-
-    -2 Strength, +2 Dexterity, -2 Charisma.
-
-    Small size: +1 bonus to Armor Class, +1 bonus on attack rolls, +4 bonus on Hide checks, -4 penalty on grapple checks, lifting and carrying limits 3/4 those of Medium characters.
-
-    A goblin’s base land speed is 30 feet.
-
-    Darkvision out to 60 feet.
-
-    +4 racial bonus on Move Silently and Ride checks.
-
-    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Elven, Giant, Gnoll, Orc.
-
-    Favored Class: Rogue.
-
-Description
-
-Goblins are small humanoids that many consider little more than a nuisance. However, if they are unchecked, their great numbers, rapid reproduction, and evil disposition enable them to overrun and despoil civilized areas.
-
-Being bullied by bigger, stronger creatures has taught goblins to exploit what few advantages they have: sheer numbers and malicious ingenuity. The concept of a fair fight is meaningless in their society. They favor ambushes, overwhelming odds, dirty tricks, and any other edge they can devise.
-
-Goblins have a poor grasp of strategy and are cowardly by nature, tending to flee the field if a battle turns against them. With proper supervision, though, they can implement reasonably complex plans, and in such circumstances their numbers can be a deadly advantage.
-
-Goblins are tribal. Their leaders are generally the biggest, strongest, or sometimes the smartest of the group. They have almost no concept of privacy, living and sleeping in large common areas; only the leaders live separately. Goblins survive by raiding and stealing (preferably from those who cannot defend themselves easily), sneaking into lairs, villages, and even towns by night to take what they can. They are not above waylaying travelers on the road or in forests and stripping them of all possessions, up to and including the clothes on their backs. Goblins sometimes capture slaves to perform hard labor in the tribe’s lair or camp.
-
-These creatures live wherever they can, from dank caves to dismal ruins, and their lairs are always smelly and filthy due to an utter lack of sanitation. Goblins often settle near civilized areas to raid for food, livestock, tools, weapons, and supplies. Once a tribe has despoiled a locale, it simply packs up and moves on to the next convenient area. Hobgoblins and bugbears are sometimes found in the company of goblin tribes, usually as bullying leaders. Some goblin tribes form alliances with worgs, which carry them into combat. Goblin bands and tribes have noncombatant young equal in number to the adults.
-
-The chief goblin deity is Maglubiyet, who urges his worshipers to expand their numbers and overwhelm their competitors. A goblin cleric has access to two of the following domains: Chaos, Evil, or Trickery.
-
-A goblin stands 3 to 3-1/2 feet tall and weigh 40 to 45 pounds. Its eyes are usually dull and glazed, varying in color from red to yellow. A goblin’s skin color ranges from yellow through any shade of orange to a deep red; usually all members of a single tribe are about the same color. Goblins wear clothing of dark leather, tending toward drab, soiled-looking colors.
-
-
-Half-Elf
-
-Medium — LA 0
-
-Player's Handbook v.3.5 (PH), p. 18
-
-Also appears in: FRCS, Rac
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Elven
-Racial Traits
-
-    Immunity to sleep spells and similar magical effects, and a +2 racial bonus on saving throw against enchantment spells or effects.
-    Low-light Vision: A half-elf can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. She retains the ability to distinguish color and detail under these conditions.
-    +1 racial bonus on Listen, Search, and Spot checks: A half-elf does not have the elf’s ability to notice secret doors simply by passing near them. Half-elves have keen senses, but not as keen as those of an elf.
-    +2 racial bonus on Diplomacy and Gather Information checks: Half-elves get along naturally with all people.
-    Elven Blood: For all effects related to race, a half-elf is considered an elf. Half-elves, for example, are just as vulnerable to special effects that affect elves as their elf ancestors are, and they can use magic items that are only usable by elves. (See the Monster Manual for more information about elves, and the Dungeon Master’s Guide for more on magic items.)
-    Automatic Languages: Common and Elven. Bonus Languages: Any (other than secret languages, such as Druidic). Half-elves have all the versatility and broad (if shallow) experience that humans have.
-
-Description
-
-To humans, half-elves look like elves. To elves, they look like humans – indeed, elves call them half-humans. Half-elf height ranges from under 5 feet to about 6 feet tall, and weight usually ranges from 100 to 180 pounds. Half-elf men are taller and heavier than half-elf women, but the difference is less pronounced than that found among humans. Half-elves are paler, fairer, and smoother-skinned than their human parents, but their actual skin tone, hair color, and other details vary just as human features do. Half-elves’ eyes are green, just as are those of their elf parents. A half-elf reaches adulthood at age 20 and can live to be over 180 years old.
-
-
-Half-Orc
-
-Medium — LA 0
-
-Player's Handbook v.3.5 (PH), p. 18
-
-Also appears in: FRCS, Rac
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good fort)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Orc
-Racial Traits
-
-    Darkvision: Half-orcs (and orcs) can see in the dark up to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and half-orcs can function just fine with no light at all.
-    Orc Blood: For all effects related to race, a half-orc is considered an orc. Half-orcs, for example, are just as vulnerable to special effects that affect orcs as their orc ancestors are, and they can use magic items that are only usable by orcs. (See the Monster Manual for more information about orcs, and the Dungeon Master*s Guide for more on magic items.)
-    Automatic Languages: Common and Orc. Bonus Languages: Draconic, Giant, Gnoll, Goblin, and Abyssal. Smart half-orcs (who are rare) may know the languages of their allies or rivals.
-
-Description
+HALF-ORC
 
 In the wild frontiers, tribes of human and orc barbarians live in uneasy balance, fighting in times of war and trading in times of peace. Half-orcs who are born in the frontier may live with either human or orc parents, but they are nevertheless exposed to both cultures. Some, for whatever reason, leave their homeland and travel to civilized lands, bringing with them the tenacity, courage, and combat prowess that they developed in the wilds.
 
+HALF-ORC RACIAL TRAITS
 
-Halfling
+    +2 Strength, -2 Intelligence, -2 Charisma: Half-orcs are strong, but their orc lineage makes them dull and crude. A half-orc's starting Intelligence score is always at least 3. If this adjustment would lower the character's score to 1 or 2, his score is nevertheless 3.
+    Medium size: As Medium creatures, half-orcs have no special bonuses or penalties due to their size.
+    Base land speed is 30 feet.
+    Darkvision: Half-orcs (and orcs) can see in the dark up to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and half-orcs can function just fine with no light at all.
+    Orc Blood: For all effects related to race, a half-orc is considered an orc. Half-orcs, for example, are just as vulnerable to special effects that affect orcs as their orc ancestors are, and they can use magic items that are only usable by orcs.
+    Automatic Languages: Common and Orc. Bonus Languages: Draconic, Giant, Gnoll, Goblin, and Abyssal. Smart half-orcs (who are rare) may know the languages of their allies or rivals.
+    Favored Class: Barbarian. A multiclass half-orc's barbarian class does not count when determining whether he takes an experience point penalty. Ferocity runs in a half-orc's veins.
 
-Small — LA 0
-
-Player's Handbook v.3.5 (PH), p. 19
-
-Size
-    Small
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +0
-
-Languages
-
-Common, Halfling
-Racial Traits
-
-    +2 Dexterity, -2 Strength: Halflings are quick, agile, and good with ranged weapons, but they are small and therefore not as strong as other humanoids.
-    Small: As a Small creature, a halfling gains a +1 size bonus to Armor Class, a +1 size bonus on attack rolls, and a +4 size bonus on Hide checks, but she uses smaller weapons than humans use, and her lifting and carrying limits are three-quarters of those of a Medium character.
-    Halfling base land speed is 20 feet.
-    +2 racial bonus on Climb, Jump, and Move Silently checks: Halflings are agile, surefooted, and athletic.
-    +1 racial bonus on all saving throws: Halflings are surprisingly capable of avoiding mishaps.
-    +2 morale bonus on saving throws against fear. This bonus stacks with the halfling’s +1 racial bonus on saving throws in general.
-    +1 racial bonus on attack rolls with a thrown weapon and slings: Throwing and slinging stones is a universal sport among halflings, and they develop especially good aim.
-    +2 racial bonus on Listen checks: Halflings have keen ears.
-    Favored Class: Rogue. A multiclass halfling’s rogue class does not count when determining whether she take an experience point penalty for multiclassing (see XP for Multiclass Characters in the Player’s Handbook, p. 60).
-
-Description
+HALFLING
 
 Halflings are clever, capable opportunists. Halfling individuals and clans find room for themselves wherever they can. Often they are strangers and wanderers, and others react to them with suspicion or curiosity. Depending on the clan, halflings might be reliable, hard-working (if clannish) citizens, or they might be thieves just waiting for the opportunity to make a big score and disappear in the dead of the night. Regardless, halflings are cunning, resourceful survivors.
 
@@ -396,44 +167,20 @@ Physical Description
 
 Halflings stand about 3 feet tall and usually weight between 30 and 35 pounds. Their skin is ruddy, their hair black and straight. They have brown or black eyes. Halfling men often have long sideburns, but beards are rare among them and mustaches almost unseen. They like to wear simple, comfortable, and practical clothes. A halfling reaches adulthood at the age of 20 and generally lives into the middle of her second century.
 
+HALFLING RACIAL TRAITS
 
-Hobgoblin
+    +2 Dexterity, -2 Strength: Halflings are quick, agile, and good with ranged weapons, but they are small and therefore not as strong as other humanoids.
+    Small size: As a Small creature, a halfling gains a +1 size bonus to Armor Class, a +1 size bonus on attack rolls, and a +4 size bonus on Hide checks, but she uses smaller weapons than humans use, and her lifting and carrying limits are three-quarters of those of a Medium character.
+    Base land speed is 20 feet.
+    +2 racial bonus on Climb, Jump, and Move Silently checks: Halflings are agile, surefooted, and athletic.
+    +1 racial bonus on all saving throws: Halflings are surprisingly capable of avoiding mishaps.
+    +2 morale bonus on saving throws against fear. This bonus stacks with the halfling's +1 bonus on saving throws in general.
+    +1 racial bonus on attack rolls with thrown weapons and slings: Throwing and slinging stones is a universal sport among halflings, and they develop especially good aim.
+    +2 racial bonus on Listen checks: Halflings have keen ears.
+    Automatic Languages: Common and Halfling. Bonus Languages: Dwarven, Elven, Gnome, Goblin, and Orc. Smart halflings learn the languages of their friends and enemies.
+    Favored Class: Rogue. A multiclass halfling's rogue class does not count when determining whether she takes an experience point penalty for multiclassing. Halflings have long had to rely on stealth, wit, and skill, and the vocation of rogue comes naturally to them.
 
-Medium — LA 1
-
-Monster Manual v.3.5 (MM), p. 153
-
-Also appears in: Rac
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good fort)
-Level Adjustment
-    +1
-
-Languages
-
-Common, Goblin
-Racial Traits
-
-    +2 Dexterity, +2 Constitution.
-
-    A hobgoblin’s base land speed is 30 feet.
-
-    Darkvision out to 60 feet.
-
-    +4 racial bonus on Move Silently checks.
-
-    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Dwarven, Infernal, Giant, Orc.
-
-    Favored Class: Fighter.
-
-    Level adjustment +1.
-
-Description
+HOBGOBLIN
 
 Hobgoblins are larger cousins of goblins. They are far more aggressive and organized than their smaller relatives and wage a perpetual war with other humanoids, particularly elves.
 
@@ -445,72 +192,34 @@ Hobgoblin society is organized into tribal bands, each intensely jealous of its 
 
 These creatures usually make lairs in places that either boast natural defenses or can be fortified. Cavern complexes, dungeons, ruins, and forests are among their favorites. Typical lair defenses include ditches, fences, gates, guard towers, pit traps, and crude catapults or ballistas.
 
-Most hobgoblins revere Maglubiyet, who is also the patron deity of goblins. A hobgoblin cleric has access to two of the following domains: Evil, Destruction, or Trickery.
+A hobgoblin cleric has access to two of the following domains: Evil, Destruction, or Trickery.
 
+HOBGOBLIN RACIAL TRAITS
 
-Human
+    +2 Dexterity, +2 Constitution.
+    Base land speed is 30 feet.
+    Racial Hit Dice: A hobgoblin begins with one level of humanoid, which provides 1d8 Hit Dice, a base attack bonus of +1, and base saving throw bonuses of Fort +2, Ref +0, and Will +0.
+    Darkvision out to 60 feet.
+    +4 racial bonus on Move Silently checks.
+    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Dwarven, Infernal, Giant, Orc.
+    Favored Class: Fighter.
+    Level Adjustment: +1.
 
-Medium — LA 0
-
-Player's Handbook v.3.5 (PH), p. 12
-
-Also appears in: FRCS
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good reflex)
-Level Adjustment
-    +0
-
-Languages
-
-Common
-Racial Traits
-
-    Medium: As Medium creatures, humans have no special bonuses or penalties due to their size.
-    Human base land speed is 30 feet.
-    1 extra feat at 1st level, because humans are quick to master specialized tasks and varied in their talents. See Chapter 5: Feats.
-    4 extra skill points at 1st level and 1 extra skill point at each additional level, since humans are versatile and capable. (The 4 skill points at 1st level are added on as a bonus, not multiplied in; see Chapter 4: Skills.)
-    Automatic Language: Common. Bonus Languages: Any (other than secret languages, such as Druidic). See other racial lists for common languages or the Speak Language skill (page 82) for a more comprehensive list. Humans mingle with all kinds of other folk and thus can learn any language found in an area.
-
-Description
+HUMAN
 
 Humans typically stand from 5 feet to a little over 6 feet tall and weigh from 125 to 250 pounds, with men noticeably taller and heavier than women. Thanks to their penchant for migration and conquest, and to their short life spans, humans are more physically diverse than other common races. Their skin shades range from nearly black to very pale, their hair from black to blond (curly, kinky, or straight), and their facial hair (for men) from sparse to thick. Plenty of humans have a dash of nonhuman blood, and they may demonstrate hints of elf, orc, or other lineages. Members of this race are often ostentatious or unorthodox in their grooming and dress, sporting unusual hairstyles, fanciful clothes, tattoos, body piercings, and the like. Humans have short life spans, reaching adulthood at about age 15 and rarely living even a single century.
 
+HUMAN RACIAL TRAITS
 
-Minotaur
+    No ability score adjustments.
+    Medium size: As Medium creatures, humans have no special bonuses or penalties due to their size.
+    Base land speed is 30 feet.
+    1 extra feat at 1st level, because humans are quick to master specialized tasks and varied in their talents.
+    4 extra skill points at 1st level and 1 extra skill point at each additional level, since humans are versatile and capable.
+    Automatic Languages: Common. Bonus Languages: Any (other than secret languages, such as Druidic). Humans mingle with all kinds of other folk and thus can learn any language found in an area.
+    Favored Class: Any. When determining whether a multiclass human takes an experience point penalty, his or her highest-level class does not count.
 
-Large — LA 2
-
-Monster Manual v.3.5 (MM), p. 189
-
-Speed
-    Land 40 ft.
-Size
-    Large
-Type
-    Monstrous Humanoid
-Level Adjustment
-    +2
-
-Languages
-
-Common, Giant
-Racial Traits
-
-    Darkvision out to 60 feet.
-    Racial Skills: A minotaur’s monstrous humanoid levels give it skill points equal to 9 * (2 + Int modifier, minimum 1). Its class skills are Intimidate, Jump, Listen, Search, and Spot.
-    Minotaurs have a +4 racial bonus on Search, Spot, and Listen checks.
-    Racial Feats: A minotaur’s monstrous humanoid levels give it three feats.
-    Weapon Proficiency: A minotaur is proficient with the greataxe and all simple weapons.
-    Natural Weapons: Gore (1d8).
-    Special Attacks (see above): Powerful charge.
-    Special Qualities (see above): Natural cunning, scent.
-
-Description
+MINOTAUR
 
 Minotaurs were large, muscular humanoids. They had the head of a bull, upper torso, hands, and the body of a human, and hooved feet. Their fur and wild hair typically ranged from brown to black. The fur often covered forearms, chest, abdomen, and legs. Males were referred to as bulls and reached up to 9 feet (2.7 meters) in height, while females – cows, were similar in appearance, with broader hips, humanoid breasts, and reached only 7 feet (2.1 meters).
 
@@ -518,123 +227,123 @@ Minotaur bodies were of similar shape and build to that of an ogre. Their hands 
 
 The creatures’ iconic feature – their horns – were very similar to normal bulls’, slightly curving forward. Both males and females had similarly shaped huge horns. However, males’ were longer and thicker on average. There were several horn coloring variations, and sometimes as many as three colors could be present. Minotaurs with dark fur often had dark yellow or brown horns. The shortest horns were around 1 foot (0.3 meters) and could reach up to three times that length.
 
+MINOTAUR RACIAL TRAITS
 
-Orc
+    +8 Strength, +4 Constitution, -4 Intelligence (minimum 3), -2 Charisma.
+    Large size. -1 penalty to Armor Class, -1 penalty on attack rolls, -4 penalty on Hide checks, +4 bonus on grapple checks, lifting and carrying limits double those of Medium characters.
+    Space/Reach: 10 feet/10 feet.
+    Base land speed is 30 feet.
+    Darkvision out to 60 feet.
+    Racial Hit Dice: A minotaur begins with six levels of monstrous humanoid, which provide 6d8 Hit Dice, a base attack bonus of +6, and base saving throw bonuses of Fort +2, Ref +5, and Will +5.
+    Racial Skills: A minotaur's monstrous humanoid levels give it skill points equal to 9 x (2 + Int modifier, minimum 1). Its class skills are Intimidate, Jump, Listen, Search, and Spot. Minotaurs have a +4 racial bonus on Search, Spot, and Listen checks.
+    Racial Feats: A minotaur's monstrous humanoid levels give it three feats.
+    Weapon Proficiency: A minotaur is proficient with the greataxe and all simple weapons.
+    +5 natural armor bonus.
+    Natural Weapons: Gore (1d8 piercing).
+    Powerful Charge (Ex): A minotaur typically begins a battle by charging at an opponent, lowering its head to bring its mighty horns into play. In addition to the normal benefits and hazards of a charge, this allows the beast to make a single gore attack that deals 4d6 plus 1 1/2 Strength bonus points of damage.
+    Natural Cunning (Ex): Although minotaurs are not especially intelligent, they possess innate cunning and logical ability. This gives them immunity to maze spells, prevents them from ever becoming lost, and enables them to track enemies. Further, they are never caught flat-footed.
+    Scent.
+    Automatic Languages: Common, Giant. Bonus Languages: Orc, Goblin, Terran.
+    Favored Class: Barbarian.
+    Level Adjustment: +2.
 
-Medium — LA 0
-
-Monster Manual v.3.5 (MM), p. 203
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Humanoid (good fort)
-Level Adjustment
-    +0
-
-Languages
-
-Common
-Racial Traits
-
-    Darkvision: Orcs (and Half-Orcs) can see in the dark up to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and Orcs can function just fine with no light at all.
-    Light Sensitivity (Ex): Orcs are dazzled in bright sunlight or within the radius of a daylight spell.
-
-Description
+ORC
 
 Orcs are aggressive humanoids that raid, pillage, and battle other creatures. They have a hatred of elves and dwarves that began generations ago, and often kill such creatures on sight. An orc’s hair usually is black. It has lupine ears and reddish eyes. Orcs prefer wearing vivid colors that many humans would consider unpleasant, such as blood red, mustard yellow, yellow-green, and deep purple. Their equipment is dirty and unkempt. An adult male orc is a little over 6 feet tall and weighs about 210 pounds. Females are slightly smaller. When not actually fighting other creatures, orcs are usually planning raids or practicing their fighting skills. The language an orc speaks varies slightly from tribe to tribe, but any orc is understandable by someone else who speaks Orc. Some orcs know Goblin or Giant as well. Most orcs encountered away from their homes are warriors; the information in the statistics block is for one of 1st level.
 
+ORC RACIAL TRAITS
 
-Tiefling
+    +4 Strength, -2 Intelligence, -2 Wisdom, -2 Charisma.
+    Medium size.
+    Base land speed is 30 feet.
+    Darkvision out to 60 feet.
+    Light Sensitivity: Orcs are dazzled in bright sunlight or within the radius of a daylight spell.
+    Automatic Languages: Common, Orc. Bonus Languages: Dwarven, Giant, Gnoll, Goblin, Undercommon.
+    Favored Class: Barbarian.
 
-Medium — LA 1
-
-Forgotten Realms Campaign Setting (FRCS), p. 20
-
-Also appears in: RD
-
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Outsider
-Level Adjustment
-    +1
-
-Languages
-
-Common, Home Region
-Racial Traits
-
-Tieflings have the following racial traits:
-
-    +2 Dexterity, +2 Intelligence, -2 Charisma: Tieflings are gifted with heightened reflexes and cunning, but tend to disturb people with whom they interact.
-    Fire, cold, and electricity resistance 5.
-    Darkness (Sp): Tieflings can use darkness once per day as cast by a sorcerer of their character level.
-    +2 racial bonus on Bluff and Hide checks.
-    Darkvision up to 60 feet.
-    Outsider: Aasimar are native outsiders.
-    Any languages are allowed as bonus languages, exccept secret languages, such as Druidic.
-    Favored Class: Rogue
-
-Native Outsider
-
-Due to the strength of their divine or infernal bloodlines, each of the planetouched races possess the unusual characteristics of being an outsider native to Faerûn, not a humanoid. This has three principal effects:
-
-    First, spells or effects that affect only humanoids, such as a charm person or a dominate person spell, do not affect planetouched characters.
-    Second, spells and effects that target extraplanar creatures may affect planetouched characters. For example, the mace of smiting and the sword of the planes are more effective against outsiders, and are correspondingly more dangerous to a planetouched character. A spell that drives outsiders back to their home planes does not affect planetouched characters, but banishment – a spell that removes an outsider from the caster’s plane without specifying a return to the outsider’s native plane – would work just finde.
-    Finally, Faerûn’s planetouched have lived on Toril long enough for Toril to become, in effect, their native plane. This means that planetouched characters can be raised or resurrected normally, whereas most outsiders cannot be brought back from the dead without the use of a miracle or wish spell.
-
-Description
+TIEFLING
 
 Because they are descended from evil outsiders, those who know of their ancestry immediately consider most tieflings evil and untrustworthy. Not all tieflings are evil or untrustworthy, but enough are that the prejudice tends to cling. Some tieflings have a minor physical trait suggesting their heritage, such as pointed teeth, red eyes, small horns, the odor of brimstone, cloven feet, or just an unnatural aura of wrongness. Those descended from an infernal minion of a Ferûnian deity often carry a birthmark of the deity’s holy symbol or another trait related to that evil faith.
 
+Tieflings and aasimars are outsiders native to the Material Plane rather than humanoids, because their ancestry is infernal or celestial. This has three principal effects.
 
-Aasimar
+First, spells or effects that affect only humanoids, such as charm person or dominate person, do not affect them. Second, spells and effects that target extraplanar creatures may affect them. A spell that drives outsiders back to their home planes does not affect them, but banishment, which removes an outsider from the caster's plane without specifying a return to its native plane, works normally. Third, because the Material Plane is their native plane, they can be raised or resurrected normally, whereas most outsiders cannot be brought back from the dead without a miracle or wish.
 
-Medium — LA 1
+TIEFLING RACIAL TRAITS
 
-Forgotten Realms Campaign Setting (FRCS), p. 18
+    +2 Dexterity, +2 Intelligence, -2 Charisma.
+    Outsider (Native): Tieflings are outsiders native to the Material Plane, and thus have the outsider (native) type. They gain the extraplanar subtype when not on the Material Plane. They are not subject to spells or effects that affect only humanoids, such as charm person and dominate person.
+    Medium size: As Medium creatures, tieflings have no special bonuses or penalties due to their size.
+    Base land speed is 30 feet.
+    Tieflings have darkvision out to 60 feet.
+    Skills: Tieflings have a +2 racial bonus on Bluff and Hide checks.
+    Darkness (Sp): A tiefling can use darkness, as the spell, once per day. Her caster level is equal to her character level.
+    Resistance to cold 5, electricity 5, and fire 5: Tieflings share some of their fiendish ancestors' resistance to energy damage.
+    Automatic Languages: Common, Infernal. Bonus Languages: Draconic, Dwarven, Elven, Gnome, Goblin, Halfling, Orc.
+    Favored Class: Rogue.
+    Level Adjustment: +1.
 
-Also appears in: RD
+AASIMAR
 
-Speed
-    Land 30 ft.
-Size
-    Medium
-Type
-    Outsider
-Level Adjustment
-    +1
+Carrying the blood of a celestial, an aasimar is usually good-aligned and fights against evil in the world. Some have a minor physical trait suggesting their heritage, such as silver hair, golden eyes, or an unnaturally intense stare.
 
-Languages
+Tieflings and aasimars are outsiders native to the Material Plane rather than humanoids, because their ancestry is infernal or celestial. This has three principal effects.
 
-Common, Home Region
-Racial Traits
+First, spells or effects that affect only humanoids, such as charm person or dominate person, do not affect them. Second, spells and effects that target extraplanar creatures may affect them. A spell that drives outsiders back to their home planes does not affect them, but banishment, which removes an outsider from the caster's plane without specifying a return to its native plane, works normally. Third, because the Material Plane is their native plane, they can be raised or resurrected normally, whereas most outsiders cannot be brought back from the dead without a miracle or wish.
 
-Aasimar have the following traits:
+AASIMAR RACIAL TRAITS
 
-    +2 Wisdom, +2 Charisma: Aasimar are blessed with insight and personal magnetism.
-    Acid, cold, and electricity resistance 5.
-    Light (Sp): Aasimar can use light once per day as cast by a sorcerer of their character level.
-    +2 racial bonus on Listen and Spot checks.
-    Darkvision up to 60 feet.
-    Outsider: Aasimar are native outsiders.
-    Favored Class: Paladin.
-    Level Adjustment +1: Aasimar are slightly more powerful and gain levels more slowly than most of the other common races of Faerûn.
-    Any languages are allowed as bonus languages, exccept secret languages, such as Druidic.
+    +2 Wisdom, +2 Charisma: Aasimars inherit a measure of the insight and presence of their celestial forebears.
+    Outsider (native): Aasimars are outsiders who are native to the Material Plane. Unlike true outsiders, native outsiders need to eat and sleep.
+    Medium size: As Medium creatures, aasimars have no special bonuses or penalties due to size.
+    Base land speed is 30 feet.
+    Darkvision: Aasimars can see in the dark out to 60 feet. Darkvision is black and white only, but it is otherwise like normal sight, and aasimars can function just fine with no light at all.
+    Daylight (Sp): An aasimar can use daylight once per day. Her caster level is equal to her character level.
+    Resistance to acid 5, cold 5, and electricity 5: Aasimars gain a slight resistance to acid, cold, and electricity from their celestial blood.
+    +2 racial bonus on Listen and Spot checks: Aasimars have keen senses.
+    Automatic Languages: Common and Celestial. Bonus Languages: Draconic, Dwarven, Elven, Gnome, Halfling, and Sylvan. Aasimars enjoy learning languages that enable them to communicate with good creatures.
+    Favored Class: Paladin. The paladin class levels of an aasimar who becomes an ex-paladin class do not count when determining whether she takes an experience point penalty for multiclassing.
+    Level Adjustment: +1.
 
-Native Outsider
+GOBLIN
 
-Due to the strength of their divine or infernal bloodlines, each of the planetouched races possess the unusual characteristics of being an outsider native to Faerûn, not a humanoid. This has three principal effects:
+Goblins are small humanoids that many consider little more than a nuisance. However, if they are unchecked, their great numbers, rapid reproduction, and evil disposition enable them to overrun and despoil civilized areas.
 
-    First, spells or effects that affect only humanoids, such as a charm person or a dominate person spell, do not affect planetouched characters.
-    Second, spells and effects that target extraplanar creatures may affect planetouched characters. For example, the mace of smiting and the sword of the planes are more effective against outsiders, and are correspondingly more dangerous to a planetouched character. A spell that drives outsiders back to their home planes does not affect planetouched characters, but banishment – a spell that removes an outsider from the caster’s plane without specifying a return to the outsider’s native plane – would work just finde.
-    Finally, Faerûn’s planetouched have lived on Toril long enough for Toril to become, in effect, their native plane. This means that planetouched characters can be raised or resurrected normally, whereas most outsiders cannot be brought back from the dead without the use of a miracle or wish spell.
+Being bullied by bigger, stronger creatures has taught goblins to exploit what few advantages they have: sheer numbers and malicious ingenuity. The concept of a fair fight is meaningless in their society. They favor ambushes, overwhelming odds, dirty tricks, and any other edge they can devise.
 
-Description
+Goblins have a poor grasp of strategy and are cowardly by nature, tending to flee the field if a battle turns against them. With proper supervision, though, they can implement reasonably complex plans, and in such circumstances their numbers can be a deadly advantage.
 
-Carrying the blood of a celestial, an aasimar is usually good-aligned and fights against evil in the world. Some have a minor physical trait suggesting their heritage, such as silver hair, golden eyes, or an unnaturally intense stare. Those descended from a celestial minion of a Faerûnian deity often carry a birthmark in the shape of the deity’s holy symbol or some other mark significant to that faith.
+Goblins are tribal. Their leaders are generally the biggest, strongest, or sometimes the smartest of the group. They have almost no concept of privacy, living and sleeping in large common areas; only the leaders live separately. Goblins survive by raiding and stealing (preferably from those who cannot defend themselves easily), sneaking into lairs, villages, and even towns by night to take what they can. They are not above waylaying travelers on the road or in forests and stripping them of all possessions, up to and including the clothes on their backs. Goblins sometimes capture slaves to perform hard labor in the tribe’s lair or camp.
+
+These creatures live wherever they can, from dank caves to dismal ruins, and their lairs are always smelly and filthy due to an utter lack of sanitation. Goblins often settle near civilized areas to raid for food, livestock, tools, weapons, and supplies. Once a tribe has despoiled a locale, it simply packs up and moves on to the next convenient area. Hobgoblins and bugbears are sometimes found in the company of goblin tribes, usually as bullying leaders. Some goblin tribes form alliances with worgs, which carry them into combat. Goblin bands and tribes have noncombatant young equal in number to the adults.
+
+A goblin cleric has access to two of the following domains: Chaos, Evil, or Trickery.
+
+A goblin stands 3 to 3-1/2 feet tall and weigh 40 to 45 pounds. Its eyes are usually dull and glazed, varying in color from red to yellow. A goblin’s skin color ranges from yellow through any shade of orange to a deep red; usually all members of a single tribe are about the same color. Goblins wear clothing of dark leather, tending toward drab, soiled-looking colors.
+
+GOBLIN RACIAL TRAITS
+
+    -2 Strength, +2 Dexterity, -2 Charisma.
+    Small size: +1 bonus to Armor Class, +1 bonus on attack rolls, +4 bonus on Hide checks, -4 penalty on grapple checks, lifting and carrying limits 3/4 those of Medium characters.
+    Base land speed is 30 feet.
+    Darkvision out to 60 feet.
+    +4 racial bonus on Move Silently and Ride checks.
+    Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Elven, Giant, Gnoll, Orc.
+    Favored Class: Rogue.
+
+HALF-ELF
+
+To humans, half-elves look like elves. To elves, they look like humans – indeed, elves call them half-humans. Half-elf height ranges from under 5 feet to about 6 feet tall, and weight usually ranges from 100 to 180 pounds. Half-elf men are taller and heavier than half-elf women, but the difference is less pronounced than that found among humans. Half-elves are paler, fairer, and smoother-skinned than their human parents, but their actual skin tone, hair color, and other details vary just as human features do. Half-elves’ eyes are green, just as are those of their elf parents. A half-elf reaches adulthood at age 20 and can live to be over 180 years old.
+
+HALF-ELF RACIAL TRAITS
+
+    No ability score adjustments.
+    Medium size: As Medium creatures, half-elves have no special bonuses or penalties due to their size.
+    Base land speed is 30 feet.
+    Immunity to sleep spells and similar magical effects, and a +2 racial bonus on saving throws against enchantment spells or effects.
+    Low-Light Vision: A half-elf can see twice as far as a human in starlight, moonlight, torchlight, and similar conditions of poor illumination. She retains the ability to distinguish color and detail under these conditions.
+    +1 racial bonus on Listen, Search, and Spot checks: A half-elf does not have the elf's ability to notice secret doors simply by passing near them. Half-elves have keen senses, but not as keen as those of an elf.
+    +2 racial bonus on Diplomacy and Gather Information checks: Half-elves get along naturally with all people.
+    Elven Blood: For all effects related to race, a half-elf is considered an elf. Half-elves, for example, are just as vulnerable to special effects that affect elves as their elf ancestors are, and they can use magic items that are only usable by elves.
+    Automatic Languages: Common and Elven. Bonus Languages: Any (other than secret languages, such as Druidic). Half-elves have all the versatility and broad (if shallow) experience that humans have.
+    Favored Class: Any. When determining whether a multiclass half-elf takes an experience point penalty, her highest-level class does not count.

@@ -77,7 +77,7 @@ Blackguards choose their spells from the following list:
 
 2nd Level: bull's strength, cure moderate wounds, darkness, death knell, eagle's splendor, inflict moderate wounds, shatter, summon monster II*.
 
-3rd Level: contagion, cure serious wounds, deeper darkness, inflict serious wounds, protection from energy, summon monster III*.
+3rd Level: contagion, cure serious wounds, deeper darkness, inflict serious wounds, protection from acid, protection from frost, protection from lightning, protection from fire, protection from thunder, summon monster III*.
 
 4th Level: cure critical wounds, freedom of movement, inflict critical wounds, poison, summon monster IV*.
 

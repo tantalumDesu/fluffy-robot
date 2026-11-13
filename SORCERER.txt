@@ -92,30 +92,6 @@ A sorcerer's selection of spells is extremely limited. A sorcerer begins play kn
 
 Upon reaching 4th level, and at every even-numbered sorcerer level after that (6th, 8th, and so on), a sorcerer can choose to learn a new spell in place of one he already knows. In effect, the sorcerer "loses" the old spell in exchange for the new one. The new spell's level must be the same as that of the spell being exchanged, and it must be at least two levels lower than the highest-level sorcerer spell the sorcerer can cast. A sorcerer may swap only a single spell at any given level, and must choose whether or not to swap the spell at the same time that he gains new spells known for the level.
 
-Table: Sorcerer Spell Replacement
-Sorcerer level	Highest Spell Level that can be Swapped
-	0	1	2	3	4	5	6	7	8	9
-1st	-	-	-	-	-	-	-	-	-	-
-2nd	-	-	-	-	-	-	-	-	-	-
-3rd	-	-	-	-	-	-	-	-	-	-
-4th	10	16	18	20	22	24	26	28	-	-
-5th	-	-	-	-	-	-	-	-	-	-
-6th	10	11	18	20	22	24	26	28	-	-
-7th	-	-	-	-	-	-	-	-	-	-
-8th	10	11	12	20	22	24	26	28	-	-
-9th	-	-	-	-	-	-	-	-	-	-
-10th	10	11	12	13	22	24	26	28	-	-
-11th	-	-	-	-	-	-	-	-	-	-
-12th	10	11	12	13	14	24	26	28	-	-
-13th	-	-	-	-	-	-	-	-	-	-
-14th	10	11	12	13	14	15	26	28	-	-
-15th	-	-	-	-	-	-	-	-	-	-
-16th	10	11	12	13	14	15	16	28	-	-
-17th	-	-	-	-	-	-	-	-	-	-
-18th	10	11	12	13	14	15	16	17	-	-
-19th	-	-	-	-	-	-	-	-	-	-
-20th	10	11	12	13	14	15	16	17	-	-
-
 Unlike a wizard or a cleric, a sorcerer need not prepare his spells in advance. He can cast any spell he knows at any time, assuming he has not yet used up his spells per day for that spell level. He does not have to decide ahead of time which spells he'll cast.
 
 Familiar: A sorcerer can obtain a familiar. Doing so takes 24 hours and uses up magical materials that cost 100 gp. A familiar is a magical beast that resembles a small animal and is unusually tough and intelligent. The creature serves as a companion and servant.
