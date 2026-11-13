@@ -1,0 +1,263 @@
+EPIC FEATS
+
+Familiar Spell
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 209
+
+Also appears in: EL, Und
+
+Prerequisite
+INT 25.
+
+Benefit
+
+Choose one spell you know of 8th level or lower, such as chain lightning or circle of death. Your familiar can now cast this spell once per day as a spell-like ability as a caster of a level equal to your caster level. You cannot bestow a spell upon your familiar if the spell normally has a material component cost of more than 1 gp, or any XP cost.
+
+Special
+
+You can gain this feat multiple times. Each time you take the feat, you can give your familiar a new spell-like ability, or another daily use of the same spell-like ability.
+
+Description
+
+Your familiar can cast a spell.
+
+Great Smiting
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 209
+
+Prerequisite
+CHA 25.
+
+Benefit
+
+Whenever you make a successful smite attack, add twice the appropriate level to damage (rather than just your level).
+
+Special
+
+You may select this feat multiple times. Its effects stack. (Remember that two doublings equals a tripling, and so forth.)
+
+Description
+
+Your smite attacks are much more powerful than normal.
+
+Improved Elemental Wild Shape
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 209
+
+Also appears in: EL
+
+Prerequisite
+WIS 25.
+
+Benefit
+
+Your ability to wild shape into an elemental is expanded to include all elemental creatures (not just air, earth, fire, and water elementals) of any size that you can take when wild shaping into an animal. For instance, if you are normally capable of taking the shape of an animal of Huge size, you can now wild shape into a Huge elemental creature. You gain all extraordinary and supernatural abilities of the elemental whose form you take.
+
+Normal
+
+Without this feat, you may only take the shape of a Small, Medium, or Large air, earth, fire, or water elemental.
+
+Description
+
+You can take the form of a larger variety of elementals than normal.
+
+Improved Favored Enemy
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: CW, EL
+
+Prerequisite
+BAB +5; Favored Enemy Ability.
+
+Benefit
+
+Add +1 to the bonus on Bluff, Listen, Sense Motive, Spot, and Survival checks and damage rolls against all your favored enemies.
+
+Special
+
+This feat may be taken multiple times. Its effects stack.
+
+Improved Metamagic
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Prerequisite
+Skill id 87 30 ranks.
+
+Benefit
+
+The spell slot you must use to cast a metamagic spell is one level lower than normal (to a minimum of one level higher than normal). For instance, you could cast a quickened spell as a spell of three levels higher than normal rather than four levels higher. This feat has no effect on a metamagic feat that requires a spell slot one level higher than normal or does not require a higherlevel slot.
+
+Special
+
+You can gain this feat multiple times. The effects stack, though you can’t lower the level of any metamagic spell’s slot to less than one level higher than normal.
+
+Description
+
+You can cast spells using metamagic feats more easily than normal.
+
+Improved Sneak Attack
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Prerequisite
+Sneak attack +8d6.
+
+Benefit
+
+Add +1d6 to your sneak attack damage.
+
+Special
+
+This feat may be taken multiple times. Its effects stack
+
+Description
+
+Your sneak attacks are more deadly than normal.
+
+Improved Spell Capacity
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: Dr, EL
+
+Prerequisite
+Ability To Cast Spells Of The Normal Maximum Spell Level In At Least One Spellcasting Class.
+
+Benefit
+
+When you select this feat, you gain one spell slot per day of any level up to one level higher than the highest level spell you can already cast in a particular class. For example, if a 21stlevel wizard selected this feat, she would gain one wizard spell slot of any level up to 10th. The character must have the requisite ability score (10 + spell level) in order to cast a spell stored in such a slot. If the character has a high enough ability modifier to gain one or more bonus spells for this spell level, she also gains those bonus spells for this spell level. This feat can’t grant spellcasting ability to a class that doesn’t have spellcasting ability. A character must use the spell slot in a class of which she can already cast the maximum normal spell level. (For instance, a 5th-level ranger/22nd-level sorcerer couldn’t add a ranger spell slot, because she can’t cast the maximum normal spell level for ranger. She must add the spell slot to her sorcerer spells.) SPECIAL: You can gain this feat multiple times.
+
+Description
+
+You can prepare spells that exceed the normal limits of spellcasting.
+
+Improved Stunning Fist
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: DMG, EL
+
+Prerequisite
+DEX 19; WIS 19; Improved Unarmed Strike; Stunning Fist.
+
+Benefit
+
+Add +2 to the DC of your Stunning Attack. This feat may be taken multiple times. Its effects stack.
+
+Lasting Inspiration
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Prerequisite
+25 ranks in Knowledge Ghost Lore; knowledge-ghost-lore extra: any one.
+
+Benefit
+
+The effects of your bardic music inspiration abilities last for ten times as long as normal after you stop singing. This has no effect on inspiration abilities that have no duration after you stop singing (such as inspire competence).
+
+Description
+
+Your songs continue to inspire allies long after your words have faded.
+
+Overwhelming Critical
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: Dr, EL
+
+Prerequisite
+STR 23; Cleave; Great Cleave; Improved Critical; Power Attack; Weapon Focus; with weapon to be chosen (improved-critical-1463); with weapon to be chosen (weapon-focus-3105).
+
+Benefit
+
+When using the weapon you have selected, you deal an extra 1d6 points of damage on a successful critical hit. If the weapon’s critical multiplier is ×3, add an extra 2d6 points of damage instead, and if the multiplier is 4, add an extra 3d6 points of damage instead. (Creatures immune to critical hits can’t be affected by this feat.) SPECIAL: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.
+
+Description
+
+Choose one type of melee weapon, such as longsword or greataxe. With that weapon, you do more damage on a critical hit.
+
+Planar Turning
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Prerequisite
+WIS 25; CHA 25.
+
+Benefit
+
+You can turn or rebuke outsiders as if they were undead. An outsider has effective turn resistance equal to half its spell resistance (round down). If you can turn undead, you turn (or destroy) all evil outsiders and rebuke (or command) all nonevil outsiders. If you can rebuke undead, you rebuke (or command) all evil outsiders and rebuke (or command) all nonevil outsiders.
+
+Description
+
+You can turn or rebuke outsiders.
+
+Spell Knowledge
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Benefit
+
+You learn two new arcane spells of any level up to the maximum level you can cast. This feat does not grant any additional spell slots.
+
+Special
+
+You can gain this feat multiple times.
+
+Description
+
+You add two additional arcane spells to your repertoire.
+
+Terrifying Rage
+
+Epic feat
+
+Dungeon Master's Guide v.3.5 (DMG), p. 210
+
+Also appears in: EL
+
+Prerequisite
+25 ranks in Animal Empathy.
+
+Benefit
+
+While you are raging, any enemy that views you must make a Will save opposed by your Intimidate check or become panicked (if it has HD less than your character level) or shaken (if it has HD equal to or up to twice your character level) for 4d6 rounds. An enemy with Hit Dice greater than twice your character level is not affected by this feat.
+
+Description
+
+While in a rage, you panic your opponents.
