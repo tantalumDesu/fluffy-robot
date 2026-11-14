@@ -43,7 +43,7 @@ Class Features
 
 All of the following are Class Features of the blackguard prestige class.
 
-Weapon and Armor Proficiency: Blackguards are proficient with all simple and martial weapons, with all types of armor, and with shields.
+Weapon and Armor Proficiency: Blackguards are proficient with all simple and martial weapons, with all types of armor, and with shields (except tower shields).
 
 Aura of Evil (Ex): The power of a blackguard's aura of evil (see the detect evil spell) is equal to his class level plus his cleric level, if any.
 

@@ -43,7 +43,7 @@ Class Features
 
 All of the following are Class Features of the arcane archer prestige class.
 
-Weapon and Armor Proficiency: An arcane archer is proficient with all simple and martial weapons, light armor, medium armor, and shields.
+Weapon and Armor Proficiency: An arcane archer is proficient with all simple and martial weapons, light armor, medium armor, and shields (except tower shields).
 
 Enhance Arrow (Su): At 1st level, every nonmagical arrow an arcane archer nocks and lets fly becomes magical, gaining a +1 enhancement bonus. Unlike magic weapons created by normal means, the archer need not spend experience points or gold pieces to accomplish this task. However, an archer's magic arrows only function for her. For every two levels the character advances past 1st level in the prestige class, the magic arrows she creates gain +1 greater potency (+1 at 1st level, +2 at 3rd level, +3 at 5th level, +4 at 7th level, and +5 at 9th level).
 

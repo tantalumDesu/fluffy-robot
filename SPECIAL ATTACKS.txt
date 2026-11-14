@@ -8,12 +8,12 @@ Charge 	Move up to twice your speed and attack with +2 bonus
 Disarm 	Knock a weapon from your opponent’s hands
 Feint 	Negate your opponent’s Dex bonus to AC
 Grapple 	Wrestle with an opponent
-Mounted Combat 	Fight while riding a mount.
+Mounted Combat 	Fight while riding a mount
 Overrun 	Plow past or over an opponent as you move
 Sunder 	Strike an opponent’s weapon or shield
 Throw splash weapon 	Throw container of dangerous liquid at target
 Trip 	Trip an opponent
-Turn (rebuke) undead 	Channel positive (or negative) energy to turn away (or awe) undead  
+Turn (rebuke) undead 	Channel positive (or negative) energy to turn away (or awe) undead
 Two-weapon fighting 	Fight with a weapon in each hand
 
 AID ANOTHER
@@ -46,7 +46,7 @@ You can’t take a 5-foot step in the same round as a charge.
 
 If you are able to take only a standard action or a move action on your turn, you can still charge, but you are only allowed to move up to your speed (instead of up to double your speed). You can’t use this option unless you are restricted to taking only a standard action or move action on your turn.
 
-Attacking on a Charge: After moving, you may make a single melee attack. You get a +2 bonus on the attack roll. and take a –2 penalty to your AC until the start of your next turn.
+Attacking on a Charge: After moving, you may make a single melee attack. You get a +2 bonus on the attack roll, and take a –2 penalty to your AC until the start of your next turn.
 
 A charging character gets a +2 bonus on the Strength check made to bull rush an opponent (see Bull Rush, above).
 
@@ -66,11 +66,12 @@ Step 1: Attack of Opportunity. You provoke an attack of opportunity from the tar
 
 Step 2: Opposed Rolls. You and the defender make opposed attack rolls with your respective weapons. The wielder of a two-handed weapon on a disarm attempt gets a +4 bonus on this roll, and the wielder of a light weapon takes a –4 penalty. (An unarmed strike is considered a light weapon, so you always take a penalty when trying to disarm an opponent by using an unarmed strike.) If the combatants are of different sizes, the larger combatant gets a bonus on the attack roll of +4 per difference in size category. If the targeted item isn’t a melee weapon, the defender takes a –4 penalty on the roll.
 
-Step Three: Consequences. If you beat the defender, the defender is disarmed. If you attempted the disarm action unarmed, you now have the weapon. If you were armed, the defender’s weapon is on the ground in the defender’s square.
+Step 3: Consequences. If you beat the defender, the defender is disarmed. If you attempted the disarm action unarmed, you now have the weapon. If you were armed, the defender’s weapon is on the ground in the defender’s square.
 
 If you fail on the disarm attempt, the defender may immediately react and attempt to disarm you with the same sort of opposed melee attack roll. His attempt does not provoke an attack of opportunity from you. If he fails his disarm attempt, you do not subsequently get a free disarm attempt against him.
 
 Note: A defender wearing spiked gauntlets can’t be disarmed. A defender using a weapon attached to a locked gauntlet gets a +10 bonus to resist being disarmed.
+
 Grabbing Items
 
 You can use a disarm action to snatch an item worn by the target. If you want to have the item in your hand, the disarm must be made as an unarmed attack. If the item is poorly secured or otherwise easy to snatch or cut away the attacker gets a +4 bonus. Unlike on a normal disarm attempt, failing the attempt doesn’t allow the defender to attempt to disarm you. This otherwise functions identically to a disarm attempt, as noted above.
@@ -114,6 +115,7 @@ In case of a tie, the combatant with the higher grapple check modifier wins. If 
 Step 4: Maintain Grapple. To maintain the grapple for later rounds, you must move into the target’s space. (This movement is free and doesn’t count as part of your movement in the round.) Moving, as normal, provokes attacks of opportunity from threatening opponents, but not from your target.
 
 If you can’t move into your target’s space, you can’t maintain the grapple and must immediately let go of the target. To grapple again, you must begin at Step 1.
+
 Grappling Consequences
 
 While you’re grappling, your ability to attack others and defend yourself is limited.
@@ -194,7 +196,7 @@ When you attack a creature smaller than your mount that is on foot, you get the 
 
 If your mount charges, you also take the AC penalty associated with a charge. If you make an attack at the end of the charge, you receive the bonus gained from the charge. When charging on horseback, you deal double damage with a lance (see Charge).
 
-You can use ranged weapons while your mount is taking a double move, but at a –4 penalty on the attack roll. You can use ranged weapons while your mount is running (quadruple speed), at a –8 penalty. In either case, you make the attack roll when your mount has completed half its movement. You can make a full attack with a ranged weapon while your mount is moving. Likewise, you can take move actions normally
+You can use ranged weapons while your mount is taking a double move, but at a –4 penalty on the attack roll. You can use ranged weapons while your mount is running (quadruple speed), at a –8 penalty. In either case, you make the attack roll when your mount has completed half its movement. You can make a full attack with a ranged weapon while your mount is moving. Likewise, you can take move actions normally.
 
 Casting Spells while Mounted: You can cast a spell normally if your mount moves up to a normal move (its speed) either before or after you cast. If you have your mount move both before and after you cast a spell, then you’re casting the spell while the mount is moving, and you have to make a Concentration check due to the vigorous motion (DC 10 + spell level) or lose the spell. If the mount is running (quadruple speed), you can cast a spell when your mount has moved up to twice its speed, but your Concentration check is more difficult due to the violent motion (DC 15 + spell level).
 
@@ -235,7 +237,7 @@ Light hafted weapon 	5 	2
 One-handed hafted weapon 	5 	5
 Two-handed hafted weapon 	5 	10
 Projectile weapon 	5 	5
-Armor 	Varies by material 	armor bonus x 5
+Armor 	Varies by material 	armor bonus × 5
 Buckler 	10 	5
 Light wooden shield 	5 	7
 Heavy wooden shield 	5 	15
@@ -327,14 +329,17 @@ Commanded: A commanded undead creature is under the mental control of the evil c
 Dispelling Turning: An evil cleric may channel negative energy to dispel a good cleric’s turning effect. The evil cleric makes a turning check as if attempting to rebuke the undead. If the turning check result is equal to or greater than the turning check result that the good cleric scored when turning the undead, then the undead are no longer turned. The evil cleric rolls turning damage of 2d6 + cleric level + Charisma modifier to see how many Hit Dice worth of undead he can affect in this way (as if he were rebuking them).
 
 Bolstering Undead: An evil cleric may also bolster undead creatures against turning in advance. He makes a turning check as if attempting to rebuke the undead, but the Hit Dice result on Table: Turning Undead becomes the undead creatures’ effective Hit Dice as far as turning is concerned (provided the result is higher than the creatures’ actual Hit Dice). The bolstering lasts 10 rounds. An evil undead cleric can bolster himself in this manner.
+
 Neutral Clerics and Undead
 
 A cleric of neutral alignment can either turn undead but not rebuke them, or rebuke undead but not turn them. See Turn or Rebuke Undead for more information.
 
 Even if a cleric is neutral, channeling positive energy is a good act and channeling negative energy is evil.
+
 Paladins and Undead
 
 Beginning at 4th level, paladins can turn undead as if they were clerics of three levels lower than they actually are.
+
 Turning Other Creatures
 
 Some clerics have the ability to turn creatures other than undead. The turning check result is determined as normal.
@@ -354,8 +359,7 @@ Circumstances 	Primary Hand 	Off Hand
 Normal penalties 	–6 	–10
 Off-hand weapon is light 	–4 	–8
 Two-Weapon Fighting feat 	–4 	–4
-Off-hand weapon is light and
-Two-Weapon Fighting feat 	–2 	–2
+Off-hand weapon is light and Two-Weapon Fighting feat	–2	–2
 
 Double Weapons: You can use a double weapon to make an extra attack with the off-hand end of the weapon as if you were fighting with two weapons. The penalties apply as if the off-hand end of the weapon were a light weapon.
 

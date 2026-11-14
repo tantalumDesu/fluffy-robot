@@ -41,28 +41,28 @@ Shields: Shields do not affect a character’s speed.
 Weight: This column gives the weight of the armor sized for a Medium wearer. Armor fitted for Small characters weighs half as much, and armor for Large characters weighs twice as much.
 
 Table: Armor and Shields
-Armor 	Cost 	Armor/Shield Bonus 	Maximum Dex Bonus 	Armor Check Penalty 	Arcane Spell Failure Chance 	Speed (30 ft.)	Speed (20 ft.)	Weight	Category
-Padded 	5 gp 	+1 	8 	0 	5% 	30 ft. 	20 ft. 	10 lb.	Light armor
-Leather 	10 gp 	+2 	6 	0 	10% 	30 ft. 	20 ft. 	15 lb.	Light armor
-Studded leather 	25 gp 	+3 	5 	–1 	15% 	30 ft. 	20 ft. 	20 lb.	Light armor
-Chain shirt 	100 gp 	+4 	4 	–2 	20% 	30 ft. 	20 ft. 	25 lb.	Light armor
-Hide 	15 gp 	+3 	4 	–3 	20% 	20 ft. 	15 ft. 	25 lb.	Medium armor
-Scale mail 	50 gp 	+4 	3 	–4 	25% 	20 ft. 	15 ft. 	30 lb.	Medium armor
-Chainmail 	150 gp 	+5 	2 	–5 	30% 	20 ft. 	15 ft. 	40 lb.	Medium armor
-Breastplate 	200 gp 	+5 	3 	–4 	25% 	20 ft. 	15 ft. 	30 lb.	Medium armor
-Splint mail 	200 gp 	+6 	0 	–7 	40% 	20 ft.2 	15 ft.2 	45 lb.	Heavy armor
-Banded mail 	250 gp 	+6 	1 	–6 	35% 	20 ft.2 	15 ft.2 	35 lb.	Heavy armor
-Half-plate 	600 gp 	+7 	0 	–7 	40% 	20 ft.2 	15 ft.2 	50 lb.	Heavy armor
-Full plate 	1,500 gp 	+8 	1 	–6 	35% 	20 ft.2 	15 ft.2 	50 lb.	Heavy armor
-Buckler 	15 gp 	+1 	— 	–1 	5% 	— 	— 	5 lb.	Shield
-Shield, light wooden 	3 gp 	+1 	— 	–1 	5% 	— 	— 	5 lb.	Shield
-Shield, light steel 	9 gp 	+1 	— 	–1 	5% 	— 	— 	6 lb.	Shield
-Shield, heavy wooden 	7 gp 	+2 	— 	–2 	15% 	— 	— 	10 lb.	Shield
-Shield, heavy steel 	20 gp 	+2 	— 	–2 	15% 	— 	— 	15 lb.	Shield
-Shield, tower 	30 gp 	+4 	+2 	–10 	50% 	— 	— 	45 lb.	Shield
-Armor spikes 	+50 gp 	— 	— 	— 	— 	— 	— 	+10 lb.	Extra
-Gauntlet, locked 	8 gp 	— 	— 	Special 	100% 	— 	— 	+5 lb.	Extra
-Shield spikes 	+10 gp 	— 	— 	— 	— 	— 	— 	+5 lb.	Extra
+Armor	Cost	Armor/Shield Bonus	Maximum Dex Bonus	Armor Check Penalty	Arcane Spell Failure Chance	Speed (30 ft.)	Speed (20 ft.)	Weight	Category
+Padded	5 gp	+1	8	0	5%	30 ft.	20 ft.	10 lb.	Light armor
+Leather	10 gp	+2	6	0	10%	30 ft.	20 ft.	15 lb.	Light armor
+Studded leather	25 gp	+3	5	–1	15%	30 ft.	20 ft.	20 lb.	Light armor
+Chain shirt	100 gp	+4	4	–2	20%	30 ft.	20 ft.	25 lb.	Light armor
+Hide	15 gp	+3	4	–3	20%	20 ft.	15 ft.	25 lb.	Medium armor
+Scale mail	50 gp	+4	3	–4	25%	20 ft.	15 ft.	30 lb.	Medium armor
+Chainmail	150 gp	+5	2	–5	30%	20 ft.	15 ft.	40 lb.	Medium armor
+Breastplate	200 gp	+5	3	–4	25%	20 ft.	15 ft.	30 lb.	Medium armor
+Splint mail	200 gp	+6	0	–7	40%	20 ft.	15 ft.	45 lb.	Heavy armor
+Banded mail	250 gp	+6	1	–6	35%	20 ft.	15 ft.	35 lb.	Heavy armor
+Half-plate	600 gp	+7	0	–7	40%	20 ft.	15 ft.	50 lb.	Heavy armor
+Full plate	1,500 gp	+8	1	–6	35%	20 ft.	15 ft.	50 lb.	Heavy armor
+Buckler	15 gp	+1	—	–1	5%	—	—	5 lb.	Shield
+Shield, light wooden	3 gp	+1	—	–1	5%	—	—	5 lb.	Shield
+Shield, light steel	9 gp	+1	—	–1	5%	—	—	6 lb.	Shield
+Shield, heavy wooden	7 gp	+2	—	–2	15%	—	—	10 lb.	Shield
+Shield, heavy steel	20 gp	+2	—	–2	15%	—	—	15 lb.	Shield
+Shield, tower	30 gp	+4	+2	–10	50%	—	—	45 lb.	Shield
+Armor spikes	+50 gp	—	—	—	—	—	—	+10 lb.	Extra
+Gauntlet, locked	8 gp	—	—	Special	100%	—	—	+5 lb.	Extra
+Shield spikes	+10 gp	—	—	—	—	—	—	+5 lb.	Extra
 
 Weight figures are for armor sized to fit Medium characters. Armor fitted for Small characters weighs half as much, and armor fitted for Large characters weighs twice as much.
 When running in heavy armor, you move only triple your speed, not quadruple.
@@ -114,7 +114,7 @@ Shield Bash Attacks: You can bash an opponent with a light shield, using it as a
 
 Shield, Tower: This massive wooden shield is nearly as tall as you are. In most situations, it provides the indicated shield bonus to your AC. However, you can instead use it as total cover, though you must give up your attacks to do so. The shield does not, however, provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. You cannot bash with a tower shield, nor can you use your shield hand for anything else.
 
-When employing a tower shield in combat, you take a –2 penalty on attack rolls because of the shield’s encumbrance.
+When employing a tower shield in combat, you take a –2 penalty on attack rolls because of the shield’s encumbrance. Only fighters receive Tower Shield Proficiency automatically; every other class must gain the Tower Shield Proficiency feat to use a tower shield without nonproficiency penalties.
 
 Shield Spikes: When added to your shield, these spikes turn it into a martial piercing weapon that increases the damage dealt by a shield bash as if the shield were designed for a creature one size category larger than you. You can’t put spikes on a buckler or a tower shield. Otherwise, attacking with a spiked shield is like making a shield bash attack (see above). An enhancement bonus on a spiked shield does not improve the effectiveness of a shield bash made with it, but a spiked shield can be made into a magic weapon in its own right.
 
@@ -131,6 +131,7 @@ The masterwork quality of a suit of armor or shield never provides a bonus on at
 All magic armors and shields are automatically considered to be of masterwork quality.
 
 You can’t add the masterwork quality to armor or a shield after it is created; it must be crafted as a masterwork item.
+
 ARMOR FOR UNUSUAL CREATURES
 
 Armor and shields for unusually big creatures, unusually little creatures, and nonhumanoid creatures have different costs and weights from those given. Refer to the appropriate line on the table below and apply the multipliers to cost and weight for the armor type in question.
@@ -138,7 +139,7 @@ Armor and shields for unusually big creatures, unusually little creatures, and n
  	Humanoid 	Nonhumanoid
 Size 	Cost 	Weight 	Cost 	Weight	Armor Bonus
 Fine	x1/2	x1/10	x1	x1/10	x1/2
-Diminutive	x1/2	x1/10	x1	1/10	x1/2
+Diminutive	x1/2	x1/10	x1	x1/10	x1/2
 Tiny 	x1/2 	x1/10 	x1 	x1/10	x1
 Small 	x1 	x1/2 	x2 	x1/2	x1
 Medium 	x1 	x1 	x2 	x1	x1

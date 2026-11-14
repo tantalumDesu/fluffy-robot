@@ -39,6 +39,7 @@ Inappropriately Sized Weapons: A creature can’t make optimum use of a weapon t
 The measure of how much effort it takes to use a weapon (whether the weapon is designated as a light, one-handed, or two-handed weapon for a particular wielder) is altered by one step for each size category of difference between the wielder’s size and the size of the creature for which the weapon was designed. If a weapon’s designation would be changed to something other than light, one-handed, or two-handed by this alteration, the creature can’t wield the weapon at all.
 
 Improvised Weapons: Sometimes objects not crafted to be weapons nonetheless see use in combat. Because such objects are not designed for this use, any creature that uses one in combat is considered to be nonproficient with it and takes a –4 penalty on attack rolls made with that object. To determine the size category and appropriate damage for an improvised weapon, compare its relative size and damage potential to the weapon list to find a reasonable match. An improvised weapon scores a threat on a natural roll of 20 and deals double damage on a critical hit. An improvised thrown weapon has a range increment of 10 feet.
+
 WEAPON QUALITIES
 
 Here is the format for weapon entries (given as column headings on Table: Weapons, below).
@@ -88,94 +89,95 @@ Some weapons deal damage of multiple types. If a weapon is of two types, the dam
 In other cases, a weapon can deal either of two types of damage. In a situation when the damage type is significant, the wielder can choose which type of damage to deal with such a weapon.
 
 Special: Some weapons have special features. See the weapon descriptions for details.
+
 WEAPON DESCRIPTIONS
 
 Table: Simple Weapons
-Simple Weapons 	Cost 	Dmg (S) 	Dmg (M) 	Critical 	Range Increment 	Weight 	Damage Type	Category	Special
-Gauntlet 	2 gp 	1d2 	1d3 	x2 	— 	1 lb. 	Bludgeoning	Unarmed Attack	-
-Unarmed strike 	— 	1d23 	1d33 	x2 	— 	— 	Bludgeoning	Unarmed Attack	-
-Dagger 	2 gp 	1d3 	1d4 	19–20/x2 	10 ft. 	1 lb. 	Piercing or slashing	Light Melee Weapon	-
-Dagger, punching 	2 gp 	1d3 	1d4 	x3 	— 	1 lb. 	Piercing	Light Melee Weapon	-
-Gauntlet, spiked 	5 gp 	1d3 	1d4 	x2 	— 	1 lb. 	Piercing	Light Melee Weapon	-
-Mace, light 	5 gp 	1d4 	1d6 	x2 	— 	4 lb. 	Bludgeoning	Light Melee Weapon	-
-Sickle 	6 gp 	1d4 	1d6 	x2 	— 	2 lb. 	Slashing	Light Melee Weapon	-
-Club 	0 gp 	1d4 	1d6 	x2 	10 ft. 	3 lb. 	Bludgeoning	One-Handed Melee Weapon	-
-Mace, heavy 	12 gp 	1d6 	1d8 	x2 	— 	8 lb. 	Bludgeoning	One-Handed Melee Weapon	-
-Morningstar 	8 gp 	1d6 	1d8 	x2 	— 	6 lb. 	Bludgeoning and piercing	One-Handed Melee Weapon	-
-Shortspear 	1 gp 	1d4 	1d6 	x2 	20 ft. 	3 lb. 	Piercing	One-Handed Melee Weapon	-
-Longspear 	5 gp 	1d6 	1d8 	x3 	— 	9 lb. 	Piercing	Two-Handed Melee Weapon		Reach
-Quarterstaff 	0 gp 	1d4/1d4 	1d6/1d6 	x2 	— 	4 lb. 	Bludgeoning	Two-Handed Melee Weapon		Double Weapon
-Spear 	2 gp 	1d6 	1d8 	x3 	20 ft. 	6 lb. 	Piercing	Two-Handed Melee Weapon		-
-Crossbow, heavy 	50 gp 	1d8 	1d10 	19–20/x2 	120 ft. 	8 lb. 	Piercing	Ranged Weapon	-
-Crossbow, light 	35 gp 	1d6 	1d8 	19–20/x2 	80 ft. 	4 lb. 	Piercing	Ranged Weapon	-
-Bolts, crossbow (10) 	1 gp 	— 	— 	— 	— 	1 lb. 	—	Ammunition	-
-Dart 	5 sp 	1d3 	1d4 	x2 	20 ft. 	1/2 lb. 	Piercing	Ranged Weapon	-
-Javelin 	1 gp 	1d4 	1d6 	x2 	30 ft. 	2 lb. 	Piercing	Ranged Weapon	-
-Sling 	0 gp	1d3 	1d4 	x2 	50 ft. 	0 lb. 	Bludgeoning	Ranged Weapon	-
-Bullets, sling (10) 	1 sp 	— 	— 	— 	— 	5 lb. 	—	Ammunition	-
+Simple Weapons	Cost	Dmg (S)	Dmg (M)	Critical	Range Increment	Weight	Damage Type	Category	Special
+Gauntlet	2 gp	1d2	1d3	x2	—	1 lb.	Bludgeoning	Unarmed Attack	—
+Unarmed strike	—	1d2	1d3	x2	—	—	Bludgeoning	Unarmed Attack	Nonlethal
+Dagger	2 gp	1d3	1d4	19–20/x2	10 ft.	1 lb.	Piercing or slashing	Light Melee Weapon	—
+Dagger, punching	2 gp	1d3	1d4	x3	—	1 lb.	Piercing	Light Melee Weapon	—
+Gauntlet, spiked	5 gp	1d3	1d4	x2	—	1 lb.	Piercing	Light Melee Weapon	—
+Mace, light	5 gp	1d4	1d6	x2	—	4 lb.	Bludgeoning	Light Melee Weapon	—
+Sickle	6 gp	1d4	1d6	x2	—	2 lb.	Slashing	Light Melee Weapon	—
+Club	0 gp	1d4	1d6	x2	10 ft.	3 lb.	Bludgeoning	One-Handed Melee Weapon	—
+Mace, heavy	12 gp	1d6	1d8	x2	—	8 lb.	Bludgeoning	One-Handed Melee Weapon	—
+Morningstar	8 gp	1d6	1d8	x2	—	6 lb.	Bludgeoning and piercing	One-Handed Melee Weapon	—
+Shortspear	1 gp	1d4	1d6	x2	20 ft.	3 lb.	Piercing	One-Handed Melee Weapon	—
+Longspear	5 gp	1d6	1d8	x3	—	9 lb.	Piercing	Two-Handed Melee Weapon	Reach
+Quarterstaff	0 gp	1d4/1d4	1d6/1d6	x2	—	4 lb.	Bludgeoning	Two-Handed Melee Weapon	Double Weapon
+Spear	2 gp	1d6	1d8	x3	20 ft.	6 lb.	Piercing	Two-Handed Melee Weapon	—
+Crossbow, heavy	50 gp	1d8	1d10	19–20/x2	120 ft.	8 lb.	Piercing	Ranged Weapon	—
+Crossbow, light	35 gp	1d6	1d8	19–20/x2	80 ft.	4 lb.	Piercing	Ranged Weapon	—
+Bolts, crossbow (10)	1 gp	—	—	—	—	1 lb.	—	Ammunition	—
+Dart	5 sp	1d3	1d4	x2	20 ft.	1/2 lb.	Piercing	Ranged Weapon	—
+Javelin	1 gp	1d4	1d6	x2	30 ft.	2 lb.	Piercing	Ranged Weapon	—
+Sling	0 gp	1d3	1d4	x2	50 ft.	0 lb.	Bludgeoning	Ranged Weapon	—
+Bullets, sling (10)	1 sp	—	—	—	—	5 lb.	—	Ammunition	—
 
 
 Table: Martial Weapons
-Martial Weapons 	Cost 	Dmg (S) 	Dmg (M) 	Critical 	Range Increment 	Weight 	Type	Category	Special
-Axe, throwing 	8 gp 	1d4 	1d6 	x2 	10 ft. 	2 lb. 	Slashing	Light Melee Weapon	-
-Hammer, light 	1 gp 	1d3 	1d4 	x2 	20 ft. 	2 lb. 	Bludgeoning	Light Melee Weapon	-
-Handaxe 	6 gp 	1d4 	1d6 	x3 	— 	3 lb. 	Slashing	Light Melee Weapon	-
-Kukri 	8 gp 	1d3 	1d4 	18–20/x2 	— 	2 lb. 	Slashing	Light Melee Weapon	-
-Pick, light 	4 gp 	1d3 	1d4 	x4 	— 	3 lb. 	Piercing	Light Melee Weapon	-
-Sap 	1 gp 	1d4 	1d6 	x2 	— 	2 lb. 	Bludgeoning	Light Melee Weapon	Nonlethal
-Shield, light 	special 	1d2 	1d3 	x2 	— 	special 	Bludgeoning	Light Melee Weapon	-
-Spiked armor 	special 	1d4 	1d6 	x2 	— 	special 	Piercing	Light Melee Weapon	-
-Spiked, shield light 	special 	1d3 	1d4 	x2 	— 	special 	Piercing	Light Melee Weapon	-
-Sword short 	10 gp 	1d4 	1d6 	19–20/x2 	— 	2 lb. 	Piercing	Light Melee Weapon	-
-Battleaxe 	10 gp 	1d6 	1d8 	x3 	— 	6 lb. 	Slashing	One-Handed Melee Weapon	-
-Flail 	8 gp 	1d6 	1d8 	x2 	— 	5 lb. 	Bludgeoning	One-Handed Melee Weapon	-
-Longsword 	15 gp 	1d6 	1d8 	19–20/x2 	— 	4 lb. 	Slashing	One-Handed Melee Weapon	-
-Pick, heavy 	8 gp 	1d4 	1d6 	x4 	— 	6 lb. 	Piercing	One-Handed Melee Weapon	-
-Rapier 	20 gp 	1d4 	1d6 	18–20/x2 	— 	2 lb. 	Piercing	One-Handed Melee Weapon	-
-Scimitar 	15 gp 	1d4 	1d6 	18–20/x2 	— 	4 lb. 	Slashing	One-Handed Melee Weapon	-
-Shield, heavy 	special 	1d3 	1d4 	x2 	— 	special 	Bludgeoning	One-Handed Melee Weapon	-
-Spiked shield, heavy 	special 	1d4 	1d6 	x2 	— 	special 	Piercing	One-Handed Melee Weapon	-
-Trident 	15 gp 	1d6 	1d8 	x2 	10 ft. 	4 lb. 	Piercing	One-Handed Melee Weapon	-
-Warhammer 	12 gp 	1d6 	1d8 	x3 	— 	5 lb. 	Bludgeoning	One-Handed Melee Weapon	-
-Falchion 	75 gp 	1d6 	2d4 	18–20/x2 	— 	8 lb. 	Slashing	Two-Handed Melee Weapon	-
-Glaive 	8 gp 	1d8 	1d10 	x3 	— 	10 lb. 	Slashing	Two-Handed Melee Weapon	Reach
-Greataxe 	20 gp 	1d10 	1d12 	x3 	— 	12 lb. 	Slashing	Two-Handed Melee Weapon	-
-Greatclub 	5 gp 	1d8 	1d10 	x2 	— 	8 lb. 	Bludgeoning	Two-Handed Melee Weapon	-
-Flail, heavy 	15 gp 	1d8 	1d10 	19–20/x2 	— 	10 lb. 	Bludgeoning	Two-Handed Melee Weapon	-
-Greatsword 	50 gp 	1d10 	2d6 	19–20/x2 	— 	8 lb. 	Slashing	Two-Handed Melee Weapon	-
-Guisarme	9 gp 	1d6 	2d4 	x3 	— 	12 lb. 	Slashing	Two-Handed Melee Weapon	Reach
-Halberd 	10 gp 	1d8 	1d10 	x3 	— 	12 lb. 	Piercing or slashing	Two-Handed Melee Weapon	-
-Lance 	10 gp 	1d6 	1d8 	x3 	— 	10 lb. 	Piercing	Two-Handed Melee Weapon	Reach
-Ranseur		10 gp 	1d6 	2d4 	x3 	— 	12 lb. 	Piercing	Two-Handed Melee Weapon	Reach
-Scythe 	18 gp 	1d6 	2d4 	x4 	— 	10 lb. 	Piercing or slashing	Two-Handed Melee Weapon	-
-Longbow 	75 gp 	1d6 	1d8 	x3 	100 ft. 	3 lb. 	Piercing	Ranged Weapon	-
-Longbow, composite 	100 gp 	1d6 	1d8 	x3 	110 ft. 	3 lb. 	Piercing	Ranged Weapon	-
-Shortbow 	30 gp 	1d4 	1d6 	x3 	60 ft. 	2 lb. 	Piercing	Ranged Weapon	-
-Shortbow, composite 	75 gp 	1d4 	1d6 	x3 	70 ft. 	2 lb. 	Piercing	Ranged Weapon	-
-Arrows (20) 	1 gp 	— 	— 	— 	— 	3 lb. 	—	Ammunition	-
+Martial Weapons	Cost	Dmg (S)	Dmg (M)	Critical	Range Increment	Weight	Damage Type	Category	Special
+Axe, throwing	8 gp	1d4	1d6	x2	10 ft.	2 lb.	Slashing	Light Melee Weapon	—
+Hammer, light	1 gp	1d3	1d4	x2	20 ft.	2 lb.	Bludgeoning	Light Melee Weapon	—
+Handaxe	6 gp	1d4	1d6	x3	—	3 lb.	Slashing	Light Melee Weapon	—
+Kukri	8 gp	1d3	1d4	18–20/x2	—	2 lb.	Slashing	Light Melee Weapon	—
+Pick, light	4 gp	1d3	1d4	x4	—	3 lb.	Piercing	Light Melee Weapon	—
+Sap	1 gp	1d4	1d6	x2	—	2 lb.	Bludgeoning	Light Melee Weapon	Nonlethal
+Shield, light	special	1d2	1d3	x2	—	special	Bludgeoning	Light Melee Weapon	—
+Spiked armor	special	1d4	1d6	x2	—	special	Piercing	Light Melee Weapon	—
+Spiked shield, light	special	1d3	1d4	x2	—	special	Piercing	Light Melee Weapon	—
+Sword, short	10 gp	1d4	1d6	19–20/x2	—	2 lb.	Piercing	Light Melee Weapon	—
+Battleaxe	10 gp	1d6	1d8	x3	—	6 lb.	Slashing	One-Handed Melee Weapon	—
+Flail	8 gp	1d6	1d8	x2	—	5 lb.	Bludgeoning	One-Handed Melee Weapon	—
+Longsword	15 gp	1d6	1d8	19–20/x2	—	4 lb.	Slashing	One-Handed Melee Weapon	—
+Pick, heavy	8 gp	1d4	1d6	x4	—	6 lb.	Piercing	One-Handed Melee Weapon	—
+Rapier	20 gp	1d4	1d6	18–20/x2	—	2 lb.	Piercing	One-Handed Melee Weapon	—
+Scimitar	15 gp	1d4	1d6	18–20/x2	—	4 lb.	Slashing	One-Handed Melee Weapon	—
+Shield, heavy	special	1d3	1d4	x2	—	special	Bludgeoning	One-Handed Melee Weapon	—
+Spiked shield, heavy	special	1d4	1d6	x2	—	special	Piercing	One-Handed Melee Weapon	—
+Trident	15 gp	1d6	1d8	x2	10 ft.	4 lb.	Piercing	One-Handed Melee Weapon	—
+Warhammer	12 gp	1d6	1d8	x3	—	5 lb.	Bludgeoning	One-Handed Melee Weapon	—
+Falchion	75 gp	1d6	2d4	18–20/x2	—	8 lb.	Slashing	Two-Handed Melee Weapon	—
+Glaive	8 gp	1d8	1d10	x3	—	10 lb.	Slashing	Two-Handed Melee Weapon	Reach
+Greataxe	20 gp	1d10	1d12	x3	—	12 lb.	Slashing	Two-Handed Melee Weapon	—
+Greatclub	5 gp	1d8	1d10	x2	—	8 lb.	Bludgeoning	Two-Handed Melee Weapon	—
+Flail, heavy	15 gp	1d8	1d10	19–20/x2	—	10 lb.	Bludgeoning	Two-Handed Melee Weapon	—
+Greatsword	50 gp	1d10	2d6	19–20/x2	—	8 lb.	Slashing	Two-Handed Melee Weapon	—
+Guisarme	9 gp	1d6	2d4	x3	—	12 lb.	Slashing	Two-Handed Melee Weapon	Reach
+Halberd	10 gp	1d8	1d10	x3	—	12 lb.	Piercing or slashing	Two-Handed Melee Weapon	—
+Lance	10 gp	1d6	1d8	x3	—	10 lb.	Piercing	Two-Handed Melee Weapon	Reach
+Ranseur	10 gp	1d6	2d4	x3	—	12 lb.	Piercing	Two-Handed Melee Weapon	Reach
+Scythe	18 gp	1d6	2d4	x4	—	10 lb.	Piercing or slashing	Two-Handed Melee Weapon	—
+Longbow	75 gp	1d6	1d8	x3	100 ft.	3 lb.	Piercing	Ranged Weapon	—
+Longbow, composite	100 gp	1d6	1d8	x3	110 ft.	3 lb.	Piercing	Ranged Weapon	—
+Shortbow	30 gp	1d4	1d6	x3	60 ft.	2 lb.	Piercing	Ranged Weapon	—
+Shortbow, composite	75 gp	1d4	1d6	x3	70 ft.	2 lb.	Piercing	Ranged Weapon	—
+Arrows (20)	1 gp	—	—	—	—	3 lb.	—	Ammunition	—
 
 Table: Exotic Weapons
-Exotic Weapons 	Cost 	Dmg (S) 	Dmg (M) 	Critical 	Range Increment 	Weight 	Type	Category	Special
-Kama 	2 gp 	1d4 	1d6 	x2 	— 	2 lb. 	Slashing	Light Melee Weapon	-
-Nunchaku 	2 gp 	1d4 	1d6 	x2 	— 	2 lb. 	Bludgeoning	Light Melee Weapon	-
-Sai 	1 gp 	1d3 	1d4 	x2 	10 ft. 	1 lb. 	Bludgeoning	Light Melee Weapon	-
-Siangham 	3 gp 	1d4 	1d6 	x2 	— 	1 lb. 	Piercing	Light Melee Weapon	-
-Sword, bastard 	35 gp 	1d8 	1d10 	19–20/x2 	— 	6 lb. 	Slashing	One-Handed Melee Weapon	-
-Waraxe, dwarven 	30 gp 	1d8 	1d10 	x3 	— 	8 lb. 	Slashing	One-Handed Melee Weapon	-
-Whip	1 gp 	1d23 	1d33 	x2 		2 lb. 	Slashing	Reach
-Axe, orc double 	60 gp 	1d6/1d6 	1d8/1d8 	x3 	— 	15 lb. 	Slashing	Two-Handed Melee Weapon	Double Weapon
-Chain, spiked 	25 gp 	1d6 	2d4 	x2 	— 	10 lb. 	Piercing	Two-Handed Melee Weapon	Reach
-Flail, dire 	90 gp 	1d6/1d6 	1d8/1d8 	x2 	— 	10 lb. 	Bludgeoning	Two-Handed Melee Weapon	Double Weapon
-Hammer, gnome hooked 	20 gp 	1d6/1d4 	1d8/1d6 	x3/x4 	— 	6 lb. 	Bludgeoning and piercing	Double Weapon
-Sword, two-bladed 	100 gp 	1d6/1d6 	1d8/1d8 	19–20/x2 	— 	10 lb. 	Slashing	Two-Handed Melee Weapon	Double Weapon
-Urgrosh, dwarven 	50 gp 	1d6/1d4 	1d8/1d6 	x3 	— 	12 lb. 	Slashing or piercing	Two-Handed Melee Weapon	Double Weapon
-Bolas 	5 gp 	1d33 	1d43 	x2 	10 ft. 	2 lb. 	Bludgeoning	Ranged Weapon	-
-Crossbow, hand 	100 gp 	1d3 	1d4 	19–20/x2 	30 ft. 	2 lb. 	Piercing	Ranged Weapon	-
-Crossbow, repeating heavy 	400 gp 	1d8 	1d10 	19–20/x2 	120 ft. 	12 lb. 	Piercing	Ranged Weapon	-
-Crossbow, repeating light 	250 gp 	1d6 	1d8 	19–20/x2 	80 ft. 	6 lb. 	Piercing	Ranged Weapon	-
-Bolts (5) 	1 gp 	— 	— 	— 	— 	1 lb. 	— 	Ammunition	-
-Net 	20 gp 	— 	— 	— 	10 ft. 	6 lb. 	— 	Ranged Weapon	-
-Shuriken (5) 	1 gp 	1 	1d2 	x2 	10 ft. 	1/2 lb. 	Piercing	Ranged Weapon	-
+Exotic Weapons	Cost	Dmg (S)	Dmg (M)	Critical	Range Increment	Weight	Damage Type	Category	Special
+Kama	2 gp	1d4	1d6	x2	—	2 lb.	Slashing	Light Melee Weapon	—
+Nunchaku	2 gp	1d4	1d6	x2	—	2 lb.	Bludgeoning	Light Melee Weapon	—
+Sai	1 gp	1d3	1d4	x2	10 ft.	1 lb.	Bludgeoning	Light Melee Weapon	—
+Siangham	3 gp	1d4	1d6	x2	—	1 lb.	Piercing	Light Melee Weapon	—
+Sword, bastard	35 gp	1d8	1d10	19–20/x2	—	6 lb.	Slashing	One-Handed Melee Weapon	—
+Waraxe, dwarven	30 gp	1d8	1d10	x3	—	8 lb.	Slashing	One-Handed Melee Weapon	—
+Whip	1 gp	1d2	1d3	x2	—	2 lb.	Slashing	One-Handed Melee Weapon	Reach, Nonlethal
+Axe, orc double	60 gp	1d6/1d6	1d8/1d8	x3	—	15 lb.	Slashing	Two-Handed Melee Weapon	Double Weapon
+Chain, spiked	25 gp	1d6	2d4	x2	—	10 lb.	Piercing	Two-Handed Melee Weapon	Reach
+Flail, dire	90 gp	1d6/1d6	1d8/1d8	x2	—	10 lb.	Bludgeoning	Two-Handed Melee Weapon	Double Weapon
+Hammer, gnome hooked	20 gp	1d6/1d4	1d8/1d6	x3/x4	—	6 lb.	Bludgeoning and piercing	Two-Handed Melee Weapon	Double Weapon
+Sword, two-bladed	100 gp	1d6/1d6	1d8/1d8	19–20/x2	—	10 lb.	Slashing	Two-Handed Melee Weapon	Double Weapon
+Urgrosh, dwarven	50 gp	1d6/1d4	1d8/1d6	x3	—	12 lb.	Slashing or piercing	Two-Handed Melee Weapon	Double Weapon
+Bolas	5 gp	1d3	1d4	x2	10 ft.	2 lb.	Bludgeoning	Ranged Weapon	Nonlethal
+Crossbow, hand	100 gp	1d3	1d4	19–20/x2	30 ft.	2 lb.	Piercing	Ranged Weapon	—
+Crossbow, repeating heavy	400 gp	1d8	1d10	19–20/x2	120 ft.	12 lb.	Piercing	Ranged Weapon	—
+Crossbow, repeating light	250 gp	1d6	1d8	19–20/x2	80 ft.	6 lb.	Piercing	Ranged Weapon	—
+Bolts (5)	1 gp	—	—	—	—	1 lb.	—	Ammunition	—
+Net	20 gp	—	—	—	10 ft.	6 lb.	—	Ranged Weapon	—
+Shuriken (5)	1 gp	1	1d2	x2	10 ft.	1/2 lb.	Piercing	Ranged Weapon	—
 
 Weight figures are for Medium weapons. A Small weapon weighs half as much, and a Large weapon weighs twice as much.
 When two damage types are given, the weapon is both types if the entry specifies “and,” or either type (player’s choice at time of attack) if the entry specifies “or.”
