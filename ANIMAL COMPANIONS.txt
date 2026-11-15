@@ -1,0 +1,1204 @@
+THE DRUID'S ANIMAL COMPANION
+
+A druid's animal companion is superior to a normal animal of its kind and has special powers, as described below.
+
+Class Level 	Bonus HD 	Natural Armor Adj. 	Str/Dex Adj. 	Bonus Tricks 	Special
+1st-2nd 	+0 	+0 	+0 	1 	Link, share spells
+3rd-5th 	+2 	+2 	+1 	2 	Evasion
+6th-8th 	+4 	+4 	+2 	3 	Devotion
+9th-11th 	+6 	+6 	+3 	4 	Multiattack
+12th-14th 	+8 	+8 	+4 	5 	 
+15th-17th 	+10 	+10 	+5 	6 	Improved evasion
+18th-20th 	+12 	+12 	+6 	7 	 
+
+Animal Companion Basics: Use the base statistics for a creature of the companion's kind, but make the following changes.
+
+Class Level: The character's druid level. The druid's class levels stack with levels of any other classes that are entitled to an animal companion for the purpose of determining the companion's abilities and the alternative lists available to the character.
+
+Bonus HD: Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. Remember that extra Hit Dice improve the animal companion's base attack and base save bonuses. An animal companion's base attack bonus is the same as that of a druid of a level equal to the animal's HD. An animal companion has good Fortitude and Reflex saves (treat it as a character whose level equals the animal's HD). An animal companion gains additional skill points and feats for bonus HD as normal for advancing a monster's Hit Dice.
+
+Natural Armor Adj.: The number noted here is an improvement to the animal companion's existing natural armor bonus.
+
+Str/Dex Adj.: Add this value to the animal companion's Strength and Dexterity scores.
+
+Bonus Tricks: The value given in this column is the total number of "bonus" tricks that the animal knows in addition to any that the druid might choose to teach it (see the Handle Animal skill). These bonus tricks don't require any training time or Handle Animal checks, and they don't count against the normal limit of tricks known by the animal. The druid selects these bonus tricks, and once selected, they can't be changed.
+
+Link (Ex): A druid can handle her animal companion as a free action, or push it as a move action, even if she doesn't have any ranks in the Handle Animal skill. The druid gains a +4 circumstance bonus on all wild empathy checks and Handle Animal checks made regarding an animal companion.
+
+Share Spells (Ex): At the druid's option, she may have any spell (but not any spell-like ability) she casts upon herself also affect her animal companion. The animal companion must be within 5 feet of her at the time of casting to receive the benefit. If the spell or effect has a duration other than instantaneous, it stops affecting the animal companion if the companion moves farther than 5 feet away and will not affect the animal again, even if it returns to the druid before the duration expires. Additionally, the druid may cast a spell with a target of "You" on her animal companion (as a touch range spell) instead of on herself. A druid and her animal companion can share spells even if the spells normally do not affect creatures of the companion's type (animal).
+
+Evasion (Ex): If an animal companion is subjected to an attack that normally allows a Reflex saving throw for half damage, it takes no damage if it makes a successful saving throw.
+
+Devotion (Ex): An animal companion gains a +4 morale bonus on Will saves against enchantment spells and effects.
+
+Multiattack: An animal companion gains Multiattack as a bonus feat if it has three or more natural attacks and does not already have that feat. If it does not have the requisite three or more natural attacks, the animal companion instead gains a second attack with its primary natural weapon, albeit at a -5 penalty.
+
+Improved Evasion (Ex): When subjected to an attack that normally allows a Reflex saving throw for half damage, an animal companion takes no damage if it makes a successful saving throw and only half damage if the saving throw fails.
+
+Badger
+
+Small Animal — CR 0.5
+
+Hit Dice
+    1d8+2 (6 hp)
+Initiative
+    +3
+Speed
+    Land 30 ft
+Armor Class
+    15, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-5
+Attack
+    Claw +4 melee (1d2-1)
+Full Attack
+    2 claws +4 melee (1d2-1) and bite -1 melee (1d3-1)
+STR
+    8
+DEX
+    17
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +4 / +5 / +1
+Challenge Rating
+    0.5
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or cete (3–5)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Rage
+Low-Light Vision
+Scent
+
+Feats
+Agile
+Track
+Weapon Finesse
+
+Description
+
+The badger is a furry animal with a squat, powerful body. Its strong forelimbs are armed with long claws for digging. An adult badger is 2 to 3 feet long and weighs 25 to 35 pounds.
+Combat
+
+Badgers attack with their sharp claws and teeth.
+
+Rage (Ex): A badger that takes damage in combat flies into a berserk rage on its next turn, clawing and biting madly until either it or its opponent is dead. It gains +4 to Strength, +4 to Constitution, and −2 to Armor Class. The creature cannot end its rage voluntarily.
+
+Skills: A badger has a +4 racial bonus on Escape Artist checks.
+
+Camel
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +3
+Speed
+    Land 50 ft
+Armor Class
+    13, touch 12, flat-footed 10
+Base Attack / Grapple
+    +2/+10
+Attack
+    Bite +0 melee (1d4+2*)
+Full Attack
+    Bite +0 melee* (1d4+2*)
+STR
+    18
+DEX
+    16
+CON
+    14
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +5 / +6 / +1
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Domesticated or herd (6–30)
+Treasure
+    None
+Environment
+    Deserts
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+
+Description
+
+Camels are known for their ability to travel long distances without food or water. The statistics presented here are for the dromedary, or one-humped camel, which thrives in warm deserts. A dromedary stands about 7 feet tall at the shoulder, with its hump rising 1 foot higher. The two-humped, or Bactrian, camel is suited to cooler, rocky areas. It is stockier, slower (speed 40 feet), and has a higher Constitution score (16).
+
+Carrying Capacity: A light load for a camel is up to 300 pounds; a medium load, 301–600 pounds; and a heavy load, 601–900 pounds. A camel can drag 4,500 pounds.
+
+Combat
+
+A camel’s bite is treated as a secondary attack and adds only half the camel’s Strength bonus to the damage roll.
+
+Rat, Dire
+
+Small Animal (good will) — CR 0.33
+
+Hit Dice
+    1d8+1 (5 hp)
+Initiative
+    +3
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-4
+Attack
+    Bite +4 melee (1d4 plus disease)
+Full Attack
+    Bite +4 melee (1d4 plus disease)
+STR
+    10
+DEX
+    17
+CON
+    12
+INT
+    1
+WIS
+    12
+CHA
+    4
+Fort / Ref / Will
+    +3 / +5 / +3
+Challenge Rating
+    0.33
+Alignment
+    Always Neutral
+Organization
+    Solitary or pack (11–20)
+Treasure
+    None
+Environment
+    Any
+Level Adjustment
+    —
+
+Special Abilities
+Disease
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+This enormous rat looks bigger and more vicious than most dogs. It has coarse, spiky fur, malevolent eyes, and a long, naked tail.
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire rats are omnivorous scavengers, but will attack to defend their nests and territories.
+
+A dire rat can grow to be up to 4 feet long and weigh over 50 pounds.
+
+Combat
+
+Dire rat packs attack fearlessly, biting and chewing with their sharp incisors.
+
+Disease (Ex): Filth fever—bite, Fortitude DC 11, incubation period 1d3 days, damage 1d3 Dex and 1d3 Con. The save DC is Constitution-based.
+
+Skills: Dire rats have a +8 racial bonus on Swim checks. Dire rats have a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+Dire rats use their Dexterity modifier for Climb and Swim checks.
+
+Dog
+
+Small Animal — CR 0.33
+
+Hit Dice
+    1d8+2 (6 hp)
+Initiative
+    +3
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-3
+Attack
+    Bite +2 melee (1d4+1)
+Full Attack
+    Bite +2 melee (1d4+1)
+STR
+    13
+DEX
+    17
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +4 / +5 / +1
+Challenge Rating
+    0.33
+Alignment
+    Always Neutral
+Organization
+    Solitary or pack (5–12)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Track
+
+Description
+
+The statistics presented here describe a fairly small dog of about 20 to 50 pounds in weight. They also can be used for small wild canines such as coyotes, jackals, and African wild dogs.
+Combat
+
+Dogs generally hunt in packs, chasing and exhausting prey until they can drag it down.
+
+Skills: Dogs have a +4 racial bonus on Jump checks. Dogs have a +4 racial bonus on Survival checks when tracking by scent.
+
+Dog, Riding
+
+Medium Animal — CR 1
+
+Hit Dice
+    2d8+4 (13 hp)
+Initiative
+    +2
+Speed
+    Land 40 ft, 40 ft.
+Armor Class
+    16, touch 12, flat-footed 14
+Base Attack / Grapple
+    +1/+13
+Attack
+    Bite +3 melee (1d6+3)
+Full Attack
+    Bite +3 melee (1d6+3)
+STR
+    15
+DEX
+    15
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +5 / +1
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Solitary or pack (5–12)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Track
+
+Description
+
+This category includes working breeds such as collies, huskies, and St. Bernards.
+
+Carrying Capacity: A light load for a riding dog is up to 100 pounds; a medium load, 101–200 pounds; and a heavy load, 201–300 pounds. A riding dog can drag 1,500 pounds.
+
+Combat
+
+If trained for war, these animals can make trip attacks. 
+Trip (Ex): A riding dog that hits with a bite attack can attempt to trip the opponent (+1 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the riding dog.
+
+A riding dog can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.
+
+Skills: Riding dogs have a +4 racial bonus on Jump checks. Riding dogs have a +4 racial bonus on Survival checks when tracking by scent.
+
+Eagle
+
+Small Animal — CR 0.5
+
+Hit Dice
+    1d8+1 (5 hp)
+Initiative
+    +2
+Speed
+    Land 10 ft
+Armor Class
+    14, touch 13, flat-footed 12
+Base Attack / Grapple
+    +0/-4
+Attack
+    Talons +3 melee (1d4)
+Full Attack
+    2 talons +3 melee (1d4) and bite -2 melee (1d4)
+STR
+    10
+DEX
+    15
+CON
+    12
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +3 / +4 / +2
+Challenge Rating
+    0.5
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Mountains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+These birds of prey inhabit nearly every terrain and climate, though they all prefer high, secluded nesting spots. A typical eagle is about 3 feet long and has a wingspan of about 7 feet. The statistics presented here can describe any similar-sized, diurnal bird of prey.
+Combat
+
+Eagles dive at prey, raking with their powerful talons.
+
+Skills: Eagles have a +8 racial bonus on Spot checks.
+
+Hawk
+
+Tiny Animal — CR 0.33
+
+Hit Dice
+    1d8 (4 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft
+Armor Class
+    17, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-10
+Attack
+    Talons +5 melee (1d4-2)
+Full Attack
+    Talons +5 melee (1d4-2)
+STR
+    6
+DEX
+    17
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +2 / +5 / +2
+Challenge Rating
+    0.33
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+These creatures are similar to eagles but slightly smaller: 1 to 2 feet long, with wingspans of 6 feet or less.
+Combat
+
+Hawks combine both talons into a single attack.
+
+Skills: Hawks have a +8 racial bonus on Spot checks.
+
+Horse, Light
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +1
+Speed
+    Land 60 ft
+Armor Class
+    13, touch 10, flat-footed 12
+Base Attack / Grapple
+    +2/+8
+Attack
+    Hoof -2 melee (1d4+1°)
+Full Attack
+    2 hooves -2 melee (1d4+1°)
+STR
+    14
+DEX
+    13
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +4 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Domesticated or herd (6–30)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+
+Description
+
+Horses are widely domesticated for riding and as beasts of burden.
+
+The statistics presented here describe smaller breeds of working horses such as quarter horses and Arabians as well as wild horses. These animals are usually ready for useful work by age two. A light horse cannot fight while carrying a rider.
+
+Carrying Capacity: A light load for a light horse is up to 150 pounds; a medium load, 151–300 pounds; and a heavy load, 301–450 pounds. A light horse can drag 2,250 pounds.
+
+Combat
+
+A horse not trained for war does not normally use its hooves to attack. Its hoof attack is treated as a secondary attack and adds only half the horse’s Strength bonus to damage. (These secondary attacks are noted with an asterisk in the Attack and Full Attack entries for the heavy horse and the light horse.)
+
+Horse, Heavy
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +1
+Speed
+    Land 50 ft
+Armor Class
+    13, touch 10, flat-footed 12
+Base Attack / Grapple
+    +2/+9
+Attack
+    Hoof -1 melee (1d6+1°)
+Full Attack
+    2 hooves -1 melee (1d6+1°)
+STR
+    16
+DEX
+    13
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +4 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Domesticated
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+
+Description
+
+Horses are widely domesticated for riding and as beasts of burden.
+
+The statistics presented here describe large breeds of working horses such as Clydesdales. These animals are usually ready for heavy work by age three. A heavy horse cannot fight while carrying a rider.
+
+Carrying Capacity: A light load for a heavy horse is up to 200 pounds; a medium load, 201–400 pounds; and a heavy load, 401–600 pounds. A heavy horse can drag 3,000 pounds.
+
+Combat
+
+A horse not trained for war does not normally use its hooves to attack. Its hoof attack is treated as a secondary attack and adds only half the horse’s Strength bonus to damage. (These secondary attacks are noted with an asterisk in the Attack and Full Attack entries for the heavy horse and the light horse.)
+
+Owl
+
+Tiny Animal — CR 0.25
+
+Hit Dice
+    1d8 (4 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft
+Armor Class
+    17, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-11
+Attack
+    Talons +5 melee (1d4-3)
+Full Attack
+    Talons +5 melee (1d4-3)
+STR
+    4
+DEX
+    17
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    4
+Fort / Ref / Will
+    +2 / +5 / +2
+Challenge Rating
+    0.25
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+The statistics presented here describe nocturnal birds of prey from 1 to 2 feet long, with wingspans up to 6 feet. They combine both talons into a single attack.
+Combat
+
+Owls swoop quietly down onto prey, attacking with their powerful talons.
+
+Skills: Owls have a +8 racial bonus on Listen checks and a +14 racial bonus on Move Silently checks. *They have a +8 racial bonus on Spot checks in areas of shadowy illumination.
+
+Pony
+
+Medium Animal — CR 0.25
+
+Hit Dice
+    2d8+2 (11 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    13, touch 11, flat-footed 12
+Base Attack / Grapple
+    +1/+2
+Attack
+    Hoof -3 melee (1d3*)
+Full Attack
+    2 hooves -3 melee (1d3*)
+STR
+    13
+DEX
+    13
+CON
+    12
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +4 / +4 / +0
+Challenge Rating
+    0.25
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+
+Description
+
+The statistics presented here describe a small horse, under 5 feet tall at the shoulder. Ponies are otherwise similar to light horses and cannot fight while carrying a rider.
+
+Carrying Capacity: A light load for a pony is up to 75 pounds; a medium load, 76–150 pounds; and a heavy load, 151–225 pounds. A pony can drag 1,125 pounds.
+
+Combat
+
+A pony not trained for war does not normally use its hooves to attack but rather to run. Its hoof attack is treated as a secondary attack and adds only half the pony’s Strength bonus to damage.
+
+Snake, Viper Small
+
+Small Animal — CR 0.5
+
+Hit Dice
+    1d8 (4 hp)
+Initiative
+    +7
+Speed
+    Land 20 ft
+Armor Class
+    17, touch 14, flat-footed 14
+Base Attack / Grapple
+    +0/-6
+Attack
+    Bite +4 melee (1d2-2 plus poison)
+Full Attack
+    Bite +4 melee (1d2-2 plus poison)
+STR
+    6
+DEX
+    17
+CON
+    11
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +2 / +5 / +1
+Challenge Rating
+    0.5
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Poison
+Scent
+
+Feats
+Improved Initiative
+Weapon Finesse
+
+Description
+
+These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat.
+Combat
+
+Viper snakes rely on their venomous bite to kill prey and defend themselves.
+
+Poison (Ex): A viper snake has a poisonous bite that deals initial and secondary damage of 1d6 Con. The save DC is 10 (Constitution-based).
+
+Snake, Viper Medium
+
+Medium Animal — CR 1
+
+Hit Dice
+    2d8 (9 hp)
+Initiative
+    +7
+Speed
+    Land 20 ft
+Armor Class
+    16, touch 13, flat-footed 13
+Base Attack / Grapple
+    +1/+0
+Attack
+    Bite +4 melee (1d4-1 plus poison)
+Full Attack
+    Bite +4 melee (1d4-1 plus poison)
+STR
+    8
+DEX
+    17
+CON
+    11
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +3 / +6 / +1
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Poison
+Scent
+
+Feats
+Improved Initiative
+Weapon Finesse
+
+Description
+
+These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat.
+Combat
+
+Viper snakes rely on their venomous bite to kill prey and defend themselves.
+
+Poison (Ex): A viper snake has a poisonous bite that deals initial and secondary damage of 1d6 Con. The save DC is 11 (Constitution-based).
+
+Wolf
+
+Medium Animal — CR 1
+
+Monster Manual v.3.5 (MM), p. 283
+
+Hit Dice
+    2d8+4 (13 hp)
+Initiative
+    +2
+Speed
+    Land 50 ft
+Armor Class
+    14, touch 12, flat-footed 12
+Base Attack / Grapple
+    +1/+2
+Attack
+    Bite +3 melee (1d6+1)
+Full Attack
+    Bite +3 melee (1d6+1)
+STR
+    13
+DEX
+    15
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +5 / +1
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pack (7−16)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Trip
+Low-Light Vision
+Scent
+
+Feats
+Track
+Weapon Focus
+
+Description
+
+Wolves are pack hunters known for their persistence and cunning.
+Combat
+
+A favorite tactic is to send a few individuals against the foes front while the rest of the pack circles and attacks from the flanks or rear.
+
+Trip (Ex): A wolf that hits with a bite attack can attempt to trip the opponent (+1 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the wolf.
+
+Skills: Wolves have a +4 racial bonus on Survival checks when tracking by scent.
+
+Crocodile
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+9 (22 hp)
+Initiative
+    +1
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 11, flat-footed 14
+Base Attack / Grapple
+    +2/+6
+Attack
+    Bite +6 melee (1d8+6) or tail slap +6 melee (1d12+6)
+Full Attack
+    Bite +6 melee (1d8+6) or tail slap +6 melee (1d12+6)
+STR
+    19
+DEX
+    12
+CON
+    17
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +6 / +4 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or colony (6–11)
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Hold Breath
+Low-Light Vision
+
+Feats
+Alertness
+Skill Focus
+
+Description
+
+Crocodiles are aggressive predators 11 to 12 feet long. They lie mostly submerged in rivers or marshes, with only their eyes and nostrils showing, waiting for prey to come within reach.
+Combat
+
+Improved Grab (Ex): To use this ability, a crocodile must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, the crocodile establishes a hold on the opponent with its mouth and drags it into deep water, attempting to pin it to the bottom.
+
+Hold Breath (Ex): A crocodile can hold its breath for a number of rounds equal to 4 x its Constitution score before it risks drowning.
+
+Skills: A crocodile has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+A crocodile gains a +4 racial bonus on Hide checks when in the water. Further, a crocodile can lie in the water with only its eyes and nostrils showing, gaining a +10 cover bonus on Hide checks.
+
+Porpoise
+
+Medium Animal — CR 0.5
+
+Hit Dice
+    2d8+2 (11 hp)
+Initiative
+    +3
+Speed
+    Swim 80 ft
+Armor Class
+    15, touch 13, flat-footed 12
+Base Attack / Grapple
+    +1/+1
+Attack
+    Slam +4 melee (2d4)
+Full Attack
+    Slam +4 melee (2d4)
+STR
+    11
+DEX
+    17
+CON
+    13
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +4 / +6 / +1
+Challenge Rating
+    0.5
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or school (3–20)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Blindsight
+Hold Breath
+Low-Light Vision
+
+Feats
+Weapon Finesse
+
+Description
+
+Porpoises are mammals that tend to be playful, friendly, and helpful.
+
+A typical porpoise is 4 to 6 feet long and weighs 110 to 160 pounds. The statistics presented here can describe any small whale of similar size.
+
+Combat
+
+Blindsight (Ex): Porpoises can “see” by emitting high-frequency sounds, inaudible to most other creatures, that allow them to locate objects and creatures within 120 feet. A silence spell negates this and forces the porpoise to rely on its vision, which is approximately as good as a human’s.
+
+Hold Breath (Ex): A porpoise can hold its breath for a number of rounds equal to 6 × its Constitution score before it risks drowning.
+
+Skills: A porpoise has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line. *A porpoise has a +4 racial bonus on Spot and Listen checks. These bonuses are lost if its blindsight is negated.
+
+Shark, Medium
+
+Medium Animal (Aquatic) — CR 1
+
+Hit Dice
+    3d8+3 (16 hp)
+Initiative
+    +2
+Speed
+    Swim 60 ft
+Armor Class
+    15, touch 12, flat-footed 13
+Base Attack / Grapple
+    +2/+3
+Attack
+    Bite +4 melee (1d6+1)
+Full Attack
+    Bite +4 melee (1d6+1)
+STR
+    13
+DEX
+    15
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +4 / +5 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Solitary, school (2−5), or pack (6−11)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Blindsense
+Keen Scent
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+Smaller sharks are from 5 to 8 feet long and not usually dangerous to creatures other than their prey.
+Combat
+
+Sharks circle and observe potential prey, then dart in and bite with their powerful jaws.
+
+Blind sense (Ex): A shark can locate creatures underwater within a 30-foot radius. This ability works only when the shark is underwater.
+
+Keen Scent (Ex): A shark can notice creatures by scent in a 180-foot radius and detect blood in the water at ranges of up to a mile.
+
+Skills: A shark has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Squid
+
+Medium Animal (Aquatic) — CR 1
+
+Hit Dice
+    3d8 (13 hp)
+Initiative
+    +3
+Speed
+    Swim 60 ft
+Armor Class
+    16, touch 13, flat-footed 13
+Base Attack / Grapple
+    +2/+8
+Attack
+    Arms +4 melee (0)
+Full Attack
+    Arms +4 melee (0) and bite -1 melee (1d6+1)
+STR
+    14
+DEX
+    17
+CON
+    11
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +3 / +6 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Solitary or school (6−11)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Ink Cloud
+Jet
+Low-Light Vision
+
+Feats
+Alertness
+Endurance
+
+Description
+
+These free-swimming mollusks are fairly aggressive. They are more feared than sharks in some locales.
+Combat
+
+Improved Grab (Ex): To use this ability, a squid must hit an opponent of any size with its arms attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and automatically deals bite damage.
+
+A squid has a +4 racial bonus on grapple checks.
+
+Ink Cloud (Ex): A squid can emit a cloud of jet-black ink 10 feet high by 10 feet wide by 10 feet long once per minute as a free action. The cloud provides total concealment, which the squid normally uses to escape a losing fight. All vision within the cloud is obscured.
+
+Jet (Ex): A squid can jet backward once per round as a full-round action, at a speed of 240 feet. It must move in a straight line, but does not provoke attacks of opportunity while jetting.
+
+Skills: A squid has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
