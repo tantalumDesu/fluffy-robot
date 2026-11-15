@@ -1,0 +1,628 @@
+FAMILIARS
+
+Bat 	Master gains a +3 bonus on Listen checks
+Cat 	Master gains a +3 bonus on Move Silently checks
+Hawk 	Master gains a +3 bonus on Spot checks in bright light
+Lizard 	Master gains a +3 bonus on Climb checks
+Owl 	Master gains a +3 bonus on Spot checks in shadows
+Rat 	Master gains a +2 bonus on Fortitude saves
+Raven 	Master gains a +3 bonus on Appraise checks
+Snake, Viper Tiny 	Master gains a +3 bonus on Bluff checks
+Toad 	Master gains +3 hit points
+Weasel 	Master gains a +2 bonus on Reflex saves
+
+Bat
+
+Diminutive Animal — CR 0.1
+
+Hit Dice
+    ¼d8 (1 hp)
+Initiative
+    +2
+Speed
+    Land 5 ft
+Armor Class
+    16, touch 16, flat-footed 14
+Base Attack / Grapple
+    +0/-17
+Attack
+    —
+Full Attack
+    —
+STR
+    1
+DEX
+    15
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    4
+Fort / Ref / Will
+    +2 / +4 / +2
+Challenge Rating
+    0.1
+Alignment
+    Always Neutral
+Organization
+    Colony (10−40) or crowd (10−50)
+Treasure
+    None
+Environment
+    Deserts
+Level Adjustment
+    —
+
+Special Abilities
+Blindsense
+Low-Light Vision
+
+Feats
+Alertness
+Description
+
+Bats are nocturnal flying mammals. The statistics presented here describe small, insectivorous bats.
+Combat
+
+Blindsense (Ex): A bat notices and locates creatures within 20 feet. Opponents still have 100% concealment against a creature with blindsense.
+
+Skills: A bat has a +4 racial bonus on Spot and Listen checks. These bonuses are lost if its blindsense is negated.
+
+Cat
+
+Tiny Animal — CR 0.25
+
+Hit Dice
+    ½d8 (2 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft
+Armor Class
+    14, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-12
+Attack
+    Claw +4 melee (1d2-4)
+Full Attack
+    2 claws +4 melee (1d2-4) and bite -1 melee (1d3-4)
+STR
+    3
+DEX
+    15
+CON
+    10
+INT
+    2
+WIS
+    12
+CHA
+    7
+Fort / Ref / Will
+    +2 / +4 / +1
+Challenge Rating
+    0.25
+Alignment
+    Always Neutral
+Organization
+    Domesticated or solitary
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Stealthy
+Weapon Finesse
+
+Description
+
+The statistics presented here describe a common housecat.
+
+Combat
+
+Cats prefer to sneak up on their prey.
+
+Skills: Cats have a +4 racial bonus on Climb, Hide, and Move Silently checks and a +8 racial bonus on Jump checks. Cats have a +8 racial bonus on Balance checks. They use their Dexterity modifier instead of their Strength modifier for Climb and Jump checks. *In areas of tall grass or heavy undergrowth, the Hide bonus rises to +8.
+
+Hawk
+
+Tiny Animal — CR 0.33
+
+Hit Dice
+    1d8 (4 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft
+Armor Class
+    17, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-10
+Attack
+    Talons +5 melee (1d4-2)
+Full Attack
+    Talons +5 melee (1d4-2)
+STR
+    6
+DEX
+    17
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +2 / +5 / +2
+Challenge Rating
+    0.33
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+These creatures are similar to eagles but slightly smaller: 1 to 2 feet long, with wingspans of 6 feet or less.
+Combat
+
+Hawks combine both talons into a single attack.
+
+Skills: Hawks have a +8 racial bonus on Spot checks.
+
+Lizard
+
+Tiny Animal — CR 0.17
+
+Hit Dice
+    ½d8 (2 hp)
+Initiative
+    +2
+Speed
+    Land 20 ft
+Armor Class
+    14, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-12
+Attack
+    Bite +4 melee (1d4-4)
+Full Attack
+    Bite +4 melee (1d4-4)
+STR
+    3
+DEX
+    15
+CON
+    10
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +2 / +4 / +1
+Challenge Rating
+    0.17
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Stealthy
+Weapon Finesse
+
+Description
+
+The statistics presented here describe small, nonvenomous lizards of perhaps a foot or two in length, such as an iguana.
+Combat
+
+Lizards prefer flight to combat, but they can bite painfully if there is no other option.
+
+Skills: Lizards have a +8 racial bonus on Balance checks. They also have a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened. Lizards use their Dexterity modifier instead of their Strength modifier for Climb checks.
+
+Owl
+
+Tiny Animal — CR 0.25
+
+Hit Dice
+    1d8 (4 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft
+Armor Class
+    17, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-11
+Attack
+    Talons +5 melee (1d4-3)
+Full Attack
+    Talons +5 melee (1d4-3)
+STR
+    4
+DEX
+    17
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    4
+Fort / Ref / Will
+    +2 / +5 / +2
+Challenge Rating
+    0.25
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+The statistics presented here describe nocturnal birds of prey from 1 to 2 feet long, with wingspans up to 6 feet. They combine both talons into a single attack.
+Combat
+
+Owls swoop quietly down onto prey, attacking with their powerful talons.
+
+Skills: Owls have a +8 racial bonus on Listen checks and a +14 racial bonus on Move Silently checks. *They have a +8 racial bonus on Spot checks in areas of shadowy illumination.
+
+Rat
+
+Tiny Animal — CR 0.125
+
+Hit Dice
+    ¼d8 (1 hp)
+Initiative
+    +2
+Speed
+    Land 15 ft
+Armor Class
+    14, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-12
+Attack
+    Bite +4 melee (1d3-4)
+Full Attack
+    Bite +4 melee (1d3-4)
+STR
+    2
+DEX
+    15
+CON
+    10
+INT
+    2
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +2 / +4 / +1
+Challenge Rating
+    0.125
+Alignment
+    Always Neutral
+Organization
+    Plague (10−100)
+Treasure
+    None
+Environment
+    Any
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Stealthy
+Weapon Finesse
+
+Description
+
+These omnivorous rodents thrive almost anywhere.
+Combat
+
+Rats usually run away. They bite only as a last resort.
+
+Skills: Rats have a +4 racial bonus on Hide and Move Silently checks, and a +8 racial bonus on Balance, Climb, and Swim checks.
+
+A rat can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+A rat uses its Dexterity modifier instead of its Strength modifier for Climb and Swim checks.
+
+A rat has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Raven
+
+Tiny Animal — CR 0.17
+
+Hit Dice
+    ¼d8 (1 hp)
+Initiative
+    +2
+Speed
+    Land 10 ft
+Armor Class
+    14, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-13
+Attack
+    Claws +4 melee (1d2-5)
+Full Attack
+    Claws +4 melee (1d2-5)
+STR
+    1
+DEX
+    15
+CON
+    10
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +2 / +4 / +2
+Challenge Rating
+    0.17
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+These glossy black birds are about 2 feet long and have wingspans of about 4 feet. They combine both claws into a single attack.
+
+The statistics presented here can describe most nonpredatory birds of similar size.
+
+Snake, Viper Tiny
+
+Tiny Animal — CR 0.33
+
+Hit Dice
+    ¼d8 (1 hp)
+Initiative
+    +7
+Speed
+    Land 15 ft
+Armor Class
+    17, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-11
+Attack
+    Bite +5 melee (1 plus poison)
+Full Attack
+    Bite +5 melee (1 plus poison)
+STR
+    4
+DEX
+    17
+CON
+    11
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +2 / +5 / +1
+Challenge Rating
+    0.33
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Poison
+Scent
+
+Feats
+Improved Initiative
+Weapon Finesse
+
+Description
+
+These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat.
+Combat
+
+Viper snakes rely on their venomous bite to kill prey and defend themselves.
+
+Poison (Ex): A viper snake has a poisonous bite that deals initial and secondary damage of 1d6 Con. The save DC is 10 (Constitution-based).
+
+Toad
+
+Diminutive Animal — CR 0.1
+
+Hit Dice
+    ¼d8 (1 hp)
+Initiative
+    +1
+Speed
+    Land 5 ft
+Armor Class
+    15, touch 15, flat-footed 14
+Base Attack / Grapple
+    +0/-17
+Attack
+    —
+Full Attack
+    —
+STR
+    1
+DEX
+    12
+CON
+    11
+INT
+    1
+WIS
+    14
+CHA
+    4
+Fort / Ref / Will
+    +2 / +3 / +2
+Challenge Rating
+    0.1
+Alignment
+    Always Neutral
+Organization
+    Swarm (10−100)
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Amphibious
+Low-Light Vision
+
+Feats
+Alertness
+
+Description
+
+These diminutive amphibians are innocuous and beneficial, since they eat insects.
+Combat
+
+Skills: A toad’s coloration gives it a +4 racial bonus on Hide checks.
+
+Weasel
+
+Tiny Animal — CR 0.25
+
+Hit Dice
+    ½d8 (2 hp)
+Initiative
+    +2
+Speed
+    Land 20 ft
+Armor Class
+    14, touch 14, flat-footed 12
+Base Attack / Grapple
+    +0/-12
+Attack
+    Bite +4 melee (1d3-4)
+Full Attack
+    Bite +4 melee (1d3-4)
+STR
+    3
+DEX
+    15
+CON
+    10
+INT
+    2
+WIS
+    12
+CHA
+    5
+Fort / Ref / Will
+    +2 / +4 / +1
+Challenge Rating
+    0.25
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Hills
+Level Adjustment
+    —
+
+Special Abilities
+Attach
+Low-Light Vision
+Scent
+
+Feats
+Agile
+Weapon Finesse
+
+Description
+
+These little mammals are aggressive predators but usually confine themselves to smaller prey. The statistics presented here can also apply to ferrets.
+Combat
+
+Attach (Ex): If a weasel hits with a bite attack, it uses its powerful jaws to latch onto the opponent’s body and automatically deals bite damage each round it remains attached. An attached weasel loses its Dexterity bonus to Armor Class and has an AC of 12. An attached weasel can be struck with a weapon or grappled itself. To remove an attached weasel through grappling, the opponent must achieve a pin against the creature.
+
+Skills: Weasels have a +4 racial bonus on Move Silently checks and a +8 racial bonus on Balance and Climb checks. They use their Dexterity modifier for Climb checks. A weasel can always choose to take 10 on a Climb check, even if rushed or threatened.
