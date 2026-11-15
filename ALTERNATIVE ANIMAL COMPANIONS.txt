@@ -1,0 +1,2937 @@
+ALTERNATIVE ANIMAL COMPANIONS
+
+A druid of sufficiently high level can select her animal companion from one of the following lists, applying the indicated adjustment to the druid's level (in parentheses) for purposes of determining the companion's characteristics and special abilities.
+
+4th Level or Higher (Level -3)
+
+Ape
+
+Hit Dice
+    4d8+11 (29 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft
+Armor Class
+    14, touch 11, flat-footed 12
+Base Attack / Grapple
+    +3/+12
+Attack
+    Claws +7 melee (1d6+5)
+Full Attack
+    2 claws +7 melee (1d6+5) and bite +2 melee (1d6+2)
+STR
+    21
+DEX
+    15
+CON
+    14
+INT
+    2
+WIS
+    12
+CHA
+    7
+Fort / Ref / Will
+    +6 / +6 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or company (3–5)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+
+Description
+
+These powerful omnivores resemble gorillas but are far more aggressive; they kill and eat anything they can catch. An adult male ape is 5.5 to 6 feet tall and weighs 300 to 400 pounds.
+Combat
+
+An ape often precedes an attack with a display of aggression, hoping to intimidate potential foes.
+
+Skills: Apes have a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+Weasel, Dire
+
+Medium Animal (good will) — CR 2
+
+Monster Manual v.3.5 (MM), p. 65
+
+Hit Dice
+    3d8 (13 hp)
+Initiative
+    +4
+Speed
+    Land 40 ft
+Armor Class
+    16, touch 14, flat-footed 12
+Base Attack / Grapple
+    +2/+4
+Attack
+    Bite +6 melee (1d6+3)
+Full Attack
+    Bite +6 melee (1d6+3)
+STR
+    14
+DEX
+    19
+CON
+    10
+INT
+    2
+WIS
+    12
+CHA
+    11
+Fort / Ref / Will
+    +3 / +7 / +4
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Hills
+Level Adjustment
+    —
+
+Special Abilities
+Attach
+Blood Drain
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Stealthy
+Weapon Finesse
+
+Description
+
+This sleek, fur-covered creature has a body longer than a human is tall. It has a wedged-shaped head crowned in short horns, four short legs, and a stumpy tail. It movements are fluid and very quick.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire weasels are aggressive, almost manic creatures with boundless energy.
+
+Dire weasels grow to be up to 10 feet long and can reach a weight of 700 pounds.
+
+Combat
+
+Dire weasels stalk their prey in the dark and then leap on it, biting and clawing.
+
+Attach (Ex): A dire weasel that hits with its bite attack latches onto the opponent’s body with its powerful jaws. An attached dire weasel loses its Dexterity bonus to AC and thus has an AC of 12. An attached dire weasel can be struck with a weapon or grappled itself. To remove an attached dire weasel through grappling, the opponent must achieve a pin against the creature.
+
+Blood Drain (Ex): A dire weasel drains blood for 1d4 points of Constitution damage each round it remains attached.
+
+Bear, Black
+
+Monster Manual v.3.5 (MM), p. 269
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    13, touch 11, flat-footed 12
+Base Attack / Grapple
+    +2/+6
+Attack
+    Claw +6 melee (1d4+4)
+Full Attack
+    2 claws +6 melee (1d4+4) and bite +1 melee (1d6+2)
+STR
+    19
+DEX
+    13
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +4 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+
+Description
+
+The black bear is a forest-dwelling omnivore that usually is not dangerous unless an interloper threatens its cubs or food supply. Black bears can be pure black, blond, or cinnamon in color and are rarely more than 5 feet long.
+Combat
+
+Black bears rip prey with their claws and teeth.
+
+Skills: A black bear has a +4 racial bonus on Swim checks.
+
+Leopard
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +4
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 14, flat-footed 11
+Base Attack / Grapple
+    +2/+5
+Attack
+    Bite +6 melee (1d6+3)
+Full Attack
+    Bite +6 melee (1d6+3) and 2 claws +1 melee (1d3+1)
+STR
+    16
+DEX
+    19
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +7 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Pounce
+Rake
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+These jungle cats are about 4 feet long and weigh about 120 pounds. They usually hunt at night.
+
+The statistics presented here can describe any feline of similar size, such as jaguars, panthers, and mountain lions.
+
+Combat
+
+Improved Grab (Ex): To use this ability, a leopard must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.
+
+Pounce (Ex): If a leopard charges a foe, it can make a full attack, including two rake attacks.
+
+Rake (Ex): Attack bonus +6 melee, damage 1d3+1.
+
+Skills: Leopards have a +8 racial bonus on Jump checks and a +4 racial bonus on Hide and Move Silently checks. Leopards have a +8 racial bonus on Balance and Climb checks. A leopard can always choose to take 10 on a Climb check, even if rushed or threatened. *In areas of tall grass or heavy undergrowth, the Hide bonus improves to +8.
+
+Bison
+
+Large Animal — CR 2
+
+Hit Dice
+    5d8+15 (37 hp)
+Initiative
+    +0
+Speed
+    Land 40 ft
+Armor Class
+    13, touch 9, flat-footed 13
+Base Attack / Grapple
+    +3/+13
+Attack
+    Gore +8 melee (1d8+9)
+Full Attack
+    Gore +8 melee (1d8+9)
+STR
+    22
+DEX
+    10
+CON
+    16
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +7 / +4 / +1
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or herd (6–30)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Stampede
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+
+Description
+
+These herd animals can be aggressive when protecting young and during the mating season, but they generally prefer flight to fighting. A bison stands more than 6 feet tall at the shoulder and is 9 to 12 feet long. It weigh 1,800 to 2,400 pounds. The bison’s statistics can be used for almost any large herd animal.
+Combat
+
+Stampede (Ex): A frightened herd of bison flees as a group in a random direction (but always away from the perceived source of danger). They literally run over anything of Large size or smaller that gets in their way, dealing 1d12 points of damage for each five bison in the herd (Reflex DC 18 half). The save DC is Strength-based.
+
+Lizard, Monitor
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+9 (22 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft
+Armor Class
+    15, touch 12, flat-footed 13
+Base Attack / Grapple
+    +2/+5
+Attack
+    Bite +5 melee (1d8+4)
+Full Attack
+    Bite +5 melee (1d8+4)
+STR
+    17
+DEX
+    15
+CON
+    17
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +8 / +5 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+
+Feats
+Alertness
+Great Fortitude
+
+Description
+
+This category includes fairly large, carnivorous lizards from 3 to 5 feet long.
+Combat
+
+Monitor lizards can be aggressive, using their powerful jaws to tear at prey or enemies.
+
+Skills: A monitor lizard has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Monitor lizards have a +4 racial bonus on Hide and Move Silently checks. *In forested or overgrown areas, the Hide bonus improves to +8.
+
+Boar
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+12 (25 hp)
+Initiative
+    +0
+Speed
+    Land 40 ft
+Armor Class
+    16, touch 10, flat-footed 16
+Base Attack / Grapple
+    +2/+4
+Attack
+    Gore +4 melee (1d8+3)
+Full Attack
+    Gore +4 melee (1d8+3)
+STR
+    15
+DEX
+    10
+CON
+    17
+INT
+    2
+WIS
+    13
+CHA
+    4
+Fort / Ref / Will
+    +6 / +3 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or herd (5–8)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Ferocity
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+
+Description
+
+Though not carnivores, these wild swine are bad-tempered and usually charge anyone who disturbs them. A boar is covered in coarse, grayish-black fur. Adult males are about 4 feet long and 3 feet high at the shoulder.
+Combat
+
+Ferocity (Ex): A boar is such a tenacious combatant that it continues to fight without penalty even while disabled or dying.
+
+Shark, Large
+
+Large Animal (Aquatic) — CR 2
+
+Hit Dice
+    7d8+7 (38 hp)
+Initiative
+    +6
+Speed
+    Swim 60 ft
+Armor Class
+    15, touch 11, flat-footed 13
+Base Attack / Grapple
+    +5/+12
+Attack
+    Bite +7 melee (1d8+4)
+Full Attack
+    Bite +7 melee (1d8+4)
+STR
+    17
+DEX
+    15
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +8 / +7 / +3
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary, school (2−5), or pack (6−11)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Blindsense
+Keen Scent
+
+Feats
+Alertness
+Great Fortitude
+Improved Initiative
+
+Description
+
+Large sharks can reach around 15 feet in length and are a serious threat.
+Combat
+
+Sharks circle and observe potential prey, then dart in and bite with their powerful jaws.
+
+Blind sense (Ex): A shark can locate creatures underwater within a 30-foot radius. This ability works only when the shark is underwater.
+
+Keen Scent (Ex): A shark can notice creatures by scent in a 180-foot radius and detect blood in the water at ranges of up to a mile.
+
+Skills: A shark has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Cheetah
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +4
+Speed
+    Land 50 ft
+Armor Class
+    15, touch 14, flat-footed 11
+Base Attack / Grapple
+    +2/+5
+Attack
+    Bite +6 melee
+Full Attack
+    Bite +6 melee (1d6+3) and 2 claws +1 melee (1d2+1)
+STR
+    16
+DEX
+    19
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +7 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or family (3–5)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Trip
+Low-Light Vision
+Scent
+Sprint
+
+Feats
+Alertness
+Weapon Finesse
+
+Description
+
+Cheetahs are swift feline predators of the plains. A cheetah is 3 to 5 feet long and weighs 110 to 130 pounds.
+Combat
+
+Cheetahs make sudden sprints to bring down prey.
+
+Trip (Ex): A cheetah that hits with a claw or bite attack can attempt to trip the opponent (+3 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the cheetah.
+
+Sprint (Ex): Once per hour, a cheetah can move ten times its normal speed (500 feet) when it makes a charge.
+
+Snake, Constrictor
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +3
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 13, flat-footed 12
+Base Attack / Grapple
+    +2/+5
+Attack
+    Bite +5 melee (1d3+4)
+Full Attack
+    Bite +5 melee (1d3+4)
+STR
+    17
+DEX
+    17
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +4 / +6 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Constrict
+Improved Grab
+Scent
+
+Feats
+Alertness
+Toughness
+
+Description
+
+Constructor snakes usually are not aggressive and flee when confronted. They hunt for food but do not attempt to make a meal out of any creature that is too large to constrict.
+Combat
+
+Constructor snakes hunt by grabbing prey with their mouths and then squeezing it with their powerful bodies.
+
+Constrict (Ex): On a successful grapple check, a constrictor snake deals 1d3+4 points of damage.
+
+Improved Grab (Ex): To use this ability, a constrictor snake must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can constrict.
+
+Crocodile
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+9 (22 hp)
+Initiative
+    +1
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 11, flat-footed 14
+Base Attack / Grapple
+    +2/+6
+Attack
+    Bite +6 melee (1d8+6) or tail slap +6 melee (1d12+6)
+Full Attack
+    Bite +6 melee (1d8+6) or tail slap +6 melee (1d12+6)
+STR
+    19
+DEX
+    12
+CON
+    17
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +6 / +4 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or colony (6–11)
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Hold Breath
+Low-Light Vision
+
+Feats
+Alertness
+Skill Focus
+
+Description
+
+Crocodiles are aggressive predators 11 to 12 feet long. They lie mostly submerged in rivers or marshes, with only their eyes and nostrils showing, waiting for prey to come within reach.
+Combat
+
+Improved Grab (Ex): To use this ability, a crocodile must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, the crocodile establishes a hold on the opponent with its mouth and drags it into deep water, attempting to pin it to the bottom.
+
+Hold Breath (Ex): A crocodile can hold its breath for a number of rounds equal to 4 x its Constitution score before it risks drowning.
+
+Skills: A crocodile has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+A crocodile gains a +4 racial bonus on Hide checks when in the water. Further, a crocodile can lie in the water with only its eyes and nostrils showing, gaining a +10 cover bonus on Hide checks.
+
+Snake, Viper Large
+
+Large Animal — CR 2
+
+Hit Dice
+    3d8 (13 hp)
+Initiative
+    +7
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 12, flat-footed 12
+Base Attack / Grapple
+    +2/+6
+Attack
+    Bite +4 melee (1d4 plus poison)
+Full Attack
+    Bite +4 melee (1d4 plus poison)
+STR
+    10
+DEX
+    17
+CON
+    11
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +3 / +6 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Poison
+Scent
+
+Feats
+Improved Initiative
+Weapon Finesse
+
+Description
+
+These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat.
+Combat
+
+Viper snakes rely on their venomous bite to kill prey and defend themselves.
+
+Poison (Ex): A viper snake has a poisonous bite that deals initial and secondary damage of 1d6 Con. The save DC is 11 (Constitution-based).
+
+Badger, Dire
+
+Medium Animal (good will) — CR 2
+
+Hit Dice
+    3d8+15 (28 hp)
+Initiative
+    +3
+Speed
+    Land 30 ft
+Armor Class
+    16, touch 13, flat-footed 13
+Base Attack / Grapple
+    +2/+4
+Attack
+    Claw +4 melee (1d4+2)
+Full Attack
+    2 claws +4 melee (1d4+2) and bite -1 melee (1d6+1)
+STR
+    14
+DEX
+    17
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +7 / +6 / +4
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or cete (2–5)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Rage
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+Track
+
+Description
+
+This squat, muscular creature is covered in wild, thick fur. Its stout legs end in clawed feet, and its pointed snout has a wide mouth full of sharp teeth.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+These vicious creatures tolerate no intrusions. They cannot burrow into solid rock, but can move through just about any material softer than that. A dire badger usually leaves behind a usable tunnel 5 feet in diameter when burrowing unless the material it’s moving through is very loose.
+
+A dire badger is from 5 to 7 feet in length and can weigh up to 500 pounds.
+
+Combat
+
+Dire badgers attack with their sharp claws and teeth.
+
+Rage (Ex): A dire badger that takes damage in combat flies into a berserk rage on its next turn, clawing and biting madly until either it or its opponent is dead. It gains +4 Strength, +4 Constitution, and -2 AC. The creature cannot end its rage voluntarily.
+
+Wolverine
+
+Medium Animal — CR 2
+
+Hit Dice
+    3d8+15 (28 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft
+Armor Class
+    14, touch 12, flat-footed 12
+Base Attack / Grapple
+    +2/+4
+Attack
+    Claw +4 melee (1d4+2)
+Full Attack
+    2 claws +4 melee (1d4+2) and bite -1 melee (1d6+1)
+STR
+    14
+DEX
+    15
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +7 / +5 / +2
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Rage
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+Track
+
+Description
+
+These creatures are similar to badgers but are bigger, stronger, and even more ferocious.
+Combat
+
+Rage (Ex): A wolverine that takes damage in combat flies into a berserk rage on its next turn, clawing and biting madly until either it or its opponent is dead. It gains +4 to Strength, +4 to Constitution, and -2 to Armor Class. The creature cannot end its rage voluntarily.
+
+Skills: Wolverines have a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+Bat, Dire
+
+Large Animal (good will) — CR 2
+
+Hit Dice
+    4d8+12 (30 hp)
+Initiative
+    +6
+Speed
+    Land 20 ft
+Armor Class
+    20, touch 15, flat-footed 14
+Base Attack / Grapple
+    +3/+10
+Attack
+    Bite +5 melee (1d8+4)
+Full Attack
+    Bite +5 melee (1d8+4)
+STR
+    17
+DEX
+    22
+CON
+    17
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +7 / +10 / +6
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or colony (5–8)
+Treasure
+    None
+Environment
+    Deserts
+Level Adjustment
+    —
+
+Special Abilities
+Blindsense
+
+Feats
+Alertness
+Stealthy
+
+Description
+
+This terrifying bat has a body as big as a horse’s and leathery wings that spread farther than a dragon’s. Shaggy fur covers most of the body, with patches of bony armor showing through here and there.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+These nocturnal hunters get excited easily, and they usually try to slay or drive off any creatures they encounter.
+
+A dire bat has a wingspan of 15 feet and weighs about 200 pounds.
+
+Combat
+
+Dire bats swoop down upon unsuspecting prey from above.
+
+Blindsense (Ex): A dire bat uses echolocation to pinpoint creatures within 40 feet. Opponents still have total concealment against the bat unless it can actually see them.
+
+Skills: Dire bats have a +4 racial bonus on Spot and Listen checks. These bonuses are lost if its blindsense is negated.
+
+
+7th Level or Higher (Level -6)
+
+Bear, Brown
+
+Large Animal — CR 4
+
+Hit Dice
+    6d8+24 (51 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 10, flat-footed 14
+Base Attack / Grapple
+    +4/+16
+Attack
+    Claw +11 melee (1d8+8)
+Full Attack
+    2 claws +11 melee (1d8+8) and bite +6 melee (2d6+4)
+STR
+    27
+DEX
+    13
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +9 / +6 / +3
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+Track
+
+Description
+
+These massive carnivores weigh more than 1,800 pounds and stand nearly 9 feet tall when they rear up on their hind legs. They are bad-tempered and territorial. The brown bear’s statistics can be used for almost any big bear, including the grizzly.
+Combat
+
+A brown bear attacks mainly by tearing at opponents with its claws.
+
+Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.
+
+Skills: A brown bear has a +4 racial bonus on Swim checks.
+
+Wolf, Dire
+
+Large Animal (good will) — CR 3
+
+Hit Dice
+    6d8+18 (45 hp)
+Initiative
+    +2
+Speed
+    Land 50 ft
+Armor Class
+    14, touch 11, flat-footed 12
+Base Attack / Grapple
+    +4/+15
+Attack
+    Bite +11 melee (1d8+10)
+Full Attack
+    Bite +11 melee (1d8+10)
+STR
+    25
+DEX
+    15
+CON
+    17
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +8 / +7 / +6
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary or pack (5–8)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Trip
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Run
+Track
+Weapon Focus
+
+Description
+This immense gray wolf seems as big as a horse. It has fiery eyes and a thick coat of fur.
+
+
+Dire wolves are efficient pack hunters that will kill anything they can catch.
+
+Dire wolves are mottled gray or black, about 9 feet long and weighing some 800 pounds.
+
+Combat
+
+Dire wolves prefer to attack in packs, surrounding and flanking a foe when they can.
+
+Trip (Ex): A dire wolf that hits with a bite attack can attempt to trip its opponent (+11 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the dire wolf.
+
+Skills: A dire wolf has a +2 racial bonus on Hide, Listen, Move Silently, and Spot checks.
+
+It also has a +4 racial bonus on Survival checks when tracking by scent.
+
+Wolverine, Dire
+
+Large Animal — CR 4
+
+Hit Dice
+    5d8+23 (45 hp)
+Initiative
+    +3
+Speed
+    Land 30 ft
+Armor Class
+    16, touch 12, flat-footed 13
+Base Attack / Grapple
+    +3/+13
+Attack
+    Claw +8 melee (1d6+6)
+Full Attack
+    2 claws +8 melee (1d6+6) and bite +3 melee (1d8+3)
+STR
+    22
+DEX
+    17
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +8 / +7 / +5
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Rage
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+Track
+
+Description
+This massive, low-slung creature has a wedge-shaped head and body covered in coarse, shaggy fur. Its legs are short and thick, and it has claws like pickaxes on its feet.
+Description
+
+These foul-tempered creatures have been known to attack settlements, destroying both livestock and food stores. They are reputed to be utterly fearless.
+
+Dire wolverines grow to about 12 feet in length and can weigh as much as 2,000 pounds.
+
+Combat
+
+Dire wolverines attack opponents wantonly, fearing no other creatures.
+
+Rage (Ex): A dire wolverine that takes damage in combat flies into a berserk rage on its next turn, clawing and biting madly until either it or its opponent is dead. An enraged dire wolverine gains +4 Strength, +4 Constitution, and -2 AC. The creature cannot end its rage voluntarily.
+
+Skills: A dire wolverine has a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+Dinosaur, Elasmosaurus
+
+Huge Animal — CR 7
+
+Hit Dice
+    10d8+66 (111 hp)
+Initiative
+    +2
+Speed
+    Land 20 ft
+Armor Class
+    13, touch 10, flat-footed 11
+Base Attack / Grapple
+    +7/+23
+Attack
+    Bite +13 melee (2d8+12)
+Full Attack
+    Bite +13 melee (2d8+12)
+STR
+    26
+DEX
+    14
+CON
+    22
+INT
+    2
+WIS
+    13
+CHA
+    9
+Fort / Ref / Will
+    +15 / +9 / +4
+Challenge Rating
+    7
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or herd (5–8)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Dodge
+Great Fortitude
+Toughness
+
+Description
+
+This beast has a thick, ovoid body with fins instead of legs and a very long, snaky tail and neck. Its neck makes up one-half of its total length.
+
+Dinosaurs, or terrible lizards, are ancient beasts that may be related to dragons.
+
+Among the traits that predatory dinosaurs share with many dragons are sharp teeth, a savage disposition, a well-developed sense of territory, and a ruthless capacity to hunt. Herbivorous dinosaurs usually are not aggressive unless wounded or defending their young, but may attack if startled or harassed.
+
+Dinosaurs come in many sizes and shapes. Bigger varieties have drab coloration, while smaller dinosaurs have more colorful markings. Most dinosaurs have a pebbly skin texture.
+
+Dinosaurs most often live in rugged or isolated areas that humanoids seldom visit: remote mountain valleys, inaccessible plateaus, tropical islands, and deep fens.
+
+Though it resides primarily in the water, an elasmosaurus only breathes air.
+
+An elasmosaurus has a total length of some 30 feet, including a tail half as long as its entire body, and weighs about 5,000 pounds. Observers who see only its head or tail might easily mistake it for a massive snake.
+
+Combat
+
+Dinosaurs take full advantage of their size and speed. The swift carnivores stalk prey, staying hidden in cover until they can get into charge range and rush to the attack. Herbivores frequently overrun and trample their opponents.
+
+An elasmosaurus is aggressive and attacks anything it notices. The creature is strong, fast, and highly maneuverable, able to turn quickly and lunge at prey. When hunting, it travels with its head out of the water, snapping down quickly to seize prey.
+
+Skills: An elasmosaurus has a +8 racial bonus on Hide checks in water.
+
+Crocodile, Giant
+
+Huge Animal — CR 4
+
+Hit Dice
+    7d8+28 (59 hp)
+Initiative
+    +1
+Speed
+    Land 20 ft
+Armor Class
+    16, touch 9, flat-footed 15
+Base Attack / Grapple
+    +5/+21
+Attack
+    Bite +11 melee (2d8+12) or tail slap +11 melee (1d12+12)
+Full Attack
+    Bite +11 melee (2d8+12) or tail slap +11 melee (1d12+12)
+STR
+    27
+DEX
+    12
+CON
+    19
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +9 / +6 / +3
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or colony (6–11)
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Hold Breath
+Low-Light Vision
+
+Feats
+Alertness
+Endurance
+Skill Focus
+
+Description
+
+These huge creatures usually live in salt water and can be more than 20 feet long. Giant crocodiles fight and behave like their smaller cousins.
+Combat
+
+Improved Grab (Ex): To use this ability, a crocodile must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, the crocodile establishes a hold on the opponent with its mouth and drags it into deep water, attempting to pin it to the bottom.
+
+Hold Breath (Ex): A crocodile can hold its breath for a number of rounds equal to 4 x its Constitution score before it risks drowning.
+
+Skills: A crocodile has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+A crocodile gains a +4 racial bonus on Hide checks when in the water. Further, a crocodile can lie in the water with only its eyes and nostrils showing, gaining a +10 cover bonus on Hide checks.
+
+Lion
+
+Large Animal — CR 3
+
+Hit Dice
+    5d8+10 (32 hp)
+Initiative
+    +3
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 12, flat-footed 12
+Base Attack / Grapple
+    +3/+12
+Attack
+    Claw +7 melee (1d4+5)
+Full Attack
+    2 claws +7 melee (1d4+5) and bite +2 melee (1d8+2)
+STR
+    21
+DEX
+    17
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +6 / +7 / +2
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pride (6–10)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Pounce
+Improved Grab
+Rake
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Run
+
+Description
+
+The statistics presented here describe a male African lion, which is 5 to 8 feet long and weighs 330 to 550 pounds. Females are slightly smaller but use the same statistics.
+Combat
+
+A lion attacks by running at prey, leaping, and clawing and biting as it takes with its rear claws.
+
+Pounce (Ex): If a lion charges a foe, it can make a full attack, including two rake attacks.
+
+Improved Grab (Ex): To use this ability, a lion must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.
+
+Rake (Ex): Attack bonus +7 melee, damage 1d4+2.
+
+Skills: Lions have a +4 racial bonus on Balance, Hide, and Move Silently checks. *In areas of tall grass or heavy undergrowth, the Hide bonus improves to +12.
+
+Dinosaur, Deinonychus
+
+Medium Animal — CR 3
+
+Hit Dice
+    4d8+16 (34 hp)
+Initiative
+    +2
+Speed
+    Land 60 ft
+Armor Class
+    17, touch 12, flat-footed 15
+Base Attack / Grapple
+    +3/+7
+Attack
+    Talons +7 melee (1d8+4)
+Full Attack
+    Talons +7 melee (1d8+4) and 2 foreclaws +2 melee (1d3+2) and bite +2 melee (2d4+2)
+STR
+    19
+DEX
+    15
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +8 / +6 / +2
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pack (3–6)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Pounce
+Low-Light Vision
+Scent
+
+Feats
+Run
+Track
+
+Description
+
+This lean, long-legged bipedal creature has wicked-looking claws on its feet and a brightly colored hide that reminds you of a tropical bird. It stands about as tall as a human, and its outstretched tail makes it least twice as long as it is tall.
+Description
+
+Dinosaurs, or terrible lizards, are ancient beasts that may be related to dragons.
+
+Among the traits that predatory dinosaurs share with many dragons are sharp teeth, a savage disposition, a well-developed sense of territory, and a ruthless capacity to hunt. Herbivorous dinosaurs usually are not aggressive unless wounded or defending their young, but may attack if startled or harassed.
+
+Dinosaurs come in many sizes and shapes. Bigger varieties have drab coloration, while smaller dinosaurs have more colorful markings. Most dinosaurs have a pebbly skin texture.
+
+Dinosaurs most often live in rugged or isolated areas that humanoids seldom visit: remote mountain valleys, inaccessible plateaus, tropical islands, and deep fens.
+
+This fast carnivore is sometimes called a velociraptor, though that name properly belongs to a much smaller creature.
+
+A deinonychus is bright green along its back and flanks, with a much lighter shade of the same color on its underside. The body has darker spots or stripes. Its tail extends straight out behind itself, held aloft by an intricate structure of bony supports, thus allowing its weight to be carried entirely by the back legs. It weighs about 600 pounds.
+
+Combat
+
+Dinosaurs take full advantage of their size and speed. The swift carnivores stalk prey, staying hidden in cover until they can get into charge range and rush to the attack. Herbivores frequently overrun and trample their opponents.
+
+A deinonychus uses a combination of speed, grasping forearms, large teeth, and hind legs with ripping talons. It hunts by running at prey, leaping, and ripping with its rear talons as it claws and bites. The talons count as one attack.
+
+A deinonychus has a relatively large brain for a dinosaur, and its pack hunts with cunning tactics.
+
+Pounce (Ex): If a deinonychus charges, it can make a full attack.
+
+Skills: A deinonychus has a +8 racial bonus on Hide, Jump, Listen, Spot, and Survival checks.
+
+Rhinoceros
+
+Large Animal — CR 4
+
+Hit Dice
+    8d8+40 (76 hp)
+Initiative
+    +0
+Speed
+    Land 30 ft
+Armor Class
+    16, touch 9, flat-footed 16
+Base Attack / Grapple
+    +6/+18
+Attack
+    Gore +13 melee (2d6+12)
+Full Attack
+    Gore +13 melee (2d6+12)
+STR
+    26
+DEX
+    10
+CON
+    21
+INT
+    2
+WIS
+    13
+CHA
+    2
+Fort / Ref / Will
+    +11 / +6 / +3
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or herd (2−12)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Powerful Charge
+Low-Light Vision
+
+Feats
+Alertness
+Endurance
+Improved Natural Attack
+
+Description
+
+The rhinoceros is infamous for its bad temper and willingness to charge intruders.
+
+The statistics presented here are based on the African black rhino, which is 6 to 14 feet long, 3 to 6 feet high at the shoulder, and weighs up to 6,000 pounds. These statistics can describe any herbivore of similar size and similar natural weapons (antlers, horns, tusks, or the like).
+
+Combat
+
+When it is harassed or annoyed, a rhinoceros lowers its head and charges.
+
+Powerful Charge (Ex): A rhinoceros deals 4d6+24 points of damage when it makes a charge.
+
+Ape, Dire
+
+Large Animal (good will) — CR 3
+
+Hit Dice
+    5d8+13 (35 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft
+Armor Class
+    15, touch 11, flat-footed 13
+Base Attack / Grapple
+    +3/+13
+Attack
+    Claw +8 melee (1d6+6)
+Full Attack
+    2 claws +8 melee (1d6+6) and bite +3 melee (1d8+3)
+STR
+    22
+DEX
+    15
+CON
+    14
+INT
+    2
+WIS
+    12
+CHA
+    7
+Fort / Ref / Will
+    +6 / +6 / +5
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary or company (5–8)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Rend
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Toughness
+
+Description
+
+This great, feral ape is about the size of an ogre, but even more muscular. It is barrel-chested, with thick, black fur, long arms, and a broad muzzle. It seems well equipped with claws and teeth.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire apes are territorial and apt to attack anything they see.
+
+A dire ape stands about 9 feet tall and weighs from 800 to 1,200 pounds.
+
+Combat
+
+Dire apes attack anything that enters their territory, even other dire apes. If an opponent’s armor foils a dire ape’s attacks, the creature will attempt to grapple and pin, then rend the prone opponent.
+
+Rend (Ex): A dire ape that hits with both claw attacks latches onto the opponent’s body and tears the flesh. This attack automatically deals an extra 2d6+9 points of damage.
+
+Skills: Dire apes have a +8 racial bonus on Climb checks and can always choose to take 10 on Climb checks, even if rushed or threatened.
+
+Snake, Viper Huge
+
+Huge Animal — CR 3
+
+Hit Dice
+    6d8+6 (33 hp)
+Initiative
+    +6
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 10, flat-footed 15
+Base Attack / Grapple
+    +4/+15
+Attack
+    Bite +6 melee (1d6+4 plus poison)
+Full Attack
+    Bite +6 melee (1d6+4 plus poison)
+STR
+    16
+DEX
+    15
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +6 / +7 / +3
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Marshes
+Level Adjustment
+    —
+
+Special Abilities
+Poison
+Scent
+
+Feats
+Improved Initiative
+Run
+Weapon Focus
+
+Description
+
+These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat.
+Combat
+
+Viper snakes rely on their venomous bite to kill prey and defend themselves.
+
+Poison (Ex): A viper snake has a poisonous bite that deals initial and secondary damage of 1d6 Con. The save DC is 14 (Constitution-based).
+
+Boar, Dire
+
+Large Animal — CR 4
+
+Hit Dice
+    7d8+21 (52 hp)
+Initiative
+    +0
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 9, flat-footed 15
+Base Attack / Grapple
+    +5/+17
+Attack
+    Gore +12 melee (1d8+12)
+Full Attack
+    Gore +12 melee (1d8+12)
+STR
+    27
+DEX
+    10
+CON
+    17
+INT
+    2
+WIS
+    13
+CHA
+    8
+Fort / Ref / Will
+    +8 / +5 / +8
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or herd (5–8)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Ferocity
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+Iron Will
+
+Description
+
+This giant boar has an arched back as high as a human is tall. It has spiny armor on its head and back, great, gleaming tusks, and small, furious, demon eyes.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire boars are omnivorous and spend most of their time rooting around, much as ordinary pigs do. They viciously attack anything that approaches them, however.
+
+Dire boars grow up to 12 feet long and weigh as much as 2,000 pounds.
+
+Combat
+
+A dire boar charges its opponent, trying to rip the target open with its tusks.
+
+Ferocity (Ex): A dire boar is such a tenacious combatant that it continues to fight without penalty even while disabled or dying.
+
+Tiger
+
+Large Animal — CR 4
+
+Hit Dice
+    6d8+18 (45 hp)
+Initiative
+    +2
+Speed
+    Land 40 ft
+Armor Class
+    14, touch 11, flat-footed 12
+Base Attack / Grapple
+    +4/+14
+Attack
+    Claw +9 melee (1d8+6)
+Full Attack
+    2 claws +9 melee (1d8+6) and bite +4 melee (2d6+3)
+STR
+    23
+DEX
+    15
+CON
+    17
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +8 / +7 / +3
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Pounce
+Rake
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Improved Natural Attack
+Improved Natural Attack
+
+Description
+
+These great cats stand more than 3 feet tall at the shoulder and are about 9 feet long. They weigh from 400 to 600 pounds.
+Combat
+
+Improved Grab (Ex): To use this ability, a tiger must hit with a claw or bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.
+
+Pounce (Ex): If a tiger charges a foe, it can make a full attack, including two rake attacks.
+
+Rake (Ex): Attack bonus +9 melee, damage 1d8+3.
+
+Skills: Tigers have a +4 racial bonus on Balance, Hide, and Move Silently checks. *In areas of tall grass or heavy undergrowth, the Hide bonus improves to +8.
+
+10th Level or Higher (Level -9)
+
+Bear, Polar
+
+Large Animal — CR 4
+
+Hit Dice
+    6d8+24 (51 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 10, flat-footed 14
+Base Attack / Grapple
+    +4/+16
+Attack
+    Claw +11 melee (1d8+8)
+Full Attack
+    2 claws +11 melee (1d8+8) and bite +6 melee (2d6+4)
+STR
+    27
+DEX
+    13
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +9 / +6 / +3
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+Track
+
+Description
+
+These massive carnivores weigh more than 1,800 pounds and stand nearly 10 feet tall when they rear up on their hind legs. They are bad-tempered and territorial.
+
+These long, lean carnivores are slightly taller than brown bears.
+
+Combat
+
+Polar bears fight just as brown bears do.
+
+Improved Grab (Ex): To use this ability, a polar bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the bear.
+
+Skills: A polar bear has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+A polar bear’s white coat bestows a +12 racial bonus on Hide checks in snowy areas.
+
+Shark, Huge
+
+Huge Animal (Aquatic) — CR 4
+
+Hit Dice
+    10d8+20 (65 hp)
+Initiative
+    +6
+Speed
+    Swim 60 ft
+Armor Class
+    15, touch 10, flat-footed 13
+Base Attack / Grapple
+    +7/+20
+Attack
+    Bite +10 melee (2d6+7)
+Full Attack
+    Bite +10 melee (2d6+7)
+STR
+    21
+DEX
+    15
+CON
+    15
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +11 / +9 / +6
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary, school (2−5), or pack (6−11)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Blindsense
+Keen Scent
+
+Feats
+Alertness
+Great Fortitude
+Improved Initiative
+Iron Will
+
+Description
+
+Huge sharks are true monsters, like great whites, that can exceed 20 feet in length.
+Combat
+
+Sharks circle and observe potential prey, then dart in and bite with their powerful jaws.
+
+Blind sense (Ex): A shark can locate creatures underwater within a 30-foot radius. This ability works only when the shark is underwater.
+
+Keen Scent (Ex): A shark can notice creatures by scent in a 180-foot radius and detect blood in the water at ranges of up to a mile.
+
+Skills: A shark has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Lion, Dire
+
+Large Animal (good will) — CR 5
+
+Hit Dice
+    8d8+24 (60 hp)
+Initiative
+    +2
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 11, flat-footed 13
+Base Attack / Grapple
+    +6/+17
+Attack
+    Claw +13 melee (1d6+7)
+Full Attack
+    2 claws +13 melee (1d6+7) and bite +7 melee (1d8+3)
+STR
+    25
+DEX
+    15
+CON
+    17
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +9 / +8 / +7
+Challenge Rating
+    5
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pride (6–10)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Pounce
+Rake
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Run
+Weapon Focus
+
+Description
+
+This immense lion has a short mane and a spotted, tawny coat, but there ends the resemblance to a normal animal. This monstrous creature has bony protrusions around its eyes and shoulders, with spiked ridges running along the length of its back.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire lions are patient hunters, just like their smaller cousins, but apt to take on bigger prey.
+
+Dire lions grow to be up to 15 feet long and weigh up to 3,500 pounds.
+
+Combat
+
+A dire lion attacks by running at prey, leaping, and clawing and biting as it takes with its rear claws.
+
+Improved Grab (Ex): To use this ability, a dire lion must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.
+
+Pounce (Ex): If a dire lion charges, it can make a full attack, including two rake attacks.
+
+Rake (Ex): Attack bonus +12 melee, damage 1d6+3.
+
+Skills: Dire lions have a +4 racial bonus on Hide and Move Silently checks.
+
+In areas of tall grass or heavy undergrowth, the Hide bonus improves to +8.
+
+Snake, Giant Constrictor
+
+Huge Animal — CR 5
+
+Hit Dice
+    11d8+14 (63 hp)
+Initiative
+    +3
+Speed
+    Land 20 ft
+Armor Class
+    15, touch 11, flat-footed 12
+Base Attack / Grapple
+    +8/+23
+Attack
+    Bite +13 melee (1d8+10)
+Full Attack
+    Bite +13 melee (1d8+10)
+STR
+    25
+DEX
+    17
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +8 / +10 / +4
+Challenge Rating
+    5
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Constrict
+Improved Grab
+Scent
+
+Feats
+Alertness
+Endurance
+Skill Focus
+Toughness
+
+Description
+
+Giant constrictor snakes are more aggressive than their smaller cousins, principally because they need a great amount of food to survive.
+Combat
+
+Constructor snakes hunt by grabbing prey with their mouths and then squeezing it with their powerful bodies.
+
+Constrict (Ex): On a successful grapple check, a giant constrictor snake deals 1d8+10 points of damage.
+
+Improved Grab (Ex): To use this ability, a giant constrictor snake must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can constrict.
+
+Dinosaur, Megaraptor
+
+Large Animal — CR 6
+
+Hit Dice
+    8d8+43 (79 hp)
+Initiative
+    +2
+Speed
+    Land 60 ft
+Armor Class
+    17, touch 11, flat-footed 15
+Base Attack / Grapple
+    +6/+15
+Attack
+    Talons +10 melee (2d6+5)
+Full Attack
+    Talons +10 melee (2d6+5) and 2 foreclaws +5 melee (1d4+2) and bite +45 melee (1d8+2)
+STR
+    21
+DEX
+    15
+CON
+    21
+INT
+    2
+WIS
+    15
+CHA
+    10
+Fort / Ref / Will
+    +10 / +8 / +4
+Challenge Rating
+    6
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pack (3–6)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Pounce
+Low-Light Vision
+Scent
+
+Feats
+Run
+Toughness
+Track
+
+Description
+
+This lean, long-legged bipedal creature has wicked-looking claws on its feet and a brightly colored hide that reminds you of a tropical bird. Its outstretched tail makes it least twice as long as it is tall.
+Description
+
+Dinosaurs, or terrible lizards, are ancient beasts that may be related to dragons.
+
+Among the traits that predatory dinosaurs share with many dragons are sharp teeth, a savage disposition, a well-developed sense of territory, and a ruthless capacity to hunt. Herbivorous dinosaurs usually are not aggressive unless wounded or defending their young, but may attack if startled or harassed.
+
+Dinosaurs come in many sizes and shapes. Bigger varieties have drab coloration, while smaller dinosaurs have more colorful markings. Most dinosaurs have a pebbly skin texture.
+
+Dinosaurs most often live in rugged or isolated areas that humanoids seldom visit: remote mountain valleys, inaccessible plateaus, tropical islands, and deep fens.
+
+This creature is a larger version of the deinonychus, standing about 12 feet tall with a total length of 24 feet. It has the same appearance, habits, and abilities of the smaller version.
+
+A megaraptor is bright green along its back and flanks, with a much lighter shade of the same color on its underside. The body has darker spots or stripes. Its tail extends straight out behind itself, held aloft by an intricate structure of bony supports, thus allowing its weight to be carried entirely by the back legs. It weighs about 2200 pounds.
+
+Combat
+
+Dinosaurs take full advantage of their size and speed. The swift carnivores stalk prey, staying hidden in cover until they can get into charge range and rush to the attack. Herbivores frequently overrun and trample their opponents.
+
+A megaraptor uses a combination of speed, grasping forearms, large teeth, and hind legs with ripping talons. It hunts by running at prey, leaping, and ripping with its rear talons as it claws and bites. The talons count as one attack.
+
+A megaraptor has a relatively large brain for a dinosaur, and its pack hunts with cunning tactics.
+
+Pounce (Ex): If a megaraptor charges, it can make a full attack.
+
+Skills: A megaraptor has a +8 racial bonus on Hide, Jump, Listen, Spot, and Survival checks.
+
+Whale, Orca
+
+Huge Animal — CR 5
+
+Hit Dice
+    9d8+48 (88 hp)
+Initiative
+    +2
+Speed
+    Swim 50 ft
+Armor Class
+    16, touch 10, flat-footed 14
+Base Attack / Grapple
+    +6/+22
+Attack
+    Bite +12 melee (2d6+12)
+Full Attack
+    Bite +12 melee (2d6+12)
+STR
+    27
+DEX
+    15
+CON
+    21
+INT
+    2
+WIS
+    14
+CHA
+    6
+Fort / Ref / Will
+    +11 / +8 / +5
+Challenge Rating
+    5
+Alignment
+    Always Neutral
+Organization
+    Solitary or pod (6−11)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Blindsight
+Hold Breath
+Low-Light Vision
+
+Feats
+Alertness
+Endurance
+Run
+Toughness
+
+Description
+
+Some varieties of these seagoing mammals are among the largest animals known. Relatively small whales (such as the orca presented here) can be vicious predators, attacking virtually anything they detect.
+
+These ferocious creatures are about 30 feet long. They eat fish, squid, seals, and other whales.
+
+Combat
+
+Some varieties of these seagoing mammals are among the largest animals known. Relatively small whales (such as the orca presented here) can be vicious predators, attacking virtually anything they detect.
+
+Blindsight (Ex): Whales can “see” by emitting high-frequency sounds, inaudible to most other creatures, that allow them to locate objects and creatures within 120 feet. A silence spell negates this and forces the whale to rely on its vision, which is approximately as good as a human’s.
+
+Hold Breath (Ex): A whale can hold its breath for a number of rounds equal to 8 × its Constitution score before it risks drowning.
+
+Skills: A whale has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+A whale has a +4 racial bonus on Spot and Listen checks. These bonuses are lost if its blindsight is negated.
+
+13th Level or Higher (Level -12)
+
+Bear, Dire
+
+Large Animal (good will) — CR 7
+
+Hit Dice
+    12d8+51 (105 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    17, touch 10, flat-footed 16
+Base Attack / Grapple
+    +9/+23
+Attack
+    Claw +19 melee (2d4+10)
+Full Attack
+    2 claws +19 melee (2d4+10) and bite +13 melee (2d8+5)
+STR
+    31
+DEX
+    13
+CON
+    19
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +12 / +9 / +9
+Challenge Rating
+    7
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+Run
+Toughness
+Weapon Focus
+
+Description
+
+This hulking bear has bony brow ridges and claws like sickles, with a wildness and destructive gleam in its cold, piercing eyes.
+Description
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+The omnivorous dire bear usually does not bother creatures that try to avoid it, but will aggressively defend a kill or other source of food. It will not hesitate to rip apart anything that might contain something edible.
+
+A typical dire bear is 12 feet long and weighs as much as 8,000 pounds.
+
+Combat
+
+A dire bear attacks by tearing at opponents with its claws.
+
+Improved Grab (Ex): To use this ability, a dire bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.
+
+Octopus, Giant
+
+Large Animal (Aquatic) — CR 8
+
+Hit Dice
+    8d8+11 (47 hp)
+Initiative
+    +2
+Speed
+    Swim 30 ft
+Armor Class
+    18, touch 11, flat-footed 16
+Base Attack / Grapple
+    +6/+15
+Attack
+    Tentacle +10 melee (1d4+5)
+Full Attack
+    8 tentacles +10 melee (1d4+5) and bite +5 melee (1d8+2)
+STR
+    20
+DEX
+    15
+CON
+    13
+INT
+    2
+WIS
+    12
+CHA
+    3
+Fort / Ref / Will
+    +7 / +8 / +3
+Challenge Rating
+    8
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Ink Cloud
+Constrict
+Jet
+Low-Light Vision
+
+Feats
+Alertness
+Skill Focus
+Toughness
+
+Description
+
+These creatures are aggressive and territorial hunters, with arms reaching 10 feet or more in length. Their tentacles are studded with barbs and sharp-edged suckers.
+Combat
+
+An opponent can attack a giant octopus’s tentacles with a sunder attempt as if they were weapons. A giant octopus’s tentacles have 10 hit points each. If a giant octopus is currently grappling a target with the tentacle that is being attacked, it usually uses another limb to make its attack of opportunity against the opponent making the sunder attempt. Severing one of a giant octopus’s tentacles deals 5 points of damage to the creature. A giant octopus usually withdraws from combat if it loses four tentacles. The creature regrows severed limbs in 1d10+10 days.
+
+Constrict (Ex): A giant octopus deals 2d8+6 points of damage with a successful grapple check.
+
+Improved Grab (Ex): To use this ability, a giant octopus must hit an opponent of any size with a tentacle attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can constrict.
+
+Ink Cloud (Ex): A giant octopus can emit a cloud of jet-black ink 20 feet high by 20 feet wide by 20 feet long once per minute as a free action. The cloud provides total concealment, which the octopus normally uses to escape a losing fight. All vision within the cloud is obscured.
+
+Jet (Ex): A giant octopus can jet backward once per round as a full-round action, at a speed of 200 feet. It must move in a straight line, but does not provoke attacks of opportunity while jetting.
+
+Skills: A giant octopus can change colors, giving it a +4 racial bonus on Hide checks.
+
+A giant octopus also can squeeze and contort its body, giving it a +10 racial bonus on Escape Artist checks.
+
+A giant octopus has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
+
+Elephant
+
+Huge Animal — CR 7
+
+Hit Dice
+    11d8+55 (104 hp)
+Initiative
+    +0
+Speed
+    Land 40 ft
+Armor Class
+    15, touch 8, flat-footed 15
+Base Attack / Grapple
+    +8/+26
+Attack
+    Gore +16 melee (2d8+15)
+Full Attack
+    Slam +16 melee (2d6+10) and 2 stamps +11 melee (2d6+5), or gore +16 melee (2d8+15)
+STR
+    30
+DEX
+    10
+CON
+    21
+INT
+    2
+WIS
+    13
+CHA
+    7
+Fort / Ref / Will
+    +12 / +7 / +6
+Challenge Rating
+    7
+Alignment
+    Always Neutral
+Organization
+    Solitary or herd (6–30)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Trample
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+Iron Will
+Skill Focus
+
+Description
+
+Massive herbivores of tropical lands, elephants are unpredictable creatures but nevertheless are sometimes used as mounts or beasts of burden.
+
+This entry describes an African elephant. Indian elephants are slightly smaller and weaker (Strength 28), but more readily trained (Wisdom 15). These statistics can also represent prehistoric creatures such as mammoths and mastodons.
+
+Combat
+
+Elephants tend to charge at threatening creatures.
+
+Trample (Ex): Reflex half DC 25. The save DC is Strength-based.
+
+16th Level or Higher (Level -15)
+
+Shark, Dire
+
+Huge Animal — CR 9
+
+Hit Dice
+    18d8+66 (147 hp)
+Initiative
+    +2
+Speed
+    Swim 60 ft
+Armor Class
+    17, touch 10, flat-footed 15
+Base Attack / Grapple
+    +13/+27
+Attack
+    Bite +18 melee (2d8+9)
+Full Attack
+    Bite +18 melee (2d8+9)
+STR
+    23
+DEX
+    15
+CON
+    17
+INT
+    1
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +14 / +13 / +12
+Challenge Rating
+    9
+Alignment
+    Always Neutral
+Organization
+    Solitary or school (2–5)
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Swallow Whole
+Keen Scent
+
+Feats
+Improved Natural Attack
+Toughness
+Weapon Focus
+
+Description
+
+This enormous sea monster has a streamlined body with a triangular fin atop its back, a toothy mouth set well under its long snout, and a symmetrical tail shaped like a crescent moon.
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire sharks attack anything they perceive to be edible, even larger creatures.
+
+This monstrous fish can grow to a length of 25 feet and weigh more than 20,000 pounds.
+
+Combat
+
+Dire sharks bite with their powerful jaws, swallowing smaller creatures in one gulp.
+
+Improved Grab (Ex): To use this ability, a dire shark must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can try to swallow the foe in the following round.
+
+Swallow Whole (Ex): A dire shark can try to swallow a grabbed opponent of up to one size smaller by making a successful grapple check. Once inside, the opponent takes 2d6+6 points of bludgeoning damage plus 1d8+4 points of acid damage per round from the shark’s digestive juices. A swallowed creature can cut its way out using a light slashing or piercing weapon by dealing 25 points of damage to the shark’s digestive tract (AC 13). Once the creature exits, muscular action closes the hole; another swallowed opponent must cut its own way out.
+
+A Huge dire shark’s gullet can hold 2 Large, 8 Medium or Small, 32 Tiny, 128 Diminutive, or 512 Fine or smaller opponents.
+
+Keen Scent (Ex): A dire shark can notice creatures by scent in a 180-foot radius and can detect blood in the water at a range of up to 1 mile.
+
+Skills: A dire shark has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered.
+
+It can use the run action while swimming, provided it swims in a straight line.
+
+Dinosaur, Triceratops
+
+Huge Animal — CR 9
+
+Hit Dice
+    16d8+124 (196 hp)
+Initiative
+    -1
+Speed
+    Land 30 ft
+Armor Class
+    18, touch 7, flat-footed 18
+Base Attack / Grapple
+    +12/+30
+Attack
+    Gore +20 melee (2d8+15)
+Full Attack
+    Gore +20 melee (2d8+15)
+STR
+    30
+DEX
+    9
+CON
+    25
+INT
+    1
+WIS
+    12
+CHA
+    7
+Fort / Ref / Will
+    +19 / +9 / +6
+Challenge Rating
+    9
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or herd (5–8)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Powerful Charge
+Trample
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Great Fortitude
+Toughness
+
+Description
+
+The massive beast has a huge plate of bone protecting the front of its 6-foot-long head, from which project two great horns, while a shorter horn juts from its nose.
+
+Dinosaurs, or terrible lizards, are ancient beasts that may be related to dragons.
+
+Among the traits that predatory dinosaurs share with many dragons are sharp teeth, a savage disposition, a well-developed sense of territory, and a ruthless capacity to hunt. Herbivorous dinosaurs usually are not aggressive unless wounded or defending their young, but may attack if startled or harassed.
+
+Dinosaurs come in many sizes and shapes. Bigger varieties have drab coloration, while smaller dinosaurs have more colorful markings. Most dinosaurs have a pebbly skin texture.
+
+Dinosaurs most often live in rugged or isolated areas that humanoids seldom visit: remote mountain valleys, inaccessible plateaus, tropical islands, and deep fens.
+
+This massive herbivore is fairly short-tempered and aggressive.
+
+A triceratops has a body about 25 feet long and weighs about 20,000 pounds.
+
+Combat
+
+Dinosaurs take full advantage of their size and speed. The swift carnivores stalk prey, staying hidden in cover until they can get into charge range and rush to the attack. Herbivores frequently overrun and trample their opponents.
+
+These creatures are likely to charge and skewer any creature of at least large size that infringes on their territory. A triceratops uses its trample attack on smaller opponents.
+
+Powerful Charge (Ex): When a triceratops charges, its gore attack deals 4d8+20 points of damage.
+
+Trample (Ex): Reflex half DC 28. The save DC is Strength-based.
+
+Tiger, Dire
+
+Large Animal — CR 8
+
+Hit Dice
+    16d8+48 (120 hp)
+Initiative
+    +2
+Speed
+    Land 40 ft
+Armor Class
+    17, touch 11, flat-footed 15
+Base Attack / Grapple
+    +12/+24
+Attack
+    Claw +20 melee (2d4+8)
+Full Attack
+    2 claws +20 melee (2d4+8) and bite +14 melee (2d6+4)
+STR
+    27
+DEX
+    15
+CON
+    17
+INT
+    2
+WIS
+    12
+CHA
+    10
+Fort / Ref / Will
+    +13 / +12 / +11
+Challenge Rating
+    8
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Pounce
+Rake
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Improved Natural Attack (claw)
+Improved Natural Attack (bite)
+Run
+Stealthy
+Weapon Focus
+
+Description
+
+This immense, monstrous feline is almost as tall at the shoulder as a human. It has a long body with bold stripes and paws the size of bucklers.
+
+Dire animals are larger, tougher, meaner versions of ordinary animals. Each kind tends to have a feral, prehistoric, or even demonic appearance.
+
+Dire tigers prey on just about anything that moves. They will patiently stalk a potential meal, striking whenever the creature lets down its guard.
+
+Dire tigers grow to be over 12 feet long and can weigh up to 6,000 pounds.
+
+Combat
+
+A dire tiger attacks by running at prey, leaping, and clawing and biting as it takes with its rear claws.
+
+Improved Grab (Ex): To use this ability, a dire tiger must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.
+
+Pounce (Ex): If a dire tiger charges, it can make a full attack, including two rake attacks.
+
+Rake (Ex): Attack bonus +18 melee, damage 2d4+4.
+
+Skills: Dire tigers have a +4 racial bonus on Hide and Move Silently checks. *In areas of tall grass or heavy undergrowth, the Hide bonus improves to +8.
+
+Dinosaur, Tyrannosaurus
+
+Huge Animal — CR 8
+
+Hit Dice
+    18d8+99 (180 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+Armor Class
+    14, touch 9, flat-footed 13
+Base Attack / Grapple
+    +13/+30
+Attack
+    Bite +20 melee (3d6+13)
+Full Attack
+    Bite +20 melee (3d6+13)
+STR
+    28
+DEX
+    12
+CON
+    21
+INT
+    2
+WIS
+    15
+CHA
+    10
+Fort / Ref / Will
+    +16 / +12 / +8
+Challenge Rating
+    8
+Alignment
+    Always Neutral
+Organization
+    Solitary or pair
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Improved Grab
+Swallow Whole
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Improved Natural Attack
+Run
+Toughness
+Track
+
+Description
+
+This towering predator has an enormous head and a mouth full of dagger-sized teeth. It stands on two powerful legs and has only vestigial forelimbs.
+
+Dinosaurs, or terrible lizards, are ancient beasts that may be related to dragons.
+
+Among the traits that predatory dinosaurs share with many dragons are sharp teeth, a savage disposition, a well-developed sense of territory, and a ruthless capacity to hunt. Herbivorous dinosaurs usually are not aggressive unless wounded or defending their young, but may attack if startled or harassed.
+
+Dinosaurs come in many sizes and shapes. Bigger varieties have drab coloration, while smaller dinosaurs have more colorful markings. Most dinosaurs have a pebbly skin texture.
+
+Dinosaurs most often live in rugged or isolated areas that humanoids seldom visit: remote mountain valleys, inaccessible plateaus, tropical islands, and deep fens.
+
+This ravenous creature is the most fearsome of all carnivorous dinosaurs.
+
+Despite its enormous size and 6-ton weight, a tyrannosaurus is a swift runner. Its head is nearly 6 feet long, and its teeth are from 3 to 6 inches in length. It is slightly more than 30 feet long from nose to tail.
+
+A tyrannosaurus eats almost anything it can sink its teeth into, and spends a great deal of its time scavenging for carrion and chasing smaller carnivores away from their kills.
+
+Combat
+
+Dinosaurs take full advantage of their size and speed. The swift carnivores stalk prey, staying hidden in cover until they can get into charge range and rush to the attack. Herbivores frequently overrun and trample their opponents.
+
+A tyrannosaurus pursues and eats just about anything it sees. Its tactics are simple—charge in and bite.
+
+Improved Grab (Ex): To use this ability, a tyrannosaurus must hit an opponent of up to one size smaller with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can try to swallow the foe the following round.
+
+Swallow Whole (Ex): A tyrannosaurus can try to swallow a grabbed opponent of up to two sizes smaller by making a successful grapple check. The swallowed creature takes 2d8+8 points of bludgeoning damage and 8 points of acid damage per round from the tyrannosaurus’s gizzard. A swallowed creature can cut its way out by using a light slashing or piercing weapon to deal 25 points of damage to the gizzard (AC 12). Once the creature exits, muscular action closes the hole; another swallowed opponent must cut its own way out.
+
+A Huge tyrannosaurus’s gizzard can hold 2 Medium, 8 Small, 32 Tiny, or 128 Diminutive or smaller opponents.
+
+Skills: A tyrannosaurus has a +2 racial bonus on Listen and Spot checks.
+
+Squid, Giant
+
+Huge Animal (Aquatic) — CR 9
+
+Hit Dice
+    12d8+18 (72 hp)
+Initiative
+    +3
+Speed
+    Swim 80 ft
+Armor Class
+    17, touch 11, flat-footed 14
+Base Attack / Grapple
+    +9/+29
+Attack
+    Tentacle +15 melee (1d6+8)
+Full Attack
+    10 tentacles +15 melee (1d6+8) and bite +10 melee (2d8+4)
+STR
+    26
+DEX
+    17
+CON
+    13
+INT
+    1
+WIS
+    12
+CHA
+    2
+Fort / Ref / Will
+    +9 / +11 / +5
+Challenge Rating
+    9
+Alignment
+    Always Neutral
+Organization
+    Solitary
+Treasure
+    None
+Environment
+    Aquatic
+Level Adjustment
+    —
+
+Special Abilities
+Constrict
+Improved Grab
+Ink Cloud
+Jet
+Low-Light Vision
+
+Feats
+Alertness
+Diehard
+Endurance
+Toughness
+
+Description
+
+These voracious creatures can have bodies more than 20 feet long and attack almost anything they meet.
+Combat
+
+An opponent can attack a giant squid’s tentacles with a sunder attempt as if they were weapons. A giant squid’s tentacles have 10 hit points each. If a giant squid is currently grappling a target with the tentacle that is being attacked, it usually uses another limb to make its attack of opportunity against the opponent making the sunder attempt. Severing one of a giant squid’s tentacles deals 5 points of damage to the creature. A giant squid usually withdraws from combat if it loses five tentacles. The creature regrows severed limbs in 1d10+10 days.
+
+Constrict (Ex): A giant squid deals 1d6+8 points of damage with a successful grapple check.
+
+Improved Grab (Ex): To use this ability, a giant squid must hit an opponent of any size with a tentacle attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can constrict.
+
+*A giant squid has a +4 racial bonus on grapple checks.
+
+Ink Cloud (Ex): A giant squid can emit a cloud of jet-black ink 20 feet high by 20 feet wide by 20 feet long once per minute as a free action. The cloud provides total concealment, which the squid normally uses to escape a losing fight. All vision within the cloud is obscured.
+
+Jet (Ex): A giant squid can jet backward once per round as a full-round action, at a speed of 320 feet. It must move in a straight line, but does not provoke attacks of opportunity while jetting.
+
+Skills: A giant squid has a +8 racial bonus on any Swim check to perform some special action or avoid a hazard. It can always choose to take 10 on a Swim check, even if distracted or endangered. It can use the run action while swimming, provided it swims in a straight line.
