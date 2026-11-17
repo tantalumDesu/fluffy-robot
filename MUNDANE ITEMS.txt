@@ -1,0 +1,506 @@
+MUNDANE ITEMS
+Item	Type	Price (GP)
+Backpack (empty)	Adventuring Gear	2
+Bedroll	Adventuring Gear	0.1
+Blanket (winter)	Adventuring Gear	0.5
+Block and Tackle	Adventuring Gear	5
+Caltrops	Adventuring Gear	1
+Case (map or scroll)	Adventuring Gear	1
+Cooking Stone	Adventuring Gear	2
+Fishhook	Adventuring Gear	0.1
+Fishing Net (25 sq ft)	Adventuring Gear	4
+Flask (empty)	Adventuring Gear	0.03
+Flint and Steel	Adventuring Gear	1
+Grappling Hook	Adventuring Gear	1
+Hammer	Adventuring Gear	0.5
+Kettle	Adventuring Gear	0.5
+Ladder (10 ft)	Adventuring Gear	0.05
+Lantern (Bullseye)	Adventuring Gear	12
+Lantern (Hooded)	Adventuring Gear	7
+Manacles	Adventuring Gear	15
+Manacles (masterwork)	Adventuring Gear	50
+Oil (1 pint flask)	Adventuring Gear	0.1
+Piton	Adventuring Gear	0.1
+Pole (10 ft)	Adventuring Gear	0.2
+Pouch, belt (empty)	Adventuring Gear	1
+Ram, portable	Adventuring Gear	10
+Rations, trail (per day)	Adventuring Gear	0.5
+Rope Bed	Adventuring Gear	0.3
+Rope, hemp (50 ft)	Adventuring Gear	1
+Sack (empty)	Adventuring Gear	0.1
+Skillet	Adventuring Gear	2
+Sledge	Adventuring Gear	1
+Smelling Salts (flask)	Adventuring Gear	2
+Sponge, natural (3”)	Adventuring Gear	0.02
+Sponge, natural (5”)	Adventuring Gear	0.04
+Sponge, natural (8”)	Adventuring Gear	0.1
+Tent	Adventuring Gear	10
+Torch	Adventuring Gear	0.01
+Waterskin	Adventuring Gear	1
+Whetstone	Adventuring Gear	0.02
+Animal (diminutive) Cage	Animals & Related Gear	0.3
+Animal (medium) Cage	Animals & Related Gear	50
+Animal (small) Cage	Animals & Related Gear	10
+Animal (tiny) Cage	Animals & Related Gear	1
+Bird, pet, common	Animals & Related Gear	0.02
+Bird, pet, fancy	Animals & Related Gear	0.2
+Bird, pet, rare	Animals & Related Gear	5
+Bit & Bridle	Animals & Related Gear	2
+Bullfrog (pair)	Animals & Related Gear	0.01
+Cat	Animals & Related Gear	0.01
+Dog, guard	Animals & Related Gear	25
+Dog, riding	Animals & Related Gear	150
+Donkey or Mule	Animals & Related Gear	8
+Duck	Animals & Related Gear	0.03
+Feed (per day)	Animals & Related Gear	0.05
+Ferret	Animals & Related Gear	0.3
+Fish, pet (6)	Animals & Related Gear	0.01
+Gerbil (pair)	Animals & Related Gear	0.01
+Goose	Animals & Related Gear	0.02
+Guinea Pig	Animals & Related Gear	0.01
+Hamster (mated pair)	Animals & Related Gear	0.01
+Horse, heavy	Animals & Related Gear	200
+Horse, light	Animals & Related Gear	75
+Lizard, pet, fancy	Animals & Related Gear	0.3
+Mice, fancy (pair)	Animals & Related Gear	0.01
+Monkey	Animals & Related Gear	5
+Ox	Animals & Related Gear	20
+Pet Collar, common	Animals & Related Gear	0.05
+Pet Collar, fancy	Animals & Related Gear	0.3
+Pet Leash	Animals & Related Gear	0.1
+Pony	Animals & Related Gear	30
+Rats, albino (pair)	Animals & Related Gear	0.02
+Rats, common (pair)	Animals & Related Gear	0.01
+Saddle (Military)	Animals & Related Gear	20
+Saddle (Pack)	Animals & Related Gear	5
+Saddle (Riding)	Animals & Related Gear	10
+Saddle, Exotic (Military)	Animals & Related Gear	60
+Saddle, Exotic (Pack)	Animals & Related Gear	15
+Saddle, Exotic (Riding)	Animals & Related Gear	30
+Saddlebags	Animals & Related Gear	4
+Snake, non-poisonous (diminutive)	Animals & Related Gear	0.01
+Snake, non-poisonous (small)	Animals & Related Gear	0.1
+Snake, non-poisonous (tiny)	Animals & Related Gear	0.03
+Warhorse, heavy	Animals & Related Gear	400
+Warhorse, light	Animals & Related Gear	150
+Warpony	Animals & Related Gear	100
+Artisan’s outfit	Clothing	1
+Cleric’s vestments	Clothing	5
+Cold weather outfit	Clothing	8
+Courtier’s outfit	Clothing	30
+Entertainer’s outfit	Clothing	3
+Explorer’s outfit	Clothing	10
+Monk’s outfit	Clothing	5
+Noble’s outfit	Clothing	75
+Peasant’s outfit	Clothing	1
+Royal outfit	Clothing	200
+Scholar’s outfit	Clothing	5
+Traveller's outfit	Clothing	1
+Buttons, common (12)	Clothing	0.05
+Buttons, fancy (12)	Clothing	0.3
+Ceramic Mask	Clothing	20
+Cleric's Vestments	Clothing	5
+Cold Weather Outfit	Clothing	8
+Courtier's Outfit	Clothing	30
+Entertainer's Outfit	Clothing	3
+Explorer's Outfit	Clothing	10
+Festival Costume, common	Clothing	5
+Festival Costume, fancy	Clothing	25
+Gloves, cloth	Clothing	0.04
+Gloves, fancy	Clothing	1
+Gloves, light leather	Clothing	0.2
+Hat/Headpiece, commoner's	Clothing	0.05
+Hat/Headpiece, fancy	Clothing	1
+House Slippers	Clothing	0.5
+Leather Mask, common	Clothing	2
+Leather Mask, fine quality	Clothing	5
+Loincloth	Clothing	0.02
+Metal Face Mask	Clothing	50
+Mittens, wool	Clothing	0.08
+Scarf, silk	Clothing	0.5
+Scarf, wool	Clothing	0.1
+Stockings/Socks, silk	Clothing	2
+Stockings/Socks, wool	Clothing	0.08
+Wig, common	Clothing	10
+Wig, fancy	Clothing	30
+Wooden Mask	Clothing	5
+Bush (small)	Commodities	0.2
+Cedar Chips	Commodities	0.01
+Cocoa Beans	Commodities	3
+Coffee Beans	Commodities	2
+Cork Wood	Commodities	0.1
+Corn, feed quality	Commodities	0.1
+Decorative Plant, common	Commodities	0.02
+Decorative Plant, fancy	Commodities	0.1
+Decorative Plant, rare/exotic	Commodities	2
+Dried Herbs, common	Commodities	0.02
+Dried Herbs, rare/import	Commodities	1
+Dried Herbs, uncommon	Commodities	0.1
+Essential Oils, vial	Commodities	2
+Firewood (per day)	Commodities	0.01
+Glass Beads (24)	Commodities	0.1
+Grape Vine (small)	Commodities	0.1
+Leather Cord (10 ft)	Commodities	0.08
+Mink	Commodities	0.5
+Mongoose	Commodities	1
+Newts (6)	Commodities	0.01
+Nuts, common (in shell)	Commodities	0.01
+Nuts, uncommon (in shell)	Commodities	0.1
+Peacock	Commodities	0.05
+Pelt, common (large)	Commodities	25
+Pelt, common (medium)	Commodities	5
+Pelt, common (small)	Commodities	0.5
+Pelt, common (tiny)	Commodities	0.08
+Pelt, fancy (small)	Commodities	3
+Pelt, fancy (tiny)	Commodities	0.3
+Pelt/Exotic Hide, fancy (large)	Commodities	100
+Pelt/Exotic Hide, fancy (medium)	Commodities	30
+Rabbit	Commodities	0.01
+Seeds (50)	Commodities	0.01
+Sugar Glider	Commodities	1
+Tree (young, small)	Commodities	0.2
+Turkey, domestic	Commodities	0.01
+Turtle	Commodities	0.01
+Vanilla Beans	Commodities	1
+Wooden Beads (24)	Commodities	0.01
+Jam	Food & Drink	0.3
+Lard	Food & Drink	0.01
+Meat, exotic/rare (chunk)	Food & Drink	5
+Meat, inferior (chunk)	Food & Drink	0.05
+Molasses	Food & Drink	0.2
+Mushrooms, edible	Food & Drink	0.05
+Pickled Meat	Food & Drink	0.8
+Pickled Vegetables	Food & Drink	0.1
+Salt/Sugar Cured Meat	Food & Drink	0.6
+Sassafras Root	Food & Drink	0.03
+Sausage	Food & Drink	0.5
+Soup/Dog Bones	Food & Drink	0.02
+Tea Biscuits	Food & Drink	0.04
+Toffee	Food & Drink	0.3
+Yeast (baker) (for 10 Lb)	Food & Drink	0.02
+Yeast (brewer) (for 10 gal)	Food & Drink	0.02
+Abacus	Luxury Items	5
+Ash Bowl, copper/stone, common	Luxury Items	1
+Ash Bowl, copper/stone, fancy	Luxury Items	3
+Ash Bowl, wooden (common)	Luxury Items	0.08
+Ash Bowl, wooden (fancy)	Luxury Items	0.3
+Baby Cradle, wooden	Luxury Items	0.1
+Back Scratcher, common	Luxury Items	0.03
+Back Scratcher, fancy	Luxury Items	2
+Barrel (empty)	Luxury Items	2
+Basket (empty)	Luxury Items	0.4
+Bedside Table, common	Luxury Items	2
+Bedside Table, fancy	Luxury Items	15
+Bell	Luxury Items	1
+Birdbath, common	Luxury Items	10
+Birdbath, fancy	Luxury Items	30
+Biscuit Bin	Luxury Items	0.3
+Book of Fairy Tales	Luxury Items	10
+Book of General Learning	Luxury Items	20
+Book of Legends	Luxury Items	25
+Book of Recipes	Luxury Items	15
+Book of Songs (100), grand	Luxury Items	50
+Book of Songs (20), small	Luxury Items	10
+Book of Songs (50), large	Luxury Items	30
+Book, Diary (Blank w/ lock)	Luxury Items	25
+Book, Diary (Blank, no lock)	Luxury Items	3
+Bookshelf, large	Luxury Items	10
+Bookshelf, medium	Luxury Items	3
+Bookshelf, small	Luxury Items	1
+Bottle (wine, glass)	Luxury Items	2
+Bowl, common	Luxury Items	0.1
+Bowl, fancy	Luxury Items	0.5
+Broom	Luxury Items	0.08
+Bucket (empty)	Luxury Items	0.5
+Butter Churn	Luxury Items	0.5
+Candle	Luxury Items	0.01
+Candle Lantern	Luxury Items	1
+Canopy Bed	Luxury Items	350
+Canvas (sq yd)	Luxury Items	0.1
+Carnival Mirror (standing)	Luxury Items	350
+Casket, common	Luxury Items	0.4
+Casket, fancy	Luxury Items	10
+Chain (10 ft)	Luxury Items	30
+Chalk (1 piece)	Luxury Items	0.01
+Chamber Pot	Luxury Items	0.3
+Chest (empty)	Luxury Items	2
+Chest of Drawers, common	Luxury Items	5
+Chest of Drawers, fancy	Luxury Items	50
+Chest of Drawers, noble	Luxury Items	250
+Cider Press	Luxury Items	1
+Clockwork Toy	Luxury Items	20
+Cook's Table, medium	Luxury Items	5
+Cook's Table, small	Luxury Items	1
+Cricket Box, stone	Luxury Items	0.3
+Cricket Box, wooden	Luxury Items	0.04
+Crowbar	Luxury Items	2
+Curtains, common	Luxury Items	0.1
+Curtains, fancy	Luxury Items	0.5
+Curtains, grand	Luxury Items	3
+Dart Board	Luxury Items	0.8
+Dice, ivory (pair)	Luxury Items	0.1
+Dice, jade (pair)	Luxury Items	1
+Dice, wooden (pair)	Luxury Items	0.01
+Dining Chair, common	Luxury Items	1
+Dining Chair, fancy	Luxury Items	8
+Dining Table, common	Luxury Items	10
+Dining Table, fancy	Luxury Items	50
+Dominoes (set)	Luxury Items	0.1
+Dresser (standing), common	Luxury Items	5
+Dresser (standing), fancy	Luxury Items	25
+Drying Towel	Luxury Items	0.1
+Eating Utensils, common	Luxury Items	0.1
+Eating Utensils, fancy	Luxury Items	1
+Fishbowl	Luxury Items	0.5
+Flower Bouquet	Luxury Items	0.1
+Flower Pot, common	Luxury Items	0.02
+Foot Massager, wooden	Luxury Items	0.1
+Foot Stool, common	Luxury Items	0.1
+Foot Stool, fancy	Luxury Items	1
+Fortune Wheel, wooden	Luxury Items	20
+Gaming Table	Luxury Items	20
+Garment Hook, brass	Luxury Items	0.1
+Garment Hook, wooden	Luxury Items	0.03
+Gnomish Crank Whistle	Luxury Items	10
+Gnomish Cuckoo Clock, fancy	Luxury Items	2000
+Gnomish Cuckoo Clock, royal	Luxury Items	3000
+Gnomish Fire Crank	Luxury Items	15
+Gnomish Gear Clock	Luxury Items	1200
+Gnomish Heat Lantern	Luxury Items	25
+Goblet, glass	Luxury Items	0.1
+Goblet, pewter	Luxury Items	0.3
+Hair Brush	Luxury Items	0.08
+Hair Comb	Luxury Items	0.02
+Hearth Tools	Luxury Items	5
+Hide Blanket, common	Luxury Items	3
+Hide Blanket, fancy	Luxury Items	20
+Hourglass (1 day)	Luxury Items	5
+Hourglass (1 hour)	Luxury Items	1
+Iron Bed	Luxury Items	200
+Jug, clay	Luxury Items	0.03
+Kaleidoscope, carnival	Luxury Items	200
+Kaleidoscope, common	Luxury Items	20
+Kaleidoscope, fancy	Luxury Items	80
+Lamp (common)	Luxury Items	0.1
+Leather Ball, straw stuffed	Luxury Items	0.5
+Lip Wax	Luxury Items	0.05
+Lock (Amazing)	Luxury Items	150
+Lock (Average)	Luxury Items	40
+Lock (Good)	Luxury Items	80
+Lock (Very Simple)	Luxury Items	20
+Mahjong Tiles, set	Luxury Items	5
+Master's Chair, common	Luxury Items	20
+Master's Chair, fancy	Luxury Items	100
+Mat, Feather	Luxury Items	0.3
+Mat, Straw	Luxury Items	0.1
+Maze Board (w/ marble)	Luxury Items	0.5
+Merchant's Table, foldable	Luxury Items	5
+Mirror (small steel)	Luxury Items	10
+Moon Calendar, stone	Luxury Items	15
+Moon Calendar, wooden	Luxury Items	1
+Mop	Luxury Items	0.2
+Mouse Trap	Luxury Items	0.05
+Mug/Tankard (clay)	Luxury Items	0.02
+Mug/Tankard, pewter	Luxury Items	1
+Nutcracker, fancy	Luxury Items	2
+Nutcracker, ordinary	Luxury Items	0.1
+Padded Chair, common	Luxury Items	8
+Padded Chair, fancy	Luxury Items	25
+Perfume, Common (vial)	Luxury Items	0.2
+Perfume, Exotic (vial)	Luxury Items	20
+Perfume, Fancy (vial)	Luxury Items	1
+Picture frame, wooden (Large)	Luxury Items	10
+Picture frame, wooden (Medium)	Luxury Items	1
+Picture frame, wooden (Small)	Luxury Items	0.1
+Picture frame, wooden (Tiny)	Luxury Items	0.03
+Pillow, common	Luxury Items	0.1
+Pillow, fancy	Luxury Items	1
+Pillow, mugwort	Luxury Items	0.3
+Pitcher (clay)	Luxury Items	0.02
+Plate Cabinet (standing), common	Luxury Items	10
+Plate Cabinet (standing), fancy	Luxury Items	50
+Plates (Common) set of 4	Luxury Items	0.4
+Plates (Fancy) set of 4	Luxury Items	2
+Pot (iron)	Luxury Items	0.5
+Potato Bin	Luxury Items	0.5
+Pumice	Luxury Items	0.1
+Rabbit's Foot	Luxury Items	0.05
+Rat Trap	Luxury Items	0.1
+Ring Toss Set	Luxury Items	0.2
+Rope, silk (50 ft)	Luxury Items	10
+Roundabout	Luxury Items	30
+Scholar's Bed	Luxury Items	40
+Sealing Wax	Luxury Items	1
+Serving Bowl, common	Luxury Items	0.3
+Serving Bowl, fancy	Luxury Items	1
+Serving Tray, copper	Luxury Items	5
+Serving Tray, silver	Luxury Items	10
+Serving Tray, wooden	Luxury Items	0.2
+Shadow Lantern	Luxury Items	25
+Signet Ring	Luxury Items	5
+Smoking Pipe, clay	Luxury Items	0.02
+Smoking Pipe, common	Luxury Items	0.1
+Smoking Pipe, fancy	Luxury Items	3
+Soap (per Lb)	Luxury Items	0.5
+Spectacles	Luxury Items	800
+Spectacles, tinted	Luxury Items	850
+Standing Mirror	Luxury Items	300
+Stool, wooden (medium)	Luxury Items	0.5
+Stool, wooden (small)	Luxury Items	0.2
+Sundial	Luxury Items	10
+Tablecloth, common	Luxury Items	0.2
+Tablecloth, fancy	Luxury Items	1
+Tavern Table	Luxury Items	5
+Tea Service Set	Luxury Items	15
+Tombstone	Luxury Items	0.3
+Toy Doll, common	Luxury Items	0.03
+Toy Doll, fancy	Luxury Items	0.5
+Vanity Mirror, steel	Luxury Items	50
+Vanity Table (w/ mirror), common	Luxury Items	500
+Vanity Table (w/ mirror), fancy	Luxury Items	800
+Vanity Table (w/ mirror), royal	Luxury Items	1500
+Vase, common	Luxury Items	0.05
+Wash Basin, copper	Luxury Items	150
+Wash Basin, wooden	Luxury Items	4
+Waste Bin (10 gallon)	Luxury Items	0.1
+Waste Bin (5 gallon)	Luxury Items	0.04
+Waste Bin (50 gallon)	Luxury Items	0.3
+Wooden Sign, medium	Luxury Items	5
+Wooden Sign, small	Luxury Items	1
+Wooden Toy, common	Luxury Items	0.05
+Wooden Toy, fancy	Luxury Items	0.3
+Writing Quills (6)	Luxury Items	0.02
+Yarn, Ball (500 ft)	Luxury Items	0.3
+Fife (common)	Musical Instrument	5
+Fife (masterwork)	Musical Instrument	100
+Hurdy Gurdy (common)	Musical Instrument	5
+Hurdy Gurdy (masterwork)	Musical Instrument	100
+Lute (common)	Musical Instrument	5
+Lute (masterwork)	Musical Instrument	100
+Mandolin (common)	Musical Instrument	5
+Mandolin (masterwork)	Musical Instrument	100
+Music Box (common)	Musical Instrument	15
+Music Box (masterwork)	Musical Instrument	300
+Organ Box (common)	Musical Instrument	3
+Organ Box (fancy)	Musical Instrument	8
+Organ Box (masterwork)	Musical Instrument	200
+Recorder (common)	Musical Instrument	5
+Recorder (masterwork)	Musical Instrument	100
+Acid (flask)	Special Substances & Items	10
+Alchemist's Fire (flask)	Special Substances & Items	20
+Antitoxin	Special Substances & Items	50
+Everburning Torch	Special Substances & Items	110
+Holy Water (flask)	Special Substances & Items	25
+Smokestick	Special Substances & Items	20
+Sunrod	Special Substances & Items	2
+Tanglefoot Bag	Special Substances & Items	50
+Thunderstone	Special Substances & Items	30
+Tindertwig	Special Substances & Items	10
+Alchemist's Lab	Tools & Skill Kits	500
+Artisan Scissors	Tools & Skill Kits	1
+Artisan's Tools	Tools & Skill Kits	5
+Artisan's Tools, Masterwork	Tools & Skill Kits	55
+Barber's Kit	Tools & Skill Kits	10
+Beekeeper's Hive	Tools & Skill Kits	2
+Beekeeper's Suit	Tools & Skill Kits	10
+Blood Letter's Leeches (flask of 12 live)	Tools & Skill Kits	0.2
+Book, blank, normal	Tools & Skill Kits	3
+Book, blank, poet's	Tools & Skill Kits	2
+Book, blank, small	Tools & Skill Kits	2
+Book, Recipe (blank)	Tools & Skill Kits	4
+Book, Song (blank), grand	Tools & Skill Kits	12
+Book, Song (blank), large	Tools & Skill Kits	8
+Book, Song (blank), small	Tools & Skill Kits	4
+Bookmark, common	Tools & Skill Kits	0.01
+Bookmark, fancy	Tools & Skill Kits	0.1
+Chimney Brush Kit	Tools & Skill Kits	0.8
+Climber's Kit	Tools & Skill Kits	80
+Cloth Dye (10yd), common	Tools & Skill Kits	0.5
+Cloth Dye (10yd), fancy	Tools & Skill Kits	5
+Cook's Knives (set)	Tools & Skill Kits	8
+Cookie Cutter	Tools & Skill Kits	0.05
+Cooking Utensils (set)	Tools & Skill Kits	0.5
+Cosmetics/Theater Makeup Kit	Tools & Skill Kits	10
+Crab Trap	Tools & Skill Kits	0.1
+Craftsman's Paint (5 gal)	Tools & Skill Kits	5
+Disguise Kit	Tools & Skill Kits	50
+Eye Patch, common	Tools & Skill Kits	0.02
+Eye Patch, fancy	Tools & Skill Kits	0.1
+Farmer's Tools	Tools & Skill Kits	1
+Gem Eye, common	Tools & Skill Kits	15
+Gem Eye, fancy	Tools & Skill Kits	50
+Glass Eye, common	Tools & Skill Kits	0.05
+Glass Eye, fancy	Tools & Skill Kits	0.5
+Glass Orb	Tools & Skill Kits	1
+Glue, Artisan (gallon)	Tools & Skill Kits	2
+Gnomish Cutting Shears	Tools & Skill Kits	80
+Healer's Kit	Tools & Skill Kits	50
+Holy Symbol (Silver)	Tools & Skill Kits	25
+Holy Symbol (Wooden)	Tools & Skill Kits	1
+Hourglass	Tools & Skill Kits	25
+Ink (1 oz vial)	Tools & Skill Kits	8
+Ink Pen	Tools & Skill Kits	0.1
+Juggler's Balls, wooden	Tools & Skill Kits	0.8
+Lumber Axe	Tools & Skill Kits	6
+Lumber Saw	Tools & Skill Kits	6
+Magnifying Glass	Tools & Skill Kits	100
+Meat Grinder	Tools & Skill Kits	2
+Meat Grinder, Gnomish	Tools & Skill Kits	15
+Musical Instrument (common)	Tools & Skill Kits	5
+Musical Instrument (masterwork)	Tools & Skill Kits	100
+Nails (100)	Tools & Skill Kits	0.5
+Paper (sheet)	Tools & Skill Kits	0.4
+Parchment (sheet)	Tools & Skill Kits	0.2
+Peg Leg, wooden	Tools & Skill Kits	0.7
+Pepper Mill	Tools & Skill Kits	5
+Pick, miner's	Tools & Skill Kits	3
+Plow	Tools & Skill Kits	30
+Portable Coop	Tools & Skill Kits	0.3
+Puppet Box	Tools & Skill Kits	5
+Puppet, common	Tools & Skill Kits	0.1
+Puppet, fancy	Tools & Skill Kits	2
+Scale, merchant's	Tools & Skill Kits	2
+Sewing Needle	Tools & Skill Kits	0.5
+Signal Whistle	Tools & Skill Kits	0.8
+Soup Pot	Tools & Skill Kits	10
+Spade or Shovel	Tools & Skill Kits	2
+Spell Component Pouch	Tools & Skill Kits	5
+Spellbook, Wizard's (Blank)	Tools & Skill Kits	15
+Spindle	Tools & Skill Kits	0.04
+Spinning Wheel	Tools & Skill Kits	10
+Spyglass	Tools & Skill Kits	1000
+Tacks (100)	Tools & Skill Kits	0.2
+Teeth (human, demihuman) per tooth	Tools & Skill Kits	0.8
+Teeth (humanoid) per tooth	Tools & Skill Kits	0.1
+Thieves' Tools	Tools & Skill Kits	30
+Thieves' Tools, Masterwork	Tools & Skill Kits	100
+Thread	Tools & Skill Kits	0.05
+Tool, Masterwork	Tools & Skill Kits	50
+Vial, ink or potion (empty)	Tools & Skill Kits	1
+Water Clock	Tools & Skill Kits	1000
+Wheelbarrow	Tools & Skill Kits	3
+Wiping Rug	Tools & Skill Kits	0.1
+Wood Stain (5 sq ft)	Tools & Skill Kits	3
+Writing Board	Tools & Skill Kits	0.1
+Cage Wagon, common	Transport	450
+Cage Wagon, grand	Transport	800
+Caravan Wagon, common	Transport	750
+Caravan Wagon, fancy	Transport	1250
+Carriage	Transport	100
+Cart	Transport	15
+Covered Cart	Transport	20
+Galley	Transport	30000
+Keelboat	Transport	3000
+Longship	Transport	10000
+Oar	Transport	2
+Performer's Cart, common	Transport	500
+Performer's Cart, fancy	Transport	800
+Rowboat	Transport	50
+Sailing Ship	Transport	10000
+Sideshow Cart	Transport	650
+Sled	Transport	20
+Sled, covered	Transport	50
+Tent Wagon	Transport	85
+Wagon	Transport	35
+Warship	Transport	25000
+Yoke (and accessories)	Transport	2
