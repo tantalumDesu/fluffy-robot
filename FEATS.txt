@@ -390,6 +390,16 @@ IMPROVED INITIATIVE [GENERAL]
 Benefit: You get a +4 bonus on initiative checks.
 
 Special: A fighter may select Improved Initiative as one of his fighter bonus feats.
+IMPROVED NATURAL ATTACK [GENERAL]
+
+Prerequisites: Base attack bonus +4, natural weapon.
+
+Benefit: The damage for one of the creature’s natural attack forms increases by one step, as if the creature’s size had increased by one category: 1d2, 1d3, 1d4, 1d6, 1d8, 2d6, 3d6, 4d6, 6d6, 8d6, 12d6. A weapon or attack that deals 1d10 points of damage increases as follows: 1d10, 2d8, 3d8, 4d8, 6d8, 8d8, 12d8.
+
+Special: You can take this feat multiple times, but each time it applies to a different natural attack.
+
+Description: The natural attacks of a creature with this feat are more dangerous than its size and type would otherwise dictate.
+
 IMPROVED OVERRUN [GENERAL]
 
 Prerequisites: Str 13, Power Attack.
