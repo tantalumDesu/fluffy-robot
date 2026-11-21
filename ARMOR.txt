@@ -60,9 +60,9 @@ Shield, light steel	9 gp	+1	—	–1	5%	—	—	6 lb.	Shield
 Shield, heavy wooden	7 gp	+2	—	–2	15%	—	—	10 lb.	Shield
 Shield, heavy steel	20 gp	+2	—	–2	15%	—	—	15 lb.	Shield
 Shield, tower	30 gp	+4	+2	–10	50%	—	—	45 lb.	Shield
-Armor spikes	+50 gp	—	—	—	—	—	—	+10 lb.	Extra
+Armor spikes	+50 gp	—	—	—	—	—	—	0 lb.	Extra
 Gauntlet, locked	8 gp	—	—	Special	100%	—	—	+5 lb.	Extra
-Shield spikes	+10 gp	—	—	—	—	—	—	+5 lb.	Extra
+Shield spikes	+10 gp	—	—	—	—	—	—	0 lb.	Extra
 
 Weight figures are for armor sized to fit Medium characters. Armor fitted for Small characters weighs half as much, and armor fitted for Large characters weighs twice as much.
 When running in heavy armor, you move only triple your speed, not quadruple.
@@ -72,7 +72,7 @@ ARMOR DESCRIPTIONS
 
 Any special benefits or accessories to the types of armor found on Table: Armor and Shields are described below.
 
-Armor Spikes: You can have spikes added to your armor, which allow you to deal extra piercing damage (see Table: Weapons) on a successful grapple attack. The spikes count as a martial weapon. If you are not proficient with them, you take a –4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the spikes, and they count as a light weapon in this case. (You can’t also make an attack with armor spikes if you have already made an attack with another off-hand weapon, and vice versa.)
+Armor Spikes: This addition adds no carried weight. You can have spikes added to your armor, which allow you to deal extra piercing damage (see Table: Weapons) on a successful grapple attack. The spikes count as a martial weapon. If you are not proficient with them, you take a –4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the spikes, and they count as a light weapon in this case. (You can’t also make an attack with armor spikes if you have already made an attack with another off-hand weapon, and vice versa.)
 
 An enhancement bonus to a suit of armor does not improve the spikes’ effectiveness, but the spikes can be made into magic weapons in their own right.
 
@@ -116,7 +116,7 @@ Shield, Tower: This massive wooden shield is nearly as tall as you are. In most 
 
 When employing a tower shield in combat, you take a –2 penalty on attack rolls because of the shield’s encumbrance. Only fighters receive Tower Shield Proficiency automatically; every other class must gain the Tower Shield Proficiency feat to use a tower shield without nonproficiency penalties.
 
-Shield Spikes: When added to your shield, these spikes turn it into a martial piercing weapon that increases the damage dealt by a shield bash as if the shield were designed for a creature one size category larger than you. You can’t put spikes on a buckler or a tower shield. Otherwise, attacking with a spiked shield is like making a shield bash attack (see above). An enhancement bonus on a spiked shield does not improve the effectiveness of a shield bash made with it, but a spiked shield can be made into a magic weapon in its own right.
+Shield Spikes: This addition adds no carried weight. When added to your shield, these spikes turn it into a martial piercing weapon that increases the damage dealt by a shield bash as if the shield were designed for a creature one size category larger than you. You can’t put spikes on a buckler or a tower shield. Otherwise, attacking with a spiked shield is like making a shield bash attack (see above). An enhancement bonus on a spiked shield does not improve the effectiveness of a shield bash made with it, but a spiked shield can be made into a magic weapon in its own right.
 
 Splint Mail: The suit includes gauntlets.
 
