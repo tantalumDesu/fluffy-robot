@@ -1,0 +1,109 @@
+BEASTS OF BURDEN
+
+Pony
+
+Medium Animal — CR 0.25
+
+Hit Dice
+    2d8+2 (11 hp)
+Initiative
+    +1
+Speed
+    Land 40 ft
+STR
+    13
+DEX
+    13
+CON
+    12
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +4 / +4 / +0
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Description
+
+The statistics presented here describe a small horse, under 5 feet tall at the shoulder. Ponies are otherwise similar to light horses and cannot fight while carrying a rider.
+
+Carrying Capacity: A light load for a pony is up to 75 pounds; a medium load, 76–150 pounds; and a heavy load, 151–225 pounds. A pony can drag 1,125 pounds.
+
+Donkey
+
+Medium Animal — CR 0.17
+
+Hit Dice
+    2d8+2 (11 hp)
+Initiative
+    +1
+Speed
+    Land 30 ft
+STR
+    10
+DEX
+    13
+CON
+    12
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +4 / +4 / +0
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Description
+
+These long-eared, horselike creatures are surefooted and sturdy. The statistics presented here could also describe burros.
+
+Carrying Capacity: A light load for a donkey is up to 50 pounds; a medium load, 51–100 pounds; and a heavy load, 101–150 pounds. A donkey can drag 750 pounds.
+
+Ox
+CR 1
+ Large Animal
+
+
+Domestic bovine, draft animal
+Statistic	Value
+Hit Dice	3d8+9 (22 hp)
+Initiative	+0
+Speed	30 ft.
+Armour Class	13 (–1 size, +4 natural), touch 9, flat-footed 13
+Base Attack/Grapple	+2 / +10
+Attack	Gore +5 melee (1d8+6)
+Full Attack	Gore +5 melee (1d8+6)
+Space/Reach	10 ft. / 5 ft.
+Special Qualities	Low-light vision, scent
+Saves	Fort +6, Ref +3, Will +2
+Abilities	Str 20, Dex 10, Con 17, Int 2, Wis 11, Cha 4
+Skills	Listen +5, Spot +5
+Feats	Endurance
+Environment	Temperate plains and hills
+Organisation	Domesticated
+Advancement	—
+Level Adjustment	—
+
+Carrying Capacity (quadruped):
+
+Assuming the standard 3.5 carrying-capacity multipliers for size and quadrupeds:
+Load	Capacity
+Light	400 lb
+Medium	401–800 lb
+Heavy	801–1,200 lb
+Drag	6,000 lb
