@@ -106,7 +106,7 @@ def modifier_total(stat_id, instances, context=None):
     Caller resolves active durations, conditions and derived stats. Unknown choices fail closed.
     """
     context = context or {}
-    best, seen, total = {}, set(), 0
+    best, worst, seen, total = {}, {}, set(), 0
     family, _, member = stat_id.partition(':')
     context = dict(context)
     if family == 'skill' and member:
@@ -141,11 +141,14 @@ def modifier_total(stat_id, instances, context=None):
                          amount['base'] + (level - amount['start']) // amount['every']))
         if effect['stacking'] == 'highest-same-type':
             key = effect['bonusType']
-            best[key] = max(best.get(key, 0), amount)
+            if amount < 0:
+                worst[key] = min(worst.get(key, 0), amount)
+            else:
+                best[key] = max(best.get(key, 0), amount)
         elif effect['stacking'] == 'once-per-effect':
             if effect['id'] not in seen:
                 total += amount
                 seen.add(effect['id'])
         elif effect['stacking'] == 'sum':
             total += amount
-    return total + sum(best.values())
+    return total + sum(best.values()) + sum(worst.values())

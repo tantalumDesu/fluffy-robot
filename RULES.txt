@@ -1,6 +1,6 @@
 RULES
 
-Implemented game rules. Each rule in this file is implemented as a typed rule object in the `rules` collection of dnd core.json; add new rules here and as new objects in that collection.
+Shared rules for character creation and play. Class-specific rules belong in the relevant class file; racial traits belong in RACES.txt. Shared multiclass rules belong in MULTICLASS CHARACTERS.txt. A rule appearing here does not mean it has a typed JSON record.
 
 Table: Ability Modifiers and Bonus Spells
 			Bonus Spells (by Spell Level)
@@ -33,7 +33,7 @@ Score	Modifier	0	1st	2nd	3rd	4th	5th	6th	7th	8th	9th
 
 CHARACTER CREATION RULES (Stage S33)
 
-The following rules are implemented as 9 typed rule objects in the `rules` collection of dnd-core.json to support 1st-level character building and derived stat calculation. (Stage S33/S34 wrote this section into RULES.txt but never wrote the objects into the JSON; Stage S36 backfilled them.)
+These shared rules support character creation and derived statistics.
 
 1. Ability Score Generation (ability-score-generation)
 - Standard Point Buy (DMG, default 28 pts; base 8, range 8–18): 8=0, 9=1, 10=2, 11=3, 12=4, 13=5, 14=6, 15=8, 16=10, 17=13, 18=16.
@@ -51,7 +51,7 @@ The following rules are implemented as 9 typed rule objects in the `rules` colle
 - Level 1 HP = max(1, class Hit Die + Con modifier) + flat bonuses (e.g., Toughness +3).
 
 4. Skill Points & Starting Languages (skill-points-and-ranks)
-- Level 1 Skill Points = max(1, class base + Int modifier) × 4 (+4 for Humans).
+- Level 1 Skill Points = max(1, class base + Int modifier) × 4, then apply any racial bonus from RACES.txt.
 - Class skill = 1 pt/rank; cross-class skill = 2 pts/rank.
 - Starting bonus languages = max(0, Int modifier) chosen from race bonus languages.
 
@@ -100,21 +100,10 @@ Str	Light Load	Medium Load	Heavy Load
 29	466 lb.	933 lb.	1400 lb.
 - Medium load: Max Dex +3, Check Penalty –3, Speed 20 ft. (from 30) / 15 ft. (from 20), Run ×4.
 - Heavy load: Max Dex +1, Check Penalty –6, Speed 20 ft. (from 30) / 15 ft. (from 20), Run ×3.
-- Dwarves keep 20 ft. speed regardless of medium/heavy load or armor.
+- Apply racial movement exceptions from RACES.txt.
 
-7. Table: Starting Wealth at 1st Level (starting-wealth-by-class)
-Class	Starting Gold	Average
-barbarian	4d4×10 gp	100 gp
-bard	4d4×10 gp	100 gp
-cleric	5d4×10 gp	125 gp
-druid	2d4×10 gp	50 gp
-fighter	6d4×10 gp	150 gp
-monk	5d4 gp	12.5 gp
-paladin	6d4×10 gp	150 gp
-ranger	6d4×10 gp	150 gp
-rogue	5d4×10 gp	125 gp
-sorcerer	3d4×10 gp	75 gp
-wizard	3d4×10 gp	75 gp
+7. Starting Wealth at 1st Level
+- Use the starting wealth entry in the starting class file. Do not grant it again when multiclassing.
 
 8. Derived Combat Statistics (derived-combat-stats) & Level-1 Class Choices (level-1-class-choices)
 - AC = 10 + armor + shield + min(Dex mod, maxDex) + size + natural + dodge + deflection + misc.
@@ -123,20 +112,17 @@ wizard	3d4×10 gp	75 gp
 
 ---
 
-MULTICLASSING RULES (Stage S34 — see MULTICLASSING.txt)
+MULTICLASSING RULES
 
-Implemented as 4 typed rule objects in dnd-core.json `rules[]` (backfilled at Stage S36):
-- `multiclassing-progression`: ordered level-sequence aggregation (character level vs. class level, summed HP/BAB/saves, iterative attacks at +6/+11/+16, union-of-class-skills max ranks with per-level spend costs, character-level feats & ability increases, separate class spellcasting + prestige advancement, Barbarian illiteracy exception).
-- `multiclass-feature-stacking`: Turn/Rebuke Undead (cleric + paladin - 3), Uncanny Dodge -> Improved Uncanny Dodge & flanking stack (barbarian/rogue/assassin/dwarven-defender/shadowdancer + Fate domain), Sorcerer + Wizard familiar stacking, Sneak Attack dice stacking, Trap Sense bonus stacking, non-stacking Evasion.
-- `monk-continuous-levels`: contiguous-block continuity constraint from MONK.txt (no returning to Monk after raising another class).
-- `multiclass-xp-penalty`: optional PHB p. 60 / RACES.txt favored-class XP penalty (–20% per non-exempt base class ≥ 2 levels behind highest non-exempt base class; prestige classes exempt).
+See MULTICLASS CHARACTERS.txt for advancement, cross-class feature interactions, and the optional XP penalty. Class-specific restrictions are in the class files; favored classes are in RACES.txt.
+
 <!-- stage-s35-s36:begin -->
 
 ---
 
 COMBAT, INITIATIVE, INJURY AND ALIGNMENT RULES (Stage S35 — see the seven source files below)
 
-Implemented as 32 typed rule objects in the `rules` collection of dnd-core.json, plus three new lookup collections. Tables were parsed out of the prose rather than transcribed, so every number here traces back to a line in a source file.
+Source index for shared combat and alignment rules. The entries below list intended JSON rule IDs, not a guarantee that they are present in the current JSON.
 
 New collections: `alignments` (9), `sizeCategories` (9), `combatModifiers` (25 typed rows), `alignmentDoctrines` (3 prose sections).
 
@@ -201,7 +187,7 @@ Recorded rather than invented:
 
 MODIFIERS, STACKING AND MODIFIER TYPES (Stage S49)
 
-Implemented as 3 typed rule objects in the `rules` collection of dnd-core.json:
+Intended typed rule IDs for these shared rules:
 
 - `modifier-definition`: what a modifier is (bonus/penalty on a die roll).
 - `modifier-stacking`: when modifiers stack (different source AND different type / untyped);
@@ -293,31 +279,18 @@ Size Modifier
 A size bonus or penalty is derived from a creature's size category. Size modifiers of different kinds apply to Armor Class, attack rolls, Hide checks, grapple checks, and various other checks.
 
 <!-- stage-s49:end -->
-<!-- stage-s53:begin -->
-
-PER-CLASS SPELL SWAP RULES (Stage S53)
-
-Implemented as 3 typed rule objects in the `rules` collection of dnd-core.json, one per spontaneous casting class, parsed from each class's own Spells prose. The earlier composite `spell-replacement` object was homebrew (it merged bard and sorcerer into one schedule and extrapolated levels the class text never states) and has been removed.
-
-- `bard-spell-swap` (BARD.txt): 5th level, then every 3rd bard level (8th, 11th, …). Text states 5, 8, 11.
-- `sorcerer-spell-swap` (SORCERER.txt): 4th level, then every even-numbered sorcerer level (6th, 8th, …). Text states 4, 6, 8.
-- `assassin-spell-swap` (Prestige Class ASSASSIN.txt): 6th level, then every even-numbered level (8th, 10th). Text states 6, 8, 10 — the full 10-level range.
-
-Shared canon in each rule: one swap per eligible level; the new spell must be the same level as the exchanged spell and at least two levels below the highest spell level the class can cast; the choice is made when new spells known for the level are gained. Levels beyond those printed are carried in `mechanic.parameters.derivedEligibleLevels` marked `derivedFrom` (the class text says "and so on"), never as source-stated values.
-
-<!-- stage-s53:end -->
 <!-- stage-s37:begin -->
 
 SOURCE CAPTURE AND AUDIT (Stage S37)
 
-Every rule object in the `rules` collection now carries its verbatim source text in `source.excerpts[]` and a machine-checked comparison in `audit` (49 verified / 4 partial / 0 unverifiable across 56 rules). Anything that could not be translated from this file — or from the files it cites — is listed in `dndsucks.md` §0.12 rather than silently filled in.
+The historical Stage S37 snapshot recorded its verbatim source text in `source.excerpts[]` and a machine-checked comparison in `audit` (49 verified / 4 partial / 0 unverifiable across 56 rules). Anything that could not be translated from this file — or from the files it cites — is listed in `dndsucks.md` §0.12 rather than silently filled in.
 
 <!-- stage-s37:end -->
 <!-- stage-s60:begin -->
 
 FEAT SELECTION UNIQUENESS (Stage S60)
 
-Implemented as 1 typed rule object in the `rules` collection of dnd-core.json: `feat-selection-uniqueness`.
+Intended typed rule ID: `feat-selection-uniqueness`.
 
 A feat excludes itself from further selection once possessed — taken, or granted free by a class — unless its own text explicitly allows taking it more than once ("You can gain X multiple times", "may be taken multiple times", "each time you take this feat"). Usage limits such as "once per round" or "once per day" are not selection repeats.
 

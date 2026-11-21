@@ -1,17 +1,20 @@
 """State helpers for confirmed spell applications on a single actor.
 
-Times are integer rounds on the caller's clock (10 rounds/minute). The caller
-handles targeting, saves, SR, and the order of consumption for distinct pools.
+Use an encounter clock or an elapsed game-seconds clock. Legacy callers may
+use integer rounds throughout. The caller handles targeting, saves, SR, and
+the order of consumption for distinct pools.
 """
 
-_ROUNDS = {'round': 1, 'minute': 10, 'hour': 600}
+from .game_time import SECONDS, expired, expiry_at
 
 
 def active_spells(instances, now):
+    if isinstance(now, dict):
+        return [instance for instance in instances if not expired(instance['expiry'], now)]
     return [instance for instance in instances if now < instance['expiresAtRound']]
 
 
-def apply_spell(instances, catalog, spell_id, caster_level, now, roll_die, *, opposed_spell_ids=()):
+def apply_spell(instances, catalog, spell_id, caster_level, now, roll_die, *, opposed_spell_ids=(), cast_plan=None):
     """Apply a confirmed cast; opt in to removing confirmed opposing effects.
 
     Refuse a second active casting with the same spell ID so the caller can
@@ -30,7 +33,11 @@ def apply_spell(instances, catalog, spell_id, caster_level, now, roll_die, *, op
     if opposed.intersection(instance['spellId'] for instance in current):
         return [instance for instance in current if instance['spellId'] not in opposed]
     duration = effects[0]['duration']
-    rounds = _ROUNDS[duration['unit']] * (duration.get('amount') or duration['perCasterLevel'] * caster_level)
+    amount = duration.get('amount') or duration['perCasterLevel'] * caster_level
+    if cast_plan is not None:
+        if cast_plan['spellId'] != spell_id:
+            raise ValueError('Cast plan does not match spell')
+        amount *= cast_plan['transforms'].get('durationMultiplier', 1)
     pools = {}
     for effect in effects:
         if effect['operation'] != 'temporary-hp':
@@ -46,7 +53,9 @@ def apply_spell(instances, catalog, spell_id, caster_level, now, roll_die, *, op
         if 'casterLevelBonusMax' in effect:
             amount += min(caster_level, effect['casterLevelBonusMax'])
         pools[effect['id']] = amount
-    return current + [dict(spellId=spell_id, casterLevel=caster_level, expiresAtRound=now + rounds, temporaryHp=pools)]
+    expiry = ({'expiry': expiry_at(now, duration['unit'], amount)} if isinstance(now, dict) else
+              {'expiresAtRound': now + SECONDS[duration['unit']] // SECONDS['round'] * amount})
+    return current + [dict(spellId=spell_id, casterLevel=caster_level, temporaryHp=pools, **expiry)]
 
 
 def consume_temporary_hp(instance, effects, effect_id, damage):

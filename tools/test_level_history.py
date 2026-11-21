@@ -43,3 +43,19 @@ class LevelHistoryTest(unittest.TestCase):
         for choices in [['epic-fighter'], ['archmage'] * 6, ['unknown'], [['fighter', 'barbarian']]]:
             with self.assertRaises(ValueError):
                 replay_level_history(self.core, choices)
+
+    def test_monk_and_paladin_can_enter_late_but_not_return(self):
+        for class_id in ('monk', 'paladin'):
+            valid = replay_level_history(self.core, ['fighter', class_id, class_id, 'fighter'])
+            self.assertEqual(valid['classLevels'][class_id], 2)
+            with self.assertRaisesRegex(ValueError, 'Cannot return'):
+                replay_level_history(self.core, ['fighter', class_id, 'fighter', class_id])
+
+    def test_multiclass_base_combat_and_epic_bonus_track(self):
+        result = replay_level_history(self.core, ['fighter', 'barbarian'])
+        self.assertEqual(result['classBaseCombat']['fort'], 4)
+        self.assertEqual(result['classBaseCombat']['bab'], 2)
+        result = replay_level_history(self.core, ['fighter'] * 20 + ['barbarian', 'fighter'])
+        self.assertEqual(result['classLevels'], {'fighter': 21, 'barbarian': 1})
+        self.assertEqual(result['classBaseCombat']['bab'], 20)
+        self.assertEqual(result['epicCharacterBonuses'], {'level': 22, 'saveBonus': 1, 'attackBonus': 1})

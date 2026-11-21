@@ -50,7 +50,7 @@ Bullfrog (pair)	Animals & Related Gear	0.01	1
 Cat	Animals & Related Gear	0.01	10
 Dog, guard	Animals & Related Gear	25	60
 Dog, riding	Animals & Related Gear	150	100
-Donkey or Mule	Animals & Related Gear	8	500
+Donkey	Animals & Related Gear	8	500
 Duck	Animals & Related Gear	0.03	3
 Feed (per day)	Animals & Related Gear	0.05	10
 Ferret	Animals & Related Gear	0.3	2
@@ -64,6 +64,7 @@ Horse, light	Animals & Related Gear	75	1000
 Lizard, pet, fancy	Animals & Related Gear	0.3	1
 Mice, fancy (pair)	Animals & Related Gear	0.01	0.1
 Monkey	Animals & Related Gear	5	10
+Mule	Animals & Related Gear	8	800
 Ox	Animals & Related Gear	20	1800
 Pet Collar, common	Animals & Related Gear	0.05	0.1
 Pet Collar, fancy	Animals & Related Gear	0.3	0.25

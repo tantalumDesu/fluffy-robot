@@ -8,10 +8,20 @@ import re
 import unicodedata
 
 if __package__:
-    from .progression_rules import progression_rules
+    from .animal_training import training_rules
+    from .feat_selection import encode_feats
+    from .pack_animals import beasts
+    from .progression_rules import continuity_rules, progression_rules, spell_swap_rules
+    from .game_time import SECONDS, casting_timing, duration_timing
+    from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
-    from progression_rules import progression_rules
+    from animal_training import training_rules
+    from feat_selection import encode_feats
+    from pack_animals import beasts
+    from progression_rules import continuity_rules, progression_rules, spell_swap_rules
+    from game_time import SECONDS, casting_timing, duration_timing
+    from spellcasting import metamagic_catalog
     from sheet_effects import catalogs
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -192,11 +202,32 @@ def build(old):
                             if entry.get('path') != 'spells[].description']
     meta['schemaNote'] = 'Schema version 2; see README.md for consumer paths and automation coverage.'
     groups['mechanics']['lookups'] = lookups
-    generated_rules = progression_rules(lines, table, copper)
+    generated_rules = progression_rules(lines, copper)
     generated_ids = {rule['id'] for rule in generated_rules}
     groups['mechanics']['rules'] = [rule for rule in groups['mechanics']['rules']
                                     if rule['id'] not in generated_ids] + generated_rules
     groups['progression']['ruleIds'] = [rule['id'] for rule in generated_rules]
+    swaps = list(spell_swap_rules(lines, groups['progression']['classes']))
+    swap_by_class = {rule['appliesTo']['classIds'][0]: rule['id'] for rule in swaps}
+    retired_ids = {'spell-replacement', *swap_by_class.values()}
+    groups['mechanics']['rules'] = [rule for rule in groups['mechanics']['rules']
+                                    if rule['id'] not in retired_ids] + swaps
+    classes = []
+    for record in groups['progression']['classes']:
+        record = record.copy()
+        if record['id'] in swap_by_class:
+            rule_ids = [rule_id for rule_id in record.get('ruleIds', []) if rule_id not in retired_ids]
+            record['ruleIds'] = rule_ids + [swap_by_class[record['id']]]
+        classes.append(record)
+    continuity = list(continuity_rules(lines))
+    continuity_by_class = {rule['appliesTo']['classIds'][0]: rule['id'] for rule in continuity}
+    groups['mechanics']['rules'] = [rule for rule in groups['mechanics']['rules']
+                                    if rule['id'] not in continuity_by_class.values()] + continuity
+    for record in classes:
+        rule_id = continuity_by_class.get(record['id'])
+        if rule_id and rule_id not in record.get('ruleIds', []):
+            record['ruleIds'] = [*record.get('ruleIds', []), rule_id]
+    groups['progression']['classes'] = classes
     spells = []
     for spell in groups['magic']['spells']:
         spell = spell.copy()
@@ -206,8 +237,34 @@ def build(old):
                     raise ValueError(f"Non-duplicate spell field: {spell['id']}.{alias}")
                 del spell[alias]
         spells.append(spell)
+    for spell in spells:
+        spell['timing'] = dict(casting=casting_timing(spell['castingTime']['raw']),
+                               duration=duration_timing(spell['duration']['raw']))
     groups['magic']['spells'] = spells
-    feat_records = index(feats())
+    feat_rule_id = 'feat-selection-uniqueness'
+    groups['mechanics']['rules'] = [rule for rule in groups['mechanics']['rules'] if rule['id'] != feat_rule_id]
+    groups['mechanics']['rules'].append(dict(id=feat_rule_id, name='Feat Selection Uniqueness',
+        category='feat-selection', status='structured', source=source('RULES.txt', heading='FEAT SELECTION UNIQUENESS'),
+        mechanic={'kind': 'feat-selection', 'defaultMaxTakes': 1, 'evaluateAt': 'selection-level',
+                  'countGrantedFeats': True, 'unknownPrerequisitePolicy': 'needs-review'}))
+    feat_records = encode_feats(index(feats()),
+                                table('EPIC FEATS.txt', 'Table: Normal Maximum Spellcasting Prerequisites'))
+    groups['magic']['metamagicByFeatId'] = metamagic_catalog(feat_records)
+    groups['mechanics']['timing'] = dict(secondsByUnit=SECONDS, source=source('TIMING.txt'),
+        regularTurn={'standard': 1, 'move': 1, 'fullRoundReplacesBoth': True},
+        surpriseTurn={'standardOrMove': 1}, freeActions='dm-limited')
+    groups['magic']['spellRecoveryByClassId'] = {
+        class_id: dict(restHours=int(rest), preparationMinutes=int(preparation), scheduledDailyTime=scheduled == 'yes',
+                       recentUseHours=8, source=source('TIMING.txt', line=line))
+        for line, (class_id, rest, preparation, scheduled) in table('TIMING.txt', 'Table: Spell Recovery Profiles')}
+    groups['magic']['dailySlotRules'] = {
+        'pools': ['regular', 'domain'], 'progressionBasis': 'effective-spellcasting-class-level',
+        'epicBaseSlotCapsByClassId': {class_id: {'level': 20, 'source': source(file, line=line)}
+            for class_id in ('bard', 'cleric', 'druid', 'paladin', 'ranger', 'sorcerer', 'wizard')
+            for file in ('EPIC ' + class_id.upper() + '.txt',)
+            for line, text in enumerate(lines(file), 1)
+            if 'number of spells per day does not increase after 20th level' in text},
+    }
     spell_effects, feat_effects = catalogs(spells, feat_records, groups['skills']['skills'])
     groups['effects']['spellEffectsBySpellId'] = spell_effects
     groups['effects']['featEffectsByFeatId'] = feat_effects
@@ -220,17 +277,28 @@ def build(old):
         'referencesAreNotGrants': True,
         'persistActiveInstancesOnTarget': True,
     }
-    companions = index(creatures())
+    companions = index([*creatures(), *beasts(lines)])
+    groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
     pack = {}
-    for name, creature in {'horse-heavy': 'horse-heavy', 'horse-light': 'horse-light', 'pony': 'pony',
-                           'donkey-or-mule': None, 'ox': None}.items():
-        creature_id = 'animal-companions:' + creature if creature else None
-        if creature_id is not None and creature_id not in companions:
-            raise ValueError(f'Missing pack animal stat block: {creature_id}')
+    for name in ('horse-heavy', 'horse-light', 'pony', 'donkey', 'mule', 'ox'):
+        creature_id = 'beasts-of-burden:' + name
         item_id = 'gear:' + name
         pack[name] = dict(id=name, purchaseItemId=items[item_id]['id'], creatureId=creature_id,
-                          automation='partial' if creature_id else 'reference')
+                          automation='partial', carryingCapacity=companions[creature_id]['carryingCapacity'],
+                          initialTraining={'purposeId': None, 'learnedTrickIds': [], 'bonusTrickIds': []})
+    vehicle_file = 'PULLED VEHICLES.txt'
+    for line, (name, running_gear) in table(vehicle_file, 'Table: Pulled Vehicles'):
+        item = items['gear:' + slug(name)]
+        if item['category'] != 'Transport':
+            raise ValueError(f'Pulled vehicle is not transport: {name}')
+        item['pulledVehicle'] = dict(inventoryCarrier='vehicle', runningGear=running_gear,
+                                     maxPayloadLb=None, source=source(vehicle_file, line=line))
+    vehicle_rules = dict(heavyLoadMultiplier=5, teamAggregation='sum',
+                         grossWeightComponents=['empty-vehicle', 'passengers', 'cargo'],
+                         defaultTerrainMultiplier=1, terrainMultiplierRange=[0, 1],
+                         wheeledGroundAssumption='reasonably-passable',
+                         terrainReduction='dm-adjudication', source=source(vehicle_file, heading='PULLED VEHICLES'))
     capacity = []
     for i, line in enumerate(lines('RULES.txt'), 1):
         if re.fullmatch(r'\d+(?:\t\d+ lb\.){3}', line):
@@ -239,7 +307,7 @@ def build(old):
                                  [number(value, ' lb.') for value in loads])), source=source('RULES.txt', line=i)))
     assert [row['strength'] for row in capacity] == list(range(1, 30))
     return dict(schemaVersion=2, meta=meta, **groups, feats={'byId': feat_records},
-                inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity},
+                inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules},
                 companions={'creaturesById': companions,
                             'familiarAdvancement': list(advancement('FAMILIARS.txt', ('naturalArmorAdjustment', 'intelligence'))),
                             'animalCompanionAdvancement': list(advancement('ANIMAL COMPANIONS.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthDexterityAdjustment', 'bonusTricks')))},

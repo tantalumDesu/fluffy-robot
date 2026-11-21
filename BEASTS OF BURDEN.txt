@@ -1,5 +1,7 @@
 BEASTS OF BURDEN
 
+The working animals in this catalog are not combat trained and have no attacks. Companion and war-trained creatures are separate from these entries.
+
 Pony
 
 Medium Animal — CR 0.25
@@ -31,9 +33,10 @@ Scent
 
 Feats
 Endurance
+
 Description
 
-The statistics presented here describe a small horse, under 5 feet tall at the shoulder. Ponies are otherwise similar to light horses and cannot fight while carrying a rider.
+The statistics presented here describe a small horse, under 5 feet tall at the shoulder. Ponies are otherwise similar to light horses.
 
 Carrying Capacity: A light load for a pony is up to 75 pounds; a medium load, 76–150 pounds; and a heavy load, 151–225 pounds. A pony can drag 1,125 pounds.
 
@@ -68,42 +71,236 @@ Scent
 
 Feats
 Endurance
+
 Description
 
 These long-eared, horselike creatures are surefooted and sturdy. The statistics presented here could also describe burros.
 
 Carrying Capacity: A light load for a donkey is up to 50 pounds; a medium load, 51–100 pounds; and a heavy load, 101–150 pounds. A donkey can drag 750 pounds.
 
+Mule
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+9 (22 hp)
+Initiative
+    +1
+Speed
+    Land 30 ft
+Armor Class
+    13, touch 10, flat-footed 12
+Base Attack / Grapple
+    +2/+9
+Space/Reach
+    10 ft. / 5 ft.
+STR
+    16
+DEX
+    13
+CON
+    17
+INT
+    2
+WIS
+    11
+CHA
+    6
+Fort / Ref / Will
+    +6 / +4 / +1
+Skills
+    Listen +6, Spot +6
+Organization
+    Domesticated
+Environment
+    Warm plains
+Advancement
+    —
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Alertness
+Endurance
+
+Description
+
+Mules are sterile crosses between donkeys and horses. The 800 lb body weight in MUNDANE ITEMS.txt is a table estimate. Source for the stat block and load limits: D&D 3.5 SRD, https://www.d20srd.org/srd/monsters/mule.htm
+
+Carrying Capacity: A light load for a mule is up to 230 pounds; a medium load, 231–460 pounds; and a heavy load, 461–690 pounds. A mule can drag 3,450 pounds.
+
 Ox
-CR 1
- Large Animal
 
+Large Animal — CR 1
 
-Domestic bovine, draft animal
-Statistic	Value
-Hit Dice	3d8+9 (22 hp)
-Initiative	+0
-Speed	30 ft.
-Armour Class	13 (–1 size, +4 natural), touch 9, flat-footed 13
-Base Attack/Grapple	+2 / +10
-Attack	Gore +5 melee (1d8+6)
-Full Attack	Gore +5 melee (1d8+6)
-Space/Reach	10 ft. / 5 ft.
-Special Qualities	Low-light vision, scent
-Saves	Fort +6, Ref +3, Will +2
-Abilities	Str 20, Dex 10, Con 17, Int 2, Wis 11, Cha 4
-Skills	Listen +5, Spot +5
-Feats	Endurance
-Environment	Temperate plains and hills
-Organisation	Domesticated
-Advancement	—
-Level Adjustment	—
+Hit Dice
+    3d8+9 (22 hp)
+Initiative
+    +0
+Speed
+    Land 30 ft
+Armor Class
+    13 (–1 size, +4 natural), touch 9, flat-footed 13
+Base Attack / Grapple
+    +2 / +11
+Space/Reach
+    10 ft. / 5 ft.
+STR
+    20
+DEX
+    10
+CON
+    17
+INT
+    2
+WIS
+    11
+CHA
+    4
+Fort / Ref / Will
+    +6 / +3 / +1
+Skills
+    Listen +5, Spot +5
+Organization
+    Domesticated
+Environment
+    Temperate plains and hills
+Advancement
+    —
+Level Adjustment
+    —
 
-Carrying Capacity (quadruped):
+Special Abilities
+Low-Light Vision
+Scent
 
-Assuming the standard 3.5 carrying-capacity multipliers for size and quadrupeds:
-Load	Capacity
-Light	400 lb
-Medium	401–800 lb
-Heavy	801–1,200 lb
-Drag	6,000 lb
+Feats
+Alertness
+Endurance
+
+Description
+
+Domestic bovine, draft animal.
+
+Rules Origin
+    Custom draft-animal rules
+
+Carrying Capacity: A light load for an ox is up to 400 pounds; a medium load, 401–800 pounds; and a heavy load, 801–1,200 pounds. An ox can drag 6,000 pounds. These are explicit ox-specific limits.
+
+Horse, Light
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +1
+Speed
+    Land 60 ft
+Armor Class
+    13, touch 10, flat-footed 12
+Base Attack / Grapple
+    +2/+8
+STR
+    14
+DEX
+    13
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +4 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Domesticated or herd (6–30)
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+
+Description
+
+Horses are widely domesticated for riding and as beasts of burden.
+
+The statistics presented here describe smaller breeds of working horses such as quarter horses and Arabians as well as wild horses. These animals are usually ready for useful work by age two.
+
+Carrying Capacity: A light load for a light horse is up to 150 pounds; a medium load, 151–300 pounds; and a heavy load, 301–450 pounds. A light horse can drag 2,250 pounds.
+
+Horse, Heavy
+
+Large Animal — CR 1
+
+Hit Dice
+    3d8+6 (19 hp)
+Initiative
+    +1
+Speed
+    Land 50 ft
+Armor Class
+    13, touch 10, flat-footed 12
+Base Attack / Grapple
+    +2/+9
+STR
+    16
+DEX
+    13
+CON
+    15
+INT
+    2
+WIS
+    12
+CHA
+    6
+Fort / Ref / Will
+    +5 / +4 / +2
+Challenge Rating
+    1
+Alignment
+    Always Neutral
+Organization
+    Domesticated
+Treasure
+    None
+Environment
+    Plains
+Level Adjustment
+    —
+
+Special Abilities
+Low-Light Vision
+Scent
+
+Feats
+Endurance
+Run
+
+Description
+
+Horses are widely domesticated for riding and as beasts of burden.
+
+The statistics presented here describe large breeds of working horses such as Clydesdales. These animals are usually ready for heavy work by age three.
+
+Carrying Capacity: A light load for a heavy horse is up to 200 pounds; a medium load, 201–400 pounds; and a heavy load, 401–600 pounds. A heavy horse can drag 3,000 pounds.

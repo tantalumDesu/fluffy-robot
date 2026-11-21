@@ -129,3 +129,5 @@ As before, the benefits of the ranger's chosen style apply only when he wears li
 Camouflage (Ex): A ranger of 13th level or higher can use the Hide skill in any sort of natural terrain, even if the terrain doesn't grant cover or concealment.
 
 Hide in Plain Sight (Ex): While in any sort of natural terrain, a ranger of 17th level or higher can use the Hide skill even while being observed.
+
+Starting Wealth: 6d4×10 gp (average 150 gp). First character level only.

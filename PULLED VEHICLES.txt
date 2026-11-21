@@ -1,0 +1,26 @@
+PULLED VEHICLES
+
+Total pulled weight is the empty vehicle weight plus passengers and cargo. Include mounted accessories and gear carried in the vehicle as cargo; count each load only once. The pulling animals' body weights and the loads they carry on their own bodies are not vehicle cargo. Check their carried loads separately.
+
+Each assigned animal contributes its heavy-load capacity multiplied by 5. Add all assigned animals' pulling capacities. Do not use an animal's body weight or multiply its listed drag limit again.
+
+Difficult terrain, gradients, and poor ground can reduce pulling capacity. The DM can specify a capacity multiplier from 0 to 1 for the whole team. Use the unmodified capacity when ground is reasonably passable and no reduction applies. A wheeled vehicle is assumed to be travelling on reasonably passable ground unless specified otherwise.
+
+A pulled vehicle is a separate inventory carrier. Assign individual animals to the vehicle instance, not to its catalog definition. An animal cannot pull two vehicles at once. Passengers use part of the combined payload allowance, leaving the remainder for cargo. A listed vehicle-specific payload limit, if available, is an additional cap on passengers plus cargo. Do not invent one if none is given.
+
+Table: Pulled Vehicles
+Item	Running Gear
+Cage Wagon, common	wheeled
+Cage Wagon, grand	wheeled
+Caravan Wagon, common	wheeled
+Caravan Wagon, fancy	wheeled
+Carriage	wheeled
+Cart	wheeled
+Covered Cart	wheeled
+Performer's Cart, common	wheeled
+Performer's Cart, fancy	wheeled
+Sideshow Cart	wheeled
+Sled	runners
+Sled, covered	runners
+Tent Wagon	wheeled
+Wagon	wheeled

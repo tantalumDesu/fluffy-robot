@@ -1,0 +1,25 @@
+TIMING
+
+A combat round is 6 seconds. Each participant takes a turn in initiative order; a round and a turn are not interchangeable. Minutes, hours, days, and weeks measure elapsed game time, not actions. A game day is 24 hours.
+
+On a regular turn, a creature can take a standard action and a move action, or a full-round action instead. A standard action can be exchanged for a move action. Free actions are tracked separately and are subject to reasonable limits imposed by the DM. In a surprise round an aware participant has one standard or move action and may take free actions. See INITIATIVE.txt and SPECIAL INITIATIVE ACTIONS.txt for initiative, surprise, and exceptions.
+
+A standard-action spell or a full-round-action spell completes on the caster's current turn. A spell taking 1 round completes just before the start of the caster's next turn; longer round-based casts complete after the stated number of rounds at that point in initiative. Longer time-based spells require continuous casting. If a cast is interrupted and lost, the slot is not refunded. For metamagic timing and the Quicken limit, see FEATS.txt.
+
+For an effect lasting a fixed number of combat rounds, expire it just before the same initiative point after the stated number of rounds. Measure minute, hour, and day durations by elapsed game time. Dismissal, concentration, discharge, and other early termination conditions are separate from a duration timer.
+
+SPELL RECOVERY
+
+Rest, preparation, and a new calendar day are distinct. Completing a rest alone does not refill spell slots. Each casting class has its own recovery event. During recovery, slots used during the preceding 8 hours still count against the new allotment. Count backward from the start of preparation or daily focus, not its completion. The caller verifies valid rest (including interruptions), conditions for preparation, and any deity or class restrictions.
+
+Table: Spell Recovery Profiles
+Class	Required Rest Hours	Full Preparation or Focus Minutes	Scheduled Daily Time
+wizard	8	60	no
+bard	8	15	no
+sorcerer	8	15	no
+cleric	0	60	yes
+druid	0	60	yes
+paladin	0	60	yes
+ranger	0	60	yes
+
+Wizard preparation can be shorter when preparing only part of the allotment, but takes at least 15 minutes. The automated full-refresh path uses the full preparation time. Divine casters with a scheduled time normally prepare at that time; unusual missed-time provisions require DM confirmation. The table lists the classes with automated recovery profiles; other classes require a confirmed ruling rather than inheriting a profile from their casting ability.
