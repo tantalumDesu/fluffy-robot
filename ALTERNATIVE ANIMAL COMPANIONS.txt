@@ -6,6 +6,8 @@ A druid of sufficiently high level can select her animal companion from one of t
 
 Ape
 
+Large Animal
+
 Hit Dice
     4d8+11 (29 hp)
 Initiative
@@ -142,6 +144,8 @@ Attach (Ex): A dire weasel that hits with its bite attack latches onto the oppon
 Blood Drain (Ex): A dire weasel drains blood for 1d4 points of Constitution damage each round it remains attached.
 
 Bear, Black
+
+Medium Animal
 
 Monster Manual v.3.5 (MM), p. 269
 
