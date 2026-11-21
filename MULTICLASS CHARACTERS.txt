@@ -71,3 +71,7 @@ Races and Multiclass XP: A favored class (see the individual race entries) does 
 As a second example, consider a dwarf 7th-level fighter/2nd-level cleric. This character takes no penalty because his fighter class is favored for dwarves and thus not counted when determining whether his classes are even. Nor does he take any penalty for adding 1st-level rogue to the mix, since his cleric and rogue classes are only one level apart. In this case, cleric counts as the character's highest class.
 
 A human's or half-elf's highest-level class is always considered his or her favored class.
+
+Optional XP Penalty: Apply the multiclass XP penalty only if enabled in the campaign rules. Prestige classes are exempt: exclude them before comparing class levels.
+
+Additional Feature Interactions: Sneak attack dice and trap sense bonuses stack across classes that grant them. Evasion does not stack. For improved uncanny dodge interactions beyond barbarian and rogue, consult the relevant class or domain description.

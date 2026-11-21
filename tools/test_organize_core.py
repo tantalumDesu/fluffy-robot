@@ -45,6 +45,14 @@ class CoreTest(unittest.TestCase):
             anchor = rules[rule_id]['source']
             text = (ROOT / anchor['file']).read_text(encoding='utf-8').splitlines()
             self.assertTrue(text[anchor['line'] - 1].startswith(anchor['headingOrLead']))
+        wealth = rules['starting-wealth-by-class']['mechanic']['byClassId']
+        self.assertEqual(len(wealth), 11)
+        for class_id, entry in wealth.items():
+            anchor = entry['source']
+            self.assertEqual(anchor['file'], class_id.upper() + '.txt')
+            text = (ROOT / anchor['file']).read_text(encoding='utf-8').splitlines()
+            self.assertTrue(text[anchor['line'] - 1].startswith('Starting Wealth: ' + entry['roll'] + ' gp'))
+        self.assertEqual(wealth['monk']['averageCp'], 1250)
         xp = rules['character-advancement']['mechanic']
         benefits = rules['ability-increases-and-feats']['mechanic']
         self.assertEqual([minimum_xp(level, xp) for level in (1, 2, 3, 4, 5, 20, 21)],
@@ -80,6 +88,35 @@ class CoreTest(unittest.TestCase):
                 self.assertEqual(item['weightLb'], float(row[3]), entry['name'])
         self.assertEqual(items['gear:backpack-empty']['weightLb'], 2)
         self.assertEqual(items['gear:fishhook']['weightLb'], 0.01)
+
+    def test_pack_animal_sources_and_purchase_choices(self):
+        pack = self.core['inventory']['packAnimalsById']
+        creatures = self.core['companions']['creaturesById']
+        for key, limits in {
+            'donkey': (50, 100, 150, 750), 'mule': (230, 460, 690, 3450), 'pony': (75, 150, 225, 1125),
+            'ox': (400, 800, 1200, 6000), 'horse-light': (150, 300, 450, 2250),
+            'horse-heavy': (200, 400, 600, 3000),
+        }.items():
+            capacity = pack[key]['carryingCapacity']
+            self.assertEqual(tuple(capacity[k] for k in ('lightLb', 'mediumLb', 'heavyLb', 'dragLb')), limits)
+        self.assertNotIn('donkey-or-mule', pack)
+        items = self.core['inventory']['itemsById']
+        for animal, weight in [('donkey', 500), ('mule', 800)]:
+            item = items[pack[animal]['purchaseItemId']]
+            self.assertEqual((item['priceCp'], item['weightLb']), (800, weight))
+            self.assertEqual(creatures[pack[animal]['creatureId']]['name'].lower(), animal)
+        ox = creatures[pack['ox']['creatureId']]
+        self.assertEqual((ox['role'], ox['abilityScores']['str'], ox['landSpeedFt']), ('pack-animal', 20, 30))
+        self.assertEqual((ox['baseAttackBonus'], ox['grappleBonus'], ox['saves']['will']), (2, 11, 1))
+        for profile in pack.values():
+            beast = creatures[profile['creatureId']]
+            self.assertFalse(beast['combatTrained'])
+            self.assertEqual(beast['attacks'], [])
+            self.assertNotIn('attackText', beast)
+            self.assertNotIn('fullAttackText', beast)
+        self.assertEqual(ox['skillText'], 'Listen +5, Spot +5')
+        self.assertEqual(ox['featNames'], ['Alertness', 'Endurance'])
+        self.assertEqual(ox['rulesOrigin'], 'Custom draft-animal rules')
 
     def test_equipment_and_companion_sources(self):
         inventory = self.core['inventory']

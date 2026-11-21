@@ -1,4 +1,24 @@
 EPIC FEATS
+
+For Improved Spell Capacity, satisfy any one row for a spellcasting class. For Spell Knowledge, only arcane rows qualify. Use the effective spellcasting progression level for that class, not a caster-level bonus that does not advance spells. The ability score must be for the same class as the level. Alternate rows account for gaining the class's highest normal spell slot through bonus spells before a base slot is available.
+
+Table: Normal Maximum Spellcasting Prerequisites
+Class	Tradition	Ability	Minimum Spellcasting Level	Minimum Ability Score
+wizard	arcane	int	17	19
+sorcerer	arcane	cha	18	19
+cleric	divine	wis	17	19
+druid	divine	wis	17	19
+ranger	divine	wis	14	20
+ranger	divine	wis	15	14
+paladin	divine	wis	14	20
+paladin	divine	wis	15	14
+bard	arcane	cha	16	24
+bard	arcane	cha	17	16
+assassin	arcane	int	7	20
+assassin	arcane	int	8	14
+blackguard	divine	wis	7	20
+blackguard	divine	wis	8	14
+
 FAMILIAR SPELL [EPIC]
 
 Prerequisite: Int 25 (if your spellcasting is controlled by Intelligence) or Cha 25 (if your spellcasting is controlled by Charisma).

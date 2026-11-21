@@ -21,13 +21,19 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
     track, benefits = _rules(core)
     classes = {record['id']: record for record in core['progression']['classes']}
     extensions = {record['extends']: record for record in classes.values() if record['type'] == 'epic'}
+    continuous = {rule['mechanic']['parameters']['classId'] for rule in core['mechanics']['rules']
+                  if rule['mechanic'].get('type') == 'level-sequence-constraint'
+                  and rule['mechanic']['parameters']['constraint'] == 'cannot-return-after-advancing-another-class'}
     counts, entries = {}, []
+    pre_epic_rows = {}
     for character_level, class_id in enumerate(class_choices, racial_hit_dice + 1):
         if not isinstance(class_id, str) or class_id not in classes:
             raise ValueError(f'Unknown class choice at character level {character_level}: {class_id!r}')
         base = classes[class_id]
         if base['type'] == 'epic':
             raise ValueError(f'Choose {base["extends"]!r}; epic progression is a continuation, not a separate class')
+        if class_id in continuous and class_id in counts and entries[-1]['classId'] != class_id:
+            raise ValueError(f'Cannot return to {class_id} after advancing another class')
         class_level = counts.get(class_id, 0) + 1
         progression_class = base
         rows = [row for row in base['progression'] if row['level'] == class_level]
@@ -37,6 +43,8 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
         if len(rows) != 1:
             raise ValueError(f'Expected one progression row for {class_id} level {class_level}; found {len(rows)}')
         counts[class_id] = class_level
+        if character_level <= 20:
+            pre_epic_rows[class_id] = rows[0]
         entries.append(dict(characterLevel=character_level, classId=class_id, classLevel=class_level,
                             progressionClassId=progression_class['id'], progressionRow=rows[0],
                             firstCharacterLevel=character_level == 1,
@@ -45,7 +53,11 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
     effective_level = character_level + level_adjustment
     if xp is not None and level_for_xp(xp, track) != effective_level:
         raise ValueError('XP does not match the effective level of the recorded history')
+    epic_rows = core['mechanics']['lookups']['epicSaveAndAttackBonuses']['rows']
+    epic_bonuses = next((row.copy() for row in epic_rows if row['level'] == character_level), None)
+    class_base = {key: sum(row[key] for row in pre_epic_rows.values()) for key in ('bab', 'fort', 'ref', 'will')}
     return dict(characterLevel=character_level, effectiveCharacterLevel=effective_level,
+                classBaseCombat=class_base, epicCharacterBonuses=epic_bonuses,
                 racialHitDice=racial_hit_dice, levelAdjustment=level_adjustment,
                 classLevels=counts, entries=entries)
 
@@ -54,7 +66,7 @@ def advance_level_history(core, class_choices, xp, award, *, class_id=None, raci
     """Apply XP and, if a level was earned, commit exactly one class choice together.
 
     The award is already adjusted (for example by any enabled XP penalty).
-    Prerequisites, continuity restrictions and other class choices are caller-owned.
+    Alignment, prestige prerequisites and other class choices are caller-owned.
     """
     build = replay_level_history(core, class_choices, racial_hit_dice=racial_hit_dice,
                                  level_adjustment=level_adjustment, xp=xp)

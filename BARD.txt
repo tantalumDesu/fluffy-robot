@@ -147,3 +147,5 @@ Mass Suggestion (Sp): This ability functions like suggestion, above, except that
 Ex-Bards
 
 A bard who becomes lawful in alignment cannot progress in levels as a bard, though he retains all his bard abilities.
+
+Starting Wealth: 4d4×10 gp (average 100 gp). First character level only.

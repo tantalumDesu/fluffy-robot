@@ -1,7 +1,7 @@
 """Typed transcriptions for sheet creation and advancement; not a rules evaluator."""
 
 
-def progression_rules(lines, table, copper):
+def progression_rules(lines, copper):
     xp = 'EXPERIENCE AND LEVELS.txt'
     mc = 'MULTICLASS CHARACTERS.txt'
     core = 'RULES.txt'
@@ -16,9 +16,19 @@ def progression_rules(lines, table, copper):
         return rule(id_, core, anchor, kind, **parameters)
 
     def wealth():
-        return {class_id: {'roll': roll.removesuffix(' gp'), 'averageCp': copper(average),
-                           'source': {'file': core, 'line': line}}
-                for line, (class_id, roll, average) in table(core, '7. Table: Starting Wealth at 1st Level (starting-wealth-by-class)')}
+        records = {}
+        for class_id in ('barbarian', 'bard', 'cleric', 'druid', 'fighter', 'monk',
+                         'paladin', 'ranger', 'rogue', 'sorcerer', 'wizard'):
+            file = class_id.upper() + '.txt'
+            line, text = next((i, text) for i, text in enumerate(lines(file), 1)
+                              if text.startswith('Starting Wealth: '))
+            roll, average = text.removeprefix('Starting Wealth: ').split(' (average ')
+            avg_cp = copper(average.split(')', 1)[0])
+            if not roll.endswith(' gp') or avg_cp is None:
+                raise ValueError(f'Invalid starting wealth in {file}')
+            records[class_id] = {'roll': roll.removesuffix(' gp'), 'averageCp': avg_cp,
+                                 'source': {'file': file, 'line': line}}
+        return records
 
     return [
         at_creation('ability-score-generation', '1. Ability Score Generation', 'ability-generation',
@@ -28,7 +38,7 @@ def progression_rules(lines, table, copper):
                         'elite-array': {'scores': [15, 14, 13, 12, 10, 8]},
                         'roll': {'diceCount': 4, 'dieSides': 6, 'dropLowest': 1, 'repeat': 6},
                     }, minimumIntelligenceAfterRacialAdjustment=3),
-        at_creation('starting-wealth-by-class', '7. Table: Starting Wealth', 'starting-wealth',
+        at_creation('starting-wealth-by-class', '7. Starting Wealth', 'starting-wealth',
                     characterLevel=1, byClassId=wealth()),
         rule('character-advancement', xp, 'Advancing a Level:', 'experience-track',
              thresholdFormula={'kind': 'triangular-xp', 'multiplier': 500, 'minimumCharacterLevel': 1},
@@ -78,5 +88,41 @@ def progression_rules(lines, table, copper):
              requiredOptionId='multiclass-xp-penalty', minimumLevelGap=2, percentPerClass=20,
              compareWith='highest-non-exempt-class', excludeFavoredClass=True, excludePrestigeClasses=True,
              favoredClassFrom='race', highestClassFavoredRaceIds=['human', 'half-elf'],
-             prestigeExemptionSource={'file': core, 'headingOrLead': 'MULTICLASSING RULES'}),
+             prestigeExemptionSource={'file': mc, 'headingOrLead': 'Optional XP Penalty:'}),
     ]
+
+
+def spell_swap_rules(lines, classes):
+    """Keep explicit examples separate from schedules derived from 'and so on'."""
+    by_id = {record['id']: record for record in classes}
+    for class_id, file, stated, interval in (
+        ('bard', 'BARD.txt', [5, 8, 11], 3),
+        ('sorcerer', 'SORCERER.txt', [4, 6, 8], 2),
+        ('assassin', 'Prestige Class ASSASSIN.txt', [6, 8, 10], 2),
+    ):
+        line, prose = next((i, text) for i, text in enumerate(lines(file), 1)
+                           if 'can choose to learn a new spell in place' in text)
+        maximum = max(row['level'] for row in by_id[class_id]['progression'])
+        derived = (list(range(stated[-1] + interval, maximum + 1, interval))
+                   if 'and so on' in prose else [])
+        parameters = dict(statedEligibleLevels=stated, derivedEligibleLevels=derived,
+                          swapsPerEligibleLevel=1, newSpellLevel='same-as-replaced-spell',
+                          minLevelsBelowHighestCastable=2, timing='when-gaining-new-spells-known-for-the-level')
+        if derived:
+            parameters['derivedFrom'] = 'and so on; limited to the available class progression'
+        yield dict(id=class_id + '-spell-swap', name=by_id[class_id]['name'] + ' Spell Swap',
+                   category='class-mechanic', status='structured', appliesTo={'classIds': [class_id]},
+                   source={'file': file, 'line': line, 'excerpt': prose},
+                   mechanic={'type': 'scheduled-spell-swap', 'parameters': parameters})
+
+
+def continuity_rules(lines):
+    for class_id in ('monk', 'paladin'):
+        file = class_id.upper() + '.txt'
+        line, text = next((i, text) for i, text in enumerate(lines(file), 1)
+                          if 'may never again raise her ' + class_id + ' level' in text)
+        yield dict(id=class_id + '-continuous-levels', name=class_id.title() + ' Level Continuity',
+                   category='class-mechanic', status='structured',
+                   source={'file': file, 'line': line, 'excerpt': text}, appliesTo={'classIds': [class_id]},
+                   mechanic={'type': 'level-sequence-constraint',
+                             'parameters': {'classId': class_id, 'constraint': 'cannot-return-after-advancing-another-class'}})
