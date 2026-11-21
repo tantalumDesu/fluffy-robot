@@ -155143,96 +155143,19 @@
         },
         "mechanic": {
           "kind": "experience-track",
-          "thresholds": [
-            {
-              "characterLevel": 1,
-              "minimumXp": 0
-            },
-            {
-              "characterLevel": 2,
-              "minimumXp": 1000
-            },
-            {
-              "characterLevel": 3,
-              "minimumXp": 3000
-            },
-            {
-              "characterLevel": 4,
-              "minimumXp": 6000
-            },
-            {
-              "characterLevel": 5,
-              "minimumXp": 10000
-            },
-            {
-              "characterLevel": 6,
-              "minimumXp": 15000
-            },
-            {
-              "characterLevel": 7,
-              "minimumXp": 21000
-            },
-            {
-              "characterLevel": 8,
-              "minimumXp": 28000
-            },
-            {
-              "characterLevel": 9,
-              "minimumXp": 36000
-            },
-            {
-              "characterLevel": 10,
-              "minimumXp": 45000
-            },
-            {
-              "characterLevel": 11,
-              "minimumXp": 55000
-            },
-            {
-              "characterLevel": 12,
-              "minimumXp": 66000
-            },
-            {
-              "characterLevel": 13,
-              "minimumXp": 78000
-            },
-            {
-              "characterLevel": 14,
-              "minimumXp": 91000
-            },
-            {
-              "characterLevel": 15,
-              "minimumXp": 105000
-            },
-            {
-              "characterLevel": 16,
-              "minimumXp": 120000
-            },
-            {
-              "characterLevel": 17,
-              "minimumXp": 136000
-            },
-            {
-              "characterLevel": 18,
-              "minimumXp": 153000
-            },
-            {
-              "characterLevel": 19,
-              "minimumXp": 171000
-            },
-            {
-              "characterLevel": 20,
-              "minimumXp": 190000
-            }
-          ],
+          "thresholdFormula": {
+            "kind": "triangular-xp",
+            "multiplier": 500,
+            "minimumCharacterLevel": 1
+          },
+          "levelBasis": "character-level",
           "thresholdSource": {
             "file": "RULES.txt",
             "headingOrLead": "2. Character Advancement"
           },
           "maxLevelsPerAdventureAward": 1,
           "surplusPolicy": "cap-at-one-xp-below-following-level",
-          "trainingAdjustments": "dm-adjudication",
-          "beyondTable": "use-separate-epic-progression"
+          "trainingAdjustments": "dm-adjudication"
         }
       },
       {
@@ -155272,25 +155195,17 @@
         },
         "mechanic": {
           "kind": "character-level-benefits",
-          "abilityIncreaseLevels": [
-            4,
-            8,
-            12,
-            16,
-            20
-          ],
-          "abilityIncreaseAmount": 1,
-          "generalFeatLevels": [
-            1,
-            3,
-            6,
-            9,
-            12,
-            15,
-            18
-          ],
-          "featPrerequisitesRequired": true,
-          "maxStructuredCharacterLevel": 20
+          "levelBasis": "character-level",
+          "abilityIncreases": {
+            "everyLevels": 4,
+            "amount": 1
+          },
+          "generalFeats": {
+            "atFirstLevel": 1,
+            "everyLevels": 3,
+            "amount": 1
+          },
+          "featPrerequisitesRequired": true
         }
       },
       {
@@ -155366,6 +155281,14 @@
           "kind": "class-level-aggregation",
           "levelSelection": "one-class-per-level",
           "startingBenefits": "first-character-level-only",
+          "levelHistory": {
+            "persist": "ordered-class-ids",
+            "classLevel": "count-of-selected-class-through-entry",
+            "characterLevel": "racial-hit-dice-plus-total-class-levels",
+            "effectiveCharacterLevel": "character-level-plus-level-adjustment",
+            "progressionRow": "selected-class-at-current-class-level",
+            "epicExtensions": "continue-base-class-id"
+          },
           "baseAttackAndSaves": "sum-final-progression-row-per-class",
           "iterativeAttackThresholds": [
             6,

@@ -1,6 +1,7 @@
 import json
 import unittest
 
+from tools.character_advancement import apply_xp_award, character_level_grants, level_for_xp, minimum_xp
 from tools.organize_core import GROUPS, PATH, ROOT, build
 
 
@@ -45,11 +46,21 @@ class CoreTest(unittest.TestCase):
             text = (ROOT / anchor['file']).read_text(encoding='utf-8').splitlines()
             self.assertTrue(text[anchor['line'] - 1].startswith(anchor['headingOrLead']))
         xp = rules['character-advancement']['mechanic']
-        thresholds = {row['characterLevel']: row['minimumXp'] for row in xp['thresholds']}
-        self.assertEqual([thresholds[level] for level in (1, 2, 3, 4, 5, 20)], [0, 1000, 3000, 6000, 10000, 190000])
-        # The source example caps a level-3 character's 11,000 XP total at 9,999.
-        self.assertEqual(xp['maxLevelsPerAdventureAward'], 1)
-        self.assertEqual(min(5000 + 6000, thresholds[3 + xp['maxLevelsPerAdventureAward'] + 1] - 1), 9999)
+        benefits = rules['ability-increases-and-feats']['mechanic']
+        self.assertEqual([minimum_xp(level, xp) for level in (1, 2, 3, 4, 5, 20, 21)],
+                         [0, 1000, 3000, 6000, 10000, 190000, 210000])
+        for level in (2, 4, 12, 21, 24, 10**9):
+            boundary = minimum_xp(level, xp)
+            self.assertEqual(level_for_xp(boundary - 1, xp), level - 1)
+            self.assertEqual(level_for_xp(boundary, xp), level)
+        self.assertEqual(character_level_grants(1, benefits), {'generalFeatChoices': 1, 'abilityScoreIncrease': 0})
+        result = apply_xp_award(3, 5000, 6000, xp, benefits)
+        self.assertEqual((result['xp'], result['characterLevel'], result['discardedXp']), (9999, 4, 1001))
+        self.assertEqual(result['grants'], [{'characterLevel': 4, 'generalFeatChoices': 0, 'abilityScoreIncrease': 1}])
+        self.assertEqual(apply_xp_award(4, 6000, 0, xp, benefits)['grants'], [])
+        self.assertEqual(apply_xp_award(20, 209999, 1, xp, benefits)['grants'],
+                         [{'characterLevel': 21, 'generalFeatChoices': 1, 'abilityScoreIncrease': 0}])
+        self.assertEqual(character_level_grants(24, benefits), {'generalFeatChoices': 1, 'abilityScoreIncrease': 1})
         skills = rules['skill-points-and-ranks']['mechanic']
         self.assertEqual((skills['purchaseClassSkillScope'], skills['capClassSkillScope']), ('class-advanced', 'any-class-taken'))
         self.assertEqual(skills['crossClassRanksPerPoint'], 0.5)
