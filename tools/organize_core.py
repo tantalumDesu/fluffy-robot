@@ -8,6 +8,8 @@ import re
 import unicodedata
 
 if __package__:
+    from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, locked_gauntlet_rule
+    from .damage_types import PHYSICAL, physical_profile
     from .source_text import normalized, spell_sources
     from .effect_policy import POLICY, annotate
     from .condition_cures import catalog as cure_catalog
@@ -24,6 +26,8 @@ if __package__:
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, locked_gauntlet_rule
+    from damage_types import PHYSICAL, physical_profile
     from source_text import normalized, spell_sources
     from effect_policy import POLICY, annotate
     from condition_cures import catalog as cure_catalog
@@ -153,7 +157,7 @@ def equipment():
             yield dict(id='weapon:' + slug(name), name=name, kind='ammunition' if category == 'Ammunition' else 'weapon',
                        proficiency=proficiency.lower(), category=category, priceCp=copper(cost), weightLb=number(weight, ' lb.'),
                        damageDice={'small': small, 'medium': medium}, critical=critical, rangeIncrementFt=number(range_, ' ft.'),
-                       damageType=damage, special=special, raw=row, source=source(file, line=line),
+                       damageType=damage, physicalDamage=physical_profile(damage), special=special, raw=row, source=source(file, line=line),
                        **({'attackProfile': dict(profile, carriedSeparately=False)} if profile else {}))
 
 
@@ -361,6 +365,10 @@ def build(old):
     size_categories, equipment_size_rules = size_catalogs(lines, table)
     groups['mechanics']['sizeCategoriesById'] = size_categories
     alignments, alignment_consequences = alignment_catalog(lines)
+    groups['mechanics']['physicalDamageTypesById'] = {
+        key: dict(id=key, name=key.title(), source=source('WEAPONS.txt', line=next(
+            i for i, text in enumerate(lines('WEAPONS.txt'), 1) if text.startswith('Type: Weapons'))))
+        for key in PHYSICAL}
     groups['mechanics']['injury'] = injury_catalog(lines)
     groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
     groups['mechanics']['alignmentsById'] = alignments
@@ -408,6 +416,17 @@ def build(old):
     companions = index(dict(creature, sizeId=creature['size']) for creature in [*creatures(), *beasts(lines)])
     groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
+    gauntlet = items[LOCKED_GAUNTLET_ID]
+    gauntlet['listedArcaneSpellFailurePercent'] = gauntlet['arcaneSpellFailurePercent']
+    gauntlet['arcaneSpellFailurePercent'] = None  # Hand restriction, not a blanket caster penalty.
+    gauntlet['lockedGauntlet'] = locked_gauntlet_rule(lines, source)
+    for addition, heading in (('armor:armor-spikes', 'Armor Spikes:'), ('armor:shield-spikes', 'Shield Spikes:')):
+        line, text = next((i, text) for i, text in enumerate(lines('ARMOR.txt'), 1) if text.startswith(heading))
+        if 'piercing' not in text.lower():
+            raise ValueError(f'Missing spike damage type: {heading}')
+        items[addition]['physicalDamage'] = physical_profile('Piercing')
+        items[addition]['physicalDamageSource'] = source('ARMOR.txt', line=line)
+
     pack = {}
     for name in ('horse-heavy', 'horse-light', 'pony', 'donkey', 'mule', 'ox'):
         creature_id = 'beasts-of-burden:' + name

@@ -2,6 +2,7 @@
 from fractions import Fraction
 
 from .creature_size import armor_fit, carrying_limits, equipment_size, size_adjusted_abilities, size_profile, weapon_fit
+from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, project_gauntlets
 from .negative_levels import summarize_negative_levels, weapon_negative_levels
 from .sheet_effects import modifier_total
 
@@ -37,13 +38,19 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
 
     Scores already include racial adjustments; equipped item instances supply
     instanceId, itemId, sizeId and, where relevant, proficiency, fit and held state.
-    The caller supplies a recursively aggregated carried weight, not vehicle cargo.
+    The caller supplies recursively aggregated listed item weights, not vehicle cargo.
+    The sheet adjusts fitted replacement gauntlets against those listed weights.
     """
     race = next(r['effective'] for r in core['progression']['races'] if r['id'] == race_id)
     condition_ids = tuple(condition_ids)
     flags, conditions, review = condition_state(core, condition_ids)
     equipment = list(equipment)
-    dropped = [item['instanceId'] for item in equipment if item.get('held') and 'drop-held' in flags]
+    secured_weapons = {e.get('securedWeaponInstanceId') for e in equipment
+                       if e['itemId'] == LOCKED_GAUNTLET_ID}
+    dropped = [item['instanceId'] for item in equipment if item.get('held') and 'drop-held' in flags
+               and item['instanceId'] not in secured_weapons]
+    if 'drop-held' in flags and secured_weapons - {None}:
+        review.append('adjudicate-drop-secured-weapon')
     equipped = [item for item in equipment if item['instanceId'] not in dropped]
     effects = list(active_effects)
     profile = size_profile(core, race_id, active_effects=effects)
@@ -82,28 +89,16 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
               carrying_limits(core, abilities['str'], profile['sizeId']))
     load_band = None
     load_rules = core['inventory']['encumbranceByBand']
-    if carried_weight_lb is not None:
-        weight = Fraction(str(carried_weight_lb))
-        if weight < 0:
-            raise ValueError('Carried weight must not be negative')
-        if limits is None:
-            review.append('carrying-capacity-without-strength')
-        else:
-            load_band = next((key for key in ('light', 'medium', 'heavy') if weight <= limits[key + 'Lb']), 'overloaded')
-        if load_band == 'overloaded':
-            review.append('overloaded-movement')
-    load = load_rules.get(load_band, {})
-    caps = [load['maxDexBonus']] if 'maxDexBonus' in load else []
+    caps = []
     armor_check = 0
     base_speed = race['speed']['landFeet']
     speed_candidates = [base_speed] if base_speed is not None else []
     dwarf_style = {(kind, band) for rule in race['speed']['exceptions'] for kind in ('load', 'armor')
                    for band in rule.get(kind, [])}
-    if ('load', load_band) not in dwarf_style and str(base_speed) in load.get('speedByBaseFt', {}):
-        speed_candidates.append(load['speedByBaseFt'][str(base_speed)])
     fits = []
     items = core['inventory']['itemsById']
     weapons = []
+    worn_armor = []
     for entry in equipped:
         item = items[entry['itemId']]
         if item['kind'] not in ('weapon', 'armor', 'shield'):
@@ -119,6 +114,8 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         fits.append(dict(instanceId=entry['instanceId'], fits=fit['fits']))
         if not fit['fits']:
             continue
+        if item['kind'] == 'armor':
+            worn_armor.append(item)
         effects.append((dict(id=entry['instanceId'], operation='modifier', statId='ac', amount=fit['armorClassBonus'],
                              bonusType=item['kind'], stacking='highest-same-type'), {}))
         if item['maxDexBonus'] is not None:
@@ -128,6 +125,28 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         reduced = item['speedByBaseFt'].get(str(base_speed))
         if reduced is not None and ('armor', band) not in dwarf_style:
             speed_candidates.append(reduced)
+    gauntlets = project_gauntlets(core, equipped, worn_armor)
+    disarm_bonuses = {g['securedWeaponInstanceId']: g['disarmDefenseBonus'] for g in gauntlets
+                      if g['securedWeaponInstanceId'] is not None}
+    weight_adjustment = sum(g['effectiveWeightLb'] - items[LOCKED_GAUNTLET_ID]['weightLb'] for g in gauntlets)
+    if carried_weight_lb is not None:
+        weight = Fraction(str(carried_weight_lb))
+        if weight < 0:
+            raise ValueError('Carried weight must not be negative')
+        weight += weight_adjustment
+        if weight < 0:
+            raise ValueError('Carried weight must include listed equipment weights')
+        if limits is None:
+            review.append('carrying-capacity-without-strength')
+        else:
+            load_band = next((key for key in ('light', 'medium', 'heavy') if weight <= limits[key + 'Lb']), 'overloaded')
+        if load_band == 'overloaded':
+            review.append('overloaded-movement')
+    load = load_rules.get(load_band, {})
+    if 'maxDexBonus' in load:
+        caps.append(load['maxDexBonus'])
+    if ('load', load_band) not in dwarf_style and str(base_speed) in load.get('speedByBaseFt', {}):
+        speed_candidates.append(load['speedByBaseFt'][str(base_speed)])
     natural = (race['naturalArmor'] or {}).get('bonus', 0) + modifier_total('natural-armor', effects)
     effects.append((dict(id='natural-armor-subtotal', operation='modifier', statId='ac', amount=natural,
                          bonusType='natural-armor', stacking='highest-same-type'), {}))
@@ -153,7 +172,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         weapons.append(({'instanceId': 'unarmed', 'proficient': True}, item, profile['sizeId']))
     for entry, item, current in weapons:
         line = weapon_fit(core, item, profile['sizeId'], current, proficient=entry.get('proficient', False))
-        line.update(instanceId=entry['instanceId'], itemId=item['id'])
+        line.update(instanceId=entry['instanceId'], itemId=item['id'], physicalDamage=item.get('physicalDamage'))
         if line['status'] == 'wieldable':
             ranged = item['category'] == 'Ranged Weapon' or entry.get('attackKind') == 'ranged'
             kind = 'ranged' if ranged else 'melee'
@@ -162,6 +181,10 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                          ability=ability_mod['dex' if ranged else 'str'], sizeFit=line['sizeAttackPenalty'],
                          proficiency=line['nonproficiencyPenalty'], effects=modifier_total('attack', effects, attack_facts))
             line.update(attackKind=kind, attackBonus=sum(parts.values()), breakdown=parts, canAct=not flags.intersection({'no-actions', 'mental-actions-only', 'attention-only', 'single-move-only', 'flee-only'}))
+        if entry['instanceId'] in disarm_bonuses:
+            line['disarmDefenseBonus'] = disarm_bonuses[entry['instanceId']]
+        if item['id'] == core['inventory']['fallbackWeaponId'] and gauntlets:
+            line['allowsLethalViaGauntlet'] = True
         attacks.append(line)
     check_penalty = min(armor_check, load.get('checkPenalty', 0))
     skills = {}
@@ -183,7 +206,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     elif speed is not None and 'half-speed' in flags:
         speed = Fraction(speed, 2)
     return dict(conditionFlags=sorted(flags), size=profile['sizeId'], reachFt=profile['reachFt'], abilityScores=abilities, abilityModifiers=ability_mod, ac=ac, saves=saves,
-                attacks=attacks, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
+                attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
                 landSpeedFt=speed, armorCheckPenalty=check_penalty,
                 negativeLevels=drain, droppedInstanceIds=dropped, canAct='no-actions' not in flags,
                 needsReview=review)

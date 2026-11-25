@@ -1,6 +1,11 @@
 """Resolve confirmed damage and healing without mutating the base build."""
 from copy import deepcopy
 
+if __package__:
+    from .damage_types import resolve_physical_types
+else:
+    from damage_types import resolve_physical_types
+
 
 def catalog(lines):
     def source(file, heading):
@@ -45,7 +50,8 @@ def grant_energy_protection(core, state, caster_level, now):
 
 def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypass_tags=(),
                    damage_reduction=(), energy_resistance=None, ignores_dr=False, single_attack=True,
-                   massive_save_total=None, round_id=None, dm_damage_override=None, now=None):
+                   massive_save_total=None, round_id=None, dm_damage_override=None, now=None,
+                   physical_profile=None, physical_choice=None, physical_immunities=()):
     """Consume already-rolled amounts. Pass full resistance ratings and a unique encounter round ID.
 
     DR bypass is an OR of AND clauses; no clauses means no ordinary bypass.
@@ -53,7 +59,8 @@ def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypas
     """
     energy = energy or {}
     resistance = energy_resistance or {}
-    tags = set(bypass_tags)
+    physical_types = resolve_physical_types(physical_profile, physical_choice)
+    tags = set(bypass_tags) | set(physical_types)
     applicable = [row['amount'] for row in damage_reduction
                   if not any(clause and set(clause) <= tags for clause in row.get('bypassAnyOf', ()))]
     amounts = [weapon, *energy.values(), *resistance.values(), *applicable]
@@ -67,7 +74,8 @@ def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypas
     usage = deepcopy(prior) if round_id == prior.get('roundId') else {}
     dr_used = usage.get('damageReduction', 0)
     energy_used = usage.get('energyResistance', {})
-    dr = 0 if ignores_dr else min(weapon, max(0, max(applicable, default=0) - dr_used))
+    immune_prevented = weapon if physical_types and set(physical_types) <= set(physical_immunities) else 0
+    dr = 0 if ignores_dr or immune_prevented else min(weapon, max(0, max(applicable, default=0) - dr_used))
     ward = deepcopy(state.get('energyProtection'))
     ward_prevented = {}
     if ward:
@@ -88,7 +96,7 @@ def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypas
                 ward = None
     energy_prevented = {key: min(value, max(0, resistance.get(key, 0) - energy_used.get(key, 0)))
                         for key, value in energy.items()}
-    total = weapon - dr + sum(energy.values()) - sum(energy_prevented.values())
+    total = weapon - immune_prevented - dr + sum(energy.values()) - sum(energy_prevented.values())
     if dm_damage_override is not None:
         total = dm_damage_override
     result = deepcopy(state)
@@ -117,7 +125,7 @@ def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypas
             raise ValueError('Supply the massive-damage Fortitude save total')
         if massive_save_total < rules['fortitudeDc']:
             result['dead'] = True
-    return dict(state=result, conditionIds=condition_ids(core, result), weaponPrevented=dr,
+    return dict(state=result, conditionIds=condition_ids(core, result), weaponPrevented=dr, physicalTypeIds=list(physical_types), physicalImmunityPrevented=immune_prevented,
                 energyPrevented=energy_prevented, wardPrevented=ward_prevented, temporaryHpAbsorbed=absorbed, applied=applied,
                 weaponFullyBlockedByDr=bool(weapon and dr == weapon), dmDamageOverride=dm_damage_override)
 

@@ -61,3 +61,31 @@ class InjuryTest(unittest.TestCase):
         self.assertNotIn('energyProtection', second['state'])
         for kind in ('acid', 'cold', 'electricity', 'fire', 'sonic'):
             self.assertEqual(resolve_damage(CORE, state, energy={kind: 1}, now=1)['applied'], 0)
+
+    def test_physical_damage_profiles(self):
+        from tools.damage_types import physical_profile
+        state = dict(hp=20, maxHp=20)
+        both = physical_profile('Bludgeoning and piercing')
+        self.assertEqual(resolve_damage(CORE, state, weapon=5, physical_profile=both,
+                                        physical_immunities=['piercing'])['applied'], 5)
+        self.assertEqual(resolve_damage(CORE, state, weapon=5, physical_profile=both,
+                                        physical_immunities=['piercing', 'bludgeoning'])['applied'], 0)
+        either = physical_profile('Piercing or slashing')
+        with self.assertRaisesRegex(ValueError, 'Choose'):
+            resolve_damage(CORE, state, weapon=5, physical_profile=either)
+        self.assertEqual(resolve_damage(CORE, state, weapon=5, physical_profile=either, physical_choice='slashing',
+                         damage_reduction=[{'amount': 5, 'bypassAnyOf': [['slashing']]}])['applied'], 5)
+        self.assertEqual(CORE['inventory']['itemsById']['weapon:unarmed-strike']['physicalDamage'],
+                         {'typeIds': ['bludgeoning'], 'mode': 'all'})
+
+    def test_spikes_supply_piercing_to_host_attack(self):
+        from tools.damage_types import equipment_attack_damage
+        host = 'armor:shield-light-steel'
+        bash = equipment_attack_damage(CORE, host, 'weapon:shield-light')
+        self.assertEqual(bash['typeIds'], ['bludgeoning'])
+        with self.assertRaisesRegex(ValueError, 'not installed'):
+            equipment_attack_damage(CORE, host, 'weapon:spiked-shield-light')
+        spiked = equipment_attack_damage(CORE, host, 'weapon:spiked-shield-light', addition_ids=['armor:shield-spikes'])
+        self.assertEqual(spiked['typeIds'], ['piercing'])
+        armor = equipment_attack_damage(CORE, 'armor:leather', 'weapon:spiked-armor', addition_ids=['armor:armor-spikes'])
+        self.assertEqual(armor['typeIds'], ['piercing'])

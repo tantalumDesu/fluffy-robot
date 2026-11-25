@@ -1,19 +1,19 @@
 # D&D 3.5 rules core
 
-`dnd-core.json` v2 is shared rules data, not a character save or a rules engine. The repository's `.txt` files are the reference baseline. Existing entity IDs and records are retained, with redundant spell description aliases removed. Consumers of v1 need to update their top-level paths and use `longDescription` and `shortDescription` instead of `description` and `summary` on spells. Legacy counts and validation describe the old snapshot, not v2 automation coverage.
+This is a personal D&D 3.5 rules project in development, not a released application. `dnd-core.json` holds shared rules data, separate from character saves and encounter state. The repository’s `.txt` files are the rules baseline. The Python tools generate and audit the data and prototype parts of the eventual software.
 
 **DM authority:** Automation handles default rules and bookkeeping; the DM always has the final say. Even a fully typed rule can be overridden, skipped, or adjudicated manually. Keep one-off rulings in encounter or character state rather than changing the shared canon. This is a design requirement for integrations, not a guarantee that every helper already exposes an override. See [rules-lawyer.md](rules-lawyer.md).
 
 For all effects, automatic application is limited to numeric changes on the recipient’s sheet. Effects beyond the recipient or without a sheet-number change remain available through their description or cited rule for player and DM adjudication. Typed data and explicit resolution helpers do not authorize automatic application.
 
-| v2 section | Consumer contract |
+| Section | What it contains |
 | --- | --- |
 | `progression` | Races and classes, including prestige, NPC and epic classes. Use class progression rows for standard class-level contributions; don't add derived rates on top. Store an ordered level history so the sheet can distinguish character level, class level, effective spellcasting level and eligibility at the time of each choice. |
 | `skills`, `feats` | Existing skills and synergies; indexed general and epic feat entries. Feat text is reference-only, not an executable prerequisite or benefit. Record skill purchases by level and feat choices with any selections they require. |
 | `magic` | Spell definitions, list membership and domains. Store learned/prepared spells and expended slots per casting class, including the chosen destination of prestige casting advancement. |
 | `effects` | Conditions and special abilities, plus explicit spell- and feat-effect catalogs keyed by entity ID. A prose mention is not a grant. Benefits absent from the catalogs remain manual. |
 | `inventory` | Purchasable definitions with prices in integer copper pieces, known weights in pounds, armor/weapon table fields, pack animal purchase links and Strength 1–29 load thresholds. Raw table cells are retained. `null` is not zero; consult the raw field for dashes, special cases or missing values. Mundane gear prices and weights come from `MUNDANE ITEMS.txt`. `fallbackWeaponId` is unarmed strike; attack profiles with `carriedSeparately: false` do not create inventory stacks. Shield bashes and spiked attacks reference their equipped host, and spike additions contribute zero weight. Size/body-plan adjustments, special gear and load penalties still need evaluation rules. |
-| `companions` | Source-backed base creature records and separate familiar and animal companion advancement tables. Use the companion's adjusted effective master level to select its advancement row. A purchased beast does not gain companion advancement just because it uses the same base creature definition. Purchased donkey, mule, ox, pony, and both horses use `BEASTS OF BURDEN.txt`; their companion records, where present, remain separate. Purchased working beasts are not combat trained and have no attacks. The old `donkey-or-mule` ID is replaced by explicit `donkey` and `mule` choices. Both cost 8 gp. The donkey retains the old 500 lb catalog weight; the mule uses 800 lb as a table estimate, not an SRD weight. Animal body weight is not carried cargo. Pack profiles expose source-listed light, medium, heavy, and drag limits; drag is not a carried load. |
+| `companions` | Source-backed base creature records and separate familiar and animal companion advancement tables. Use the companion's adjusted effective master level to select its advancement row. A purchased beast does not gain companion advancement just because it uses the same base creature definition. Purchased donkey, mule, ox, pony, and both horses use `BEASTS OF BURDEN.txt`; their companion records, where present, remain separate. Purchased working beasts are not combat trained and have no attacks. Donkey and mule are separate purchases at 8 gp each. The donkey weighs 500 lb; the mule uses 800 lb as a table estimate, not an SRD weight. Animal body weight is not carried cargo. Pack profiles expose source-listed light, medium, heavy, and drag limits; drag is not a carried load. |
 | `positioning` | Source pointers for combat positioning, reach, modifiers and initiative; not a grid or movement evaluator. |
 | `mechanics` | Existing `rules` and former `meta.rules` (now `lookups`), plus Listen lookup. A rule described in `RULES.txt` is not necessarily present as a typed record. |
 | `rulesets` | Baseline and an opt-in option registry. The multiclass XP penalty has structured parameters and defaults off; the sheet must still evaluate it. |
@@ -58,7 +58,7 @@ python tools/organize_core.py --check
 python -m unittest discover -s tools
 ```
 
-The tool migrates v1 or refreshes v2's added catalogs from text. It does **not** regenerate the existing class, spell, skill or other legacy extraction. Stable IDs are part of the consumer API: if a source name changes, preserve the published ID explicitly before refreshing. Source line anchors are regenerated after text edits.
+The generator refreshes source-backed catalogs, spell and condition descriptions, and source anchors. It does not rebuild every record from scratch; some class, spell, and skill fields still come from the existing JSON. Keep IDs stable when renaming entries so references continue to work. Use `python tools/audit_core.py` for structural checks and `python tools/source_audit.py` for the TXT comparison report.
 
 ## Pulled vehicle inventory
 
@@ -166,8 +166,7 @@ cast does not refund the slot. Callers still adjudicate interruption, targets,
 and exceptional actions. Outside combat, `schedule_downtime_cast` calculates
 completion on the elapsed game-seconds clock; the caller records the slot spend
 and confirms continuous casting. Timed spell effects accept `encounter_clock`
-or `{'gameSeconds': ...}`; legacy callers may keep using integer rounds for an
-entire effect list. Handle Animal plans expose typed work hours, separately from
+or `{'gameSeconds': ...}`; an entire effect list can also use integer rounds. Handle Animal plans expose typed work hours, separately from
 continuous elapsed time.
 
 Use timestamped slot spends and `recover_slots` to refresh an existing daily
@@ -182,7 +181,7 @@ unlisted class. `new_slots` is for initialisation, not a recovery operation.
 
 `mechanics.sizeCategoriesById` is the shared size table. Races and companion
 stat blocks reference it with `sizeId`. Derive size modifiers once from the
-current size; do not also add size bonuses repeated in legacy racial traits.
+current size; do not also add size bonuses repeated in racial trait records.
 `size_profile` returns modifiers suitable for the modifier resolver, and
 `carrying_limits` applies the biped/quadruped multiplier to Strength limits or
 uses explicitly supplied stat-block limits. Existing pack animal and pulled
