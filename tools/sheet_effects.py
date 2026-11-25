@@ -39,6 +39,8 @@ def catalogs(spells, feats, skills):
         spell('protection-from-' + alignment, 'minute', True,
               [modifier(stat, 2, bonus, requires={'sourceAlignmentTag': alignment})
                for stat, bonus in (('ac', 'deflection'), ('save', 'resistance'))])
+    spell('death-ward', 'minute', True, [{'operation': 'immunity', 'effectTag': tag}
+          for tag in ('death-spell', 'magical-death', 'energy-drain', 'negative-energy')])
     spell('resistance', 'minute', False, [modifier('save', 1, 'resistance')])
     for key, amount in [('bless', 1), ('bane', -1), ('aid', 1)]:
         bonus = 'morale' if amount > 0 else None
@@ -76,6 +78,16 @@ def catalogs(spells, feats, skills):
           {'operation': 'extra-full-attack-attack', 'amount': 1, 'atFullBab': True, 'stacking': 'noncumulative'},
           {'operation': 'movement-enhancement', 'amountFt': 30, 'maxSpeedMultiplier': 2, 'modes': 'all'}],
           countersAndDispels=['slow'])
+
+    for key, steps, strength, dexterity, opposite in (
+            ('enlarge-person', 1, 2, -2, 'reduce-person'),
+            ('reduce-person', -1, -2, 2, 'enlarge-person')):
+        for variant in (key, key + '-mass'):
+            spell(variant, 'minute', True, [{'operation': 'size-change', 'steps': steps,
+                  'requiresCreatureType': 'humanoid', 'sizeAbilityAdjustments': {'str': strength, 'dex': dexterity},
+                  'minimumAdjustedAbilityScore': 1, 'bodyWeightMultiplier': '8' if steps > 0 else '1/8',
+                  'resizesWornAndCarriedGear': True, 'speedChanges': False}],
+                  countersAndDispels=[opposite] if variant == key else [opposite, opposite + '-mass'])
 
     for key, record in feats.items():
         match = re.search(r'^Benefit:\s*You get a \+2 bonus on all (.+?) checks and (.+?) checks\.$', record['text'], re.M)

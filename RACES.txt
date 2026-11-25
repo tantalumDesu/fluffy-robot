@@ -204,6 +204,7 @@ HOBGOBLIN RACIAL TRAITS
     Automatic Languages: Common, Goblin. Bonus Languages: Draconic, Dwarven, Infernal, Giant, Orc.
     Favored Class: Fighter.
     Level Adjustment: +1.
+    Medium size: Hobgoblins have no special bonuses or penalties due to their size.
 
 HUMAN
 

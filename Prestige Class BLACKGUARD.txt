@@ -147,3 +147,4 @@ This bonus lasts as long as the threat is immediate and apparent.
 
 Spell Resistance (Ex): If the blackguard's character level is 19th or higher, the servant gains spell resistance equal to the blackguard's level + 5. To affect the servant with a spell, another spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the servant's spell resistance.
 
+Alignment Loss (table rule): A blackguard who no longer meets the class alignment requirement loses access to class abilities and cannot gain further levels in the class. Returning to a qualifying alignment restores those abilities and permits further advancement without atonement.

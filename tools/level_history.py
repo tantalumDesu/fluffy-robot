@@ -1,4 +1,5 @@
 """Replay one class choice and select one progression row per character level."""
+from .alignment import class_alignment_status
 from .character_advancement import _integer, apply_xp_award, character_level_grants, level_for_xp
 
 
@@ -8,7 +9,7 @@ def _rules(core):
     return rules['character-advancement'], rules['ability-increases-and-feats']
 
 
-def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjustment=0, xp=None):
+def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjustment=0, xp=None, alignment_by_level=None):
     """Derive counts from ordered class IDs; optionally validate a committed XP total.
 
     Select rows, not bonuses: rows can contain cumulative values, and epic BAB
@@ -26,10 +27,19 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
                   and rule['mechanic']['parameters']['constraint'] == 'cannot-return-after-advancing-another-class'}
     counts, entries = {}, []
     pre_epic_rows = {}
+    alignment_by_level = dict(alignment_by_level or {})
     for character_level, class_id in enumerate(class_choices, racial_hit_dice + 1):
         if not isinstance(class_id, str) or class_id not in classes:
             raise ValueError(f'Unknown class choice at character level {character_level}: {class_id!r}')
         base = classes[class_id]
+        facts = alignment_by_level.pop(character_level, None)
+        if facts is not None:
+            status = class_alignment_status(core, class_id, facts['alignmentId'],
+                                            deity_alignment=facts.get('deityAlignmentId'),
+                                            deity_known=facts.get('deityKnown', False),
+                                            fallen=facts.get('fallenClassIds', ()))
+            if status != 'eligible':
+                raise ValueError(f'{class_id} alignment at character level {character_level}: {status}')
         if base['type'] == 'epic':
             raise ValueError(f'Choose {base["extends"]!r}; epic progression is a continuation, not a separate class')
         if class_id in continuous and class_id in counts and entries[-1]['classId'] != class_id:
@@ -48,7 +58,10 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
         entries.append(dict(characterLevel=character_level, classId=class_id, classLevel=class_level,
                             progressionClassId=progression_class['id'], progressionRow=rows[0],
                             firstCharacterLevel=character_level == 1,
+                            **({'alignmentAtSelection': dict(facts)} if facts is not None else {}),
                             **character_level_grants(character_level, benefits)))
+    if alignment_by_level:
+        raise ValueError('Alignment facts supplied for an unrecorded class level')
     character_level = racial_hit_dice + len(entries)
     effective_level = character_level + level_adjustment
     if xp is not None and level_for_xp(xp, track) != effective_level:
@@ -62,14 +75,14 @@ def replay_level_history(core, class_choices, *, racial_hit_dice=0, level_adjust
                 classLevels=counts, entries=entries)
 
 
-def advance_level_history(core, class_choices, xp, award, *, class_id=None, racial_hit_dice=0, level_adjustment=0):
+def advance_level_history(core, class_choices, xp, award, *, class_id=None, racial_hit_dice=0, level_adjustment=0, alignment_by_level=None, current_alignment=None):
     """Apply XP and, if a level was earned, commit exactly one class choice together.
 
     The award is already adjusted (for example by any enabled XP penalty).
-    Alignment, prestige prerequisites and other class choices are caller-owned.
+    The caller supplies historical and current alignment facts and other prerequisites.
     """
     build = replay_level_history(core, class_choices, racial_hit_dice=racial_hit_dice,
-                                 level_adjustment=level_adjustment, xp=xp)
+                                 level_adjustment=level_adjustment, xp=xp, alignment_by_level=alignment_by_level)
     if not build['characterLevel']:
         raise ValueError('Record the starting character before applying XP awards')
     track, benefits = _rules(core)
@@ -82,6 +95,9 @@ def advance_level_history(core, class_choices, xp, award, *, class_id=None, raci
     choices = list(class_choices)
     if level_earned:
         choices.append(class_id)
+        facts = dict(alignment_by_level or {})
+        if current_alignment is not None:
+            facts[build['characterLevel'] + 1] = current_alignment
         build = replay_level_history(core, choices, racial_hit_dice=racial_hit_dice,
-                                     level_adjustment=level_adjustment, xp=result['xp'])
+                                     level_adjustment=level_adjustment, xp=result['xp'], alignment_by_level=facts)
     return dict(xp=result['xp'], discardedXp=result['discardedXp'], classChoices=choices, **build)

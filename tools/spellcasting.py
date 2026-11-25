@@ -3,8 +3,10 @@ import re
 from copy import deepcopy
 
 if __package__:
+    from .alignment import check_spell_alignment
     from .game_time import SECONDS, encounter_clock, schedule_cast
 else:
+    from alignment import check_spell_alignment
     from game_time import SECONDS, encounter_clock, schedule_cast
 
 
@@ -60,7 +62,8 @@ def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slot
 
 
 def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metamagic=(), heighten_to=None,
-              domain_spell_levels=None, conversion=False, random_numeric=None, quickened_this_round=False):
+              domain_spell_levels=None, conversion=False, random_numeric=None, quickened_this_round=False,
+              alignment_id=None, deity_alignment=None, deity_known=False):
     """Validate spell membership and metamagic, returning a plan without spending a slot."""
     cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
     casting = cls.get('spellcasting', {})
@@ -69,6 +72,10 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     if conversion and not casting.get('spontaneousConversion'):
         raise ValueError('This class has no spontaneous conversion')
     spell = next(s for s in core['magic']['spells'] if s['id'] == spell_id)
+    alignment_status = check_spell_alignment(core, class_id, spell, alignment_id,
+                                             deity_alignment=deity_alignment, deity_known=deity_known)
+    if alignment_status != 'eligible':
+        raise ValueError(f'Spell alignment: {alignment_status}')
     base = (domain_spell_levels.get(spell_id) if domain_spell_levels is not None else
             next((row['level'] for row in spell['lists'] if row['listId'] == casting['spellListId']), None))
     if base is None or (conversion and domain_spell_levels is not None):
@@ -160,7 +167,7 @@ def _slot_for(state, slot_id, plan):
     if state['classId'] != plan['classId']:
         raise ValueError('Wrong casting class')
     slot = state['slots'][slot_id]
-    if slot['expended'] or slot['pool'] != plan['pool'] or slot['level'] < plan['requiredSlotLevel']:
+    if slot['expended'] or slot.get('negativeLevelLoss') or slot['pool'] != plan['pool'] or slot['level'] < plan['requiredSlotLevel']:
         raise ValueError('Slot unavailable, too low, or in the wrong pool')
     return slot
 
@@ -270,6 +277,8 @@ def recover_slots(core, state, *, start_seconds, end_seconds, verified_rest_seco
     result = deepcopy(state)
     since = start_seconds - profile['recentUseHours'] * SECONDS['hour']
     for slot in result['slots'].values():
+        if slot.pop('negativeLevelLoss', None) == 'immediate':
+            slot['preparation'] = None
         if not slot['expended']:
             continue
         spent = slot.get('spentAtSeconds')

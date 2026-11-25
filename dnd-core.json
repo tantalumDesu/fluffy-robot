@@ -16201,10 +16201,7 @@
             "effects": []
           }
         ],
-        "favoredByRaces": [],
-        "ruleIds": [
-          "monk-continuous-levels"
-        ]
+        "favoredByRaces": []
       },
       {
         "id": "adept",
@@ -40834,7 +40831,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "drow",
@@ -41542,7 +41540,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "dwarf",
@@ -42245,7 +42244,8 @@
           },
           "dodgeBonusLoss": true
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "medium"
       },
       {
         "id": "elf",
@@ -42693,7 +42693,8 @@
           },
           "dodgeBonusLoss": false
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "medium"
       },
       {
         "id": "gnome",
@@ -43526,7 +43527,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "small"
       },
       {
         "id": "half-orc",
@@ -43889,7 +43891,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "halfling",
@@ -44473,7 +44476,8 @@
           },
           "dodgeBonusLoss": false
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "small"
       },
       {
         "id": "hobgoblin",
@@ -44649,10 +44653,27 @@
               }
             ],
             "conditions": []
+          },
+          {
+            "id": "hobgoblin-trait-size",
+            "index": 9,
+            "label": "Medium size",
+            "text": "Medium size: Hobgoblins have no special bonuses or penalties due to their size.",
+            "mechanics": [
+              {
+                "type": "size",
+                "size": "Medium"
+              }
+            ],
+            "conditions": [],
+            "source": {
+              "file": "RACES.txt",
+              "line": 207
+            }
           }
         ],
         "own": {
-          "size": null,
+          "size": "Medium",
           "creatureType": {
             "type": "humanoid",
             "subtype": null,
@@ -44751,7 +44772,7 @@
           "dodgeBonusLoss": false
         },
         "effective": {
-          "size": null,
+          "size": "Medium",
           "creatureType": {
             "type": "humanoid",
             "subtype": null,
@@ -44851,7 +44872,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "human",
@@ -45124,7 +45146,8 @@
           "dodgeBonusLoss": false,
           "noAbilityAdjustments": true
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "medium"
       },
       {
         "id": "minotaur",
@@ -45892,7 +45915,8 @@
           },
           "dodgeBonusLoss": false
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "large"
       },
       {
         "id": "orc",
@@ -46233,7 +46257,8 @@
           },
           "dodgeBonusLoss": false
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "medium"
       },
       {
         "id": "tiefling",
@@ -46748,7 +46773,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "aasimar",
@@ -47232,7 +47258,8 @@
         ],
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "medium"
       },
       {
         "id": "goblin",
@@ -47715,7 +47742,8 @@
         },
         "reviewFlags": [
           "campaign-or-interpretive-text: description contains setting or interpretive wording; keep and review later"
-        ]
+        ],
+        "sizeId": "small"
       },
       {
         "id": "half-elf",
@@ -48125,7 +48153,8 @@
           "dodgeBonusLoss": false,
           "noAbilityAdjustments": true
         },
-        "reviewFlags": []
+        "reviewFlags": [],
+        "sizeId": "medium"
       }
     ],
     "ruleIds": [
@@ -153361,6 +153390,32 @@
           }
         }
       }
+    },
+    "alignmentTargetRulesBySpellId": {
+      "holy-smite": {
+        "unaffectedAxis": "good",
+        "opposedAxis": "evil",
+        "condition": {
+          "conditionId": "blinded",
+          "rounds": 1
+        },
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Holy Smite"
+        }
+      },
+      "unholy-blight": {
+        "unaffectedAxis": "evil",
+        "opposedAxis": "good",
+        "condition": {
+          "conditionId": "sickened",
+          "roundDice": "1d4"
+        },
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Unholy Blight"
+        }
+      }
     }
   },
   "effects": {
@@ -153372,11 +153427,43 @@
         "category": "ability",
         "summary": "The character has temporarily lost 1 or more ability score points.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "scoreLoss": {
+              "ledger": "ability-damage",
+              "zeroScoreConditions": {
+                "str": [
+                  "prone",
+                  "helpless"
+                ],
+                "dex": [
+                  "paralyzed"
+                ],
+                "con": [
+                  "dead"
+                ],
+                "int": [
+                  "unconscious"
+                ],
+                "wis": [
+                  "unconscious"
+                ],
+                "cha": [
+                  "unconscious"
+                ]
+              },
+              "defaultRecovery": {
+                "points": 1,
+                "unit": "day",
+                "sourceMayOverride": true
+              }
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 5
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -153581,11 +153668,39 @@
         "category": "ability",
         "summary": "The character has permanently lost 1 or more ability score points.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "scoreLoss": {
+              "ledger": "ability-drain",
+              "zeroScoreConditions": {
+                "str": [
+                  "prone",
+                  "helpless"
+                ],
+                "dex": [
+                  "paralyzed"
+                ],
+                "con": [
+                  "dead"
+                ],
+                "int": [
+                  "unconscious"
+                ],
+                "wis": [
+                  "unconscious"
+                ],
+                "cha": [
+                  "unconscious"
+                ]
+              },
+              "recovery": "magic-only"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 8
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -153613,31 +153728,53 @@
         "category": "sensory",
         "summary": "The character cannot see.",
         "mechanics": {
+          "flags": [
+            "denied-dex-to-ac",
+            "half-speed",
+            "no-vision"
+          ],
           "modifiers": [
             {
-              "target": "Armor Class",
+              "id": "condition:blinded:0",
+              "operation": "modifier",
+              "statId": "ac",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
             },
             {
-              "target": "Search checks and on most Strength- and Dexterity-based skill checks",
+              "id": "condition:blinded:1",
+              "operation": "modifier",
+              "statId": "skill:search",
               "amount": -4,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:blinded:2",
+              "operation": "modifier",
+              "statId": "skill",
+              "amount": -4,
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "blindnessPhysicalSkillPenalty": true
+              }
             }
           ],
-          "losesDexterityBonusToAC": true,
-          "movement": {
-            "description": "half speed",
-            "speedMultiplier": 0.5
+          "operations": {
+            "automaticFailure": {
+              "requiresSense": "vision"
+            },
+            "opponentConcealment": {
+              "missChancePercent": 50
+            },
+            "exceptionReview": "long-term-adaptation"
           },
-          "actionRestrictions": [
-            "The character cannot see."
-          ],
-          "automaticFailures": [
-            "All checks and activities that rely on vision (such as reading and Spot checks) automatically fail."
-          ]
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 11
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -153693,11 +153830,28 @@
         "category": "movement",
         "summary": "Depending on its size, a creature can be blown away by winds of high velocity.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "forcedMovement": {
+              "ground": {
+                "distanceDice": "1d4",
+                "feetPerUnit": 10,
+                "nonlethalDicePerUnit": "1d4",
+                "applyConditionId": "knocked-down"
+              },
+              "flying": {
+                "distanceDice": "2d6",
+                "feetPerUnit": 10,
+                "nonlethalDice": "2d6",
+                "direction": "backward"
+              }
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 13
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -153718,11 +153872,22 @@
         "category": "movement",
         "summary": "Prevented from achieving forward motion by an applied force, such as wind.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "forcedMovement": {
+              "ground": {
+                "stopForwardMotion": true
+              },
+              "flying": {
+                "backwardDistanceFrom": "source"
+              }
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 15
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -153745,13 +153910,49 @@
         "category": "mental",
         "summary": "A confused character’s actions are determined by rolling d% at the beginning of his turn: 01–10, attack caster with melee or ranged weapons (or close with caster if attacking is not possible); 11–20, act normally; 21Â–50, do nothing but babble incoherently; 51–70, flee away from caster at top possible speed; 71–100, attack nearest creature (for this purpose, a familiar counts as part of the subject’s self ).",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "A confused character who can’t carry out the indicated action does nothing but babble incoherently."
-          ],
-          "automaticFailures": []
+          "operations": {
+            "behavior": {
+              "trigger": "start-turn",
+              "dice": "1d100",
+              "outcomes": [
+                [
+                  1,
+                  10,
+                  "attack-or-close-with-caster"
+                ],
+                [
+                  11,
+                  20,
+                  "act-normally"
+                ],
+                [
+                  21,
+                  50,
+                  "babble"
+                ],
+                [
+                  51,
+                  70,
+                  "flee-caster-at-top-speed"
+                ],
+                [
+                  71,
+                  100,
+                  "attack-nearest-creature"
+                ]
+              ],
+              "familiarCountsAsSelf": true,
+              "fallback": "babble",
+              "ifAttackedNextTurn": "attack-attacker",
+              "opportunityAttacks": "current-target-only"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 17
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -153783,20 +153984,25 @@
         "category": "fear",
         "summary": "The character is frozen in fear and can take no actions.",
         "mechanics": {
+          "flags": [
+            "no-actions",
+            "denied-dex-to-ac"
+          ],
           "modifiers": [
             {
-              "target": "Armor Class and loses her Dexterity bonus (if any)",
+              "id": "condition:cowering:0",
+              "operation": "modifier",
+              "statId": "ac",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "The character is frozen in fear and can take no actions."
-          ],
-          "automaticFailures": []
+          "operations": {},
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 19
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -153824,14 +154030,20 @@
         "category": "vital",
         "summary": "The creature is unable to act normally.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "The creature is unable to act normally.",
-            "A dazed creature can take no actions, but has no penalty to AC."
+          "flags": [
+            "no-actions"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "typicalDuration": {
+              "amount": 1,
+              "unit": "round"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 21
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -153860,20 +154072,38 @@
         "category": "sensory",
         "summary": "The creature is unable to see well because of overstimulation of the eyes.",
         "mechanics": {
+          "flags": [],
           "modifiers": [
             {
-              "target": "attack rolls",
+              "id": "condition:dazzled:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -1,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:dazzled:1",
+              "operation": "modifier",
+              "statId": "skill:search",
+              "amount": -1,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:dazzled:2",
+              "operation": "modifier",
+              "statId": "skill:spot",
+              "amount": -1,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "The creature is unable to see well because of overstimulation of the eyes."
-          ],
-          "automaticFailures": []
+          "operations": {},
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 24
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -153911,13 +154141,30 @@
         "category": "vital",
         "summary": "The character’s hit points are reduced to –10, his Constitution drops to 0, or he is killed outright by a spell or effect.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "Dead characters cannot benefit from normal or magical healing, but they can be restored to life via magic."
+          "flags": [
+            "no-actions"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "triggers": {
+              "hpAtMost": -10,
+              "constitutionEquals": 0,
+              "instantDeath": true
+            },
+            "recovery": {
+              "normalHealing": false,
+              "magicalHealing": false,
+              "revival": "source-defined"
+            },
+            "body": {
+              "soulDeparts": true,
+              "decaysUnlessPreserved": true
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 26
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154009,22 +154256,33 @@
         "category": "sensory",
         "summary": "A deafened character cannot hear.",
         "mechanics": {
+          "flags": [
+            "no-hearing"
+          ],
           "modifiers": [
             {
-              "target": "initiative checks",
+              "id": "condition:deafened:0",
+              "operation": "modifier",
+              "statId": "initiative",
               "amount": -4,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "A deafened character cannot hear."
-          ],
-          "automaticFailures": [
-            "She takes a -4 penalty on initiative checks, automatically fails Listen checks, and has a 20% chance of spell failure when casting spells with verbal components."
-          ]
+          "operations": {
+            "automaticFailure": {
+              "skillId": "listen"
+            },
+            "spellFailure": {
+              "component": "verbal",
+              "chancePercent": 20
+            },
+            "exceptionReview": "long-term-adaptation"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 28
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154060,14 +154318,38 @@
         "category": "vital",
         "summary": "A character with 0 hit points, or one who has negative hit points but has become stable and conscious, is disabled.",
         "mechanics": {
+          "flags": [
+            "half-speed",
+            "single-move-or-standard"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": {
-            "description": "half speed",
-            "speedMultiplier": 0.5
+          "operations": {
+            "actionBudget": {
+              "maximum": 1,
+              "allowed": [
+                "move",
+                "standard"
+              ],
+              "fullRound": false
+            },
+            "strenuousAction": {
+              "trigger": "action-completed",
+              "hpDamage": 1,
+              "standardIsStrenuous": true,
+              "otherActions": "dm-determines-strenuousness"
+            },
+            "unaidedRecovery": {
+              "unit": "day",
+              "successPercent": 10,
+              "success": "begin-natural-healing",
+              "failureHpLoss": 1
+            },
+            "aidedRecovery": "natural-healing"
           },
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 30
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -154095,13 +154377,29 @@
         "category": "vital",
         "summary": "A dying character is unconscious and near death.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "A dying character can take no actions and is unconscious."
+          "flags": [
+            "no-actions"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "implies": [
+              "unconscious"
+            ],
+            "hpRange": [
+              -9,
+              -1
+            ],
+            "stabilization": {
+              "trigger": "end-round",
+              "chancePercent": 10,
+              "successConditionId": "stable",
+              "failureHpLoss": 1
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 34
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -154126,29 +154424,29 @@
         "category": "ability",
         "summary": "The character gains one or more negative levels, which might permanently drain the characterÂ’s levels.",
         "mechanics": {
-          "modifiers": [
-            {
-              "target": "attack rolls",
-              "amount": -1,
-              "kind": "penalty",
-              "type": "penalty"
+          "flags": [],
+          "modifiers": [],
+          "operations": {
+            "derivedFrom": {
+              "path": "/mechanics/negativeLevels",
+              "state": "activeNegativeLevelCount"
             }
-          ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 36
+          }
         },
         "references": {
-          "inflictedBySpells": [],
+          "inflictedBySpells": [
+            "energy-drain",
+            "enervation"
+          ],
           "removedBySpells": [
             "restoration",
             "restoration-greater"
           ],
-          "mentionedInSpells": [
-            "energy-drain",
-            "enervation"
-          ],
+          "mentionedInSpells": [],
           "referencedByAbilities": [],
           "referencedByRaces": [],
           "referencedBySpecialAbilities": [
@@ -154176,23 +154474,47 @@
         "category": "movement",
         "summary": "The character is ensnared.",
         "mechanics": {
+          "flags": [
+            "half-speed",
+            "no-run",
+            "no-charge"
+          ],
           "modifiers": [
             {
-              "target": "all attack rolls and a -4 penalty to Dexterity",
+              "id": "condition:entangled:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:entangled:1",
+              "operation": "modifier",
+              "statId": "ability:dex",
+              "amount": -4,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": {
-            "description": "half speed",
-            "speedMultiplier": 0.5
+          "operations": {
+            "movementConstraint": {
+              "immobileIf": [
+                "anchored",
+                "opposing-tether"
+              ]
+            },
+            "castingCheck": {
+              "skillId": "concentration",
+              "dcBase": 15,
+              "add": "spell-level",
+              "failure": "lose-spell"
+            }
           },
-          "actionRestrictions": [
-            "An entangled creature moves at half speed, cannot run or charge, and takes a -2 penalty on all attack rolls and a -4 penalty to Dexterity."
-          ],
-          "automaticFailures": []
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 39
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154222,21 +154544,39 @@
         "category": "vital",
         "summary": "An exhausted character moves at half speed and takes a –6 penalty to Strength and Dexterity.",
         "mechanics": {
+          "flags": [
+            "half-speed",
+            "no-run",
+            "no-charge"
+          ],
           "modifiers": [
             {
-              "target": "Strength and Dexterity",
+              "id": "condition:exhausted:0",
+              "operation": "modifier",
+              "statId": "ability:str",
               "amount": -6,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:exhausted:1",
+              "operation": "modifier",
+              "statId": "ability:dex",
+              "amount": -6,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": {
-            "description": "half speed",
-            "speedMultiplier": 0.5
+          "operations": {
+            "stateChangeId": "fatigue",
+            "supersedes": [
+              "fatigued"
+            ]
           },
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 41
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154271,18 +154611,33 @@
         "category": "mental",
         "summary": "A fascinated creature is entranced by a supernatural or spell effect.",
         "mechanics": {
+          "flags": [
+            "attention-only"
+          ],
           "modifiers": [
             {
-              "target": "skill checks made as reactions",
+              "id": "condition:fascinated:0",
+              "operation": "modifier",
+              "statId": "skill",
               "amount": -4,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "reactionCheck": true
+              }
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "endTriggers": {
+              "potential-threat": "repeat-save",
+              "obvious-threat": "end",
+              "ally-standard-action": "end"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 43
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154333,18 +154688,35 @@
         "category": "vital",
         "summary": "A fatigued character can neither run nor charge and takes a –2 penalty to Strength and Dexterity.",
         "mechanics": {
+          "flags": [
+            "no-run",
+            "no-charge"
+          ],
           "modifiers": [
             {
-              "target": "Strength and Dexterity",
+              "id": "condition:fatigued:0",
+              "operation": "modifier",
+              "statId": "ability:str",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:fatigued:1",
+              "operation": "modifier",
+              "statId": "ability:dex",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "stateChangeId": "fatigue"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 45
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154396,13 +154768,18 @@
         "category": "combat",
         "summary": "A character who has not yet acted during a combat is flat-footed, not yet reacting normally to the situation.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": true,
-          "movement": null,
-          "actionRestrictions": [
-            "A flat-footed character loses his Dexterity bonus to AC (if any) and cannot make attacks of opportunity."
+          "flags": [
+            "denied-dex-to-ac",
+            "no-opportunity-attacks"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "endTrigger": "first-action-in-combat"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 47
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -154501,20 +154878,57 @@
         "category": "fear",
         "summary": "A frightened creature flees from the source of its fear as best it can.",
         "mechanics": {
+          "flags": [
+            "must-flee-if-possible"
+          ],
           "modifiers": [
             {
-              "target": "all attack rolls",
+              "id": "condition:frightened:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:frightened:1",
+              "operation": "modifier",
+              "statId": "save",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:frightened:2",
+              "operation": "modifier",
+              "statId": "skill",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:frightened:3",
+              "operation": "modifier",
+              "statId": "ability-check",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "If unable to flee, it may fight."
-          ],
-          "automaticFailures": []
+          "operations": {
+            "stateChangeId": "fear",
+            "flight": {
+              "fightIfBlocked": true,
+              "mustUseAbilitiesIfOnlyEscape": true
+            },
+            "supersedes": [
+              "shaken"
+            ]
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 49
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154584,11 +154998,20 @@
         "category": "combat",
         "summary": "Engaged in wrestling or some other form of hand-to-hand struggle with one or more attackers.",
         "mechanics": {
+          "flags": [
+            "does-not-threaten"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": true,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "defense": {
+              "denyDexAgainst": "outside-grapple"
+            },
+            "actionRules": "grapple"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 52
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -154622,11 +155045,48 @@
         "category": "vital",
         "summary": "A helpless character is paralyzed, held, bound, sleeping, unconscious, or otherwise completely at an opponent’s mercy.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "flags": [],
+          "modifiers": [
+            {
+              "id": "condition:helpless:0",
+              "operation": "modifier",
+              "statId": "ac",
+              "amount": -4,
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "incomingAttackKind": "melee"
+              }
+            }
+          ],
+          "operations": {
+            "effectiveScores": {
+              "dex": 0
+            },
+            "enablesSneakAttack": true,
+            "coupDeGrace": {
+              "action": "full-round",
+              "provokes": true,
+              "weapons": [
+                "melee",
+                "bow",
+                "crossbow"
+              ],
+              "adjacentForRanged": true,
+              "automaticHit": true,
+              "automaticCritical": true,
+              "sneakAttackApplies": true,
+              "save": "fortitude",
+              "dcBase": 10,
+              "add": "damage-dealt",
+              "failure": "dead",
+              "skipCriticalAndSaveIfImmuneToCriticals": true
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 55
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154714,11 +155174,22 @@
         "category": "form",
         "summary": "Having no physical body.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "allowedDamageSources": [
+              "incorporeal-creature",
+              "magic-weapon-plus-one-or-better",
+              "spell",
+              "spell-like",
+              "supernatural"
+            ],
+            "additionalRules": "incorporeality"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 63
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154779,18 +155250,32 @@
         "category": "combat",
         "summary": "Visually undetectable.",
         "mechanics": {
+          "flags": [
+            "visually-undetectable"
+          ],
           "modifiers": [
             {
-              "target": "attack rolls against sighted opponents",
+              "id": "condition:invisible:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": 2,
-              "kind": "bonus",
-              "type": "bonus"
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "opponentSighted": true
+              }
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "targetDefense": {
+              "denyDexterityBonus": true
+            },
+            "additionalRules": "invisibility"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 66
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154914,11 +155399,24 @@
         "category": "movement",
         "summary": "Depending on their size, creatures can be knocked down by winds of high velocity.",
         "mechanics": {
+          "flags": [],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "forcedMovement": {
+              "ground": {
+                "applyConditionId": "prone"
+              },
+              "flying": {
+                "distanceDice": "1d6",
+                "feetPerUnit": 10,
+                "direction": "backward"
+              }
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 68
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154941,14 +155439,28 @@
         "category": "vital",
         "summary": "Experiencing stomach distress.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "Nauseated creatures are unable to attack, cast spells, concentrate on spells, or do anything else requiring attention.",
-            "The only action such a character can take is a single move action per turn."
+          "flags": [
+            "single-move-only"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "actionBudget": {
+              "maximum": 1,
+              "allowed": [
+                "move"
+              ]
+            },
+            "prohibitedActions": [
+              "attack",
+              "cast",
+              "concentrate",
+              "requires-attention"
+            ]
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 70
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -154975,20 +155487,55 @@
         "category": "fear",
         "summary": "A panicked creature must drop anything it holds and flee at top speed from the source of its fear, as well as any other dangers it encounters, along a random path.",
         "mechanics": {
+          "flags": [
+            "drop-held",
+            "flee-only"
+          ],
           "modifiers": [
             {
-              "target": "all saving throws",
+              "id": "condition:panicked:0",
+              "operation": "modifier",
+              "statId": "save",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:panicked:1",
+              "operation": "modifier",
+              "statId": "skill",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:panicked:2",
+              "operation": "modifier",
+              "statId": "ability-check",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "It can’t take any other actions."
-          ],
-          "automaticFailures": []
+          "operations": {
+            "stateChangeId": "fear",
+            "flight": {
+              "topSpeed": true,
+              "randomPath": true,
+              "avoidOtherDangers": true,
+              "ifCornered": "cowering",
+              "typicalCorneredAction": "total-defense",
+              "mustUseAbilitiesIfOnlyEscape": true
+            },
+            "supersedes": [
+              "frightened",
+              "shaken"
+            ]
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 72
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155022,15 +155569,29 @@
         "category": "vital",
         "summary": "A paralyzed character is frozen in place and unable to move or act.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "A paralyzed character is frozen in place and unable to move or act.",
-            "A winged creature flying in the air at the time that it becomes paralyzed cannot flap its wings and falls.",
-            "A paralyzed swimmer can’t swim and may drown."
+          "flags": [
+            "immobile",
+            "mental-actions-only"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "implies": [
+              "helpless"
+            ],
+            "effectiveScores": {
+              "str": 0,
+              "dex": 0
+            },
+            "hazards": {
+              "wingedFlight": "fall",
+              "swimming": "cannot-swim"
+            },
+            "occupiedSquareMovementCost": 2
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 75
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155089,11 +155650,26 @@
         "category": "vital",
         "summary": "A petrified character has been turned to stone and is considered unconscious.",
         "mechanics": {
+          "flags": [
+            "no-actions"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "implies": [
+              "unconscious"
+            ],
+            "restoration": {
+              "intactOrReassembled": "unharmed",
+              "missingParts": [
+                "permanent-hp-loss",
+                "debilitation"
+              ]
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 77
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -155116,11 +155692,21 @@
         "category": "combat",
         "summary": "Held immobile (but not helpless) in a grapple.",
         "mechanics": {
+          "flags": [
+            "immobile"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "implies": [
+              "grappling"
+            ],
+            "actionRules": "pinned-in-grapple",
+            "grantsHelpless": false
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 79
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155143,32 +155729,58 @@
         "category": "movement",
         "summary": "The character is on the ground.",
         "mechanics": {
+          "flags": [],
           "modifiers": [
             {
-              "target": "melee attack rolls and cannot use a ranged weapon (except for a crossbow)",
+              "id": "condition:prone:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -4,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "attackKind": "melee"
+              }
             },
             {
-              "target": "Armor Class against ranged attacks",
+              "id": "condition:prone:1",
+              "operation": "modifier",
+              "statId": "ac",
               "amount": 4,
-              "kind": "bonus",
-              "type": "bonus"
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "incomingAttackKind": "ranged"
+              }
             },
             {
-              "target": "AC against melee attacks",
+              "id": "condition:prone:2",
+              "operation": "modifier",
+              "statId": "ac",
               "amount": -4,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "incomingAttackKind": "melee"
+              }
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "An attacker who is prone has a Â-4 penalty on melee attack rolls and cannot use a ranged weapon (except for a crossbow)."
-          ],
-          "automaticFailures": []
+          "operations": {
+            "prohibitedWeaponUse": {
+              "kind": "ranged",
+              "except": [
+                "crossbow"
+              ]
+            },
+            "stand": {
+              "action": "move",
+              "provokes": true
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 81
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -155193,18 +155805,48 @@
         "category": "fear",
         "summary": "A shaken character takes a –2 penalty on attack rolls, saving throws, skill checks, and ability checks.",
         "mechanics": {
+          "flags": [],
           "modifiers": [
             {
-              "target": "attack rolls",
+              "id": "condition:shaken:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:shaken:1",
+              "operation": "modifier",
+              "statId": "save",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:shaken:2",
+              "operation": "modifier",
+              "statId": "skill",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:shaken:3",
+              "operation": "modifier",
+              "statId": "ability-check",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "stateChangeId": "fear"
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 84
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155236,18 +155878,57 @@
         "category": "vital",
         "summary": "The character takes a –2 penalty on all attack rolls, weapon damage rolls, saving throws, skill checks, and ability checks.",
         "mechanics": {
+          "flags": [],
           "modifiers": [
             {
-              "target": "all attack rolls",
+              "id": "condition:sickened:0",
+              "operation": "modifier",
+              "statId": "attack",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:sickened:1",
+              "operation": "modifier",
+              "statId": "save",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:sickened:2",
+              "operation": "modifier",
+              "statId": "skill",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:sickened:3",
+              "operation": "modifier",
+              "statId": "ability-check",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect"
+            },
+            {
+              "id": "condition:sickened:4",
+              "operation": "modifier",
+              "statId": "damage",
+              "amount": -2,
+              "bonusType": null,
+              "stacking": "once-per-effect",
+              "requires": {
+                "damageKind": "weapon"
+              }
             }
           ],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {},
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 87
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155276,11 +155957,28 @@
         "category": "vital",
         "summary": "A character who was dying but who has stopped losing hit points and still has negative hit points is stable.",
         "mechanics": {
+          "flags": [
+            "no-actions"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "implies": [
+              "unconscious"
+            ],
+            "supersedes": [
+              "dying"
+            ],
+            "wakeCheck": {
+              "unit": "hour",
+              "chancePercent": 10,
+              "successConditionId": "disabled",
+              "unaidedFailureHpLoss": 1
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 89
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -155303,11 +156001,29 @@
         "category": "vital",
         "summary": "A character whose nonlethal damage exactly equals his current hit points is staggered.",
         "mechanics": {
+          "flags": [
+            "single-move-or-standard"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "actionBudget": {
+              "maximum": 1,
+              "allowed": [
+                "move",
+                "standard"
+              ],
+              "fullRound": false
+            },
+            "comparison": {
+              "whenEqual": "staggered",
+              "whenNonlethalHigher": "unconscious",
+              "whenNonlethalLower": "clear"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 93
+          }
         },
         "references": {
           "inflictedBySpells": [],
@@ -155330,20 +156046,26 @@
         "category": "vital",
         "summary": "A stunned creature drops everything held, can’t take actions, takes a –2 penalty to AC, and loses his Dexterity bonus to AC (if any).",
         "mechanics": {
+          "flags": [
+            "no-actions",
+            "drop-held",
+            "denied-dex-to-ac"
+          ],
           "modifiers": [
             {
-              "target": "AC",
+              "id": "condition:stunned:0",
+              "operation": "modifier",
+              "statId": "ac",
               "amount": -2,
-              "kind": "penalty",
-              "type": "penalty"
+              "bonusType": null,
+              "stacking": "once-per-effect"
             }
           ],
-          "losesDexterityBonusToAC": true,
-          "movement": null,
-          "actionRestrictions": [
-            "A stunned creature drops everything held, can’t take actions, takes a -2 penalty to AC, and loses his Dexterity bonus to AC (if any)."
-          ],
-          "automaticFailures": []
+          "operations": {},
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 97
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155384,13 +156106,24 @@
         "category": "undead",
         "summary": "Affected by a turn undead attempt.",
         "mechanics": {
-          "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [
-            "If they cannot flee, they cower."
+          "flags": [
+            "flee-only"
           ],
-          "automaticFailures": []
+          "modifiers": [],
+          "operations": {
+            "flight": {
+              "topSpeed": true,
+              "ifBlocked": "cowering"
+            },
+            "duration": {
+              "amount": 10,
+              "unit": "round"
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 99
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -155444,11 +156177,26 @@
         "category": "vital",
         "summary": "Knocked out and helpless.",
         "mechanics": {
+          "flags": [
+            "no-actions"
+          ],
           "modifiers": [],
-          "losesDexterityBonusToAC": false,
-          "movement": null,
-          "actionRestrictions": [],
-          "automaticFailures": []
+          "operations": {
+            "implies": [
+              "helpless"
+            ],
+            "triggers": {
+              "hpRange": [
+                -9,
+                -1
+              ],
+              "nonlethalExceedsHp": true
+            }
+          },
+          "source": {
+            "file": "CONDITIONS.txt",
+            "line": 101
+          }
         },
         "references": {
           "inflictedBySpells": [
@@ -161274,6 +162022,68 @@
           }
         }
       ],
+      "death-ward": [
+        {
+          "operation": "immunity",
+          "effectTag": "death-spell",
+          "id": "death-ward:1",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Death Ward"
+          }
+        },
+        {
+          "operation": "immunity",
+          "effectTag": "magical-death",
+          "id": "death-ward:2",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Death Ward"
+          }
+        },
+        {
+          "operation": "immunity",
+          "effectTag": "energy-drain",
+          "id": "death-ward:3",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Death Ward"
+          }
+        },
+        {
+          "operation": "immunity",
+          "effectTag": "negative-energy",
+          "id": "death-ward:4",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Death Ward"
+          }
+        }
+      ],
       "resistance": [
         {
           "operation": "modifier",
@@ -162055,7 +162865,1565 @@
             "slow"
           ]
         }
+      ],
+      "enlarge-person": [
+        {
+          "operation": "size-change",
+          "steps": 1,
+          "requiresCreatureType": "humanoid",
+          "sizeAbilityAdjustments": {
+            "str": 2,
+            "dex": -2
+          },
+          "minimumAdjustedAbilityScore": 1,
+          "bodyWeightMultiplier": "8",
+          "resizesWornAndCarriedGear": true,
+          "speedChanges": false,
+          "id": "enlarge-person:1",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1,
+            "dismissible": true
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Enlarge Person"
+          },
+          "countersAndDispels": [
+            "reduce-person"
+          ]
+        }
+      ],
+      "enlarge-person-mass": [
+        {
+          "operation": "size-change",
+          "steps": 1,
+          "requiresCreatureType": "humanoid",
+          "sizeAbilityAdjustments": {
+            "str": 2,
+            "dex": -2
+          },
+          "minimumAdjustedAbilityScore": 1,
+          "bodyWeightMultiplier": "8",
+          "resizesWornAndCarriedGear": true,
+          "speedChanges": false,
+          "id": "enlarge-person-mass:1",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1,
+            "dismissible": true
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Enlarge Person, Mass"
+          },
+          "countersAndDispels": [
+            "reduce-person",
+            "reduce-person-mass"
+          ]
+        }
+      ],
+      "reduce-person": [
+        {
+          "operation": "size-change",
+          "steps": -1,
+          "requiresCreatureType": "humanoid",
+          "sizeAbilityAdjustments": {
+            "str": -2,
+            "dex": 2
+          },
+          "minimumAdjustedAbilityScore": 1,
+          "bodyWeightMultiplier": "1/8",
+          "resizesWornAndCarriedGear": true,
+          "speedChanges": false,
+          "id": "reduce-person:1",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1,
+            "dismissible": true
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Reduce Person"
+          },
+          "countersAndDispels": [
+            "enlarge-person"
+          ]
+        }
+      ],
+      "reduce-person-mass": [
+        {
+          "operation": "size-change",
+          "steps": -1,
+          "requiresCreatureType": "humanoid",
+          "sizeAbilityAdjustments": {
+            "str": -2,
+            "dex": 2
+          },
+          "minimumAdjustedAbilityScore": 1,
+          "bodyWeightMultiplier": "1/8",
+          "resizesWornAndCarriedGear": true,
+          "speedChanges": false,
+          "id": "reduce-person-mass:1",
+          "target": "recipient",
+          "application": "confirmed-by-player",
+          "duration": {
+            "unit": "minute",
+            "perCasterLevel": 1,
+            "dismissible": true
+          },
+          "source": {
+            "file": "SPELLBOOK.txt",
+            "heading": "Reduce Person, Mass"
+          },
+          "countersAndDispels": [
+            "enlarge-person",
+            "enlarge-person-mass"
+          ]
+        }
       ]
+    },
+    "negativeLevelOperationsBySpellId": {
+      "enervation": {
+        "operation": "inflict-negative-levels",
+        "dice": "1d4",
+        "resolution": "ranged-touch-and-sr",
+        "expiration": {
+          "kind": "automatic",
+          "hoursPerCasterLevel": 1,
+          "maximumHours": 15
+        },
+        "undeadTemporaryHpPerDieResult": 5,
+        "undeadTemporaryHpHours": 1,
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Enervation"
+        }
+      },
+      "energy-drain": {
+        "operation": "inflict-negative-levels",
+        "dice": "2d4",
+        "resolution": "ranged-touch-and-sr",
+        "expiration": {
+          "kind": "fortitude-save",
+          "hours": 24,
+          "dcSource": "spell-save-dc"
+        },
+        "undeadTemporaryHpPerDieResult": 5,
+        "undeadTemporaryHpHours": 1,
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Energy Drain"
+        }
+      },
+      "restoration": {
+        "operation": "restore-negative-levels",
+        "removeActive": "all-removable",
+        "permanentLevels": "one",
+        "permanentWindowUnit": "day",
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Restoration"
+        }
+      },
+      "restoration-greater": {
+        "operation": "restore-negative-levels",
+        "removeActive": "all-removable",
+        "permanentLevels": "all-eligible",
+        "permanentWindowUnit": "week",
+        "source": {
+          "file": "SPELLBOOK.txt",
+          "heading": "Restoration, Greater"
+        }
+      }
+    },
+    "sheetConditionRulesById": {
+      "ability-damaged": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "scoreLoss": {
+            "ledger": "ability-damage",
+            "zeroScoreConditions": {
+              "str": [
+                "prone",
+                "helpless"
+              ],
+              "dex": [
+                "paralyzed"
+              ],
+              "con": [
+                "dead"
+              ],
+              "int": [
+                "unconscious"
+              ],
+              "wis": [
+                "unconscious"
+              ],
+              "cha": [
+                "unconscious"
+              ]
+            },
+            "defaultRecovery": {
+              "points": 1,
+              "unit": "day",
+              "sourceMayOverride": true
+            }
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 5
+        }
+      },
+      "ability-drained": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "scoreLoss": {
+            "ledger": "ability-drain",
+            "zeroScoreConditions": {
+              "str": [
+                "prone",
+                "helpless"
+              ],
+              "dex": [
+                "paralyzed"
+              ],
+              "con": [
+                "dead"
+              ],
+              "int": [
+                "unconscious"
+              ],
+              "wis": [
+                "unconscious"
+              ],
+              "cha": [
+                "unconscious"
+              ]
+            },
+            "recovery": "magic-only"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 8
+        }
+      },
+      "blinded": {
+        "flags": [
+          "denied-dex-to-ac",
+          "half-speed",
+          "no-vision"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:blinded:0",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:blinded:1",
+            "operation": "modifier",
+            "statId": "skill:search",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:blinded:2",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "blindnessPhysicalSkillPenalty": true
+            }
+          }
+        ],
+        "operations": {
+          "automaticFailure": {
+            "requiresSense": "vision"
+          },
+          "opponentConcealment": {
+            "missChancePercent": 50
+          },
+          "exceptionReview": "long-term-adaptation"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 11
+        }
+      },
+      "blown-away": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "forcedMovement": {
+            "ground": {
+              "distanceDice": "1d4",
+              "feetPerUnit": 10,
+              "nonlethalDicePerUnit": "1d4",
+              "applyConditionId": "knocked-down"
+            },
+            "flying": {
+              "distanceDice": "2d6",
+              "feetPerUnit": 10,
+              "nonlethalDice": "2d6",
+              "direction": "backward"
+            }
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 13
+        }
+      },
+      "checked": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "forcedMovement": {
+            "ground": {
+              "stopForwardMotion": true
+            },
+            "flying": {
+              "backwardDistanceFrom": "source"
+            }
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 15
+        }
+      },
+      "confused": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "behavior": {
+            "trigger": "start-turn",
+            "dice": "1d100",
+            "outcomes": [
+              [
+                1,
+                10,
+                "attack-or-close-with-caster"
+              ],
+              [
+                11,
+                20,
+                "act-normally"
+              ],
+              [
+                21,
+                50,
+                "babble"
+              ],
+              [
+                51,
+                70,
+                "flee-caster-at-top-speed"
+              ],
+              [
+                71,
+                100,
+                "attack-nearest-creature"
+              ]
+            ],
+            "familiarCountsAsSelf": true,
+            "fallback": "babble",
+            "ifAttackedNextTurn": "attack-attacker",
+            "opportunityAttacks": "current-target-only"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 17
+        }
+      },
+      "cowering": {
+        "flags": [
+          "no-actions",
+          "denied-dex-to-ac"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:cowering:0",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {},
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 19
+        }
+      },
+      "dazed": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "typicalDuration": {
+            "amount": 1,
+            "unit": "round"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 21
+        }
+      },
+      "dazzled": {
+        "flags": [],
+        "modifiers": [
+          {
+            "id": "condition:dazzled:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -1,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:dazzled:1",
+            "operation": "modifier",
+            "statId": "skill:search",
+            "amount": -1,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:dazzled:2",
+            "operation": "modifier",
+            "statId": "skill:spot",
+            "amount": -1,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {},
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 24
+        }
+      },
+      "dead": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "triggers": {
+            "hpAtMost": -10,
+            "constitutionEquals": 0,
+            "instantDeath": true
+          },
+          "recovery": {
+            "normalHealing": false,
+            "magicalHealing": false,
+            "revival": "source-defined"
+          },
+          "body": {
+            "soulDeparts": true,
+            "decaysUnlessPreserved": true
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 26
+        }
+      },
+      "deafened": {
+        "flags": [
+          "no-hearing"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:deafened:0",
+            "operation": "modifier",
+            "statId": "initiative",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "automaticFailure": {
+            "skillId": "listen"
+          },
+          "spellFailure": {
+            "component": "verbal",
+            "chancePercent": 20
+          },
+          "exceptionReview": "long-term-adaptation"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 28
+        }
+      },
+      "disabled": {
+        "flags": [
+          "half-speed",
+          "single-move-or-standard"
+        ],
+        "modifiers": [],
+        "operations": {
+          "actionBudget": {
+            "maximum": 1,
+            "allowed": [
+              "move",
+              "standard"
+            ],
+            "fullRound": false
+          },
+          "strenuousAction": {
+            "trigger": "action-completed",
+            "hpDamage": 1,
+            "standardIsStrenuous": true,
+            "otherActions": "dm-determines-strenuousness"
+          },
+          "unaidedRecovery": {
+            "unit": "day",
+            "successPercent": 10,
+            "success": "begin-natural-healing",
+            "failureHpLoss": 1
+          },
+          "aidedRecovery": "natural-healing"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 30
+        }
+      },
+      "dying": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "unconscious"
+          ],
+          "hpRange": [
+            -9,
+            -1
+          ],
+          "stabilization": {
+            "trigger": "end-round",
+            "chancePercent": 10,
+            "successConditionId": "stable",
+            "failureHpLoss": 1
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 34
+        }
+      },
+      "energy-drained": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "derivedFrom": {
+            "path": "/mechanics/negativeLevels",
+            "state": "activeNegativeLevelCount"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 36
+        }
+      },
+      "entangled": {
+        "flags": [
+          "half-speed",
+          "no-run",
+          "no-charge"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:entangled:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:entangled:1",
+            "operation": "modifier",
+            "statId": "ability:dex",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "movementConstraint": {
+            "immobileIf": [
+              "anchored",
+              "opposing-tether"
+            ]
+          },
+          "castingCheck": {
+            "skillId": "concentration",
+            "dcBase": 15,
+            "add": "spell-level",
+            "failure": "lose-spell"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 39
+        }
+      },
+      "exhausted": {
+        "flags": [
+          "half-speed",
+          "no-run",
+          "no-charge"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:exhausted:0",
+            "operation": "modifier",
+            "statId": "ability:str",
+            "amount": -6,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:exhausted:1",
+            "operation": "modifier",
+            "statId": "ability:dex",
+            "amount": -6,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "stateChangeId": "fatigue",
+          "supersedes": [
+            "fatigued"
+          ]
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 41
+        }
+      },
+      "fascinated": {
+        "flags": [
+          "attention-only"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:fascinated:0",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "reactionCheck": true
+            }
+          }
+        ],
+        "operations": {
+          "endTriggers": {
+            "potential-threat": "repeat-save",
+            "obvious-threat": "end",
+            "ally-standard-action": "end"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 43
+        }
+      },
+      "fatigued": {
+        "flags": [
+          "no-run",
+          "no-charge"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:fatigued:0",
+            "operation": "modifier",
+            "statId": "ability:str",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:fatigued:1",
+            "operation": "modifier",
+            "statId": "ability:dex",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "stateChangeId": "fatigue"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 45
+        }
+      },
+      "flat-footed": {
+        "flags": [
+          "denied-dex-to-ac",
+          "no-opportunity-attacks"
+        ],
+        "modifiers": [],
+        "operations": {
+          "endTrigger": "first-action-in-combat"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 47
+        }
+      },
+      "frightened": {
+        "flags": [
+          "must-flee-if-possible"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:frightened:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:frightened:1",
+            "operation": "modifier",
+            "statId": "save",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:frightened:2",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:frightened:3",
+            "operation": "modifier",
+            "statId": "ability-check",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "stateChangeId": "fear",
+          "flight": {
+            "fightIfBlocked": true,
+            "mustUseAbilitiesIfOnlyEscape": true
+          },
+          "supersedes": [
+            "shaken"
+          ]
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 49
+        }
+      },
+      "grappling": {
+        "flags": [
+          "does-not-threaten"
+        ],
+        "modifiers": [],
+        "operations": {
+          "defense": {
+            "denyDexAgainst": "outside-grapple"
+          },
+          "actionRules": "grapple"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 52
+        }
+      },
+      "helpless": {
+        "flags": [],
+        "modifiers": [
+          {
+            "id": "condition:helpless:0",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "incomingAttackKind": "melee"
+            }
+          }
+        ],
+        "operations": {
+          "effectiveScores": {
+            "dex": 0
+          },
+          "enablesSneakAttack": true,
+          "coupDeGrace": {
+            "action": "full-round",
+            "provokes": true,
+            "weapons": [
+              "melee",
+              "bow",
+              "crossbow"
+            ],
+            "adjacentForRanged": true,
+            "automaticHit": true,
+            "automaticCritical": true,
+            "sneakAttackApplies": true,
+            "save": "fortitude",
+            "dcBase": 10,
+            "add": "damage-dealt",
+            "failure": "dead",
+            "skipCriticalAndSaveIfImmuneToCriticals": true
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 55
+        }
+      },
+      "incorporeal": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "allowedDamageSources": [
+            "incorporeal-creature",
+            "magic-weapon-plus-one-or-better",
+            "spell",
+            "spell-like",
+            "supernatural"
+          ],
+          "additionalRules": "incorporeality"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 63
+        }
+      },
+      "invisible": {
+        "flags": [
+          "visually-undetectable"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:invisible:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": 2,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "opponentSighted": true
+            }
+          }
+        ],
+        "operations": {
+          "targetDefense": {
+            "denyDexterityBonus": true
+          },
+          "additionalRules": "invisibility"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 66
+        }
+      },
+      "knocked-down": {
+        "flags": [],
+        "modifiers": [],
+        "operations": {
+          "forcedMovement": {
+            "ground": {
+              "applyConditionId": "prone"
+            },
+            "flying": {
+              "distanceDice": "1d6",
+              "feetPerUnit": 10,
+              "direction": "backward"
+            }
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 68
+        }
+      },
+      "nauseated": {
+        "flags": [
+          "single-move-only"
+        ],
+        "modifiers": [],
+        "operations": {
+          "actionBudget": {
+            "maximum": 1,
+            "allowed": [
+              "move"
+            ]
+          },
+          "prohibitedActions": [
+            "attack",
+            "cast",
+            "concentrate",
+            "requires-attention"
+          ]
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 70
+        }
+      },
+      "panicked": {
+        "flags": [
+          "drop-held",
+          "flee-only"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:panicked:0",
+            "operation": "modifier",
+            "statId": "save",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:panicked:1",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:panicked:2",
+            "operation": "modifier",
+            "statId": "ability-check",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "stateChangeId": "fear",
+          "flight": {
+            "topSpeed": true,
+            "randomPath": true,
+            "avoidOtherDangers": true,
+            "ifCornered": "cowering",
+            "typicalCorneredAction": "total-defense",
+            "mustUseAbilitiesIfOnlyEscape": true
+          },
+          "supersedes": [
+            "frightened",
+            "shaken"
+          ]
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 72
+        }
+      },
+      "paralyzed": {
+        "flags": [
+          "immobile",
+          "mental-actions-only"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "helpless"
+          ],
+          "effectiveScores": {
+            "str": 0,
+            "dex": 0
+          },
+          "hazards": {
+            "wingedFlight": "fall",
+            "swimming": "cannot-swim"
+          },
+          "occupiedSquareMovementCost": 2
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 75
+        }
+      },
+      "petrified": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "unconscious"
+          ],
+          "restoration": {
+            "intactOrReassembled": "unharmed",
+            "missingParts": [
+              "permanent-hp-loss",
+              "debilitation"
+            ]
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 77
+        }
+      },
+      "pinned": {
+        "flags": [
+          "immobile"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "grappling"
+          ],
+          "actionRules": "pinned-in-grapple",
+          "grantsHelpless": false
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 79
+        }
+      },
+      "prone": {
+        "flags": [],
+        "modifiers": [
+          {
+            "id": "condition:prone:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "attackKind": "melee"
+            }
+          },
+          {
+            "id": "condition:prone:1",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": 4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "incomingAttackKind": "ranged"
+            }
+          },
+          {
+            "id": "condition:prone:2",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": -4,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "incomingAttackKind": "melee"
+            }
+          }
+        ],
+        "operations": {
+          "prohibitedWeaponUse": {
+            "kind": "ranged",
+            "except": [
+              "crossbow"
+            ]
+          },
+          "stand": {
+            "action": "move",
+            "provokes": true
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 81
+        }
+      },
+      "shaken": {
+        "flags": [],
+        "modifiers": [
+          {
+            "id": "condition:shaken:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:shaken:1",
+            "operation": "modifier",
+            "statId": "save",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:shaken:2",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:shaken:3",
+            "operation": "modifier",
+            "statId": "ability-check",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {
+          "stateChangeId": "fear"
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 84
+        }
+      },
+      "sickened": {
+        "flags": [],
+        "modifiers": [
+          {
+            "id": "condition:sickened:0",
+            "operation": "modifier",
+            "statId": "attack",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:sickened:1",
+            "operation": "modifier",
+            "statId": "save",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:sickened:2",
+            "operation": "modifier",
+            "statId": "skill",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:sickened:3",
+            "operation": "modifier",
+            "statId": "ability-check",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          },
+          {
+            "id": "condition:sickened:4",
+            "operation": "modifier",
+            "statId": "damage",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect",
+            "requires": {
+              "damageKind": "weapon"
+            }
+          }
+        ],
+        "operations": {},
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 87
+        }
+      },
+      "stable": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "unconscious"
+          ],
+          "supersedes": [
+            "dying"
+          ],
+          "wakeCheck": {
+            "unit": "hour",
+            "chancePercent": 10,
+            "successConditionId": "disabled",
+            "unaidedFailureHpLoss": 1
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 89
+        }
+      },
+      "staggered": {
+        "flags": [
+          "single-move-or-standard"
+        ],
+        "modifiers": [],
+        "operations": {
+          "actionBudget": {
+            "maximum": 1,
+            "allowed": [
+              "move",
+              "standard"
+            ],
+            "fullRound": false
+          },
+          "comparison": {
+            "whenEqual": "staggered",
+            "whenNonlethalHigher": "unconscious",
+            "whenNonlethalLower": "clear"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 93
+        }
+      },
+      "stunned": {
+        "flags": [
+          "no-actions",
+          "drop-held",
+          "denied-dex-to-ac"
+        ],
+        "modifiers": [
+          {
+            "id": "condition:stunned:0",
+            "operation": "modifier",
+            "statId": "ac",
+            "amount": -2,
+            "bonusType": null,
+            "stacking": "once-per-effect"
+          }
+        ],
+        "operations": {},
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 97
+        }
+      },
+      "turned": {
+        "flags": [
+          "flee-only"
+        ],
+        "modifiers": [],
+        "operations": {
+          "flight": {
+            "topSpeed": true,
+            "ifBlocked": "cowering"
+          },
+          "duration": {
+            "amount": 10,
+            "unit": "round"
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 99
+        }
+      },
+      "unconscious": {
+        "flags": [
+          "no-actions"
+        ],
+        "modifiers": [],
+        "operations": {
+          "implies": [
+            "helpless"
+          ],
+          "triggers": {
+            "hpRange": [
+              -9,
+              -1
+            ],
+            "nonlethalExceedsHp": true
+          }
+        },
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 101
+        }
+      }
+    },
+    "stateChangesById": {
+      "fatigue": {
+        "initial": "clear",
+        "source": {
+          "file": "CONDITIONS.txt",
+          "line": 45
+        },
+        "transitions": [
+          {
+            "event": "fatigue-applied",
+            "from": [
+              "clear"
+            ],
+            "to": "fatigued",
+            "origin": "ordinary"
+          },
+          {
+            "event": "post-rage-fatigue",
+            "from": [
+              "clear"
+            ],
+            "to": "fatigued",
+            "origin": "encounter"
+          },
+          {
+            "event": "fatigue-applied",
+            "from": [
+              "fatigued"
+            ],
+            "to": "exhausted"
+          },
+          {
+            "event": "post-rage-fatigue",
+            "from": [
+              "fatigued"
+            ],
+            "to": "exhausted"
+          },
+          {
+            "event": "encounter-ended",
+            "from": [
+              "fatigued"
+            ],
+            "to": "clear",
+            "onlyOrigin": "encounter"
+          },
+          {
+            "event": "one-hour-complete-rest",
+            "from": [
+              "exhausted"
+            ],
+            "to": "fatigued",
+            "origin": "ordinary"
+          },
+          {
+            "event": "eight-hours-complete-rest",
+            "from": [
+              "fatigued"
+            ],
+            "to": "clear"
+          }
+        ]
+      },
+      "fear": {
+        "initial": "clear",
+        "source": {
+          "file": "SPECIAL ABILITIES.txt",
+          "line": 307
+        },
+        "transitions": [
+          {
+            "event": "shaken-applied",
+            "from": [
+              "clear"
+            ],
+            "to": "shaken"
+          },
+          {
+            "event": "frightened-applied",
+            "from": [
+              "clear"
+            ],
+            "to": "frightened"
+          },
+          {
+            "event": "panicked-applied",
+            "from": [
+              "clear"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "shaken-applied",
+            "from": [
+              "shaken"
+            ],
+            "to": "frightened"
+          },
+          {
+            "event": "frightened-applied",
+            "from": [
+              "shaken"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "panicked-applied",
+            "from": [
+              "shaken"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "shaken-applied",
+            "from": [
+              "frightened"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "frightened-applied",
+            "from": [
+              "frightened"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "panicked-applied",
+            "from": [
+              "frightened"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "shaken-applied",
+            "from": [
+              "panicked"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "frightened-applied",
+            "from": [
+              "panicked"
+            ],
+            "to": "panicked"
+          },
+          {
+            "event": "panicked-applied",
+            "from": [
+              "panicked"
+            ],
+            "to": "panicked"
+          }
+        ]
+      },
+      "rage": {
+        "initial": "inactive",
+        "source": {
+          "file": "BARBARIAN.txt",
+          "line": 67
+        },
+        "transitions": [
+          {
+            "event": "rage-started",
+            "from": [
+              "inactive"
+            ],
+            "to": "raging"
+          },
+          {
+            "event": "rage-ended",
+            "from": [
+              "raging"
+            ],
+            "to": "inactive",
+            "requires": {
+              "tirelessRage": true
+            }
+          },
+          {
+            "event": "rage-ended",
+            "from": [
+              "raging"
+            ],
+            "to": "inactive",
+            "requires": {
+              "tirelessRage": false
+            },
+            "emit": [
+              "post-rage-fatigue"
+            ]
+          }
+        ]
+      },
+      "vampire-sunlight": {
+        "initial": "clear",
+        "referenceOnly": true,
+        "source": {
+          "file": "dnd35_templates.json",
+          "templateId": "vampire",
+          "effectIndex": 21
+        },
+        "transitions": [
+          {
+            "event": "sunlight-entered",
+            "from": [
+              "clear"
+            ],
+            "to": "exposed"
+          },
+          {
+            "event": "sunlight-left",
+            "from": [
+              "exposed"
+            ],
+            "to": "clear"
+          },
+          {
+            "event": "next-round-still-exposed",
+            "from": [
+              "exposed"
+            ],
+            "to": "destroyed"
+          }
+        ],
+        "statesById": {
+          "exposed": {
+            "allowedActionChoice": [
+              "move",
+              "attack"
+            ],
+            "actionsMaximum": 1
+          }
+        }
+      }
     },
     "featEffectsByFeatId": {
       "acrobatic": [
@@ -163745,29 +166113,6 @@
         }
       },
       {
-        "id": "monk-continuous-levels",
-        "name": "Monk Level Continuity",
-        "category": "class-mechanic",
-        "status": "structured",
-        "source": {
-          "file": "MONK.txt",
-          "line": 139,
-          "excerpt": "Like a member of any other class, a monk may be a multiclass character, but multiclass monks face a special restriction. A monk who gains a new class or (if already multiclass) raises another class by a level may never again raise her monk level, though she retains all her monk abilities."
-        },
-        "appliesTo": {
-          "classIds": [
-            "monk"
-          ]
-        },
-        "mechanic": {
-          "type": "level-sequence-constraint",
-          "parameters": {
-            "classId": "monk",
-            "constraint": "cannot-return-after-advancing-another-class"
-          }
-        }
-      },
-      {
         "id": "paladin-continuous-levels",
         "name": "Paladin Level Continuity",
         "category": "class-mechanic",
@@ -163775,7 +166120,7 @@
         "source": {
           "file": "PALADIN.txt",
           "line": 116,
-          "excerpt": "Like a member of any other class, a paladin may be a multiclass character, but multiclass paladins face a special restriction. A paladin who gains a level in any class other than paladin may never again raise her paladin level, though she retains all her paladin abilities."
+          "excerpt": "Like a member of any other class, a paladin may be a multiclass character, but multiclass paladins face a special restriction. A paladin who gains a level in any class other than paladin may never again raise her paladin level, though multiclassing itself does not remove her abilities. Her abilities remain subject to the alignment, conduct, and atonement rules above."
         },
         "appliesTo": {
           "classIds": [
@@ -164859,7 +167204,379 @@
         "standardOrMove": 1
       },
       "freeActions": "dm-limited"
-    }
+    },
+    "sizeCategoriesById": {
+      "fine": {
+        "order": 0,
+        "acAndAttack": 8,
+        "grapple": -16,
+        "hide": 16,
+        "spaceFt": 0.5,
+        "reachFt": 0.0,
+        "carryMultipliers": {
+          "biped": "0.125",
+          "quadruped": "0.25"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 60
+        }
+      },
+      "diminutive": {
+        "order": 1,
+        "acAndAttack": 4,
+        "grapple": -12,
+        "hide": 12,
+        "spaceFt": 1.0,
+        "reachFt": 0.0,
+        "carryMultipliers": {
+          "biped": "0.25",
+          "quadruped": "0.5"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 61
+        }
+      },
+      "tiny": {
+        "order": 2,
+        "acAndAttack": 2,
+        "grapple": -8,
+        "hide": 8,
+        "spaceFt": 2.5,
+        "reachFt": 0.0,
+        "carryMultipliers": {
+          "biped": "0.5",
+          "quadruped": "0.75"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 62
+        }
+      },
+      "small": {
+        "order": 3,
+        "acAndAttack": 1,
+        "grapple": -4,
+        "hide": 4,
+        "spaceFt": 5.0,
+        "reachFt": 5.0,
+        "carryMultipliers": {
+          "biped": "0.75",
+          "quadruped": "1"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 63
+        }
+      },
+      "medium": {
+        "order": 4,
+        "acAndAttack": 0,
+        "grapple": 0,
+        "hide": 0,
+        "spaceFt": 5.0,
+        "reachFt": 5.0,
+        "carryMultipliers": {
+          "biped": "1",
+          "quadruped": "1.5"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 64
+        }
+      },
+      "large": {
+        "order": 5,
+        "acAndAttack": -1,
+        "grapple": 4,
+        "hide": -4,
+        "spaceFt": 10.0,
+        "reachFt": 10.0,
+        "carryMultipliers": {
+          "biped": "2",
+          "quadruped": "3"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 65
+        }
+      },
+      "huge": {
+        "order": 6,
+        "acAndAttack": -2,
+        "grapple": 8,
+        "hide": -8,
+        "spaceFt": 15.0,
+        "reachFt": 15.0,
+        "carryMultipliers": {
+          "biped": "4",
+          "quadruped": "6"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 66
+        }
+      },
+      "gargantuan": {
+        "order": 7,
+        "acAndAttack": -4,
+        "grapple": 12,
+        "hide": -12,
+        "spaceFt": 20.0,
+        "reachFt": 20.0,
+        "carryMultipliers": {
+          "biped": "8",
+          "quadruped": "12"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 67
+        }
+      },
+      "colossal": {
+        "order": 8,
+        "acAndAttack": -8,
+        "grapple": 16,
+        "hide": -16,
+        "spaceFt": 30.0,
+        "reachFt": 30.0,
+        "carryMultipliers": {
+          "biped": "16",
+          "quadruped": "24"
+        },
+        "source": {
+          "file": "RULES.txt",
+          "line": 68
+        }
+      }
+    },
+    "negativeLevels": {
+      "modifiersPerLevel": {
+        "skill": -1,
+        "ability-check": -1,
+        "attack": -1,
+        "save": -1,
+        "hp": -5
+      },
+      "effectiveLevelPenalty": 1,
+      "immediateSpellLossPerLevel": 1,
+      "recoverySlotLossPerLevel": 1,
+      "drainDurationHours": 24,
+      "fortitudeDcBase": 10,
+      "dcAttackerHdDivisor": 2,
+      "permanentLevelLossOnFailure": 1,
+      "bestowerTemporaryHpPerLevel": 5,
+      "source": {
+        "file": "SPECIAL ABILITIES.txt",
+        "line": 233
+      }
+    },
+    "alignmentsById": {
+      "LG": {
+        "name": "Lawful Good",
+        "orderAxis": "law",
+        "moralAxis": "good",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 38
+        }
+      },
+      "NG": {
+        "name": "Neutral Good",
+        "orderAxis": "neutral",
+        "moralAxis": "good",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 42
+        }
+      },
+      "CG": {
+        "name": "Chaotic Good",
+        "orderAxis": "chaos",
+        "moralAxis": "good",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 46
+        }
+      },
+      "LN": {
+        "name": "Lawful Neutral",
+        "orderAxis": "law",
+        "moralAxis": "neutral",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 50
+        }
+      },
+      "N": {
+        "name": "Neutral",
+        "orderAxis": "neutral",
+        "moralAxis": "neutral",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 54
+        }
+      },
+      "CN": {
+        "name": "Chaotic Neutral",
+        "orderAxis": "chaos",
+        "moralAxis": "neutral",
+        "playerStandard": true,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 60
+        }
+      },
+      "LE": {
+        "name": "Lawful Evil",
+        "orderAxis": "law",
+        "moralAxis": "evil",
+        "playerStandard": false,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 64
+        }
+      },
+      "NE": {
+        "name": "Neutral Evil",
+        "orderAxis": "neutral",
+        "moralAxis": "evil",
+        "playerStandard": false,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 72
+        }
+      },
+      "CE": {
+        "name": "Chaotic Evil",
+        "orderAxis": "chaos",
+        "moralAxis": "evil",
+        "playerStandard": false,
+        "source": {
+          "file": "ALIGNMENT.txt",
+          "line": 78
+        }
+      }
+    },
+    "alignmentConsequencesByClassId": {
+      "barbarian": {
+        "featurePolicy": "lose-rage-only",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "BARBARIAN.txt",
+          "line": 88
+        }
+      },
+      "bard": {
+        "featurePolicy": "retain-features",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "BARD.txt",
+          "line": 149
+        }
+      },
+      "monk": {
+        "featurePolicy": "retain-features",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "MONK.txt",
+          "line": 137
+        }
+      },
+      "paladin": {
+        "featurePolicy": "retain-proficiencies-only",
+        "requiresAtonement": true,
+        "triggeredByIneligibleAlignment": true,
+        "conductTriggers": [
+          "willful-evil-act",
+          "gross-code-violation"
+        ],
+        "source": {
+          "file": "PALADIN.txt",
+          "line": 114
+        }
+      },
+      "druid": {
+        "featurePolicy": "retain-proficiencies-only",
+        "requiresAtonement": true,
+        "triggeredByIneligibleAlignment": true,
+        "conductTriggers": [
+          "cease-revering-nature",
+          "teach-druidic-to-nondruid"
+        ],
+        "source": {
+          "file": "DRUID.txt",
+          "line": 137
+        }
+      },
+      "cleric": {
+        "featurePolicy": "retain-armor-shield-simple-weapons",
+        "requiresAtonement": true,
+        "triggeredByIneligibleAlignment": false,
+        "conductTriggers": [
+          "gross-deity-code-violation"
+        ],
+        "source": {
+          "file": "CLERIC.txt",
+          "line": 105
+        }
+      },
+      "assassin": {
+        "featurePolicy": "suppress-class-abilities",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "restoresOnCompatibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "Prestige Class ASSASSIN.txt",
+          "line": 124
+        }
+      },
+      "blackguard": {
+        "featurePolicy": "suppress-class-abilities",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "restoresOnCompatibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "Prestige Class BLACKGUARD.txt",
+          "line": 150
+        }
+      },
+      "dwarven-defender": {
+        "featurePolicy": "suppress-class-abilities",
+        "requiresAtonement": false,
+        "triggeredByIneligibleAlignment": true,
+        "restoresOnCompatibleAlignment": true,
+        "conductTriggers": [],
+        "source": {
+          "file": "Prestige Class DWARVEN DEFENDER.txt",
+          "line": 65
+        }
+      }
+    },
+    "abilityScoreNonability": {
+      "score": null,
+      "modifier": 0,
+      "appliesScoreAdjustments": false,
+      "source": {
+        "file": "RULES.txt",
+        "line": 302
+      }
+    },
+    "sizeModifierPolicy": "derive-from-current-size-do-not-add-legacy-racial-size-bonuses"
   },
   "referenceIndexes": {
     "stats": {
@@ -197034,6 +199751,296 @@
         "file": "PULLED VEHICLES.txt",
         "heading": "PULLED VEHICLES"
       }
+    },
+    "equipmentSizeRules": {
+      "armorBySize": {
+        "fine": {
+          "humanoid": {
+            "cost": "1/2",
+            "weight": "1/10"
+          },
+          "nonhumanoid": {
+            "cost": "1",
+            "weight": "1/10"
+          },
+          "armorBonusMultiplier": "1/2",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 141
+          }
+        },
+        "diminutive": {
+          "humanoid": {
+            "cost": "1/2",
+            "weight": "1/10"
+          },
+          "nonhumanoid": {
+            "cost": "1",
+            "weight": "1/10"
+          },
+          "armorBonusMultiplier": "1/2",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 142
+          }
+        },
+        "tiny": {
+          "humanoid": {
+            "cost": "1/2",
+            "weight": "1/10"
+          },
+          "nonhumanoid": {
+            "cost": "1",
+            "weight": "1/10"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 143
+          }
+        },
+        "small": {
+          "humanoid": {
+            "cost": "1",
+            "weight": "1/2"
+          },
+          "nonhumanoid": {
+            "cost": "2",
+            "weight": "1/2"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 144
+          }
+        },
+        "medium": {
+          "humanoid": {
+            "cost": "1",
+            "weight": "1"
+          },
+          "nonhumanoid": {
+            "cost": "2",
+            "weight": "1"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 145
+          }
+        },
+        "large": {
+          "humanoid": {
+            "cost": "2",
+            "weight": "2"
+          },
+          "nonhumanoid": {
+            "cost": "4",
+            "weight": "2"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 146
+          }
+        },
+        "huge": {
+          "humanoid": {
+            "cost": "4",
+            "weight": "5"
+          },
+          "nonhumanoid": {
+            "cost": "8",
+            "weight": "5"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 147
+          }
+        },
+        "gargantuan": {
+          "humanoid": {
+            "cost": "8",
+            "weight": "8"
+          },
+          "nonhumanoid": {
+            "cost": "16",
+            "weight": "8"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 148
+          }
+        },
+        "colossal": {
+          "humanoid": {
+            "cost": "16",
+            "weight": "12"
+          },
+          "nonhumanoid": {
+            "cost": "32",
+            "weight": "12"
+          },
+          "armorBonusMultiplier": "1",
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 149
+          }
+        }
+      },
+      "weaponDamageByMediumDice": {
+        "1d2": {
+          "tiny": "—",
+          "large": "1d3"
+        },
+        "1d3": {
+          "tiny": "1",
+          "large": "1d4"
+        },
+        "1d4": {
+          "tiny": "1d2",
+          "large": "1d6"
+        },
+        "1d6": {
+          "tiny": "1d3",
+          "large": "1d8"
+        },
+        "1d8": {
+          "tiny": "1d4",
+          "large": "2d6"
+        },
+        "1d10": {
+          "tiny": "1d6",
+          "large": "2d8"
+        },
+        "1d12": {
+          "tiny": "1d8",
+          "large": "3d6"
+        },
+        "2d4": {
+          "tiny": "1d4",
+          "large": "2d6"
+        },
+        "2d6": {
+          "tiny": "1d8",
+          "large": "3d6"
+        },
+        "2d8": {
+          "tiny": "1d10",
+          "large": "3d8"
+        },
+        "2d10": {
+          "tiny": "2d6",
+          "large": "4d8"
+        }
+      },
+      "weaponPenaltyPerSizeStep": -2,
+      "weaponNonproficiencyPenalty": -4,
+      "armorRequiresFit": true,
+      "fullPlateRefit": {
+        "costDice": "2d4",
+        "multiplierCp": 10000,
+        "source": {
+          "file": "ARMOR.txt",
+          "headingOrLead": "Full Plate:"
+        }
+      },
+      "weaponSource": {
+        "file": "WEAPONS.txt",
+        "headingOrLead": "Inappropriately Sized Weapons:"
+      },
+      "armorSource": {
+        "file": "ARMOR.txt",
+        "headingOrLead": "ARMOR FOR UNUSUAL CREATURES"
+      }
+    },
+    "encumbranceByBand": {
+      "medium": {
+        "maxDexBonus": 3,
+        "checkPenalty": -3,
+        "speedByBaseFt": {
+          "30": 20,
+          "20": 15
+        },
+        "runMultiplier": 4,
+        "source": {
+          "file": "RULES.txt",
+          "line": 101
+        }
+      },
+      "heavy": {
+        "maxDexBonus": 1,
+        "checkPenalty": -6,
+        "speedByBaseFt": {
+          "30": 20,
+          "20": 15
+        },
+        "runMultiplier": 3,
+        "source": {
+          "file": "RULES.txt",
+          "line": 102
+        }
+      }
+    },
+    "weaponAlignmentPropertiesById": {
+      "holy": {
+        "name": "Holy",
+        "alignmentTag": "good",
+        "negativeLevel": {
+          "count": 1,
+          "target": "opposed-wielder",
+          "duration": "while-wielded",
+          "permanentDrain": false
+        },
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 373
+        }
+      },
+      "unholy": {
+        "name": "Unholy",
+        "alignmentTag": "evil",
+        "negativeLevel": {
+          "count": 1,
+          "target": "opposed-wielder",
+          "duration": "while-wielded",
+          "permanentDrain": false
+        },
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 374
+        }
+      },
+      "axiomatic": {
+        "name": "Axiomatic",
+        "alignmentTag": "law",
+        "negativeLevel": {
+          "count": 1,
+          "target": "opposed-wielder",
+          "duration": "while-wielded",
+          "permanentDrain": false
+        },
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 375
+        }
+      },
+      "anarchic": {
+        "name": "Anarchic",
+        "alignmentTag": "chaos",
+        "negativeLevel": {
+          "count": 1,
+          "target": "opposed-wielder",
+          "duration": "while-wielded",
+          "permanentDrain": false
+        },
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 376
+        }
+      }
     }
   },
   "companions": {
@@ -197059,7 +200066,8 @@
           "file": "FAMILIARS.txt",
           "line": 64
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "diminutive"
       },
       "familiars:cat": {
         "id": "familiars:cat",
@@ -197082,7 +200090,8 @@
           "file": "FAMILIARS.txt",
           "line": 124
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:hawk": {
         "id": "familiars:hawk",
@@ -197105,7 +200114,8 @@
           "file": "FAMILIARS.txt",
           "line": 187
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:lizard": {
         "id": "familiars:lizard",
@@ -197128,7 +200138,8 @@
           "file": "FAMILIARS.txt",
           "line": 248
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:owl": {
         "id": "familiars:owl",
@@ -197151,7 +200162,8 @@
           "file": "FAMILIARS.txt",
           "line": 309
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:rat": {
         "id": "familiars:rat",
@@ -197174,7 +200186,8 @@
           "file": "FAMILIARS.txt",
           "line": 370
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:raven": {
         "id": "familiars:raven",
@@ -197197,7 +200210,8 @@
           "file": "FAMILIARS.txt",
           "line": 438
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:snake-viper-tiny": {
         "id": "familiars:snake-viper-tiny",
@@ -197220,7 +200234,8 @@
           "file": "FAMILIARS.txt",
           "line": 496
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "familiars:toad": {
         "id": "familiars:toad",
@@ -197243,7 +200258,8 @@
           "file": "FAMILIARS.txt",
           "line": 558
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "diminutive"
       },
       "familiars:weasel": {
         "id": "familiars:weasel",
@@ -197266,7 +200282,8 @@
           "file": "FAMILIARS.txt",
           "line": 617
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "animal-companions:badger": {
         "id": "animal-companions:badger",
@@ -197289,7 +200306,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 38
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "small"
       },
       "animal-companions:camel": {
         "id": "animal-companions:camel",
@@ -197312,7 +200330,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 104
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "animal-companions:rat-dire": {
         "id": "animal-companions:rat-dire",
@@ -197335,7 +200354,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 167
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "small"
       },
       "animal-companions:dog": {
         "id": "animal-companions:dog",
@@ -197358,7 +200378,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 240
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "small"
       },
       "animal-companions:dog-riding": {
         "id": "animal-companions:dog-riding",
@@ -197381,7 +200402,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 302
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:eagle": {
         "id": "animal-companions:eagle",
@@ -197404,7 +200426,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 370
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "small"
       },
       "animal-companions:hawk": {
         "id": "animal-companions:hawk",
@@ -197427,7 +200450,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 431
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "animal-companions:horse-light": {
         "id": "animal-companions:horse-light",
@@ -197450,7 +200474,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 492
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "animal-companions:horse-heavy": {
         "id": "animal-companions:horse-heavy",
@@ -197473,7 +200498,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 557
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "animal-companions:owl": {
         "id": "animal-companions:owl",
@@ -197496,7 +200522,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 622
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "tiny"
       },
       "animal-companions:pony": {
         "id": "animal-companions:pony",
@@ -197519,7 +200546,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 683
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:snake-viper-small": {
         "id": "animal-companions:snake-viper-small",
@@ -197542,7 +200570,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 745
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "small"
       },
       "animal-companions:snake-viper-medium": {
         "id": "animal-companions:snake-viper-medium",
@@ -197565,7 +200594,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 807
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:wolf": {
         "id": "animal-companions:wolf",
@@ -197588,7 +200618,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 869
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:crocodile": {
         "id": "animal-companions:crocodile",
@@ -197611,7 +200642,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 936
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:porpoise": {
         "id": "animal-companions:porpoise",
@@ -197634,7 +200666,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 1003
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:shark-medium": {
         "id": "animal-companions:shark-medium",
@@ -197657,7 +200690,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 1070
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "animal-companions:squid": {
         "id": "animal-companions:squid",
@@ -197680,7 +200714,8 @@
           "file": "ANIMAL COMPANIONS.txt",
           "line": 1136
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:ape": {
         "id": "alternative-animal-companions:ape",
@@ -197703,7 +200738,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 7
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:weasel-dire": {
         "id": "alternative-animal-companions:weasel-dire",
@@ -197726,7 +200762,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 69
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:bear-black": {
         "id": "alternative-animal-companions:bear-black",
@@ -197749,7 +200786,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 146
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:leopard": {
         "id": "alternative-animal-companions:leopard",
@@ -197772,7 +200810,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 210
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:bison": {
         "id": "alternative-animal-companions:bison",
@@ -197795,7 +200834,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 282
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:lizard-monitor": {
         "id": "alternative-animal-companions:lizard-monitor",
@@ -197818,7 +200858,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 343
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:boar": {
         "id": "alternative-animal-companions:boar",
@@ -197841,7 +200882,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 406
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:shark-large": {
         "id": "alternative-animal-companions:shark-large",
@@ -197864,7 +200906,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 467
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:cheetah": {
         "id": "alternative-animal-companions:cheetah",
@@ -197887,7 +200930,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 534
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:snake-constrictor": {
         "id": "alternative-animal-companions:snake-constrictor",
@@ -197910,7 +200954,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 600
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:crocodile": {
         "id": "alternative-animal-companions:crocodile",
@@ -197933,7 +200978,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 665
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:snake-viper-large": {
         "id": "alternative-animal-companions:snake-viper-large",
@@ -197956,7 +201002,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 732
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:badger-dire": {
         "id": "alternative-animal-companions:badger-dire",
@@ -197979,7 +201026,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 794
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:wolverine": {
         "id": "alternative-animal-companions:wolverine",
@@ -198002,7 +201050,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 866
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:bat-dire": {
         "id": "alternative-animal-companions:bat-dire",
@@ -198025,7 +201074,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 930
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:bear-brown": {
         "id": "alternative-animal-companions:bear-brown",
@@ -198048,7 +201098,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1004
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:wolf-dire": {
         "id": "alternative-animal-companions:wolf-dire",
@@ -198071,7 +201122,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1070
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:wolverine-dire": {
         "id": "alternative-animal-companions:wolverine-dire",
@@ -198094,7 +201146,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1144
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:dinosaur-elasmosaurus": {
         "id": "alternative-animal-companions:dinosaur-elasmosaurus",
@@ -198117,7 +201170,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1215
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:crocodile-giant": {
         "id": "alternative-animal-companions:crocodile-giant",
@@ -198140,7 +201194,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1293
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:lion": {
         "id": "alternative-animal-companions:lion",
@@ -198163,7 +201218,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1361
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:dinosaur-deinonychus": {
         "id": "alternative-animal-companions:dinosaur-deinonychus",
@@ -198186,7 +201242,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1432
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "medium"
       },
       "alternative-animal-companions:rhinoceros": {
         "id": "alternative-animal-companions:rhinoceros",
@@ -198209,7 +201266,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1515
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:ape-dire": {
         "id": "alternative-animal-companions:ape-dire",
@@ -198232,7 +201290,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1581
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:snake-viper-huge": {
         "id": "alternative-animal-companions:snake-viper-huge",
@@ -198255,7 +201314,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1654
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:boar-dire": {
         "id": "alternative-animal-companions:boar-dire",
@@ -198278,7 +201338,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1717
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:tiger": {
         "id": "alternative-animal-companions:tiger",
@@ -198301,7 +201362,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1789
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:bear-polar": {
         "id": "alternative-animal-companions:bear-polar",
@@ -198324,7 +201386,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1861
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:shark-huge": {
         "id": "alternative-animal-companions:shark-huge",
@@ -198347,7 +201410,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 1932
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:lion-dire": {
         "id": "alternative-animal-companions:lion-dire",
@@ -198370,7 +201434,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2000
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:snake-giant-constrictor": {
         "id": "alternative-animal-companions:snake-giant-constrictor",
@@ -198393,7 +201458,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2082
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:dinosaur-megaraptor": {
         "id": "alternative-animal-companions:dinosaur-megaraptor",
@@ -198416,7 +201482,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2149
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:whale-orca": {
         "id": "alternative-animal-companions:whale-orca",
@@ -198439,7 +201506,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2233
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:bear-dire": {
         "id": "alternative-animal-companions:bear-dire",
@@ -198462,7 +201530,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2309
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:octopus-giant": {
         "id": "alternative-animal-companions:octopus-giant",
@@ -198485,7 +201554,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2383
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:elephant": {
         "id": "alternative-animal-companions:elephant",
@@ -198508,7 +201578,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2461
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:shark-dire": {
         "id": "alternative-animal-companions:shark-dire",
@@ -198531,7 +201602,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2531
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:dinosaur-triceratops": {
         "id": "alternative-animal-companions:dinosaur-triceratops",
@@ -198554,7 +201626,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2612
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:tiger-dire": {
         "id": "alternative-animal-companions:tiger-dire",
@@ -198577,7 +201650,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2694
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "large"
       },
       "alternative-animal-companions:dinosaur-tyrannosaurus": {
         "id": "alternative-animal-companions:dinosaur-tyrannosaurus",
@@ -198600,7 +201674,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2776
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "alternative-animal-companions:squid-giant": {
         "id": "alternative-animal-companions:squid-giant",
@@ -198623,7 +201698,8 @@
           "file": "ALTERNATIVE ANIMAL COMPANIONS.txt",
           "line": 2866
         },
-        "automation": "partial"
+        "automation": "partial",
+        "sizeId": "huge"
       },
       "beasts-of-burden:pony": {
         "id": "beasts-of-burden:pony",
@@ -198668,7 +201744,8 @@
         "raw": "Pony\n\nMedium Animal — CR 0.25\n\nHit Dice\n    2d8+2 (11 hp)\nInitiative\n    +1\nSpeed\n    Land 40 ft\nSTR\n    13\nDEX\n    13\nCON\n    12\nINT\n    2\nWIS\n    11\nCHA\n    4\nFort / Ref / Will\n    +4 / +4 / +0\n\nSpecial Abilities\nLow-Light Vision\nScent\n\nFeats\nEndurance\n\nDescription\n\nThe statistics presented here describe a small horse, under 5 feet tall at the shoulder. Ponies are otherwise similar to light horses.\n\nCarrying Capacity: A light load for a pony is up to 75 pounds; a medium load, 76–150 pounds; and a heavy load, 151–225 pounds. A pony can drag 1,125 pounds.",
         "featNames": [
           "Endurance"
-        ]
+        ],
+        "sizeId": "medium"
       },
       "beasts-of-burden:donkey": {
         "id": "beasts-of-burden:donkey",
@@ -198713,7 +201790,8 @@
         "raw": "Donkey\n\nMedium Animal — CR 0.17\n\nHit Dice\n    2d8+2 (11 hp)\nInitiative\n    +1\nSpeed\n    Land 30 ft\nSTR\n    10\nDEX\n    13\nCON\n    12\nINT\n    2\nWIS\n    11\nCHA\n    4\nFort / Ref / Will\n    +4 / +4 / +0\n\nSpecial Abilities\nLow-Light Vision\nScent\n\nFeats\nEndurance\n\nDescription\n\nThese long-eared, horselike creatures are surefooted and sturdy. The statistics presented here could also describe burros.\n\nCarrying Capacity: A light load for a donkey is up to 50 pounds; a medium load, 51–100 pounds; and a heavy load, 101–150 pounds. A donkey can drag 750 pounds.",
         "featNames": [
           "Endurance"
-        ]
+        ],
+        "sizeId": "medium"
       },
       "beasts-of-burden:mule": {
         "id": "beasts-of-burden:mule",
@@ -198762,7 +201840,8 @@
         "featNames": [
           "Alertness",
           "Endurance"
-        ]
+        ],
+        "sizeId": "large"
       },
       "beasts-of-burden:ox": {
         "id": "beasts-of-burden:ox",
@@ -198812,7 +201891,8 @@
         "featNames": [
           "Alertness",
           "Endurance"
-        ]
+        ],
+        "sizeId": "large"
       },
       "beasts-of-burden:horse-light": {
         "id": "beasts-of-burden:horse-light",
@@ -198860,7 +201940,8 @@
         "featNames": [
           "Endurance",
           "Run"
-        ]
+        ],
+        "sizeId": "large"
       },
       "beasts-of-burden:horse-heavy": {
         "id": "beasts-of-burden:horse-heavy",
@@ -198908,7 +201989,8 @@
         "featNames": [
           "Endurance",
           "Run"
-        ]
+        ],
+        "sizeId": "large"
       }
     },
     "familiarAdvancement": [

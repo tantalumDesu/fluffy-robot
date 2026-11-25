@@ -62,3 +62,4 @@ If a character gains uncanny dodge (see above) from a second class the character
 
 Mobile Defense (Ex): At 8th level, a dwarven defender can adjust his position while maintaining a defensive stance. While in a defensive stance, he can take one 5-foot step each round without losing the benefit of the stance.
 
+Alignment Loss (table rule): A dwarven defender who no longer meets the class alignment requirement loses access to class abilities and cannot gain further levels in the class. Returning to a qualifying alignment restores those abilities and permits further advancement without atonement.
