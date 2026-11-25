@@ -8,6 +8,10 @@ import re
 import unicodedata
 
 if __package__:
+    from .source_text import normalized, spell_sources
+    from .effect_policy import POLICY, annotate
+    from .condition_cures import catalog as cure_catalog
+    from .injury import catalog as injury_catalog
     from .condition_rules import catalog as condition_catalog
     from .alignment import alignment_catalog
     from .creature_size import catalogs as size_catalogs
@@ -20,6 +24,10 @@ if __package__:
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from source_text import normalized, spell_sources
+    from effect_policy import POLICY, annotate
+    from condition_cures import catalog as cure_catalog
+    from injury import catalog as injury_catalog
     from condition_rules import catalog as condition_catalog
     from alignment import alignment_catalog
     from creature_size import catalogs as size_catalogs
@@ -241,6 +249,7 @@ def build(old):
             record['ruleIds'] = [*record.get('ruleIds', []), rule_id]
     groups['progression']['classes'] = classes
     spells = []
+    source_spells = spell_sources(lines)
     for spell in groups['magic']['spells']:
         spell = spell.copy()
         for alias, canonical in (('description', 'longDescription'), ('summary', 'shortDescription')):
@@ -248,6 +257,8 @@ def build(old):
                 if spell[alias] != spell.get(canonical):
                     raise ValueError(f"Non-duplicate spell field: {spell['id']}.{alias}")
                 del spell[alias]
+        if spell['file'] == 'SPELLBOOK.txt':
+            spell['shortDescription'], spell['longDescription'] = source_spells[normalized(spell['name'])]
         spells.append(spell)
     for spell in spells:
         spell['timing'] = dict(casting=casting_timing(spell['castingTime']['raw']),
@@ -285,12 +296,21 @@ def build(old):
     conditions = groups['effects']['conditions']
     if set(policies) != {condition['id'] for condition in conditions}:
         raise ValueError('Typed condition catalogue does not match named conditions')
-    for condition in conditions:
+    for position, condition in enumerate(conditions):
         key = condition['id']
         condition['mechanics'] = policies[key]
+        start = policies[key]['source']['line'] - 1
+        end = policies[conditions[position + 1]['id']]['source']['line'] - 1 if position + 1 < len(conditions) else len(condition_text)
+        condition['desc'] = '\n'.join(condition_text[start:end]).split(':', 1)[1].split(
+            'Tracking progressive fatigue:', 1)[0].strip()
         if key == 'energy-drained':
             condition['references'].update(inflictedBySpells=['energy-drain', 'enervation'], mentionedInSpells=[])
     groups['effects']['sheetConditionRulesById'] = policies
+    cures = cure_catalog()
+    if not set(cures) <= {spell['id'] for spell in spells} or any(
+            not set(rule['conditionIds']) <= policies.keys() for rule in cures.values()):
+        raise ValueError('Unknown spell or condition in cure catalogue')
+    groups['effects']['conditionCuresBySpellId'] = cures
     def rule(event, states, to, **extra):
         return dict(event=event, **{'from': states}, to=to, **extra)
 
@@ -327,16 +347,21 @@ def build(old):
     groups['effects']['featEffectsByFeatId'] = feat_effects
     for key in feat_effects:
         feat_records[key]['automation'] = 'partial'
+    for entries in (*spell_effects.values(), *feat_effects.values(),
+                    *(rule['modifiers'] for rule in policies.values())):
+        annotate(entries)
     groups['effects']['applicationPolicy'] = {
+        **POLICY,
         'classEffectsPath': '/progression/classes/*/abilities/*/effects',
         'conditionDefinitionsPath': '/effects/conditions',
-        'spellAutomation': 'manual-unless-explicitly-implemented',
+        'spellAutomation': 'recipient-sheet-numbers-only',
         'referencesAreNotGrants': True,
         'persistActiveInstancesOnTarget': True,
     }
     size_categories, equipment_size_rules = size_catalogs(lines, table)
     groups['mechanics']['sizeCategoriesById'] = size_categories
     alignments, alignment_consequences = alignment_catalog(lines)
+    groups['mechanics']['injury'] = injury_catalog(lines)
     groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
     groups['mechanics']['alignmentsById'] = alignments
     alignment_weapon_tags = {'Good': 'good', 'Evil': 'evil', 'Lawful': 'law', 'Chaotic': 'chaos'}

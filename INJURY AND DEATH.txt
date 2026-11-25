@@ -38,7 +38,7 @@ When your character’s current hit points drop to –10 or lower, or if he take
 
 STABLE CHARACTERS AND RECOVERY
 
-On the next turn after a character is reduced to between –1 and –9 hit points and on all subsequent turns, roll d% to see whether the dying character becomes stable. He has a 10% chance of becoming stable. If he doesn’t, he loses 1 hit point. (A character who’s unconscious or dying can’t use any special action that changes the initiative count on which his action occurs.)
+At the end of the round in which a character is reduced to between –1 and –9 hit points and at the end of each subsequent round while dying, roll d% to see whether the dying character becomes stable. He has a 10% chance of becoming stable. If he doesn’t, he loses 1 hit point. (A character who’s unconscious or dying can’t use any special action that changes the initiative count on which his action occurs.)
 
 If the character’s hit points drop to –10 or lower, he’s dead.
 
@@ -99,3 +99,4 @@ Spellcasters who fall unconscious retain any spellcasting ability they had befor
 Healing Nonlethal Damage: You heal nonlethal damage at the rate of 1 hit point per hour per character level.
 
 When a spell or a magical power cures hit point damage, it also removes an equal amount of nonlethal damage.
+Table rule: For massive damage, count damage after damage reduction and energy resistance, but before temporary hit points absorb any damage.

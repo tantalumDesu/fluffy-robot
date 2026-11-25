@@ -660,3 +660,5 @@ Some creatures (usually undead) are less easily affected by the turning ability 
 Turn resistance is an extraordinary ability.
 
 When resolving a turn, rebuke, command, or bolster attempt, add the appropriate bonus to the creature’s Hit Dice total.
+
+Table rule: Damage reduction and energy resistance are allowances per round. Damage reduction uses one shared allowance across all nonstacking sources, including adamantine armor, feats, spells, and special abilities. For each hit, use the best applicable reduction after bypass, less reduction already used this round. Energy resistance uses a separate allowance per energy type; same-type sources do not stack. Bypassed defenses spend none of the allowance.

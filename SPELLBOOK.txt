@@ -12058,9 +12058,9 @@ Field Notes: components (from Protection from Evil); castingTime (from Protectio
 
 Protection from Energy
 
-Short Description: Absorb 12 points/level of damage from one kind of energy.
+Short Description: Absorb 12 points/level of damage from all five energy types, using one shared pool.
 Long Description:
-Protection from energy grants temporary immunity to the type of energy you specify when you cast it (acid, cold, electricity, fire, or sonic). When the spell absorbs 12 points per caster level of energy damage (to a maximum of 120 points at 10th level), it is discharged.
+Table rule: Protection from energy absorbs acid, cold, electricity, fire, and sonic damage without choosing a type. All five types draw from the same absorption pool. When the spell absorbs 12 points per caster level of energy damage (to a maximum of 120 points at 10th level), it is discharged.
 
 Note: Protection from energy overlaps (and does not stack with) resist energy. If a character is warded by protection from energy and resist energy, the protection spell absorbs damage until its power is exhausted.
 

@@ -4,6 +4,8 @@
 
 **DM authority:** Automation handles default rules and bookkeeping; the DM always has the final say. Even a fully typed rule can be overridden, skipped, or adjudicated manually. Keep one-off rulings in encounter or character state rather than changing the shared canon. This is a design requirement for integrations, not a guarantee that every helper already exposes an override. See [rules-lawyer.md](rules-lawyer.md).
 
+For all effects, automatic application is limited to numeric changes on the recipient’s sheet. Effects beyond the recipient or without a sheet-number change remain available through their description or cited rule for player and DM adjudication. Typed data and explicit resolution helpers do not authorize automatic application.
+
 | v2 section | Consumer contract |
 | --- | --- |
 | `progression` | Races and classes, including prestige, NPC and epic classes. Use class progression rows for standard class-level contributions; don't add derived rates on top. Store an ordered level history so the sheet can distinguish character level, class level, effective spellcasting level and eligibility at the time of each choice. |
