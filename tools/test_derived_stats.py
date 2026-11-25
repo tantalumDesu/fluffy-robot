@@ -78,3 +78,22 @@ class DerivedSheetTest(unittest.TestCase):
             turn = spend_action(turn, 'move')
             with self.assertRaises(ValueError):
                 spend_action(turn, 'move')
+
+    def test_locked_gauntlet_projects_numbers_and_keeps_adjudication_text(self):
+        gauntlet = dict(instanceId='g', itemId='armor:gauntlet-locked', hand='right')
+        blade = dict(instanceId='blade', itemId='weapon:longsword', held=True)
+        plate = dict(instanceId='armor', itemId='armor:full-plate', fitted=True)
+        open_sheet = self.sheet(equipment=[gauntlet])
+        self.assertEqual(open_sheet['lockedGauntlets'][0]['effectiveWeightLb'], 5)
+        self.assertTrue(open_sheet['attacks'][0]['allowsLethalViaGauntlet'])
+        locked = dict(gauntlet, securedWeaponInstanceId='blade')
+        sheet = self.sheet(equipment=[locked, blade, plate], carried_weight_lb=60)
+        self.assertEqual(sheet['carriedWeightAdjustmentLb'], -5)
+        self.assertEqual(sheet['attacks'][0]['disarmDefenseBonus'], 10)
+        self.assertTrue(sheet['lockedGauntlets'][0]['handUnavailableForCastingOrSkills'])
+        self.assertIn('full-round action', sheet['lockedGauntlets'][0]['adjudicationText'])
+        stunned = self.sheet(equipment=[locked, blade], condition_ids=['stunned'])
+        self.assertIn('adjudicate-drop-secured-weapon', stunned['needsReview'])
+        self.assertFalse(stunned['attacks'][0]['canAct'])
+        with self.assertRaises(ValueError):
+            self.sheet(equipment=[locked])

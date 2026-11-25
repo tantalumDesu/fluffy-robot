@@ -86,3 +86,15 @@ The recipient-sheet boundary applies to all effects, not just alignment spells. 
 Run `python tools/source_audit.py` for the record-level report. It compares both descriptions of all 611 spells, all 38 condition descriptions, and all 124 feat bodies against their source blocks, normalizing whitespace, case and typographic marks. It also checks 301 class-ability descriptions, 163 race traits, and 213 special-ability paragraphs against their cited source files. Spell and condition descriptions are now refreshed by generation rather than inherited from the old JSON snapshot. This restores the complete baseline spell text, including inline exceptions and cross-references, and the current Protection from Energy wording.
 
 Fifteen class descriptions did not match a contiguous source passage. Review the exact IDs in the audit output before changing their typed counterparts; a mismatch can mean an edited paraphrase or a description assembled from several paragraphs. This prose audit does not establish equivalence of every numeric rule, table, or typed execution path. Inventory, companions, diseases, poisons, and general rules still have the separate structural source-retention checks.
+
+### Locked gauntlets
+
+For an equipped `armor:gauntlet-locked` instance, set `hand` to `left` or `right` and set `securedWeaponInstanceId` only after the table confirms the weapon is attached. The sheet exposes the +10 disarm defense bonus on that weapon only and corrects the listed carried weight when the gauntlet replaces part of fitted armor. Include the catalog's 5 lb per gauntlet in the input carried weight; the sheet subtracts it for replacements.
+
+The sheet returns both the source description and a player/DM adjudication note. Attaching or detaching takes a full-round action and provokes attacks of opportunity. A locked hand cannot be used to cast spells or employ skills, but a free other hand can supply somatic components. The equipment table's 100% entry is preserved as reference, not applied as blanket spell failure. Resolve forced drops at the table when a weapon is secured. A gauntlet unarmed strike may deal lethal damage instead of nonlethal; the player chooses and the DM resolves the attack. None of these actions or choices is executed by deriving the sheet.
+
+### Arcane spell failure from armor
+
+Pass the confirmed worn armor and shield in use to `plan_cast` as `worn_armor_and_shields` (item IDs). `armorSpellFailure` reports their contributions and the final percentage for that casting track, after metamagic changes the components. Only arcane spells with a somatic component count. Bard light-armor casting waives the armor contribution only; it does not waive shield failure. The locked gauntlet remains a hand restriction, not a percentage contribution.
+
+When a cast completes with a nonzero chance, do not apply its effects until the table resolves the percentile roll. `resolve_armor_spell_failure(plan, roll)` accepts that roll and returns no applicable spell on failure. The cast already spent its action and slot; neither is refunded. No die is rolled automatically.

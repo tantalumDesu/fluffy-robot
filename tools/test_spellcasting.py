@@ -86,3 +86,19 @@ class SpellcastingTest(unittest.TestCase):
         self.assertEqual(spellcasting_levels(self.core, history, {7: ['wizard', 'cleric']}), {'wizard': 4, 'cleric': 4})
         with self.assertRaises(ValueError):
             spellcasting_levels(self.core, history, {7: ['cleric', 'wizard']})
+
+    def test_armor_spell_failure_uses_casting_track_and_final_components(self):
+        from tools.spellcasting import resolve_armor_spell_failure
+
+        gear = ['armor:leather', 'armor:shield-light-steel']
+        wizard = self.plan('wizard', 'mage-armor', 16, worn_armor_and_shields=gear)
+        chance = wizard['armorSpellFailure']['percent']
+        self.assertEqual(chance, 15)
+        self.assertIsNone(resolve_armor_spell_failure(wizard, chance)['spellToApply'])
+        self.assertEqual(resolve_armor_spell_failure(wizard, chance + 1)['spellToApply'], wizard)
+        still = self.plan('wizard', 'mage-armor', 16, 'still-spell', worn_armor_and_shields=gear)
+        self.assertEqual(still['armorSpellFailure']['percent'], 0)
+        bard = self.plan('bard', 'cure-light-wounds', 16, worn_armor_and_shields=gear)
+        cleric = self.plan('cleric', 'cure-light-wounds', 16, worn_armor_and_shields=gear)
+        self.assertEqual(bard['armorSpellFailure']['percent'], 5)
+        self.assertEqual(cleric['armorSpellFailure']['percent'], 0)

@@ -61,9 +61,39 @@ def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slot
     return result
 
 
+def armor_spell_failure(core, class_id, casting_kind, components, worn_armor_and_shields):
+    """Return a per-cast chance from confirmed worn/in-use item IDs."""
+    items = core['inventory']['itemsById']
+    contributions = []
+    seen = set()
+    applicable = casting_kind == 'arcane' and 'S' in components
+    for item_id in worn_armor_and_shields:
+        item = items[item_id]
+        kind = item['kind']
+        if kind not in ('armor', 'shield') or kind in seen:
+            raise ValueError('Supply at most one worn armor and one in-use shield')
+        seen.add(kind)
+        bard_light = class_id == 'bard' and kind == 'armor' and item['category'].lower().split()[0] == 'light'
+        percent = (item['arcaneSpellFailurePercent'] or 0) if applicable and not bard_light else 0
+        contributions.append(dict(itemId=item_id, percent=percent))
+    percent = min(100, sum(entry['percent'] for entry in contributions))
+    return dict(percent=percent, contributions=contributions, requiresRuling=percent > 0,
+                adjudicationText=('Roll d100. A result at or below the listed chance ruins the spell; '
+                                  'the action and spell slot are not refunded. Do not apply spell effects until resolved.'))
+
+
+def resolve_armor_spell_failure(plan, roll):
+    """Adjudicate a completed cast using a player/DM-supplied percentile roll."""
+    if type(roll) is not int or not 1 <= roll <= 100:
+        raise ValueError('Arcane spell failure roll must be an integer from 1 to 100')
+    chance = plan['armorSpellFailure']['percent']
+    failed = roll <= chance
+    return dict(roll=roll, percent=chance, failed=failed, spellToApply=None if failed else deepcopy(plan))
+
+
 def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metamagic=(), heighten_to=None,
               domain_spell_levels=None, conversion=False, random_numeric=None, quickened_this_round=False,
-              alignment_id=None, deity_alignment=None, deity_known=False):
+              alignment_id=None, deity_alignment=None, deity_known=False, worn_armor_and_shields=()):
     """Validate spell membership and metamagic, returning a plan without spending a slot."""
     cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
     casting = cls.get('spellcasting', {})
@@ -153,7 +183,8 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
                 mode='conversion' if conversion else 'spontaneous' if spontaneous else 'prepared',
                 baseSpellLevel=base, effectiveSpellLevel=effective, requiredSlotLevel=effective + increase,
                 saveDc=10 + effective + (ability_score - 10) // 2, castingTime=time, timing=timing,
-                metamagic=list(feats), components=components, transforms=transforms)
+                metamagic=list(feats), components=components, transforms=transforms,
+                armorSpellFailure=armor_spell_failure(core, class_id, casting['kind'], components, worn_armor_and_shields))
 
 
 def new_slots(class_id, budget):

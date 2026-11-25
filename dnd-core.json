@@ -167788,6 +167788,32 @@
         }
       }
     },
+    "physicalDamageTypesById": {
+      "bludgeoning": {
+        "id": "bludgeoning",
+        "name": "Bludgeoning",
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 87
+        }
+      },
+      "piercing": {
+        "id": "piercing",
+        "name": "Piercing",
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 87
+        }
+      },
+      "slashing": {
+        "id": "slashing",
+        "name": "Slashing",
+        "source": {
+          "file": "WEAPONS.txt",
+          "line": 87
+        }
+      }
+    },
     "injury": {
       "deadAtHp": -10,
       "disabledAtHp": 0,
@@ -197145,7 +197171,17 @@
           "file": "ARMOR.txt",
           "line": 63
         },
-        "additionForKind": "armor"
+        "additionForKind": "armor",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
+        "physicalDamageSource": {
+          "file": "ARMOR.txt",
+          "line": 75
+        }
       },
       "armor:gauntlet-locked": {
         "id": "armor:gauntlet-locked",
@@ -197157,7 +197193,7 @@
         "armorClassBonus": null,
         "maxDexBonus": null,
         "armorCheckPenalty": null,
-        "arcaneSpellFailurePercent": 100,
+        "arcaneSpellFailurePercent": null,
         "speedByBaseFt": {
           "30": null,
           "20": null
@@ -197177,6 +197213,27 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 64
+        },
+        "listedArcaneSpellFailurePercent": 100,
+        "lockedGauntlet": {
+          "source": {
+            "file": "ARMOR.txt",
+            "line": 93
+          },
+          "description": "Gauntlet, Locked: This armored gauntlet has small chains and braces that allow the wearer to attach a weapon to the gauntlet so that it cannot be dropped easily. It provides a +10 bonus on any roll made to keep from being disarmed in combat. Removing a weapon from a locked gauntlet or attaching a weapon to a locked gauntlet is a full-round action that provokes attacks of opportunity. The price given is for a single locked gauntlet. The weight given applies only if you’re wearing a breastplate, light armor, or no armor. Otherwise, the locked gauntlet replaces a gauntlet you already have as part of the armor.\n\nWhile the gauntlet is locked, you can’t use the hand wearing it for casting spells or employing skills. (You can still cast spells with somatic components, provided that your other hand is free.)\n\nLike a normal gauntlet, a locked gauntlet lets you deal lethal damage rather than nonlethal damage with an unarmed strike.",
+          "disarmDefenseBonus": 10,
+          "listedWeightLb": 5,
+          "fullWeightArmorIds": [
+            "armor:breastplate"
+          ],
+          "fullWeightArmorCategories": [
+            "light"
+          ],
+          "attachDetachAction": "full-round",
+          "provokesAttacksOfOpportunity": true,
+          "lockedHandCannotCastOrUseSkills": true,
+          "allowsLethalUnarmedStrike": true,
+          "adjudicationText": "Attaching or detaching a weapon takes a full-round action and provokes attacks of opportunity. Record the secured weapon only after the player and DM resolve the action. While locked, that hand cannot be used to cast spells or employ skills. Somatic casting can still use the other hand if it is free; the listed 100% is not a blanket spell failure chance for the wearer. If an effect would make the wearer drop the secured weapon, adjudicate whether it remains attached and whether it can still be wielded. An unarmed strike made with the gauntlet may deal lethal instead of nonlethal damage; declare the strike and damage choice before resolving it."
         }
       },
       "armor:shield-spikes": {
@@ -197210,7 +197267,17 @@
           "file": "ARMOR.txt",
           "line": 65
         },
-        "additionForKind": "shield"
+        "additionForKind": "shield",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
+        "physicalDamageSource": {
+          "file": "ARMOR.txt",
+          "line": 119
+        }
       },
       "weapon:gauntlet": {
         "id": "weapon:gauntlet",
@@ -197227,6 +197294,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Gauntlet",
@@ -197260,6 +197333,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "Nonlethal",
         "raw": [
           "Unarmed strike",
@@ -197298,6 +197377,13 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 10,
         "damageType": "Piercing or slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing",
+            "slashing"
+          ],
+          "mode": "choose-one"
+        },
         "special": "—",
         "raw": [
           "Dagger",
@@ -197331,6 +197417,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Dagger, punching",
@@ -197364,6 +197456,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Gauntlet, spiked",
@@ -197397,6 +197495,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Mace, light",
@@ -197430,6 +197534,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Sickle",
@@ -197463,6 +197573,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Club",
@@ -197496,6 +197612,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Mace, heavy",
@@ -197529,6 +197651,13 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning and piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning",
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Morningstar",
@@ -197562,6 +197691,12 @@
         "critical": "x2",
         "rangeIncrementFt": 20,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shortspear",
@@ -197595,6 +197730,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Longspear",
@@ -197628,6 +197769,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "Double Weapon",
         "raw": [
           "Quarterstaff",
@@ -197661,6 +197808,12 @@
         "critical": "x3",
         "rangeIncrementFt": 20,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Spear",
@@ -197694,6 +197847,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 120,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Crossbow, heavy",
@@ -197727,6 +197886,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 80,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Crossbow, light",
@@ -197760,6 +197925,7 @@
         "critical": "—",
         "rangeIncrementFt": null,
         "damageType": "—",
+        "physicalDamage": null,
         "special": "—",
         "raw": [
           "Bolts, crossbow (10)",
@@ -197793,6 +197959,12 @@
         "critical": "x2",
         "rangeIncrementFt": 20,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Dart",
@@ -197826,6 +197998,12 @@
         "critical": "x2",
         "rangeIncrementFt": 30,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Javelin",
@@ -197859,6 +198037,12 @@
         "critical": "x2",
         "rangeIncrementFt": 50,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Sling",
@@ -197892,6 +198076,7 @@
         "critical": "—",
         "rangeIncrementFt": null,
         "damageType": "—",
+        "physicalDamage": null,
         "special": "—",
         "raw": [
           "Bullets, sling (10)",
@@ -197925,6 +198110,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Axe, throwing",
@@ -197958,6 +198149,12 @@
         "critical": "x2",
         "rangeIncrementFt": 20,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Hammer, light",
@@ -197991,6 +198188,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Handaxe",
@@ -198024,6 +198227,12 @@
         "critical": "18–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Kukri",
@@ -198057,6 +198266,12 @@
         "critical": "x4",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Pick, light",
@@ -198090,6 +198305,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "Nonlethal",
         "raw": [
           "Sap",
@@ -198123,6 +198344,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shield, light",
@@ -198164,6 +198391,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Spiked armor",
@@ -198203,6 +198436,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Spiked shield, light",
@@ -198245,6 +198484,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Sword, short",
@@ -198278,6 +198523,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Battleaxe",
@@ -198311,6 +198562,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Flail",
@@ -198344,6 +198601,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Longsword",
@@ -198377,6 +198640,12 @@
         "critical": "x4",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Pick, heavy",
@@ -198410,6 +198679,12 @@
         "critical": "18–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Rapier",
@@ -198443,6 +198718,12 @@
         "critical": "18–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Scimitar",
@@ -198476,6 +198757,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shield, heavy",
@@ -198517,6 +198804,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Spiked shield, heavy",
@@ -198559,6 +198852,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Trident",
@@ -198592,6 +198891,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Warhammer",
@@ -198625,6 +198930,12 @@
         "critical": "18–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Falchion",
@@ -198658,6 +198969,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Glaive",
@@ -198691,6 +199008,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Greataxe",
@@ -198724,6 +199047,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Greatclub",
@@ -198757,6 +199086,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Flail, heavy",
@@ -198790,6 +199125,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Greatsword",
@@ -198823,6 +199164,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Guisarme",
@@ -198856,6 +199203,13 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Piercing or slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing",
+            "slashing"
+          ],
+          "mode": "choose-one"
+        },
         "special": "—",
         "raw": [
           "Halberd",
@@ -198889,6 +199243,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Lance",
@@ -198922,6 +199282,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Ranseur",
@@ -198955,6 +199321,13 @@
         "critical": "x4",
         "rangeIncrementFt": null,
         "damageType": "Piercing or slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing",
+            "slashing"
+          ],
+          "mode": "choose-one"
+        },
         "special": "—",
         "raw": [
           "Scythe",
@@ -198988,6 +199361,12 @@
         "critical": "x3",
         "rangeIncrementFt": 100,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Longbow",
@@ -199021,6 +199400,12 @@
         "critical": "x3",
         "rangeIncrementFt": 110,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Longbow, composite",
@@ -199054,6 +199439,12 @@
         "critical": "x3",
         "rangeIncrementFt": 60,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shortbow",
@@ -199087,6 +199478,12 @@
         "critical": "x3",
         "rangeIncrementFt": 70,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shortbow, composite",
@@ -199120,6 +199517,7 @@
         "critical": "—",
         "rangeIncrementFt": null,
         "damageType": "—",
+        "physicalDamage": null,
         "special": "—",
         "raw": [
           "Arrows (20)",
@@ -199153,6 +199551,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Kama",
@@ -199186,6 +199590,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Nunchaku",
@@ -199219,6 +199629,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Sai",
@@ -199252,6 +199668,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Siangham",
@@ -199285,6 +199707,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Sword, bastard",
@@ -199318,6 +199746,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Waraxe, dwarven",
@@ -199351,6 +199785,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach, Nonlethal",
         "raw": [
           "Whip",
@@ -199384,6 +199824,12 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "Double Weapon",
         "raw": [
           "Axe, orc double",
@@ -199417,6 +199863,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "Reach",
         "raw": [
           "Chain, spiked",
@@ -199450,6 +199902,12 @@
         "critical": "x2",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "Double Weapon",
         "raw": [
           "Flail, dire",
@@ -199483,6 +199941,13 @@
         "critical": "x3/x4",
         "rangeIncrementFt": null,
         "damageType": "Bludgeoning and piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning",
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "Double Weapon",
         "raw": [
           "Hammer, gnome hooked",
@@ -199516,6 +199981,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": null,
         "damageType": "Slashing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing"
+          ],
+          "mode": "all"
+        },
         "special": "Double Weapon",
         "raw": [
           "Sword, two-bladed",
@@ -199549,6 +200020,13 @@
         "critical": "x3",
         "rangeIncrementFt": null,
         "damageType": "Slashing or piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "slashing",
+            "piercing"
+          ],
+          "mode": "choose-one"
+        },
         "special": "Double Weapon",
         "raw": [
           "Urgrosh, dwarven",
@@ -199582,6 +200060,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Bludgeoning",
+        "physicalDamage": {
+          "typeIds": [
+            "bludgeoning"
+          ],
+          "mode": "all"
+        },
         "special": "Nonlethal",
         "raw": [
           "Bolas",
@@ -199615,6 +200099,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 30,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Crossbow, hand",
@@ -199648,6 +200138,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 120,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Crossbow, repeating heavy",
@@ -199681,6 +200177,12 @@
         "critical": "19–20/x2",
         "rangeIncrementFt": 80,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Crossbow, repeating light",
@@ -199714,6 +200216,7 @@
         "critical": "—",
         "rangeIncrementFt": null,
         "damageType": "—",
+        "physicalDamage": null,
         "special": "—",
         "raw": [
           "Bolts (5)",
@@ -199747,6 +200250,7 @@
         "critical": "—",
         "rangeIncrementFt": 10,
         "damageType": "—",
+        "physicalDamage": null,
         "special": "—",
         "raw": [
           "Net",
@@ -199780,6 +200284,12 @@
         "critical": "x2",
         "rangeIncrementFt": 10,
         "damageType": "Piercing",
+        "physicalDamage": {
+          "typeIds": [
+            "piercing"
+          ],
+          "mode": "all"
+        },
         "special": "—",
         "raw": [
           "Shuriken (5)",
