@@ -8,16 +8,24 @@ import re
 import unicodedata
 
 if __package__:
+    from .condition_rules import catalog as condition_catalog
+    from .alignment import alignment_catalog
+    from .creature_size import catalogs as size_catalogs
     from .animal_training import training_rules
     from .feat_selection import encode_feats
+    from .negative_levels import negative_level_rules, spell_drain_catalog
     from .pack_animals import beasts
     from .progression_rules import continuity_rules, progression_rules, spell_swap_rules
     from .game_time import SECONDS, casting_timing, duration_timing
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from condition_rules import catalog as condition_catalog
+    from alignment import alignment_catalog
+    from creature_size import catalogs as size_catalogs
     from animal_training import training_rules
     from feat_selection import encode_feats
+    from negative_levels import negative_level_rules, spell_drain_catalog
     from pack_animals import beasts
     from progression_rules import continuity_rules, progression_rules, spell_swap_rules
     from game_time import SECONDS, casting_timing, duration_timing
@@ -222,8 +230,12 @@ def build(old):
     continuity = list(continuity_rules(lines))
     continuity_by_class = {rule['appliesTo']['classIds'][0]: rule['id'] for rule in continuity}
     groups['mechanics']['rules'] = [rule for rule in groups['mechanics']['rules']
-                                    if rule['id'] not in continuity_by_class.values()] + continuity
+                                    if rule['id'] not in {'monk-continuous-levels', *continuity_by_class.values()}] + continuity
     for record in classes:
+        if 'monk-continuous-levels' in record.get('ruleIds', []):
+            record['ruleIds'] = [key for key in record['ruleIds'] if key != 'monk-continuous-levels']
+            if not record['ruleIds']:
+                del record['ruleIds']
         rule_id = continuity_by_class.get(record['id'])
         if rule_id and rule_id not in record.get('ruleIds', []):
             record['ruleIds'] = [*record.get('ruleIds', []), rule_id]
@@ -267,6 +279,51 @@ def build(old):
     }
     spell_effects, feat_effects = catalogs(spells, feat_records, groups['skills']['skills'])
     groups['effects']['spellEffectsBySpellId'] = spell_effects
+    groups['effects']['negativeLevelOperationsBySpellId'] = spell_drain_catalog(spells)
+    condition_text = lines('CONDITIONS.txt')
+    policies = condition_catalog(condition_text)
+    conditions = groups['effects']['conditions']
+    if set(policies) != {condition['id'] for condition in conditions}:
+        raise ValueError('Typed condition catalogue does not match named conditions')
+    for condition in conditions:
+        key = condition['id']
+        condition['mechanics'] = policies[key]
+        if key == 'energy-drained':
+            condition['references'].update(inflictedBySpells=['energy-drain', 'enervation'], mentionedInSpells=[])
+    groups['effects']['sheetConditionRulesById'] = policies
+    def rule(event, states, to, **extra):
+        return dict(event=event, **{'from': states}, to=to, **extra)
+
+    condition_source = lambda title: source('CONDITIONS.txt', line=next(
+        i for i, text in enumerate(condition_text, 1) if text.startswith(title)))
+    fatigue = ['clear', 'fatigued', 'exhausted']
+    fear = ['clear', 'shaken', 'frightened', 'panicked']
+    groups['effects']['stateChangesById'] = {
+        'fatigue': dict(initial='clear', source=condition_source('Fatigued:'), transitions=[
+            rule(event, ['clear'], 'fatigued', origin=origin)
+            for event, origin in [('fatigue-applied', 'ordinary'), ('post-rage-fatigue', 'encounter')]
+        ] + [rule(event, ['fatigued'], 'exhausted') for event in ('fatigue-applied', 'post-rage-fatigue')] + [
+            rule('encounter-ended', ['fatigued'], 'clear', onlyOrigin='encounter'),
+            rule('one-hour-complete-rest', ['exhausted'], 'fatigued', origin='ordinary'),
+            rule('eight-hours-complete-rest', ['fatigued'], 'clear'),
+        ]),
+        'fear': dict(initial='clear', source=source('SPECIAL ABILITIES.txt', line=next(
+            i for i, text in enumerate(lines('SPECIAL ABILITIES.txt'), 1) if text.startswith('Becoming Even More Fearful:'))),
+            transitions=[rule(applied + '-applied', [state], fear[min(3, i + j)])
+                         for i, state in enumerate(fear) for j, applied in enumerate(fear) if j]),
+        'rage': dict(initial='inactive', source=source('BARBARIAN.txt', line=next(
+            i for i, text in enumerate(lines('BARBARIAN.txt'), 1) if text.startswith('Rage (Ex):'))), transitions=[
+            rule('rage-started', ['inactive'], 'raging'),
+            rule('rage-ended', ['raging'], 'inactive', requires={'tirelessRage': True}),
+            rule('rage-ended', ['raging'], 'inactive', requires={'tirelessRage': False}, emit=['post-rage-fatigue']),
+        ]),
+        'vampire-sunlight': dict(initial='clear', referenceOnly=True,
+            source=dict(file='dnd35_templates.json', templateId='vampire', effectIndex=21),
+            transitions=[rule('sunlight-entered', ['clear'], 'exposed'),
+                         rule('sunlight-left', ['exposed'], 'clear'),
+                         rule('next-round-still-exposed', ['exposed'], 'destroyed')],
+            statesById={'exposed': {'allowedActionChoice': ['move', 'attack'], 'actionsMaximum': 1}}),
+    }
     groups['effects']['featEffectsByFeatId'] = feat_effects
     for key in feat_effects:
         feat_records[key]['automation'] = 'partial'
@@ -277,7 +334,53 @@ def build(old):
         'referencesAreNotGrants': True,
         'persistActiveInstancesOnTarget': True,
     }
-    companions = index([*creatures(), *beasts(lines)])
+    size_categories, equipment_size_rules = size_catalogs(lines, table)
+    groups['mechanics']['sizeCategoriesById'] = size_categories
+    alignments, alignment_consequences = alignment_catalog(lines)
+    groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
+    groups['mechanics']['alignmentsById'] = alignments
+    alignment_weapon_tags = {'Good': 'good', 'Evil': 'evil', 'Lawful': 'law', 'Chaotic': 'chaos'}
+    weapon_alignment_properties = {
+        slug(name): {'name': name, 'alignmentTag': alignment_weapon_tags[tag],
+                     'negativeLevel': {'count': 1, 'target': 'opposed-wielder', 'duration': 'while-wielded',
+                                       'permanentDrain': False}, 'source': source('WEAPONS.txt', line=line)}
+        for line, (name, tag) in table('WEAPONS.txt', 'Table: Weapon Property Alignments')
+    }
+    groups['mechanics']['alignmentConsequencesByClassId'] = alignment_consequences
+    groups['magic']['alignmentTargetRulesBySpellId'] = {
+        'holy-smite': {'unaffectedAxis': 'good', 'opposedAxis': 'evil',
+                       'condition': {'conditionId': 'blinded', 'rounds': 1},
+                       'source': source('SPELLBOOK.txt', heading='Holy Smite')},
+        'unholy-blight': {'unaffectedAxis': 'evil', 'opposedAxis': 'good',
+                         'condition': {'conditionId': 'sickened', 'roundDice': '1d4'},
+                         'source': source('SPELLBOOK.txt', heading='Unholy Blight')},
+    }
+    nonability_line = lines('RULES.txt').index('Ability Score Nonabilities') + 2
+    groups['mechanics']['abilityScoreNonability'] = dict(
+        score=None, modifier=0, appliesScoreAdjustments=False,
+        source=source('RULES.txt', line=nonability_line))
+    groups['mechanics']['sizeModifierPolicy'] = 'derive-from-current-size-do-not-add-legacy-racial-size-bonuses'
+
+    races = []
+    race_text = lines('RACES.txt')
+    hobgoblin_start = race_text.index('HOBGOBLIN RACIAL TRAITS')
+    hobgoblin_end = race_text.index('HUMAN', hobgoblin_start)
+    size_line, size_text = next((i + 1, race_text[i].strip()) for i in range(hobgoblin_start, hobgoblin_end)
+                                if race_text[i].strip().startswith('Medium size:'))
+    for record in groups['progression']['races']:
+        race = record.copy()
+        if race['id'] == 'hobgoblin':
+            traits = [trait for trait in race['traits'] if trait['id'] != 'hobgoblin-trait-size']
+            traits.append(dict(id='hobgoblin-trait-size', index=len(traits) + 1, label='Medium size', text=size_text,
+                               mechanics=[{'type': 'size', 'size': 'Medium'}], conditions=[],
+                               source=source('RACES.txt', line=size_line)))
+            race.update(traits=traits, own=dict(race['own'], size='Medium'),
+                        effective=dict(race['effective'], size='Medium'))
+        size = race['effective']['size']
+        race['sizeId'] = size.lower() if size else None
+        races.append(race)
+    groups['progression']['races'] = races
+    companions = index(dict(creature, sizeId=creature['size']) for creature in [*creatures(), *beasts(lines)])
     groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
     pack = {}
@@ -299,6 +402,15 @@ def build(old):
                          defaultTerrainMultiplier=1, terrainMultiplierRange=[0, 1],
                          wheeledGroundAssumption='reasonably-passable',
                          terrainReduction='dm-adjudication', source=source(vehicle_file, heading='PULLED VEHICLES'))
+    encumbrance = {}
+    for line, text in enumerate(lines('RULES.txt'), 1):
+        if match := re.fullmatch(r'- (Medium|Heavy) load: Max Dex \+(\d+), Check Penalty [–-](\d+), Speed (\d+) ft\. \(from 30\) / (\d+) ft\. \(from 20\), Run ×(\d+)\.', text):
+            band, dex, penalty, speed30, speed20, run = match.groups()
+            encumbrance[band.lower()] = dict(maxDexBonus=int(dex), checkPenalty=-int(penalty),
+                speedByBaseFt={'30': int(speed30), '20': int(speed20)}, runMultiplier=int(run),
+                source=source('RULES.txt', line=line))
+    if set(encumbrance) != {'medium', 'heavy'}:
+        raise ValueError('Incomplete encumbrance policies')
     capacity = []
     for i, line in enumerate(lines('RULES.txt'), 1):
         if re.fullmatch(r'\d+(?:\t\d+ lb\.){3}', line):
@@ -307,7 +419,7 @@ def build(old):
                                  [number(value, ' lb.') for value in loads])), source=source('RULES.txt', line=i)))
     assert [row['strength'] for row in capacity] == list(range(1, 30))
     return dict(schemaVersion=2, meta=meta, **groups, feats={'byId': feat_records},
-                inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules},
+                inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules, 'equipmentSizeRules': equipment_size_rules, 'encumbranceByBand': encumbrance, 'weaponAlignmentPropertiesById': weapon_alignment_properties},
                 companions={'creaturesById': companions,
                             'familiarAdvancement': list(advancement('FAMILIARS.txt', ('naturalArmorAdjustment', 'intelligence'))),
                             'animalCompanionAdvancement': list(advancement('ANIMAL COMPANIONS.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthDexterityAdjustment', 'bonusTricks')))},

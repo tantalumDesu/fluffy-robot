@@ -120,3 +120,5 @@ If a character gains uncanny dodge (see above) from a second class the character
 Hide in Plain Sight (Su): At 8th level, an assassin can use the Hide skill even while being observed. As long as he is within 10 feet of some sort of shadow, an assassin can hide himself from view in the open without having anything to actually hide behind.
 
 He cannot, however, hide in his own shadow.
+
+Alignment Loss (table rule): A assassin who no longer meets the class alignment requirement loses access to class abilities and cannot gain further levels in the class. Returning to a qualifying alignment restores those abilities and permits further advancement without atonement.

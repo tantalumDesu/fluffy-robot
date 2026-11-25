@@ -117,7 +117,7 @@ def spell_swap_rules(lines, classes):
 
 
 def continuity_rules(lines):
-    for class_id in ('monk', 'paladin'):
+    for class_id in ('paladin',):
         file = class_id.upper() + '.txt'
         line, text = next((i, text) for i, text in enumerate(lines(file), 1)
                           if 'may never again raise her ' + class_id + ' level' in text)

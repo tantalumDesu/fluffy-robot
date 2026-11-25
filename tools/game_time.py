@@ -55,7 +55,7 @@ def encounter_clock(encounter):
                 encounterId=encounter['encounterId'])
 
 
-def start_next_turn(encounter):
+def start_next_turn(encounter, *, condition_flags_by_actor=None):
     """Advance in initiative order and return (state, completed cast plans)."""
     if encounter['phase'] not in ('between-turns', 'end'):
         raise ValueError('End the current turn first')
@@ -70,6 +70,17 @@ def start_next_turn(encounter):
             break
     state['phase'] = 'start'
     state['actions'] = dict(standard=1, move=int(state['round'] != 0), quickened=False)
+    flags = set((condition_flags_by_actor or {}).get(actor, ()))
+    if flags.intersection({'no-actions', 'attention-only'}):
+        state['actions'].update(standard=0, move=0, blocked=True)
+        state['pending'].pop(actor, None)
+        return state, []
+    if 'single-move-only' in flags:
+        state['actions'].update(standard=0, move=1, allowed=['move'])
+        state['pending'].pop(actor, None)
+        return state, []
+    if 'single-move-or-standard' in flags:
+        state['actions']['singleAction'] = True
     completed = []
     pending = state['pending'].get(actor)
     if pending:
@@ -92,10 +103,16 @@ def spend_action(encounter, action):
         raise ValueError('Not an available action phase or action type')
     state = deepcopy(encounter)
     actor = state['order'][state['index']]
+    if state['actions'].get('blocked'):
+        raise ValueError('Actor cannot take actions')
     if actor in state['pending']:
         raise ValueError('Caster is occupied by a continuous cast')
     budget = state['actions']
+    if 'allowed' in budget and action not in budget['allowed']:
+        raise ValueError('Action prohibited by condition')
     if action == 'full-round':
+        if budget.get('singleAction'):
+            raise ValueError('Full-round action prohibited by condition')
         if not (budget['standard'] and budget['move']):
             raise ValueError('A full-round action requires both actions')
         budget.update(standard=0, move=0)
@@ -104,6 +121,8 @@ def spend_action(encounter, action):
         if not budget[pay]:
             raise ValueError('Action already spent')
         budget[pay] = 0
+        if budget.get('singleAction'):
+            budget.update(standard=0, move=0)
     state['phase'] = 'acting'
     return state
 

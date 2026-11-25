@@ -2,6 +2,8 @@
 
 `dnd-core.json` v2 is shared rules data, not a character save or a rules engine. The repository's `.txt` files are the reference baseline. Existing entity IDs and records are retained, with redundant spell description aliases removed. Consumers of v1 need to update their top-level paths and use `longDescription` and `shortDescription` instead of `description` and `summary` on spells. Legacy counts and validation describe the old snapshot, not v2 automation coverage.
 
+**DM authority:** Automation handles default rules and bookkeeping; the DM always has the final say. Even a fully typed rule can be overridden, skipped, or adjudicated manually. Keep one-off rulings in encounter or character state rather than changing the shared canon. This is a design requirement for integrations, not a guarantee that every helper already exposes an override. See [rules-lawyer.md](rules-lawyer.md).
+
 | v2 section | Consumer contract |
 | --- | --- |
 | `progression` | Races and classes, including prestige, NPC and epic classes. Use class progression rows for standard class-level contributions; don't add derived rates on top. Store an ordered level history so the sheet can distinguish character level, class level, effective spellcasting level and eligibility at the time of each choice. |
@@ -33,7 +35,7 @@ Character advancement uses `minimum XP = 500 × level × (level − 1)`, a gener
 
 Persist `classChoices` in order, for example `["fighter", "barbarian", "fighter"]`. With no racial Hit Dice this is character level 3, Fighter 2 / Barbarian 1. `tools.level_history.replay_level_history` derives the counts and returns exactly one progression row per choice, along with character-level feat and ability grants. Do not sum cumulative class rows across history. When a base class continues into an available epic table, keep recording the base class ID; the replay selects the epic progression row automatically.
 
-`advance_level_history` commits an adjusted XP award and exactly one class choice together when the award earns a level. With racial Hit Dice or level adjustment, XP is checked against effective character level, while general feat and ability grants use actual character level. The API validates row existence and Monk/Paladin continuity: either class can be entered after another class, but cannot be resumed after advancing a different class. Validate alignment and prestige prerequisites before committing a choice. `classBaseCombat` sums the latest class rows through character level 20 only (not racial HD). `epicCharacterBonuses` is a separate character-level lookup for the sourced levels 21–30; do not add the epic numbers embedded in class rows again. Equipment, skill purchases, and other build decisions are not inferred from the progression row.
+`advance_level_history` commits an adjusted XP award and exactly one class choice together when the award earns a level. With racial Hit Dice or level adjustment, XP is checked against effective character level, while general feat and ability grants use actual character level. The API validates row existence and Paladin continuity: Paladin can be entered after another class but cannot be resumed after advancing a different class. Monk can resume if otherwise eligible. Validate alignment and prestige prerequisites before committing a choice. `classBaseCombat` sums the latest class rows through character level 20 only (not racial HD). `epicCharacterBonuses` is a separate character-level lookup for the sourced levels 21–30; do not add the epic numbers embedded in class rows again. Equipment, skill purchases, and other build decisions are not inferred from the progression row.
 
 ## Keep character and encounter state separate
 
@@ -173,3 +175,88 @@ window. It keeps uncast preparations and leaves recent expenditures unavailable.
 It does not automate partial Wizard preparation, verify rest interruptions,
 reschedule missed divine preparation, or guess a recovery profile for an
 unlisted class. `new_slots` is for initialisation, not a recovery operation.
+
+## Creature and equipment size
+
+`mechanics.sizeCategoriesById` is the shared size table. Races and companion
+stat blocks reference it with `sizeId`. Derive size modifiers once from the
+current size; do not also add size bonuses repeated in legacy racial traits.
+`size_profile` returns modifiers suitable for the modifier resolver, and
+`carrying_limits` applies the biped/quadruped multiplier to Strength limits or
+uses explicitly supplied stat-block limits. Existing pack animal and pulled
+vehicle limits remain unchanged.
+
+Use `weapon_fit` with the intended wielder size recorded on the item instance.
+It checks melee handedness and applies the per-step attack penalty separately
+from nonproficiency. Damage uses the weapon's size, not the wielder's. The source
+provides Small/Medium dice and a Tiny/Large conversion table, so unsupported
+dice and mismatched non-melee cases may need review. `armor_fit` prices and
+weighs manufactured sizes using `ARMOR.txt`; mismatched size or body shape
+withholds the armor bonus rather than inventing an attack or AC penalty. Full
+plate needs individual fit confirmation; its refit cost is recorded separately.
+
+Enlarge/Reduce Person and their mass variants change current size and adjust
+Strength/Dexterity through the size profile. Call `equipment_size` only for gear
+still affected by the spell; unaffected gear keeps its manufactured size. For
+armor, pass the calculated size separately as `effective_armor_size` so fitting
+does not change the catalog price. The source does not give a separate magical
+armor weight table; resized armor reports its manufactured weight separately
+and leaves current weight unspecified. The caller adjudicates constrained growth
+and what equipment remains affected, including thrown weapons and projectiles.
+
+## Alignment
+
+`mechanics.alignmentsById` stores both axes. `source_alignment_context` supplies
+alignment tags to protection-spell checks; `aligned_burst_plan` handles the
+alignment branches of Holy Smite and Unholy Blight. The caller supplies the target
+creature type and save result, rolls damage/condition duration, and handles
+special rules (such as alignment subtypes) not represented by personal alignment.
+Cleric and Druid cast planning checks opposed descriptors against personal and
+deity alignment. Specify `deity_known=True` if the character has no deity.
+
+Supply `alignment_by_level` with the facts at each recorded level and
+`current_alignment` when advancing. Existing saves without alignment facts can
+still replay, but those levels are not alignment-validated. `evaluate_alignment_change`
+reports class feature retention separately from advancement and persists fallen
+class IDs until confirmed atonement. The caller applies feature suppression and
+confirms conduct events; the engine does not infer alignment from behavior.
+
+Under the campaign alignment rules in their class source files, Assassin,
+Blackguard, and Dwarven Defender temporarily lose access to class abilities
+while ineligible. Returning to an eligible alignment restores abilities and
+advancement without atonement. Paladin's permanent multiclass advancement lock
+is separate from the alignment, conduct, and atonement gates on its abilities.
+`inventory.weaponAlignmentPropertiesById` classifies Holy, Unholy, Axiomatic,
+and Anarchic weapons independently of their wielder; this does not guess their
+individual damage, wielding, or damage-reduction mechanics.
+
+## Negative levels
+
+`mechanics.negativeLevels` captures the general drain rule. Save timed drain
+levels on the affected actor; each has its own Fortitude DC and 24-hour due time.
+`resolve_drain_level` handles a save or restoration and reports permanent level
+loss for the caller to reconcile with the build. `summarize_negative_levels`
+returns sheet modifiers, HP and effective-level changes, and the death threshold.
+Bestower temporary HP and possible next-night creature revival are separate
+outcomes; the caller applies them to the appropriate actor or encounter.
+
+For aligned weapons, derive live levels with `weapon_negative_levels` from
+currently wielded item instances. These levels end when the weapon is no longer
+wielded by an opposed character; they do not call for saves or permanent loss.
+When levels are gained, call `allocate_spell_losses` with the new levels and the
+character's ledgers. After eligible recovery, call it again with `recovery=True`
+and the levels still active, using only the casting tracks being renewed. Ties
+require the player's choice. The spell ledger blocks access to affected slots;
+the caller coordinates these steps as one character-state update.
+
+`effects.negativeLevelOperationsBySpellId` adds Enervation, Energy Drain,
+Restoration, and Greater Restoration to that same state model. Resolve the
+ray hit and spell resistance before calling `apply_drain_spell` with the completed
+cast plan. Enervation expires automatically; Energy Drain waits for separate
+saves at the spell DC. Death Ward blocks new negative energy but does not remove
+old levels. Restore permanent level records only when eligible; Restoration
+cannot remove a level that is still imposed by a wielded weapon. `energy-drained`
+is derived from active levels, not a second modifier. Use the returned typed
+`hp` and `effective-level` modifiers **or** their summary fields, not both.
+
+See [rules-lawyer.md](rules-lawyer.md) for live-sheet coverage, manual rulings, and next decisions.

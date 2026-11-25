@@ -363,3 +363,14 @@ Masterwork ammunition is damaged (effectively destroyed) when used. The enhancem
 All magic weapons are automatically considered to be of masterwork quality. The enhancement bonus granted by the masterwork quality doesn’t stack with the enhancement bonus provided by the weapon’s magic.
 
 Even though some types of armor and shields can be used as weapons, you can’t create a masterwork version of such an item that confers an enhancement bonus on attack rolls. Instead, masterwork armor and shields have lessened armor check penalties.
+
+ALIGNMENT OF WEAPON PROPERTIES
+
+These property names specify the weapon property’s alignment, not the wielder’s. Each property imposes one negative level on a wielder whose alignment is opposite on that axis. This equipment-imposed level lasts only while wielded by an opposed creature, cannot be removed while that condition holds, and never calls for a 24-hour saving throw or permanent level loss. See SPECIAL ABILITIES.txt for the general negative-level penalties. The property does not grant a creature temporary hit points.
+
+Table: Weapon Property Alignments
+Property	Alignment
+Holy	Good
+Unholy	Evil
+Axiomatic	Lawful
+Anarchic	Chaotic

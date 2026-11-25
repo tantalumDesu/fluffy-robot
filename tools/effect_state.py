@@ -5,7 +5,10 @@ use integer rounds throughout. The caller handles targeting, saves, SR, and
 the order of consumption for distinct pools.
 """
 
-from .game_time import SECONDS, expired, expiry_at
+if __package__:
+    from .game_time import SECONDS, expired, expiry_at
+else:
+    from game_time import SECONDS, expired, expiry_at
 
 
 def active_spells(instances, now):

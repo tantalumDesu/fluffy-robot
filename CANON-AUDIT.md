@@ -20,9 +20,9 @@ This is a targeted audit, not a line-by-line verification of all 71 sources.
 
 | Priority | Finding | Disposition |
 | --- | --- | --- |
-| High | `RULES.txt` names 35 rule IDs absent from `mechanics.rules` among its backtick-led list entries. Examples: AC and attack formulas, cover, concealment, flanking, initiative, and modifier stacking. Monk and Paladin continuity now have typed rules sourced directly from their class files. | Transcribe the clear rules first. An absent ID is not proof the mechanic is entirely missing: Combat Reflexes and temporary HP have implementations elsewhere. |
+| High | `RULES.txt` names 35 rule IDs absent from `mechanics.rules` among its backtick-led list entries. Examples: AC and attack formulas, cover, concealment, flanking, initiative, and modifier stacking. Paladin continuity has a typed rule sourced from `PALADIN.txt`; the current `MONK.txt` table rule allows Monk to resume after multiclassing. | Transcribe the clear rules first. An absent ID is not proof the mechanic is entirely missing: Combat Reflexes and temporary HP have implementations elsewhere. |
 | High | Two feats retain manual prerequisite clauses: Improved Familiar and Familiar Spell. Some feat choices also require eligibility facts from outside the feat catalog. | Flag unresolved facts for review. Selection and repeatability metadata and benefit text are now present on all 124 feats. |
-| Medium | 581 of 611 spells and 95 of 124 feats have no typed effect catalog entry; covered entries may be partial. | Convert unambiguous sheet effects from `SPELLBOOK.txt`, `FEATS.txt`, and `EPIC FEATS.txt`. Missing types are not missing descriptions. |
+| Medium | 570 of 611 spells and 95 of 124 feats have no typed effect catalog entry; covered entries may be partial. | Convert unambiguous sheet effects from `SPELLBOOK.txt`, `FEATS.txt`, and `EPIC FEATS.txt`. Missing types are not missing descriptions. |
 | Needs adjudication | The ranged modifier for a prone attacker is printed `—3` in `COMBAT MODIFIERS.txt`. | Confirm what that cell means before encoding it as a numeric modifier or rule. |
 
 ## Reproduce

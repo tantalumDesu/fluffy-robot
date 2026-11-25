@@ -99,3 +99,4 @@ Stunned: A stunned creature drops everything held, can’t take actions, takes a
 Turned: Affected by a turn undead attempt. Turned undead flee for 10 rounds (1 minute) by the best and fastest means available to them. If they cannot flee, they cower.
 
 Unconscious: Knocked out and helpless. Unconsciousness can result from having current hit points between –1 and –9, or from nonlethal damage in excess of current hit points.
+Tracking progressive fatigue: Post-rage fatigue is the same Fatigued condition as any other fatigue. Encounter end removes the post-rage source, not unrelated fatigue or an Exhausted condition already reached. Once exhaustion is reduced by one hour of complete rest, the resulting fatigue follows the normal eight-hour rest rule.

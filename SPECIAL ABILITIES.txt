@@ -232,6 +232,8 @@ Characters recover points lost to ability score damage at a rate of 1 per day pe
 
 ENERGY DRAIN AND NEGATIVE LEVELS
 
+For the equipment-bound exception for aligned weapons, see WEAPONS.txt.
+
 Some horrible creatures, especially undead monsters, possess a fearsome supernatural ability to drain levels from those they strike in combat. The creature making an energy drain attack draws a portion of its victim’s life force from her. Most energy drain attacks require a successful melee attack roll — mere physical contact is not enough. Each successful energy drain attack bestows one or more negative levels on the opponent. A creature takes the following penalties for each negative level it has gained.
 
     –1 on all skill checks and ability checks.

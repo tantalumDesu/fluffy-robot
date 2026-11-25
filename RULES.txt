@@ -297,3 +297,6 @@ A feat excludes itself from further selection once possessed — taken, or grant
 Per-feat values live in `feats[].selection` (maxTakes, repeatable, stacksWithSelf, constraint, evidence). Where a repeatable feat's effects do not stack, each take must apply to a different target (a new exotic weapon, skill, school of magic, and so on).
 
 <!-- stage-s60:end -->
+
+Ability Score Nonabilities
+An absent ability score is not a score of 0. Represent it as null on the sheet. It contributes a modifier of +0 when a calculation calls for its modifier; bonuses, penalties, and minimum scores do not change an absent score. This does not grant the ability to perform tasks that require the missing score or override creature-specific rules.

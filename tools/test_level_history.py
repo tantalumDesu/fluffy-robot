@@ -44,12 +44,13 @@ class LevelHistoryTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 replay_level_history(self.core, choices)
 
-    def test_monk_and_paladin_can_enter_late_but_not_return(self):
-        for class_id in ('monk', 'paladin'):
-            valid = replay_level_history(self.core, ['fighter', class_id, class_id, 'fighter'])
-            self.assertEqual(valid['classLevels'][class_id], 2)
-            with self.assertRaisesRegex(ValueError, 'Cannot return'):
-                replay_level_history(self.core, ['fighter', class_id, 'fighter', class_id])
+    def test_only_paladin_cannot_return_after_multiclassing(self):
+        valid = replay_level_history(self.core, ['fighter', 'paladin', 'paladin', 'fighter'])
+        self.assertEqual(valid['classLevels']['paladin'], 2)
+        with self.assertRaisesRegex(ValueError, 'Cannot return'):
+            replay_level_history(self.core, ['fighter', 'paladin', 'fighter', 'paladin'])
+        monk = replay_level_history(self.core, ['monk', 'fighter', 'monk'])
+        self.assertEqual(monk['classLevels']['monk'], 2)
 
     def test_multiclass_base_combat_and_epic_bonus_track(self):
         result = replay_level_history(self.core, ['fighter', 'barbarian'])

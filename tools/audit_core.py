@@ -22,17 +22,19 @@ def audit(core):
     missing_spells = {id_ for spell_list in core['magic']['spellLists'] for level in spell_list['levels']
                       for id_ in level['spellIds']}
     missing_conditions = {ref['conditionId'] for spell in spells for ref in spell.get('conditions', [])}
+    typed_spell_ids = (set(effects['spellEffectsBySpellId']) | set(effects.get('negativeLevelOperationsBySpellId', {}))
+                       | set(core['magic'].get('alignmentTargetRulesBySpellId', {})))
     errors = {
         'duplicateRuleIds': sorted({r['id'] for r in rules if sum(other['id'] == r['id'] for other in rules) > 1}),
         'danglingRuleIds': sorted(missing_rules - rule_ids),
-        'danglingSpellIds': sorted((missing_spells | set(effects['spellEffectsBySpellId'])) - spell_ids),
+        'danglingSpellIds': sorted((missing_spells | typed_spell_ids) - spell_ids),
         'danglingSpellConditionIds': sorted(missing_conditions - conditions),
         'danglingFeatEffectIds': sorted(set(effects['featEffectsByFeatId']) - feats.keys()),
         'spellsWithMissingDescriptions': sorted(s['id'] for s in spells if not all(
             (s.get(field) or '').strip() for field in ('shortDescription', 'longDescription'))),
     }
     return {'errors': errors, 'rulesListedInCanonButAbsent': sorted(listed - rule_ids),
-            'spellsWithoutTypedEffects': len(spell_ids - effects['spellEffectsBySpellId'].keys()),
+            'spellsWithoutTypedEffects': len(spell_ids - typed_spell_ids),
             'featsWithoutTypedEffects': len(feats.keys() - effects['featEffectsByFeatId'].keys()),
             'featsWithoutSelectionMetadata': sum('selection' not in feat for feat in feats.values())}
 
