@@ -277,6 +277,7 @@ def recover_slots(core, state, *, start_seconds, end_seconds, verified_rest_seco
     result = deepcopy(state)
     since = start_seconds - profile['recentUseHours'] * SECONDS['hour']
     for slot in result['slots'].values():
+        slot.pop('negativeLevelId', None)
         if slot.pop('negativeLevelLoss', None) == 'immediate':
             slot['preparation'] = None
         if not slot['expended']:
@@ -289,3 +290,19 @@ def recover_slots(core, state, *, start_seconds, end_seconds, verified_rest_seco
             slot.pop('spentAtSeconds')
     result['lastRecovery'] = {'day': day, 'endSeconds': end_seconds}
     return result
+
+
+def recover_spell_tracks(core, ledgers, recovery_by_class, *, negative_levels=(), choices=(), at_seconds):
+    """Recover a batch of tracks, then apply one shared set of drain losses.
+
+    Tracks recovering at different times must be submitted as separate batches.
+    Equipment negative levels must be supplied from the current wielded state.
+    """
+    from .negative_levels import active_negative_levels, allocate_spell_losses
+
+    if not recovery_by_class or any(args['end_seconds'] != at_seconds for args in recovery_by_class.values()):
+        raise ValueError('Recovery batch must finish at one specified time')
+    recovered = {key: recover_slots(core, ledgers[key], **args) for key, args in recovery_by_class.items()}
+    blocked = allocate_spell_losses(core, recovered, active_negative_levels(negative_levels, at_seconds),
+                                    choices, recovery=True)
+    return {**deepcopy(ledgers), **blocked}

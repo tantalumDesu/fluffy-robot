@@ -15,7 +15,8 @@ def negative_level_rules(lines):
     source = 'SPECIAL ABILITIES.txt'
     line = lines(source).index('ENERGY DRAIN AND NEGATIVE LEVELS') + 1
     return dict(modifiersPerLevel={'skill': -1, 'ability-check': -1, 'attack': -1, 'save': -1, 'hp': -5},
-                effectiveLevelPenalty=1, immediateSpellLossPerLevel=1, recoverySlotLossPerLevel=1,
+                effectiveLevelPenalty=1, changesClassLevels=False, changesPurchasedSkillRanks=False,
+                immediateSpellLossPerLevel=1, recoverySlotLossPerLevel=1,
                 drainDurationHours=24, fortitudeDcBase=10, dcAttackerHdDivisor=2,
                 permanentLevelLossOnFailure=1, bestowerTemporaryHpPerLevel=5,
                 source={'file': source, 'line': line})
@@ -111,7 +112,7 @@ def allocate_spell_losses(core, ledgers, levels, choices, *, recovery=False):
     """
     chosen = iter(choices)
     result = ledgers
-    for _ in {level['id'] for level in levels}:
+    for level_id in dict.fromkeys(level['id'] for level in levels):
         options = highest_slot_choices(core, result, recovery=recovery)
         if not options:
             break
@@ -122,6 +123,8 @@ def allocate_spell_losses(core, ledgers, levels, choices, *, recovery=False):
             if choice is None:
                 raise ValueError('Choose which highest-level spell slot to lose')
         result = lose_spell_slot(core, result, choice, recovery=recovery)
+        class_id, slot_id = choice
+        result[class_id]['slots'][slot_id]['negativeLevelId'] = level_id
     if next(chosen, None) is not None:
         raise ValueError('Unused spell-slot choices for negative levels')
     return result
@@ -205,7 +208,7 @@ def apply_drain_restoration(core, spell_id, levels, permanent_losses, now, caste
     if rule['operation'] != 'restore-negative-levels' or type(caster_level) is not int or caster_level < 1:
         raise ValueError('Invalid restoration spell or caster level')
     age_limit = seconds(rule['permanentWindowUnit'], caster_level)
-    eligible = sorted((entry for entry in permanent_losses if not entry.get('dueToDeath')
+    eligible = sorted((entry for entry in reversed(permanent_losses) if not entry.get('dueToDeath')
                        and 0 <= now - entry['lostAtSeconds'] <= age_limit),
                       key=lambda entry: entry['lostAtSeconds'], reverse=True)
     if rule['permanentLevels'] == 'one':

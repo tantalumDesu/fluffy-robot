@@ -55,7 +55,7 @@ def encounter_clock(encounter):
                 encounterId=encounter['encounterId'])
 
 
-def start_next_turn(encounter, *, condition_flags_by_actor=None):
+def start_next_turn(encounter, *, condition_flags_by_actor=None, condition_flags_at_turn=None):
     """Advance in initiative order and return (state, completed cast plans)."""
     if encounter['phase'] not in ('between-turns', 'end'):
         raise ValueError('End the current turn first')
@@ -70,17 +70,13 @@ def start_next_turn(encounter, *, condition_flags_by_actor=None):
             break
     state['phase'] = 'start'
     state['actions'] = dict(standard=1, move=int(state['round'] != 0), quickened=False)
-    flags = set((condition_flags_by_actor or {}).get(actor, ()))
-    if flags.intersection({'no-actions', 'attention-only'}):
-        state['actions'].update(standard=0, move=0, blocked=True)
-        state['pending'].pop(actor, None)
+    state['spentActions'] = []
+    state['castingConsumedTurn'] = False
+    flags = (condition_flags_at_turn(state, actor) if condition_flags_at_turn is not None
+             else (condition_flags_by_actor or {}).get(actor, ()))
+    apply_turn_conditions(state, flags)
+    if state['actions'].get('blocked') or 'allowed' in state['actions']:
         return state, []
-    if 'single-move-only' in flags:
-        state['actions'].update(standard=0, move=1, allowed=['move'])
-        state['pending'].pop(actor, None)
-        return state, []
-    if 'single-move-or-standard' in flags:
-        state['actions']['singleAction'] = True
     completed = []
     pending = state['pending'].get(actor)
     if pending:
@@ -95,7 +91,31 @@ def start_next_turn(encounter, *, condition_flags_by_actor=None):
             if ready:
                 pending['completeAtEnd'] = True
             state['actions'].update(standard=0, move=0)
+            state['castingConsumedTurn'] = True
     return state, completed
+
+
+def apply_turn_conditions(state, flags):
+    """Recompute budgets from actions actually spent; never refund a spent action."""
+    budget = dict(standard=1, move=int(state['round'] != 0), quickened=state['actions'].get('quickened', False))
+    spent = state.get('spentActions', ())
+    flags = set(flags)
+    for payment in spent:
+        for kind in payment:
+            budget[kind] = 0
+    if state.get('castingConsumedTurn'):
+        budget.update(standard=0, move=0)
+    if flags & {'no-actions', 'attention-only', 'mental-actions-only'}:
+        budget.update(standard=0, move=0, blocked=True)
+    elif 'single-move-only' in flags:
+        budget.update(standard=0, move=int(not spent and not state.get('castingConsumedTurn')), allowed=['move'])
+    elif 'single-move-or-standard' in flags:
+        budget['singleAction'] = True
+        if spent:
+            budget.update(standard=0, move=0)
+    if budget.get('blocked') or 'allowed' in budget:
+        state['pending'].pop(state['order'][state['index']], None)
+    state['actions'] = budget
 
 
 def spend_action(encounter, action):
@@ -116,11 +136,13 @@ def spend_action(encounter, action):
         if not (budget['standard'] and budget['move']):
             raise ValueError('A full-round action requires both actions')
         budget.update(standard=0, move=0)
+        state.setdefault('spentActions', []).append(['standard', 'move'])
     elif action in ('move', 'standard'):
         pay = 'standard' if action == 'move' and not budget['move'] else action
         if not budget[pay]:
             raise ValueError('Action already spent')
         budget[pay] = 0
+        state.setdefault('spentActions', []).append([pay])
         if budget.get('singleAction'):
             budget.update(standard=0, move=0)
     state['phase'] = 'acting'

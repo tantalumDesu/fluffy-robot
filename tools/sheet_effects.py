@@ -26,6 +26,10 @@ def catalogs(spells, feats, skills):
         feat_effects[key] = [dict(effect, id=f'{key}:{i}', source=feats[key]['source'])
                              for i, effect in enumerate(effects, 1)]
 
+    spell('protection-from-energy', 'minute', 10, [dict(
+        operation='absorb-energy-damage', energyTypes=['acid', 'cold', 'electricity', 'fire', 'sonic'],
+        pointsPerCasterLevel=12, maximumPoints=120, sharedPool=True,
+        expiresWhenDepleted=True, precedesEnergyResistance=True)])
     spell('mage-armor', 'hour', True, [dict(modifier('ac', 4, 'armor'), appliesAgainstIncorporeal=True)])
     # Retain the published ID for saved effect references.
     spell_effects['mage-armor'][0]['id'] = 'mage-armor:armor-bonus'
@@ -124,6 +128,8 @@ def modifier_total(stat_id, instances, context=None):
     if family == 'skill' and member:
         context['skillId'] = member
     for effect, params in instances:
+        if effect.get('applicationMode') == 'adjudicate':
+            continue
         if effect['operation'] != 'modifier' or effect['statId'] not in (stat_id, family):
             continue
         if stat_id == 'ac' and effect.get('bonusType') in ('armor', 'shield', 'natural-armor'):
