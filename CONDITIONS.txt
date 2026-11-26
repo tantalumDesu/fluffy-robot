@@ -78,7 +78,7 @@ Petrified: A petrified character has been turned to stone and is considered unco
 
 Pinned: Held immobile (but not helpless) in a grapple.
 
-Prone: The character is on the ground. An attacker who is prone has a –4 penalty on melee attack rolls and cannot use a ranged weapon (except for a crossbow). A defender who is prone gains a +4 bonus to Armor Class against ranged attacks, but takes a –4 penalty to AC against melee attacks.
+Prone: The character is on the ground. An attacker who is prone has a –4 penalty on melee attack rolls and cannot use a ranged weapon (except for a crossbow [light, heavy, hand, or repeating], a dart, or a shuriken). A defender who is prone gains a +4 bonus to Armor Class against ranged attacks, but takes a –4 penalty to AC against melee attacks.
 Standing up is a move-equivalent action that provokes an attack of opportunity.
 
 Shaken: A shaken character takes a –2 penalty on attack rolls, saving throws, skill checks, and ability checks.

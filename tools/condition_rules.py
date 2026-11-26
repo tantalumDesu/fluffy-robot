@@ -86,7 +86,9 @@ def catalog(lines):
         'missingParts': ['permanent-hp-loss', 'debilitation']})
     add('pinned', ['immobile'], implies=['grappling'], actionRules='pinned-in-grapple', grantsHelpless=False)
     add('prone', mods=[('attack', -4, {'attackKind': 'melee'}), ('ac', 4, {'incomingAttackKind': 'ranged'}),
-        ('ac', -4, {'incomingAttackKind': 'melee'})], prohibitedWeaponUse={'kind': 'ranged', 'except': ['crossbow']},
+        ('ac', -4, {'incomingAttackKind': 'melee'})], prohibitedWeaponUse={'kind': 'ranged', 'exceptWeaponIds': ['weapon:crossbow-light', 'weapon:crossbow-heavy',
+            'weapon:crossbow-hand', 'weapon:crossbow-repeating-light', 'weapon:crossbow-repeating-heavy',
+            'weapon:dart', 'weapon:shuriken-5']},
         stand={'action': 'move', 'provokes': True})
     add('shaken', mods=fear, stateChangeId='fear')
     add('sickened', mods=fear + [('damage', -2, {'damageKind': 'weapon'})])

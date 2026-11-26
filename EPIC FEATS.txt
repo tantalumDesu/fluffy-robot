@@ -21,7 +21,7 @@ blackguard	divine	wis	8	14
 
 FAMILIAR SPELL [EPIC]
 
-Prerequisite: Int 25 (if your spellcasting is controlled by Intelligence) or Cha 25 (if your spellcasting is controlled by Charisma).
+Prerequisite: Int 25, familiar.
 
 Benefit: Choose one spell you know of 8th level or lower, such as chain lightning or circle of death. Your familiar can now cast this spell once per day as a spell-like ability as a caster of a level equal to your caster level. You cannot bestow a spell upon your familiar if the spell normally has a material component cost of more than 1 gp, or any XP cost.
 

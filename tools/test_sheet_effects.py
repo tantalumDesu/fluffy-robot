@@ -59,11 +59,19 @@ class SheetEffectsTest(unittest.TestCase):
         self.assertEqual(modifier_total('save:ref', evil, {'sourceAlignmentTags': ['evil']}), 2)
         self.assertEqual(modifier_total('ac', self.active('shield-of-faith', casterLevel=-1)), 0)
 
-    def test_skill_identity_and_dodge_stacking(self):
+    def test_skill_identity_and_dodge_suppression(self):
         focus = self.active('skill-focus', skillId='jump')
         self.assertEqual(modifier_total('skill:jump', focus), 3)
         self.assertEqual(modifier_total('skill:listen', focus, {'skillId': 'jump'}), 0)
         effects = [(dict(modifier('ac', amount, 'dodge'), id=id_), {})
                    for id_, amount in [('one', 1), ('two', 2)]]
-        self.assertEqual(modifier_total('ac', effects + effects), 3)
+        self.assertEqual(modifier_total('ac', effects + effects), 2)
         self.assertEqual(modifier_total('ac', effects, {'flags': ['denied-dex-to-ac']}), 0)
+
+    def test_named_types_take_best_bonus_and_worst_penalty(self):
+        for tag in ('morale', 'dodge', 'circumstance'):
+            with self.subTest(tag=tag):
+                effects = [(dict(modifier('attack', amount, tag), stacking='sum'), {})
+                           for amount in (2, 4, -1, -3)]
+                effects.append((modifier('attack', 3, 'luck'), {}))
+                self.assertEqual(modifier_total('attack', effects), 4)

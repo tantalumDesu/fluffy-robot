@@ -48,6 +48,16 @@ def grant_energy_protection(core, state, caster_level, now):
     return result
 
 
+def resolve_sheet_damage(core, state, defender_sheet, *, attack=None, physical_profile=None,
+                         bypass_tags=(), **damage):
+    """Apply confirmed rolled damage to actor HP using projected defenses and attack facts."""
+    attack = attack or {}
+    profile = physical_profile if physical_profile is not None else attack.get('physicalDamage')
+    return resolve_damage(core, state, damage_reduction=defender_sheet['damageReduction'],
+                          physical_profile=profile,
+                          bypass_tags=set(bypass_tags) | set(attack.get('damageBypassTags', ())), **damage)
+
+
 def resolve_damage(core, state, *, weapon=0, energy=None, nonlethal=False, bypass_tags=(),
                    damage_reduction=(), energy_resistance=None, ignores_dr=False, single_attack=True,
                    massive_save_total=None, round_id=None, dm_damage_override=None, now=None,

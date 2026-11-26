@@ -97,3 +97,40 @@ class DerivedSheetTest(unittest.TestCase):
         self.assertFalse(stunned['attacks'][0]['canAct'])
         with self.assertRaises(ValueError):
             self.sheet(equipment=[locked])
+
+    def test_prone_attack_profiles_and_defense(self):
+        restriction = self.core['effects']['sheetConditionRulesById']['prone']['operations']['prohibitedWeaponUse']
+        ids = [*restriction['exceptWeaponIds'], 'weapon:longbow', 'weapon:longsword']
+        equipment = [dict(instanceId=id_, itemId=id_, proficient=True) for id_ in ids]
+        upright = self.sheet(equipment=equipment)
+        prone = self.sheet(equipment=equipment, condition_ids=['prone'], attack_context={'incomingAttackKind': 'ranged'})
+        self.assertEqual([a['canAct'] for a in prone['attacks']], [True] * 7 + [False, True])
+        for item_id in ('weapon:dart', 'weapon:shuriken-5'):
+            with self.subTest(item_id=item_id):
+                index = ids.index(item_id)
+                self.assertEqual(prone['attacks'][index]['attackBonus'], upright['attacks'][index]['attackBonus'])
+        self.assertEqual(prone['attacks'][-1]['attackBonus'], upright['attacks'][-1]['attackBonus'] - 4)
+        self.assertEqual(prone['ac']['normal']['total'], upright['ac']['normal']['total'] + 4)
+        melee = self.sheet(condition_ids=['prone'], attack_context={'incomingAttackKind': 'melee'})
+        self.assertEqual(melee['ac']['normal']['total'], upright['ac']['normal']['total'] - 4)
+
+    def test_sheet_damage_reduction_into_hp(self):
+        from tools.injury import resolve_sheet_damage
+        from tools.level_history import replay_level_history
+        history = replay_level_history(self.core, ['barbarian'] * 7)
+        defender = derive_sheet(self.core, history, 'human',
+                                dict(str=14, dex=16, con=12, int=10, wis=10, cha=10),
+                                damage_reduction_grants=[dict(sourceId='confirmed-ward', amount=5,
+                                                              bypassAnyOf=[['good', 'slashing']])])
+        self.assertEqual([r['amount'] for r in defender['damageReduction']], [1, 5])
+        blade = dict(instanceId='blade', itemId='weapon:longsword', held=True, alignmentPropertyIds=['holy'])
+        attack = self.sheet(equipment=[blade], alignment_id='LG')['attacks'][0]
+        state = dict(hp=20, maxHp=20)
+        first = resolve_sheet_damage(self.core, state, defender, attack=attack, weapon=4, round_id=1)
+        self.assertEqual(first['weaponPrevented'], 1)
+        self.assertEqual(first['state']['hp'], 17)
+        second = resolve_sheet_damage(self.core, first['state'], defender, weapon=6, round_id=1)
+        self.assertEqual(second['weaponPrevented'], 4)
+        self.assertEqual(second['state']['hp'], 15)
+        third = resolve_sheet_damage(self.core, second['state'], defender, weapon=6, round_id=2)
+        self.assertEqual(third['weaponPrevented'], 5)

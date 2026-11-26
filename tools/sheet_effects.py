@@ -157,7 +157,7 @@ def modifier_total(stat_id, instances, context=None):
                 continue
             amount = min(amount['max'], max(amount.get('min', amount['base']),
                          amount['base'] + (level - amount['start']) // amount['every']))
-        if effect['stacking'] == 'highest-same-type':
+        if effect.get('bonusType') or effect['stacking'] == 'highest-same-type':
             key = effect['bonusType']
             if amount < 0:
                 worst[key] = min(worst.get(key, 0), amount)

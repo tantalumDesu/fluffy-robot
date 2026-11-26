@@ -191,8 +191,8 @@ Intended typed rule IDs for these shared rules:
 
 - `modifier-definition`: what a modifier is (bonus/penalty on a die roll).
 - `modifier-stacking`: when modifiers stack (different source AND different type / untyped);
-  same type or same source never stack (best bonus, worst penalty); dodge and circumstance
-  bonuses are the exceptions and stack with themselves unless from the same source.
+  same type uses the best bonus and worst penalty, including dodge and circumstance.
+  The DM adjudicates same-source overlap.
 - `modifier-types`: lookup table of the 18 modifier types with what each applies to,
   whether it stacks with itself, and touch-attack behaviour.
 
@@ -202,7 +202,7 @@ A modifier is any bonus or penalty applying to a die roll. A positive modifier i
 
 STACKING
 
-In most cases, modifiers to a given check or roll stack (combine for a cumulative effect) if they come from different sources and have different types (or no type at all), but do not stack if they have the same type or come from the same source (such as the same spell cast twice in succession). If the modifiers to a particular roll do not stack, only the best bonus and worst penalty applies. Dodge bonuses and circumstance bonuses however, do stack with one another unless otherwise specified.
+In most cases, modifiers to a given check or roll stack (combine for a cumulative effect) if they come from different sources and have different types (or no type at all), but do not stack if they have the same type or come from the same source (such as the same spell cast twice in succession). If the modifiers to a particular roll do not stack, only the best bonus and worst penalty applies. For this table, all named modifier types use the highest bonus and lowest (most negative) penalty of that type, including dodge and circumstance. The DM adjudicates source identity and same-source overlap; do not automatically infer it.
 
 MODIFIER TYPES
 

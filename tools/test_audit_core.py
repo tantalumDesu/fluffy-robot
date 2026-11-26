@@ -3,7 +3,6 @@ import unittest
 
 from tools.audit_core import audit
 from tools.organize_core import PATH, lines
-from tools.sheet_effects import modifier, modifier_total
 
 
 class AuditCoreTest(unittest.TestCase):
@@ -24,7 +23,3 @@ class AuditCoreTest(unittest.TestCase):
             self.assertEqual((params['statedEligibleLevels'], params['derivedEligibleLevels']), (stated, derived))
             klass = next(c for c in core['progression']['classes'] if c['id'] == class_id)
             self.assertIn(key, klass['ruleIds'])
-
-    def test_same_type_keeps_best_bonus_and_worst_penalty(self):
-        buffs = [(modifier('attack', amount, 'morale'), {}) for amount in (2, 4, -1, -3)]
-        self.assertEqual(modifier_total('attack', buffs), 1)

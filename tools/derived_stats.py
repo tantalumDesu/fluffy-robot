@@ -1,6 +1,9 @@
 """Compose an actor's size, build, equipped gear and active effects into sheet totals."""
 from fractions import Fraction
 
+from .companion_sheet import project_companion
+from .alignment import weapon_alignment_tags
+from .damage_reduction import project_damage_reduction
 from .creature_size import armor_fit, carrying_limits, equipment_size, size_adjusted_abilities, size_profile, weapon_fit
 from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, project_gauntlets
 from .negative_levels import summarize_negative_levels, weapon_negative_levels
@@ -33,7 +36,8 @@ def condition_state(core, condition_ids):
 
 
 def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects=(), condition_ids=(),
-                 negative_levels=(), alignment_id=None, carried_weight_lb=None, attack_context=None, skill_ranks=None):
+                 negative_levels=(), alignment_id=None, carried_weight_lb=None, attack_context=None, skill_ranks=None, damage_reduction_grants=(),
+                 companion_links=(), master_max_hp=None):
     """Derive a basic humanoid sheet, without mutating inventory or build history.
 
     Scores already include racial adjustments; equipped item instances supply
@@ -166,6 +170,8 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     saves = {key: combat[key] + (racial.get('saves') or {}).get(long, 0) + epic.get('saveBonus', 0)
              + ability_mod[ability] + modifier_total('save:' + key, effects)
              for key, long, ability in (('fort', 'fortitude', 'con'), ('ref', 'reflex', 'dex'), ('will', 'will', 'wis'))}
+    prone_restriction = core['effects']['sheetConditionRulesById']['prone']['operations']['prohibitedWeaponUse']
+    prone = 'prone' in expand_conditions(core['effects']['sheetConditionRulesById'], condition_ids)
     attacks = []
     if not weapons:
         item = items[core['inventory']['fallbackWeaponId']]
@@ -173,14 +179,19 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     for entry, item, current in weapons:
         line = weapon_fit(core, item, profile['sizeId'], current, proficient=entry.get('proficient', False))
         line.update(instanceId=entry['instanceId'], itemId=item['id'], physicalDamage=item.get('physicalDamage'))
+        line['damageBypassTags'] = sorted(set(entry.get('damageBypassTags', ())) |
+                                           weapon_alignment_tags(core, entry.get('alignmentPropertyIds', ())))
         if line['status'] == 'wieldable':
             ranged = item['category'] == 'Ranged Weapon' or entry.get('attackKind') == 'ranged'
             kind = 'ranged' if ranged else 'melee'
+            blocked = prone and ranged and item['id'] not in prone_restriction['exceptWeaponIds']
+            if blocked:
+                line['blockedReason'] = 'prone-ranged-weapon-restriction'
             attack_facts = dict(context, weaponId=item['id'], attackKind=kind, flags=flags)
             parts = dict(baseAttack=combat['bab'] + racial.get('babBonus', 0) + epic.get('attackBonus', 0),
                          ability=ability_mod['dex' if ranged else 'str'], sizeFit=line['sizeAttackPenalty'],
                          proficiency=line['nonproficiencyPenalty'], effects=modifier_total('attack', effects, attack_facts))
-            line.update(attackKind=kind, attackBonus=sum(parts.values()), breakdown=parts, canAct=not flags.intersection({'no-actions', 'mental-actions-only', 'attention-only', 'single-move-only', 'flee-only'}))
+            line.update(attackKind=kind, attackBonus=sum(parts.values()), breakdown=parts, canAct=not blocked and not flags.intersection({'no-actions', 'mental-actions-only', 'attention-only', 'single-move-only', 'flee-only'}))
         if entry['instanceId'] in disarm_bonuses:
             line['disarmDefenseBonus'] = disarm_bonuses[entry['instanceId']]
         if item['id'] == core['inventory']['fallbackWeaponId'] and gauntlets:
@@ -206,7 +217,10 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     elif speed is not None and 'half-speed' in flags:
         speed = Fraction(speed, 2)
     return dict(conditionFlags=sorted(flags), size=profile['sizeId'], reachFt=profile['reachFt'], abilityScores=abilities, abilityModifiers=ability_mod, ac=ac, saves=saves,
+                companions=[project_companion(core, history, link, master_max_hp=master_max_hp,
+                                              master_skill_ranks=skill_ranks) for link in companion_links],
                 attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
                 landSpeedFt=speed, armorCheckPenalty=check_penalty,
+                damageReduction=project_damage_reduction(core, history.get('classLevels', {}), damage_reduction_grants),
                 negativeLevels=drain, droppedInstanceIds=dropped, canAct='no-actions' not in flags,
                 needsReview=review)

@@ -8,7 +8,11 @@ import re
 import unicodedata
 
 if __package__:
+    from .companion_sheet import familiar_loss_catalog
+    from .improved_familiars import catalog as improved_familiar_catalog
+    from .combat_catalog import combat_rules
     from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, locked_gauntlet_rule
+    from .damage_reduction import catalog as damage_reduction_catalog
     from .damage_types import PHYSICAL, physical_profile
     from .source_text import normalized, spell_sources
     from .effect_policy import POLICY, annotate
@@ -26,7 +30,11 @@ if __package__:
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from companion_sheet import familiar_loss_catalog
+    from improved_familiars import catalog as improved_familiar_catalog
+    from combat_catalog import combat_rules
     from locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, locked_gauntlet_rule
+    from damage_reduction import catalog as damage_reduction_catalog
     from damage_types import PHYSICAL, physical_profile
     from source_text import normalized, spell_sources
     from effect_policy import POLICY, annotate
@@ -174,6 +182,7 @@ def creatures():
     for file in ('FAMILIARS.txt', 'ANIMAL COMPANIONS.txt', 'ALTERNATIVE ANIMAL COMPANIONS.txt'):
         text = lines(file)
         minimum, adjustment = 1, 0
+        blocks = []
         for i, line in enumerate(text):
             if tier := re.fullmatch(r'(\d+)th Level or Higher \(Level (-\d+)\)', line):
                 minimum, adjustment = map(int, tier.groups())
@@ -198,11 +207,16 @@ def creatures():
                     scores[text[j].lower()] = number(text[j + 1].strip())
                     if len(scores) == 6:
                         break
-            yield dict(id=slug(file.removesuffix('.txt')) + ':' + slug(name), name=name,
+            blocks.append((name_index, dict(id=slug(file.removesuffix('.txt')) + ':' + slug(name), name=name,
                        role='familiar' if file == 'FAMILIARS.txt' else 'animal-companion',
                        classification=classification, size=classification.split()[0].lower() if classification else None, hitDiceText=text[i + 1].strip(), abilityScores=scores,
                        minimumMasterLevel=minimum, effectiveLevelAdjustment=adjustment,
-                       source=source(file, line=name_index + 1), automation='partial')
+                       source=source(file, line=name_index + 1), automation='partial')))
+        for i, (start, record) in enumerate(blocks):
+            end = blocks[i + 1][0] if i + 1 < len(blocks) else len(text)
+            record['statBlockText'] = '\n'.join(
+                line for line in text[start:end] if not re.fullmatch(r'\d+th Level or Higher \(Level -\d+\)', line)).strip()
+            yield record
 
 
 def build(old):
@@ -369,6 +383,7 @@ def build(old):
         key: dict(id=key, name=key.title(), source=source('WEAPONS.txt', line=next(
             i for i, text in enumerate(lines('WEAPONS.txt'), 1) if text.startswith('Type: Weapons'))))
         for key in PHYSICAL}
+    groups['mechanics']['classDamageReductionById'] = damage_reduction_catalog(lines, source)
     groups['mechanics']['injury'] = injury_catalog(lines)
     groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
     groups['mechanics']['alignmentsById'] = alignments
@@ -462,9 +477,18 @@ def build(old):
             capacity.append(dict(strength=int(strength), **dict(zip(('lightLb', 'mediumLb', 'heavyLb'),
                                  [number(value, ' lb.') for value in loads])), source=source('RULES.txt', line=i)))
     assert [row['strength'] for row in capacity] == list(range(1, 30))
+    shared_rules = combat_rules(lines, source)
+    shared_ids = {rule['id'] for rule in shared_rules}
+    groups['mechanics']['rules'] = [r for r in groups['mechanics']['rules'] if r['id'] not in shared_ids] + shared_rules
+    improved_familiars = improved_familiar_catalog(lines, source, slug)
+    feat_records['improved-familiar']['acquisition'] = dict(
+        optionsPath='/companions/improvedFamiliarOptionsById', source=source('IMPROVED FAMILIARS.txt'),
+        alignmentStepsPerAxis=1, unlistedOptions='dm-adjudication', preserveNonAnimalType=True,
+        grantsSpeakWithOwnKind=False)
     return dict(schemaVersion=2, meta=meta, **groups, feats={'byId': feat_records},
                 inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules, 'equipmentSizeRules': equipment_size_rules, 'encumbranceByBand': encumbrance, 'weaponAlignmentPropertiesById': weapon_alignment_properties},
-                companions={'creaturesById': companions,
+                companions={'creaturesById': companions, 'improvedFamiliarOptionsById': improved_familiars,
+                            'familiarLossByClassId': familiar_loss_catalog(lines, source),
                             'familiarAdvancement': list(advancement('FAMILIARS.txt', ('naturalArmorAdjustment', 'intelligence'))),
                             'animalCompanionAdvancement': list(advancement('ANIMAL COMPANIONS.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthDexterityAdjustment', 'bonusTricks')))},
                 positioning={'automation': 'reference', 'sources': [source(f) for f in ('COMBAT STATISTICS.txt', 'COMBAT MODIFIERS.txt', 'ATTACKS OF OPPORTUNITY.txt', 'SPECIAL INITIATIVE ACTIONS.txt', 'INITIATIVE.txt')]},

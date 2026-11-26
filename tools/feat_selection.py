@@ -31,6 +31,8 @@ def _clause(text, feat_names):
     ):
         if match := re.fullmatch(pattern, normalized):
             return dict(kind=kind, key=match[1].replace(' (any one)', ''), minimum=int(match[2]))
+    if normalized == 'familiar':
+        return dict(kind='hasFamiliar')
     if normalized in ('proficiency with selected weapon', 'proficient with weapon',
                       'weapon proficiency (crossbow type chosen)'):
         return dict(kind='weaponProficiency', choiceKey='weaponId')
@@ -73,6 +75,8 @@ def encode_feats(feats, maximum_casting_rows):
         if key in ('improved-spell-capacity', 'spell-knowledge'):
             requirements = [dict(kind='maximumNormalSpellcasting', anyOf=[option for option in casting_options
                             if key == 'improved-spell-capacity' or option['tradition'] == 'arcane'])]
+        if key == 'improved-familiar':
+            requirements = [dict(kind='familiarAcquisitionAbility')]
         if key == 'greater-spell-focus':
             requirements = [dict(kind='feat', featId='spell-focus', choiceKey='schoolId')]
         repeat_evidence = next((line for line in text.splitlines() if re.search(
@@ -171,6 +175,14 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
                     outcomes.append(True)
             check(True if True in outcomes else None if None in outcomes else False,
                   'Ability to cast the maximum normal spell level for a qualifying class')
+            continue
+        if kind == 'familiarAcquisitionAbility':
+            value = snapshot.get('hasFamiliarAcquisitionAbility')
+            check(value if type(value) is bool else None, 'Ability to acquire a familiar')
+            continue
+        if kind == 'hasFamiliar':
+            value = snapshot.get('hasFamiliar')
+            check(value if type(value) is bool else None, 'Has a familiar')
             continue
         if kind == 'manual':
             check(None, req['text'])
