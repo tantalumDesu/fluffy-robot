@@ -272,3 +272,49 @@ Familiar progression uses Wizard class levels; animal companion progression uses
 The projection does not acquire a companion, allocate feats or skills, choose tricks, or execute special abilities. Attack routines project attack bonuses where the source notation supports it and preserve source damage text for review. The source stat block is reference data, not a second set of bonuses to apply.
 
 Dismissing a familiar (including to adopt an improved familiar), or losing it to death, requires a DC 15 Fortitude save: lose 200 XP per level in the relevant Wizard or Sorcerer class on failure, or 100 XP per class level on success, with a floor of zero XP. A replacement must wait a year and a day. `companions.familiarLossByClassId` preserves the source rule, and `resolve_familiar_loss` calculates XP from the table’s save total. The caller records the loss, updates XP, and enforces the replacement wait using the campaign calendar before setting `canAcquireFamiliar`.
+
+## Equipment slots and two-weapon fighting
+
+`derive_sheet` accepts role-based `hand` assignments (`primary` or `offhand`), independent of physical handedness. Give a two-handed weapon `gripHands=['primary', 'offhand']`; one-handed weapons can use `hand` alone. Shields reserve their assigned grip except for bucklers, and locked gauntlets occupy a separate gauntlet slot on each hand. Optional `slotId` reserves a body slot (including `ring-left` and `ring-right`); these are caller-confirmed placements, not inferred magic-item eligibility. Conflicting declared slots are rejected. Unassigned weapons still get their standalone attack profiles but do not form a two-weapon routine.
+
+Pass verified `feat_ids` and optional `ranger_combat_style='two-weapon'`. A separate `twoWeaponRoutine` shows the full-attack penalties and the extra off-hand attacks from Improved and Greater Two-Weapon Fighting. Ranger style applies in light or no armor. Set `double_weapon_instance_id` to use both ends of an equipped double weapon. Two-Weapon Defense contributes a nonstacking shield bonus (+2 with confirmed `fightingDefensively` or `totalDefense` context). The routine does not spend actions or decide which attacks the player makes.
+
+For a shield bash, provide `bashWeaponId` on a shield assigned to a hand, plus `additionIds` for installed spikes. For a confirmed bash, pass the shield instance in `shieldBashUsedInstanceIds` to suppress its AC bonus unless the actor has Improved Shield Bash. For confirmed weapon use with the buckler arm, supply `bucklerArmUsedInstanceIds` to suppress its defense. Record these facts in encounter state; merely equipping gear does not execute an attack or reload a crossbow.
+
+### Familiar Spell choices and display
+
+Supply `known_spell_levels` (spell ID → level at which the character knows it) to `derive_sheet`. `familiarSpellChoices` separates eligible spells from those needing material-cost confirmation. Only known spells of levels 0–8 qualify; XP components and material components above 1 gp disqualify a spell. Pass confirmed costs through `verified_material_cost_gp`. Use `check_familiar_spell_selection` to validate the pick together with the feat prerequisites.
+
+Store each selection as a separate `feat_choices` entry with `featId='familiar-spell'` and `choices={'spellId': ...}`. `familiarSpellGrants` groups those choices by spell ID and labels them, for example `Familiar Spell, Magic Missile 2/day`. This is the daily grant, not the number of uses remaining.
+
+### Weapon Focus choices and display
+
+Pass confirmed `weapon_proficiencies` to `derive_sheet` to list choices even when the weapon is not equipped. The sheet also recognizes equipped weapons explicitly marked proficient. Grapple and Unarmed Strike are always listed; Ray is listed with at least one level in a spellcasting class. `check_weapon_focus_selection` validates the choice, BAB +1, and the restriction against taking the same choice twice.
+
+Record each selection in `feat_choices` with `featId='weapon-focus'` and `choices={'weaponId': ...}`. `weaponFocusGrants` displays labels such as `Weapon Focus, Ray`; the sheet applies the +1 to matching weapon attacks, unarmed strikes, or grapple checks. Core generation marks spells whose **Effect** text contains `ray` or `rays` with `attackProfile.kind: ray` and links them to the typed Ray choice. With Ray selected, each matching known spell shows `weaponFocusAttackBonus: 1`. Pass the updated `known_spell_levels` when a spell is learned; there is no per-spell feat entry to maintain.
+
+Greater Weapon Focus and both Weapon Specialization feats use the same exact weapon choice as their prerequisites. The sheet combines confirmed selections as attack and weapon damage modifiers, including ray spell entries. Overwhelming Critical checks the selected melee weapon against the matching Weapon Focus and Improved Critical picks; its extra critical dice are reference data for a confirmed critical, not an automatic roll.
+
+### Spell Focus choices and saving throws
+
+The core defines school IDs in `magic.schoolsById` and links every spell to its school. `spellFocusChoices` lists available schools for Spell Focus and Greater Spell Focus, excluding Universal. Greater Spell Focus requires Spell Focus for the same school. Each contributes +1 to saving-throw DCs for that school; the two distinct feats stack, but duplicate selections of the same feat and school do not. Confirmed `feat_choices` supply the bonus in known-spell entries and in `plan_cast`. This modifies the defender’s **saving throw DC**, not caster-level checks to overcome spell resistance.
+
+### Other feat grants
+
+Every epic feat carries a source-linked character level 21 requirement in `prerequisites.allOf`. Confirmed `feat_choices` feed Skill Focus into skill totals, add martial and exotic proficiency grants, and project Improved Critical and Rapid Reload on matching equipment. Keen and Improved Critical do not multiply one another. Reload timing is descriptive; the encounter still adjudicates hand use and opportunity attacks.
+
+Toughness contributes `featMaxHpBonus`; add it once when assembling the actor’s maximum HP. Pass confirmed `turning_pool_ids` to project Extra Turning's daily capacity bonuses independently of uses remaining. Spell Penetration and Greater Spell Penetration contribute `spellResistanceCheckBonus` to cast plans, independently of Spell Focus. Spell Mastery is repeatable: record each pick’s `spellIds`, using the Wizard’s known spells and Intelligence modifier at selection. The spell list flags mastered spells; preparation without a spellbook remains a caller concern.
+
+The generated `inventory.equipmentSlots` lists slot IDs and Ranger two-weapon style grants; weapon `gripProfile` entries and shield `reservesGrip` flags hold the item-specific defaults. Runtime helpers validate the declared equipment and apply those defaults. Familiar Spell limits and per-selection daily uses are in `feats.byId.familiar-spell.spellGrant`; known spells, verified component costs, and remaining uses stay outside the core.
+
+### Wizard spellbooks
+
+`magic.wizardSpellbook` defines the standard 100-page book and the page rule: one page per Wizard spell level, minimum one page. Track separate book instances with inventory. `new_spellbook` creates a blank record and `learn_wizard_spells` records confirmed acquisitions, using Wizard list levels and rejecting a batch that exceeds capacity. Starting spells, level-up choices, and copies use the same page accounting; eligibility to acquire a spell is confirmed before recording it.
+
+Pass accessible books to `prepare_spell` as `accessible_spellbooks`. The Wizard spell must be recorded at its base Wizard level; metamagic changes slot cost, not pages. The table's spellbook requirement applies even to *read magic*. Spell Mastery remains visible on the sheet but does not bypass this preparation check. Losing a book does not erase an already-prepared spell. Other class tracks continue to use their own spell access rules, even when the character is also a Wizard or knows the same spell through both classes.
+
+### Wizard study and school specialization
+
+Keep `new_wizard_learning()` state per Wizard casting track. `begin_wizard_study` records the accessible scroll or other wizard’s book and the study deadline; `finish_wizard_study` takes a table-confirmed Spellcraft total **before** the separate specialty bonus. Failure records actual ranks for the retry gate. Success returns a scroll instance ID to remove (if applicable), but does not add a known spell. `inscribe_understood_spell` checks a separate full day, book capacity, and materials (100 gp per page) and returns the updated book and known-spell state. Persist each returned state together with its inventory/material changes. `learn_wizard_spells` remains the low-level writer for confirmed starting or level-up grants; external study uses the staged workflow.
+
+Use `choose_wizard_specialization` at first **Wizard class level** to record the permanent choice of a specialty or generalist. Keep the returned record even for a generalist and supply it as `existing_choice` on any attempted update; pass the saved choice to learning, slot budgeting, and cast planning. The specialization validator enforces two distinct prohibited schools (one for a diviner), and does not allow prohibiting Divination or choosing Universal. The Wizard-only `specialist` pool holds one additional slot for each available spell level, and cast plans for this pool require a matching school. Use `wizard_spell_item_school_allowed` for the prohibited-school check when the character is using a scroll or wand as a Wizard. The caller confirms access, uninterrupted study/writing, and item use; other casting tracks are unaffected.

@@ -3,9 +3,17 @@ import re
 from copy import deepcopy
 
 if __package__:
+    from .spellbooks import pages_used, school_access, wizard_specialization
+    from .feat_grants import feat_effects
+    from .sheet_effects import modifier_total
+    from .spell_focus import focus_bonus
     from .alignment import check_spell_alignment
     from .game_time import SECONDS, encounter_clock, schedule_cast
 else:
+    from spellbooks import pages_used, school_access, wizard_specialization
+    from feat_grants import feat_effects
+    from sheet_effects import modifier_total
+    from spell_focus import focus_bonus
     from alignment import check_spell_alignment
     from game_time import SECONDS, encounter_clock, schedule_cast
 
@@ -27,7 +35,7 @@ def metamagic_catalog(feats):
     return result
 
 
-def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slots=None):
+def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slots=None, specialization=None):
     """Return castable daily slots by (pool, level), for one effective casting class.
 
     Supply the bonus-slot-eligible ability score (not transient spell boosts).
@@ -58,6 +66,13 @@ def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slot
             # A newly unlocked spell level also receives its ability bonus once.
             bonus = (1 + (mod - level) // 4) if ('regular', level) not in result and 0 < level <= mod else 0
             result['regular', level] = result.get(('regular', level), 0) + quantity + bonus
+    if class_id == 'wizard' and specialization:
+        profile = wizard_specialization(core, specialization.get('specialtySchoolId'), specialization.get('prohibitedSchoolIds', ()))
+        if profile['specialtySchoolId']:
+            count = core['magic']['wizardSpellbook']['specialization']['extraSlotsPerSpellLevel']
+            for level, base in enumerate(row.get('spellsPerDay', ()), casting['minSpellLevel']):
+                if base is not None and ability_score >= 10 + level:
+                    result['specialist', level] = count
     return result
 
 
@@ -93,7 +108,7 @@ def resolve_armor_spell_failure(plan, roll):
 
 def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metamagic=(), heighten_to=None,
               domain_spell_levels=None, conversion=False, random_numeric=None, quickened_this_round=False,
-              alignment_id=None, deity_alignment=None, deity_known=False, worn_armor_and_shields=()):
+              alignment_id=None, deity_alignment=None, deity_known=False, worn_armor_and_shields=(), feat_choices=(), specialization=None, specialist_slot=False):
     """Validate spell membership and metamagic, returning a plan without spending a slot."""
     cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
     casting = cls.get('spellcasting', {})
@@ -102,6 +117,11 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     if conversion and not casting.get('spontaneousConversion'):
         raise ValueError('This class has no spontaneous conversion')
     spell = next(s for s in core['magic']['spells'] if s['id'] == spell_id)
+    if class_id == 'wizard' and not school_access(core, spell, specialization):
+        raise ValueError('Spell belongs to a prohibited Wizard school')
+    if specialist_slot and (class_id != 'wizard' or domain_spell_levels is not None or
+                            (specialization or {}).get('specialtySchoolId') != spell['schoolId']):
+        raise ValueError('Specialist slots require a spell from the Wizard specialty school')
     alignment_status = check_spell_alignment(core, class_id, spell, alignment_id,
                                              deity_alignment=deity_alignment, deity_known=deity_known)
     if alignment_status != 'eligible':
@@ -179,10 +199,17 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     minimum = catalog['improved-metamagic']['minimumIncrease']
     increase = sum(max(minimum, catalog[key]['slotIncrease'] - reduction)
                    for key in feats if catalog[key]['slotIncrease'] is not None)
-    return dict(classId=class_id, spellId=spell_id, pool='domain' if domain_spell_levels is not None else 'regular',
+    feat_choices = tuple(feat_choices)
+    focus = focus_bonus(core, spell, feat_choices)
+    penetration = modifier_total('spell-resistance-check', feat_effects(
+        core, feat_choices, {'spell-penetration', 'greater-spell-penetration'}))
+    if spell['spellResistance'].get('applies') is False:
+        penetration = 0
+    return dict(classId=class_id, spellId=spell_id,
+                spellbookRules=core['magic']['wizardSpellbook'] if class_id == 'wizard' else None, pool='specialist' if specialist_slot else 'domain' if domain_spell_levels is not None else 'regular',
                 mode='conversion' if conversion else 'spontaneous' if spontaneous else 'prepared',
                 baseSpellLevel=base, effectiveSpellLevel=effective, requiredSlotLevel=effective + increase,
-                saveDc=10 + effective + (ability_score - 10) // 2, castingTime=time, timing=timing,
+                saveDc=10 + effective + (ability_score - 10) // 2 + focus, spellFocusSaveDcBonus=focus, spellResistanceCheckBonus=penetration, castingTime=time, timing=timing,
                 metamagic=list(feats), components=components, transforms=transforms,
                 armorSpellFailure=armor_spell_failure(core, class_id, casting['kind'], components, worn_armor_and_shields))
 
@@ -207,10 +234,19 @@ def _signature(plan):
     return [plan['spellId'], plan['effectiveSpellLevel'], list(plan['metamagic'])]
 
 
-def prepare_spell(state, slot_id, plan, *, accessible_spell_ids):
+def prepare_spell(state, slot_id, plan, *, accessible_spell_ids, accessible_spellbooks=()):
     slot = _slot_for(state, slot_id, plan)
     if plan['mode'] != 'prepared' or slot['preparation'] is not None or plan['spellId'] not in accessible_spell_ids:
         raise ValueError('Cannot prepare this spell in this slot')
+    if state['classId'] == 'wizard':
+        rule = plan['spellbookRules']
+        found = False
+        for book in accessible_spellbooks:
+            pages_used(book, rule)
+            if book['spellsById'].get(plan['spellId']) == plan['baseSpellLevel']:
+                found = True
+        if not found:
+            raise ValueError('Wizard preparation requires the spell in an accessible spellbook')
     result = deepcopy(state)
     result['slots'][slot_id]['preparation'] = _signature(plan)
     return result

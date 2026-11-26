@@ -26,3 +26,14 @@ python tools/audit_core.py
 python tools/source_audit.py
 python -m unittest discover -s tools
 ```
+
+## Feat choices and repeated grants
+
+Review of `FEATS.txt` and `EPIC FEATS.txt` against generated selection/effect data and the sheet and casting consumers. Remaining gaps after projecting confirmed feat grants:
+
+| Priority | Feat or family | Missing connection |
+| --- | --- | --- |
+| Medium | Improved Natural Attack | The feat records `naturalAttackId`, but the sheet has no chooser based on the actor's natural attacks or projected damage-die change. Apply the size-equivalent die change only to the selected natural attack, not to the creature's size. |
+| Medium | Improved Spell Capacity / Spell Knowledge | Both have maximum-normal-casting prerequisite checks. They lack a full selection and grant workflow: Capacity records an eligible casting class and slot level on each pick; Knowledge records two new eligible arcane spells and grants no slots. |
+
+Dodge is a different kind of choice: the opponent designation is encounter state, not part of the permanent feat name. Improved Metamagic already counts repeat selections in cast planning; it does not need a target picker.
