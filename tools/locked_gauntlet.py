@@ -39,7 +39,7 @@ def project_gauntlets(core, equipped, worn_armor):
             continue
         hand = entry.get('hand')
         if hand is not None:
-            if hand not in ('left', 'right') or hand in hands:
+            if hand not in core['inventory']['equipmentSlots']['handIds'] or hand in hands:
                 raise ValueError('Invalid or duplicate locked gauntlet hand')
             hands.add(hand)
         weapon = entry.get('securedWeaponInstanceId')

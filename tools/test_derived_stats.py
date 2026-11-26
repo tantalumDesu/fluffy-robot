@@ -80,7 +80,7 @@ class DerivedSheetTest(unittest.TestCase):
                 spend_action(turn, 'move')
 
     def test_locked_gauntlet_projects_numbers_and_keeps_adjudication_text(self):
-        gauntlet = dict(instanceId='g', itemId='armor:gauntlet-locked', hand='right')
+        gauntlet = dict(instanceId='g', itemId='armor:gauntlet-locked', hand='primary')
         blade = dict(instanceId='blade', itemId='weapon:longsword', held=True)
         plate = dict(instanceId='armor', itemId='armor:full-plate', fitted=True)
         open_sheet = self.sheet(equipment=[gauntlet])
@@ -134,3 +134,147 @@ class DerivedSheetTest(unittest.TestCase):
         self.assertEqual(second['state']['hp'], 15)
         third = resolve_sheet_damage(self.core, second['state'], defender, weapon=6, round_id=2)
         self.assertEqual(third['weaponPrevented'], 5)
+
+    def test_equipment_slots_two_weapon_feats_and_defense(self):
+        sword = dict(instanceId='sword', itemId='weapon:longsword', hand='primary', proficient=True)
+        dagger = dict(instanceId='dagger', itemId='weapon:dagger', hand='offhand', proficient=True)
+        baseline = self.sheet(equipment=[sword, dagger])
+        routine = baseline['twoWeaponRoutine']
+        self.assertEqual((routine['mainHandPenalty'], routine['offHandPenalty']), (-4, -8))
+        self.assertEqual(routine['mainHand']['instanceId'], 'sword')
+        self.assertEqual(baseline['equipmentSlots']['bySlot']['grip-offhand'], 'dagger')
+        feats = ['two-weapon-fighting', 'improved-two-weapon-fighting', 'greater-two-weapon-fighting', 'two-weapon-defense']
+        trained = self.sheet(equipment=[sword, dagger], feat_ids=feats,
+                             attack_context={'fightingDefensively': True})
+        routine = trained['twoWeaponRoutine']
+        self.assertEqual((routine['mainHandPenalty'], routine['offHandPenalty']), (-2, -2))
+        self.assertEqual(routine['offHand']['attackBonuses'], [3, -2, -7])
+        self.assertEqual(trained['ac']['normal']['total'], baseline['ac']['normal']['total'] + 2)
+        self.assertEqual(trained['ac']['touch']['total'], baseline['ac']['touch']['total'])
+        with self.assertRaisesRegex(ValueError, 'occupied'):
+            self.sheet(equipment=[sword, dict(dagger, hand='primary')])
+        with self.assertRaisesRegex(ValueError, 'ring-left'):
+            self.sheet(equipment=[dict(sword, slotId='ring-left'), dict(dagger, slotId='ring-left')])
+
+    def test_two_handed_double_weapon_and_shield_bash(self):
+        staff = dict(instanceId='staff', itemId='weapon:quarterstaff', proficient=True)
+        self.assertFalse(self.sheet(equipment=[dict(staff, hand='primary')])['attacks'][0]['canAct'])
+        two_hands = self.sheet(equipment=[dict(staff, gripHands=['primary', 'offhand'])], double_weapon_instance_id='staff')
+        self.assertTrue(two_hands['twoWeaponRoutine']['doubleWeapon'])
+        shield = dict(instanceId='shield', itemId='armor:shield-light-steel', hand='offhand', proficient=True,
+                      bashWeaponId='weapon:spiked-shield-light', additionIds=['armor:shield-spikes'])
+        sword = dict(instanceId='sword', itemId='weapon:longsword', hand='primary', proficient=True)
+        context = {'shieldBashUsedInstanceIds': ['shield']}
+        no_feat = self.sheet(equipment=[sword, shield], attack_context=context)
+        feat = self.sheet(equipment=[sword, shield], attack_context=context, feat_ids=['improved-shield-bash'])
+        self.assertEqual(no_feat['twoWeaponRoutine']['offHand']['instanceId'], 'shield')
+        self.assertEqual(no_feat['attacks'][1]['physicalDamage']['typeIds'], ['piercing'])
+        self.assertEqual(feat['ac']['normal']['total'], no_feat['ac']['normal']['total'] + 1)
+
+    def test_ranger_style_and_buckler(self):
+        from tools.level_history import replay_level_history
+        history = replay_level_history(self.core, ['ranger'] * 6)
+        gear = [dict(instanceId='sword', itemId='weapon:longsword', hand='primary', proficient=True),
+                dict(instanceId='dagger', itemId='weapon:dagger', hand='offhand', proficient=True),
+                dict(instanceId='buckler', itemId='armor:buckler', hand='offhand')]
+        scores = dict(str=14, dex=16, con=12, int=10, wis=10, cha=10)
+        light = derive_sheet(self.core, history, 'human', scores, equipment=gear,
+                             ranger_combat_style='two-weapon')
+        heavy = derive_sheet(self.core, history, 'human', scores, equipment=gear + [
+            dict(instanceId='plate', itemId='armor:full-plate', fitted=True)], ranger_combat_style='two-weapon')
+        self.assertEqual(light['twoWeaponRoutine']['offHandPenalty'], -2)
+        self.assertEqual(len(light['twoWeaponRoutine']['offHand']['attackBonuses']), 2)
+        self.assertEqual(heavy['twoWeaponRoutine']['offHandPenalty'], -8)
+        self.assertEqual(light['attacks'][1]['breakdown']['grip'], -1)
+        used = derive_sheet(self.core, history, 'human', scores, equipment=gear,
+                            attack_context={'bucklerArmUsedInstanceIds': ['buckler']})
+        self.assertEqual(used['ac']['normal']['total'], light['ac']['normal']['total'] - 1)
+
+    def test_familiar_spell_choices_and_repeated_grants(self):
+        from tools.feat_selection import check_familiar_spell_selection
+        known = {'chain-lightning': 6, 'magic-missile': 1, 'time-stop': 9, 'fireball': 3, 'wish': 8}
+        picks = [dict(featId='familiar-spell', choices={'spellId': key})
+                 for key in ('chain-lightning', 'magic-missile', 'magic-missile')]
+        sheet = self.sheet(known_spell_levels=known, feat_choices=picks)
+        self.assertEqual([o['spellId'] for o in sheet['familiarSpellChoices']['eligible']],
+                         ['magic-missile', 'chain-lightning'])
+        self.assertEqual([o['spellId'] for o in sheet['familiarSpellChoices']['needsReview']], ['fireball'])
+        self.assertEqual([o['label'] for o in sheet['familiarSpellGrants']],
+                         ['Familiar Spell, Chain Lightning 1/day', 'Familiar Spell, Magic Missile 2/day'])
+        facts = dict(feats=picks, characterLevel=21, hasFamiliar=True, abilityScores={'int': 25})
+        self.assertEqual(check_familiar_spell_selection(self.core, facts, 'magic-missile',
+                         known_spell_levels=known)['status'], 'eligible')
+        self.assertEqual(check_familiar_spell_selection(self.core, facts, 'fireball',
+                         known_spell_levels=known, verified_material_cost_gp={'fireball': 2})['status'], 'ineligible')
+
+    def test_weapon_focus_choices_and_dynamic_ray_spells(self):
+        from tools.feat_selection import check_weapon_focus_selection
+        from tools.level_history import replay_level_history
+        known = {'ray-of-frost': 0, 'magic-missile': 1}
+        weapon = dict(instanceId='sword', itemId='weapon:longsword')
+        picks = [dict(featId='weapon-focus', choices={'weaponId': id_}) for id_ in
+                 ('weapon:longsword', 'weapon:grapple', 'weapon:ray', 'weapon:unarmed-strike')]
+        history = replay_level_history(self.core, ['fighter', 'wizard'])
+        scores = dict(str=14, dex=16, con=12, int=16, wis=10, cha=10)
+        args = dict(equipment=[weapon], weapon_proficiencies=['weapon:longsword'], known_spell_levels=known)
+        clean = derive_sheet(self.core, history, 'human', scores, **args)
+        focused = derive_sheet(self.core, history, 'human', scores, feat_choices=picks, **args)
+        self.assertEqual(focused['attacks'][0]['attackBonus'], clean['attacks'][0]['attackBonus'] + 1)
+        self.assertEqual(focused['grappleBonus'], clean['grappleBonus'] + 1)
+        self.assertEqual(focused['specialAttackModifiers']['weapon:unarmed-strike'], 1)
+        self.assertEqual({o['weaponId'] for o in focused['weaponFocusChoices']},
+                         {'weapon:longsword', 'weapon:grapple', 'weapon:ray', 'weapon:unarmed-strike'})
+        self.assertIn('Weapon Focus, Ray', [o['label'] for o in focused['weaponFocusGrants']])
+        later = derive_sheet(self.core, history, 'human', scores, feat_choices=picks,
+                             **dict(args, known_spell_levels=dict(known, **{'scorching-ray': 2})))
+        self.assertEqual({o['spellId'] for o in later['knownSpells'] if o.get('weaponFocusAttackBonus') == 1},
+                         {'ray-of-frost', 'scorching-ray'})
+        facts = dict(feats=[], weaponProficiencies=['weapon:longsword'], classLevels={'fighter': 1}, baseAttackBonus=1)
+        self.assertEqual(check_weapon_focus_selection(self.core, facts, 'weapon:ray')['status'], 'ineligible')
+        self.assertEqual(check_weapon_focus_selection(self.core, facts, 'weapon:dagger')['status'], 'ineligible')
+        self.assertEqual(check_weapon_focus_selection(self.core, dict(facts, classLevels={'wizard': 1}),
+                         'weapon:ray')['status'], 'eligible')
+
+    def test_dependent_weapon_feats_use_exact_choice(self):
+        from tools.feat_selection import check_weapon_focus_selection
+        ray = {'weaponId': 'weapon:ray'}
+        picks = [dict(featId=feat, choices=ray) for feat in (
+            'weapon-focus', 'greater-weapon-focus', 'weapon-specialization', 'greater-weapon-specialization')]
+        facts = dict(feats=picks[:1], classLevels={'fighter': 8, 'wizard': 1},
+                     weaponProficiencies=['weapon:longsword'])
+        for feat in ('greater-weapon-focus', 'weapon-specialization'):
+            self.assertEqual(check_weapon_focus_selection(self.core, facts, 'weapon:ray', feat_id=feat)['status'], 'eligible')
+            self.assertEqual(check_weapon_focus_selection(self.core, facts, 'weapon:longsword', feat_id=feat)['status'], 'ineligible')
+        sheet = self.sheet(feat_choices=picks, known_spell_levels={'ray-of-frost': 0})
+        self.assertEqual(sheet['knownSpells'][0]['weaponFocusAttackBonus'], 2)
+        self.assertEqual(sheet['knownSpells'][0]['weaponSpecializationDamageBonus'], 4)
+
+    def test_confirmed_feat_grants_reach_sheet(self):
+        picks = [dict(featId=key, choices=choice) for key, choice in (
+            ('martial-weapon-proficiency', {'weaponId': 'weapon:longsword'}),
+            ('improved-critical', {'weaponId': 'weapon:longsword'}),
+            ('skill-focus', {'skillId': 'jump'}), ('toughness', {}), ('toughness', {}),
+            ('extra-turning', {}), ('extra-turning', {}), ('rapid-reload', {'weaponId': 'weapon:crossbow-light'}))]
+        sheet = self.sheet(feat_choices=picks, skill_ranks={'jump': 0}, turning_pool_ids=['turn-undead'], equipment=[
+            dict(instanceId='sword', itemId='weapon:longsword', keen=True),
+            dict(instanceId='bow', itemId='weapon:crossbow-light')])
+        self.assertEqual(sheet['skillTotals']['jump'], 5)
+        self.assertEqual(sheet['featMaxHpBonus'], 6)
+        self.assertEqual(sheet['extraTurningUsesByPool'], {'turn-undead': 8})
+        self.assertEqual(sheet['attacks'][0]['nonproficiencyPenalty'], 0)
+        self.assertEqual(sheet['attacks'][0]['criticalProfile'], {'threatMinimum': 17, 'multiplier': 2})
+        self.assertEqual(sheet['attacks'][1]['reload'], {'action': 'free', 'provokes': True})
+
+    def test_grip_and_familiar_spell_read_generated_rules(self):
+        from copy import deepcopy
+        from tools.equipment_slots import grip_adjustment
+        from tools.familiar_spell import familiar_spell_choices
+        core = deepcopy(self.core)
+        weapon = core['inventory']['itemsById']['weapon:crossbow-heavy']
+        self.assertEqual(grip_adjustment(weapon, {'effectiveCategory': 'Ranged Weapon'}, ('primary',)), (True, -4))
+        weapon['gripProfile']['oneHandAttackPenalty'] = -3
+        self.assertEqual(grip_adjustment(weapon, {'effectiveCategory': 'Ranged Weapon'}, ('primary',)), (True, -3))
+        known = {'chain-lightning': 6}
+        self.assertTrue(familiar_spell_choices(core, known)['eligible'])
+        core['feats']['byId']['familiar-spell']['spellGrant']['maximumKnownSpellLevel'] = 5
+        self.assertFalse(familiar_spell_choices(core, known)['eligible'])

@@ -1,6 +1,13 @@
 """Extract feat requirements and validate selections against a level-time snapshot."""
 import re
 
+if __package__:
+    from .feat_grants import weapon_proficiency_grants
+    from .weapon_focus import special_choices, weapon_focus_choices
+else:
+    from feat_grants import weapon_proficiency_grants
+    from weapon_focus import special_choices, weapon_focus_choices
+
 
 CHOICES = {
     **dict.fromkeys(('exotic-weapon-proficiency', 'martial-weapon-proficiency', 'greater-weapon-focus',
@@ -87,14 +94,28 @@ def encode_feats(feats, maximum_casting_rows):
         if repeat_evidence and key in CHOICES and key != 'familiar-spell':
             distinct = True
         stack = bool(repeat_evidence and re.search(r'\beffects stack\b', repeat_evidence, re.I))
+        if key == 'spell-mastery':
+            record['spellMasteryGrant'] = {'choiceKey': 'spellIds', 'countFrom': 'intelligenceModifier', 'knownClassId': 'wizard'}
+            repeat_evidence = next(line for line in text.splitlines() if 'Each time you take this feat' in line)
         if key == 'familiar-spell':
             stack = True  # additional daily uses of the same chosen spell
+            record['spellGrant'] = dict(maximumKnownSpellLevel=8, maximumMaterialCostGp=1,
+                                        prohibitedComponentCodes=['XP'], dailyUsesPerTake=1)
         record['benefitText'] = _field(text, r'Benefits?')
         record['prerequisites'] = {'text': raw, 'allOf': requirements}
         record['selection'] = dict(repeatable=bool(repeat_evidence), maxTakes=None if repeat_evidence else 1,
                                    stacksWithSelf=stack if not repeat_evidence or stack or distinct else None,
                                    distinctChoice=distinct, choiceKey=CHOICES.get(key), evidence=repeat_evidence,
                                    choiceNeedsReview=key in CHOICE_REVIEW)
+        if key in ('exotic-weapon-proficiency', 'martial-weapon-proficiency'):
+            record['weaponProficiencyGrant'] = {'category': key.split('-', 1)[0]}
+        if key == 'rapid-reload':
+            record['reloadByWeaponId'] = {'weapon:crossbow-' + kind: dict(action=action, provokes=True)
+                                          for kind, action in (('hand', 'free'), ('light', 'free'), ('heavy', 'move'))}
+        if key == 'improved-critical':
+            record['criticalThreatRange'] = {'multiplier': 2, 'stacksWithOtherRangeExpansion': False}
+        if key == 'weapon-focus':
+            record['selection']['specialWeaponChoices'] = special_choices()
     return feats
 
 
@@ -138,6 +159,15 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
         verified = snapshot.get('eligibleChoiceIdsByFeat', {}).get(feat_id)
         check(None if not choice_key or verified is None or not choice_value else choice_value in verified,
               'Verify feat-specific selection restrictions against the benefit text')
+    if feat_id == 'spell-mastery':
+        selected = choices.get('spellIds')
+        known = snapshot.get('knownWizardSpellIds')
+        score = snapshot.get('abilityScores', {}).get('int')
+        valid = isinstance(selected, (list, tuple)) and all(isinstance(key, str) for key in selected)
+        check(valid and len(set(selected)) == len(selected) and bool(selected), 'Choose distinct spells for Spell Mastery')
+        if valid:
+            check(None if score is None else len(selected) == max(0, (score - 10) // 2), 'Choose spells equal to Intelligence modifier')
+            check(None if known is None else set(selected) <= set(known), 'Spell Mastery requires known Wizard spells')
     requirements = list(feat['prerequisites']['allOf'])
     if monk_bonus_slot is not None:
         allowed = {1: {'improved-grapple', 'stunning-fist'}, 2: {'combat-reflexes', 'deflect-arrows'},
@@ -151,8 +181,6 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
             check(False, 'Monk bonus slot does not match the selection-time class level')
         else:
             requirements = []
-    if feat['epic']:
-        requirements.append(dict(kind='level', key='character', minimum=21))
     for req in requirements:
         kind, key = req['kind'], req.get('key')
         if kind == 'maximumNormalSpellcasting':
@@ -214,3 +242,46 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
         check(None if value is None else value >= req['minimum'], f'{key or kind} ≥ {req["minimum"]}')
     return {'status': 'ineligible' if failed else 'needs-review' if review else 'eligible',
             'failed': failed, 'needsReview': review}
+
+
+def check_familiar_spell_selection(core, snapshot, spell_id, *, known_spell_levels,
+                                   verified_material_cost_gp=None):
+    """Feed the generated known-spell options into the ordinary feat checker."""
+    if __package__:
+        from .familiar_spell import familiar_spell_choices
+    else:
+        from familiar_spell import familiar_spell_choices
+    options = familiar_spell_choices(core, known_spell_levels,
+                                    verified_material_cost_gp=verified_material_cost_gp)
+    eligible = [option['spellId'] for option in options['eligible']]
+    pending = {option['spellId'] for option in options['needsReview']}
+    verified = dict(snapshot.get('eligibleChoiceIdsByFeat', {}))
+    if spell_id in pending:
+        verified.pop('familiar-spell', None)
+    else:
+        verified['familiar-spell'] = eligible
+    return check_feat_selection(core['feats']['byId'], 'familiar-spell',
+                                dict(snapshot, eligibleChoiceIdsByFeat=verified), choices={'spellId': spell_id})
+
+
+def check_weapon_focus_selection(core, snapshot, weapon_id, *, feat_id='weapon-focus'):
+    """Validate a generated Weapon Focus choice and the usual feat prerequisites."""
+    proficiencies = set(snapshot.get('weaponProficiencies') or ()) | weapon_proficiency_grants(core, snapshot.get('feats') or ())
+    options = weapon_focus_choices(core, proficiencies, snapshot.get('classLevels') or {})
+    ids = [option['weaponId'] for option in options]
+    if feat_id == 'overwhelming-critical':
+        items = core['inventory']['itemsById']
+        ids = [key for key, item in items.items() if item['kind'] == 'weapon' and 'Melee Weapon' in item['category']]
+    verified = dict(snapshot.get('eligibleChoiceIdsByFeat', {}), **{feat_id: ids})
+    return check_feat_selection(core['feats']['byId'], feat_id,
+                                dict(snapshot, weaponProficiencies=ids, eligibleChoiceIdsByFeat=verified,
+                                     validChoiceIdsByKey=dict(snapshot.get('validChoiceIdsByKey', {}), weaponId=ids)),
+                                choices={'weaponId': weapon_id})
+
+
+def check_spell_focus_selection(core, snapshot, feat_id, school_id):
+    """Validate a school choice against the generated school catalog."""
+    ids = [key for key, school in core['magic']['schoolsById'].items() if school['focusEligible']]
+    return check_feat_selection(core['feats']['byId'], feat_id,
+                                dict(snapshot, validChoiceIdsByKey=dict(snapshot.get('validChoiceIdsByKey', {}), schoolId=ids)),
+                                choices={'schoolId': school_id})

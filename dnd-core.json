@@ -58085,7 +58085,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "acid-splash",
@@ -58216,7 +58217,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "aid",
@@ -58378,7 +58380,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "air-walk",
@@ -58525,7 +58528,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "alarm",
@@ -58699,7 +58703,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "align-weapon",
@@ -58824,7 +58829,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "alter-self",
@@ -58966,7 +58972,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "analyze-dweomer",
@@ -59101,7 +59108,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "animal-growth",
@@ -59253,7 +59261,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "animal-messenger",
@@ -59402,7 +59411,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "animal-shapes",
@@ -59539,7 +59549,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "animal-trance",
@@ -59706,7 +59717,8 @@
             "kind": "concentration",
             "raw": "Concentration"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "animate-dead",
@@ -59889,7 +59901,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "animate-objects",
@@ -60029,7 +60042,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "animate-plants",
@@ -60156,7 +60170,8 @@
             "kind": "manual",
             "raw": "1 round/level or 1 hour/level; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "animate-rope",
@@ -60306,7 +60321,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "antilife-shell",
@@ -60462,7 +60478,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "antimagic-field",
@@ -60640,7 +60657,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "antipathy",
@@ -60803,7 +60821,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "antiplant-shell",
@@ -60934,7 +60953,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "arcane-eye",
@@ -61070,7 +61090,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "arcane-lock",
@@ -61203,7 +61224,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "arcane-mark",
@@ -61339,7 +61361,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "universal"
       },
       {
         "id": "arcane-sight",
@@ -61469,7 +61492,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "arcane-sight-greater",
@@ -61587,7 +61611,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "astral-projection",
@@ -61743,7 +61768,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "atonement",
@@ -61896,7 +61922,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "augury",
@@ -62061,7 +62088,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "awaken",
@@ -62195,7 +62223,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "baleful-polymorph",
@@ -62350,7 +62379,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bane",
@@ -62484,7 +62514,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "banishment",
@@ -62619,7 +62650,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "barkskin",
@@ -62762,7 +62794,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bears-endurance",
@@ -62935,7 +62968,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bears-endurance-mass",
@@ -63092,7 +63126,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bestow-curse",
@@ -63248,7 +63283,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "bigbys-clenched-fist",
@@ -63407,7 +63443,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "bigbys-crushing-hand",
@@ -63556,7 +63593,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "bigbys-forceful-hand",
@@ -63685,7 +63723,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "bigbys-grasping-hand",
@@ -63833,7 +63872,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "bigbys-interposing-hand",
@@ -63970,7 +64010,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "binding",
@@ -64098,7 +64139,8 @@
             "kind": "manual",
             "raw": "See text (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "blade-barrier",
@@ -64240,7 +64282,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "blasphemy",
@@ -64398,7 +64441,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "bless",
@@ -64571,7 +64615,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "bless-water",
@@ -64711,7 +64756,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bless-weapon",
@@ -64837,7 +64883,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "blight",
@@ -64976,7 +65023,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "blindness-deafness",
@@ -65136,7 +65184,8 @@
             "kind": "permanent",
             "raw": "Permanent (D)"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "blink",
@@ -65283,7 +65332,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "blur",
@@ -65416,7 +65466,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "break-enchantment",
@@ -65608,7 +65659,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "bulls-strength",
@@ -65806,7 +65858,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "bulls-strength-mass",
@@ -65968,7 +66021,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "burning-hands",
@@ -66125,7 +66179,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "call-lightning",
@@ -66279,7 +66334,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "call-lightning-storm",
@@ -66433,7 +66489,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "calm-animals",
@@ -66583,7 +66640,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "calm-emotions",
@@ -66749,7 +66807,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "cats-grace",
@@ -66934,7 +66993,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "cats-grace-mass",
@@ -67083,7 +67143,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "cause-fear",
@@ -67282,7 +67343,8 @@
             "kind": "manual",
             "raw": "1d4 rounds or 1 round; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "chain-lightning",
@@ -67429,7 +67491,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "changestaff",
@@ -67557,7 +67620,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "chaos-hammer",
@@ -67671,7 +67735,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous (1d6 rounds); see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "charm-animal",
@@ -67803,7 +67868,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "charm-monster",
@@ -67941,7 +68007,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "charm-monster-mass",
@@ -68074,7 +68141,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "charm-person",
@@ -68214,7 +68282,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "chill-metal",
@@ -68346,7 +68415,8 @@
             "amount": 7,
             "raw": "7 rounds"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "chill-touch",
@@ -68484,7 +68554,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "circle-of-death",
@@ -68619,7 +68690,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "clairaudience-clairvoyance",
@@ -68810,7 +68882,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "cloak-of-chaos",
@@ -68951,7 +69024,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "clone",
@@ -69092,7 +69166,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "cloudkill",
@@ -69212,7 +69287,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "color-spray",
@@ -69361,7 +69437,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous; see text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "command",
@@ -69512,7 +69589,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "command-plants",
@@ -69643,7 +69721,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "command-undead",
@@ -69764,7 +69843,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "command-greater",
@@ -69894,7 +69974,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "commune",
@@ -70052,7 +70133,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "commune-with-nature",
@@ -70193,7 +70275,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "comprehend-languages",
@@ -70371,7 +70454,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "cone-of-cold",
@@ -70524,7 +70608,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "confusion",
@@ -70682,7 +70767,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "confusion-lesser",
@@ -70815,7 +70901,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "consecrate",
@@ -70945,7 +71032,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "contact-other-plane",
@@ -71073,7 +71161,8 @@
             "kind": "concentration",
             "raw": "Concentration"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "contagion",
@@ -71262,7 +71351,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "contingency",
@@ -71388,7 +71478,8 @@
             "kind": "manual",
             "raw": "One day/level (D) or until discharged"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "continual-flame",
@@ -71537,7 +71628,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "control-plants",
@@ -71668,7 +71760,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "control-undead",
@@ -71799,7 +71892,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "control-water",
@@ -71963,7 +72057,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "control-weather",
@@ -72125,7 +72220,8 @@
             "kind": "manual",
             "raw": "4d12 hours; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "control-winds",
@@ -72259,7 +72355,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "corrupt-weapon",
@@ -72387,7 +72484,8 @@
             "perCasterLevel": 1,
             "raw": "1 minute/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "create-food-and-water",
@@ -72508,7 +72606,8 @@
             "kind": "manual",
             "raw": "24 hours; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "create-greater-undead",
@@ -72664,7 +72763,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "create-undead",
@@ -72842,7 +72942,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "create-water",
@@ -72996,7 +73097,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "creeping-doom",
@@ -73127,7 +73229,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "crushing-despair",
@@ -73272,7 +73375,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "cure-critical-wounds",
@@ -73448,7 +73552,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-critical-wounds-mass",
@@ -73586,7 +73691,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-light-wounds",
@@ -73799,7 +73905,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-light-wounds-mass",
@@ -73962,7 +74069,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-minor-wounds",
@@ -74102,7 +74210,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-moderate-wounds",
@@ -74302,7 +74411,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-moderate-wounds-mass",
@@ -74446,7 +74556,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-serious-wounds",
@@ -74646,7 +74757,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "cure-serious-wounds-mass",
@@ -74776,7 +74888,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "curse-water",
@@ -74904,7 +75017,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "dancing-lights",
@@ -75036,7 +75150,8 @@
             "amount": 1,
             "raw": "1 minute (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "darkness",
@@ -75223,7 +75338,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "darkvision",
@@ -75365,7 +75481,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "daylight",
@@ -75559,7 +75676,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "daze",
@@ -75711,7 +75829,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "daze-monster",
@@ -75856,7 +75975,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "death-knell",
@@ -76005,7 +76125,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous/10 minutes per HD of subject; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "death-ward",
@@ -76187,7 +76308,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "deathwatch",
@@ -76323,7 +76445,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "deep-slumber",
@@ -76477,7 +76600,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "deeper-darkness",
@@ -76638,7 +76762,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "delay-poison",
@@ -76836,7 +76961,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "delayed-blast-fireball",
@@ -76976,7 +77102,8 @@
             "kind": "manual",
             "raw": "5 rounds or less; see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "demand",
@@ -77123,7 +77250,8 @@
             "kind": "manual",
             "raw": "1 round; see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "desecrate",
@@ -77275,7 +77403,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "destruction",
@@ -77408,7 +77537,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "detect-animals-or-plants",
@@ -77536,7 +77666,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-chaos",
@@ -77677,7 +77808,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./ level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-evil",
@@ -77820,7 +77952,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./ level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-good",
@@ -77953,7 +78086,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./ level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-law",
@@ -78086,7 +78220,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./ level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-magic",
@@ -78266,7 +78401,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-poison",
@@ -78453,7 +78589,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-scrying",
@@ -78616,7 +78753,8 @@
             "amount": 24,
             "raw": "24 hours"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-secret-doors",
@@ -78752,7 +78890,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-snares-and-pits",
@@ -78880,7 +79019,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-thoughts",
@@ -79042,7 +79182,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "detect-undead",
@@ -79212,7 +79353,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 minute/ level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "dictum",
@@ -79370,7 +79512,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "dimension-door",
@@ -79517,7 +79660,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "dimensional-anchor",
@@ -79649,7 +79793,12 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dimensional-lock",
@@ -79779,7 +79928,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "diminish-plants",
@@ -79912,7 +80062,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "discern-lies",
@@ -80065,7 +80216,8 @@
             "kind": "concentration",
             "raw": "Concentration, up to 1 round/level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "discern-location",
@@ -80231,7 +80383,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "disguise-self",
@@ -80381,7 +80534,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "disintegrate",
@@ -80519,7 +80673,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "dismissal",
@@ -80654,7 +80813,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-chaos",
@@ -80797,7 +80957,8 @@
             "kind": "manual",
             "raw": "1 round/level or until discharged, whichever comes first"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-evil",
@@ -80940,7 +81101,8 @@
             "kind": "manual",
             "raw": "1 round/level or until discharged, whichever comes first"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-good",
@@ -81071,7 +81233,8 @@
             "kind": "manual",
             "raw": "1 round/level or until discharged, whichever comes first"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-law",
@@ -81202,7 +81365,8 @@
             "kind": "manual",
             "raw": "1 round/level or until discharged, whichever comes first"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-magic",
@@ -81405,7 +81569,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "dispel-magic-greater",
@@ -81575,7 +81740,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "displacement",
@@ -81705,7 +81871,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "disrupt-undead",
@@ -81823,7 +81990,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "disrupting-weapon",
@@ -81941,7 +82113,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "divination",
@@ -82095,7 +82268,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "divine-favor",
@@ -82238,7 +82412,8 @@
             "amount": 1,
             "raw": "1 minute"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "divine-power",
@@ -82369,7 +82544,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "dominate-animal",
@@ -82502,7 +82678,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "dominate-monster",
@@ -82639,7 +82816,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "dominate-person",
@@ -82774,7 +82952,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "doom",
@@ -82928,7 +83107,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "drawmijs-instant-summons",
@@ -83065,7 +83245,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "dream",
@@ -83200,7 +83381,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "eagles-splendor",
@@ -83378,7 +83560,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "eagles-splendor-mass",
@@ -83532,7 +83715,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "earthquake",
@@ -83721,7 +83905,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "elemental-swarm",
@@ -83875,7 +84060,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "endure-elements",
@@ -84074,7 +84260,8 @@
             "amount": 24,
             "raw": "24 hours"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "energy-drain",
@@ -84222,7 +84409,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "enervation",
@@ -84348,7 +84540,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "enlarge-person",
@@ -84488,7 +84685,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "enlarge-person-mass",
@@ -84616,7 +84814,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "entangle",
@@ -84775,7 +84974,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "enthrall",
@@ -84934,7 +85134,8 @@
             "kind": "manual",
             "raw": "1 hour or less"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "entropic-shield",
@@ -85066,7 +85267,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "erase",
@@ -85216,7 +85418,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "ethereal-jaunt",
@@ -85363,7 +85566,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "etherealness",
@@ -85500,7 +85704,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "evards-black-tentacles",
@@ -85644,7 +85849,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "expeditious-retreat",
@@ -85774,7 +85980,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "explosive-runes",
@@ -85925,7 +86132,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "eyebite",
@@ -86094,7 +86302,8 @@
             "kind": "manual",
             "raw": "1 round per three levels; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "fabricate",
@@ -86227,7 +86436,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "faerie-fire",
@@ -86360,7 +86570,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "false-life",
@@ -86496,7 +86707,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until discharged; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "false-vision",
@@ -86651,7 +86863,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "fear",
@@ -86829,7 +87042,8 @@
             "kind": "manual",
             "raw": "1 round/level or 1 round; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "feather-fall",
@@ -86964,7 +87178,8 @@
             "kind": "manual",
             "raw": "Until landing or 1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "feeblemind",
@@ -87087,7 +87302,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "find-the-path",
@@ -87255,7 +87471,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "find-traps",
@@ -87373,7 +87590,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "finger-of-death",
@@ -87507,7 +87725,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "fire-seeds",
@@ -87661,7 +87880,8 @@
             "kind": "manual",
             "raw": "10 min./level or until used"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "fire-shield",
@@ -87821,7 +88041,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "fire-storm",
@@ -87981,7 +88202,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "fire-trap",
@@ -88157,7 +88379,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "fireball",
@@ -88295,7 +88518,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "flame-arrow",
@@ -88433,7 +88657,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "flame-blade",
@@ -88572,7 +88797,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "flame-strike",
@@ -88738,7 +88964,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "flaming-sphere",
@@ -88895,7 +89122,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "flare",
@@ -89050,7 +89278,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "flesh-to-stone",
@@ -89179,7 +89408,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "fly",
@@ -89317,7 +89547,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "fog-cloud",
@@ -89463,7 +89694,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "forbiddance",
@@ -89611,7 +89843,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "forcecage",
@@ -89748,7 +89981,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "foresight",
@@ -89918,7 +90152,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "foxs-cunning",
@@ -90078,7 +90313,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "foxs-cunning-mass",
@@ -90226,7 +90462,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "freedom",
@@ -90372,7 +90609,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "freedom-of-movement",
@@ -90584,7 +90822,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "gaseous-form",
@@ -90732,7 +90971,8 @@
             "perCasterLevel": 2,
             "raw": "2 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "gate",
@@ -90877,7 +91117,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous or concentration (up to 1 round/level); see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "geas-lesser",
@@ -91008,7 +91249,8 @@
             "kind": "manual",
             "raw": "One day/level or until discharged (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "geas-quest",
@@ -91195,7 +91437,8 @@
             "kind": "manual",
             "raw": "One day/level or until discharged (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "gentle-repose",
@@ -91355,7 +91598,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "ghost-sound",
@@ -91516,7 +91760,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "ghoul-touch",
@@ -91652,7 +91897,8 @@
             "kind": "manual",
             "raw": "1d6+2 rounds"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "giant-vermin",
@@ -91787,7 +92033,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "glibness",
@@ -91914,7 +92161,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "glitterdust",
@@ -92064,7 +92312,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "globe-of-invulnerability",
@@ -92187,7 +92436,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "globe-of-invulnerability-lesser",
@@ -92310,7 +92560,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "glyph-of-warding",
@@ -92487,7 +92738,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "glyph-of-warding-greater",
@@ -92623,7 +92875,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "good-hope",
@@ -92743,7 +92996,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "goodberry",
@@ -92866,7 +93120,8 @@
             "kind": "manual",
             "raw": "One day/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "grease",
@@ -93021,7 +93276,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "guards-and-wards",
@@ -93154,7 +93410,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "guidance",
@@ -93294,7 +93551,8 @@
             "kind": "manual",
             "raw": "1 minute or until discharged"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "gust-of-wind",
@@ -93455,7 +93713,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "hallow",
@@ -93629,7 +93888,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "hallucinatory-terrain",
@@ -93769,7 +94029,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "halt-undead",
@@ -93892,7 +94153,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "harm",
@@ -94020,7 +94282,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "haste",
@@ -94155,7 +94418,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "heal",
@@ -94393,7 +94657,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "heal-mount",
@@ -94509,7 +94774,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "heal-mass",
@@ -94639,7 +94905,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "heat-metal",
@@ -94781,7 +95048,8 @@
             "amount": 7,
             "raw": "7 rounds"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "helping-hand",
@@ -94912,7 +95180,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "heroes-feast",
@@ -95078,7 +95347,8 @@
             "kind": "manual",
             "raw": "1 hour plus 12 hours; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "heroism",
@@ -95226,7 +95496,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "heroism-greater",
@@ -95366,7 +95637,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hide-from-animals",
@@ -95496,7 +95768,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "hide-from-undead",
@@ -95619,7 +95892,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "hold-animal",
@@ -95765,7 +96039,8 @@
             "kind": "manual",
             "raw": "1 round/level (D); see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hold-monster",
@@ -95913,7 +96188,8 @@
             "kind": "manual",
             "raw": "1 round/level (D); see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hold-monster-mass",
@@ -96041,7 +96317,8 @@
             "kind": "manual",
             "raw": "1 round/level (D); see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hold-person",
@@ -96203,7 +96480,8 @@
             "kind": "manual",
             "raw": "1 round/level (D); see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hold-person-mass",
@@ -96331,7 +96609,8 @@
             "kind": "manual",
             "raw": "1 round/level (D); see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "hold-portal",
@@ -96456,7 +96735,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "holy-aura",
@@ -96604,7 +96884,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "holy-smite",
@@ -96726,7 +97007,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous (1 round); see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "holy-sword",
@@ -96848,7 +97130,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "holy-word",
@@ -97007,7 +97290,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "horrid-wilting",
@@ -97147,7 +97431,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "hypnotic-pattern",
@@ -97301,7 +97586,8 @@
             "kind": "concentration",
             "raw": "Concentration + 2 rounds"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "hypnotism",
@@ -97446,7 +97732,8 @@
             "kind": "manual",
             "raw": "2d4 rounds (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "ice-storm",
@@ -97627,7 +97914,8 @@
             "kind": "manual",
             "raw": "1 full round"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "identify",
@@ -97796,7 +98084,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "illusory-script",
@@ -97955,7 +98244,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "illusory-wall",
@@ -98083,7 +98373,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "imbue-with-spell-ability",
@@ -98231,7 +98522,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "implosion",
@@ -98363,7 +98655,8 @@
             "kind": "concentration",
             "raw": "Concentration (up to 4 rounds)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "imprisonment",
@@ -98487,7 +98780,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "incendiary-cloud",
@@ -98628,7 +98922,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "inflict-critical-wounds",
@@ -98766,7 +99061,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-critical-wounds-mass",
@@ -98884,7 +99180,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-light-wounds",
@@ -99033,7 +99330,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-light-wounds-mass",
@@ -99170,7 +99468,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-minor-wounds",
@@ -99286,7 +99585,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-moderate-wounds",
@@ -99416,7 +99716,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-moderate-wounds-mass",
@@ -99534,7 +99835,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-serious-wounds",
@@ -99664,7 +99966,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "inflict-serious-wounds-mass",
@@ -99782,7 +100085,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "insanity",
@@ -99908,7 +100212,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "insect-plague",
@@ -100048,7 +100353,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "invisibility",
@@ -100235,7 +100541,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "invisibility-purge",
@@ -100361,7 +100668,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "invisibility-sphere",
@@ -100504,7 +100812,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "invisibility-greater",
@@ -100659,7 +100968,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "invisibility-mass",
@@ -100790,7 +101100,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "iron-body",
@@ -100952,7 +101263,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "ironwood",
@@ -101073,7 +101385,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "jump",
@@ -101234,7 +101547,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "keen-edge",
@@ -101352,7 +101666,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "knock",
@@ -101463,7 +101778,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "know-direction",
@@ -101593,7 +101909,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "legend-lore",
@@ -101749,7 +102066,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "leomunds-secret-chest",
@@ -101895,7 +102213,8 @@
             "kind": "manual",
             "raw": "Sixty days or until discharged"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "leomunds-secure-shelter",
@@ -102042,7 +102361,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "leomunds-tiny-hut",
@@ -102183,7 +102503,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "leomunds-trap",
@@ -102324,7 +102645,8 @@
             "kind": "permanent",
             "raw": "Permanent (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "levitate",
@@ -102447,7 +102769,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "light",
@@ -102634,7 +102957,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "lightning-bolt",
@@ -102790,7 +103114,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "limited-wish",
@@ -102911,7 +103236,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "universal"
       },
       {
         "id": "liveoak",
@@ -103032,7 +103358,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "locate-creature",
@@ -103191,7 +103518,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "locate-object",
@@ -103365,7 +103693,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "longstrider",
@@ -103516,7 +103845,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "lullaby",
@@ -103634,7 +103964,8 @@
             "kind": "concentration",
             "raw": "Concentration + 1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "mage-armor",
@@ -103778,7 +104109,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "mage-hand",
@@ -103918,7 +104250,8 @@
             "kind": "concentration",
             "raw": "Concentration"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-circle-against-chaos",
@@ -104080,7 +104413,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "magic-circle-against-evil",
@@ -104242,7 +104576,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "magic-circle-against-good",
@@ -104404,7 +104739,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "magic-circle-against-law",
@@ -104556,7 +104892,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "magic-fang",
@@ -104699,7 +105036,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-fang-greater",
@@ -104850,7 +105188,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-jar",
@@ -104979,7 +105318,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until you return to your body"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "magic-missile",
@@ -105110,7 +105450,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "magic-mouth",
@@ -105263,7 +105604,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "magic-stone",
@@ -105416,7 +105758,8 @@
             "kind": "manual",
             "raw": "30 minutes or until discharged"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-vestment",
@@ -105559,7 +105902,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-weapon",
@@ -105728,7 +106072,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "magic-weapon-greater",
@@ -105890,7 +106235,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "major-creation",
@@ -106042,7 +106388,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "major-image",
@@ -106175,7 +106522,8 @@
             "kind": "concentration",
             "raw": "Concentration + 3 rounds"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "make-whole",
@@ -106305,7 +106653,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "mark-of-justice",
@@ -106459,7 +106808,8 @@
             "kind": "permanent",
             "raw": "Permanent; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "maze",
@@ -106575,7 +106925,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "meld-into-stone",
@@ -106715,7 +107066,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "melfs-acid-arrow",
@@ -106856,7 +107208,8 @@
             "kind": "manual",
             "raw": "1 round + 1 round per three levels"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "mending",
@@ -107034,7 +107387,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "message",
@@ -107183,7 +107537,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "meteor-swarm",
@@ -107324,7 +107679,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "mind-blank",
@@ -107462,7 +107818,8 @@
             "amount": 24,
             "raw": "24 hours"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "mind-fog",
@@ -107594,7 +107951,8 @@
             "kind": "manual",
             "raw": "30 minutes and 2d6 rounds; see text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "minor-creation",
@@ -107748,7 +108106,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "minor-image",
@@ -107881,7 +108240,8 @@
             "kind": "concentration",
             "raw": "Concentration +2 rounds"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "miracle",
@@ -108012,7 +108372,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "mirage-arcana",
@@ -108140,7 +108501,8 @@
             "kind": "concentration",
             "raw": "Concentration +1 hour/ level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "mirror-image",
@@ -108309,7 +108671,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "misdirection",
@@ -108471,7 +108834,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "mislead",
@@ -108616,7 +108980,8 @@
             "kind": "manual",
             "raw": "1 round/level (D) and concentration + 3 rounds; see text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "modify-memory",
@@ -108746,7 +109111,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "moment-of-prescience",
@@ -108870,7 +109236,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until discharged"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "mordenkainens-disjunction",
@@ -108997,7 +109364,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "mordenkainens-faithful-hound",
@@ -109139,7 +109507,8 @@
             "kind": "manual",
             "raw": "1 hour/caster level or until discharged, then 1 round/caster level; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "mordenkainens-lucubration",
@@ -109255,7 +109624,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "mordenkainens-magnificent-mansion",
@@ -109394,7 +109764,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "mordenkainens-private-sanctum",
@@ -109522,7 +109893,8 @@
             "amount": 24,
             "raw": "24 hours (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "mordenkainens-sword",
@@ -109675,7 +110047,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "mount",
@@ -109815,7 +110188,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "move-earth",
@@ -109960,7 +110334,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "neutralize-poison",
@@ -110163,7 +110538,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "nightmare",
@@ -110316,7 +110692,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "nondetection",
@@ -110487,7 +110864,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "nystuls-magic-aura",
@@ -110640,7 +111018,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "obscure-object",
@@ -110814,7 +111193,8 @@
             "amount": 8,
             "raw": "8 hours (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "obscuring-mist",
@@ -111006,7 +111386,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "open-close",
@@ -111151,7 +111532,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "orders-wrath",
@@ -111273,7 +111655,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous (1 round); see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "otilukes-freezing-sphere",
@@ -111415,7 +111798,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous or 1 round/level; see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "otilukes-resilient-sphere",
@@ -111544,7 +111928,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "otilukes-telekinetic-sphere",
@@ -111673,7 +112058,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "ottos-irresistible-dance",
@@ -111798,7 +112184,8 @@
             "kind": "manual",
             "raw": "1d4+1 rounds"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "overland-flight",
@@ -111920,7 +112307,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "owls-wisdom",
@@ -112098,7 +112486,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "owls-wisdom-mass",
@@ -112260,7 +112649,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "pass-without-trace",
@@ -112409,7 +112799,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "passwall",
@@ -112532,7 +112923,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "permanency",
@@ -112685,7 +113077,8 @@
             "kind": "permanent",
             "raw": "Permanent; see text"
           }
-        }
+        },
+        "schoolId": "universal"
       },
       {
         "id": "permanent-image",
@@ -112818,7 +113211,8 @@
             "kind": "permanent",
             "raw": "Permanent (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "persistent-image",
@@ -112953,7 +113347,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "phantasmal-killer",
@@ -113089,7 +113484,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "phantom-steed",
@@ -113236,7 +113632,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "phase-door",
@@ -113363,7 +113760,8 @@
             "kind": "manual",
             "raw": "One usage per two levels"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-ally",
@@ -113504,7 +113902,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-ally-greater",
@@ -113645,7 +114044,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-ally-lesser",
@@ -113786,7 +114186,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-binding",
@@ -113909,7 +114310,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-binding-greater",
@@ -114032,7 +114434,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "planar-binding-lesser",
@@ -114163,7 +114566,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "plane-shift",
@@ -114298,7 +114702,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "plant-growth",
@@ -114439,7 +114844,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "poison",
@@ -114608,7 +115014,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "polar-ray",
@@ -114748,7 +115155,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "polymorph",
@@ -114912,7 +115324,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "polymorph-any-object",
@@ -115057,7 +115470,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "power-word-blind",
@@ -115188,7 +115602,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "power-word-kill",
@@ -115310,7 +115725,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "power-word-stun",
@@ -115443,7 +115859,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "prayer",
@@ -115588,7 +116005,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "prestidigitation",
@@ -115730,7 +116148,8 @@
             "amount": 1,
             "raw": "1 hour"
           }
-        }
+        },
+        "schoolId": "universal"
       },
       {
         "id": "prismatic-sphere",
@@ -115867,7 +116286,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "prismatic-spray",
@@ -116010,7 +116430,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "prismatic-wall",
@@ -116154,7 +116575,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "produce-flame",
@@ -116296,7 +116718,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "programmed-image",
@@ -116429,7 +116852,8 @@
             "kind": "permanent",
             "raw": "Permanent until triggered, then 1 round/level"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "project-image",
@@ -116579,7 +117003,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "protection-from-acid",
@@ -116762,7 +117187,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-arrows",
@@ -116883,7 +117309,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-chaos",
@@ -117059,7 +117486,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-energy",
@@ -117252,7 +117680,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-evil",
@@ -117428,7 +117857,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-fire",
@@ -117611,7 +118041,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-frost",
@@ -117794,7 +118225,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-good",
@@ -117958,7 +118390,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-law",
@@ -118122,7 +118555,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-lightning",
@@ -118305,7 +118739,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-spells",
@@ -118441,7 +118876,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "protection-from-thunder",
@@ -118624,7 +119060,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "prying-eyes",
@@ -118753,7 +119190,8 @@
             "kind": "manual",
             "raw": "1 hour/level; see text (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "prying-eyes-greater",
@@ -118879,7 +119317,8 @@
             "kind": "manual",
             "raw": "1 hour/level; see text (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "purify-food-and-drink",
@@ -119019,7 +119458,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "pyrotechnics",
@@ -119166,7 +119606,8 @@
             "kind": "manual",
             "raw": "1d4+1 rounds, or 1d4+1 rounds after creatures leave the smoke cloud; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "quench",
@@ -119304,7 +119745,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "rage",
@@ -119450,7 +119892,8 @@
             "kind": "concentration",
             "raw": "Concentration + 1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "rainbow-pattern",
@@ -119608,7 +120051,8 @@
             "kind": "concentration",
             "raw": "Concentration +1 round/ level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "raise-dead",
@@ -119766,7 +120210,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "rarys-mnemonic-enhancer",
@@ -119897,7 +120342,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "rarys-telepathic-bond",
@@ -120028,7 +120474,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "ray-of-enfeeblement",
@@ -120150,7 +120597,12 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "ray-of-exhaustion",
@@ -120288,7 +120740,12 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "ray-of-frost",
@@ -120419,7 +120876,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "read-magic",
@@ -120628,7 +121090,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "reduce-animal",
@@ -120758,7 +121221,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "reduce-person",
@@ -120890,7 +121354,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "reduce-person-mass",
@@ -121018,7 +121483,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "refuge",
@@ -121167,7 +121633,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "regenerate",
@@ -121329,7 +121796,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "reincarnate",
@@ -121475,7 +121943,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "remove-blindness-deafness",
@@ -121618,7 +122087,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "remove-curse",
@@ -121804,7 +122274,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "remove-disease",
@@ -121961,7 +122432,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "remove-fear",
@@ -122112,7 +122584,8 @@
             "kind": "manual",
             "raw": "10 minutes; see text"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "remove-paralysis",
@@ -122261,7 +122734,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "repel-metal-or-stone",
@@ -122389,7 +122863,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "repel-vermin",
@@ -122560,7 +123035,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "repel-wood",
@@ -122686,7 +123162,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "repulsion",
@@ -122850,7 +123327,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "resist-energy",
@@ -123076,7 +123554,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "resistance",
@@ -123262,7 +123741,8 @@
             "amount": 1,
             "raw": "1 minute"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "restoration",
@@ -123443,7 +123923,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "restoration-greater",
@@ -123591,7 +124072,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "restoration-lesser",
@@ -123772,7 +124254,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "resurrection",
@@ -123918,7 +124401,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "reverse-gravity",
@@ -124060,7 +124544,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "righteous-might",
@@ -124205,7 +124690,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "rope-trick",
@@ -124336,7 +124822,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "rusting-grasp",
@@ -124460,7 +124947,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "sanctuary",
@@ -124591,7 +125079,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "scare",
@@ -124750,7 +125239,8 @@
             "kind": "manual",
             "raw": "1 round/level or 1 round; see text for cause fear"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "scintillating-pattern",
@@ -124897,7 +125387,8 @@
             "kind": "concentration",
             "raw": "Concentration + 2 rounds"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "scorching-ray",
@@ -125042,7 +125533,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "screen",
@@ -125173,7 +125669,8 @@
             "amount": 24,
             "raw": "24 hours"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "scrying",
@@ -125369,7 +125866,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "scrying-greater",
@@ -125539,7 +126037,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "sculpt-sound",
@@ -125657,7 +126156,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "searing-light",
@@ -125789,7 +126289,12 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "attackProfile": {
+          "kind": "ray",
+          "weaponFocusChoiceId": "weapon:ray"
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "secret-page",
@@ -125947,7 +126452,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "see-invisibility",
@@ -126113,7 +126619,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "seeming",
@@ -126243,7 +126750,8 @@
             "amount": 12,
             "raw": "12 hours (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "sending",
@@ -126400,7 +126908,8 @@
             "kind": "manual",
             "raw": "1 round; see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "sepia-snake-sigil",
@@ -126573,7 +127082,8 @@
             "kind": "permanent",
             "raw": "Permanent or until discharged; until released or 1d4 days + one day/level; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "sequester",
@@ -126710,7 +127220,8 @@
             "kind": "manual",
             "raw": "One day/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "shades",
@@ -126826,7 +127337,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shadow-conjuration",
@@ -126962,7 +127474,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shadow-conjuration-greater",
@@ -127078,7 +127591,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shadow-evocation",
@@ -127214,7 +127728,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shadow-evocation-greater",
@@ -127330,7 +127845,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shadow-walk",
@@ -127471,7 +127987,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "shambler",
@@ -127597,7 +128114,8 @@
             "kind": "manual",
             "raw": "Seven days or seven months (D); see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "shapechange",
@@ -127756,7 +128274,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "shatter",
@@ -127951,7 +128470,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "shield",
@@ -128090,7 +128610,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "shield-of-faith",
@@ -128213,7 +128734,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "shield-of-law",
@@ -128352,7 +128874,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "shield-other",
@@ -128503,7 +129026,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "shillelagh",
@@ -128631,7 +129155,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "shocking-grasp",
@@ -128766,7 +129291,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "shout",
@@ -128918,7 +129444,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "shout-greater",
@@ -129086,7 +129613,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "shrink-item",
@@ -129202,7 +129730,8 @@
             "kind": "manual",
             "raw": "One day/level; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "silence",
@@ -129342,7 +129871,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "silent-image",
@@ -129475,7 +130005,8 @@
             "kind": "concentration",
             "raw": "Concentration"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "simulacrum",
@@ -129606,7 +130137,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "slay-living",
@@ -129734,7 +130266,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "sleep",
@@ -129917,7 +130450,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "sleet-storm",
@@ -130079,7 +130613,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "slow",
@@ -130222,7 +130757,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "snare",
@@ -130370,7 +130906,8 @@
             "kind": "manual",
             "raw": "Until triggered or broken"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "soften-earth-and-stone",
@@ -130503,7 +131040,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "solid-fog",
@@ -130628,7 +131166,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "song-of-discord",
@@ -130769,7 +131308,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "soul-bind",
@@ -130912,7 +131452,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "sound-burst",
@@ -131075,7 +131616,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "speak-with-animals",
@@ -131219,7 +131761,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "speak-with-dead",
@@ -131364,7 +131907,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "speak-with-plants",
@@ -131508,7 +132052,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "spectral-hand",
@@ -131636,7 +132181,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "spell-immunity",
@@ -131773,7 +132319,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "spell-immunity-greater",
@@ -131896,7 +132443,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "spell-resistance",
@@ -132033,7 +132581,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "spell-turning",
@@ -132184,7 +132733,8 @@
             "kind": "manual",
             "raw": "Until expended or 10 min./level"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "spellstaff",
@@ -132310,7 +132860,8 @@
             "kind": "permanent",
             "raw": "Permanent until discharged (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "spider-climb",
@@ -132459,7 +133010,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "spike-growth",
@@ -132615,7 +133167,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "spike-stones",
@@ -132769,7 +133322,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "spiritual-weapon",
@@ -132924,7 +133478,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "statue",
@@ -133052,7 +133607,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "status",
@@ -133247,7 +133803,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "stinking-cloud",
@@ -133380,7 +133937,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "stone-shape",
@@ -133554,7 +134112,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "stone-tell",
@@ -133682,7 +134241,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "stone-to-flesh",
@@ -133811,7 +134371,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "stoneskin",
@@ -133972,7 +134533,8 @@
             "kind": "manual",
             "raw": "10 min./level or until discharged"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "storm-of-vengeance",
@@ -134165,7 +134727,8 @@
             "kind": "concentration",
             "raw": "Concentration (maximum 10 rounds) (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "suggestion",
@@ -134304,7 +134867,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until completed"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "suggestion-mass",
@@ -134435,7 +134999,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until completed"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "summon-instrument",
@@ -134558,7 +135123,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-i",
@@ -134747,7 +135313,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-ii",
@@ -134938,7 +135505,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-iii",
@@ -135130,7 +135698,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-iv",
@@ -135314,7 +135883,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-ix",
@@ -135492,7 +136062,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-v",
@@ -135664,7 +136235,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-vi",
@@ -135828,7 +136400,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-vii",
@@ -135996,7 +136569,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-monster-viii",
@@ -136148,7 +136722,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-i",
@@ -136296,7 +136871,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-ii",
@@ -136446,7 +137022,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-iii",
@@ -136599,7 +137176,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-iv",
@@ -136760,7 +137338,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-ix",
@@ -136893,7 +137472,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-v",
@@ -137026,7 +137606,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-vi",
@@ -137159,7 +137740,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-vii",
@@ -137300,7 +137882,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-natures-ally-viii",
@@ -137441,7 +138024,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "summon-swarm",
@@ -137598,7 +138182,8 @@
             "kind": "concentration",
             "raw": "Concentration + 2 rounds"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "sunbeam",
@@ -137748,7 +138333,8 @@
             "kind": "manual",
             "raw": "1 round/level or until all beams are exhausted"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "sunburst",
@@ -137910,7 +138496,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "symbol-of-death",
@@ -138068,7 +138655,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "symbol-of-fear",
@@ -138226,7 +138814,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "symbol-of-insanity",
@@ -138368,7 +138957,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "symbol-of-pain",
@@ -138522,7 +139112,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "symbol-of-persuasion",
@@ -138664,7 +139255,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "symbol-of-sleep",
@@ -138820,7 +139412,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "symbol-of-stunning",
@@ -138972,7 +139565,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "symbol-of-weakness",
@@ -139114,7 +139708,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "sympathetic-vibration",
@@ -139248,7 +139843,8 @@
             "kind": "manual",
             "raw": "Up to 1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "sympathy",
@@ -139394,7 +139990,8 @@
             "perCasterLevel": 2,
             "raw": "2 hours/level (D)"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "tashas-hideous-laughter",
@@ -139554,7 +140151,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "telekinesis",
@@ -139680,7 +140278,8 @@
             "kind": "concentration",
             "raw": "Concentration (up to 1 round/ level) or instantaneous; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "teleport",
@@ -139802,7 +140401,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "teleport-object",
@@ -139913,7 +140513,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "teleport-greater",
@@ -140032,7 +140633,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "teleportation-circle",
@@ -140171,7 +140773,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "temporal-stasis",
@@ -140292,7 +140895,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "tensers-floating-disk",
@@ -140433,7 +141037,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "tensers-transformation",
@@ -140556,7 +141161,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "time-stop",
@@ -140683,7 +141289,8 @@
             "kind": "manual",
             "raw": "1d4+1 rounds (apparent time); see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "tongues",
@@ -140864,7 +141471,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "touch-of-fatigue",
@@ -141009,7 +141617,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "touch-of-idiocy",
@@ -141131,7 +141740,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       },
       {
         "id": "transmute-metal-to-wood",
@@ -141252,7 +141862,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "transmute-mud-to-rock",
@@ -141394,7 +142005,8 @@
             "kind": "permanent",
             "raw": "Permanent"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "transmute-rock-to-mud",
@@ -141549,7 +142161,8 @@
             "kind": "permanent",
             "raw": "Permanent; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "transport-via-plants",
@@ -141667,7 +142280,8 @@
             "amount": 1,
             "raw": "1 round"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "trap-the-soul",
@@ -141791,7 +142405,8 @@
             "kind": "permanent",
             "raw": "Permanent; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "tree-shape",
@@ -141934,7 +142549,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "tree-stride",
@@ -142067,7 +142683,8 @@
             "kind": "manual",
             "raw": "1 hour/level or until expended; see text"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "true-resurrection",
@@ -142213,7 +142830,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "true-seeing",
@@ -142405,7 +143023,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "true-strike",
@@ -142541,7 +143160,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "undeath-to-death",
@@ -142692,7 +143312,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "undetectable-alignment",
@@ -142848,7 +143469,8 @@
             "amount": 24,
             "raw": "24 hours"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "unhallow",
@@ -143003,7 +143625,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "unholy-aura",
@@ -143138,7 +143761,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "abjuration"
       },
       {
         "id": "unholy-blight",
@@ -143261,7 +143885,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous (1d4 rounds); see text"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "unseen-servant",
@@ -143416,7 +144041,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "vampiric-touch",
@@ -143536,7 +144162,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous/1 hour; see text"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "veil",
@@ -143664,7 +144291,8 @@
             "kind": "concentration",
             "raw": "Concentration + 1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "ventriloquism",
@@ -143794,7 +144422,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "virtue",
@@ -143941,7 +144570,8 @@
             "amount": 1,
             "raw": "1 min."
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "vision",
@@ -144077,7 +144707,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "divination"
       },
       {
         "id": "wail-of-the-banshee",
@@ -144209,7 +144840,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "wall-of-fire",
@@ -144390,7 +145022,8 @@
             "kind": "concentration",
             "raw": "Concentration + 1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "wall-of-force",
@@ -144525,7 +145158,8 @@
             "kind": "manual",
             "raw": "1 round /level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "wall-of-ice",
@@ -144665,7 +145299,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "wall-of-iron",
@@ -144788,7 +145423,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "wall-of-stone",
@@ -144974,7 +145610,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "wall-of-thorns",
@@ -145106,7 +145743,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "warp-wood",
@@ -145222,7 +145860,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "water-breathing",
@@ -145382,7 +146021,8 @@
             "kind": "manual",
             "raw": "2 hours/level; see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "water-walk",
@@ -145519,7 +146159,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "waves-of-exhaustion",
@@ -145643,7 +146284,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "waves-of-fatigue",
@@ -145767,7 +146409,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "necromancy"
       },
       {
         "id": "web",
@@ -145925,7 +146568,8 @@
             "perCasterLevel": 10,
             "raw": "10 min./level (D)"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "weird",
@@ -146055,7 +146699,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "whirlwind",
@@ -146204,7 +146849,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level (D)"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "whispering-wind",
@@ -146346,7 +146992,8 @@
             "kind": "manual",
             "raw": "No more than 1 hour/level or until discharged (destination is reached)"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "wind-walk",
@@ -146489,7 +147136,8 @@
             "kind": "manual",
             "raw": "1 hour/level (D); see text"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "wind-wall",
@@ -146680,7 +147328,8 @@
             "perCasterLevel": 1,
             "raw": "1 round/level"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "wish",
@@ -146804,7 +147453,8 @@
             "kind": "manual",
             "raw": "See text"
           }
-        }
+        },
+        "schoolId": "universal"
       },
       {
         "id": "wood-shape",
@@ -146925,7 +147575,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "transmutation"
       },
       {
         "id": "word-of-chaos",
@@ -147076,7 +147727,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "evocation"
       },
       {
         "id": "word-of-recall",
@@ -147199,7 +147851,8 @@
             "kind": "instantaneous",
             "raw": "Instantaneous"
           }
-        }
+        },
+        "schoolId": "conjuration"
       },
       {
         "id": "zone-of-silence",
@@ -147322,7 +147975,8 @@
             "perCasterLevel": 1,
             "raw": "1 hour/level (D)"
           }
-        }
+        },
+        "schoolId": "illusion"
       },
       {
         "id": "zone-of-truth",
@@ -147467,7 +148121,8 @@
             "perCasterLevel": 1,
             "raw": "1 min./level"
           }
-        }
+        },
+        "schoolId": "enchantment"
       }
     ],
     "spellLists": [
@@ -153178,6 +153833,88 @@
         "gates": []
       }
     ],
+    "schoolsById": {
+      "abjuration": {
+        "name": "Abjuration",
+        "focusEligible": true
+      },
+      "conjuration": {
+        "name": "Conjuration",
+        "focusEligible": true
+      },
+      "divination": {
+        "name": "Divination",
+        "focusEligible": true
+      },
+      "enchantment": {
+        "name": "Enchantment",
+        "focusEligible": true
+      },
+      "evocation": {
+        "name": "Evocation",
+        "focusEligible": true
+      },
+      "illusion": {
+        "name": "Illusion",
+        "focusEligible": true
+      },
+      "necromancy": {
+        "name": "Necromancy",
+        "focusEligible": true
+      },
+      "transmutation": {
+        "name": "Transmutation",
+        "focusEligible": true
+      },
+      "universal": {
+        "name": "Universal",
+        "focusEligible": false
+      }
+    },
+    "wizardSpellbook": {
+      "externalLearning": {
+        "studyDays": 1,
+        "inscriptionDays": 1,
+        "spellcraftBaseDc": 15,
+        "retryRankIncrease": 1,
+        "materialsGpPerPage": 100,
+        "consumeScrollOnSuccess": true,
+        "source": {
+          "file": "WIZARD.txt",
+          "line": 90
+        }
+      },
+      "specialization": {
+        "defaultProhibitedSchoolCount": 2,
+        "prohibitedSchoolCountBySpecialty": {
+          "divination": 1
+        },
+        "cannotProhibitSchoolIds": [
+          "divination"
+        ],
+        "spellcraftLearningBonus": 2,
+        "extraSlotsPerSpellLevel": 1,
+        "chooseAtWizardLevel": 1,
+        "optional": true,
+        "permanent": true,
+        "source": {
+          "file": "WIZARD.txt",
+          "line": 94
+        }
+      },
+      "classId": "wizard",
+      "spellListId": "sorcerer-wizard",
+      "standardPages": 100,
+      "standardItemId": "gear:spellbook-wizard-s-blank",
+      "minimumPagesPerSpell": 1,
+      "pagesPerSpellLevel": 1,
+      "requiredForLearning": true,
+      "requiredForPreparation": true,
+      "source": {
+        "file": "WIZARD.txt",
+        "line": 86
+      }
+    },
     "metamagicByFeatId": {
       "empower-spell": {
         "slotIncrease": 2,
@@ -153257,7 +153994,7 @@
         "minimumIncrease": 1,
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 50
+          "line": 52
         }
       }
     },
@@ -165318,6 +166055,87 @@
           "applicationMode": "recipient-sheet"
         }
       ],
+      "spell-focus": [
+        {
+          "operation": "modifier",
+          "statId": "spell-save-dc",
+          "amount": 1,
+          "bonusType": null,
+          "stacking": "once-per-effect",
+          "requires": {
+            "schoolId": "$schoolId"
+          },
+          "id": "spell-focus:1",
+          "source": {
+            "file": "FEATS.txt",
+            "line": 763
+          },
+          "applicationMode": "recipient-sheet"
+        }
+      ],
+      "greater-spell-focus": [
+        {
+          "operation": "modifier",
+          "statId": "spell-save-dc",
+          "amount": 1,
+          "bonusType": null,
+          "stacking": "once-per-effect",
+          "requires": {
+            "schoolId": "$schoolId"
+          },
+          "id": "greater-spell-focus:1",
+          "source": {
+            "file": "FEATS.txt",
+            "line": 251
+          },
+          "applicationMode": "recipient-sheet"
+        }
+      ],
+      "spell-penetration": [
+        {
+          "operation": "modifier",
+          "statId": "spell-resistance-check",
+          "amount": 2,
+          "bonusType": null,
+          "stacking": "once-per-effect",
+          "id": "spell-penetration:1",
+          "source": {
+            "file": "FEATS.txt",
+            "line": 777
+          },
+          "applicationMode": "recipient-sheet"
+        }
+      ],
+      "greater-spell-penetration": [
+        {
+          "operation": "modifier",
+          "statId": "spell-resistance-check",
+          "amount": 2,
+          "bonusType": null,
+          "stacking": "once-per-effect",
+          "id": "greater-spell-penetration:1",
+          "source": {
+            "file": "FEATS.txt",
+            "line": 260
+          },
+          "applicationMode": "recipient-sheet"
+        }
+      ],
+      "extra-turning": [
+        {
+          "operation": "modifier",
+          "statId": "turning-uses-per-day",
+          "amount": 4,
+          "bonusType": null,
+          "stacking": "sum",
+          "id": "extra-turning:1",
+          "source": {
+            "file": "FEATS.txt",
+            "line": 214
+          },
+          "applicationMode": "recipient-sheet"
+        }
+      ],
       "skill-focus": [
         {
           "operation": "modifier",
@@ -165406,6 +166224,28 @@
             "line": 287
           },
           "applicationMode": "recipient-sheet"
+        }
+      ],
+      "overwhelming-critical": [
+        {
+          "operation": "critical-extra-dice",
+          "dieSides": 6,
+          "diceByMultiplier": {
+            "2": 1,
+            "3": 2,
+            "4": 3
+          },
+          "requires": {
+            "weaponId": "$weaponId",
+            "confirmedCritical": true
+          },
+          "excludesCriticalImmune": true,
+          "id": "overwhelming-critical:1",
+          "source": {
+            "file": "EPIC FEATS.txt",
+            "line": 85
+          },
+          "applicationMode": "adjudicate"
         }
       ],
       "dodge": [
@@ -166211,7 +167051,7 @@
               "averageCp": 7500,
               "source": {
                 "file": "WIZARD.txt",
-                "line": 202
+                "line": 206
               }
             }
           }
@@ -185084,6 +185924,9 @@
           "choiceKey": "weaponId",
           "evidence": "Special: You can gain Exotic Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of exotic weapon. Proficiency with the bastard sword or the dwarven waraxe has an additional prerequisite of Str 13.",
           "choiceNeedsReview": true
+        },
+        "weaponProficiencyGrant": {
+          "category": "exotic"
         }
       },
       "extend-spell": {
@@ -185118,7 +185961,7 @@
         "category": "GENERAL",
         "epic": false,
         "text": "Prerequisite: Ability to turn or rebuke creatures.\n\nBenefit: Each time you take this feat, you can use your ability to turn or rebuke creatures four more times per day than normal.\n\nIf you have the ability to turn or rebuke more than one kind of creature each of your turning or rebuking abilities gains four additional uses per day.\n\nNormal: Without this feat, a character can typically turn or rebuke undead (or other creatures) a number of times per day equal to 3 + his or her Charisma modifier.\n\nSpecial: You can gain Extra Turning multiple times. Its effects stack. Each time you take the feat, you can use each of your turning or rebuking abilities four additional times per day.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "FEATS.txt",
           "line": 214
@@ -185283,7 +186126,7 @@
         "category": "GENERAL",
         "epic": false,
         "text": "Choose a school of magic to which you already have applied the Spell Focus feat.\n\nPrerequisite: Spell Focus.\n\nBenefit: Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus.\n\nSpecial: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new school of magic to which you already have applied the Spell Focus feat.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "FEATS.txt",
           "line": 251
@@ -185315,7 +186158,7 @@
         "category": "GENERAL",
         "epic": false,
         "text": "Prerequisite: Spell Penetration.\n\nBenefit: You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature’s spell resistance. This bonus stacks with the one from Spell Penetration.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "FEATS.txt",
           "line": 260
@@ -185599,6 +186442,10 @@
           "choiceKey": "weaponId",
           "evidence": "Special: You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon.",
           "choiceNeedsReview": true
+        },
+        "criticalThreatRange": {
+          "multiplier": 2,
+          "stacksWithOtherRangeExpansion": false
         }
       },
       "improved-disarm": {
@@ -186298,6 +187145,9 @@
           "choiceKey": "weaponId",
           "evidence": "You can gain Martial Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of weapon.",
           "choiceNeedsReview": true
+        },
+        "weaponProficiencyGrant": {
+          "category": "martial"
         }
       },
       "maximize-spell": {
@@ -186720,6 +187570,20 @@
           "choiceKey": "weaponId",
           "evidence": "Special: You can gain Rapid Reload multiple times. Each time you take the feat, it applies to a new type of crossbow.",
           "choiceNeedsReview": true
+        },
+        "reloadByWeaponId": {
+          "weapon:crossbow-hand": {
+            "action": "free",
+            "provokes": true
+          },
+          "weapon:crossbow-light": {
+            "action": "free",
+            "provokes": true
+          },
+          "weapon:crossbow-heavy": {
+            "action": "move",
+            "provokes": true
+          }
         }
       },
       "rapid-shot": {
@@ -187077,7 +187941,7 @@
         "category": "GENERAL",
         "epic": false,
         "text": "Choose a school of magic.\n\nBenefit: Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select.\n\nSpecial: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new school of magic.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "FEATS.txt",
           "line": 763
@@ -187108,6 +187972,11 @@
           "file": "FEATS.txt",
           "line": 770
         },
+        "spellMasteryGrant": {
+          "choiceKey": "spellIds",
+          "countFrom": "intelligenceModifier",
+          "knownClassId": "wizard"
+        },
         "benefitText": "Each time you take this feat, choose a number of spells equal to your Intelligence modifier that you already know. From that point on, you can prepare these spells without referring to a spellbook.",
         "prerequisites": {
           "text": "Wizard level 1st.",
@@ -187120,12 +187989,12 @@
           ]
         },
         "selection": {
-          "repeatable": false,
-          "maxTakes": 1,
-          "stacksWithSelf": false,
+          "repeatable": true,
+          "maxTakes": null,
+          "stacksWithSelf": null,
           "distinctChoice": false,
           "choiceKey": null,
-          "evidence": null,
+          "evidence": "Benefit: Each time you take this feat, choose a number of spells equal to your Intelligence modifier that you already know. From that point on, you can prepare these spells without referring to a spellbook.",
           "choiceNeedsReview": false
         }
       },
@@ -187135,7 +188004,7 @@
         "category": "GENERAL",
         "epic": false,
         "text": "Benefit: You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature’s spell resistance.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "FEATS.txt",
           "line": 777
@@ -187590,7 +188459,22 @@
           "distinctChoice": true,
           "choiceKey": "weaponId",
           "evidence": "Special: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.",
-          "choiceNeedsReview": false
+          "choiceNeedsReview": false,
+          "specialWeaponChoices": {
+            "weapon:unarmed-strike": {
+              "name": "Unarmed Strike",
+              "kind": "unarmed"
+            },
+            "weapon:grapple": {
+              "name": "Grapple",
+              "kind": "grapple"
+            },
+            "weapon:ray": {
+              "name": "Ray",
+              "kind": "ray",
+              "requiresSpellcasterClassLevel": 1
+            }
+          }
         }
       },
       "weapon-specialization": {
@@ -187727,7 +188611,15 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 22
+          "line": 24
+        },
+        "spellGrant": {
+          "maximumKnownSpellLevel": 8,
+          "maximumMaterialCostGp": 1,
+          "prohibitedComponentCodes": [
+            "XP"
+          ],
+          "dailyUsesPerTake": 1
         },
         "benefitText": "Choose one spell you know of 8th level or lower, such as chain lightning or circle of death. Your familiar can now cast this spell once per day as a spell-like ability as a caster of a level equal to your caster level. You cannot bestow a spell upon your familiar if the spell normally has a material component cost of more than 1 gp, or any XP cost.",
         "prerequisites": {
@@ -187740,6 +188632,15 @@
             },
             {
               "kind": "hasFamiliar"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187762,7 +188663,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 29
+          "line": 31
         },
         "benefitText": "Whenever you make a successful smite attack, add twice the appropriate level to damage (rather than just your level).",
         "prerequisites": {
@@ -187776,6 +188677,15 @@
             {
               "kind": "feature",
               "key": "smite"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187798,7 +188708,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 36
+          "line": 38
         },
         "benefitText": "Your ability to wild shape into an elemental is expanded to include all elemental creatures (not just air, earth, fire, and water elementals) of any size that you can take when wild shaping into an animal. For instance, if you are normally capable of taking the shape of an animal of Huge size, you can now wild shape into a Huge elemental creature. You gain all extraordinary and supernatural abilities of the elemental whose form you take.",
         "prerequisites": {
@@ -187812,6 +188722,15 @@
             {
               "kind": "feature",
               "key": "elemental-wild-shape"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187834,7 +188753,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 43
+          "line": 45
         },
         "benefitText": "Add +1 to the bonus on Bluff, Listen, Sense Motive, Spot, and Survival checks and damage rolls against all your favored enemies.",
         "prerequisites": {
@@ -187843,6 +188762,15 @@
             {
               "kind": "favoredEnemyCount",
               "minimum": 5
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187865,7 +188793,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 50
+          "line": 52
         },
         "benefitText": "The spell slot you must use to cast a metamagic spell is one level lower than normal (to a minimum of one level higher than normal). For instance, you could cast a quickened spell as a spell of three levels higher than normal rather than four levels higher. This feat has no effect on a metamagic feat that requires a spell slot one level higher than normal or does not require a higher-level slot.",
         "prerequisites": {
@@ -187879,6 +188807,15 @@
               "kind": "skillRanks",
               "key": "spellcraft",
               "minimum": 30
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187901,7 +188838,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 57
+          "line": 59
         },
         "benefitText": "Add +1d6 to your sneak attack damage.",
         "prerequisites": {
@@ -187911,6 +188848,15 @@
               "kind": "sneakAttackDice",
               "key": "sneak attack",
               "minimum": 8
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -187933,7 +188879,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 64
+          "line": 66
         },
         "benefitText": "When you select this feat, you gain one spell slot per day of any level up to one level higher than the highest level spell you can already cast in a particular class. For example, if a 21st-level wizard selected this feat, she would gain one wizard spell slot of any level up to 10th. The character must have the requisite ability score (10 + spell level) in order to cast a spell stored in such a slot. If the character has a high enough ability modifier to gain one or more bonus spells for this spell level, she also gains those bonus spells for this spell level. This feat can’t grant spellcasting ability to a class that doesn’t have spellcasting ability. A character must use the spell slot in a class of which she can already cast the maximum normal spell level. (For instance, a 5th-level ranger/22nd-level sorcerer couldn’t add a ranger spell slot, because she can’t cast the maximum normal spell level for ranger. She must add the spell slot to her sorcerer spells.)",
         "prerequisites": {
@@ -187950,7 +188896,7 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 7
+                    "line": 9
                   }
                 },
                 {
@@ -187961,7 +188907,7 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 8
+                    "line": 10
                   }
                 },
                 {
@@ -187972,7 +188918,7 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 9
+                    "line": 11
                   }
                 },
                 {
@@ -187983,33 +188929,11 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 10
-                  }
-                },
-                {
-                  "classId": "ranger",
-                  "tradition": "divine",
-                  "ability": "wis",
-                  "minimumSpellcastingLevel": 14,
-                  "minimumAbilityScore": 20,
-                  "source": {
-                    "file": "EPIC FEATS.txt",
-                    "line": 11
-                  }
-                },
-                {
-                  "classId": "ranger",
-                  "tradition": "divine",
-                  "ability": "wis",
-                  "minimumSpellcastingLevel": 15,
-                  "minimumAbilityScore": 14,
-                  "source": {
-                    "file": "EPIC FEATS.txt",
                     "line": 12
                   }
                 },
                 {
-                  "classId": "paladin",
+                  "classId": "ranger",
                   "tradition": "divine",
                   "ability": "wis",
                   "minimumSpellcastingLevel": 14,
@@ -188020,7 +188944,7 @@
                   }
                 },
                 {
-                  "classId": "paladin",
+                  "classId": "ranger",
                   "tradition": "divine",
                   "ability": "wis",
                   "minimumSpellcastingLevel": 15,
@@ -188031,6 +188955,28 @@
                   }
                 },
                 {
+                  "classId": "paladin",
+                  "tradition": "divine",
+                  "ability": "wis",
+                  "minimumSpellcastingLevel": 14,
+                  "minimumAbilityScore": 20,
+                  "source": {
+                    "file": "EPIC FEATS.txt",
+                    "line": 15
+                  }
+                },
+                {
+                  "classId": "paladin",
+                  "tradition": "divine",
+                  "ability": "wis",
+                  "minimumSpellcastingLevel": 15,
+                  "minimumAbilityScore": 14,
+                  "source": {
+                    "file": "EPIC FEATS.txt",
+                    "line": 16
+                  }
+                },
+                {
                   "classId": "bard",
                   "tradition": "arcane",
                   "ability": "cha",
@@ -188038,7 +188984,7 @@
                   "minimumAbilityScore": 24,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 15
+                    "line": 17
                   }
                 },
                 {
@@ -188049,35 +188995,13 @@
                   "minimumAbilityScore": 16,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 16
-                  }
-                },
-                {
-                  "classId": "assassin",
-                  "tradition": "arcane",
-                  "ability": "int",
-                  "minimumSpellcastingLevel": 7,
-                  "minimumAbilityScore": 20,
-                  "source": {
-                    "file": "EPIC FEATS.txt",
-                    "line": 17
-                  }
-                },
-                {
-                  "classId": "assassin",
-                  "tradition": "arcane",
-                  "ability": "int",
-                  "minimumSpellcastingLevel": 8,
-                  "minimumAbilityScore": 14,
-                  "source": {
-                    "file": "EPIC FEATS.txt",
                     "line": 18
                   }
                 },
                 {
-                  "classId": "blackguard",
-                  "tradition": "divine",
-                  "ability": "wis",
+                  "classId": "assassin",
+                  "tradition": "arcane",
+                  "ability": "int",
                   "minimumSpellcastingLevel": 7,
                   "minimumAbilityScore": 20,
                   "source": {
@@ -188086,6 +189010,28 @@
                   }
                 },
                 {
+                  "classId": "assassin",
+                  "tradition": "arcane",
+                  "ability": "int",
+                  "minimumSpellcastingLevel": 8,
+                  "minimumAbilityScore": 14,
+                  "source": {
+                    "file": "EPIC FEATS.txt",
+                    "line": 20
+                  }
+                },
+                {
+                  "classId": "blackguard",
+                  "tradition": "divine",
+                  "ability": "wis",
+                  "minimumSpellcastingLevel": 7,
+                  "minimumAbilityScore": 20,
+                  "source": {
+                    "file": "EPIC FEATS.txt",
+                    "line": 21
+                  }
+                },
+                {
                   "classId": "blackguard",
                   "tradition": "divine",
                   "ability": "wis",
@@ -188093,10 +189039,19 @@
                   "minimumAbilityScore": 14,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 20
+                    "line": 22
                   }
                 }
               ]
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188119,7 +189074,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 71
+          "line": 73
         },
         "benefitText": "Add +2 to the DC of your Stunning Attack.",
         "prerequisites": {
@@ -188142,6 +189097,15 @@
             {
               "kind": "feat",
               "featId": "stunning-fist"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188164,7 +189128,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 78
+          "line": 80
         },
         "benefitText": "The effects of your bardic music inspiration abilities last for ten times as long as normal after you stop singing. This has no effect on inspiration abilities that have no duration after you stop singing (such as inspire competence).",
         "prerequisites": {
@@ -188178,6 +189142,15 @@
             {
               "kind": "feature",
               "key": "bardic-music"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188197,10 +189170,10 @@
         "category": "EPIC",
         "epic": true,
         "text": "Choose one type of melee weapon, such as longsword or greataxe.\n\nPrerequisites: Str 23, Cleave, Great Cleave, Improved Critical (chosen weapon), Power Attack, Weapon Focus (chosen weapon).\n\nBenefit: When using the weapon you have selected, you deal an extra 1d6 points of damage on a successful critical hit. If the weapon’s critical multiplier is ×3, add an extra 2d6 points of damage instead, and if the multiplier is ×4, add an extra 3d6 points of damage instead. (Creatures immune to critical hits can’t be affected by this feat.)\n\nSpecial: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.",
-        "automation": "reference",
+        "automation": "partial",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 83
+          "line": 85
         },
         "benefitText": "When using the weapon you have selected, you deal an extra 1d6 points of damage on a successful critical hit. If the weapon’s critical multiplier is ×3, add an extra 2d6 points of damage instead, and if the multiplier is ×4, add an extra 3d6 points of damage instead. (Creatures immune to critical hits can’t be affected by this feat.)",
         "prerequisites": {
@@ -188232,6 +189205,15 @@
               "kind": "feat",
               "featId": "weapon-focus",
               "choiceKey": "weaponId"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188254,7 +189236,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 92
+          "line": 94
         },
         "benefitText": "You can turn or rebuke outsiders as if they were undead. An outsider has effective turn resistance equal to half its spell resistance (round down). If you can turn undead, you turn (or destroy) all evil outsiders and rebuke (or command) all nonevil outsiders. If you can rebuke undead, you rebuke (or command) all evil outsiders and turn (or destroy) all nonevil outsiders.",
         "prerequisites": {
@@ -188273,6 +189255,15 @@
             {
               "kind": "feature",
               "key": "turn-or-rebuke-undead"
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188295,7 +189286,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 97
+          "line": 99
         },
         "benefitText": "You learn two new arcane spells of any level up to the maximum level you can cast. This feat does not grant any additional spell slots.",
         "prerequisites": {
@@ -188312,7 +189303,7 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 7
+                    "line": 9
                   }
                 },
                 {
@@ -188323,7 +189314,7 @@
                   "minimumAbilityScore": 19,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 8
+                    "line": 10
                   }
                 },
                 {
@@ -188334,7 +189325,7 @@
                   "minimumAbilityScore": 24,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 15
+                    "line": 17
                   }
                 },
                 {
@@ -188345,7 +189336,7 @@
                   "minimumAbilityScore": 16,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 16
+                    "line": 18
                   }
                 },
                 {
@@ -188356,7 +189347,7 @@
                   "minimumAbilityScore": 20,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 17
+                    "line": 19
                   }
                 },
                 {
@@ -188367,10 +189358,19 @@
                   "minimumAbilityScore": 14,
                   "source": {
                     "file": "EPIC FEATS.txt",
-                    "line": 18
+                    "line": 20
                   }
                 }
               ]
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -188393,7 +189393,7 @@
         "automation": "reference",
         "source": {
           "file": "EPIC FEATS.txt",
-          "line": 104
+          "line": 106
         },
         "benefitText": "While you are raging, any enemy that views you must make a Will save opposed by your Intimidate check or become panicked (if it has HD less than your character level) or shaken (if it has HD equal to or up to twice your character level) for 4d6 rounds. An enemy with Hit Dice greater than twice your character level is not affected by this feat.",
         "prerequisites": {
@@ -188408,6 +189408,15 @@
               "kind": "rageUsesPerDay",
               "key": "rage",
               "minimum": 5
+            },
+            {
+              "kind": "level",
+              "key": "character",
+              "minimum": 21,
+              "source": {
+                "file": "EPIC FEATS.txt",
+                "line": 3
+              }
             }
           ]
         },
@@ -198010,7 +199019,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 57
-        }
+        },
+        "reservesGrip": false
       },
       "armor:shield-light-wooden": {
         "id": "armor:shield-light-wooden",
@@ -198042,7 +199052,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 58
-        }
+        },
+        "reservesGrip": true
       },
       "armor:shield-light-steel": {
         "id": "armor:shield-light-steel",
@@ -198074,7 +199085,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 59
-        }
+        },
+        "reservesGrip": true
       },
       "armor:shield-heavy-wooden": {
         "id": "armor:shield-heavy-wooden",
@@ -198106,7 +199118,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 60
-        }
+        },
+        "reservesGrip": true
       },
       "armor:shield-heavy-steel": {
         "id": "armor:shield-heavy-steel",
@@ -198138,7 +199151,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 61
-        }
+        },
+        "reservesGrip": true
       },
       "armor:shield-tower": {
         "id": "armor:shield-tower",
@@ -198170,7 +199184,8 @@
         "source": {
           "file": "ARMOR.txt",
           "line": 62
-        }
+        },
+        "reservesGrip": true
       },
       "armor:armor-spikes": {
         "id": "armor:armor-spikes",
@@ -198348,6 +199363,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 99
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:unarmed-strike": {
@@ -198392,6 +199413,12 @@
           "kind": "intrinsic",
           "fallbackWhenNoWeaponEquipped": true,
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:dagger": {
@@ -198432,6 +199459,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 101
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:dagger-punching": {
@@ -198471,6 +199504,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 102
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:gauntlet-spiked": {
@@ -198510,6 +199549,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 103
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:mace-light": {
@@ -198549,6 +199594,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 104
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sickle": {
@@ -198588,6 +199639,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 105
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:club": {
@@ -198627,6 +199684,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 106
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:mace-heavy": {
@@ -198666,6 +199729,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 107
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:morningstar": {
@@ -198706,6 +199775,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 108
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shortspear": {
@@ -198745,6 +199820,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 109
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:longspear": {
@@ -198784,6 +199865,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 110
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:quarterstaff": {
@@ -198823,6 +199910,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 111
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:spear": {
@@ -198862,6 +199955,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 112
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:crossbow-heavy": {
@@ -198901,6 +200000,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 113
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": -4,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:crossbow-light": {
@@ -198940,6 +200045,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 114
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": -2,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": true
         }
       },
       "weapon:bolts-crossbow-10": {
@@ -199013,6 +200124,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 116
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:javelin": {
@@ -199052,6 +200169,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 117
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sling": {
@@ -199091,6 +200214,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 118
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:bullets-sling-10": {
@@ -199164,6 +200293,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 124
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:hammer-light": {
@@ -199203,6 +200338,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 125
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:handaxe": {
@@ -199242,6 +200383,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 126
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:kukri": {
@@ -199281,6 +200428,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 127
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:pick-light": {
@@ -199320,6 +200473,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 128
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sap": {
@@ -199359,6 +200518,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 129
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shield-light": {
@@ -199406,6 +200571,12 @@
             "armor:shield-light-steel"
           ],
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:spiked-armor": {
@@ -199451,6 +200622,12 @@
           "hostKind": "armor",
           "requiredAdditionId": "armor:armor-spikes",
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:spiked-shield-light": {
@@ -199499,6 +200676,12 @@
           ],
           "requiredAdditionId": "armor:shield-spikes",
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sword-short": {
@@ -199538,6 +200721,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 133
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:battleaxe": {
@@ -199577,6 +200766,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 134
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:flail": {
@@ -199616,6 +200811,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 135
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:longsword": {
@@ -199655,6 +200856,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 136
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:pick-heavy": {
@@ -199694,6 +200901,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 137
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:rapier": {
@@ -199733,6 +200946,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 138
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:scimitar": {
@@ -199772,6 +200991,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 139
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shield-heavy": {
@@ -199819,6 +201044,12 @@
             "armor:shield-heavy-steel"
           ],
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:spiked-shield-heavy": {
@@ -199867,6 +201098,12 @@
           ],
           "requiredAdditionId": "armor:shield-spikes",
           "carriedSeparately": false
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:trident": {
@@ -199906,6 +201143,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 142
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:warhammer": {
@@ -199945,6 +201188,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 143
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:falchion": {
@@ -199984,6 +201233,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 144
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:glaive": {
@@ -200023,6 +201278,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 145
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:greataxe": {
@@ -200062,6 +201323,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 146
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:greatclub": {
@@ -200101,6 +201368,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 147
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:flail-heavy": {
@@ -200140,6 +201413,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 148
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:greatsword": {
@@ -200179,6 +201458,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 149
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:guisarme": {
@@ -200218,6 +201503,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 150
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:halberd": {
@@ -200258,6 +201549,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 151
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:lance": {
@@ -200297,6 +201594,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 152
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:ranseur": {
@@ -200336,6 +201639,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 153
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:scythe": {
@@ -200376,6 +201685,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 154
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:longbow": {
@@ -200415,6 +201730,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 155
+        },
+        "gripProfile": {
+          "requiresTwoHands": true,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:longbow-composite": {
@@ -200454,6 +201775,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 156
+        },
+        "gripProfile": {
+          "requiresTwoHands": true,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shortbow": {
@@ -200493,6 +201820,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 157
+        },
+        "gripProfile": {
+          "requiresTwoHands": true,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shortbow-composite": {
@@ -200532,6 +201865,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 158
+        },
+        "gripProfile": {
+          "requiresTwoHands": true,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:arrows-20": {
@@ -200605,6 +201944,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 163
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:nunchaku": {
@@ -200644,6 +201989,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 164
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sai": {
@@ -200683,6 +202034,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 165
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:siangham": {
@@ -200722,6 +202079,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 166
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sword-bastard": {
@@ -200761,6 +202124,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 167
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:waraxe-dwarven": {
@@ -200800,6 +202169,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 168
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:whip": {
@@ -200839,6 +202214,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 169
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:axe-orc-double": {
@@ -200878,6 +202259,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 170
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:chain-spiked": {
@@ -200917,6 +202304,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 171
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:flail-dire": {
@@ -200956,6 +202349,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 172
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:hammer-gnome-hooked": {
@@ -200996,6 +202395,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 173
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:sword-two-bladed": {
@@ -201035,6 +202440,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 174
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:urgrosh-dwarven": {
@@ -201075,6 +202486,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 175
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:bolas": {
@@ -201114,6 +202531,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 176
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:crossbow-hand": {
@@ -201153,6 +202576,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 177
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": true
         }
       },
       "weapon:crossbow-repeating-heavy": {
@@ -201192,6 +202621,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 178
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": -4,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:crossbow-repeating-light": {
@@ -201231,6 +202666,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 179
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": -2,
+          "ignoresBucklerAttackPenalty": true,
+          "countsAsLightOffHand": true
         }
       },
       "weapon:bolts-5": {
@@ -201299,6 +202740,12 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 181
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
       },
       "weapon:shuriken-5": {
@@ -201338,7 +202785,67 @@
         "source": {
           "file": "WEAPONS.txt",
           "line": 182
+        },
+        "gripProfile": {
+          "requiresTwoHands": false,
+          "oneHandAttackPenalty": 0,
+          "ignoresBucklerAttackPenalty": false,
+          "countsAsLightOffHand": false
         }
+      }
+    },
+    "equipmentSlots": {
+      "handIds": [
+        "primary",
+        "offhand"
+      ],
+      "bodySlotIds": [
+        "head",
+        "face",
+        "throat",
+        "shoulders",
+        "body",
+        "torso",
+        "waist",
+        "arms",
+        "hands",
+        "feet",
+        "ring-left",
+        "ring-right"
+      ],
+      "armorSlotId": "armor",
+      "shieldSlotId": "shield",
+      "rangerTwoWeaponStyle": {
+        "classId": "ranger",
+        "allowedWornArmorBands": [
+          "light"
+        ],
+        "grants": [
+          {
+            "minimumClassLevel": 2,
+            "featId": "two-weapon-fighting",
+            "source": {
+              "file": "RANGER.txt",
+              "line": 87
+            }
+          },
+          {
+            "minimumClassLevel": 6,
+            "featId": "improved-two-weapon-fighting",
+            "source": {
+              "file": "RANGER.txt",
+              "line": 111
+            }
+          },
+          {
+            "minimumClassLevel": 11,
+            "featId": "greater-two-weapon-fighting",
+            "source": {
+              "file": "RANGER.txt",
+              "line": 123
+            }
+          }
+        ]
       }
     },
     "fallbackWeaponId": "weapon:unarmed-strike",

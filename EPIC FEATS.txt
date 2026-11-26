@@ -1,5 +1,7 @@
 EPIC FEATS
 
+All epic feats require a minimum character level of 21, in addition to any prerequisites in the individual feat entry.
+
 For Improved Spell Capacity, satisfy any one row for a spellcasting class. For Spell Knowledge, only arcane rows qualify. Use the effective spellcasting progression level for that class, not a caster-level bonus that does not advance spells. The ability score must be for the same class as the level. Alternate rows account for gaining the class's highest normal spell slot through bonus spells before a base slot is available.
 
 Table: Normal Maximum Spellcasting Prerequisites

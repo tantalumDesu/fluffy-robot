@@ -4,6 +4,7 @@ import unittest
 from tools.negative_levels import (allocate_spell_losses, create_drain_levels, drain_death_aftermath,
                                    resolve_drain_level, summarize_negative_levels, weapon_negative_levels)
 from tools.organize_core import PATH
+from tools.spellbooks import learn_wizard_spells, new_spellbook
 from tools.sheet_effects import modifier_total
 from tools.spellcasting import new_slots, plan_cast, prepare_spell, recover_slots, slot_budget, spend_slot
 
@@ -47,8 +48,10 @@ class NegativeLevelsTest(unittest.TestCase):
         ledger = new_slots('wizard', slot_budget(self.core, 'wizard', 3, 14))
         lower = plan_cast(self.core, 'wizard', 'mage-armor', 14)
         higher = plan_cast(self.core, 'wizard', 'mage-armor', 14, metamagic=['extend-spell'], owned_feats=['extend-spell'])
-        ledger = prepare_spell(ledger, 'regular:1:0', lower, accessible_spell_ids={'mage-armor'})
-        ledger = prepare_spell(ledger, 'regular:2:0', higher, accessible_spell_ids={'mage-armor'})
+        ledger = prepare_spell(ledger, 'regular:1:0', lower, accessible_spell_ids={'mage-armor'},
+                                 accessible_spellbooks=[learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['mage-armor'])])
+        ledger = prepare_spell(ledger, 'regular:2:0', higher, accessible_spell_ids={'mage-armor'},
+                                 accessible_spellbooks=[learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['mage-armor'])])
         level = [dict(id='drain:1', kind='energy-drain')]
         result = allocate_spell_losses(self.core, {'wizard': ledger}, level, [])['wizard']
         with self.assertRaises(ValueError):

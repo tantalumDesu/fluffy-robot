@@ -83,9 +83,13 @@ Bonus Feats: At 5th, 10th, 15th, and 20th level, a wizard gains a bonus feat. At
 
 These bonus feats are in addition to the feat that a character of any class gets from advancing levels. The wizard is not limited to the categories of item creation feats, metamagic feats, or Spell Mastery when choosing these feats.
 
-Spellbooks: A wizard must study her spellbook each day to prepare her spells. She cannot prepare any spell not recorded in her spellbook, except for read magic, which all wizards can prepare from memory.
+Spellbooks: A wizard must study her spellbook each day to prepare her spells. Table rule: A wizard must have access to a spellbook to learn or prepare Wizard spells, including read magic. Preparing a Wizard spell requires it to be recorded in an accessible spellbook. A standard spellbook has 100 pages. A Wizard spell takes one page per spell level, with a minimum of one page. These requirements apply only to Wizard spellcasting, not to spells learned or cast through another class.
 
 A wizard begins play with a spellbook containing all 0-level wizard spells (except those from her prohibited school or schools, if any; see School Specialization, below) plus three 1st-level spells of your choice. For each point of Intelligence bonus the wizard has, the spellbook holds one additional 1st-level spell of your choice. At each new wizard level, she gains two new spells of any spell level or levels that she can cast (based on her new wizard level) for her spellbook. At any time, a wizard can also add spells found in other wizards' spellbooks to her own.
+
+Learning from a Scroll or Another Wizard's Spellbook: Study the spell for one day, then attempt a Spellcraft check (DC 15 + the Wizard spell level). Add +2 for a spell in your specialty school. You cannot learn spells in prohibited schools. On failure, you cannot retry that spell until you gain at least one more Spellcraft rank. On success, you understand the spell; a source scroll loses its enchantment and disappears, while the source spellbook is unchanged.
+
+Writing an Understood Spell: Spend one additional day, enough pages in your spellbook, and 100 gp in materials per page. The spell becomes known as a Wizard spell when it is recorded.
 
 SCHOOL SPECIALIZATION
 

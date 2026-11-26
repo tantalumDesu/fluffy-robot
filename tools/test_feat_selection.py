@@ -16,7 +16,10 @@ class FeatSelectionTest(unittest.TestCase):
     def test_all_feats_have_metadata(self):
         for feat in self.feats.values():
             self.assertTrue(feat['benefitText'])
-            self.assertEqual(bool(feat['prerequisites']['text']), bool(feat['prerequisites']['allOf']))
+            self.assertEqual(bool(feat['prerequisites']['text']) or feat['epic'], bool(feat['prerequisites']['allOf']))
+            if feat['epic']:
+                self.assertTrue(any(r['kind'] == 'level' and r['key'] == 'character' and r['minimum'] == 21
+                                    for r in feat['prerequisites']['allOf']))
             for requirement in feat['prerequisites']['allOf']:
                 if requirement['kind'] == 'feat':
                     self.assertIn(requirement['featId'], self.feats)
@@ -88,3 +91,9 @@ class FeatSelectionTest(unittest.TestCase):
         self.assertEqual(status(hasFamiliar=False), 'ineligible')
         self.assertEqual(status(hasFamiliar=None), 'needs-review')
         self.assertEqual(status(abilityScores={'int': 24, 'cha': 30}), 'ineligible')
+
+    def test_spell_mastery_can_be_taken_again_for_known_spells(self):
+        facts = dict(feats=[{'featId': 'spell-mastery', 'choices': {'spellIds': ['read-magic']}}],
+                     classLevels={'wizard': 2}, abilityScores={'int': 14}, knownWizardSpellIds=['grease', 'shield'])
+        self.assertEqual(self.status('spell-mastery', facts, choices={'spellIds': ['grease', 'shield']}), 'eligible')
+        self.assertEqual(self.status('spell-mastery', facts, choices={'spellIds': ['grease', 'fireball']}), 'ineligible')

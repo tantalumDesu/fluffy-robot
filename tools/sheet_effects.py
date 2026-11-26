@@ -101,10 +101,19 @@ def catalogs(spells, feats, skills):
                               ('lightning-reflexes', 'save:ref', 2), ('iron-will', 'save:will', 2),
                               ('toughness', 'max-hp', 3)]:
         feat(key, modifier(stat, amount, stacking='sum' if key == 'toughness' else None))
+    for key in ('spell-focus', 'greater-spell-focus'):
+        feat(key, modifier('spell-save-dc', 1, requires={'schoolId': '$schoolId'}))
+    for key in ('spell-penetration', 'greater-spell-penetration'):
+        feat(key, modifier('spell-resistance-check', 2))
+    feat('extra-turning', modifier('turning-uses-per-day', 4, stacking='sum'))
     feat('skill-focus', modifier('skill', 3, requires={'skillId': '$skillId'}))
     for key, stat, amount in [('weapon-focus', 'attack', 1), ('greater-weapon-focus', 'attack', 1),
                               ('weapon-specialization', 'weapon-damage', 2), ('greater-weapon-specialization', 'weapon-damage', 2)]:
         feat(key, modifier(stat, amount, requires={'weaponId': '$weaponId'}))
+    feat('overwhelming-critical', dict(operation='critical-extra-dice', dieSides=6,
+                                      diceByMultiplier={'2': 1, '3': 2, '4': 3},
+                                      requires={'weaponId': '$weaponId', 'confirmedCritical': True},
+                                      excludesCriticalImmune=True))
     feat('dodge', modifier('ac', 1, 'dodge', 'once-per-effect', requires={'attackerId': '$opponentId'},
                            suppressedWhen='denied-dex-to-ac'))
     feat('point-blank-shot', *(modifier(stat, 1, requires={'attackKind': 'ranged'}, maxDistanceFt=30)

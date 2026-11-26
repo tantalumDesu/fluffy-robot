@@ -5,6 +5,7 @@ from tools.effect_state import active_spells, apply_spell
 from tools.game_time import (encounter_clock, end_turn, interrupt_cast, new_encounter, schedule_cast,
                              schedule_downtime_cast, seconds, spend_action, start_next_turn)
 from tools.organize_core import PATH
+from tools.spellbooks import learn_wizard_spells, new_spellbook
 from tools.spellcasting import (begin_encounter_cast, new_slots, plan_cast, prepare_spell, recover_slots,
                                 slot_budget, spend_slot)
 
@@ -18,7 +19,8 @@ class TimingTest(unittest.TestCase):
         plan = plan_cast(self.core, 'wizard', 'summon-monster-i', 14)
         slots = new_slots('wizard', slot_budget(self.core, 'wizard', 1, 14))
         slot = 'regular:1:0'
-        slots = prepare_spell(slots, slot, plan, accessible_spell_ids={'summon-monster-i'})
+        slots = prepare_spell(slots, slot, plan, accessible_spell_ids={'summon-monster-i'},
+                                 accessible_spellbooks=[learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['summon-monster-i'])])
         encounter, _ = start_next_turn(new_encounter(['fast', 'caster', 'slow']))
         encounter, _ = start_next_turn(end_turn(encounter)[0])
         encounter, spent, completed = begin_encounter_cast(encounter, 'caster', slots, slot, plan)
@@ -70,7 +72,8 @@ class TimingTest(unittest.TestCase):
         plan = plan_cast(self.core, 'wizard', 'mage-armor', 14)
         slots = new_slots('wizard', slot_budget(self.core, 'wizard', 1, 14))
         for slot, cast_at in [('regular:1:0', 0), ('regular:1:1', 3599)]:
-            slots = prepare_spell(slots, slot, plan, accessible_spell_ids={'mage-armor'})
+            slots = prepare_spell(slots, slot, plan, accessible_spell_ids={'mage-armor'},
+                                 accessible_spellbooks=[learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['mage-armor'])])
             slots = spend_slot(slots, slot, plan, game_seconds=cast_at)
         kwargs = dict(start_seconds=28800, end_seconds=32400, verified_rest_seconds=28800)
         with self.assertRaises(ValueError):

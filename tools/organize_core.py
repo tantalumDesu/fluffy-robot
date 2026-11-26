@@ -8,6 +8,9 @@ import re
 import unicodedata
 
 if __package__:
+    from .spellbooks import spellbook_catalog
+    from .equipment_slots import equipment_rules
+    from .weapon_focus import spell_attack_profile
     from .companion_sheet import familiar_loss_catalog
     from .improved_familiars import catalog as improved_familiar_catalog
     from .combat_catalog import combat_rules
@@ -30,6 +33,9 @@ if __package__:
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from spellbooks import spellbook_catalog
+    from equipment_slots import equipment_rules
+    from weapon_focus import spell_attack_profile
     from companion_sheet import familiar_loss_catalog
     from improved_familiars import catalog as improved_familiar_catalog
     from combat_catalog import combat_rules
@@ -277,8 +283,15 @@ def build(old):
                 del spell[alias]
         if spell['file'] == 'SPELLBOOK.txt':
             spell['shortDescription'], spell['longDescription'] = source_spells[normalized(spell['name'])]
+        if attack := spell_attack_profile(spell):
+            spell['attackProfile'] = attack
+        else:
+            spell.pop('attackProfile', None)
         spells.append(spell)
+    groups['magic']['schoolsById'] = {slug(name): dict(name=name, focusEligible=name != 'Universal')
+                                      for name in sorted({spell['school'] for spell in spells})}
     for spell in spells:
+        spell['schoolId'] = slug(spell['school'])
         spell['timing'] = dict(casting=casting_timing(spell['castingTime']['raw']),
                                duration=duration_timing(spell['duration']['raw']))
     groups['magic']['spells'] = spells
@@ -290,6 +303,15 @@ def build(old):
                   'countGrantedFeats': True, 'unknownPrerequisitePolicy': 'needs-review'}))
     feat_records = encode_feats(index(feats()),
                                 table('EPIC FEATS.txt', 'Table: Normal Maximum Spellcasting Prerequisites'))
+    epic_file = 'EPIC FEATS.txt'
+    epic_line, epic_minimum = next((i, int(match[1])) for i, text in enumerate(lines(epic_file), 1)
+                                  if (match := re.match(r'All epic feats require a minimum character level of (\d+)', text)))
+    epic_requirement = dict(kind='level', key='character', minimum=epic_minimum,
+                            source=source(epic_file, line=epic_line))
+    for feat in feat_records.values():
+        if feat['epic']:
+            feat['prerequisites']['allOf'].append(epic_requirement.copy())
+    groups['magic']['wizardSpellbook'] = spellbook_catalog(lines, source)
     groups['magic']['metamagicByFeatId'] = metamagic_catalog(feat_records)
     groups['mechanics']['timing'] = dict(secondsByUnit=SECONDS, source=source('TIMING.txt'),
         regularTurn={'standard': 1, 'move': 1, 'fullRoundReplacesBoth': True},
@@ -431,6 +453,7 @@ def build(old):
     companions = index(dict(creature, sizeId=creature['size']) for creature in [*creatures(), *beasts(lines)])
     groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
+    equipment_slots = equipment_rules(items, lines, source)
     gauntlet = items[LOCKED_GAUNTLET_ID]
     gauntlet['listedArcaneSpellFailurePercent'] = gauntlet['arcaneSpellFailurePercent']
     gauntlet['arcaneSpellFailurePercent'] = None  # Hand restriction, not a blanket caster penalty.
@@ -486,7 +509,7 @@ def build(old):
         alignmentStepsPerAxis=1, unlistedOptions='dm-adjudication', preserveNonAnimalType=True,
         grantsSpeakWithOwnKind=False)
     return dict(schemaVersion=2, meta=meta, **groups, feats={'byId': feat_records},
-                inventory={'itemsById': items, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules, 'equipmentSizeRules': equipment_size_rules, 'encumbranceByBand': encumbrance, 'weaponAlignmentPropertiesById': weapon_alignment_properties},
+                inventory={'itemsById': items, 'equipmentSlots': equipment_slots, 'fallbackWeaponId': 'weapon:unarmed-strike', 'packAnimalsById': pack, 'carryingCapacity': capacity, 'pulledVehicleRules': vehicle_rules, 'equipmentSizeRules': equipment_size_rules, 'encumbranceByBand': encumbrance, 'weaponAlignmentPropertiesById': weapon_alignment_properties},
                 companions={'creaturesById': companions, 'improvedFamiliarOptionsById': improved_familiars,
                             'familiarLossByClassId': familiar_loss_catalog(lines, source),
                             'familiarAdvancement': list(advancement('FAMILIARS.txt', ('naturalArmorAdjustment', 'intelligence'))),

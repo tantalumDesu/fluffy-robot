@@ -4,6 +4,7 @@ import unittest
 from tools.effect_state import apply_spell
 from tools.level_history import replay_level_history
 from tools.organize_core import PATH
+from tools.spellbooks import learn_wizard_spells, new_spellbook
 from tools.spellcasting import (new_slots, numeric_spell_result, plan_cast, prepare_spell, slot_budget,
                                 spellcasting_levels, spend_slot)
 
@@ -33,7 +34,8 @@ class SpellcastingTest(unittest.TestCase):
         plan = self.plan('wizard', 'mage-armor', 16, 'extend-spell')
         self.assertEqual((plan['requiredSlotLevel'], plan['saveDc']), (2, 14))
         state = new_slots('wizard', slot_budget(self.core, 'wizard', 3, 16))
-        prepared = prepare_spell(state, 'regular:2:0', plan, accessible_spell_ids={'mage-armor'})
+        prepared = prepare_spell(state, 'regular:2:0', plan, accessible_spell_ids={'mage-armor'},
+                                 accessible_spellbooks=[learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['mage-armor'])])
         self.assertIsNone(state['slots']['regular:2:0']['preparation'])
         with self.assertRaises(ValueError):
             spend_slot(prepared, 'regular:2:0', self.plan('wizard', 'mage-armor', 16))
@@ -102,3 +104,21 @@ class SpellcastingTest(unittest.TestCase):
         cleric = self.plan('cleric', 'cure-light-wounds', 16, worn_armor_and_shields=gear)
         self.assertEqual(bard['armorSpellFailure']['percent'], 5)
         self.assertEqual(cleric['armorSpellFailure']['percent'], 0)
+
+    def test_spell_focus_stacks_only_for_same_school_across_distinct_feats(self):
+        from tools.feat_selection import check_spell_focus_selection
+        picks = [dict(featId=feat, choices={'schoolId': school}) for feat, school in (
+            ('spell-focus', 'evocation'), ('spell-focus', 'evocation'), ('greater-spell-focus', 'evocation'))]
+        facts = {'feats': picks[:1]}
+        self.assertEqual(check_spell_focus_selection(self.core, facts, 'greater-spell-focus', 'evocation')['status'], 'eligible')
+        self.assertEqual(check_spell_focus_selection(self.core, facts, 'greater-spell-focus', 'illusion')['status'], 'ineligible')
+        self.assertEqual(check_spell_focus_selection(self.core, facts, 'spell-focus', 'universal')['status'], 'ineligible')
+        self.assertEqual(self.plan('wizard', 'fireball', 16, feat_choices=picks)['saveDc'], 18)
+        self.assertEqual(self.plan('wizard', 'grease', 16, feat_choices=picks)['saveDc'], 14)
+
+    def test_spell_penetration_is_not_spell_focus(self):
+        picks = [dict(featId=key) for key in ('spell-penetration', 'greater-spell-penetration')]
+        fireball = self.plan('wizard', 'fireball', 16, feat_choices=picks)
+        self.assertEqual(fireball['spellResistanceCheckBonus'], 4)
+        self.assertEqual(fireball['saveDc'], 16)
+        self.assertEqual(self.plan('wizard', 'grease', 16, feat_choices=picks)['spellResistanceCheckBonus'], 0)

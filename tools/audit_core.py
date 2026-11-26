@@ -47,7 +47,11 @@ def audit(core):
                                     *effects['featEffectsByFeatId'].values(),
                                     *(r['modifiers'] for r in effects['sheetConditionRulesById'].values()))
               for entry in entries]
+    focus_choices = feats['weapon-focus']['selection']['specialWeaponChoices']
     errors = {
+        'danglingSpellSchoolIds': sorted(s['id'] for s in spells if s.get('schoolId') not in core['magic']['schoolsById']),
+        'danglingSpellAttackFocusChoices': sorted(s['id'] for s in spells if s.get('attackProfile')
+            and s['attackProfile'].get('weaponFocusChoiceId') not in focus_choices),
         'missingAdjudicationText': {key: value for key, value in missing_text.items() if value},
         'invalidApplicationModes': [e['id'] for e in scoped if e.get('applicationMode') != application_mode(e)],
         'missingGlobalEffectPolicy': [key for key, value in POLICY.items()

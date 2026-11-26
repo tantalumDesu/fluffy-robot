@@ -5,6 +5,12 @@ from .companion_sheet import project_companion
 from .alignment import weapon_alignment_tags
 from .damage_reduction import project_damage_reduction
 from .creature_size import armor_fit, carrying_limits, equipment_size, size_adjusted_abilities, size_profile, weapon_fit
+from .feat_grants import critical_profile, feat_effects, weapon_proficiency_grants
+from .spell_focus import focus_grants as focus_grants_for_sheet, school_choices
+from .weapon_focus import GRAPPLE, RAY, known_spell_entries, weapon_focus_choices, weapon_focus_grants
+from .familiar_spell import familiar_spell_choices, familiar_spell_grants
+from .equipment_slots import allocate_slots, fighting_feats, grip_adjustment, two_weapon_routine
+from .damage_types import equipment_attack_damage
 from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, project_gauntlets
 from .negative_levels import summarize_negative_levels, weapon_negative_levels
 from .sheet_effects import modifier_total
@@ -37,7 +43,9 @@ def condition_state(core, condition_ids):
 
 def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects=(), condition_ids=(),
                  negative_levels=(), alignment_id=None, carried_weight_lb=None, attack_context=None, skill_ranks=None, damage_reduction_grants=(),
-                 companion_links=(), master_max_hp=None):
+                 companion_links=(), master_max_hp=None, feat_ids=(),
+                 ranger_combat_style=None, double_weapon_instance_id=None, feat_choices=(),
+                 known_spell_levels=None, verified_material_cost_gp=None, weapon_proficiencies=(), turning_pool_ids=()):
     """Derive a basic humanoid sheet, without mutating inventory or build history.
 
     Scores already include racial adjustments; equipped item instances supply
@@ -57,6 +65,16 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         review.append('adjudicate-drop-secured-weapon')
     equipped = [item for item in equipment if item['instanceId'] not in dropped]
     effects = list(active_effects)
+    feat_choices = list(feat_choices)
+    weapon_proficiencies = set(weapon_proficiencies) | weapon_proficiency_grants(core, feat_choices)
+    effects.extend(feat_effects(core, feat_choices, {'skill-focus', 'toughness', 'extra-turning'}))
+    choices_by_feat = {}
+    for pick in feat_choices:
+        choices_by_feat.setdefault(pick['featId'], set()).add(pick.get('choices', {}).get('weaponId'))
+    focus_grants = weapon_focus_grants(core, feat_choices)
+    weapon_feat_effects = [(effect, {'weaponId': grant['weaponId']}) for grant in focus_grants
+                           for effect in core['effects']['featEffectsByFeatId'][grant['featId']]]
+    effects.extend(weapon_feat_effects)
     profile = size_profile(core, race_id, active_effects=effects)
     effects.extend((e, {}) for e in [*profile['modifiers'].values(), *conditions])
     wielded = {item['instanceId']: item['alignmentPropertyIds'] for item in equipped
@@ -101,6 +119,9 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                    for band in rule.get(kind, [])}
     fits = []
     items = core['inventory']['itemsById']
+    slots = allocate_slots(core, equipped)
+    context = dict(attack_context or {})
+    feat_ids = set(feat_ids)
     weapons = []
     worn_armor = []
     for entry in equipped:
@@ -120,8 +141,22 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
             continue
         if item['kind'] == 'armor':
             worn_armor.append(item)
-        effects.append((dict(id=entry['instanceId'], operation='modifier', statId='ac', amount=fit['armorClassBonus'],
-                             bonusType=item['kind'], stacking='highest-same-type'), {}))
+        bash_id = entry.get('bashWeaponId') if item['kind'] == 'shield' else None
+        if bash_id is not None:
+            if entry.get('hand') is None:
+                raise ValueError('Assign a hand to the shield before projecting a bash')
+            damage = equipment_attack_damage(core, item['id'], bash_id, addition_ids=entry.get('additionIds', ()))
+            bash = dict(items[bash_id], physicalDamage=damage)
+            del bash['attackProfile']  # The equipped host has already been validated.
+            slots['gripByInstance'][entry['instanceId']] = (entry['hand'],)
+            weapons.append((entry, bash, current))
+        suppress_shield = item['kind'] == 'shield' and (
+            item['id'] == 'armor:buckler' and entry['instanceId'] in context.get('bucklerArmUsedInstanceIds', ()) or
+            bash_id is not None and entry['instanceId'] in context.get('shieldBashUsedInstanceIds', ())
+            and 'improved-shield-bash' not in feat_ids)
+        if not suppress_shield:
+            effects.append((dict(id=entry['instanceId'], operation='modifier', statId='ac', amount=fit['armorClassBonus'],
+                                 bonusType=item['kind'], stacking='highest-same-type'), {}))
         if item['maxDexBonus'] is not None:
             caps.append(item['maxDexBonus'])
         armor_check += item['armorCheckPenalty'] or 0
@@ -154,16 +189,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     natural = (race['naturalArmor'] or {}).get('bonus', 0) + modifier_total('natural-armor', effects)
     effects.append((dict(id='natural-armor-subtotal', operation='modifier', statId='ac', amount=natural,
                          bonusType='natural-armor', stacking='highest-same-type'), {}))
-    dex = min([ability_mod['dex'], *caps])
-    ac = {}
-    context = dict(attack_context or {})
     flags.update(context.get('flags', ()))
-    for key, mode, flat in (('normal', None, False), ('touch', 'touch', False),
-                            ('flatFooted', None, True), ('incorporealTouch', 'incorporeal-touch', False)):
-        ac_flags = flags | ({'denied-dex-to-ac'} if flat else set())
-        dex_part = min(0, dex) if 'denied-dex-to-ac' in ac_flags else dex
-        other = modifier_total('ac', effects, dict(context, flags=ac_flags, attackMode=mode))
-        ac[key] = dict(total=10 + dex_part + other, base=10, dexterity=dex_part, modifiers=other)
     combat = history['classBaseCombat']
     epic = history.get('epicCharacterBonuses') or {}
     racial = race.get('racialHitDice') or {}
@@ -177,8 +203,16 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         item = items[core['inventory']['fallbackWeaponId']]
         weapons.append(({'instanceId': 'unarmed', 'proficient': True}, item, profile['sizeId']))
     for entry, item, current in weapons:
-        line = weapon_fit(core, item, profile['sizeId'], current, proficient=entry.get('proficient', False))
+        line = weapon_fit(core, item, profile['sizeId'], current, proficient=entry.get('proficient', item['id'] in weapon_proficiencies))
         line.update(instanceId=entry['instanceId'], itemId=item['id'], physicalDamage=item.get('physicalDamage'))
+        critical = critical_profile(item.get('critical'), expanded=(
+            item['id'] in choices_by_feat.get('improved-critical', ()) or entry.get('keen', False)))
+        if critical:
+            line['criticalProfile'] = critical
+        if item['id'] in choices_by_feat.get('rapid-reload', ()):
+            reload_rule = core['feats']['byId']['rapid-reload']['reloadByWeaponId'].get(item['id'])
+            if reload_rule:
+                line['reload'] = dict(reload_rule)
         line['damageBypassTags'] = sorted(set(entry.get('damageBypassTags', ())) |
                                            weapon_alignment_tags(core, entry.get('alignmentPropertyIds', ())))
         if line['status'] == 'wieldable':
@@ -187,16 +221,52 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
             blocked = prone and ranged and item['id'] not in prone_restriction['exceptWeaponIds']
             if blocked:
                 line['blockedReason'] = 'prone-ranged-weapon-restriction'
+            line['countsAsLightOffHand'] = item.get('gripProfile', {}).get('countsAsLightOffHand', False)
+            grip = slots['gripByInstance'].get(entry['instanceId'], ())
+            valid, grip_penalty = grip_adjustment(item, line, grip)
+            if not valid:
+                blocked = True
+                line['blockedReason'] = 'two-hands-required'
+            if any(slots['shieldByHand'].get(hand) == 'armor:buckler' for hand in grip):
+                if not item.get('gripProfile', {}).get('ignoresBucklerAttackPenalty'):
+                    grip_penalty -= 1
+            if grip:
+                line['gripHands'] = list(grip)
+                line['handRole'] = 'both' if len(grip) == 2 else grip[0]
             attack_facts = dict(context, weaponId=item['id'], attackKind=kind, flags=flags)
             parts = dict(baseAttack=combat['bab'] + racial.get('babBonus', 0) + epic.get('attackBonus', 0),
                          ability=ability_mod['dex' if ranged else 'str'], sizeFit=line['sizeAttackPenalty'],
                          proficiency=line['nonproficiencyPenalty'], effects=modifier_total('attack', effects, attack_facts))
+            line['weaponDamageModifier'] = modifier_total('weapon-damage', effects, attack_facts)
+            parts['grip'] = grip_penalty
             line.update(attackKind=kind, attackBonus=sum(parts.values()), breakdown=parts, canAct=not blocked and not flags.intersection({'no-actions', 'mental-actions-only', 'attention-only', 'single-move-only', 'flee-only'}))
         if entry['instanceId'] in disarm_bonuses:
             line['disarmDefenseBonus'] = disarm_bonuses[entry['instanceId']]
         if item['id'] == core['inventory']['fallbackWeaponId'] and gauntlets:
             line['allowsLethalViaGauntlet'] = True
+        if 'breakdown' in line:
+            line['breakdown']['iterativeBaseAttack'] = combat['bab'] + racial.get('babBonus', 0)
         attacks.append(line)
+    active_feats = fighting_feats(core, history, feat_ids, worn_armor, ranger_combat_style)
+    routine = two_weapon_routine(core, slots, attacks, active_feats,
+                                 double_weapon_instance_id=double_weapon_instance_id)
+    defense_pair = two_weapon_routine(core, slots, attacks, active_feats, for_defense=True,
+                                      double_weapon_instance_id=double_weapon_instance_id) if 'two-weapon-defense' in active_feats else None
+    if defense_pair and all(
+        next(a for a in attacks if a['instanceId'] == defense_pair[hand]['instanceId'])['itemId'] != core['inventory']['fallbackWeaponId']
+        for hand in ('mainHand', 'offHand')
+    ):
+        effects.append((dict(id='two-weapon-defense', operation='modifier', statId='ac',
+                             amount=2 if context.get('fightingDefensively') or context.get('totalDefense') else 1,
+                             bonusType='shield', stacking='highest-same-type'), {}))
+    dex = min([ability_mod['dex'], *caps])
+    ac = {}
+    for key, mode, flat in (('normal', None, False), ('touch', 'touch', False),
+                            ('flatFooted', None, True), ('incorporealTouch', 'incorporeal-touch', False)):
+        ac_flags = flags | ({'denied-dex-to-ac'} if flat else set())
+        dex_part = min(0, dex) if 'denied-dex-to-ac' in ac_flags else dex
+        other = modifier_total('ac', effects, dict(context, flags=ac_flags, attackMode=mode))
+        ac[key] = dict(total=10 + dex_part + other, base=10, dexterity=dex_part, modifiers=other)
     check_penalty = min(armor_check, load.get('checkPenalty', 0))
     skills = {}
     for skill in core['skills']['skills']:
@@ -216,10 +286,39 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         speed = 0
     elif speed is not None and 'half-speed' in flags:
         speed = Fraction(speed, 2)
-    return dict(conditionFlags=sorted(flags), size=profile['sizeId'], reachFt=profile['reachFt'], abilityScores=abilities, abilityModifiers=ability_mod, ac=ac, saves=saves,
+    familiar_spells = familiar_spell_grants(core, feat_choices)
+    familiar_options = (None if known_spell_levels is None else familiar_spell_choices(
+        core, known_spell_levels, verified_material_cost_gp=verified_material_cost_gp))
+    proficiencies = set(weapon_proficiencies) | {e['itemId'] for e in equipment if e.get('proficient')}
+    focus_choices = weapon_focus_choices(core, proficiencies, history.get('classLevels', {}))
+    focused_specials = {key: modifier_total('attack', effects, dict(context, weaponId=key, flags=flags))
+                        for key in (GRAPPLE, RAY, core['inventory']['fallbackWeaponId'])}
+    grapple = (combat['bab'] + racial.get('babBonus', 0) + epic.get('attackBonus', 0) + ability_mod['str']
+               + core['mechanics']['sizeCategoriesById'][profile['sizeId']]['grapple'] + focused_specials[GRAPPLE])
+    known_spells = None if known_spell_levels is None else known_spell_entries(
+        core, known_spell_levels,
+        modifier_total('attack', weapon_feat_effects, {'weaponId': RAY}),
+        ray_damage_bonus=modifier_total('weapon-damage', weapon_feat_effects, {'weaponId': RAY}),
+        feat_choices=feat_choices)
+    skill_names = {skill['id']: skill['name'] for skill in core['skills']['skills']}
+    skill_focus_grants = [dict(skillId=key, label=f'Skill Focus, {skill_names[key]}') for key in sorted({
+        pick.get('choices', {}).get('skillId') for pick in feat_choices if pick['featId'] == 'skill-focus'
+        and pick.get('choices', {}).get('skillId') in skill_names})]
+    max_hp_bonus = modifier_total('max-hp', feat_effects(core, feat_choices, {'toughness'}))
+    extra_turning = modifier_total('turning-uses-per-day', feat_effects(core, feat_choices, {'extra-turning'}))
+    return dict(skillFocusChoices=[dict(skillId=key, name=name) for key, name in skill_names.items()
+                                  if key not in {grant['skillId'] for grant in skill_focus_grants}],
+                skillFocusGrants=skill_focus_grants, featMaxHpBonus=max_hp_bonus,
+                extraTurningUsesByPool={key: extra_turning for key in turning_pool_ids},
+                conditionFlags=sorted(flags), size=profile['sizeId'], reachFt=profile['reachFt'], abilityScores=abilities, abilityModifiers=ability_mod, ac=ac, saves=saves,
+                weaponFocusChoices=focus_choices, weaponFocusGrants=focus_grants, grappleBonus=grapple,
+                specialAttackModifiers=focused_specials,
+                spellFocusChoices={key: school_choices(core, key, feat_choices)
+                                   for key in ('spell-focus', 'greater-spell-focus')},
+                spellFocusGrants=focus_grants_for_sheet(core, feat_choices), knownSpells=known_spells, familiarSpellGrants=familiar_spells, familiarSpellChoices=familiar_options,
                 companions=[project_companion(core, history, link, master_max_hp=master_max_hp,
                                               master_skill_ranks=skill_ranks) for link in companion_links],
-                attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
+                equipmentSlots=slots, twoWeaponRoutine=routine, attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
                 landSpeedFt=speed, armorCheckPenalty=check_penalty,
                 damageReduction=project_damage_reduction(core, history.get('classLevels', {}), damage_reduction_grants),
                 negativeLevels=drain, droppedInstanceIds=dropped, canAct='no-actions' not in flags,
