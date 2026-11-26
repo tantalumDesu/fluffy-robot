@@ -1,40 +1,28 @@
 # D&D 3.5 core canon audit
 
-The `.txt` files in this repository are the baseline, including explicit table
-rules for draft animals and vehicles. Historical implementation notes in
-`RULES.txt` and `meta.legacyValidation` are not proof of current JSON coverage.
-This is a targeted audit, not a line-by-line verification of all 71 sources.
+The repository’s TXT files, including explicit table rulings, are the baseline. This audit distinguishes source retention, structured data, and executable behavior. None implies the others.
 
-## Corrected
+## Current coverage
 
-- Replaced the retired `spell-replacement` rule with separate Bard, Sorcerer,
-  and Assassin rules. Each links to the exact source paragraph; explicit
-  levels and continued schedules are stored separately. This restores the
-  missing Assassin schedule and confines the other two to available class rows.
-- A same-type negative modifier was previously ignored by the numeric resolver.
-  As required by the stacking section in `RULES.txt`, it now keeps the best
-  bonus and worst penalty for a nonstacking type. Full same-source and
-  circumstance adjudication still depends on source identity and context.
+- The structural audit finds no missing IDs from the `RULES.txt` index and no errors in its checked references or adjudication text fields.
+- The source audit compares spell summaries and descriptions, condition descriptions, and feat bodies against source blocks. It checks race traits, class abilities, and special-ability paragraphs against their source files. It does not verify every numeric rule or parser against every source.
+- Typed spell and feat coverage is partial. The structural report gives live counts; an effect entry can cover only part of a description. Only confirmed recipient-sheet numeric effects are applied automatically.
 
-## Remaining findings
+## Open findings
 
-| Priority | Finding | Disposition |
-| --- | --- | --- |
-| High | `RULES.txt` names 35 rule IDs absent from `mechanics.rules` among its backtick-led list entries. Examples: AC and attack formulas, cover, concealment, flanking, initiative, and modifier stacking. Paladin continuity has a typed rule sourced from `PALADIN.txt`; the current `MONK.txt` table rule allows Monk to resume after multiclassing. | Transcribe the clear rules first. An absent ID is not proof the mechanic is entirely missing: Combat Reflexes and temporary HP have implementations elsewhere. |
-| High | Two feats retain manual prerequisite clauses: Improved Familiar and Familiar Spell. Some feat choices also require eligibility facts from outside the feat catalog. | Flag unresolved facts for review. Selection and repeatability metadata and benefit text are now present on all 124 feats. |
-| Medium | 570 of 611 spells and 95 of 124 feats have no typed effect catalog entry; covered entries may be partial. | Convert unambiguous sheet effects from `SPELLBOOK.txt`, `FEATS.txt`, and `EPIC FEATS.txt`. Missing types are not missing descriptions. |
-| Needs adjudication | The ranged modifier for a prone attacker is printed `—3` in `COMBAT MODIFIERS.txt`. | Confirm what that cell means before encoding it as a numeric modifier or rule. |
+| Area | What remains |
+| --- | --- |
+| Class ability prose | 15 descriptions do not match a contiguous source passage. `tools/source_audit.py` lists the records; a paraphrase or joined passage is not necessarily a rules discrepancy. |
+| Feat eligibility | Improved Familiar uses the dedicated acquisition catalog; unlisted candidates remain a DM ruling. Familiar Spell’s chosen spell still requires eligibility confirmation. Some other choices need facts supplied by the player or DM. |
+| Combat context | The caller supplies cover, concealment, flanking, and opportunity triggers. There is no map geometry or automatic reaction engine. Exposed-item damage on a natural 1 and concentration after taking damage during casting remain manual. |
+| Effect stacking | The sheet uses the highest bonus and most negative penalty per named type. Same-source overlap is a DM ruling. |
+| Damage and drain | The sheet projects class DR and confirmed external grants; aligned weapon properties supply bypass tags, not automatic extra damage. The caller coordinates spell pools, condition transitions, permanent level loss, and restoration with actor state. |
 
-## Reproduce
+## Run the checks
 
 ```sh
-python tools/audit_core.py
 python tools/organize_core.py --check
+python tools/audit_core.py
+python tools/source_audit.py
 python -m unittest discover -s tools
 ```
-
-The audit currently finds no issues in the checked rule, spell, condition,
-and feat-effect references and no blank spell descriptions. It reports named
-coverage gaps separately from structural errors. It does not check every
-record's interpretation against its source or imply that every `.txt` rule
-is executable.

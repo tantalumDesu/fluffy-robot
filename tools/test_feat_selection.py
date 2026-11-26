@@ -78,3 +78,13 @@ class FeatSelectionTest(unittest.TestCase):
         self.assertEqual(qualifies(knowledge, {'wizard': 17}, {}), 'needs-review')
         self.assertEqual(self.status(knowledge, {'feats': [], 'characterLevel': 21, 'casterLevel': 30,
                                                 'abilityScores': {'int': 19}}), 'needs-review')
+
+    def test_familiar_spell_requires_intelligence_and_confirmed_familiar(self):
+        facts = dict(characterLevel=21, feats=[], abilityScores={'int': 25}, hasFamiliar=True,
+                     eligibleChoiceIdsByFeat={'familiar-spell': ['chain-lightning']})
+        def status(**updates):
+            return self.status('familiar-spell', dict(facts, **updates), choices={'spellId': 'chain-lightning'})
+        self.assertEqual(status(), 'eligible')
+        self.assertEqual(status(hasFamiliar=False), 'ineligible')
+        self.assertEqual(status(hasFamiliar=None), 'needs-review')
+        self.assertEqual(status(abilityScores={'int': 24, 'cha': 30}), 'ineligible')
