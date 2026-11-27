@@ -159,7 +159,7 @@ The master of a lizard familiar gains a +3 bonus on Climb checks.
 
 If you have the Athletic feat, you get a +2 bonus on Climb checks.
 
-A creature with a climb speed has a +8 racial bonus on all Climb checks. The creature must make a Climb check to climb any wall or slope with a DC higher than 0, but it always can choose to take 10, even if rushed or threatened while climbing. If a creature with a climb speed chooses an accelerated climb (see above), it moves at double its climb speed (or at its land speed, whichever is slower) and makes a single Climb check at a –5 penalty. Such a creature retains its Dexterity bonus to Armor Class (if any) while climbing, and opponents get no special bonus to their attacks against it. It cannot, however, use the run action while climbing.
+A creature with a climb speed (such as a monstrous spider, or a character under the effect of a spider climb spell) has a +8 racial bonus on all Climb checks. The creature must make a Climb check to climb any wall or slope with a DC higher than 0, but it always can choose to take 10, even if rushed or threatened while climbing. If a creature with a climb speed chooses an accelerated climb (see above), it moves at double its climb speed (or at its land speed, whichever is slower) and makes a single Climb check at a –5 penalty. Such a creature retains its Dexterity bonus to Armor Class (if any) while climbing, and opponents get no special bonus to their attacks against it. It cannot, however, use the run action while climbing.
 
 Synergy: If you have 5 or more ranks in Use Rope, you get a +2 bonus on Climb checks made to climb a rope, a knotted rope, or a rope-and-wall combination.
 
@@ -942,6 +942,10 @@ Fast mount or dismount	20
 Guide with Knees: You can react instantly to guide your mount with your knees so that you can use both hands in combat. Make your Ride check at the start of your turn. If you fail, you can use only one hand this round because you need to use the other to control your mount.
 
 Stay in Saddle: You can react instantly to try to avoid falling when your mount rears or bolts unexpectedly or when you take damage. This usage does not take an action.
+
+Mounted Climbing (Campaign Rule): A creature with a climb speed can climb while mounted. The rider must succeed on a DC 5 Ride check to stay in the saddle while the mount climbs.
+
+Unusual Tack (Campaign Rule): Flying mounts and mounts that are not quadrupeds require a fitted exotic rider saddle. A ground quadruped uses a standard saddle unless its creature entry requires exotic tack.
 
 Fight with Warhorse: If you direct your war-trained mount to attack in battle, you can still make your own attack or attacks normally. This usage is a free action.
 

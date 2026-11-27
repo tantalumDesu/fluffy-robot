@@ -30,6 +30,155 @@ def ability_mod(score):
     return (score - 10) // 2 if score is not None else 0
 
 
+def project_paladin_mount(core, history, link, base, sheet, *, after_level_loss=False):
+    """Apply the Paladin acquisition package to a sourced ordinary war mount."""
+    level = history['classLevels'].get('paladin', 0)
+    if level < 5:
+        if not after_level_loss:
+            raise ValueError('Special mount acquisition requires Paladin 5')
+        return dict(sheet, advancementInactive=True, needsReview=['Confirm the mount relationship after level loss.'])
+    if base['id'] not in ('war-mounts:warhorse-heavy', 'war-mounts:warpony') and not link.get('dmConfirmedSpecialMount'):
+        raise ValueError('Confirm this nonstandard Paladin mount at the table')
+    catalog = core['companions']
+    rows = catalog['paladinMountAdvancement']
+    row = next(r for r in rows if r['minEffectiveLevel'] <= min(level, 20) <= r['maxEffectiveLevel'])
+    epic = catalog['paladinMountEpic']
+    steps = max(0, (level - epic['afterLevel']) // epic['interval'])
+    def grant(key):
+        return row[key] + steps * epic[key]
+    bonus_hd, armor = grant('bonusHitDice'), grant('naturalArmorAdjustment')
+    base_hd = int(re.match(r'\d+', base['hitDiceText'])[0])
+    hd = base_hd + bonus_hd
+    rolls = link.get('bonusHitDieRolls', ())
+    if any(type(roll) is not int or not 1 <= roll <= 8 for roll in rolls):
+        raise ValueError('Special mount bonus Hit Die rolls must be integers from 1 to 8')
+    scores = dict(base['abilityScores'], str=base['abilityScores']['str'] + grant('strengthAdjustment'),
+                  int=grant('intelligence'))
+    strength_delta = ability_mod(scores['str']) - ability_mod(base['abilityScores']['str'])
+    bab = hd * 3 // 4
+    bab_delta = bab - base['baseAttackBonus']
+    combat = history['classBaseCombat']
+    saves = {}
+    for save, stat in (('fort', 'con'), ('ref', 'dex'), ('will', 'wis')):
+        good = save != 'will'
+        base_progression = 2 + base_hd // 2 if good else base_hd // 3
+        progression = 2 + hd // 2 if good else hd // 3
+        ability = ability_mod(scores[stat])
+        misc = base['saves'][save] - base_progression - ability
+        saves[save] = max(progression, combat[save]) + ability + misc
+    natural = []
+    for attack in base['naturalWeapons']:
+        entry = dict(attack, attackBonus=attack['attackBonus'] + bab_delta + strength_delta)
+        if attack['naturalAttackId'] == 'bite':
+            delta = ability_mod(scores['str']) // 2 - ability_mod(base['abilityScores']['str']) // 2
+        else:
+            delta = strength_delta
+        if match := re.fullmatch(r'(\d+d\d+)([+-]\d+)?', attack['damageText']):
+            modifier = int(match[2] or 0) + delta
+            entry['damageText'] = match[1] + (f'{modifier:+d}' if modifier else '')
+        natural.append(entry)
+    from .creature_size import carrying_limits
+    aquatic = base['id'] == 'alternative-animal-companions:shark-large'
+    capacity = None if aquatic else carrying_limits(core, scores['str'], base['sizeId'], 'quadruped')
+    speed_increase = 10 if level >= 8 else 0
+    movement = {'swimSpeedFt': base['swimSpeedFt'] + speed_increase} if aquatic else {
+        'landSpeedFt': sheet['landSpeedFt'] + speed_increase}
+    return dict(sheet, role='special-mount', creatureType='magical beast', acquiredByClassId='paladin',
+                effectiveMasterLevel=level, abilityScores=scores, actualHitDice=hd, bonusHitDice=bonus_hd,
+                maxHp=sheet['maxHp'] + sum(max(1, n + ability_mod(scores['con'])) for n in rolls[:bonus_hd])
+                if len(rolls) >= bonus_hd else None,
+                carryingCapacity={key: float(value) for key, value in capacity.items()} if capacity is not None else None,
+                armorClass=dict(normal=sheet['armorClass']['normal'] + armor, touch=sheet['armorClass']['touch'],
+                                flatFooted=sheet['armorClass']['flatFooted'] + armor),
+                naturalArmorAdjustment=armor, baseAttackBonus=bab,
+                grappleBonus=base['grappleBonus'] + bab_delta + strength_delta, saves=saves,
+                **movement,
+                naturalWeapons=project_natural(core, natural, link.get('featChoices', ())),
+                spellResistance=level + 5 if level >= 15 else None,
+                specialAbilities=[ability for tier in rows if tier['minEffectiveLevel'] <= level
+                                  for ability in tier['special'].split(', ')], advancementSource=row['source'],
+                needsReview=['Record bonus-HD skill and feat choices and adjudicate the mount’s special abilities.']
+                + (['Record remaining bonus d8 HP rolls.'] if len(rolls) < bonus_hd else []))
+
+
+def project_creature(core, history, link, **context):
+    """Build one creature sheet from its acquisition definition, not its current job."""
+    from .mounted import acquisition_training, training_seed
+
+    catalog = core['companions']
+    key = link['definitionId']
+    base = catalog['creaturesById'].get(key) or catalog['improvedFamiliarOptionsById'][key]
+    role = base.get('role', 'familiar')
+    paladin = link.get('acquiredByClassId') == 'paladin'
+    if paladin and not (key.startswith('war-mounts:') or key in (
+            'animal-companions:dog-riding', 'alternative-animal-companions:shark-large')):
+        raise ValueError('This alternative Paladin mount needs a typed special-mount profile')
+    ordinary = paladin or role in ('pack-animal', 'ordinary-mount') or link.get('acquisition') == 'ordinary'
+    if link.get('acquisition') == 'ordinary' and link.get('acquiredByClassId'):
+        raise ValueError('An ordinary acquisition cannot also have a class package')
+    if not ordinary:
+        sheet = project_companion(core, history, link, **context)
+    else:
+        text = base.get('statBlockText') or base['raw']
+        fields = stat_block(text)
+        armor = re.match(r'(\d+), touch (\d+), flat-footed (\d+)', fields.get('Armor Class', ''))
+        sheet = {field: base[field] for field in ('abilityScores', 'saves', 'landSpeedFt', 'initiative',
+                                                  'baseAttackBonus', 'grappleBonus', 'naturalWeapons', 'flight') if field in base}
+        hd_text = fields.get('Hit Dice', '')
+        hp = re.search(r'\((\d+)\s*hp\)', hd_text, re.I)
+        speed = re.match(r'(?:Land )?(\d+) ft', fields.get('Speed', ''), re.I)
+        if speed:
+            sheet.setdefault('landSpeedFt', int(speed[1]))
+        if 'saves' not in sheet and (saves := re.fullmatch(r'([+-]?\d+)\s*/\s*([+-]?\d+)\s*/\s*([+-]?\d+)', fields.get('Fort / Ref / Will', ''))):
+            sheet['saves'] = dict(zip(('fort', 'ref', 'will'), map(int, saves.groups())))
+        if combat := re.fullmatch(r'([+-]?\d+)\s*/\s*([+-]?\d+)', fields.get('Base Attack / Grapple', '')):
+            sheet.update(baseAttackBonus=int(combat[1]), grappleBonus=int(combat[2]))
+        sheet.update(hitDiceText=hd_text, featNames=base.get('featNames', []),
+                     instanceId=link['instanceId'], definitionId=key, name=base['name'],
+                     role='pack-animal' if role == 'pack-animal' else 'ordinary-mount',
+                     maxHp=base.get('hitPoints', int(hp[1]) if hp else None),
+                     carryingCapacity=base.get('carryingCapacity'), baseFields=fields,
+                     statBlockText=text, source=base.get('statBlockSource', base['source']))
+        if armor:
+            sheet['armorClass'] = dict(zip(('normal', 'touch', 'flatFooted'), map(int, armor.groups())))
+    if paladin:
+        sheet = project_paladin_mount(core, history, link, dict(base, **{field: sheet[field] for field in
+                                       ('hitDiceText', 'maxHp', 'baseAttackBonus', 'grappleBonus', 'saves')}), sheet,
+                                      after_level_loss=context.get('after_level_loss', False))
+    if 'pounceNaturalWeapons' in base and ordinary:
+        if sheet['role'] == 'ordinary-mount':
+            sheet['naturalWeapons'] = project_natural(core, base['naturalWeapons'], link.get('featChoices', ()))
+        pounce = project_natural(core, base['pounceNaturalWeapons'], link.get('featChoices', ()))
+        sheet['pounceNaturalWeapons'] = pounce
+        if link.get('confirmedPounce'):
+            sheet['naturalWeapons'] = [*sheet['naturalWeapons'], *pounce]
+    for field in ('climbSpeedFt', 'swimSpeedFt'):
+        if field in base:
+            sheet.setdefault(field, base[field])
+    sheet['training'] = link['training'] if 'training' in link else acquisition_training(
+        core, base, purchase_item_id=link.get('purchaseItemId'))
+    if sheet['role'] == 'special-mount':
+        seed = training_seed(core['skills']['animalTraining'], catalog['paladinMountInitialTrainingPurposeId'])
+        existing = sheet['training']
+        learned = list(dict.fromkeys([*seed['learnedTrickIds'], *existing.get('learnedTrickIds', ())]))
+        if 'attack-all' in learned and 'attack' in learned:
+            learned.remove('attack')
+        sheet['training'] = {**seed, **existing}
+        sheet['training'].update(purposeId=seed['purposeId'], learnedTrickIds=learned)
+    sheet['sizeId'] = base['sizeId']
+    sheet['mountProfile'] = base.get('mountProfile', {'suitability': 'needs-review'})
+    if 'trainingContext' in link:
+        from .animal_training import training_choices
+
+        training_context = dict(link['trainingContext'])
+        subject = dict(base, abilityScores=sheet.get('abilityScores', base['abilityScores']))
+        if 'creatureType' in sheet:
+            subject['creatureType'] = sheet['creatureType']
+        sheet['trainingChoices'] = training_choices(core['skills']['animalTraining'], subject,
+                                                   sheet['training'], **training_context)
+    return sheet
+
+
 def project_companion(core, history, link, *, master_max_hp=None, master_skill_ranks=None, after_level_loss=False):
     """Build a display-ready source block with a separate layer of current numbers."""
     catalog = core['companions']
@@ -40,8 +189,13 @@ def project_companion(core, history, link, *, master_max_hp=None, master_skill_r
     if role not in ('familiar', 'animal-companion'):
         raise ValueError('Only familiar or animal-companion definitions can advance')
     familiar = role == 'familiar'
-    class_id = 'wizard' if familiar else 'druid'
-    master_level = history.get('classLevels', {}).get(class_id, 0) + link.get('otherEligibleClassLevels', 0)
+    class_id = link.get('acquiredByClassId', 'wizard' if familiar else 'druid')
+    if class_id not in (('wizard', 'sorcerer') if familiar else ('druid', 'ranger')):
+        raise ValueError('Invalid acquisition class for this advancement package')
+    levels = history.get('classLevels', {})
+    raw_level = levels.get(class_id, 0)
+    master_level = (raw_level // 2 if raw_level >= 4 else 0) if class_id == 'ranger' else raw_level
+    master_level += link.get('otherEligibleClassLevels', 0)
     adjustment = base.get('effectiveLevelAdjustment', 0)
     effective = master_level + adjustment
     if effective < 1 or master_level < base.get('minimumMasterLevel', 1):
@@ -67,7 +221,7 @@ def project_companion(core, history, link, *, master_max_hp=None, master_skill_r
     hd = Fraction(hd_match[1].translate(str.maketrans({'¼': '1/4', '½': '1/2', '⅓': '1/3', '⅔': '2/3', '¾': '3/4'}))) if hd_match else None
     hp_match = re.search(r'\((\d+)\s*hp\)', fields.get('Hit Dice', ''), re.I)
     base_hp = int(hp_match[1]) if hp_match else None
-    result = dict(instanceId=link['instanceId'], definitionId=key, name=base['name'], role=role,
+    result = dict(instanceId=link['instanceId'], definitionId=key, name=base['name'], role=role, acquiredByClassId=class_id,
                   effectiveMasterLevel=effective, statBlockText=base['statBlockText'], baseFields=fields,
                   source=base.get('statBlockSource', base['source']), advancementSource=row['source'],
                   excludedAbilityIds=base.get('excludedAbilityIds', []), specialAbilities=special, needsReview=review)
@@ -154,6 +308,13 @@ def project_companion(core, history, link, *, master_max_hp=None, master_skill_r
                                     for field in ('Attack', 'Full Attack') if field in fields}
     routine = result.get('attackRoutines', {}).get('Full Attack')
     roster = creature_roster('Full Attack\n' + routine) if routine else base.get('naturalWeapons', ())
+    pounce = base.get('pounceNaturalWeapons', ())
+    if pounce and 'Full Attack' in fields and 'baseAttackBonus' in result and bab_grapple:
+        pounce = [dict(entry, attackBonus=int(update_attack(re.fullmatch(
+            r'([+−–-]\d+) (melee)', f"{entry['attackBonus']:+d} melee")).split()[0])) for entry in pounce]
+    result['pounceNaturalWeapons'] = project_natural(core, pounce, link.get('featChoices', ()))
+    if link.get('confirmedPounce'):
+        roster = [*roster, *pounce]
     result['naturalWeapons'] = project_natural(core, roster, link.get('featChoices', ()))
     result.update(abilityScores=scores, naturalArmorAdjustment=armor)
     review.append('Confirm damage adjustments, skill choices, and special abilities at the table; source attack damage dice and bonuses are retained.')

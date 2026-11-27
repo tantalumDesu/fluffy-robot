@@ -2,10 +2,13 @@
 from copy import deepcopy
 from fractions import Fraction
 
-from .drain_history import effective_xp, projected_history
+from .drain_history import (discard_permanent_losses, effective_xp, forget_level_inscriptions,
+                            materialize_active_levels, projected_history, reconcile_character_spell_ledgers,
+                            restore_suppressed_suffix)
 from .epic_spell_feats import CAPACITY, KNOWLEDGE, apply_epic_spell_pick
 from .natural_weapons import FEAT as NATURAL_ATTACK_FEAT, form_roster, selection_ids
 from .feat_selection import check_feat_selection
+from .spell_advancement import active_known, record_casting_choices
 from .level_history import advance_level_history, replay_level_history
 
 
@@ -18,8 +21,13 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
     """
     result = deepcopy(character)
     choices = deepcopy(choices)
-    if result.get('permanentLosses'):
-        raise ValueError('Resolve permanent level losses before recording new advancement')
+    result = discard_permanent_losses(core, result)
+    outstanding = sorted([*result.get('drainedLevels', ()), *result.get('permanentLosses', ())],
+                         key=lambda loss: loss['characterLevel'])
+    if outstanding:
+        result = materialize_active_levels(core, result)
+        if class_id is not None:
+            forget_level_inscriptions(result, outstanding.pop(0))
     if 'drainXpOverride' in result:
         result['xp'] = effective_xp(result)
         del result['drainXpOverride']
@@ -40,7 +48,7 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
     if class_id is None:
         if choices is not None:
             raise ValueError('Choices are only recorded when a level is gained')
-        return result
+        return restore_suppressed_suffix(result, outstanding)
     required = {'hitDieRoll', 'abilityIncreases', 'skillRanks', 'featChoices'}
     if choices is None or not required <= choices.keys():
         raise ValueError('Record the Hit Die, ability, skill, and feat choices for this level')
@@ -49,6 +57,7 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
     cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
     race = next(r['effective'] for r in core['progression']['races'] if r['id'] == race_id)
     scores = result['abilityScores']
+    prior_scores = dict(scores)
     old_con = (scores['con'] - 10) // 2
     increases = choices['abilityIncreases']
     if (any(key not in scores or scores[key] is None or type(n) is not int or n != 1 for key, n in increases.items())
@@ -83,6 +92,11 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
         ranks[skill] = float(total) if total.denominator != 1 else int(total)
     if spent > budget:
         raise ValueError('Skill purchases exceed the level budget')
+    targets, casting_levels, spell_changes = record_casting_choices(core, result, prior, history, choices, prior_scores=prior_scores)
+    known = active_known(result, prior, result.get('featChoices', ()))
+    for track, change in spell_changes.items():
+        ids = set(known.get(track, ())) - set(change['removed'])
+        known[track] = sorted(ids | change['learned'].keys())
     feats = result.setdefault('featChoices', [])
     picks = deepcopy(choices['featChoices'])
     racial = sum(grant['count'] for grant in race.get('bonusFeats') or () if grant.get('atLevel') == level)
@@ -97,7 +111,7 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
             raise ValueError('Confirm the class bonus feat grant and allowed choice')
         facts = dict(feat_snapshot or {}, feats=feats, characterLevel=level, classLevels=history['classLevels'],
                      abilityScores=scores, skillRanks=ranks, baseAttackBonus=history['classBaseCombat']['bab'])
-        facts.setdefault('spellcastingLevels', history['classLevels'])
+        facts['spellcastingLevels'] = casting_levels
         if pick['featId'] == NATURAL_ATTACK_FEAT:
             facts['naturalAttackIds'] = selection_ids(race.get('naturalWeapons') or (),
                 result.get('naturalAttacks', ()),
@@ -109,15 +123,16 @@ def record_level_choices(core, character, race_id, *, class_id=None, xp_award=0,
         if pick['featId'] in (CAPACITY, KNOWLEDGE):
             if 'accessibleSpellbookIds' in choices:
                 facts['accessibleSpellbookIds'] = choices['accessibleSpellbookIds']
-            pick, result['spellbooksById'] = apply_epic_spell_pick(core, result, pick, facts)
+            pick, result['spellbooksById'] = apply_epic_spell_pick(core, dict(result, knownSpellIdsByClassId=known), pick, facts)
         feats.append(pick)
         hp_gain += sum(effect['amount'] for effect in core['effects']['featEffectsByFeatId'].get(pick['featId'], ())
                        if effect.get('statId') == 'max-hp' and type(effect.get('amount')) is int)
     grants = dict(choices, classId=class_id, classLevel=entry['classLevel'], hpGain=hp_gain,
                   featChoices=feats[-len(picks):] if picks else [], skillRanks=dict(ranks_gained))
+    grants.update(castingTargets=targets, knownSpellChanges=spell_changes)
     result.setdefault('levelGrantsByLevel', {})[str(level)] = grants
     result['maxHp'] = result.get('maxHp', 0) + hp_gain
     result['classChoices'] = [*result['classChoices'], class_id]
     if current_alignment is not None:
         result.setdefault('alignmentByLevel', {})[str(level)] = deepcopy(current_alignment)
-    return result
+    return reconcile_character_spell_ledgers(core, restore_suppressed_suffix(result, outstanding))

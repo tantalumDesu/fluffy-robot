@@ -23,7 +23,7 @@ class CreatureSizeTest(unittest.TestCase):
         self.assertEqual(modifier_total('skill:hide', effects), 4)
         self.assertEqual(carrying_limits(self.core, 10, 'small')['heavyLb'], 75)
         self.assertEqual(carrying_limits(self.core, 20, 'large', 'quadruped')['lightLb'], 399)
-        ox = self.core['inventory']['packAnimalsById']['ox']['carryingCapacity']
+        ox = self.core['companions']['creaturesById']['beasts-of-burden:ox']['carryingCapacity']
         self.assertEqual(carrying_limits(self.core, 20, 'large', 'quadruped', explicit=ox)['dragLb'], 6000)
         hobgoblin = size_profile(self.core, 'hobgoblin')
         self.assertEqual((hobgoblin['sizeId'], hobgoblin['acAndAttack'], hobgoblin['reachFt']), ('medium', 0, 5))

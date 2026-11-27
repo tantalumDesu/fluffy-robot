@@ -14,7 +14,7 @@ def _nonnegative(value, label):
     return value
 
 
-def evaluate_vehicle_load(inventory, vehicle_item_id, pullers_by_actor_id, *, passenger_weight_lb=0,
+def evaluate_vehicle_load(core, vehicle_item_id, pullers_by_actor_id, *, passenger_weight_lb=0,
                           cargo_weight_lb=0, terrain_multiplier=None):
     """Resolve one vehicle instance; mapping values are pack profile IDs, not item IDs.
 
@@ -22,6 +22,7 @@ def evaluate_vehicle_load(inventory, vehicle_item_id, pullers_by_actor_id, *, pa
     actor is assigned to two vehicles. Unknown weights/capacities fail closed.
     Results use Decimal pounds, so fractions cannot turn a boundary into overload.
     """
+    inventory = core['inventory']
     vehicle = inventory['itemsById'][vehicle_item_id]
     if 'pulledVehicle' not in vehicle:
         raise ValueError(f'{vehicle_item_id} is not a pulled vehicle')
@@ -35,7 +36,8 @@ def evaluate_vehicle_load(inventory, vehicle_item_id, pullers_by_actor_id, *, pa
     contributions = {}
     for actor_id, profile_id in pullers_by_actor_id.items():
         profile = inventory['packAnimalsById'][profile_id]
-        heavy = _nonnegative(profile.get('carryingCapacity', {}).get('heavyLb'), 'Heavy-load capacity')
+        creature = core['companions']['creaturesById'][profile['creatureId']]
+        heavy = _nonnegative(creature.get('carryingCapacity', {}).get('heavyLb'), 'Heavy-load capacity')
         contributions[actor_id] = heavy * rule['heavyLoadMultiplier']
     capacity = sum(contributions.values()) * factor
     empty = _nonnegative(vehicle.get('weightLb'), 'Empty vehicle weight')

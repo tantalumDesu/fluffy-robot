@@ -17,7 +17,7 @@ def level_loss_catalog(lines, source):
     start = rows.index('LEVEL LOSS')
     end = rows.index('LOW-LIGHT VISION', start)
     return dict(hitDicePerLevel=1, xpAfter='midpoint-of-new-effective-level', requiresRecordedLevelGrants=True,
-                unknownAbilityGain='highest-score', unknownSkillPurchases='highest-ranks',
+                restorationEligible=False, unknownAbilityGain='highest-score', unknownSkillPurchases='highest-ranks',
                 reprojectCompanions=True, source=source(file, line=start + 1, endLine=end),
                 description='\n'.join(rows[start + 1:end]).strip())
 
@@ -29,7 +29,7 @@ def negative_level_rules(lines):
                 effectiveLevelPenalty=1, changesClassLevels=False, changesPurchasedSkillRanks=False,
                 immediateSpellLossPerLevel=1, recoverySlotLossPerLevel=1,
                 drainDurationHours=24, fortitudeDcBase=10, dcAttackerHdDivisor=2,
-                permanentLevelLossOnFailure=1, bestowerTemporaryHpPerLevel=5,
+                drainedLevelOnFailure=1, bestowerTemporaryHpPerLevel=5,
                 source={'file': source, 'line': line})
 
 
@@ -72,18 +72,18 @@ def summarize_negative_levels(rules, levels, current_level):
 
 
 def resolve_drain_level(rules, levels, level_id, now, *, fortitude_total=None, restoration=False):
-    """Remove one timed level; report permanent loss for the character ledger to process."""
+    """Remove one timed level; report recoverable drain on a failed save."""
     level = next(entry for entry in levels if entry['id'] == level_id)
     if level['kind'] == 'temporary-drain':
         if not restoration and now < level['expiresAtSeconds']:
             raise ValueError('Temporary drain has not expired')
-        return dict(levels=[entry for entry in levels if entry['id'] != level_id], permanentLevelLoss=0)
+        return dict(levels=[entry for entry in levels if entry['id'] != level_id], drainedLevel=0)
     if level['kind'] != 'energy-drain':
         raise ValueError('Equipment negative levels end when their wielding condition ends')
     if not restoration and (type(fortitude_total) is not int or now < level['saveDueAtSeconds']):
         raise ValueError('A separate Fortitude save is required when this level becomes due')
-    loss = 0 if restoration or fortitude_total >= level['saveDc'] else rules['permanentLevelLossOnFailure']
-    return dict(levels=[entry for entry in levels if entry['id'] != level_id], permanentLevelLoss=loss)
+    loss = 0 if restoration or fortitude_total >= level['saveDc'] else rules['drainedLevelOnFailure']
+    return dict(levels=[entry for entry in levels if entry['id'] != level_id], drainedLevel=loss)
 
 
 def highest_slot_choices(core, ledgers, *, recovery=False):
@@ -96,11 +96,11 @@ def highest_slot_choices(core, ledgers, *, recovery=False):
     spontaneous = {c['id'] for c in core['progression']['classes'] if c.get('spellcasting', {}).get('spontaneous')}
     options = [(slot['level'], (class_id, slot_id)) for class_id, ledger in ledgers.items()
                for slot_id, slot in ledger['slots'].items()
-               if not (slot['expended'] or slot.get('negativeLevelLoss'))
+               if not (slot['expended'] or slot.get('outsideBudget') or slot.get('negativeLevelLoss'))
                and (recovery or class_id in spontaneous or slot['preparation'] is not None)]
     if not options:
         return []
-    highest = (max(slot['level'] for ledger in ledgers.values() for slot in ledger['slots'].values())
+    highest = (max(slot['level'] for ledger in ledgers.values() for slot in ledger['slots'].values() if not slot.get('outsideBudget'))
                if recovery else max(level for level, _ in options))
     return [choice for level, choice in options if level == highest]
 
@@ -155,9 +155,9 @@ def spell_drain_catalog(spells):
                              expiration={'kind': 'fortitude-save', 'hours': 24, 'dcSource': 'spell-save-dc'},
                              undeadTemporaryHpPerDieResult=5, undeadTemporaryHpHours=1),
         'restoration': dict(operation='restore-negative-levels', removeActive='all-removable',
-                            permanentLevels='one', permanentWindowUnit='day'),
+                            drainedLevels='one', windowUnit='day', clericSpellLevel=4, minimumClericCasterLevel=7, xpCost=0),
         'restoration-greater': dict(operation='restore-negative-levels', removeActive='all-removable',
-                                    permanentLevels='all-eligible', permanentWindowUnit='week'),
+                                    drainedLevels='all-eligible', windowUnit='week', clericSpellLevel=7, minimumClericCasterLevel=13, xpCost=500),
     }
     by_id = {spell['id']: spell for spell in spells}
     for key, rule in data.items():
@@ -213,16 +213,42 @@ def apply_drain_spell(core, cast_plan, event_id, levels, now, caster_level, roll
     return result
 
 
-def apply_drain_restoration(core, spell_id, levels, permanent_losses, now, caster_level):
-    """Return removals and permanent-loss records eligible to restore, not rebuilt classes."""
+def minimum_restoration_caster_level(core, spell_id, loss, now):
+    """Timing minimum only; None means the record cannot be restored by this spell."""
+    rule = core['effects']['negativeLevelOperationsBySpellId'][spell_id]
+    if rule['operation'] != 'restore-negative-levels':
+        raise ValueError('Choose Restoration or Greater Restoration')
+    failed_at = loss.get('failedSaveAtSeconds')
+    if (loss.get('cause') != 'energy-drain' or failed_at is None or now < failed_at
+            or loss.get('dueToDeath') or 'permanentlyLostAtSeconds' in loss):
+        return None
+    unit = seconds(rule['windowUnit'], 1)
+    return max(1, (now - failed_at + unit - 1) // unit)
+
+
+def restoration_requirements(core, loss, now):
+    """Present per-spell timing and ordinary Cleric access for one lost level."""
+    failed_at = loss.get('failedSaveAtSeconds')
+    result = {}
+    for spell_id in ('restoration', 'restoration-greater'):
+        timing = minimum_restoration_caster_level(core, spell_id, loss, now)
+        if timing is not None:
+            rule = core['effects']['negativeLevelOperationsBySpellId'][spell_id]
+            result[spell_id] = dict(elapsedSeconds=now - failed_at, timingMinimumCasterLevel=timing,
+                clericSpellLevel=rule['clericSpellLevel'], xpCost=rule['xpCost'],
+                minimumClericCasterLevel=max(timing, rule['minimumClericCasterLevel']))
+    return result
+
+
+def apply_drain_restoration(core, spell_id, levels, drained_levels, now, caster_level):
+    """Restore only eligible losses, using the restoring spell’s caster level."""
     rule = core['effects']['negativeLevelOperationsBySpellId'][spell_id]
     if rule['operation'] != 'restore-negative-levels' or type(caster_level) is not int or caster_level < 1:
         raise ValueError('Invalid restoration spell or caster level')
-    age_limit = seconds(rule['permanentWindowUnit'], caster_level)
-    eligible = sorted((entry for entry in reversed(permanent_losses) if not entry.get('dueToDeath')
-                       and 0 <= now - entry['lostAtSeconds'] <= age_limit),
-                      key=lambda entry: entry['lostAtSeconds'], reverse=True)
-    if rule['permanentLevels'] == 'one':
+    eligible = [entry for entry in reversed(drained_levels)
+                if (minimum := minimum_restoration_caster_level(core, spell_id, entry, now)) is not None
+                and caster_level >= minimum]
+    if rule['drainedLevels'] == 'one':
         eligible = eligible[:1]
     return dict(levels=[level for level in levels if level['kind'] == 'wielded-weapon'],
-                restorePermanentLosses=eligible)
+                restoreDrainedLevels=eligible)

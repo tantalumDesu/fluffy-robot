@@ -39,8 +39,12 @@ python -m unittest discover -s tools             # Run the tests
 
 The generator refreshes source-backed catalogs, descriptions, and source anchors. Some class, spell, and skill fields still come from the existing JSON; the generator does not rebuild every record from scratch.
 
+## When changing generated core data
+
+Before adding a field to `dnd-core.json`, check whether another record already owns the same mechanical fact. Prefer a stable ID reference or a lookup derived by the consumer over a serialized copy. Keep source prose, distinct variants, and intentional overrides; do not treat their resemblance as duplication. Update the generator and affected consumers together, add a regression check when consolidating a shared fact, and note other duplicates you discover in `CANON-AUDIT.md`.
+
 ## More detail
 
 - [Integration guide](integration-guide.md) — data layout, sheet effects, progression, equipment, spellcasting, and encounter state.
-- [Table-play coverage and design](rules-lawyer.md) — what’s implemented, what stays with the DM, and open questions.
+- [Creature template design](template-design.md) — standalone catalogue, form and persistence model, and open template rulings.
 - [Canon audit](CANON-AUDIT.md) — source coverage and extraction notes.

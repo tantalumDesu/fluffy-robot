@@ -137,13 +137,4 @@ def cure_actor(core, actor, spell_id, now, *, resolved, target_kind='living', sp
     if rule.get('negativeLevelOperationId'):
         from .drain_history import restore_character_drain
         result = restore_character_drain(core, result, spell_id, now, caster_level)
-        # Reconcile recovery blocks for levels the spell removed; immediate losses
-        # are spent preparations and are not restored by removing the overlay.
-        removed = {level['id'] for level in actor.get('negativeLevels', ())} - {
-            level['id'] for level in result['negativeLevels']}
-        for ledger in result.get('spellLedgers', {}).values():
-            for slot in ledger['slots'].values():
-                if slot.get('negativeLevelId') in removed and slot.get('negativeLevelLoss') == 'recovery':
-                    slot.pop('negativeLevelId', None)
-                    slot.pop('negativeLevelLoss', None)
     return result

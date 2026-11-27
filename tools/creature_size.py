@@ -44,10 +44,27 @@ def stepped_size(sizes, size_id, steps):
     return target
 
 
+def race_size_id(core, race_id):
+    """Resolve an explicit size or follow the race's inheritance reference."""
+    races = {race['id']: race for race in core['progression']['races']}
+    names = {race['name'].casefold(): race['id'] for race in races.values()}
+    visited = set()
+    while race_id not in visited:
+        visited.add(race_id)
+        race = races[race_id]
+        if 'sizeId' in race:
+            return race['sizeId']
+        parent = race.get('inherits')
+        if not parent or parent.casefold() not in names:
+            raise ValueError(f'Race {race_id} needs a source-backed size')
+        race_id = names[parent.casefold()]
+    raise ValueError('Cyclic race size inheritance')
+
+
 def size_profile(core, race_id, *, active_effects=()):
     """Return size-derived modifiers only; do not also apply legacy racial size bonuses."""
     race = next(r for r in core['progression']['races'] if r['id'] == race_id)
-    size = race['sizeId']
+    size = race_size_id(core, race_id)
     if size is None:
         raise ValueError('Race needs a source-backed size')
     sizes = core['mechanics']['sizeCategoriesById']

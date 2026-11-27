@@ -1,0 +1,455 @@
+UNUSUAL MOUNTS
+
+Griffon
+
+Large Magical Beast — CR 4
+
+Hit Dice
+    7d10+21 (59 hp)
+Initiative
+    +2
+Speed
+    Land 30 ft, fly 50 ft. (average)
+Armor Class
+    17, touch 11, flat-footed 15
+Base Attack / Grapple
+    +7/+15
+Attack
+    Bite +11 melee (2d6+4)
+Full Attack
+    Bite +11 melee (2d6+4) and 2 claws +8 melee (1d4+2)
+STR
+    18
+DEX
+    15
+CON
+    16
+INT
+    5
+WIS
+    13
+CHA
+    8
+Fort / Ref / Will
+    +8 / +7 / +5
+Challenge Rating
+    4
+Alignment
+    Always Neutral
+Organization
+    Solitary, pair, or pride (6–10)
+Treasure
+    None
+Environment
+    Hills
+Level Adjustment
+    +3
+Special Abilities
+Pounce
+Rake
+Darkvision
+Low-Light Vision
+Scent
+Feats
+Iron Will
+Multiattack
+Weapon Focus
+
+Description
+
+This beast’s body resembles that of a muscular lion. Its head and front legs are those of a great eagle, and it has a pair of large, golden wings.
+
+Griffons are powerful, majestic creatures with the characteristics of both lions and eagles. They hunt all manner of prey but favor the flesh of horses above all else.
+
+From nose to tail, an adult griffon can measure as much as 8 feet. Neither males nor females are endowed with a mane. A pair of broad, golden wings emerge from the creature’s back and span 25 feet or more. A griffon weighs about 500 pounds.
+
+Griffons make their homes in high places, swooping down with a shrill, eaglelike cry to attack their prey. Although both aggressive and territorial, they are also intelligent enough to avoid obviously powerful enemies. They almost always attack horses, however, and any who attempt to protect horses from a hungry griffon often end up on the menu themselves.
+
+A griffon cannot speak, but understands Common.
+
+Training a Griffon
+
+Although intelligent, a griffon requires training before it can bear a rider in combat. To be trained, a griffon must have a friendly attitude toward the trainer (this can be achieved through a successful Diplomacy check). Training a friendly griffon requires six weeks of work and a DC 25 Handle Animal check. Riding a griffon requires an exotic saddle. A griffon can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.
+
+Griffon eggs are worth 3,500 gp apiece on the open market, while young are worth 7,000 gp each. Professional trainers charge 1,500 gp to rear or train a griffon.
+
+Carrying Capacity: A light load for a griffon is up to 300 pounds; a medium load, 301–600 pounds; and a heavy load, 601–900 pounds.
+
+Combat
+
+Griffons prefer to pounce on their prey, either diving to the attack or leaping from above.
+
+Pounce (Ex): If a griffon dives upon or charges a foe, it can make a full attack, including two rake attacks.
+
+Rake (Ex): Attack bonus +8 melee, damage 1d6+2.
+
+Skills: Griffons have a +4 racial bonus on Jump and Spot checks.
+
+Pegasus
+
+Large Magical Beast — CR 3
+
+Hit Dice
+    4d10+12 (34 hp)
+Initiative
+    +2
+Speed
+    Land 60 ft, fly 120 ft. (average)
+Armor Class
+    14, touch 11, flat-footed 12
+Base Attack / Grapple
+    +4/+12
+Attack
+    Hoof +7 melee (1d6+4)
+Full Attack
+    2 hooves +7 melee (1d6+4) and bite +2 melee (1d3+2)
+STR
+    18
+DEX
+    15
+CON
+    16
+INT
+    10
+WIS
+    13
+CHA
+    13
+Fort / Ref / Will
+    +7 / +6 / +4
+Caster Level
+    5
+Challenge Rating
+    3
+Alignment
+    Usually Chaotic-Good
+Organization
+    Solitary, pair, or herd (6–10)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    +2
+Special Abilities
+Spell-Like Abilities
+Darkvision
+Low-Light Vision
+Scent
+Feats
+Flyby Attack
+Iron Will
+
+Description
+
+This creature looks like a horse but has two large, feathered wings. Its coat and wings are pure white.
+
+The pegasus is a magnificent winged horse that sometimes serves the cause of good. Though highly prized as aerial steeds, pegasi are wild and shy creatures not easily tamed.
+
+Pegasi mate for life, building their nests in high, remote locations. A mated pair have either 1–2 eggs or 1–2 young in their nest.
+
+A typical pegasus stands 6 feet high at the shoulder, weighs 1,500 pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are brown or black instead of white.
+
+Pegasi cannot speak, but they understand Common.
+
+Training a Pegasus
+
+Although intelligent, a pegasus requires training before it can bear a rider in combat. To be trained, a pegasus must have a friendly attitude toward the trainer (this can be achieved through a successful Diplomacy check). Training a friendly pegasus requires six weeks of work and a DC 25 Handle Animal check. Riding a pegasus requires an exotic saddle. A pegasus can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.
+
+Pegasus eggs are worth 2,000 gp each on the open market, while young are worth 3,000 gp per head. Pegasi mature at the same rate as horses. Professional trainers charge 1,000 gp to rear or train a pegasus, which serves a good or neutral master with absolute faithfulness for life.
+
+Carrying Capacity: A light load for a pegasus is up to 300 pounds; a medium load, 301–600 pounds; and a heavy load, 601–900 pounds.
+
+Combat
+
+Pegasi attack with their sharp hooves and powerful bite. Mated pairs and herds attack as a team, fighting to the death to defend their eggs and young.
+
+Spell-Like Abilities: At will—detect good and detect evil within a 60-foot radius. Caster level 5th.
+
+Skills: Pegasi have a +4 racial bonus on Listen and Spot checks.
+
+Eagle, Giant
+
+Large Magical Beast — CR 3
+
+Hit Dice
+    4d10+4 (26 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft, fly 80 ft. (average)
+Armor Class
+    15, touch 12, flat-footed 12
+Base Attack / Grapple
+    +4/+12
+Attack
+    Claw +7 melee (1d6+4)
+Full Attack
+    2 claws +7 melee (1d6+4) and bite +2 melee (1d8+2)
+STR
+    18
+DEX
+    17
+CON
+    12
+INT
+    10
+WIS
+    14
+CHA
+    10
+Fort / Ref / Will
+    +5 / +7 / +3
+Challenge Rating
+    3
+Alignment
+    Usually Neutral-Good
+Organization
+    Solitary, pair, or eyrie (5–12)
+Treasure
+    None
+Environment
+    Mountains
+Level Adjustment
+    +2
+Special Abilities
+Low-Light Vision
+Evasion
+Feats
+Alertness
+Flyby Attack
+
+Description
+
+Giant eagles are intelligent, keen-eyed birds of prey that sometimes associate with good creatures. Giant eagles attack creatures that appear threatening, especially those intent on raiding the eagles’ nest for eggs or fledglings, which fetch a handsome price in many civilized areas. Young eagles can be trained and are prized as aerial mounts. A typical giant eagle stands about 10 feet tall, has a wingspan of up to 20 feet, and resembles its smaller cousins in nearly every way except size. It weighs about 500 pounds.
+
+Combat
+
+A giant eagle typically attacks from a great height, diving earthward at tremendous speed. When it cannot dive, it uses its powerful talons and slashing beak to strike at its target’s head and eyes.
+
+A solitary giant eagle is typically hunting or patrolling in the vicinity of its nest and generally ignores creatures that do not appear threatening. A mated pair attacks in concert, making repeated diving attacks to drive away intruders, and fights to the death to defend their nest or hatchlings.
+
+Evasion (Ex): With a successful Reflex save against an attack that allows a Reflex save for half damage, a giant eagle takes no damage.
+
+Skills: Giant eagles have a +4 racial bonus on Spot checks.
+
+Owl, Giant
+
+Large Magical Beast — CR 3
+
+Hit Dice
+    4d10+4 (26 hp)
+Initiative
+    +3
+Speed
+    Land 10 ft, fly 70 ft. (average)
+Armor Class
+    15, touch 12, flat-footed 12
+Base Attack / Grapple
+    +4/+12
+Attack
+    Claw +7 melee (1d6+4)
+Full Attack
+    2 claws +7 melee (1d6+4) and bite +2 melee (1d8+2)
+STR
+    18
+DEX
+    17
+CON
+    12
+INT
+    10
+WIS
+    14
+CHA
+    10
+Fort / Ref / Will
+    +5 / +7 / +3
+Challenge Rating
+    3
+Alignment
+    Usually Neutral-Good
+Organization
+    Solitary, pair, or company (3−5)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    +2
+Special Abilities
+Superior Low-Light Vision
+Feats
+Alertness
+Wingover
+
+Description
+
+Giant owls are nocturnal birds of prey, feared for their ability to hunt and attack in near silence. They are intelligent, and though naturally suspicious, sometimes associate with good creatures.
+
+They attack creatures that appear threatening, especially those intent on raiding the owls’ nest for eggs or fledglings, which fetch a handsome price in many civilized areas. Young owls can be trained and are prized as aerial mounts.
+
+A typical giant owl stands about 9 feet tall, has a wingspan of up to 20 feet, and resembles its smaller cousins in nearly every way except size.
+
+Giant owls speak Common and Sylvan.
+
+Training a Giant Owl
+
+Although intelligent, a giant owl requires training before it can bear a rider in combat. To be trained, a giant owl must have a friendly attitude toward the trainer (this can be achieved through a successful Diplomacy check). Training a friendly giant owl requires six weeks of work and a DC 25 Handle Animal check. Riding a giant owl requires an exotic saddle. A giant owl can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.
+
+Giant owl eggs are worth 2,500 gp apiece on the open market, while chicks are worth 4,000 gp each. Professional trainers charge 1,000 gp to rear or train a giant owl.
+
+Carrying Capacity: A light load for a giant owl is up to 300 pounds; a medium load, 301–600 pounds; and a heavy load, 601–900 pounds.
+
+Combat
+
+A giant owl attacks by gliding silently just a few feet above its prey and plunging to strike when directly overhead.
+
+A solitary giant owl is typically hunting or patrolling in the vicinity of its nest and generally ignores creatures that do not appear threatening. A mated pair of giant owls will attack in concert and fight to the death to defend their nest. Several giant owls sometimes operate as a company for some specific purpose, such as driving away a group of evil humanoids.
+
+Superior Low-Light Vision (Ex): A giant owl can see five times as far as a human can in dim light.
+
+Skills: Giant owls have a +8 racial bonus on Listen checks and a +4 racial bonus on Spot checks.
+
+*When in flight, giant owls gain a +8 bonus on Move Silently checks.
+
+Giant Wasp
+
+Large Vermin — CR 3
+
+Hit Dice
+    5d8+10 (32 hp)
+Initiative
+    +1
+Speed
+    Land 20 ft
+Armor Class
+    14, touch 10, flat-footed 13
+Base Attack / Grapple
+    +3/+11
+Attack
+    Sting +6 melee (1d8+4 plus poison)
+Full Attack
+    Sting +6 melee (1d8+4 plus poison)
+STR
+    18
+DEX
+    12
+CON
+    14
+WIS
+    13
+CHA
+    11
+Fort / Ref / Will
+    +6 / +2 / +2
+Challenge Rating
+    3
+Alignment
+    Always Neutral
+Organization
+    Solitary, swarm (2–5), or nest (11–20)
+Treasure
+    None
+Environment
+    Forests
+Level Adjustment
+    —
+Special Abilities
+Poison
+Darkvision
+Vermin Traits
+
+Description
+
+Giant wasps attack when hungry or threatened, stinging their prey to death. They take dead or incapacitated opponents back to their lairs as food for their unhatched young.
+
+Combat
+
+Poison (Ex): Injury, Fortitude DC 14, initial and secondary damage 1d6 Dex. The save DC is Constitution-based.
+
+Skills: Giant wasps have a +8 racial bonus on Spot checks. *They also have a +4 racial bonus on Survival checks to orient themselves.
+
+Monstrous Spider, Large
+
+Large Vermin — CR 2
+
+Hit Dice
+    4d8+4 (22 hp)
+Initiative
+    +3
+Speed
+    Land 30 ft, climb 20 ft
+Armor Class
+    14, touch 12, flat-footed 11
+Base Attack / Grapple
+    +3/+9
+Attack
+    Bite +4 melee (1d8+3 plus poison)
+Full Attack
+    Bite +4 melee (1d8+3 plus poison)
+Space/Reach
+    10 ft./5 ft.
+STR
+    15
+DEX
+    17
+CON
+    12
+INT
+    —
+WIS
+    10
+CHA
+    2
+Fort / Ref / Will
+    +5 / +4 / +1
+Challenge Rating
+    2
+Alignment
+    Always Neutral
+Organization
+    Solitary or colony (2–5)
+Treasure
+    1/10 coins; 50% goods; 50% items
+Environment
+    Temperate forests
+Advancement
+    5–7 HD (Large)
+Level Adjustment
+    —
+Special Abilities
+Poison
+Web
+Darkvision 60 ft.
+Tremorsense 60 ft.
+Vermin Traits
+
+Skills
+    Climb +11, Hide +3*, Jump +2*, Spot +4*
+
+Description
+
+All monstrous spiders are aggressive predators that use their poisonous bites to subdue or kill prey.
+
+Monstrous spiders come in two general types: hunters and web-spinners. Hunters rove about, while web-spinners usually attempt to trap prey. Hunting spiders can spin webs to use as lairs, but cannot use their webs as weapons the way web-spinners can. A hunting spider has a base land speed 10 feet faster than the figures given in the statistics blocks.
+
+Combat
+
+Poison (Ex): A monstrous spider has a poisonous bite: Injury, Fortitude DC 13, initial and secondary damage 1d6 Str. The save DC is Constitution-based.
+
+Web (Ex): Both types of monstrous spiders often wait in their webs or in trees, then lower themselves silently on silk strands and leap onto prey passing beneath. A single strand is strong enough to support the spider and one creature of the same size.
+
+Web-spinners can throw a web eight times per day. This is similar to an attack with a net but has a maximum range of 50 feet, with a range increment of 10 feet, and is effective against targets up to one size category larger than the spider.
+
+An entangled creature can escape with a successful Escape Artist DC 13 check or burst it with a Strength DC 17 check. Both are standard actions. The check DCs are Constitution-based, and the Strength check DC includes a +4 racial bonus.
+
+Web-spinners often create sheets of sticky webbing from 5 to 60 feet square, depending on the size of the spider. They usually position these sheets to snare flying creatures but can also try to trap prey on the ground. Approaching creatures must succeed on a DC 20 Spot check to notice a web; otherwise they stumble into it and become trapped as though by a successful web attack. Attempts to escape or burst the webbing gain a +5 bonus if the trapped creature has something to walk on or grab while pulling free. Each 5-foot section has 12 hit points, and sheet webs have damage reduction 5/—.
+
+A monstrous spider can move across its own web at its climb speed and can pinpoint the location of any creature touching its web.
+
+Tremorsense (Ex): A monstrous spider can detect and pinpoint any creature or object within 60 feet in contact with the ground, or within any range in contact with the spider’s webs.
+
+Skills: Monstrous spiders have a +4 racial bonus on Hide and Spot checks and a +8 racial bonus on Climb checks. A monstrous spider can always choose to take 10 on Climb checks, even if rushed or threatened. Monstrous spiders use either their Strength or Dexterity modifier for Climb checks, whichever is higher.
+
+*Hunting spiders have a +10 racial bonus on Jump checks and a +8 racial bonus on Spot checks. Web-spinning spiders have a +8 racial bonus on Hide and Move Silently checks when using their webs.

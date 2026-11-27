@@ -13199,7 +13199,7 @@ Short Description: Restores level and ability score drains.
 Long Description:
 Lesser restoration dispels any magical effects reducing one of the subject’s ability scores or cures 1d4 points of temporary ability damage to one of the subject’s ability scores. It also eliminates any fatigue suffered by the character, and improves an exhausted condition to fatigued. It does not restore permanent ability drain.
 
-Except that it also dispels negative levels and restores one experience level to a creature who has had a level drained. The drained level is restored only if the time since the creature lost the level is equal to or less than one day per caster level. A character who has a level restored by restoration has exactly the minimum number of experience points necessary to restore him or her to his or her previous level.
+Except that it also dispels negative levels and restores one experience level to a creature who has had a level drained. This spell restores at most one actual level lost to energy drain per casting. The level is eligible only if no more than one day per caster level of this Restoration casting has elapsed since the failed save that caused the loss. This spell has no XP cost. A character who has a level restored by restoration has exactly the minimum number of experience points necessary to restore him or her to his or her previous level.
 
 Restoration cures all temporary ability damage, and it restores all points permanently drained from a single ability score (your choice if more than one is drained). It also eliminates any fatigue or exhaustion suffered by the target.
 
@@ -13229,7 +13229,7 @@ Short Description: As restoration, plus restores all levels and ability scores.
 Long Description:
 Lesser restoration dispels any magical effects reducing one of the subject’s ability scores or cures 1d4 points of temporary ability damage to one of the subject’s ability scores. It also eliminates any fatigue suffered by the character, and improves an exhausted condition to fatigued. It does not restore permanent ability drain.
 
-Except that it dispels all negative levels afflicting the healed creature. This effect also reverses level drains by a force or creature, restoring the creature to the highest level it had previously attained. The drained levels are restored only if the time since the creature lost the level is no more than one week per caster level.
+Except that it dispels all negative levels afflicting the healed creature. This effect restores all actual levels lost to energy drain for which no more than one week per caster level of this Greater Restoration casting has elapsed since the failed save that caused each loss. Set the recipient’s XP to the minimum for the level reached by restoration.
 
 Greater restoration also dispels all magical effects penalizing the creature’s abilities, cures all temporary ability damage, and restores all points permanently drained from all ability scores. It also eliminates fatigue and exhaustion, and removes all forms of insanity, confusion, and similar mental effects. Greater restoration does not restore levels or Constitution points lost due to death.
 

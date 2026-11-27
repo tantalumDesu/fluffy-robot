@@ -2,6 +2,11 @@
 import re
 
 
+if __package__:
+    from .condition_rules import condition_policies
+else:
+    from condition_rules import condition_policies
+
 def component_profile(spell):
     components = spell['components']
     codes = list(dict.fromkeys(row['code'] for row in components['codes']))
@@ -73,7 +78,7 @@ def check_components(core, spell, class_id, codes, owned_feats, context, *, spel
     equipped, accessible = (set(context.get(key, ())) for key in ('equippedItemIds', 'accessibleItemIds'))
     accessible |= equipped
     conditions = set(context.get('conditionIds', ()))
-    policies = core['effects']['sheetConditionRulesById']
+    policies = condition_policies(core)
     flags = set(context.get('conditionFlags', ())) | {flag for key in conditions for flag in policies.get(key, {}).get('flags', ())}
     blocked = []
     if flags & {'no-actions', 'mental-actions-only', 'attention-only', 'single-move-only'}:

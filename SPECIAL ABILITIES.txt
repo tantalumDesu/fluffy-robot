@@ -246,7 +246,7 @@ Some horrible creatures, especially undead monsters, possess a fearsome supernat
 
 If the victim casts spells, she loses access to one spell as if she had cast her highest-level, currently available spell. (If she has more than one spell at her highest level, she chooses which she loses.) In addition, when she next prepares spells or regains spell slots, she gets one less spell slot at her highest spell level.
 
-Negative levels remain for 24 hours or until removed with a spell, such as restoration. After 24 hours, the afflicted creature must attempt a Fortitude save (DC 10 + 1/2 attacker’s HD + attacker’s Cha modifier). (The DC is provided in the attacker’s description.) If the saving throw succeeds, the negative level goes away with no harm to the creature. The afflicted creature makes a separate saving throw for each negative level it has gained. If the save fails, the negative level goes away, but the creature’s level is also reduced by one.
+Energy-drain negative levels remain for 24 hours unless removed earlier by magic or another effect. Spell-specific durations and equipment effects follow their own rules. A negative level does not itself remove actual Hit Dice, class levels or features, feats, purchased skill ranks, or XP. After 24 hours, make a separate Fortitude save for each remaining energy-drain negative level (DC 10 + 1/2 attacker’s HD + attacker’s Cha modifier, unless the effect specifies its own DC). On success the negative level disappears with no actual level lost. On failure the negative level disappears and the creature immediately loses one actual level (see Level Loss).
 
 A character with negative levels at least equal to her current level, or drained below 1st level, is instantly slain. Depending on the creature that killed her, she may rise the next night as a monster of that kind. If not, she rises as a wight. A creature gains 5 temporary hit points for each negative level it bestows (though not if the negative level is caused by a spell or similar effect).
 
@@ -430,7 +430,9 @@ LEVEL LOSS
 
 A character who loses a level instantly loses one Hit Die. The character’s base attack bonus, base saving throw bonuses, and special class abilities are now reduced to the new, lower level. Likewise, the character loses any ability score gain, skill ranks, and any feat associated with the level (if applicable). If the exact ability score or skill ranks increased from a level now lost is unknown (or the player has forgotten), lose 1 point from the highest ability score or ranks from the highest-ranked skills. If a familiar or companion creature has abilities tied to a character who has lost a level, the creature’s abilities are adjusted to fit the character’s new level.
 
-The victim’s experience point total is immediately set to the midpoint of the previous level.
+The victim’s experience point total is immediately set to the midpoint of the previous level. For multiple losses, apply the rollback and XP reset for each lost level in succession.
+
+Actual level loss from energy drain can be reversed only by Restoration or Greater Restoration within that spell's recovery window. Measure elapsed time from the failed save that caused each loss. Use the caster level of the character casting the restoring spell, not that of the original drain source or recipient. Restoration returns one eligible level per casting within one day per caster level; Greater Restoration returns all eligible levels within one week per caster level. Set the recipient's XP to the minimum for the level reached by restoration. A level that cannot be restored must be earned again through XP advancement, with new choices. Levels or Constitution lost as the cost of Raise Dead cannot be reversed by either spell.
 
 LOW-LIGHT VISION
 

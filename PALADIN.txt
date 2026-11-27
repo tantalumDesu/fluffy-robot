@@ -93,6 +93,8 @@ Through 3rd level, a paladin has no caster level. At 4th level and higher, her c
 
 Special Mount (Sp): Upon reaching 5th level, a paladin gains the service of an unusually intelligent, strong, and loyal steed to serve her in her crusade against evil (see below). This mount is usually a heavy warhorse (for a Medium paladin) or a warpony (for a Small paladin).
 
+Special Mount Training (Campaign Rule): A mount selected through the 5th-level Paladin special mount feature is already trained for combat riding. It can receive further training with Handle Animal. This feature is separate from ordinary riding, which is not restricted by class.
+
 Once per day, as a full-round action, a paladin may magically call her mount from the celestial realms in which it resides. This ability is the equivalent of a spell of a level equal to one-third the paladin's class level. The mount immediately appears adjacent to the paladin and remains for 2 hours per paladin level; it may be dismissed at any time as a free action. The mount is the same creature each time it is summoned, though the paladin may release a particular mount from service.
 
 Each time the mount is called, it appears in full health, regardless of any damage it may have taken previously. The mount also appears wearing or carrying any gear it had when it was last dismissed. Calling a mount is a conjuration (calling) effect.

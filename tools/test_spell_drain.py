@@ -33,7 +33,7 @@ class SpellDrainTest(unittest.TestCase):
         self.assertEqual(len(active_negative_levels(result['levels'], 53999)), 2)
         self.assertEqual(active_negative_levels(result['levels'], 54000), [])
         self.assertEqual(resolve_drain_level(self.rules, result['levels'], result['levels'][0]['id'], 54000)
-                         ['permanentLevelLoss'], 0)
+                         ['drainedLevel'], 0)
 
     def test_energy_drain_spell_dc_and_undead_benefit(self):
         result = self.ray('energy-drain')
@@ -42,7 +42,7 @@ class SpellDrainTest(unittest.TestCase):
         self.assertTrue(all(level['saveDc'] == 24 for level in result['levels']))
         self.assertEqual(active_negative_levels(result['levels'], 86400), result['levels'])
         self.assertEqual(resolve_drain_level(self.rules, result['levels'], result['levels'][0]['id'], 86400,
-                                             fortitude_total=23)['permanentLevelLoss'], 1)
+                                             fortitude_total=23)['drainedLevel'], 1)
         undead = self.ray('energy-drain', target_kind='undead')
         self.assertEqual(undead['temporaryHp'], {'amount': 20, 'expiresAtSeconds': 3600})
         self.assertEqual(undead['levels'], [])
@@ -55,13 +55,14 @@ class SpellDrainTest(unittest.TestCase):
         blocked = self.ray('energy-drain', levels=levels, target_effects=active_effects(ward, catalog, 0))
         self.assertEqual(blocked['levels'], levels)
         held = weapon_negative_levels(self.core, 'LE', {'sword': ['holy']})
-        losses = [{'id': 'old', 'lostAtSeconds': 0}, {'id': 'new', 'lostAtSeconds': 86400},
+        losses = [{'id': 'old', 'failedSaveAtSeconds': 0, 'cause': 'energy-drain'},
+                  {'id': 'new', 'failedSaveAtSeconds': 86400, 'cause': 'energy-drain'},
                   {'id': 'death', 'lostAtSeconds': 172800, 'dueToDeath': True}]
         normal = apply_drain_restoration(self.core, 'restoration', levels + held, losses, 172800, 1)
         self.assertEqual(normal['levels'], held)
-        self.assertEqual([e['id'] for e in normal['restorePermanentLosses']], ['new'])
+        self.assertEqual([e['id'] for e in normal['restoreDrainedLevels']], ['new'])
         greater = apply_drain_restoration(self.core, 'restoration-greater', levels + held, losses, 172800, 1)
-        self.assertEqual([e['id'] for e in greater['restorePermanentLosses']], ['new', 'old'])
+        self.assertEqual([e['id'] for e in greater['restoreDrainedLevels']], ['new', 'old'])
         condition = next(c for c in self.core['effects']['conditions'] if c['id'] == 'energy-drained')
         self.assertEqual(condition['mechanics']['modifiers'], [])
         self.assertEqual(condition['references']['inflictedBySpells'], ['energy-drain', 'enervation'])

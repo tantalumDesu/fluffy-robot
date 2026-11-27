@@ -27,8 +27,8 @@ class EffectStateTest(unittest.TestCase):
                 if profile.get('requiredAdditionId'):
                     self.assertEqual(items[profile['requiredAdditionId']]['weightLb'], 0)
         creatures = self.core['companions']['creaturesById']
-        self.assertEqual(creatures['alternative-animal-companions:ape']['size'], 'large')
-        self.assertEqual(creatures['alternative-animal-companions:bear-black']['size'], 'medium')
+        self.assertEqual(creatures['alternative-animal-companions:ape']['sizeId'], 'large')
+        self.assertEqual(creatures['alternative-animal-companions:bear-black']['sizeId'], 'medium')
 
     def test_expiry_and_dispel(self):
         active = apply_spell([], self.spells, 'bless', 1, 12, lambda sides: sides)

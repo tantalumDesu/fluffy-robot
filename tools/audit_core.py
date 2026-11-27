@@ -10,6 +10,11 @@ else:
     from organize_core import PATH, lines
 
 
+if __package__:
+    from .condition_rules import condition_policies
+else:
+    from condition_rules import condition_policies
+
 def audit(core):
     rules = core['mechanics']['rules']
     rule_ids = {rule['id'] for rule in rules}
@@ -45,7 +50,7 @@ def audit(core):
                     for category, (records, keys) in text_categories.items()}
     scoped = [entry for entries in (*effects['spellEffectsBySpellId'].values(),
                                     *effects['featEffectsByFeatId'].values(),
-                                    *(r['modifiers'] for r in effects['sheetConditionRulesById'].values()))
+                                    *(r['modifiers'] for r in condition_policies(core).values()))
               for entry in entries]
     focus_choices = feats['weapon-focus']['selection']['specialWeaponChoices']
     errors = {

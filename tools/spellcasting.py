@@ -3,6 +3,7 @@ import re
 from copy import deepcopy
 
 if __package__:
+    from .casting_rules import casting_profile
     from .spell_components import check_components, effective_codes, resolve_component_cast
     from .spellbooks import pages_used, school_access, wizard_specialization
     from .feat_grants import feat_effects
@@ -11,6 +12,7 @@ if __package__:
     from .alignment import check_spell_alignment
     from .game_time import SECONDS, encounter_clock, schedule_cast
 else:
+    from casting_rules import casting_profile
     from spell_components import check_components, effective_codes, resolve_component_cast
     from spellbooks import pages_used, school_access, wizard_specialization
     from feat_grants import feat_effects
@@ -125,7 +127,7 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     casting = cls.get('spellcasting', {})
     if casting.get('source') != 'own':
         raise ValueError('Choose an actual spellcasting track')
-    profile = core['magic']['castingProfilesByClassId'][class_id]
+    profile = casting_profile(core, class_id)
     conversion_rule = profile.get('conversion')
     if conversion and not conversion_rule:
         raise ValueError('This class has no spontaneous conversion')
@@ -258,11 +260,25 @@ def new_slots(class_id, budget):
                 for (pool, level), count in sorted(budget.items()) for index in range(count)})
 
 
+def reconcile_slot_budget(state, budget):
+    """Project capacity changes without refreshing expended or prepared slots."""
+    result = deepcopy(state)
+    eligible = new_slots(state['classId'], budget)['slots']
+    for slot_id, slot in result['slots'].items():
+        if slot_id in eligible:
+            slot.pop('outsideBudget', None)
+        else:
+            slot['outsideBudget'] = True
+    for slot_id, slot in eligible.items():
+        result['slots'].setdefault(slot_id, slot)
+    return result
+
+
 def _slot_for(state, slot_id, plan):
     if state['classId'] != plan['classId']:
         raise ValueError('Wrong casting class')
     slot = state['slots'][slot_id]
-    if slot['expended'] or slot.get('negativeLevelLoss') or slot['pool'] != plan['pool'] or slot['level'] < plan['requiredSlotLevel']:
+    if slot['expended'] or slot.get('outsideBudget') or slot.get('negativeLevelLoss') or slot['pool'] != plan['pool'] or slot['level'] < plan['requiredSlotLevel']:
         raise ValueError('Slot unavailable, too low, or in the wrong pool')
     return slot
 
@@ -274,7 +290,7 @@ def _signature(plan):
 def prepare_spell(state, slot_id, plan, *, accessible_spell_ids, accessible_spellbooks=()):
     slot = _slot_for(state, slot_id, plan)
     if plan['mode'] != 'prepared' or slot['preparation'] is not None or (plan['spellId'] not in accessible_spell_ids
-            and not plan.get('epicKnown', False)):
+            and not (state['classId'] == 'wizard' and plan.get('epicKnown', False))):
         raise ValueError('Cannot prepare this spell in this slot')
     if state['classId'] == 'wizard':
         rule = plan['spellbookRules']
@@ -297,11 +313,12 @@ def spend_slot(state, slot_id, plan, *, known_spell_ids=(), authorized_conversio
         raise ValueError('Casting components unavailable: ' + ', '.join(plan['componentCheck']['blockedReasons']))
     slot = _slot_for(state, slot_id, plan)
     if plan['mode'] == 'prepared':
-        allowed = slot['preparation'] == _signature(plan)
+        allowed = slot['preparation'] == _signature(plan) and (
+            state['classId'] != 'magewright' or plan['spellId'] in known_spell_ids)
     elif plan['mode'] == 'conversion':
         allowed = slot['preparation'] is not None and (not plan.get('conversionRequiresAuthorization', True) or plan['spellId'] in authorized_conversion_spell_ids)
     else:
-        allowed = slot['preparation'] is None and (plan['spellId'] in known_spell_ids or plan.get('epicKnown', False))
+        allowed = slot['preparation'] is None and plan['spellId'] in known_spell_ids
     if not allowed:
         raise ValueError('Spell is not prepared, known, or available for conversion')
     result = deepcopy(state)
@@ -325,7 +342,7 @@ def spellcasting_levels(core, history, advancement_choices=None):
     for entry in history['entries']:
         class_id, row = entry['classId'], entry['progressionRow']
         casting = classes[class_id].get('spellcasting', {})
-        if casting.get('source') == 'own' and ('spellsPerDay' in row or class_id in levels):
+        if casting.get('source') == 'own':
             levels[class_id] = levels.get(class_id, 0) + 1
         advancement = row.get('spellcastingAdvancement', [])
         targets = choices.pop(entry['characterLevel'], [])
@@ -421,7 +438,7 @@ def base_caster_level(core, class_id, class_level, *, prestige_advancement=0):
     """Calculate the class baseline, separate from temporary caster-level modifiers."""
     if any(type(n) is not int or n < 0 for n in (class_level, prestige_advancement)):
         raise ValueError('Supply nonnegative class levels and prestige advancement')
-    rule = core['magic']['castingProfilesByClassId'][class_id].get('casterLevel', {})
+    rule = casting_profile(core, class_id).get('casterLevel', {})
     if class_level < rule.get('minimumClassLevel', 1):
         return 0
     return class_level // rule.get('classLevelDivisor', 1) + prestige_advancement

@@ -2,6 +2,7 @@ import json
 import unittest
 from pathlib import Path
 
+from tools.condition_rules import condition_policies
 from tools.derived_stats import derive_sheet
 from tools.game_time import new_encounter, spend_action, start_next_turn
 
@@ -52,9 +53,10 @@ class DerivedSheetTest(unittest.TestCase):
 
     def test_all_named_conditions_have_structured_rules(self):
         conditions = self.core['effects']['conditions']
-        rules = self.core['effects']['sheetConditionRulesById']
+        rules = condition_policies(self.core)
         self.assertEqual(len(conditions), 38)
-        self.assertEqual({c['id']: c['mechanics'] for c in conditions}, rules)
+        self.assertNotIn('sheetConditionRulesById', self.core['effects'])
+        self.assertEqual(len(rules), len(conditions))
         for rule in rules.values():
             self.assertTrue(any(rule[k] for k in ('flags', 'modifiers', 'operations')))
 
@@ -99,7 +101,7 @@ class DerivedSheetTest(unittest.TestCase):
             self.sheet(equipment=[locked])
 
     def test_prone_attack_profiles_and_defense(self):
-        restriction = self.core['effects']['sheetConditionRulesById']['prone']['operations']['prohibitedWeaponUse']
+        restriction = condition_policies(self.core)['prone']['operations']['prohibitedWeaponUse']
         ids = [*restriction['exceptWeaponIds'], 'weapon:longbow', 'weapon:longsword']
         equipment = [dict(instanceId=id_, itemId=id_, proficient=True) for id_ in ids]
         upright = self.sheet(equipment=equipment)
