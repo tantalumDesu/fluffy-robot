@@ -172,3 +172,29 @@ def choose_wizard_specialization(core, *, wizard_class_level, existing_choice=No
     if type(wizard_class_level) is not int or wizard_class_level != rule['chooseAtWizardLevel']:
         raise ValueError('Wizard school specialization can only be chosen at Wizard class level 1')
     return wizard_specialization(core, specialty_school_id, prohibited_school_ids)
+
+
+def add_spellbook(core, books, instance_id):
+    """Add another physical book without replacing any existing volume."""
+    if not instance_id or instance_id in books:
+        raise ValueError('Spellbook instance IDs must be unique and nonempty')
+    return dict(books, **{instance_id: new_spellbook(core, instance_id)})
+
+
+def available_spellbooks(books, accessible_ids):
+    """Resolve inventory access; damage is adjudicated per entry by the table."""
+    return tuple(dict(book, spellsById={key: level for key, level in book['spellsById'].items()
+                                       if key not in book.get('damagedSpellIds', ())})
+                 for key in dict.fromkeys(accessible_ids) if (book := books.get(key)) is not None
+                 and not book.get('lost') and not book.get('destroyed'))
+
+
+def update_spellbook(core, books, book):
+    """Commit a single book update (inscription, damage, loss or recovery)."""
+    key = book['instanceId']
+    if key not in books:
+        raise ValueError('Unknown spellbook instance')
+    if not set(book.get('damagedSpellIds', ())) <= book['spellsById'].keys():
+        raise ValueError('Damage must name entries in this spellbook')
+    pages_used(book, core['magic']['wizardSpellbook'])
+    return dict(books, **{key: book})

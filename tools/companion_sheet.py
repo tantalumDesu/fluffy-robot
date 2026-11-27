@@ -1,5 +1,10 @@
 """Project linked companion actors without mutating their base stat blocks."""
 import re
+
+if __package__:
+    from .natural_weapons import creature_roster, project as project_natural
+else:
+    from natural_weapons import creature_roster, project as project_natural
 from fractions import Fraction
 
 
@@ -25,7 +30,7 @@ def ability_mod(score):
     return (score - 10) // 2 if score is not None else 0
 
 
-def project_companion(core, history, link, *, master_max_hp=None, master_skill_ranks=None):
+def project_companion(core, history, link, *, master_max_hp=None, master_skill_ranks=None, after_level_loss=False):
     """Build a display-ready source block with a separate layer of current numbers."""
     catalog = core['companions']
     key = link['definitionId']
@@ -40,7 +45,13 @@ def project_companion(core, history, link, *, master_max_hp=None, master_skill_r
     adjustment = base.get('effectiveLevelAdjustment', 0)
     effective = master_level + adjustment
     if effective < 1 or master_level < base.get('minimumMasterLevel', 1):
-        raise ValueError(f'{base["name"]} does not meet the master level requirement')
+        if not after_level_loss:
+            raise ValueError(f'{base["name"]} does not meet the master level requirement')
+        if effective < 1:
+            return dict(instanceId=link['instanceId'], definitionId=key, name=base['name'], role=role,
+                        effectiveMasterLevel=0, advancementInactive=True, statBlockText=base['statBlockText'],
+                        baseFields=stat_block(base['statBlockText']),
+                        needsReview=['Confirm the companion relationship after losing the qualifying master level.'])
     rows = catalog['familiarAdvancement' if familiar else 'animalCompanionAdvancement']
     row = next(r for r in rows if r['minEffectiveLevel'] <= min(effective, 20) <= r['maxEffectiveLevel'])
     fields = stat_block(base['statBlockText'])
@@ -141,6 +152,9 @@ def project_companion(core, history, link, *, master_max_hp=None, master_skill_r
         result['attackRoutines'] = {field: re.sub(r'([+−–-]\d+)\s+(melee|ranged)\b', update_attack,
                                                   fields[field], flags=re.I)
                                     for field in ('Attack', 'Full Attack') if field in fields}
+    routine = result.get('attackRoutines', {}).get('Full Attack')
+    roster = creature_roster('Full Attack\n' + routine) if routine else base.get('naturalWeapons', ())
+    result['naturalWeapons'] = project_natural(core, roster, link.get('featChoices', ()))
     result.update(abilityScores=scores, naturalArmorAdjustment=armor)
     review.append('Confirm damage adjustments, skill choices, and special abilities at the table; source attack damage dice and bonuses are retained.')
     return result

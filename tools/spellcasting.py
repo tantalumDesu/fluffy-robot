@@ -3,6 +3,7 @@ import re
 from copy import deepcopy
 
 if __package__:
+    from .spell_components import check_components, effective_codes, resolve_component_cast
     from .spellbooks import pages_used, school_access, wizard_specialization
     from .feat_grants import feat_effects
     from .sheet_effects import modifier_total
@@ -10,6 +11,7 @@ if __package__:
     from .alignment import check_spell_alignment
     from .game_time import SECONDS, encounter_clock, schedule_cast
 else:
+    from spell_components import check_components, effective_codes, resolve_component_cast
     from spellbooks import pages_used, school_access, wizard_specialization
     from feat_grants import feat_effects
     from sheet_effects import modifier_total
@@ -35,6 +37,13 @@ def metamagic_catalog(feats):
     return result
 
 
+def feat_slot_budget(core, class_id, spellcasting_level, ability_score, *, feat_choices=(), specialization=None):
+    """Daily budget from active feat picks (use projected picks after level loss)."""
+    from .epic_spell_feats import epic_slot_grants
+    return slot_budget(core, class_id, spellcasting_level, ability_score,
+                       extra_slots=epic_slot_grants(feat_choices, class_id), specialization=specialization)
+
+
 def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slots=None, specialization=None):
     """Return castable daily slots by (pool, level), for one effective casting class.
 
@@ -47,6 +56,8 @@ def slot_budget(core, class_id, spellcasting_level, ability_score, *, extra_slot
         raise ValueError('Choose a class with its own spellcasting track')
     cap = core['magic']['dailySlotRules']['epicBaseSlotCapsByClassId'].get(class_id)
     row_level = min(spellcasting_level, cap['level']) if cap else spellcasting_level
+    if class_id in ('adept', 'magewright'):
+        row_level = min(row_level, cls['progression'][-1]['level'])
     row = next((r for r in cls['progression'] if r['level'] == row_level), None)
     if row is None:
         raise ValueError('No slot progression row for this effective spellcasting level')
@@ -108,15 +119,25 @@ def resolve_armor_spell_failure(plan, roll):
 
 def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metamagic=(), heighten_to=None,
               domain_spell_levels=None, conversion=False, random_numeric=None, quickened_this_round=False,
-              alignment_id=None, deity_alignment=None, deity_known=False, worn_armor_and_shields=(), feat_choices=(), specialization=None, specialist_slot=False):
+              alignment_id=None, deity_alignment=None, deity_known=False, worn_armor_and_shields=(), feat_choices=(), specialization=None, specialist_slot=False, component_context=None, class_level=None, prestige_advancement=0):
     """Validate spell membership and metamagic, returning a plan without spending a slot."""
     cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
     casting = cls.get('spellcasting', {})
     if casting.get('source') != 'own':
         raise ValueError('Choose an actual spellcasting track')
-    if conversion and not casting.get('spontaneousConversion'):
+    profile = core['magic']['castingProfilesByClassId'][class_id]
+    conversion_rule = profile.get('conversion')
+    if conversion and not conversion_rule:
         raise ValueError('This class has no spontaneous conversion')
     spell = next(s for s in core['magic']['spells'] if s['id'] == spell_id)
+    if domain_spell_levels is not None:
+        level = domain_spell_levels.get(spell_id)
+        if (not profile['allowsDomainSlots'] or type(level) is not int or
+                not any(domain['level'] == level for domain in spell['domains'])):
+            raise ValueError('Spell is not available at that level in a domain casting pool')
+    family = conversion_rule['familyBySpellId'].get(spell_id) if conversion else None
+    if conversion and not family:
+        raise ValueError('Spell is outside this class’s spontaneous conversion choices')
     if class_id == 'wizard' and not school_access(core, spell, specialization):
         raise ValueError('Spell belongs to a prohibited Wizard school')
     if specialist_slot and (class_id != 'wizard' or domain_spell_levels is not None or
@@ -127,7 +148,14 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     if alignment_status != 'eligible':
         raise ValueError(f'Spell alignment: {alignment_status}')
     base = (domain_spell_levels.get(spell_id) if domain_spell_levels is not None else
-            next((row['level'] for row in spell['lists'] if row['listId'] == casting['spellListId']), None))
+            next((row['level'] for row in spell['lists'] if row['listId'] == profile['spellListId']), None))
+    feat_choices = tuple(feat_choices)
+    epic_level = None
+    if domain_spell_levels is None and not conversion and feat_choices:
+        from .epic_spell_feats import epic_known_levels
+        epic_level = epic_known_levels(feat_choices, class_id).get(spell_id)
+        if epic_level is not None:
+            base = epic_level
     if base is None or (conversion and domain_spell_levels is not None):
         raise ValueError('Spell is not available in this pool')
     feats = tuple(sorted(metamagic))
@@ -144,8 +172,9 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
         raise ValueError('Heighten level requires Heighten Spell')
     if ability_score < 10 + effective:
         raise ValueError('Casting ability is too low for the effective spell level')
-    spontaneous = casting['spontaneous'] or conversion
-    components = [c['code'] for c in spell['components']['codes']]
+    spontaneous = profile['mode'] == 'spontaneous' or conversion
+    component_tradition = 'divine' if domain_spell_levels is not None else profile['tradition']
+    components = effective_codes(spell['componentProfile'], component_tradition)
     raw_time = spell['castingTime']['raw']
     time = raw_time
     timing = spell['timing']['casting'].copy()
@@ -200,17 +229,25 @@ def plan_cast(core, class_id, spell_id, ability_score, *, owned_feats=(), metama
     increase = sum(max(minimum, catalog[key]['slotIncrease'] - reduction)
                    for key in feats if catalog[key]['slotIncrease'] is not None)
     feat_choices = tuple(feat_choices)
+    caster_level = None if class_level is None else base_caster_level(
+        core, class_id, class_level, prestige_advancement=prestige_advancement)
+    if caster_level == 0:
+        raise ValueError('This class has not reached its first casting level')
     focus = focus_bonus(core, spell, feat_choices)
     penetration = modifier_total('spell-resistance-check', feat_effects(
         core, feat_choices, {'spell-penetration', 'greater-spell-penetration'}))
     if spell['spellResistance'].get('applies') is False:
         penetration = 0
-    return dict(classId=class_id, spellId=spell_id,
-                spellbookRules=core['magic']['wizardSpellbook'] if class_id == 'wizard' else None, pool='specialist' if specialist_slot else 'domain' if domain_spell_levels is not None else 'regular',
+    return dict(classId=class_id, spellId=spell_id, baseCasterLevel=caster_level,
+                epicKnown=epic_level is not None,
+                spellbookRules=core['magic']['wizardSpellbook'] if profile['requiresSpellbook'] else None,
+                conversionFamily=family, conversionRequiresAuthorization=bool(conversion and conversion_rule['requiresFamilyAuthorization']),
+                pool='specialist' if specialist_slot else 'domain' if domain_spell_levels is not None else 'regular',
                 mode='conversion' if conversion else 'spontaneous' if spontaneous else 'prepared',
                 baseSpellLevel=base, effectiveSpellLevel=effective, requiredSlotLevel=effective + increase,
                 saveDc=10 + effective + (ability_score - 10) // 2 + focus, spellFocusSaveDcBonus=focus, spellResistanceCheckBonus=penetration, castingTime=time, timing=timing,
                 metamagic=list(feats), components=components, transforms=transforms,
+                componentCheck=check_components(core, spell, class_id, components, owned_feats, component_context, spell_level=effective),
                 armorSpellFailure=armor_spell_failure(core, class_id, casting['kind'], components, worn_armor_and_shields))
 
 
@@ -236,14 +273,17 @@ def _signature(plan):
 
 def prepare_spell(state, slot_id, plan, *, accessible_spell_ids, accessible_spellbooks=()):
     slot = _slot_for(state, slot_id, plan)
-    if plan['mode'] != 'prepared' or slot['preparation'] is not None or plan['spellId'] not in accessible_spell_ids:
+    if plan['mode'] != 'prepared' or slot['preparation'] is not None or (plan['spellId'] not in accessible_spell_ids
+            and not plan.get('epicKnown', False)):
         raise ValueError('Cannot prepare this spell in this slot')
     if state['classId'] == 'wizard':
         rule = plan['spellbookRules']
         found = False
         for book in accessible_spellbooks:
             pages_used(book, rule)
-            if book['spellsById'].get(plan['spellId']) == plan['baseSpellLevel']:
+            if (not book.get('lost') and not book.get('destroyed')
+                    and plan['spellId'] not in book.get('damagedSpellIds', ())
+                    and book['spellsById'].get(plan['spellId']) == plan['baseSpellLevel']):
                 found = True
         if not found:
             raise ValueError('Wizard preparation requires the spell in an accessible spellbook')
@@ -253,13 +293,15 @@ def prepare_spell(state, slot_id, plan, *, accessible_spell_ids, accessible_spel
 
 
 def spend_slot(state, slot_id, plan, *, known_spell_ids=(), authorized_conversion_spell_ids=(), game_seconds=None):
+    if plan.get('componentCheck', {}).get('status') == 'blocked':
+        raise ValueError('Casting components unavailable: ' + ', '.join(plan['componentCheck']['blockedReasons']))
     slot = _slot_for(state, slot_id, plan)
     if plan['mode'] == 'prepared':
         allowed = slot['preparation'] == _signature(plan)
     elif plan['mode'] == 'conversion':
-        allowed = slot['preparation'] is not None and plan['spellId'] in authorized_conversion_spell_ids
+        allowed = slot['preparation'] is not None and (not plan.get('conversionRequiresAuthorization', True) or plan['spellId'] in authorized_conversion_spell_ids)
     else:
-        allowed = slot['preparation'] is None and plan['spellId'] in known_spell_ids
+        allowed = slot['preparation'] is None and (plan['spellId'] in known_spell_ids or plan.get('epicKnown', False))
     if not allowed:
         raise ValueError('Spell is not prepared, known, or available for conversion')
     result = deepcopy(state)
@@ -373,3 +415,67 @@ def recover_spell_tracks(core, ledgers, recovery_by_class, *, negative_levels=()
     blocked = allocate_spell_losses(core, recovered, active_negative_levels(negative_levels, at_seconds),
                                     choices, recovery=True)
     return {**deepcopy(ledgers), **blocked}
+
+
+def base_caster_level(core, class_id, class_level, *, prestige_advancement=0):
+    """Calculate the class baseline, separate from temporary caster-level modifiers."""
+    if any(type(n) is not int or n < 0 for n in (class_level, prestige_advancement)):
+        raise ValueError('Supply nonnegative class levels and prestige advancement')
+    rule = core['magic']['castingProfilesByClassId'][class_id].get('casterLevel', {})
+    if class_level < rule.get('minimumClassLevel', 1):
+        return 0
+    return class_level // rule.get('classLevelDivisor', 1) + prestige_advancement
+
+
+def resolve_cast_completion(plan, *, component_percentile=None, concentration_total=None, armor_percentile=None,
+                            injury_checks=()):
+    """Return an applicable spell only after confirmed readiness and supplied rolls."""
+    components = resolve_component_cast(plan, percentile_roll=component_percentile,
+                                        concentration_total=concentration_total)
+    if components['failed']:
+        return dict(spellToApply=None, failedBy='components-or-concentration')
+    for dc, total in injury_checks:
+        if dc is None:
+            continue
+        if type(total) is not int:
+            raise ValueError('Supply each injury Concentration check total')
+        if total < dc:
+            return dict(spellToApply=None, failedBy='injury-concentration')
+    if plan['armorSpellFailure']['percent']:
+        armor = resolve_armor_spell_failure(plan, armor_percentile)
+        if armor['failed']:
+            return dict(spellToApply=None, failedBy='armor-spell-failure')
+    return dict(spellToApply=deepcopy(plan), failedBy=None)
+
+
+def prepare_wizard_session(core, state, preparations, *, start_seconds, end_seconds,
+                           verified_rest_seconds, accessible_spell_ids, accessible_spellbooks, refresh=False):
+    """Prepare any number of Wizard spells after verified uninterrupted rest/study."""
+    if state['classId'] != 'wizard':
+        raise ValueError('Wizard preparation session requires a Wizard ledger')
+    policy = core['magic']['spellRecoveryByClassId']['wizard']
+    if (any(type(n) is not int or n < 0 for n in (start_seconds, end_seconds, verified_rest_seconds)) or
+            not policy['restHours'] * SECONDS['hour'] <= verified_rest_seconds <= start_seconds or
+            end_seconds - start_seconds < policy['preparationMinutes'] * SECONDS['minute']):
+        raise ValueError('Wizard preparation requires uninterrupted rest and study')
+    prior_end = max(state.get('lastPreparationEndSeconds', 0), state.get('lastRecovery', {}).get('endSeconds', 0))
+    if start_seconds - verified_rest_seconds < prior_end:
+        raise ValueError('Preparation overlaps an earlier session')
+    result = (recover_slots(core, state, start_seconds=start_seconds, end_seconds=end_seconds,
+                            verified_rest_seconds=verified_rest_seconds) if refresh else deepcopy(state))
+    books = tuple(accessible_spellbooks)
+    for slot_id, plan in preparations:
+        result = prepare_spell(result, slot_id, plan, accessible_spell_ids=accessible_spell_ids, accessible_spellbooks=books)
+    result['lastPreparationEndSeconds'] = end_seconds
+    return result
+
+
+def casting_injury_concentration_dc(core, plan, damage, *, continuous=False, source_ended=False):
+    """One confirmed interruption, or the last tick of an ongoing continuous source."""
+    if type(damage) is not int or damage < 0:
+        raise ValueError('Damage must be a nonnegative integer')
+    rule = core['magic']['castingInjury']
+    if not damage or continuous and source_ended and rule['ignoreEndedContinuousSource']:
+        return None
+    counted = damage // rule['continuousDamageDivisor'] if continuous else damage
+    return rule['baseDc'] + counted + plan['effectiveSpellLevel']

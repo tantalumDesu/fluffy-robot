@@ -436,6 +436,8 @@ Glass Orb	Tools & Skill Kits	1	1
 Glue, Artisan (gallon)	Tools & Skill Kits	2	10
 Gnomish Cutting Shears	Tools & Skill Kits	80	2
 Healer's Kit	Tools & Skill Kits	50	1
+Holly	Tools & Skill Kits	0	0
+Mistletoe	Tools & Skill Kits	0	0
 Holy Symbol (Silver)	Tools & Skill Kits	25	1
 Holy Symbol (Wooden)	Tools & Skill Kits	1	0.5
 Hourglass	Tools & Skill Kits	25	1

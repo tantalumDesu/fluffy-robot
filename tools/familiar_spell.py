@@ -15,10 +15,11 @@ def familiar_spell_choices(core, known_spell_levels, *, verified_material_cost_g
         if codes.intersection(rule['prohibitedComponentCodes']):
             continue
         option = dict(spellId=key, name=spell['name'], level=level)
-        if 'M' in codes and key not in costs:
+        material = spell['componentProfile']['material']
+        if material and material['kind'] == 'priced' and key not in costs:
             review.append(dict(option, maximumMaterialCostGp=rule['maximumMaterialCostGp'],
-                               reason='Confirm material component cost is within the limit'))
-        elif key not in costs or 0 <= costs[key] <= rule['maximumMaterialCostGp']:
+                               reason='Confirm stated material component cost is within the limit'))
+        elif not material or material['kind'] == 'unpriced' or 0 <= costs[key] <= rule['maximumMaterialCostGp']:
             options.append(option)
     return dict(eligible=sorted(options, key=lambda o: (o['level'], o['name'])),
                 needsReview=sorted(review, key=lambda o: (o['level'], o['name'])))

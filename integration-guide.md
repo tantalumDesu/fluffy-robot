@@ -104,9 +104,29 @@ For Improved Spell Capacity and Spell Knowledge, pass `spellcastingLevels` as
 an exhaustive map from each base casting class to its effective **spell
 progression** level, including applicable prestige advancement. A caster-level
 bonus alone never qualifies. Each threshold pairs one class with its own ability
-score; Spell Knowledge filters to arcane rows. Pass `castingClassId` when checking
-which class receives an Improved Spell Capacity slot. The checker does not
-allocate spell slots or choose spells.
+score for Improved Spell Capacity. Spell Knowledge instead requires at least one level and a castable spell on the chosen arcane track; its spell picks are capped at that track’s current castable level. Both feats take `castingClassId`.
+When committing a level, `record_level_choices` resolves their grants atomically:
+
+- **Improved Spell Capacity:** Supply `slotLevel`. Use `feat_slot_budget` with
+  active feat picks to build the daily budget. It counts repeated picks on the
+  selected track and applies eligible ability bonus slots once per level.
+- **Spell Knowledge:** Supply two entries in `spells`, each with `spellId` and,
+  if a cross-list spell has different arcane levels, `sourceListId`. Use the
+  receiving class's level when it has the spell. Pass active picks to `plan_cast`
+  for the learned spells; there are no extra slots. Supply baseline known spells
+  in `knownSpellIdsByClassId` to check for duplicates.
+- **Wizard books:** Register each physical volume under `spellbooksById` using
+  `add_spellbook`; commit ordinary inscription or table-adjudicated damage/loss
+  with `update_spellbook`. A Wizard-track Spell Knowledge pick requires
+  `accessibleSpellbookIds` and enough room for both spells. The helper places
+  them automatically, splitting across volumes if needed. Only the chosen track matters; choosing
+  another arcane track does not require books, even on a Wizard level-up.
+  Use `active_spellbooks` for preparation to account for feat suppression and
+  unavailable books or entries. Damage does not free pages. Losing a book does
+  not unlearn its spells or retroactively clear prepared slots.
+
+After permanent loss, use `projected_level_grants()['featChoices']` for the active
+picks. Restoration reactivates grants but does not change the physical books.
 
 ## Spellcasting slots and metamagic
 
@@ -155,12 +175,8 @@ or `{'gameSeconds': ...}`; an entire effect list can also use integer rounds. Ha
 continuous elapsed time.
 
 Use timestamped slot spends and `recover_slots` to refresh an existing daily
-ledger. It checks full preparation or focus time, verified rest where required,
-the scheduled divine preparation time, and the eight-hour recent-casting
-window. It keeps uncast preparations and leaves recent expenditures unavailable.
-`recover_spell_tracks` handles same-time recovery and reapplies active drain to the refreshed slots. The recovery tools do not automate partial Wizard preparation, verify rest interruptions,
-reschedule missed divine preparation, or guess a recovery profile for an
-unlisted class. `new_slots` is for initialisation, not a recovery operation.
+ledger. It checks preparation or focus time, verified rest where required, and the eight-hour recent-casting window. Divine casters choose their preparation time each day. It keeps uncast preparations and leaves recent expenditures unavailable.
+`recover_spell_tracks` handles same-time recovery and reapplies active drain to the refreshed slots. Use `prepare_wizard_session` for any number of Wizard preparations after eight uninterrupted hours of rest and one uninterrupted hour of study. The caller verifies uninterrupted time. `new_slots` is for initialisation, not a recovery operation.
 
 ## Creature and equipment size
 
@@ -318,3 +334,36 @@ Pass accessible books to `prepare_spell` as `accessible_spellbooks`. The Wizard 
 Keep `new_wizard_learning()` state per Wizard casting track. `begin_wizard_study` records the accessible scroll or other wizard’s book and the study deadline; `finish_wizard_study` takes a table-confirmed Spellcraft total **before** the separate specialty bonus. Failure records actual ranks for the retry gate. Success returns a scroll instance ID to remove (if applicable), but does not add a known spell. `inscribe_understood_spell` checks a separate full day, book capacity, and materials (100 gp per page) and returns the updated book and known-spell state. Persist each returned state together with its inventory/material changes. `learn_wizard_spells` remains the low-level writer for confirmed starting or level-up grants; external study uses the staged workflow.
 
 Use `choose_wizard_specialization` at first **Wizard class level** to record the permanent choice of a specialty or generalist. Keep the returned record even for a generalist and supply it as `existing_choice` on any attempted update; pass the saved choice to learning, slot budgeting, and cast planning. The specialization validator enforces two distinct prohibited schools (one for a diviner), and does not allow prohibiting Divination or choosing Universal. The Wizard-only `specialist` pool holds one additional slot for each available spell level, and cast plans for this pool require a matching school. Use `wizard_spell_item_school_allowed` for the prohibited-school check when the character is using a scroll or wand as a Wizard. The caller confirms access, uninterrupted study/writing, and item use; other casting tracks are unaffected.
+
+### Spell components and casting conditions
+
+Spells have a generated `componentProfile`, including tradition alternatives such as `M/DF`, and source text and stated amounts for recognized priced materials. Unpriced materials, including named ones, are supplied by an equipped pouch or waived by Eschew Materials. Materials with a stated cost require actual inventory access; confirm it through `accessibleMaterialSpellIds`. Focus uses an accessible pouch; divine focus uses the class-specific item types in `magic.componentRules` or a confirmed equipped deity weapon for holy-symbol classes. Use `choose_cleric_holy_weapon` at first Cleric class level and persist its result.
+
+Pass `component_context` to `plan_cast` for an actual casting decision: `equippedItemIds`, `accessibleItemIds`, `accessiblePricedMaterialSpellIds`, condition IDs/flags, and any confirmed `holyWeaponId`, `silenced` or `hasFreeSomaticHand` facts. An omitted context produces `not-checked`, not a readiness confirmation. A blocked plan cannot be scheduled. Silent Spell removes the verbal requirement before Silence and deafness checks; Still Spell removes the somatic requirement before free-hand and armor checks. Conditions preventing action/concentration can block casting; Entangled adds a Concentration check. Use `resolve_component_cast` with the table’s rolls before applying effects. Check armor failure separately. The caller confirms area membership, access, and any component consumption or XP cost; Focus prose, unusual conditional costs, remain available for table review. Set `deafnessAdapted` in cast context and `deafness_adapted` on the sheet only after a DM ruling. Calculate confirmed casting injury DCs with `casting_injury_concentration_dc` and pass the checks to `resolve_cast_completion`.
+
+Holy symbols, holly, and mistletoe carry `divineFocus` profiles on their item definitions. A confirmed deity weapon inherits a holy-symbol focus profile for that actor only. Pass the saved selection as `holy_weapon_id` for sheet display and `holyWeaponId` in casting context; the cast check requires the selected weapon to be equipped.
+
+### Permanent level loss
+
+Permanent loss is distinct from a temporary negative level. `apply_permanent_level_loss` suppresses one Hit Die and replays the surviving class history; failed drain saves use the same path. XP is set to the midpoint of the new effective level. Use `tools.level_choices.record_level_choices` for the first class level and later XP awards. On a level gain it requires `hitDieRoll`, `abilityIncreases`, `skillRanks`, and `featChoices` (use explicit empty collections where applicable). It commits XP, class choice, and the exact grants together in the returned actor. The ledger also records `hpGain`, including retroactive Constitution changes and supported flat feat HP grants. Feat picks carry their parameters and can identify racial or table-confirmed class bonus slots. `projected_level_grants` subtracts the recorded grants from saved totals without deleting them; missing records block permanent loss rather than triggering guesses. Restoration makes the saved grants active again without rerolling or reselecting them. Current HP, spell slots, and inventory are separate. Class-specific bonus slot entitlement still needs table confirmation, and advancement while permanent losses remain unresolved is not supported.
+
+Use `derive_level_loss_sheet` to show the surviving character numbers and reproject linked companions. Falling below all qualifying levels suspends a companion’s advancement and flags the relationship for table review. Coordinate current HP, actual spell ledgers, and other mutable state with the projection; this helper does not replay recovery or inventory events.
+
+## Natural weapons and forms
+
+Use `mechanics.naturalWeapons` for the shared weapon types and damage-die steps.
+Racial attacks and recognized creature attack routines expose `naturalWeapons`
+with a `naturalAttackId`, attack count, damage dice, and physical damage types.
+Use `tools.natural_weapons.weapon` to build typed attacks for custom sources.
+Record `naturalAttacks` for permanent additions, `availableNaturalFormIds` for
+confirmed accessible forms, and `activeNaturalFormId` for the current form.
+Catalog creature IDs supply built-in rosters; `naturalFormsById` supplies explicit
+rosters for custom or template forms. The active form roster replaces the base
+roster for this projection; this does not itself activate a transformation or
+change size, reach, or ability scores.
+
+Improved Natural Attack requires BAB +4 and an eligible `naturalAttackId`.
+The choice applies once to all matching attacks, including across forms. Use
+`naturalWeapons` for the projected dice; retained source attack text still
+shows the original stat block. Alternatives and special riders remain subject
+to the source routine and table adjudication.

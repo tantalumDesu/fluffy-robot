@@ -6,12 +6,14 @@ from .alignment import weapon_alignment_tags
 from .damage_reduction import project_damage_reduction
 from .creature_size import armor_fit, carrying_limits, equipment_size, size_adjusted_abilities, size_profile, weapon_fit
 from .feat_grants import critical_profile, feat_effects, weapon_proficiency_grants
+from .spell_components import divine_focus_profile
 from .spell_focus import focus_grants as focus_grants_for_sheet, school_choices
 from .weapon_focus import GRAPPLE, RAY, known_spell_entries, weapon_focus_choices, weapon_focus_grants
 from .familiar_spell import familiar_spell_choices, familiar_spell_grants
 from .equipment_slots import allocate_slots, fighting_feats, grip_adjustment, two_weapon_routine
 from .damage_types import equipment_attack_damage
 from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, project_gauntlets
+from .natural_weapons import form_roster, owned_types, project as project_natural, selection_ids
 from .negative_levels import summarize_negative_levels, weapon_negative_levels
 from .sheet_effects import modifier_total
 
@@ -28,7 +30,7 @@ def expand_conditions(policies, condition_ids):
                          for other in policies.get(key, {}).get('operations', {}).get('supersedes', [])}
 
 
-def condition_state(core, condition_ids):
+def condition_state(core, condition_ids, *, deafness_adapted=False):
     policies = core['effects']['sheetConditionRulesById']
     flags, modifiers, review = set(), [], []
     for key in sorted(expand_conditions(policies, condition_ids)):
@@ -37,7 +39,11 @@ def condition_state(core, condition_ids):
             review.append(key)
             continue
         flags.update(rule['flags'])
-        modifiers.extend(rule['modifiers'])
+        if key == 'deafened' and deafness_adapted:
+            divisor = rule['operations']['adaptation']['numericDivisor']
+            modifiers.extend(dict(m, amount=int(m['amount'] / divisor)) for m in rule['modifiers'])
+        else:
+            modifiers.extend(rule['modifiers'])
     return flags, modifiers, review
 
 
@@ -45,7 +51,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                  negative_levels=(), alignment_id=None, carried_weight_lb=None, attack_context=None, skill_ranks=None, damage_reduction_grants=(),
                  companion_links=(), master_max_hp=None, feat_ids=(),
                  ranger_combat_style=None, double_weapon_instance_id=None, feat_choices=(),
-                 known_spell_levels=None, verified_material_cost_gp=None, weapon_proficiencies=(), turning_pool_ids=()):
+                 known_spell_levels=None, verified_material_cost_gp=None, weapon_proficiencies=(), turning_pool_ids=(), deafness_adapted=False, holy_weapon_id=None, after_level_loss=False, natural_attacks=(), active_natural_form_id=None, available_natural_form_ids=(), natural_forms_by_id=None):
     """Derive a basic humanoid sheet, without mutating inventory or build history.
 
     Scores already include racial adjustments; equipped item instances supply
@@ -55,7 +61,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     """
     race = next(r['effective'] for r in core['progression']['races'] if r['id'] == race_id)
     condition_ids = tuple(condition_ids)
-    flags, conditions, review = condition_state(core, condition_ids)
+    flags, conditions, review = condition_state(core, condition_ids, deafness_adapted=deafness_adapted)
     equipment = list(equipment)
     secured_weapons = {e.get('securedWeaponInstanceId') for e in equipment
                        if e['itemId'] == LOCKED_GAUNTLET_ID}
@@ -213,6 +219,9 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
             reload_rule = core['feats']['byId']['rapid-reload']['reloadByWeaponId'].get(item['id'])
             if reload_rule:
                 line['reload'] = dict(reload_rule)
+        focus = divine_focus_profile(core, item['id'], holy_weapon_id)
+        if focus:
+            line['divineFocus'] = focus
         line['damageBypassTags'] = sorted(set(entry.get('damageBypassTags', ())) |
                                            weapon_alignment_tags(core, entry.get('alignmentPropertyIds', ())))
         if line['status'] == 'wieldable':
@@ -306,10 +315,19 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
         and pick.get('choices', {}).get('skillId') in skill_names})]
     max_hp_bonus = modifier_total('max-hp', feat_effects(core, feat_choices, {'toughness'}))
     extra_turning = modifier_total('turning-uses-per-day', feat_effects(core, feat_choices, {'extra-turning'}))
-    return dict(skillFocusChoices=[dict(skillId=key, name=name) for key, name in skill_names.items()
+    base_natural = [*(race.get('naturalWeapons') or ()), *natural_attacks]
+    current_natural = (base_natural if active_natural_form_id is None else form_roster(core, active_natural_form_id, natural_forms_by_id))
+    natural_options = selection_ids(base_natural, current_natural,
+                                    *(form_roster(core, key, natural_forms_by_id) for key in available_natural_form_ids))
+    natural_options -= owned_types(feat_choices)
+    if history['classBaseCombat']['bab'] < 4:
+        natural_options.clear()
+    return dict(naturalWeapons=project_natural(core, current_natural, feat_choices),
+                improvedNaturalAttackChoices=sorted(natural_options), skillFocusChoices=[dict(skillId=key, name=name) for key, name in skill_names.items()
                                   if key not in {grant['skillId'] for grant in skill_focus_grants}],
                 skillFocusGrants=skill_focus_grants, featMaxHpBonus=max_hp_bonus,
                 extraTurningUsesByPool={key: extra_turning for key in turning_pool_ids},
+                initiativeModifier=ability_mod['dex'] + modifier_total('initiative', effects),
                 conditionFlags=sorted(flags), size=profile['sizeId'], reachFt=profile['reachFt'], abilityScores=abilities, abilityModifiers=ability_mod, ac=ac, saves=saves,
                 weaponFocusChoices=focus_choices, weaponFocusGrants=focus_grants, grappleBonus=grapple,
                 specialAttackModifiers=focused_specials,
@@ -317,7 +335,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                                    for key in ('spell-focus', 'greater-spell-focus')},
                 spellFocusGrants=focus_grants_for_sheet(core, feat_choices), knownSpells=known_spells, familiarSpellGrants=familiar_spells, familiarSpellChoices=familiar_options,
                 companions=[project_companion(core, history, link, master_max_hp=master_max_hp,
-                                              master_skill_ranks=skill_ranks) for link in companion_links],
+                                              master_skill_ranks=skill_ranks, after_level_loss=after_level_loss) for link in companion_links],
                 equipmentSlots=slots, twoWeaponRoutine=routine, attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
                 landSpeedFt=speed, armorCheckPenalty=check_penalty,
                 damageReduction=project_damage_reduction(core, history.get('classLevels', {}), damage_reduction_grants),

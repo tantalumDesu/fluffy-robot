@@ -192,20 +192,20 @@ class DerivedSheetTest(unittest.TestCase):
 
     def test_familiar_spell_choices_and_repeated_grants(self):
         from tools.feat_selection import check_familiar_spell_selection
-        known = {'chain-lightning': 6, 'magic-missile': 1, 'time-stop': 9, 'fireball': 3, 'wish': 8}
+        known = {'chain-lightning': 6, 'magic-missile': 1, 'time-stop': 9, 'fireball': 3, 'identify': 1, 'wish': 8}
         picks = [dict(featId='familiar-spell', choices={'spellId': key})
                  for key in ('chain-lightning', 'magic-missile', 'magic-missile')]
         sheet = self.sheet(known_spell_levels=known, feat_choices=picks)
         self.assertEqual([o['spellId'] for o in sheet['familiarSpellChoices']['eligible']],
-                         ['magic-missile', 'chain-lightning'])
-        self.assertEqual([o['spellId'] for o in sheet['familiarSpellChoices']['needsReview']], ['fireball'])
+                         ['magic-missile', 'fireball', 'chain-lightning'])
+        self.assertEqual([o['spellId'] for o in sheet['familiarSpellChoices']['needsReview']], ['identify'])
         self.assertEqual([o['label'] for o in sheet['familiarSpellGrants']],
                          ['Familiar Spell, Chain Lightning 1/day', 'Familiar Spell, Magic Missile 2/day'])
         facts = dict(feats=picks, characterLevel=21, hasFamiliar=True, abilityScores={'int': 25})
         self.assertEqual(check_familiar_spell_selection(self.core, facts, 'magic-missile',
                          known_spell_levels=known)['status'], 'eligible')
-        self.assertEqual(check_familiar_spell_selection(self.core, facts, 'fireball',
-                         known_spell_levels=known, verified_material_cost_gp={'fireball': 2})['status'], 'ineligible')
+        self.assertEqual(check_familiar_spell_selection(self.core, facts, 'identify',
+                         known_spell_levels=known, verified_material_cost_gp={'identify': 100})['status'], 'ineligible')
 
     def test_weapon_focus_choices_and_dynamic_ray_spells(self):
         from tools.feat_selection import check_weapon_focus_selection
@@ -278,3 +278,13 @@ class DerivedSheetTest(unittest.TestCase):
         self.assertTrue(familiar_spell_choices(core, known)['eligible'])
         core['feats']['byId']['familiar-spell']['spellGrant']['maximumKnownSpellLevel'] = 5
         self.assertFalse(familiar_spell_choices(core, known)['eligible'])
+
+    def test_deity_weapon_inherits_focus_only_for_selected_actor(self):
+        blade = dict(instanceId='blade', itemId='weapon:longsword', proficient=True)
+        item = self.core['inventory']['itemsById']
+        self.assertEqual(item['gear:holly']['divineFocus']['kind'], 'nature')
+        self.assertEqual(item['gear:holy-symbol-wooden']['divineFocus']['kind'], 'holy-symbol')
+        self.assertNotIn('divineFocus', self.sheet(equipment=[blade])['attacks'][0])
+        focus = self.sheet(equipment=[blade], holy_weapon_id='weapon:longsword')['attacks'][0]['divineFocus']
+        self.assertEqual(focus, {'kind': 'holy-symbol', 'requiresEquipped': True, 'via': 'deity-weapon'})
+        self.assertNotIn('divineFocus', item['weapon:longsword'])

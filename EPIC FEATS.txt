@@ -2,7 +2,7 @@ EPIC FEATS
 
 All epic feats require a minimum character level of 21, in addition to any prerequisites in the individual feat entry.
 
-For Improved Spell Capacity, satisfy any one row for a spellcasting class. For Spell Knowledge, only arcane rows qualify. Use the effective spellcasting progression level for that class, not a caster-level bonus that does not advance spells. The ability score must be for the same class as the level. Alternate rows account for gaining the class's highest normal spell slot through bonus spells before a base slot is available.
+For Improved Spell Capacity, satisfy any one row for a spellcasting class. Use the effective spellcasting progression level for that class, not a caster-level bonus that does not advance spells. The ability score must be for the same class as the level. Alternate rows account for gaining the class's highest normal spell slot through bonus spells before a base slot is available.
 
 Table: Normal Maximum Spellcasting Prerequisites
 Class	Tradition	Ability	Minimum Spellcasting Level	Minimum Ability Score
@@ -20,12 +20,16 @@ assassin	arcane	int	7	20
 assassin	arcane	int	8	14
 blackguard	divine	wis	7	20
 blackguard	divine	wis	8	14
+adept	divine	wis	16	20
+adept	divine	wis	17	15
+magewright	arcane	int	16	20
+magewright	arcane	int	17	15
 
 FAMILIAR SPELL [EPIC]
 
 Prerequisite: Int 25, familiar.
 
-Benefit: Choose one spell you know of 8th level or lower, such as chain lightning or circle of death. Your familiar can now cast this spell once per day as a spell-like ability as a caster of a level equal to your caster level. You cannot bestow a spell upon your familiar if the spell normally has a material component cost of more than 1 gp, or any XP cost.
+Benefit: Choose one spell you know of 8th level or lower, such as chain lightning or circle of death. Your familiar can now cast this spell once per day as a spell-like ability as a caster of a level equal to your caster level. You cannot bestow a spell upon your familiar if the spell normally has a material component cost of more than 1 gp, or any XP cost. Unpriced material components are considered negligible.
 
 Special: You can gain this feat multiple times. Each time you take the feat, you can give your familiar a new spell-like ability, or another daily use of the same spell-like ability.
 GREAT SMITING [EPIC]
@@ -98,9 +102,11 @@ Prerequisites: Wis 25, Cha 25, ability to turn or rebuke undead.
 Benefit: You can turn or rebuke outsiders as if they were undead. An outsider has effective turn resistance equal to half its spell resistance (round down). If you can turn undead, you turn (or destroy) all evil outsiders and rebuke (or command) all nonevil outsiders. If you can rebuke undead, you rebuke (or command) all evil outsiders and turn (or destroy) all nonevil outsiders.
 SPELL KNOWLEDGE [EPIC]
 
-Prerequisite: Ability to cast spells of the maximum normal spell level of an arcane spellcasting class.
+Prerequisite: At least one level in the chosen arcane spellcasting class and the ability to cast at least one spell in that class.
 
 Benefit: You learn two new arcane spells of any level up to the maximum level you can cast. This feat does not grant any additional spell slots.
+
+Table ruling: Choose any arcane spell. Use the receiving class list level when available; otherwise use the confirmed arcane source list level. Choose an eligible arcane casting class independently of the class gained at level-up. If Wizard is chosen, accessible spellbook space for both spells is a prerequisite and both spells are inscribed automatically. Other tracks do not require spellbook space. Wizard prohibited schools still apply.
 
 Special: You can gain this feat multiple times.
 TERRIFYING RAGE [EPIC]

@@ -11,6 +11,17 @@ else:
     from game_time import seconds
 
 
+def level_loss_catalog(lines, source):
+    file = 'SPECIAL ABILITIES.txt'
+    rows = lines(file)
+    start = rows.index('LEVEL LOSS')
+    end = rows.index('LOW-LIGHT VISION', start)
+    return dict(hitDicePerLevel=1, xpAfter='midpoint-of-new-effective-level', requiresRecordedLevelGrants=True,
+                unknownAbilityGain='highest-score', unknownSkillPurchases='highest-ranks',
+                reprojectCompanions=True, source=source(file, line=start + 1, endLine=end),
+                description='\n'.join(rows[start + 1:end]).strip())
+
+
 def negative_level_rules(lines):
     source = 'SPECIAL ABILITIES.txt'
     line = lines(source).index('ENERGY DRAIN AND NEGATIVE LEVELS') + 1

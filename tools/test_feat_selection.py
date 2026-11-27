@@ -72,7 +72,7 @@ class FeatSelectionTest(unittest.TestCase):
                 self.assertEqual(qualifies(capacity, {class_id: level}, {ability: score}), 'eligible')
                 self.assertEqual(qualifies(capacity, {class_id: level}, {ability: score - 1}), 'ineligible')
                 arcane = class_id in ('wizard', 'sorcerer', 'bard', 'assassin')
-                self.assertEqual(qualifies(knowledge, {class_id: level}, {ability: score}),
+                self.assertEqual(qualifies(knowledge, {class_id: level}, {ability: score}, choices={'castingClassId': class_id}),
                                  'eligible' if arcane else 'ineligible')
 
         self.assertEqual(qualifies(capacity, {'wizard': 17, 'druid': 16}, {'int': 18, 'wis': 30}), 'ineligible')

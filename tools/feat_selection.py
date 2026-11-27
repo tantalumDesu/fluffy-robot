@@ -79,9 +79,14 @@ def encode_feats(feats, maximum_casting_rows):
             requirements = [dict(kind='baseAttackBonus', minimum=1),
                             dict(kind='ability', key='str', minimum=13,
                                  whenWeaponIds=['weapon:sword-bastard', 'weapon:waraxe-dwarven'])]
-        if key in ('improved-spell-capacity', 'spell-knowledge'):
-            requirements = [dict(kind='maximumNormalSpellcasting', anyOf=[option for option in casting_options
-                            if key == 'improved-spell-capacity' or option['tradition'] == 'arcane'])]
+        if key == 'improved-spell-capacity':
+            requirements = [dict(kind='maximumNormalSpellcasting', anyOf=casting_options)]
+        if key == 'spell-knowledge':
+            requirements = [dict(kind='arcaneCastingClass', minimum=1,
+                                 classIds=sorted({option['classId'] for option in casting_options
+                                                  if option['tradition'] == 'arcane'}))]
+        if key == 'improved-natural-attack':
+            requirements = [dict(kind='baseAttackBonus', minimum=4), dict(kind='naturalWeapon')]
         if key == 'improved-familiar':
             requirements = [dict(kind='familiarAcquisitionAbility')]
         if key == 'greater-spell-focus':
@@ -156,7 +161,8 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
         existing = owns(feat_id, choice_key if selection['distinctChoice'] else None, choice_value)
         check(None if existing is None else not existing, 'Feat already possessed for this selection')
     if selection['choiceNeedsReview']:
-        verified = snapshot.get('eligibleChoiceIdsByFeat', {}).get(feat_id)
+        verified = (snapshot.get('naturalAttackIds') if feat_id == 'improved-natural-attack' else
+                    snapshot.get('eligibleChoiceIdsByFeat', {}).get(feat_id))
         check(None if not choice_key or verified is None or not choice_value else choice_value in verified,
               'Verify feat-specific selection restrictions against the benefit text')
     if feat_id == 'spell-mastery':
@@ -183,10 +189,21 @@ def check_feat_selection(feats, feat_id, snapshot, *, choices=None, monk_bonus_s
             requirements = []
     for req in requirements:
         kind, key = req['kind'], req.get('key')
+        if kind == 'naturalWeapon':
+            ids = snapshot.get('naturalAttackIds')
+            check(None if ids is None else choice_value in ids, 'Possess the chosen natural weapon type')
+            continue
+        if kind == 'arcaneCastingClass':
+            track = choices.get('castingClassId')
+            levels = snapshot.get('classLevels', snapshot.get('spellcastingLevels'))
+            check(None if track is None or levels is None else
+                  track in req['classIds'] and levels.get(track, 0) >= req['minimum'],
+                  'At least one level in the chosen arcane casting class')
+            continue
         if kind == 'maximumNormalSpellcasting':
             levels = snapshot.get('spellcastingLevels')
             scores = snapshot.get('abilityScores', {})
-            selected_class = choices.get('castingClassId') if feat_id == 'improved-spell-capacity' else None
+            selected_class = choices.get('castingClassId')
             outcomes = []
             for option in req['anyOf']:
                 class_id = option['classId']

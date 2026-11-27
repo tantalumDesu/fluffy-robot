@@ -7665,7 +7665,9 @@ The subject becomes paralyzed and freezes in place. It is aware and breathes nor
 
 A winged creature who is paralyzed cannot flap its wings and falls. A swimmer can’t swim and may drown.
 
-Arcane Focus: A small, straight piece of iron.
+Arcane Material Component: A small, straight piece of iron.
+
+Divine Focus: Use the divine focus when cast through a divine class or domain slot.
 
 Unlike hold person, this spell affects a single monster instead of a humanoid.
 Class: Bard, Sorcerer/Wizard
