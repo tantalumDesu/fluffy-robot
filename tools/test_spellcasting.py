@@ -184,7 +184,7 @@ class SpellcastingTest(unittest.TestCase):
 
     def test_generated_profiles_and_caster_levels(self):
         from tools.spellcasting import base_caster_level
-        profiles = self.core['magic']['castingProfilesByClassId']
+        profiles = self.core['magic']['castingPoliciesByClassId']
         self.assertEqual(profiles['cleric']['conversion']['familyBySpellId']['cure-light-wounds'], 'cure')
         self.assertEqual(base_caster_level(self.core, 'paladin', 3), 0)
         self.assertEqual(base_caster_level(self.core, 'ranger', 7, prestige_advancement=2), 5)

@@ -167,3 +167,33 @@ Breastplate, scale mail, chainmail, banded mail, or splint mail 	4 minutes1 	1 m
 Half-plate or full plate 	4 minutes2 	4 minutes1 	1d4+1 minutes1
 1 If the character has some help, cut this time in half. A single character doing nothing else can help one or two adjacent characters. Two characters can’t help each other don armor at the same time.
 2 The wearer must have help to don this armor. Without help, it can be donned only hastily.
+
+BARDING, MEDIUM CREATURE AND LARGE CREATURE
+
+Barding is armor that covers the head, neck, chest, body, and possibly the legs of a horse or other mount. It can be made from any suit of armor on Table: Armor and Shields. Medium and heavy barding offer greater protection than light barding but slow the mount. Use the corresponding armor entry for armor bonus, maximum Dexterity bonus, armor check penalty, and arcane spell failure. Use the barding speed table below instead of the humanoid speed columns.
+
+Compared with armor for a Medium humanoid, Medium nonhumanoid barding costs twice as much and weighs the same. Large nonhumanoid barding costs four times as much and weighs twice as much. The following prices and weights already include those adjustments; do not apply the unusual-creature multipliers again.
+
+Table: Medium and Large Barding
+Base Armor	Armor Category	Medium Mount Cost	Medium Mount Weight	Large Mount Cost	Large Mount Weight
+Padded	Light armor	10 gp	10 lb.	20 gp	20 lb.
+Leather	Light armor	20 gp	15 lb.	40 gp	30 lb.
+Studded leather	Light armor	50 gp	20 lb.	100 gp	40 lb.
+Chain shirt	Light armor	200 gp	25 lb.	400 gp	50 lb.
+Hide	Medium armor	30 gp	25 lb.	60 gp	50 lb.
+Scale mail	Medium armor	100 gp	30 lb.	200 gp	60 lb.
+Chainmail	Medium armor	300 gp	40 lb.	600 gp	80 lb.
+Breastplate	Medium armor	400 gp	30 lb.	800 gp	60 lb.
+Splint mail	Heavy armor	400 gp	45 lb.	800 gp	90 lb.
+Banded mail	Heavy armor	500 gp	35 lb.	1,000 gp	70 lb.
+Half-plate	Heavy armor	1,200 gp	50 lb.	2,400 gp	100 lb.
+Full plate	Heavy armor	3,000 gp	50 lb.	6,000 gp	100 lb.
+
+Table: Barding Speed
+Barding Category	Base Speed (40 ft.)	Base Speed (50 ft.)	Base Speed (60 ft.)
+Medium	30 ft.	35 ft.	40 ft.
+Heavy	30 ft.	35 ft.	40 ft.
+
+Light barding does not reduce speed. A mount wearing heavy armor runs at only triple its normal speed instead of quadruple. Flying mounts cannot fly while wearing medium or heavy barding.
+
+Fitting and removing barding take five times as long as the corresponding times on Table: Donning Armor. A barded animal cannot carry any load other than its rider and normal saddlebags. Normal saddlebags can hold up to the mount’s light load. Their contents, the bags and other fitted tack, the barding, and the rider and the rider’s gear all count toward the mount’s total carried load.

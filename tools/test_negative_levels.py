@@ -37,9 +37,9 @@ class NegativeLevelsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             resolve_drain_level(self.rules, levels, levels[0]['id'], 86411, fortitude_total=19)
         result = resolve_drain_level(self.rules, levels, levels[0]['id'], 86412, fortitude_total=14)
-        self.assertEqual((result['permanentLevelLoss'], result['levels']), (1, levels[1:]))
+        self.assertEqual((result['drainedLevel'], result['levels']), (1, levels[1:]))
         self.assertEqual(resolve_drain_level(self.rules, levels, levels[0]['id'], 12, restoration=True)
-                         ['permanentLevelLoss'], 0)
+                         ['drainedLevel'], 0)
         self.assertEqual(create_drain_levels(self.rules, 'spell', 1, 0, kind='spell-or-similar', save_dc=14)
                          ['bestowerTemporaryHp'], 0)
         self.assertEqual(drain_death_aftermath()['creatureTypeId'], 'wight')

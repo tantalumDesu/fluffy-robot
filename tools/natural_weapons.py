@@ -44,6 +44,18 @@ def creature_roster(text):
             for count, name, bonus, mode, damage in re.findall(pattern, routine, re.I)]
 
 
+def pounce_roster(text):
+    """Rake is two extra claws after a confirmed pounce (a charge)."""
+    if not re.search(r'^Pounce \(Ex\):.*\btwo rake attacks\b', text, re.M | re.I):
+        return []
+    rake = re.search(r'^Rake \(Ex\): Attack bonus ([+−–-]\d+) melee, damage ([^\s.]+)', text, re.M | re.I)
+    if rake is None:
+        return []
+    bonus, damage = rake.groups()
+    return [weapon('claw', damage, count=2, attackBonus=int(bonus.replace('−', '-').replace('–', '-')),
+                   attackMode='melee', attackLabel='Rake', requiresConfirmedPounce=True)]
+
+
 def selection_ids(*rosters):
     return {entry['naturalAttackId'] for roster in rosters for entry in roster}
 
@@ -72,5 +84,11 @@ def project(core, roster, feats):
 
 def form_roster(core, form_id, custom_forms=None):
     if form_id in (custom_forms or {}):
-        return custom_forms[form_id]
+        return [entry for entry in custom_forms[form_id] if not entry.get('requiresConfirmedPounce')]
     return core['companions']['creaturesById'][form_id]['naturalWeapons']
+
+
+def form_pounce_roster(core, form_id, custom_forms=None):
+    if form_id in (custom_forms or {}):
+        return [entry for entry in custom_forms[form_id] if entry.get('requiresConfirmedPounce')]
+    return core['companions']['creaturesById'][form_id].get('pounceNaturalWeapons', ())

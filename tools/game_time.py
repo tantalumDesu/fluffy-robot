@@ -45,7 +45,7 @@ def new_encounter(actor_order, *, start_seconds=0, surprise_actors=None, encount
         aware = None
     return dict(order=actors, surpriseActors=aware, round=0 if aware is not None else 1,
                 index=-1, startSeconds=start_seconds, encounterId=start_seconds if encounter_id is None else encounter_id,
-                phase='between-turns', actions={}, pending={})
+                phase='between-turns', actions={}, pending={}, mountedByRiderId={}, actedActorIdsThisRound=[])
 
 
 def encounter_clock(encounter):
@@ -65,9 +65,13 @@ def start_next_turn(encounter, *, condition_flags_by_actor=None, condition_flags
         if state['index'] == len(state['order']):
             state['index'] = 0
             state['round'] += 1
+            state['actedActorIdsThisRound'] = []
         actor = state['order'][state['index']]
-        if state['round'] != 0 or actor in state['surpriseActors']:
+        active_mount = actor in state.get('mountedByRiderId', {}).values()
+        mount_used = state.get('mountMovementByInstanceId', {}).get(actor, {}).get('round') == state['round']
+        if not (active_mount or mount_used) and (state['round'] != 0 or actor in state['surpriseActors']):
             break
+    state.setdefault('actedActorIdsThisRound', []).append(actor)
     state['phase'] = 'start'
     state['actions'] = dict(standard=1, move=int(state['round'] != 0), quickened=False)
     state['spentActions'] = []

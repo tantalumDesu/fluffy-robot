@@ -4,6 +4,11 @@ Sheet modifiers/flags are executable; event operations need an encounter consume
 """
 
 
+def condition_policies(core):
+    """Index canonical condition records without serializing a second copy."""
+    return {record['id']: record['mechanics'] for record in core['effects']['conditions']}
+
+
 def catalog(lines):
     result = {}
 

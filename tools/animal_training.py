@@ -23,7 +23,7 @@ def training_rules(lines):
     tricks['attack-all'] = dict(tricks['attack'], slots=2, replaces='attack')
     purposes['combat-riding']['upgradeFromRiding'] = {'weeks': 3, 'replacesLearnedTricks': True}
     return dict(skillId='handle-animal', tricksById=tricks, purposesById=purposes,
-                normalTrickSlotsByInt={'1': 3, '2': 6}, hoursPerDay=3, daysPerWeek=7,
+                normalTrickSlotsByInt={'1': 3, '2': 6}, nonAnimalTrainingDcIncrease=5, hoursPerDay=3, daysPerWeek=7,
                 checkAtFraction=0.5, handleDc=10, pushDc=25, injuredDcIncrease=2,
                 source={'file': 'SKILLS.txt', 'line': start + 1})
 
@@ -35,30 +35,89 @@ def known_tricks(state):
     return result
 
 
-def plan_training(rules, creature, state, *, kind, choice_id, handler_ranks, has_scent=False,
-                  purpose_eligible=False):
+class TrainingIneligible(ValueError):
+    def __init__(self, code, message, status='blocked'):
+        super().__init__(message)
+        self.code = code
+        self.status = status
+
+
+def _listed_scent(creature):
+    text = creature.get('statBlockText') or creature.get('raw', '')
+    return True if re.search(r'^\s*Scent\s*$', text, re.I | re.M) else None
+
+
+def training_choices(rules, creature, state, *, handler_ranks, has_scent=None,
+                     purpose_suitability=None, friendly_confirmed=None):
+    """List training choices using the same prerequisites as the plan builder.
+
+    Suitability is keyed by purpose ID. True/False confirms or rules out a
+    purpose; a missing entry leaves physical suitability for adjudication.
+    """
+    suitability = purpose_suitability or {}
+    known = known_tricks(state)
+    result = {'tricksById': {}, 'purposesById': {}}
+    for kind, key in (('trick', 'tricksById'), ('purpose', 'purposesById')):
+        for choice_id, record in rules[key].items():
+            entry = dict(source=record['source'])
+            if (kind == 'trick' and choice_id in known or
+                    kind == 'purpose' and choice_id == state.get('purposeId')):
+                entry.update(status='known')
+            else:
+                try:
+                    plan = plan_training(rules, creature, state, kind=kind, choice_id=choice_id,
+                                         handler_ranks=handler_ranks, has_scent=has_scent,
+                                         purpose_eligible=suitability.get(choice_id),
+                                         friendly_confirmed=friendly_confirmed)
+                except TrainingIneligible as exc:
+                    entry.update(status=exc.status, reasonId=exc.code, reason=str(exc))
+                else:
+                    after = known_tricks(plan['resultingState'])
+                    entry.update(status='available', dc=plan['dc'], totalHours=plan['totalHours'],
+                                 checkAtHours=plan['checkAtHours'],
+                                 gainsTrickIds=sorted(after - known), losesTrickIds=sorted(known - after))
+            result[key][choice_id] = entry
+    return result
+
+
+def plan_training(rules, creature, state, *, kind, choice_id, handler_ranks, has_scent=None,
+                  purpose_eligible=None, friendly_confirmed=None):
     """Plan training; caller confirms species/physical suitability for a purpose."""
     if handler_ranks <= 0:
-        raise ValueError('Training requires ranks in Handle Animal')
+        raise TrainingIneligible('handler-ranks', 'Training requires ranks in Handle Animal')
+    if kind == 'purpose' and choice_id == 'combat-riding' and (special := creature.get('combatRidingTraining')):
+        if state.get('purposeId') == 'combat-riding':
+            raise TrainingIneligible('already-known', 'Creature is already trained for combat riding')
+        if state.get('purposeId') not in (None, 'riding'):
+            raise TrainingIneligible('existing-purpose', 'Creature already has a general purpose')
+        if special['requiresFriendly'] and friendly_confirmed is not True:
+            raise TrainingIneligible('friendliness', 'Confirm the mount is friendly before starting training',
+                                     'blocked' if friendly_confirmed is False else 'needs-review')
+        if purpose_eligible is not True:
+            raise TrainingIneligible('purpose-suitability', 'Confirm the mount is physically suitable',
+                                     'blocked' if purpose_eligible is False else 'needs-review')
+        hours = special['weeks'] * rules['daysPerWeek'] * rules['hoursPerDay']
+        return dict(dc=special['dc'], checkAtHours=hours * rules['checkAtFraction'], totalHours=hours,
+                    workTiming={'unit': 'hour', 'amount': hours, 'hoursPerDay': rules['hoursPerDay'],
+                                'checkAtFraction': rules['checkAtFraction']},
+                    resultingState=dict(state, purposeId='combat-riding'))
     limit = rules['normalTrickSlotsByInt'].get(str(creature['abilityScores']['int']))
     if limit is None:
-        raise ValueError('No supported trick capacity for this animal')
+        raise TrainingIneligible('unsupported-intelligence', 'No supported trick capacity for this creature')
     learned = set(state.get('learnedTrickIds', ()))
     purpose = state.get('purposeId')
     if kind == 'trick':
         record = rules['tricksById'][choice_id]
         if choice_id in known_tricks(state):
-            raise ValueError('Animal already knows the trick')
+            raise TrainingIneligible('already-known', 'Creature already knows the trick')
         learned.discard(record.get('replaces'))
         learned.add(choice_id)
         tricks_to_check = {choice_id}
     elif kind == 'purpose':
         record = rules['purposesById'][choice_id]
-        if not purpose_eligible:
-            raise ValueError('Confirm animal is physically suitable for this purpose')
         upgrade = purpose == 'riding' and choice_id == 'combat-riding'
         if purpose and not upgrade:
-            raise ValueError('Animal already has a general purpose')
+            raise TrainingIneligible('existing-purpose', 'Creature already has a general purpose')
         tricks_to_check = set(record['tricks'])
         if upgrade:
             record = dict(record, **record['upgradeFromRiding'])
@@ -69,12 +128,23 @@ def plan_training(rules, creature, state, *, kind, choice_id, handler_ranks, has
         purpose = choice_id
     else:
         raise ValueError('Training kind must be trick or purpose')
-    if not has_scent and any(rules['tricksById'][trick].get('requiresScent') for trick in tricks_to_check):
-        raise ValueError('Track requires scent')
+    if any(rules['tricksById'][trick].get('requiresScent') for trick in tricks_to_check):
+        scent = _listed_scent(creature) if has_scent is None else has_scent
+        if scent is not True:
+            raise TrainingIneligible('requires-scent', 'Track requires scent',
+                                     'blocked' if scent is False else 'needs-review')
     if sum(rules['tricksById'][trick]['slots'] for trick in learned) > limit:
-        raise ValueError('Training would exceed the normal trick limit')
+        raise TrainingIneligible('trick-capacity', 'Training would exceed the normal trick limit')
+    if kind == 'purpose' and purpose_eligible is not True:
+        raise TrainingIneligible('purpose-suitability', 'Confirm creature is physically suitable for this purpose',
+                                 'blocked' if purpose_eligible is False else 'needs-review')
+    classification = creature.get('classification') or ''
+    creature_type = creature.get('creatureType')
+    non_animal = (creature_type.lower() != 'animal' if creature_type else
+                  bool(classification and not re.match(r'^\w+ Animal\b', classification, re.I)))
+    dc = record['dc'] + (rules['nonAnimalTrainingDcIncrease'] if non_animal else 0)
     hours = record['weeks'] * rules['daysPerWeek'] * rules['hoursPerDay']
-    return dict(dc=record['dc'], checkAtHours=hours * rules['checkAtFraction'], totalHours=hours,
+    return dict(dc=dc, checkAtHours=hours * rules['checkAtFraction'], totalHours=hours,
                 workTiming={'unit': 'hour', 'amount': hours, 'hoursPerDay': rules['hoursPerDay'],
                             'checkAtFraction': rules['checkAtFraction']},
                 resultingState=dict(state, purposeId=purpose, learnedTrickIds=sorted(learned)))

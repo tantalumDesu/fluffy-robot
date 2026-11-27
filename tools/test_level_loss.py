@@ -1,6 +1,8 @@
 import json
 import unittest
 
+from tools.test_level_drain_lifecycle import fail_drain
+
 from tools.drain_history import (apply_permanent_level_loss, derive_level_loss_sheet,
                                  projected_level_grants)
 from tools.organize_core import PATH
@@ -54,13 +56,13 @@ class LevelLossTest(unittest.TestCase):
         advanced = record_level_choices(self.core, actor, 'human', class_id='druid', xp_award=3000, choices=fourth)
         self.assertEqual(advanced['levelGrantsByLevel']['4']['hpGain'], 10)
         self.assertEqual(advanced['skillRanks']['concentration'], 6)
-        lost = apply_permanent_level_loss(self.core, advanced, 'loss:4', 0)
+        lost = fail_drain(self.core, advanced, 'loss:4')
         lower = projected_level_grants(self.core, lost)
         self.assertEqual(lower['maxHp'], actor['maxHp'])
         self.assertEqual(lower['abilityScores'], actor['abilityScores'])
         self.assertEqual(lower['skillRanks'], actor['skillRanks'])
         from tools.drain_history import restore_character_drain
-        restored = restore_character_drain(self.core, lost, 'restoration', 1, 7)
+        restored = restore_character_drain(self.core, lost, 'restoration', 86401, 7)
         active = projected_level_grants(self.core, restored)
         for field in ('maxHp', 'abilityScores', 'skillRanks', 'featChoices'):
             self.assertEqual(active[field], advanced[field])

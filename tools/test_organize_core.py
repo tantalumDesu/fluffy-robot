@@ -97,7 +97,7 @@ class CoreTest(unittest.TestCase):
             'ox': (400, 800, 1200, 6000), 'horse-light': (150, 300, 450, 2250),
             'horse-heavy': (200, 400, 600, 3000),
         }.items():
-            capacity = pack[key]['carryingCapacity']
+            capacity = creatures[pack[key]['creatureId']]['carryingCapacity']
             self.assertEqual(tuple(capacity[k] for k in ('lightLb', 'mediumLb', 'heavyLb', 'dragLb')), limits)
         self.assertNotIn('donkey-or-mule', pack)
         items = self.core['inventory']['itemsById']
@@ -110,7 +110,7 @@ class CoreTest(unittest.TestCase):
         self.assertEqual((ox['baseAttackBonus'], ox['grappleBonus'], ox['saves']['will']), (2, 11, 1))
         for profile in pack.values():
             beast = creatures[profile['creatureId']]
-            self.assertFalse(beast['combatTrained'])
+            self.assertNotIn('combatTrained', beast)
             self.assertEqual(beast['attacks'], [])
             self.assertNotIn('attackText', beast)
             self.assertNotIn('fullAttackText', beast)
@@ -136,6 +136,32 @@ class CoreTest(unittest.TestCase):
             text = (ROOT / anchor['file']).read_text(encoding='utf-8').splitlines()
             self.assertEqual(text[anchor['line'] - 1], creature['name'])
             self.assertEqual(set(creature['abilityScores']), set(('str', 'dex', 'con', 'int', 'wis', 'cha')))
+
+    def test_canonical_core_shapes_have_no_mechanical_mirrors(self):
+        from tools.creature_size import race_size_id
+
+        sizes = self.core['mechanics']['sizeCategoriesById']
+        for race in self.core['progression']['races']:
+            self.assertIn(race_size_id(self.core, race['id']), sizes)
+            self.assertTrue(all('size' not in race[block] for block in ('own', 'effective')))
+        drow = next(r for r in self.core['progression']['races'] if r['id'] == 'drow')
+        self.assertNotIn('sizeId', drow)
+        self.assertEqual(race_size_id(self.core, 'drow'), 'medium')
+        for catalog in ('creaturesById', 'improvedFamiliarOptionsById'):
+            for creature in self.core['companions'][catalog].values():
+                self.assertIn(creature['sizeId'], sizes)
+                self.assertNotIn('size', creature)
+                self.assertNotIn('saddleSizeId', creature['mountProfile'])
+        inventory = self.core['inventory']
+        for link in inventory['packAnimalsById'].values():
+            self.assertIn(link['creatureId'], self.core['companions']['creaturesById'])
+            self.assertIn(link['purchaseItemId'], inventory['itemsById'])
+            self.assertNotIn('carryingCapacity', link)
+            self.assertNotIn('initialTraining', link)
+        self.assertNotIn('sheetConditionRulesById', self.core['effects'])
+        self.assertNotIn('castingProfilesByClassId', self.core['magic'])
+        for policy in self.core['magic']['castingPoliciesByClassId'].values():
+            self.assertFalse({'tradition', 'mode', 'spellListId', 'allowsDomainSlots'} & policy.keys())
 
 
 if __name__ == '__main__':

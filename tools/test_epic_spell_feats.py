@@ -1,6 +1,8 @@
 import json
 import unittest
 
+from tools.test_level_drain_lifecycle import fail_drain
+
 from tools.drain_history import apply_permanent_level_loss, projected_level_grants, restore_character_drain
 from tools.epic_spell_feats import active_spellbooks, apply_epic_spell_pick, epic_known_levels
 from tools.level_choices import record_level_choices
@@ -55,10 +57,10 @@ class EpicSpellFeatsTest(unittest.TestCase):
         advanced['spellbooksById']['a']['damagedSpellIds'] = ['animal-messenger']
         with self.assertRaisesRegex(ValueError, 'accessible spellbook'):
             prepare(active_spellbooks(advanced, feats, ['a', 'b']))
-        lost = apply_permanent_level_loss(self.core, advanced, 'loss', 0)
+        lost = fail_drain(self.core, advanced, 'loss')
         self.assertEqual(projected_level_grants(self.core, lost)['featChoices'], [])
         self.assertEqual(active_spellbooks(lost, [], ['b'])[0]['spellsById'], {})
-        restored = restore_character_drain(self.core, lost, 'restoration', 1, 7)
+        restored = restore_character_drain(self.core, lost, 'restoration', 86401, 7)
         active = projected_level_grants(self.core, restored)['featChoices']
         self.assertEqual(epic_known_levels(active, 'wizard'), {'animal-messenger': 2, 'fireball': 3})
         self.assertEqual(active_spellbooks(restored, active, ['a', 'b'])[0]['spellsById'], {})
@@ -70,7 +72,10 @@ class EpicSpellFeatsTest(unittest.TestCase):
         base = feat_slot_budget(self.core, 'sorcerer', 21, 24)
         self.assertEqual(feat_slot_budget(self.core, 'sorcerer', 21, 24, feat_choices=[pick]), base)
         plan = plan_cast(self.core, 'sorcerer', 'animal-messenger', 24, feat_choices=[pick])
-        slots = spend_slot(new_slots('sorcerer', base), 'regular:2:0', plan)
+        ledger = new_slots('sorcerer', base)
+        with self.assertRaisesRegex(ValueError, 'not prepared, known'):
+            spend_slot(ledger, 'regular:2:0', plan, known_spell_ids=())
+        slots = spend_slot(ledger, 'regular:2:0', plan, known_spell_ids=epic_known_levels([pick], 'sorcerer'))
         self.assertTrue(slots['slots']['regular:2:0']['expended'])
 
     def test_multiclass_pick_depends_on_receiving_track_not_new_class(self):
@@ -101,3 +106,22 @@ class EpicSpellFeatsTest(unittest.TestCase):
             apply_epic_spell_pick(self.core, {}, pick, facts)
         with self.assertRaisesRegex(ValueError, 'at least one spell'):
             apply_epic_spell_pick(self.core, {}, pick, dict(facts, abilityScores={'cha': 9}))
+
+    def test_cached_plan_requires_active_spell_knowledge_after_loss(self):
+        from tools.drain_history import apply_permanent_level_loss, projected_level_grants, restore_character_drain
+        actor = dict(classChoices=['sorcerer'] * 2 + ['fighter'] * 18, xp=190000, maxHp=100,
+                     abilityScores=dict(cha=16, int=12, con=12))
+        advanced = record_level_choices(self.core, actor, 'elf', class_id='fighter', xp_award=20000,
+            choices=dict(hitDieRoll=5, abilityIncreases={}, skillRanks={}, featChoices=[dict(
+                featId='spell-knowledge', choices=dict(castingClassId='sorcerer', spells=[
+                    dict(spellId='cure-light-wounds'), dict(spellId='confusion-lesser')]))]))
+        plan = plan_cast(self.core, 'sorcerer', 'cure-light-wounds', 16, feat_choices=advanced['featChoices'])
+        slots = new_slots('sorcerer', {('regular', 1): 1})
+        lost = fail_drain(self.core, advanced, 'loss')
+        known = projected_level_grants(self.core, lost)['knownSpellIdsByClassId']
+        with self.assertRaisesRegex(ValueError, 'not prepared, known'):
+            spend_slot(slots, 'regular:1:0', plan, known_spell_ids=known.get('sorcerer', ()))
+        restored = restore_character_drain(self.core, lost, 'restoration', 86401, 7)
+        known = projected_level_grants(self.core, restored)['knownSpellIdsByClassId']
+        self.assertTrue(spend_slot(slots, 'regular:1:0', plan,
+                                  known_spell_ids=known['sorcerer'])['slots']['regular:1:0']['expended'])

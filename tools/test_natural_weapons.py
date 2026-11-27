@@ -24,5 +24,9 @@ class NaturalWeaponsTest(unittest.TestCase):
             self.assertEqual((claw['naturalAttackId'], claw['count'], claw['damageDice']), ('claw', 2, die))
             self.assertEqual(bite, form_roster(core, form)[1])
             self.assertEqual(sheet['improvedNaturalAttackChoices'], ['bite'])
+        charge = derive_level_loss_sheet(core, dict(actor, activeNaturalFormId=tiger), 'elf', confirmed_pounce=True)
+        rake = charge['naturalWeapons'][-1]
+        self.assertEqual((rake['attackLabel'], rake['naturalAttackId'], rake['count'], rake['damageText']),
+                         ('Rake', 'claw', 2, '2d6+3'))
         self.assertEqual(derive_level_loss_sheet(core, actor, 'elf')['naturalWeapons'], [])
         self.assertEqual(project(core, form_roster(core, bear), [pick, pick])[0]['damageDice'], '1d6')

@@ -27,8 +27,9 @@ if __package__:
     from .alignment import alignment_catalog
     from .creature_size import catalogs as size_catalogs
     from .animal_training import training_rules
+    from .mounted import mount_profile, mounted_catalog
     from .feat_selection import encode_feats
-    from .natural_weapons import catalog as natural_weapon_catalog, creature_roster, weapon as natural_weapon
+    from .natural_weapons import catalog as natural_weapon_catalog, creature_roster, pounce_roster, weapon as natural_weapon
     from .negative_levels import level_loss_catalog, negative_level_rules, spell_drain_catalog
     from .pack_animals import beasts
     from .progression_rules import continuity_rules, progression_rules, spell_swap_rules
@@ -55,8 +56,9 @@ else:
     from alignment import alignment_catalog
     from creature_size import catalogs as size_catalogs
     from animal_training import training_rules
+    from mounted import mount_profile, mounted_catalog
     from feat_selection import encode_feats
-    from natural_weapons import catalog as natural_weapon_catalog, creature_roster, weapon as natural_weapon
+    from natural_weapons import catalog as natural_weapon_catalog, creature_roster, pounce_roster, weapon as natural_weapon
     from negative_levels import level_loss_catalog, negative_level_rules, spell_drain_catalog
     from pack_animals import beasts
     from progression_rules import continuity_rules, progression_rules, spell_swap_rules
@@ -228,6 +230,10 @@ def creatures():
             end = blocks[i + 1][0] if i + 1 < len(blocks) else len(text)
             record['statBlockText'] = '\n'.join(
                 line for line in text[start:end] if not re.fullmatch(r'\d+th Level or Higher \(Level -\d+\)', line)).strip()
+            if speed := re.search(r'^Speed\n[ \t]+([^\n]+)', record['statBlockText'], re.M):
+                for mode in ('climb', 'swim'):
+                    if movement := re.search(rf'\b{mode} (\d+) ft', speed[1], re.I):
+                        record[f'{mode}SpeedFt'] = int(movement[1])
             yield record
 
 
@@ -261,6 +267,13 @@ def build(old):
     classes = []
     for record in groups['progression']['classes']:
         record = record.copy()
+        if record['id'] == 'wizard':
+            rows = lines('WIZARD.txt')
+            start = next(i for i, line in enumerate(rows) if line.startswith('Spellbooks:'))
+            end = next(i for i in range(start + 1, len(rows)) if rows[i].startswith('SCHOOL SPECIALIZATION'))
+            description = '\n'.join(rows[start:end]).strip().removeprefix('Spellbooks: ')
+            record['abilities'] = [dict(ability, description=description, source=source('WIZARD.txt', line=start + 1))
+                                   if ability['id'] == 'spellbooks' else ability for ability in record['abilities']]
         if record['id'] in swap_by_class:
             rule_ids = [rule_id for rule_id in record.get('ruleIds', []) if rule_id not in retired_ids]
             record['ruleIds'] = rule_ids + [swap_by_class[record['id']]]
@@ -319,6 +332,16 @@ def build(old):
         if feat['epic']:
             feat['prerequisites']['allOf'].append(epic_requirement.copy())
     groups['magic']['componentRules'] = component_rules(lines, source)
+    known_tables = {}
+    for class_id, file, levels in (('bard', 'BARD.txt', 20), ('sorcerer', 'SORCERER.txt', 20),
+                                   ('assassin', 'Prestige Class ASSASSIN.txt', 10)):
+        rows = lines(file)
+        start = next(i for i, line in enumerate(rows) if 'Spells Known' in line and line.startswith('Table:'))
+        data = [line.split() for line in rows[start + 1:] if re.match(r'^\d+(?:st|nd|rd|th)\s', line)]
+        known_tables[class_id] = dict(source=source(file, line=start + 1), byLevel={
+            str(i): [int(n) if n.isdecimal() else 0 for n in row[1:]]
+            for i, row in enumerate(data[:levels], 1)})
+    groups['magic']['ordinarySpellsKnown'] = known_tables
     groups['magic']['wizardSpellbook'] = spellbook_catalog(lines, source)
     groups['magic']['epicSpellFeatRules'] = {
         'improved-spell-capacity': dict(slotsPerPick=1, aboveCurrentMaximum=1, grantsKnownSpells=False),
@@ -334,7 +357,8 @@ def build(old):
                        recentUseHours=8, source=source('TIMING.txt', line=line))
         for line, (class_id, rest, preparation, scheduled) in table('TIMING.txt', 'Table: Spell Recovery Profiles')}
     extend_recovery(groups['magic']['spellRecoveryByClassId'], lines, source)
-    groups['magic']['castingProfilesByClassId'] = casting_catalog(classes, spells, lines, source)
+    groups['magic'].pop('castingProfilesByClassId', None)
+    groups['magic']['castingPoliciesByClassId'] = casting_catalog(classes, spells, lines, source)
     groups['magic']['castingInjury'] = dict(baseDc=10, continuousDamageDivisor=2,
         ignoreEndedContinuousSource=True, source=source('TIMING.txt', line=lines('TIMING.txt').index('CASTING INTERRUPTIONS') + 1))
     groups['magic']['dailySlotRules'] = {
@@ -362,7 +386,7 @@ def build(old):
             'Tracking progressive fatigue:', 1)[0].strip()
         if key == 'energy-drained':
             condition['references'].update(inflictedBySpells=['energy-drain', 'enervation'], mentionedInSpells=[])
-    groups['effects']['sheetConditionRulesById'] = policies
+    groups['effects'].pop('sheetConditionRulesById', None)
     cures = cure_catalog()
     if not set(cures) <= {spell['id'] for spell in spells} or any(
             not set(rule['conditionIds']) <= policies.keys() for rule in cures.values()):
@@ -425,6 +449,12 @@ def build(old):
     groups['mechanics']['classDamageReductionById'] = damage_reduction_catalog(lines, source)
     groups['mechanics']['injury'] = injury_catalog(lines)
     groups['mechanics']['levelLoss'] = level_loss_catalog(lines, source)
+    drain_prefix = ('Negative levels remain for 24 hours', 'Energy-drain negative levels remain for 24 hours')
+    drain_prose = next(line for line in lines('SPECIAL ABILITIES.txt') if line.startswith(drain_prefix))
+    groups['effects']['specialAbilities'] = [dict(ability, paragraphs=[
+        dict(paragraph, text=drain_prose) if paragraph['text'].startswith(drain_prefix) else paragraph
+        for paragraph in ability['paragraphs']]) if ability['id'] == 'energy-drain-and-negative-levels' else ability
+        for ability in groups['effects']['specialAbilities']]
     groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
     groups['mechanics']['alignmentsById'] = alignments
     alignment_weapon_tags = {'Good': 'good', 'Evil': 'evil', 'Lawful': 'law', 'Chaotic': 'chaos'}
@@ -470,11 +500,20 @@ def build(old):
             if entries:
                 race[block] = dict(race[block], naturalWeapons=[dict(n, **natural_weapon(
                     n['name'], n['damage'], damage_types=[n['damageType'].lower()])) for n in entries])
-        size = race['effective']['size']
-        race['sizeId'] = size.lower() if size else None
+        own_size = race['own'].get('size')
+        if own_size:
+            race['sizeId'] = own_size.lower()
+        elif not race['inherits'] and 'sizeId' not in race:
+            race['sizeId'] = race['effective']['size'].lower()
+        elif race['inherits'] and 'size' in race['own']:
+            race.pop('sizeId', None)
+        for block in ('own', 'effective'):
+            race[block] = {key: value for key, value in race[block].items() if key != 'size'}
         races.append(race)
     groups['progression']['races'] = races
-    companions = index(dict(creature, sizeId=creature['size'], naturalWeapons=creature_roster(creature.get('statBlockText', ''))) for creature in [*creatures(), *beasts(lines)])
+    companions = index(dict({key: value for key, value in creature.items() if key not in ('size', 'combatTrained')},
+                            sizeId=creature['size'], naturalWeapons=creature_roster(creature.get('statBlockText', '')),
+                            pounceNaturalWeapons=pounce_roster(creature.get('statBlockText', ''))) for creature in [*creatures(), *beasts(lines), *beasts(lines, war_mounts=True), *beasts(lines, unusual_mounts=True)])
     groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
     annotate_divine_focus_items(items, groups['magic']['componentRules'])
@@ -490,13 +529,17 @@ def build(old):
         items[addition]['physicalDamage'] = physical_profile('Piercing')
         items[addition]['physicalDamageSource'] = source('ARMOR.txt', line=line)
 
-    pack = {}
-    for name in ('horse-heavy', 'horse-light', 'pony', 'donkey', 'mule', 'ox'):
-        creature_id = 'beasts-of-burden:' + name
-        item_id = 'gear:' + name
-        pack[name] = dict(id=name, purchaseItemId=items[item_id]['id'], creatureId=creature_id,
-                          automation='partial', carryingCapacity=companions[creature_id]['carryingCapacity'],
-                          initialTraining={'purposeId': None, 'learnedTrickIds': [], 'bonusTrickIds': []})
+    groups['mechanics']['mountedCombat'] = mounted_catalog(items, lines, source, table, slug)
+    for name in ('horse-heavy', 'horse-light', 'pony', 'warhorse-heavy', 'warhorse-light', 'warpony'):
+        items['gear:' + name]['trainingPurposeId'] = 'combat-riding' if name.startswith('war') else 'riding'
+    for name in ('warhorse-heavy', 'warhorse-light', 'warpony'):
+        items['gear:' + name]['creatureId'] = 'war-mounts:' + name
+    for definition in companions.values():
+        definition['mountProfile'] = mount_profile(definition)
+        if definition['id'] == 'animal-companions:dog-riding':
+            definition['trainingPurposeId'] = 'combat-riding'
+    pack = {name: dict(id=name, purchaseItemId='gear:' + name, creatureId='beasts-of-burden:' + name,
+                       automation='partial') for name in ('horse-heavy', 'horse-light', 'pony', 'donkey', 'mule', 'ox')}
     vehicle_file = 'PULLED VEHICLES.txt'
     for line, (name, running_gear) in table(vehicle_file, 'Table: Pulled Vehicles'):
         item = items['gear:' + slug(name)]
@@ -530,7 +573,13 @@ def build(old):
     groups['mechanics']['rules'] = [r for r in groups['mechanics']['rules'] if r['id'] not in shared_ids] + shared_rules
     improved_familiars = improved_familiar_catalog(lines, source, slug)
     for entry in improved_familiars.values():
+        classification = entry['statBlockText'].splitlines()[2]
+        entry['sizeId'] = classification.split()[0].lower()
+        if entry['sizeId'] not in groups['mechanics']['sizeCategoriesById']:
+            raise ValueError(f'Unknown Improved Familiar size: {classification}')
+        entry['mountProfile'] = mount_profile(entry)
         entry['naturalWeapons'] = creature_roster(entry.get('statBlockText', ''))
+        entry['pounceNaturalWeapons'] = pounce_roster(entry.get('statBlockText', ''))
     feat_records['improved-familiar']['acquisition'] = dict(
         optionsPath='/companions/improvedFamiliarOptionsById', source=source('IMPROVED FAMILIARS.txt'),
         alignmentStepsPerAxis=1, unlistedOptions='dm-adjudication', preserveNonAnimalType=True,
@@ -540,7 +589,12 @@ def build(old):
                 companions={'creaturesById': companions, 'improvedFamiliarOptionsById': improved_familiars,
                             'familiarLossByClassId': familiar_loss_catalog(lines, source),
                             'familiarAdvancement': list(advancement('FAMILIARS.txt', ('naturalArmorAdjustment', 'intelligence'))),
-                            'animalCompanionAdvancement': list(advancement('ANIMAL COMPANIONS.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthDexterityAdjustment', 'bonusTricks')))},
+                            'animalCompanionAdvancement': list(advancement('ANIMAL COMPANIONS.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthDexterityAdjustment', 'bonusTricks'))),
+                            'paladinMountAdvancement': list(advancement('PALADIN.txt', ('bonusHitDice', 'naturalArmorAdjustment', 'strengthAdjustment', 'intelligence'))),
+                            'paladinMountInitialTrainingPurposeId': 'combat-riding',
+                            'paladinMountEpic': dict(interval=5, afterLevel=20, bonusHitDice=2, naturalArmorAdjustment=2,
+                                strengthAdjustment=1, intelligence=1, source=source('EPIC PALADIN.txt', line=next(
+                                    i for i, line in enumerate(lines('EPIC PALADIN.txt'), 1) if line.startswith('Special Mount:'))))},
                 positioning={'automation': 'reference', 'sources': [source(f) for f in ('COMBAT STATISTICS.txt', 'COMBAT MODIFIERS.txt', 'ATTACKS OF OPPORTUNITY.txt', 'SPECIAL INITIATIVE ACTIONS.txt', 'INITIATIVE.txt')]},
                 rulesets={'defaultId': 'baseline', 'byId': {'baseline': {'id': 'baseline', 'optionIds': []}},
                           'optionsById': {'multiclass-xp-penalty': {'id': 'multiclass-xp-penalty', 'defaultEnabled': False,

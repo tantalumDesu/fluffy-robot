@@ -1,6 +1,7 @@
 """Encounter condition state, including explicit DM rulings."""
 from copy import deepcopy
 
+from .condition_rules import condition_policies
 from .condition_cures import active_condition_ids, apply_condition_cure
 from .derived_stats import condition_state
 from .game_time import apply_turn_conditions, encounter_clock, start_next_turn
@@ -73,7 +74,7 @@ def change_conditions(core, encounter, actor, *, machine=None, event=None, facts
         for family in ('fatigue', 'fear'):
             if entry.get(family, {}).get('id') not in ids:
                 entry.pop(family, None)
-    if not ids <= core['effects']['sheetConditionRulesById'].keys():
+    if not ids <= condition_policies(core).keys():
         raise ValueError('Unknown condition ID')
     entry['conditions'] = sorted(ids)
     if 'turnFlags' in override:
@@ -88,7 +89,7 @@ def change_conditions(core, encounter, actor, *, machine=None, event=None, facts
 
 def set_condition_overrides(core, encounter, actor, instances):
     """Replace only this actor's sourced condition overlays and refresh the turn."""
-    if actor not in encounter['order'] or any(i['conditionId'] not in core['effects']['sheetConditionRulesById'] for i in instances):
+    if actor not in encounter['order'] or any(i['conditionId'] not in condition_policies(core) for i in instances):
         raise ValueError('Unknown actor or condition')
     if len({i['id'] for i in instances}) != len(instances):
         raise ValueError('Condition instance IDs must be unique')

@@ -12,9 +12,7 @@ def casting_catalog(classes, spells, lines, source):
         if track.get('source') != 'own':
             continue
         key, file = cls['id'], cls['file']
-        profile = dict(tradition=track['kind'], mode='spontaneous' if track['spontaneous'] else 'prepared',
-                       spellListId=track['spellListId'], requiresSpellbook=key == 'wizard',
-                       allowsDomainSlots=any(row.get('domainSpellsPerDay') for row in cls['progression']))
+        profile = dict(requiresSpellbook=True) if key == 'wizard' else {}
         if key in ('paladin', 'ranger'):
             profile['casterLevel'] = dict(minimumClassLevel=4, classLevelDivisor=2,
                                           source=anchor(file, 'her caster level is one-half' if key == 'paladin'
@@ -32,8 +30,21 @@ def casting_catalog(classes, spells, lines, source):
             profile['conversion'] = dict(pool='regular', familyBySpellId=choices,
                                          requiresFamilyAuthorization=key == 'cleric',
                                          source=anchor(file, 'Spontaneous Casting:'))
-        profiles[key] = profile
+        if profile:
+            profiles[key] = profile
     return profiles
+
+
+def casting_profile(core, class_id):
+    """Join the class track with its optional additional casting policy."""
+    cls = next(c for c in core['progression']['classes'] if c['id'] == class_id)
+    track = cls['spellcasting']
+    if track['source'] != 'own':
+        raise ValueError('Choose an actual spellcasting track')
+    return dict(tradition=track['kind'], mode='spontaneous' if track['spontaneous'] else 'prepared',
+                spellListId=track['spellListId'],
+                allowsDomainSlots=any(row.get('domainSpellsPerDay') for row in cls['progression']),
+                **{'requiresSpellbook': False, **core['magic']['castingPoliciesByClassId'].get(class_id, {})})
 
 
 def extend_recovery(profiles, lines, source):

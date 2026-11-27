@@ -1587,7 +1587,7 @@ Hit Dice
 Initiative
     +2
 Speed
-    Land 30 ft
+    Land 30 ft, climb 15 ft
 Armor Class
     15, touch 11, flat-footed 13
 Base Attack / Grapple
@@ -2088,7 +2088,7 @@ Hit Dice
 Initiative
     +3
 Speed
-    Land 20 ft
+    Land 20 ft, climb 20 ft, swim 20 ft
 Armor Class
     15, touch 11, flat-footed 12
 Base Attack / Grapple

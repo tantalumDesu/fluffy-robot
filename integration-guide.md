@@ -1,6 +1,12 @@
 # Rules core integration guide
 
-Implementation notes for the Python prototypes and future application. See the [project overview](README.md) and [table-play coverage](rules-lawyer.md).
+Implementation notes for the Python prototypes and future application. See the [project overview](README.md) and [canon audit](CANON-AUDIT.md).
+
+## DM authority and source rules
+
+The TXT files are the rules authority. Generated JSON is reference and typed rules data; the Python helpers are opt-in consumers, not a complete tabletop engine. A typed rule is not necessarily enforced by the sheet or encounter.
+
+Automation never takes precedence over a DM ruling, even for a fully typed rule. The DM may supply missing facts, override a result, skip or replace a transition, or adjudicate manually. Record one-off decisions in character or encounter state rather than shared canon. This is a design requirement for integrations, not a claim that every helper has an override API.
 
 ## Data layout
 
@@ -52,7 +58,7 @@ A future save format should record inputs, not cached totals. Suggested boundari
 `pulledVehicle`. Create a vehicle **instance** with its own inventory carrier ID;
 store cargo under that ID and link the team by animal actor ID (not species or
 purchase item ID). `validate_vehicle_assignments` rejects animals assigned to
-more than one vehicle. `evaluate_vehicle_load` takes the vehicle definition, the
+more than one vehicle. `evaluate_vehicle_load` takes the core, the vehicle item ID, the
 team mapping from actor ID to pack profile ID, and the total passenger and cargo
 weights. Use its `maxCargoLb` and `canPull` to display the limit and overload state.
 
@@ -67,8 +73,8 @@ penalty for hills, rough ground, or sleds. Supply a multiplier when appropriate.
 ## Handle Animal training
 
 `skills.animalTraining` contains the tricks and general-purpose packages from
-`SKILLS.txt`. Use each purchased beast's `initialTraining` as a template for
-its own saved training state. `plan_training` checks trained-only use, trick
+`SKILLS.txt`. Use `acquisition_training` to instantiate the purchase or
+acquisition’s `trainingPurposeId` as the animal’s own saved training state. `plan_training` checks trained-only use, trick
 slots, and the scent prerequisite; the caller confirms physical suitability
 for general-purpose training. Save the training plan, time worked (3 hours
 per day), and the adjusted Handle Animal check made halfway through. Apply
@@ -130,6 +136,19 @@ picks. Restoration reactivates grants but does not change the physical books.
 
 ## Spellcasting slots and metamagic
 
+For an advancing prestige row, supply `castingTargets` in the row’s listed order.
+For Bard, Sorcerer, Assassin or Magewright advancement, use
+`spellChoicesByClassId` with `learn` (spell IDs) and, where allowed, `swap`
+(`remove` and `learn` IDs). The transaction checks the normal list, source table
+counts, castable levels, and swap schedule. Unusual off-list Sorcerer study and
+ordinary Wizard inscription are separate workflows. `projected_level_grants`
+returns active `spellcastingLevels` and `knownSpellIdsByClassId` after loss or
+restoration. Pass the current known IDs to `spend_slot` for new spontaneous casts
+and Magewright casts; planning does not authorize later spending on its own.
+Use `reconcile_slot_budget` with the projected budget to suppress or restore slots
+without refunding spent slots. A cast already started stays in the encounter ledger.
+
+
 Use `tools.spellcasting.spellcasting_levels` to replay class progress and explicit
 prestige targets. Build a separate daily budget for each actual casting class
 with `slot_budget`; use the score eligible for bonus slots, not a temporary buff.
@@ -181,7 +200,8 @@ ledger. It checks preparation or focus time, verified rest where required, and t
 ## Creature and equipment size
 
 `mechanics.sizeCategoriesById` is the shared size table. Races and companion
-stat blocks reference it with `sizeId`. Derive size modifiers once from the
+stat blocks reference it with `sizeId`. Races with no explicit size inherit it
+through `race_size_id`. Derive size modifiers once from the
 current size; do not also add size bonuses repeated in racial trait records.
 `size_profile` returns modifiers suitable for the modifier resolver, and
 `carrying_limits` applies the biped/quadruped multiplier to Strength limits or
@@ -236,8 +256,7 @@ individual damage, wielding, or damage-reduction mechanics.
 
 `mechanics.negativeLevels` captures the general drain rule. Save timed drain
 levels on the affected actor; each has its own Fortitude DC and 24-hour due time.
-`resolve_drain_level` handles a save or restoration and reports permanent level
-loss. Use `tools.drain_history` to commit permanent loss or restoration while preserving the original build. `summarize_negative_levels`
+`resolve_drain_level` handles a save or restoration and reports a drained level on failure. Use `tools.drain_history` to commit drain, irreversible loss, and restoration while preserving the original build. `summarize_negative_levels`
 returns sheet modifiers, HP and effective-level changes, and the death threshold.
 Bestower temporary HP and possible next-night creature revival are separate
 outcomes; the caller applies them to the appropriate actor or encounter.
@@ -256,12 +275,12 @@ Restoration, and Greater Restoration to that same state model. Resolve the
 ray hit and spell resistance before calling `apply_drain_spell` with the completed
 cast plan. Enervation expires when timed effects are evaluated; Energy Drain waits for separate
 saves at the spell DC. Death Ward blocks new negative energy but does not remove
-old levels. Restore permanent level records only when eligible; Restoration
+old levels. Restore recoverable drained levels only within the chosen casting’s recovery window; Restoration
 cannot remove a level that is still imposed by a wielded weapon. `energy-drained`
 is derived from active levels, not a second modifier. Use the returned typed
 `hp` and `effective-level` modifiers **or** their summary fields, not both.
 
-See [rules-lawyer.md](rules-lawyer.md) for live-sheet coverage, manual rulings, and next decisions.
+See [Permanent level loss](#permanent-level-loss) for exact grant projection and restoration.
 
 ## Damage reduction and HP
 
@@ -319,7 +338,7 @@ The core defines school IDs in `magic.schoolsById` and links every spell to its 
 
 Every epic feat carries a source-linked character level 21 requirement in `prerequisites.allOf`. Confirmed `feat_choices` feed Skill Focus into skill totals, add martial and exotic proficiency grants, and project Improved Critical and Rapid Reload on matching equipment. Keen and Improved Critical do not multiply one another. Reload timing is descriptive; the encounter still adjudicates hand use and opportunity attacks.
 
-Toughness contributes `featMaxHpBonus`; add it once when assembling the actor’s maximum HP. Pass confirmed `turning_pool_ids` to project Extra Turning's daily capacity bonuses independently of uses remaining. Spell Penetration and Greater Spell Penetration contribute `spellResistanceCheckBonus` to cast plans, independently of Spell Focus. Spell Mastery is repeatable: record each pick’s `spellIds`, using the Wizard’s known spells and Intelligence modifier at selection. The spell list flags mastered spells; preparation without a spellbook remains a caller concern.
+Toughness contributes `featMaxHpBonus`; add it once when assembling the actor’s maximum HP. Pass confirmed `turning_pool_ids` to project Extra Turning's daily capacity bonuses independently of uses remaining. Spell Penetration and Greater Spell Penetration contribute `spellResistanceCheckBonus` to cast plans, independently of Spell Focus. Spell Mastery is repeatable: record each pick’s `spellIds`, using the Wizard’s known spells and Intelligence modifier at selection. The spell list flags mastered spells; it does not bypass the Wizard spellbook requirement.
 
 The generated `inventory.equipmentSlots` lists slot IDs and Ranger two-weapon style grants; weapon `gripProfile` entries and shield `reservesGrip` flags hold the item-specific defaults. Runtime helpers validate the declared equipment and apply those defaults. Familiar Spell limits and per-selection daily uses are in `feats.byId.familiar-spell.spellGrant`; known spells, verified component costs, and remaining uses stay outside the core.
 
@@ -327,7 +346,7 @@ The generated `inventory.equipmentSlots` lists slot IDs and Ranger two-weapon st
 
 `magic.wizardSpellbook` defines the standard 100-page book and the page rule: one page per Wizard spell level, minimum one page. Track separate book instances with inventory. `new_spellbook` creates a blank record and `learn_wizard_spells` records confirmed acquisitions, using Wizard list levels and rejecting a batch that exceeds capacity. Starting spells, level-up choices, and copies use the same page accounting; eligibility to acquire a spell is confirmed before recording it.
 
-Pass accessible books to `prepare_spell` as `accessible_spellbooks`. The Wizard spell must be recorded at its base Wizard level; metamagic changes slot cost, not pages. The table's spellbook requirement applies even to *read magic*. Spell Mastery remains visible on the sheet but does not bypass this preparation check. Losing a book does not erase an already-prepared spell. Other class tracks continue to use their own spell access rules, even when the character is also a Wizard or knows the same spell through both classes.
+Pass accessible books to `prepare_spell` as `accessible_spellbooks`. The Wizard spell must be recorded at its base level on the Wizard track (for a cross-list Spell Knowledge pick, use the recorded grant level); metamagic changes slot cost, not pages. The table's spellbook requirement applies even to *read magic*. Spell Mastery remains visible on the sheet but does not bypass this preparation check. Losing a book does not erase an already-prepared spell. Other class tracks continue to use their own spell access rules, even when the character is also a Wizard or knows the same spell through both classes.
 
 ### Wizard study and school specialization
 
@@ -345,7 +364,11 @@ Holy symbols, holly, and mistletoe carry `divineFocus` profiles on their item de
 
 ### Permanent level loss
 
-Permanent loss is distinct from a temporary negative level. `apply_permanent_level_loss` suppresses one Hit Die and replays the surviving class history; failed drain saves use the same path. XP is set to the midpoint of the new effective level. Use `tools.level_choices.record_level_choices` for the first class level and later XP awards. On a level gain it requires `hitDieRoll`, `abilityIncreases`, `skillRanks`, and `featChoices` (use explicit empty collections where applicable). It commits XP, class choice, and the exact grants together in the returned actor. The ledger also records `hpGain`, including retroactive Constitution changes and supported flat feat HP grants. Feat picks carry their parameters and can identify racial or table-confirmed class bonus slots. `projected_level_grants` subtracts the recorded grants from saved totals without deleting them; missing records block permanent loss rather than triggering guesses. Restoration makes the saved grants active again without rerolling or reselecting them. Current HP, spell slots, and inventory are separate. Class-specific bonus slot entitlement still needs table confirmation, and advancement while permanent losses remain unresolved is not supported.
+A failed save removes an actual level immediately and records the save time. `minimum_restoration_caster_level` returns the timing minimum for a recorded energy-drain loss: round elapsed time up to whole days for Restoration or whole weeks for Greater Restoration (minimum 1). Actual spell access is checked separately. Restoration returns one eligible level; Greater Restoration returns all eligible levels in active-prefix order. Neither restores a Raise Dead cost, nor does an out-of-window casting automatically make the loss irrevocable. Apply a confirmed Raise Dead level cost with `apply_permanent_level_loss(..., cause='raise-dead')`; first-level Constitution costs and the rest of the spell are table-owned.
+
+`record_level_choices` awards XP normally while losses are outstanding. Each earned level replaces the lowest unresolved level with fresh choices and removes that loss from the Restoration candidates. Higher losses keep their original timestamps and choices. For example, earning 9th level after losing 9th and 10th leaves only 10th recoverable. If a new choice makes a later saved progression invalid (such as a missing prestige casting target), resolve that conflict at the table rather than silently substituting a choice.
+
+`lost_level_recovery_options` reports each outstanding loss, elapsed time, the timing minimum, and the ordinary Cleric casting floor: Restoration is a Cleric 4 spell (normally caster level 7), and Greater Restoration is a Cleric 7 spell (normally caster level 13). The displayed minimum for an ordinary Cleric is the greater of timing and that floor. `commit_restoration_cast` takes a confirmed casting, applies the cure, and charges the caster 500 XP for Greater Restoration without reducing their level. Existing spell ledgers are reconciled after actual loss, restoration, or replacement advancement without refunding spent slots. Call `derive_level_loss_sheet` with `now` to include timed negative levels; `maxHp` reflects the active build, while `effectiveMaxHp` includes negative-level penalties. Current HP and inventory remain separate.
 
 Use `derive_level_loss_sheet` to show the surviving character numbers and reproject linked companions. Falling below all qualifying levels suspends a companion’s advancement and flags the relationship for table review. Coordinate current HP, actual spell ledgers, and other mutable state with the projection; this helper does not replay recovery or inventory events.
 
@@ -367,3 +390,92 @@ The choice applies once to all matching attacks, including across forms. Use
 `naturalWeapons` for the projected dice; retained source attack text still
 shows the original stat block. Alternatives and special riders remain subject
 to the source routine and table adjudication.
+
+For creatures whose source grants rake on a pounce, `pounceNaturalWeapons`
+contains two extra claws with the listed rake dice and attack bonus. Pass
+`confirmed_pounce=True` on the charge to include them in the active routine;
+this does not resolve the charge or its attacks. A claw feat pick applies to
+those claws as well as to the normal claw routine.
+
+## Mount and barding projection
+
+Link each creature instance once in `companion_links`; purchase definitions can
+use the `beasts-of-burden:*` records. Use `acquiredByClassId` for a Ranger or
+Sorcerer acquisition and save the animal's completed Handle Animal state as
+`training`. Supply `mount_link` on the rider sheet with that same `instanceId`,
+`rider_weight_lb`, and `rider_inventory_lb`. Optional inputs include saddle
+`itemId` and `sizeId`, `barding_id`, `saddlebags_payload_lb`, and confirmed
+`suitability` or `saddle_fit`. A confirmed mounted charge with `weapon_id` exposes
+lance damage metadata without resolving the attack. Use `mounted` for the
+contextual Ride modifiers and mounted load/movement; required saddle size tracks
+the mount’s current size unless confirmed fit overrides it; the base creature sheet
+remains independent of the rider's current assignment. The armor's listed price
+and weight already include size multipliers. Normal saddlebags hold up to a light
+load, but their payload is not an extra allowance above total carrying capacity.
+
+The three `war-mounts:*` definitions come from `WAR MOUNTS.txt`. A purchase uses
+the ordinary base sheet and its combat-riding acquisition training. Set
+`acquiredByClassId='paladin'` only for a creature actually acquired via that class,
+and supply recorded `bonusHitDieRolls`. The helper projects the Paladin package
+for the heavy warhorse and warpony; other sourced war mounts require
+`dmConfirmedSpecialMount`. The riding dog and Large shark also reuse their existing base definitions with `dmConfirmedSpecialMount=True`. Calling, dismissal, and death workflows are not yet implemented. When directing a
+combat-trained mount to attack, the rider’s own attacks use the separate DC 10
+Ride check, not the DC 20 check to control an untrained mount in battle.
+
+The `unusual-mounts:*` sheets come from `UNUSUAL MOUNTS.txt`. Standard
+mounted projection uses their listed land and flying movement separately.
+`flightStatus` leaves flight load eligibility for confirmation; medium or heavy
+barding still prevents flight. For griffon, pegasus, and giant owl, supply a
+fitted exotic rider saddle. Use `plan_training` with `friendly_confirmed=True`
+only after the table confirms attitude; their source-specific combat-riding
+plan uses DC 25 and six weeks. A successful plan records combat readiness
+without inventing other learned tricks.
+
+Use `acquisition='ordinary'` on a creature link to reuse an existing companion
+or Improved Familiar base block without granting a class package. A separate
+`mount_link` uses that same `instanceId`. Hippogriff and howler use their
+listed training and exotic saddle rules. Worg suitability is sourced and it takes a standard saddle; willingness still requires confirmation. Flying and non-quadrupedal mounts require a fitted exotic rider saddle under the campaign rule. Mounted climbing exposes the
+campaign’s DC 5 Ride check when a climb speed is listed.
+
+`derive_sheet(..., draft_links=...)` accepts vehicle links with `instanceId`,
+`vehicleItemId`, and `pullerInstanceIds`, plus optional `passenger_weight_lb`,
+`cargo_weight_lb`, and `terrain_multiplier`. `draftByInstanceId` holds vehicle
+load and Work command projections. Only sourced pack-animal profiles are
+supported; one puller cannot be assigned to two vehicles or simultaneously
+ridden and assigned to draft work in this projection.
+
+Ordinary riding is class-independent. `riding` and `combat-riding` are separate
+Handle Animal general purposes. Only a creature explicitly acquired through
+Paladin’s level-5 special mount feature receives the special mount package
+and starts combat-riding trained under the campaign rule. The initial training
+is retained alongside further recorded tricks.
+
+To display training choices alongside a creature sheet, pass `trainingContext`
+on its link (or call `training_choices` directly). Supply `handler_ranks` and
+optionally `purpose_suitability` keyed by purpose ID, `has_scent`, and
+`friendly_confirmed`. `True` confirms a prerequisite; `False` rules it out;
+omission leaves an unsourced prerequisite for review. Choices return `known`,
+`available`, `blocked`, or `needs-review`. Available choices show the DC,
+training time, and tricks gained or lost. This is a preview, not an assignment:
+use `plan_training` and only save `trainingState` after `training_status`
+reports completion.
+
+### Mounted encounter actions
+
+Pass the rider sheet’s `mounted` projection to `tools.mounted_encounter`.
+A sheet link alone does not put anyone in the saddle: `mount_or_dismount`
+updates `mountedByRiderId` after validating the pairing and spending the
+rider’s action. Pass resolved Ride totals (including applicable modifiers
+and fast-mount armor check penalties). Confirm reach or dismount space at
+the table. `control_mount` handles non-combat-trained mounts in battle.
+
+`move_mounted` uses the mount’s movement budget on the rider’s turn. Declare
+and confirm the movement sequence before asking for its attack modifiers;
+ranged double-move/run attack timing is reported, not simulated. Use
+`spend_mounted_attack` to spend the rider’s attack action and obtain its
+modifiers, then resolve hits and damage separately. `resolve_mount_fall`
+removes the link and reports fall damage dice; a failed mounted-climb check
+instead flags fall position and damage for a ruling. Map movement, charge
+paths, unusual movement and load, and the mount’s ability to act still need
+confirmation. Mounted feat exceptions, mounted spell timing, and automatic
+unconscious-rider checks are not resolved by these helpers.

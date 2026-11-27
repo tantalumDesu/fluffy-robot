@@ -1,7 +1,11 @@
 """Compose an actor's size, build, equipped gear and active effects into sheet totals."""
 from fractions import Fraction
 
-from .companion_sheet import project_companion
+from .condition_rules import condition_policies
+from .companion_sheet import project_creature
+from .mounted import project_mount
+from .vehicle_load import evaluate_vehicle_load, validate_vehicle_assignments
+from .animal_training import work_command
 from .alignment import weapon_alignment_tags
 from .damage_reduction import project_damage_reduction
 from .creature_size import armor_fit, carrying_limits, equipment_size, size_adjusted_abilities, size_profile, weapon_fit
@@ -13,7 +17,7 @@ from .familiar_spell import familiar_spell_choices, familiar_spell_grants
 from .equipment_slots import allocate_slots, fighting_feats, grip_adjustment, two_weapon_routine
 from .damage_types import equipment_attack_damage
 from .locked_gauntlet import ITEM_ID as LOCKED_GAUNTLET_ID, project_gauntlets
-from .natural_weapons import form_roster, owned_types, project as project_natural, selection_ids
+from .natural_weapons import form_pounce_roster, form_roster, owned_types, project as project_natural, selection_ids
 from .negative_levels import summarize_negative_levels, weapon_negative_levels
 from .sheet_effects import modifier_total
 
@@ -31,7 +35,7 @@ def expand_conditions(policies, condition_ids):
 
 
 def condition_state(core, condition_ids, *, deafness_adapted=False):
-    policies = core['effects']['sheetConditionRulesById']
+    policies = condition_policies(core)
     flags, modifiers, review = set(), [], []
     for key in sorted(expand_conditions(policies, condition_ids)):
         rule = policies.get(key)
@@ -51,7 +55,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                  negative_levels=(), alignment_id=None, carried_weight_lb=None, attack_context=None, skill_ranks=None, damage_reduction_grants=(),
                  companion_links=(), master_max_hp=None, feat_ids=(),
                  ranger_combat_style=None, double_weapon_instance_id=None, feat_choices=(),
-                 known_spell_levels=None, verified_material_cost_gp=None, weapon_proficiencies=(), turning_pool_ids=(), deafness_adapted=False, holy_weapon_id=None, after_level_loss=False, natural_attacks=(), active_natural_form_id=None, available_natural_form_ids=(), natural_forms_by_id=None):
+                 known_spell_levels=None, verified_material_cost_gp=None, weapon_proficiencies=(), turning_pool_ids=(), deafness_adapted=False, holy_weapon_id=None, after_level_loss=False, natural_attacks=(), active_natural_form_id=None, available_natural_form_ids=(), natural_forms_by_id=None, confirmed_pounce=False, mount_link=None, draft_links=()):
     """Derive a basic humanoid sheet, without mutating inventory or build history.
 
     Scores already include racial adjustments; equipped item instances supply
@@ -103,7 +107,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                                  bonusType=rule['bonusType'], stacking='highest-same-type'), {}))
     adjusted = size_adjusted_abilities(profile, scores)
     abilities = {key: None if value is None else value + modifier_total('ability:' + key, effects) for key, value in adjusted.items()}
-    policies = core['effects']['sheetConditionRulesById']
+    policies = condition_policies(core)
     active_conditions = expand_conditions(policies, condition_ids)
     for key in sorted(active_conditions):
         for ability, score in policies.get(key, {}).get('operations', {}).get('effectiveScores', {}).items():
@@ -202,8 +206,8 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     saves = {key: combat[key] + (racial.get('saves') or {}).get(long, 0) + epic.get('saveBonus', 0)
              + ability_mod[ability] + modifier_total('save:' + key, effects)
              for key, long, ability in (('fort', 'fortitude', 'con'), ('ref', 'reflex', 'dex'), ('will', 'will', 'wis'))}
-    prone_restriction = core['effects']['sheetConditionRulesById']['prone']['operations']['prohibitedWeaponUse']
-    prone = 'prone' in expand_conditions(core['effects']['sheetConditionRulesById'], condition_ids)
+    prone_restriction = policies['prone']['operations']['prohibitedWeaponUse']
+    prone = 'prone' in expand_conditions(policies, condition_ids)
     attacks = []
     if not weapons:
         item = items[core['inventory']['fallbackWeaponId']]
@@ -317,12 +321,62 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
     extra_turning = modifier_total('turning-uses-per-day', feat_effects(core, feat_choices, {'extra-turning'}))
     base_natural = [*(race.get('naturalWeapons') or ()), *natural_attacks]
     current_natural = (base_natural if active_natural_form_id is None else form_roster(core, active_natural_form_id, natural_forms_by_id))
+    conditional = (tuple(form_pounce_roster(core, active_natural_form_id, natural_forms_by_id))
+                   if active_natural_form_id is not None else ())
     natural_options = selection_ids(base_natural, current_natural,
                                     *(form_roster(core, key, natural_forms_by_id) for key in available_natural_form_ids))
     natural_options -= owned_types(feat_choices)
     if history['classBaseCombat']['bab'] < 4:
         natural_options.clear()
-    return dict(naturalWeapons=project_natural(core, current_natural, feat_choices),
+    creatures = [project_creature(core, history, link, master_max_hp=master_max_hp,
+                                  master_skill_ranks=skill_ranks, after_level_loss=after_level_loss)
+                 for link in companion_links]
+    by_instance = {creature['instanceId']: creature for creature in creatures}
+    if len(by_instance) != len(creatures):
+        raise ValueError('Link each creature instance only once')
+    mounted = None
+    if mount_link is not None:
+        args = dict(mount_link)
+        instance_id = args.pop('instanceId')
+        creature = by_instance[instance_id]
+        catalog = core['companions']
+        key = creature['definitionId']
+        definition = catalog['creaturesById'].get(key) or catalog['improvedFamiliarOptionsById'][key]
+        mounted = dict(instanceId=instance_id, **project_mount(core, definition, creature_sheet=creature,
+                       rider_size_id=profile['sizeId'], training=creature['training'], **args))
+        if mounted['status'] != 'blocked' and 'ride' in skills:
+            mounted['rideModifier'] = skills['ride'] + mounted['ridePenalty']
+            mounted['stayMountedRideModifier'] = mounted['rideModifier'] + mounted['stayMountedRideCircumstance']
+    draft = {}
+    draft_links = tuple(draft_links)
+    profile_by_definition = {p['creatureId']: key for key, p in core['inventory']['packAnimalsById'].items()}
+    assignments = {}
+    for link in draft_links:
+        vehicle_id = link['instanceId']
+        if vehicle_id in assignments:
+            raise ValueError('Link each vehicle instance only once')
+        pullers = tuple(link['pullerInstanceIds'])
+        if len(set(pullers)) != len(pullers):
+            raise ValueError('List each puller only once per vehicle')
+        if mounted and mounted['instanceId'] in pullers:
+            raise ValueError('Simultaneous riding and draft work requires separate adjudication')
+        assignments[vehicle_id] = pullers
+    validate_vehicle_assignments(assignments)
+    for link in draft_links:
+        vehicle_id = link['instanceId']
+        pullers = {actor: by_instance[actor] for actor in assignments[vehicle_id]}
+        profiles = {}
+        for actor, creature in pullers.items():
+            profile_id = profile_by_definition.get(creature['definitionId'])
+            if profile_id is None:
+                raise ValueError('Draft assignment requires a sourced pack-animal profile')
+            profiles[actor] = profile_id
+        load = evaluate_vehicle_load(core, link['vehicleItemId'], profiles, **{
+            key: link[key] for key in ('passenger_weight_lb', 'cargo_weight_lb', 'terrain_multiplier') if key in link})
+        draft[vehicle_id] = dict(load, workCommandsByInstanceId={actor: work_command(
+            core['skills']['animalTraining'], creature['training']) for actor, creature in pullers.items()})
+    return dict(naturalWeapons=project_natural(core, [*current_natural, *(conditional if confirmed_pounce else ())], feat_choices),
+                pounceNaturalWeapons=project_natural(core, conditional, feat_choices),
                 improvedNaturalAttackChoices=sorted(natural_options), skillFocusChoices=[dict(skillId=key, name=name) for key, name in skill_names.items()
                                   if key not in {grant['skillId'] for grant in skill_focus_grants}],
                 skillFocusGrants=skill_focus_grants, featMaxHpBonus=max_hp_bonus,
@@ -334,8 +388,7 @@ def derive_sheet(core, history, race_id, scores, *, equipment=(), active_effects
                 spellFocusChoices={key: school_choices(core, key, feat_choices)
                                    for key in ('spell-focus', 'greater-spell-focus')},
                 spellFocusGrants=focus_grants_for_sheet(core, feat_choices), knownSpells=known_spells, familiarSpellGrants=familiar_spells, familiarSpellChoices=familiar_options,
-                companions=[project_companion(core, history, link, master_max_hp=master_max_hp,
-                                              master_skill_ranks=skill_ranks, after_level_loss=after_level_loss) for link in companion_links],
+                companions=creatures, mounted=mounted, draftByInstanceId=draft,
                 equipmentSlots=slots, twoWeaponRoutine=routine, attacks=attacks, lockedGauntlets=gauntlets, carriedWeightAdjustmentLb=weight_adjustment, skillTotals=skills, armorFit=fits, loadBand=load_band, carryingLimits=limits,
                 landSpeedFt=speed, armorCheckPenalty=check_penalty,
                 damageReduction=project_damage_reduction(core, history.get('classLevels', {}), damage_reduction_grants),

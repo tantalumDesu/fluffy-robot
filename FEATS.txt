@@ -398,7 +398,7 @@ Benefit: The damage for one of the creature’s natural attack forms increases b
 
 Special: You can take this feat multiple times, but each time it applies to a different natural attack.
 
-Table ruling: Choose a natural weapon type you possess in your base form or an available transformation. Apply the increase to all attacks of that type across forms, using each form's own damage dice. Repeat picks must choose a different type.
+Table ruling: Choose a natural weapon type you possess in your base form or an available transformation. Apply the increase to all attacks of that type across forms, using each form's own damage dice. Repeat picks must choose a different type. A confirmed pounce is a charge; when the source grants two rake attacks on a pounce, they are two extra claw attacks and use the creature's listed rake bonus and damage.
 
 Description: The natural attacks of a creature with this feat are more dangerous than its size and type would otherwise dictate.
 

@@ -2,6 +2,7 @@
 from collections import Counter
 from itertools import product
 
+from .casting_rules import casting_profile
 from .feat_selection import check_feat_selection
 from .spellbooks import available_spellbooks, school_access, update_spellbook
 from .spellcasting import slot_budget
@@ -30,7 +31,7 @@ def apply_epic_spell_pick(core, actor, pick, snapshot):
     if not track or check_feat_selection(core['feats']['byId'], feat, snapshot, choices=choices)['status'] != 'eligible':
         raise ValueError('Choose a qualifying casting track for this epic feat')
     cls = next(c for c in core['progression']['classes'] if c['id'] == track)
-    profile = core['magic']['castingProfilesByClassId'][track]
+    profile = casting_profile(core, track)
     ability = cls['spellcasting']['abilityStat'].lower()
     progression = snapshot.get('spellcastingLevels', {}).get(track, 0)
     score = snapshot.get('abilityScores', {}).get(ability)
@@ -56,9 +57,10 @@ def apply_epic_spell_pick(core, actor, pick, snapshot):
     known = set(actor.get('knownSpellIdsByClassId', {}).get(track, ())) | epic_known_levels(prior, track).keys()
     if track == 'wizard':
         known |= set(actor.get('wizardLearning', {}).get('knownSpellIds', ()))
-        known.update(key for book in books.values() for key in book['spellsById'])
+        known.update(key for book in active_spellbooks(actor, prior, books) for key in book['spellsById'])
     catalog = {s['id']: s for s in core['magic']['spells']}
-    arcane = {p['spellListId'] for p in core['magic']['castingProfilesByClassId'].values() if p['tradition'] == 'arcane'}
+    arcane = {c['spellcasting']['spellListId'] for c in core['progression']['classes']
+              if c.get('spellcasting', {}).get('source') == 'own' and c['spellcasting']['kind'] == 'arcane'}
     grant = []
     for choice in selections:
         key = choice['spellId']
