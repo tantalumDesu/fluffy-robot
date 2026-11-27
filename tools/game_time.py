@@ -153,6 +153,10 @@ def schedule_cast(encounter, actor, plan):
     """Commit the action; delayed spells return only when their timing resolves."""
     if encounter['index'] < 0 or encounter['order'][encounter['index']] != actor:
         raise ValueError('Not the caster’s turn')
+    if plan.get('componentCheck', {}).get('status') == 'blocked':
+        raise ValueError('Casting components unavailable: ' + ', '.join(plan['componentCheck']['blockedReasons']))
+    if actor in encounter['pending']:
+        raise ValueError('Finish or interrupt the pending cast before starting another')
     timing = plan['timing']
     if timing['completion'] == 'manual':
         raise ValueError('This casting time needs an explicit ruling')
@@ -208,6 +212,8 @@ def expired(expiry, clock):
 
 def schedule_downtime_cast(plan, game_seconds):
     """Return a completion timestamp for a cast outside initiative, without spending slots."""
+    if plan.get('componentCheck', {}).get('status') == 'blocked':
+        raise ValueError('Casting components unavailable: ' + ', '.join(plan['componentCheck']['blockedReasons']))
     timing = plan['timing']
     if timing['completion'] == 'manual':
         raise ValueError('This casting time needs an explicit ruling')

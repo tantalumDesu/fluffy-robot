@@ -24,7 +24,7 @@ def catalog(lines):
     add('blinded', ['denied-dex-to-ac', 'half-speed', 'no-vision'],
         [('ac', -2), ('skill:search', -4), ('skill', -4, {'blindnessPhysicalSkillPenalty': True})],
         automaticFailure={'requiresSense': 'vision'}, opponentConcealment={'missChancePercent': 50},
-        exceptionReview='long-term-adaptation')
+        adaptation={'dmConfirmed': True, 'numericDivisor': 2, 'listenStillFails': True})
     add('blown-away', forcedMovement={'ground': {'distanceDice': '1d4', 'feetPerUnit': 10,
         'nonlethalDicePerUnit': '1d4', 'applyConditionId': 'knocked-down'},
         'flying': {'distanceDice': '2d6', 'feetPerUnit': 10, 'nonlethalDice': '2d6', 'direction': 'backward'}})
@@ -41,7 +41,7 @@ def catalog(lines):
         recovery={'normalHealing': False, 'magicalHealing': False, 'revival': 'source-defined'},
         body={'soulDeparts': True, 'decaysUnlessPreserved': True})
     add('deafened', ['no-hearing'], [('initiative', -4)], automaticFailure={'skillId': 'listen'},
-        spellFailure={'component': 'verbal', 'chancePercent': 20}, exceptionReview='long-term-adaptation')
+        spellFailure={'component': 'verbal', 'chancePercent': 20}, adaptation={'dmConfirmed': True, 'numericDivisor': 2, 'listenStillFails': True})
     single = {'maximum': 1, 'allowed': ['move', 'standard'], 'fullRound': False}
     add('disabled', ['half-speed', 'single-move-or-standard'], actionBudget=single,
         strenuousAction={'trigger': 'action-completed', 'hpDamage': 1, 'standardIsStrenuous': True,

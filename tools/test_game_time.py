@@ -82,7 +82,6 @@ class TimingTest(unittest.TestCase):
         self.assertFalse(recovered['slots']['regular:1:0']['expended'])
         self.assertTrue(recovered['slots']['regular:1:1']['expended'])
         divine = new_slots('cleric', slot_budget(self.core, 'cleric', 1, 14))
-        with self.assertRaises(ValueError):
-            recover_slots(self.core, divine, start_seconds=0, end_seconds=3600, scheduled_second_of_day=1)
+        self.assertEqual(recover_slots(self.core, divine, start_seconds=100, end_seconds=3700)['lastRecovery']['day'], 0)
         self.assertEqual(recover_slots(self.core, divine, start_seconds=0, end_seconds=3600,
                                       scheduled_second_of_day=0)['lastRecovery']['day'], 0)

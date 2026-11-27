@@ -300,3 +300,7 @@ Per-feat values live in `feats[].selection` (maxTakes, repeatable, stacksWithSel
 
 Ability Score Nonabilities
 An absent ability score is not a score of 0. Represent it as null on the sheet. It contributes a modifier of +0 when a calculation calls for its modifier; bonuses, penalties, and minimum scores do not change an absent score. This does not grant the ability to perform tasks that require the missing score or override creature-specific rules.
+
+SPELL COMPONENT ACCESS
+
+Unpriced material components are negligible in cost. An equipped spell component pouch supplies all unpriced materials, including named ones, unless the caster has Eschew Materials and needs no pouch. Material components with a stated cost must be accessible as actual items in inventory, even with Eschew Materials. A Focus requires an accessible component pouch. Divine Focus requires an accessible holy symbol for Cleric, Paladin, or Blackguard, or an equipped confirmed deity weapon. A Druid or Ranger instead needs accessible holly or mistletoe. A Cleric may designate the deity weapon type only at first Cleric level and cannot change that designation.

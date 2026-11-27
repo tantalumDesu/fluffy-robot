@@ -194,7 +194,7 @@ Benefit: You can alter a spell with a range of close, medium, or long to increas
 Spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not have increased ranges.
 ESCHEW MATERIALS [GENERAL]
 
-Benefit: You can cast any spell that has a material component costing 1 gp or less without needing that component. (The casting of the spell still provokes attacks of opportunity as normal.) If the spell requires a material component that costs more than 1 gp, you must have the material component at hand to cast the spell, just as normal.
+Benefit: Table rule: You can cast spells with unpriced material components, including named ones, without a component pouch. Materials with a stated cost must still be accessible. (The casting of the spell still provokes attacks of opportunity as normal.)
 EXOTIC WEAPON PROFICIENCY [GENERAL]
 
 Choose a type of exotic weapon. You understand how to use that type of exotic weapon in combat.
@@ -397,6 +397,8 @@ Prerequisites: Base attack bonus +4, natural weapon.
 Benefit: The damage for one of the creature’s natural attack forms increases by one step, as if the creature’s size had increased by one category: 1d2, 1d3, 1d4, 1d6, 1d8, 2d6, 3d6, 4d6, 6d6, 8d6, 12d6. A weapon or attack that deals 1d10 points of damage increases as follows: 1d10, 2d8, 3d8, 4d8, 6d8, 8d8, 12d8.
 
 Special: You can take this feat multiple times, but each time it applies to a different natural attack.
+
+Table ruling: Choose a natural weapon type you possess in your base form or an available transformation. Apply the increase to all attacks of that type across forms, using each form's own damage dice. Repeat picks must choose a different type.
 
 Description: The natural attacks of a creature with this feat are more dangerous than its size and type would otherwise dictate.
 

@@ -116,3 +116,18 @@ class SpellbookTest(unittest.TestCase):
         for existing in (chosen, generalist):
             with self.assertRaisesRegex(ValueError, 'already recorded'):
                 choose_wizard_specialization(self.core, wizard_class_level=1, existing_choice=existing, **pick)
+
+    def test_partial_wizard_preparation_needs_full_rest_and_study(self):
+        from tools.spellcasting import prepare_wizard_session
+        plan = plan_cast(self.core, 'wizard', 'magic-missile', 16)
+        slots = new_slots('wizard', {('regular', 1): 2})
+        book = learn_wizard_spells(self.core, new_spellbook(self.core, 'book'), ['magic-missile'])
+        args = dict(start_seconds=28800, end_seconds=32400, verified_rest_seconds=28800,
+                    accessible_spell_ids={'magic-missile'}, accessible_spellbooks=[book])
+        picks = [('regular:1:0', plan)]
+        for override in (dict(verified_rest_seconds=28799), dict(end_seconds=32399)):
+            with self.assertRaisesRegex(ValueError, 'rest and study'):
+                prepare_wizard_session(self.core, slots, picks, **dict(args, **override))
+        updated = prepare_wizard_session(self.core, slots, picks, **args)
+        self.assertIsNotNone(updated['slots']['regular:1:0']['preparation'])
+        self.assertIsNone(updated['slots']['regular:1:1']['preparation'])

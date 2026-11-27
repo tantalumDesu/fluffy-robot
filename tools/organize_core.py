@@ -8,6 +8,8 @@ import re
 import unicodedata
 
 if __package__:
+    from .casting_rules import casting_catalog, extend_recovery
+    from .spell_components import annotate_divine_focus_items, component_profile, component_rules
     from .spellbooks import spellbook_catalog
     from .equipment_slots import equipment_rules
     from .weapon_focus import spell_attack_profile
@@ -26,13 +28,16 @@ if __package__:
     from .creature_size import catalogs as size_catalogs
     from .animal_training import training_rules
     from .feat_selection import encode_feats
-    from .negative_levels import negative_level_rules, spell_drain_catalog
+    from .natural_weapons import catalog as natural_weapon_catalog, creature_roster, weapon as natural_weapon
+    from .negative_levels import level_loss_catalog, negative_level_rules, spell_drain_catalog
     from .pack_animals import beasts
     from .progression_rules import continuity_rules, progression_rules, spell_swap_rules
     from .game_time import SECONDS, casting_timing, duration_timing
     from .spellcasting import metamagic_catalog
     from .sheet_effects import catalogs
 else:
+    from casting_rules import casting_catalog, extend_recovery
+    from spell_components import annotate_divine_focus_items, component_profile, component_rules
     from spellbooks import spellbook_catalog
     from equipment_slots import equipment_rules
     from weapon_focus import spell_attack_profile
@@ -51,7 +56,8 @@ else:
     from creature_size import catalogs as size_catalogs
     from animal_training import training_rules
     from feat_selection import encode_feats
-    from negative_levels import negative_level_rules, spell_drain_catalog
+    from natural_weapons import catalog as natural_weapon_catalog, creature_roster, weapon as natural_weapon
+    from negative_levels import level_loss_catalog, negative_level_rules, spell_drain_catalog
     from pack_animals import beasts
     from progression_rules import continuity_rules, progression_rules, spell_swap_rules
     from game_time import SECONDS, casting_timing, duration_timing
@@ -287,6 +293,7 @@ def build(old):
             spell['attackProfile'] = attack
         else:
             spell.pop('attackProfile', None)
+        spell['componentProfile'] = component_profile(spell)
         spells.append(spell)
     groups['magic']['schoolsById'] = {slug(name): dict(name=name, focusEligible=name != 'Universal')
                                       for name in sorted({spell['school'] for spell in spells})}
@@ -311,7 +318,13 @@ def build(old):
     for feat in feat_records.values():
         if feat['epic']:
             feat['prerequisites']['allOf'].append(epic_requirement.copy())
+    groups['magic']['componentRules'] = component_rules(lines, source)
     groups['magic']['wizardSpellbook'] = spellbook_catalog(lines, source)
+    groups['magic']['epicSpellFeatRules'] = {
+        'improved-spell-capacity': dict(slotsPerPick=1, aboveCurrentMaximum=1, grantsKnownSpells=False),
+        'spell-knowledge': dict(spellsPerPick=2, anyArcaneList=True, grantsSlots=False,
+                                automaticInscriptionForWizardTrack=True, preferReceivingListLevel=True),
+    }
     groups['magic']['metamagicByFeatId'] = metamagic_catalog(feat_records)
     groups['mechanics']['timing'] = dict(secondsByUnit=SECONDS, source=source('TIMING.txt'),
         regularTurn={'standard': 1, 'move': 1, 'fullRoundReplacesBoth': True},
@@ -320,8 +333,12 @@ def build(old):
         class_id: dict(restHours=int(rest), preparationMinutes=int(preparation), scheduledDailyTime=scheduled == 'yes',
                        recentUseHours=8, source=source('TIMING.txt', line=line))
         for line, (class_id, rest, preparation, scheduled) in table('TIMING.txt', 'Table: Spell Recovery Profiles')}
+    extend_recovery(groups['magic']['spellRecoveryByClassId'], lines, source)
+    groups['magic']['castingProfilesByClassId'] = casting_catalog(classes, spells, lines, source)
+    groups['magic']['castingInjury'] = dict(baseDc=10, continuousDamageDivisor=2,
+        ignoreEndedContinuousSource=True, source=source('TIMING.txt', line=lines('TIMING.txt').index('CASTING INTERRUPTIONS') + 1))
     groups['magic']['dailySlotRules'] = {
-        'pools': ['regular', 'domain'], 'progressionBasis': 'effective-spellcasting-class-level',
+        'pools': ['regular', 'domain', 'specialist'], 'progressionBasis': 'effective-spellcasting-class-level',
         'epicBaseSlotCapsByClassId': {class_id: {'level': 20, 'source': source(file, line=line)}
             for class_id in ('bard', 'cleric', 'druid', 'paladin', 'ranger', 'sorcerer', 'wizard')
             for file in ('EPIC ' + class_id.upper() + '.txt',)
@@ -407,6 +424,7 @@ def build(old):
         for key in PHYSICAL}
     groups['mechanics']['classDamageReductionById'] = damage_reduction_catalog(lines, source)
     groups['mechanics']['injury'] = injury_catalog(lines)
+    groups['mechanics']['levelLoss'] = level_loss_catalog(lines, source)
     groups['mechanics']['negativeLevels'] = negative_level_rules(lines)
     groups['mechanics']['alignmentsById'] = alignments
     alignment_weapon_tags = {'Good': 'good', 'Evil': 'evil', 'Lawful': 'law', 'Chaotic': 'chaos'}
@@ -431,6 +449,7 @@ def build(old):
         source=source('RULES.txt', line=nonability_line))
     groups['mechanics']['sizeModifierPolicy'] = 'derive-from-current-size-do-not-add-legacy-racial-size-bonuses'
 
+    groups['mechanics']['naturalWeapons'] = natural_weapon_catalog()
     races = []
     race_text = lines('RACES.txt')
     hobgoblin_start = race_text.index('HOBGOBLIN RACIAL TRAITS')
@@ -446,13 +465,19 @@ def build(old):
                                source=source('RACES.txt', line=size_line)))
             race.update(traits=traits, own=dict(race['own'], size='Medium'),
                         effective=dict(race['effective'], size='Medium'))
+        for block in ('own', 'effective'):
+            entries = race[block].get('naturalWeapons')
+            if entries:
+                race[block] = dict(race[block], naturalWeapons=[dict(n, **natural_weapon(
+                    n['name'], n['damage'], damage_types=[n['damageType'].lower()])) for n in entries])
         size = race['effective']['size']
         race['sizeId'] = size.lower() if size else None
         races.append(race)
     groups['progression']['races'] = races
-    companions = index(dict(creature, sizeId=creature['size']) for creature in [*creatures(), *beasts(lines)])
+    companions = index(dict(creature, sizeId=creature['size'], naturalWeapons=creature_roster(creature.get('statBlockText', ''))) for creature in [*creatures(), *beasts(lines)])
     groups['skills']['animalTraining'] = training_rules(lines)
     items = index(equipment())
+    annotate_divine_focus_items(items, groups['magic']['componentRules'])
     equipment_slots = equipment_rules(items, lines, source)
     gauntlet = items[LOCKED_GAUNTLET_ID]
     gauntlet['listedArcaneSpellFailurePercent'] = gauntlet['arcaneSpellFailurePercent']
@@ -504,6 +529,8 @@ def build(old):
     shared_ids = {rule['id'] for rule in shared_rules}
     groups['mechanics']['rules'] = [r for r in groups['mechanics']['rules'] if r['id'] not in shared_ids] + shared_rules
     improved_familiars = improved_familiar_catalog(lines, source, slug)
+    for entry in improved_familiars.values():
+        entry['naturalWeapons'] = creature_roster(entry.get('statBlockText', ''))
     feat_records['improved-familiar']['acquisition'] = dict(
         optionsPath='/companions/improvedFamiliarOptionsById', source=source('IMPROVED FAMILIARS.txt'),
         alignmentStepsPerAxis=1, unlistedOptions='dm-adjudication', preserveNonAnimalType=True,

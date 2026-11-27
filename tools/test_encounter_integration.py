@@ -29,7 +29,8 @@ class EncounterIntegrationTest(unittest.TestCase):
         self.assertEqual(effective_conditions(state, 'a'), ['exhausted'])
 
     def test_drain_save_and_restoration_keep_history(self):
-        original = dict(classChoices=['fighter', 'wizard', 'fighter'], xp=3100)
+        original = dict(classChoices=['fighter', 'wizard', 'fighter'], xp=3100,
+                        levelGrantsByLevel={'3': dict(hpGain=5, abilityIncreases={}, skillRanks={}, featChoices=[])})
         levels = create_drain_levels(CORE['mechanics']['negativeLevels'], 'hit', 1, 0,
                                      kind='creature', save_dc=15)['levels']
         actor = commit_negative_levels(CORE, original, levels, 0)
